@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\ModelDB.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\App.config" />
+  <event action="Analyze" type="Success" name="ModelDB" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\ModelDB.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\MedicationSystem.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\App.config" />
+  <event action="Analyze" type="Success" name="FrmAddGroup.resx" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\Estrdad\FrmAddGroup.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="LoginForm.resx" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\SystemSetting\LoginForm.resx" />
+  <event action="Analyze" type="Success" name="MedicationSystem" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\MedicationSystem.csproj" />
+  <event action="Analyze" type="Success" name="ModelDB" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\ModelDB.sln" />
+  <event action="Backup" type="Success" name="MedicationSystem" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\MedicationSystem.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\MedicationSystem.csproj" />
+  <event action="Upgrade" type="Success" name="MedicationSystem" path="C:\Users\Saif\source\Repos\medicationSystem\medicationSystem\MedicationSystem\MedicationSystem.csproj" />
+  <event action="Upgrade" type="Success" name="ModelDB" path="C:\Users\Saif\source\Repos\medicationSystem\ModelDB\ModelDB.sln" />
+</log>
