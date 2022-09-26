@@ -3,3 +3,14 @@
 ################################################################################
 
 /.vs/HealthServicesSystem/v16
+/.vs
+/HealthServicesSystem/obj/Debug
+/ModelDB/obj/Debug
+/HealthServicesSystem/bin/Debug
+/ModelDB/bin/Debug
+/ModelDB/Migrations
+/packages/EntityFramework.6.4.4
+/packages/Microsoft.Office.Interop.Excel.15.0.4795.1001/lib
+/packages/Microsoft.Office.Interop.Excel.15.0.4795.1001
+/packages/Newtonsoft.Json.13.0.1/lib
+/packages/Newtonsoft.Json.13.0.1
