@@ -683,7 +683,7 @@ namespace MedicalServiceSystem.Reclaims
                             if (Fref.Count > 0)
                             {
                                 Fref[0].BillsTotal = Convert.ToDecimal(money.Text);
-                                Fref[0].ReclaimTotal = 0;
+                               // Fref[0].ReclaimTotal = 0;
                                 Fref[0].Notes = medicalNote.Text.Trim();
                                 Fref[0].UpdateDate = OperationDate.Value;
                                 Fref[0].UpdateUser = UserId;

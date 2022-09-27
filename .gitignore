@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs/HealthServicesSystem/v16
+/.vs/NewMedicine/v16
+/.vs
+/HealthServicesSystem/bin/Debug
+/HealthServicesSystem/obj/Debug
+/ModelDB/bin/Debug
+/ModelDB/obj/Debug
+/packages
+/ModelDB/Migrations

@@ -569,6 +569,12 @@
     <Compile Include="Reports\RPTِEstrdadCountSecLoc.Designer.cs">
       <DependentUpon>RPTِEstrdadCountSecLoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RPTِEstrdadMedicine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPTِEstrdadMedicine.designer.cs">
+      <DependentUpon>RPTِEstrdadMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RPTِEstrdadMedicineDetails.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -879,6 +885,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPTِEstrdadCountSecLoc.resx">
       <DependentUpon>RPTِEstrdadCountSecLoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPTِEstrdadMedicine.resx">
+      <DependentUpon>RPTِEstrdadMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPTِEstrdadMedicineDetails.resx">
       <DependentUpon>RPTِEstrdadMedicineDetails.cs</DependentUpon>
@@ -1310,12 +1319,14 @@
     <None Include="Resources\Xserve.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+  <!--<Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      -->
+  <!--<ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-  </Target>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />-->
+  <!--
+  </Target>-->
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

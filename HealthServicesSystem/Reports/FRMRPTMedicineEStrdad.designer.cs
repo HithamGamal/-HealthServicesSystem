@@ -25,10 +25,10 @@ namespace MedicalServiceSystem
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
             this.rd_books = new System.Windows.Forms.RadioButton();
             this.GroupControl1 = new System.Windows.Forms.Panel();
             this.DrGrouping = new Telerik.WinControls.UI.RadDropDownList();
@@ -53,7 +53,6 @@ namespace MedicalServiceSystem
             this.RDSubDetails = new System.Windows.Forms.RadioButton();
             this.RDpharmDetails = new System.Windows.Forms.RadioButton();
             this.RdDiosDetails = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@ namespace MedicalServiceSystem
             this.d_start = new System.Windows.Forms.DateTimePicker();
             this.sector_no = new System.Windows.Forms.TextBox();
             this.RptiewChronics = new Telerik.ReportViewer.WinForms.ReportViewer();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.GroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DrGrouping)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupingBy)).BeginInit();
@@ -99,6 +99,7 @@ namespace MedicalServiceSystem
             this.GroupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupControl1.BackColor = System.Drawing.Color.LightGray;
             this.GroupControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GroupControl1.Controls.Add(this.radioButton3);
             this.GroupControl1.Controls.Add(this.DrGrouping);
             this.GroupControl1.Controls.Add(this.ForNum);
             this.GroupControl1.Controls.Add(this.GroupingBy);
@@ -122,7 +123,6 @@ namespace MedicalServiceSystem
             this.GroupControl1.Controls.Add(this.RDSubDetails);
             this.GroupControl1.Controls.Add(this.RDpharmDetails);
             this.GroupControl1.Controls.Add(this.RdDiosDetails);
-            this.GroupControl1.Controls.Add(this.label4);
             this.GroupControl1.Controls.Add(this.label8);
             this.GroupControl1.Controls.Add(this.label7);
             this.GroupControl1.Controls.Add(this.label6);
@@ -137,10 +137,10 @@ namespace MedicalServiceSystem
             // DrGrouping
             // 
             this.DrGrouping.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem1.Text = "بدون";
-            radListDataItem2.Text = "المحليات";
-            this.DrGrouping.Items.Add(radListDataItem1);
-            this.DrGrouping.Items.Add(radListDataItem2);
+            radListDataItem5.Text = "بدون";
+            radListDataItem6.Text = "المحليات";
+            this.DrGrouping.Items.Add(radListDataItem5);
+            this.DrGrouping.Items.Add(radListDataItem6);
             this.DrGrouping.Location = new System.Drawing.Point(81, 271);
             this.DrGrouping.Margin = new System.Windows.Forms.Padding(2);
             this.DrGrouping.Name = "DrGrouping";
@@ -159,10 +159,10 @@ namespace MedicalServiceSystem
             // GroupingBy
             // 
             this.GroupingBy.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem3.Text = "التردد";
-            radListDataItem4.Text = "التكلفة";
-            this.GroupingBy.Items.Add(radListDataItem3);
-            this.GroupingBy.Items.Add(radListDataItem4);
+            radListDataItem1.Text = "التردد";
+            radListDataItem2.Text = "التكلفة";
+            this.GroupingBy.Items.Add(radListDataItem1);
+            this.GroupingBy.Items.Add(radListDataItem2);
             this.GroupingBy.Location = new System.Drawing.Point(230, 272);
             this.GroupingBy.Margin = new System.Windows.Forms.Padding(2);
             this.GroupingBy.Name = "GroupingBy";
@@ -361,10 +361,10 @@ namespace MedicalServiceSystem
             // 
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Sakkal Majalla", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(660, 35);
+            this.label1.Size = new System.Drawing.Size(660, 23);
             this.label1.TabIndex = 43;
             this.label1.Text = "قائمة التقارير";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -448,17 +448,6 @@ namespace MedicalServiceSystem
             this.RdDiosDetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RdDiosDetails.UseVisualStyleBackColor = false;
             this.RdDiosDetails.CheckedChanged += new System.EventHandler(this.Rd_chronic_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(446, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 25);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "تفاصيل الاسترداد حسب :";
             // 
             // label8
             // 
@@ -588,6 +577,22 @@ namespace MedicalServiceSystem
             this.RptiewChronics.Size = new System.Drawing.Size(741, 504);
             this.RptiewChronics.TabIndex = 43;
             // 
+            // radioButton3
+            // 
+            this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton3.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.ForeColor = System.Drawing.Color.Purple;
+            this.radioButton3.Location = new System.Drawing.Point(3, 26);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(598, 34);
+            this.radioButton3.TabIndex = 79;
+            this.radioButton3.Text = "كشف الاسترداد";
+            this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton3.UseVisualStyleBackColor = false;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
+            // 
             // FRMRPTMedicineEStrdad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -649,7 +654,6 @@ namespace MedicalServiceSystem
         internal System.Windows.Forms.RadioButton RDpharm;
         internal System.Windows.Forms.RadioButton RDUser;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         internal Telerik.WinControls.UI.RadTextBox card_no;
         internal System.Windows.Forms.RadioButton RDServerCNT;
         internal System.Windows.Forms.RadioButton RDDwaCNT;
@@ -666,5 +670,6 @@ namespace MedicalServiceSystem
         internal Telerik.WinControls.UI.RadDropDownList DrGrouping;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.RadioButton radioButton3;
     }
 }

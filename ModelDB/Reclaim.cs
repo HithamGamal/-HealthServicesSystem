@@ -43,6 +43,7 @@ namespace ModelDB
         public DateTime BirthDate { get; set; }
         public string SectorName { get; set; }
         public int? SectorId { get; set; }
+        public string BillType { get; set; }
 
     }
     public enum ReclaimStatus
