@@ -41,7 +41,10 @@ namespace MedicalServiceSystem.Claims
                 SubReportError sr = new SubReportError();
                 subReport1.ReportSource = sr;
                 sr.DataSource = q;
+
+              
             }
+
 
 
         }

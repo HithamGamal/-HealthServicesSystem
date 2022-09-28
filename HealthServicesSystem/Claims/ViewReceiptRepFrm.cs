@@ -1,4 +1,5 @@
-﻿using ModelDB;
+﻿using MedicalServiceSystem.SystemSetting;
+using ModelDB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,7 +61,8 @@ namespace MedicalServiceSystem.Claims
                     TellNo = p.ClmReceiptClaims.ContactTell,
                     Notes = p.ClmReceiptClaims.Notes ,
                     Month = p.ClmReceiptClaims.Month ,
-                    Years = p.ClmReceiptClaims.year
+                    Years = p.ClmReceiptClaims.year,
+                    UserId = p.UserId
                 }) .ToList();
             if (q.Count >0)
             {
@@ -82,7 +84,14 @@ namespace MedicalServiceSystem.Claims
                 stream.Position = 0;
                 rep.CompanyLogo.Value = Image.FromStream(stream);
                 //===============
-            
+                int UserIn = q[0].UserId;
+                int UserPrint = LoginForm.Default.UserId;
+                var getUserPrint = db.Users.Where(p => p.Id == UserPrint).Take(1).ToList();
+                rep.UserPrint.Value = getUserPrint[0].UserName;
+                
+                var getUser = db.Users.Where(p => p.Id == UserIn).Take(1).ToList ();
+                rep.UserIn.Value = getUser[0].UserName;
+
                 MyData = (Byte[])GetInfo.LogoPath2;
                 MemoryStream stream1 = new MemoryStream(MyData);
                 stream.Position = 0;
@@ -90,7 +99,7 @@ namespace MedicalServiceSystem.Claims
                 rep.ClmsDet.Value = "مطالبة شهر " + q[0].Month + "لسنة " + q[0].Years;
                 reportViewer1.RefreshReport();
 
-
+          
 
             }
             
