@@ -11,6 +11,7 @@ using Telerik.WinControls.UI;
 using MedicalServiceSystem.SystemSetting;
 using MedicalServiceSystem.Reclaims;
 using ModelDB;
+using HealthServicesSystem.Claims;
 
 namespace MedicalServiceSystem
 {
@@ -615,6 +616,15 @@ namespace MedicalServiceSystem
         private void SendClm_Click(object sender, EventArgs e)
         {
             Claims.ClmSendFrm form = new Claims.ClmSendFrm();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
+
+        private void CompireClaims_Click(object sender, EventArgs e)
+        {
+            
+            CompireClaimsFrm form = new CompireClaimsFrm();
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
