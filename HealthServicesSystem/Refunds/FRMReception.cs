@@ -643,7 +643,7 @@ namespace HealthServicesSystem.Reclaims
                         Rf.BirthDate = Birthdate.Value;
                         Rf.SectorId = SectorId;
                         Rf.SectorName = SectorName;
-                        Rf.SirkNo = null;
+                        Rf.SirkNo = 0;
                         Rf.BillType = BillType.Text;
                         db.Reclaims.Add(Rf);
                         db.SaveChanges();
