@@ -44,6 +44,7 @@ namespace ModelDB
         public string SectorName { get; set; }
         public int? SectorId { get; set; }
         public string BillType { get; set; }
+        public int? SirkNo { get; set; }
 
     }
     public enum ReclaimStatus
