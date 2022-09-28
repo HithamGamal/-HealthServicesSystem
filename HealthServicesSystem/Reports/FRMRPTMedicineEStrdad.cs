@@ -1158,7 +1158,7 @@ namespace HealthServicesSystem
 
                             db.Database.CommandTimeout = 0;
                             int GetMaxSirk = 1;
-                            var GetSirk = db.Reclaims.Where(p => p.SirkNo != null).Take(1).ToList();
+                            var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0).Take(1).ToList();
                             if (GetSirk.Count > 0)
                             {
                                 GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
