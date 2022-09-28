@@ -66,6 +66,8 @@ namespace MedicalServiceSystem
             this.d_start = new System.Windows.Forms.DateTimePicker();
             this.sector_no = new System.Windows.Forms.TextBox();
             this.RptiewChronics = new Telerik.ReportViewer.WinForms.ReportViewer();
+            this.SirkNo = new System.Windows.Forms.TextBox();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.GroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DrGrouping)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupingBy)).BeginInit();
@@ -99,6 +101,8 @@ namespace MedicalServiceSystem
             this.GroupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupControl1.BackColor = System.Drawing.Color.LightGray;
             this.GroupControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GroupControl1.Controls.Add(this.radioButton4);
+            this.GroupControl1.Controls.Add(this.SirkNo);
             this.GroupControl1.Controls.Add(this.radioButton3);
             this.GroupControl1.Controls.Add(this.DrGrouping);
             this.GroupControl1.Controls.Add(this.ForNum);
@@ -141,11 +145,11 @@ namespace MedicalServiceSystem
             this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton3.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.ForeColor = System.Drawing.Color.Purple;
-            this.radioButton3.Location = new System.Drawing.Point(3, 26);
+            this.radioButton3.Location = new System.Drawing.Point(351, 26);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(598, 34);
+            this.radioButton3.Size = new System.Drawing.Size(250, 34);
             this.radioButton3.TabIndex = 79;
-            this.radioButton3.Text = "كشف الاسترداد";
+            this.radioButton3.Text = "عرض كشف استرداد جديد";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = false;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
@@ -534,6 +538,7 @@ namespace MedicalServiceSystem
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(48, 30);
             this.textBox1.TabIndex = 77;
+            this.textBox1.Visible = false;
             // 
             // label3
             // 
@@ -591,6 +596,31 @@ namespace MedicalServiceSystem
             this.RptiewChronics.Name = "RptiewChronics";
             this.RptiewChronics.Size = new System.Drawing.Size(741, 504);
             this.RptiewChronics.TabIndex = 43;
+            // 
+            // SirkNo
+            // 
+            this.SirkNo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SirkNo.Location = new System.Drawing.Point(278, 27);
+            this.SirkNo.Name = "SirkNo";
+            this.SirkNo.Size = new System.Drawing.Size(48, 30);
+            this.SirkNo.TabIndex = 80;
+            this.SirkNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton4.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton4.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.ForeColor = System.Drawing.Color.Purple;
+            this.radioButton4.Location = new System.Drawing.Point(4, 26);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(250, 34);
+            this.radioButton4.TabIndex = 81;
+            this.radioButton4.Text = "استرجاع كشف الاسترداد";
+            this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton4.UseVisualStyleBackColor = false;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.RadioButton4_CheckedChanged);
             // 
             // FRMRPTMedicineEStrdad
             // 
@@ -670,5 +700,7 @@ namespace MedicalServiceSystem
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         internal System.Windows.Forms.RadioButton radioButton3;
+        internal System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.TextBox SirkNo;
     }
 }
