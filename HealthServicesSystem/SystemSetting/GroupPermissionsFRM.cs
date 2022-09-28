@@ -10,7 +10,7 @@ using Microsoft.VisualBasic;
 using ModelDB;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.SystemSetting
+namespace HealthServicesSystem.SystemSetting
 {
     public partial class GroupPermissionsFRM : Telerik.WinControls.UI.RadForm
     {

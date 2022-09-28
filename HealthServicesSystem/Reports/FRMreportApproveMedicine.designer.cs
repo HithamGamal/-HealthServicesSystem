@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     [Microsoft.VisualBasic.CompilerServices.DesignerGenerated()]
     public partial class FRMreportApproveMedicine 

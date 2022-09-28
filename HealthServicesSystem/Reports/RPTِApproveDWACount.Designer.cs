@@ -1,4 +1,4 @@
-namespace MedicalServiceSystem.Reports
+namespace HealthServicesSystem.Reports
 {
     partial class RPTöApproveDWACount
     {

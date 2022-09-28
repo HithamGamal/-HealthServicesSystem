@@ -9,7 +9,7 @@ using ModelDB;
 using Telerik.WinControls;
 using System.Linq;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMEstrdadhistory : Telerik.WinControls.UI.RadForm
     {

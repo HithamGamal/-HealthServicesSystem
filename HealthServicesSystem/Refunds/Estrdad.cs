@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using Telerik.Reporting;
 using Telerik.Reporting.Drawing;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     /// <summary>
     /// Summary description for Estrdad.

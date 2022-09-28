@@ -9,7 +9,7 @@ using Telerik.WinControls;
 using ModelDB;
 using System.Linq;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FrmAddSubGroup : Telerik.WinControls.UI.RadForm
     {

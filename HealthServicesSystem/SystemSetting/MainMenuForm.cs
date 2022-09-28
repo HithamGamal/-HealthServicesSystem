@@ -8,12 +8,12 @@ using System.Text;
 using System.Windows.Forms;
 
 using Telerik.WinControls.UI;
-using MedicalServiceSystem.SystemSetting;
-using MedicalServiceSystem.Reclaims;
+using HealthServicesSystem.SystemSetting;
+using HealthServicesSystem.Reclaims;
 using ModelDB;
 using HealthServicesSystem.Claims;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     public partial class MainMenuForm : Telerik.WinControls.UI.RadRibbonForm
     {

@@ -11,7 +11,7 @@ using System.Xml.Linq;
 using System.Threading.Tasks;
 using Telerik.WinControls.UI;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
 	[Microsoft.VisualBasic.CompilerServices.DesignerGenerated()]
 	public partial class FrmCenters

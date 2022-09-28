@@ -10,9 +10,9 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Microsoft.VisualBasic;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMReception : Telerik.WinControls.UI.RadForm
     {
@@ -643,6 +643,7 @@ namespace MedicalServiceSystem.Reclaims
                         Rf.BirthDate = Birthdate.Value;
                         Rf.SectorId = SectorId;
                         Rf.SectorName = SectorName;
+                        Rf.SirkNo = null;
                         Rf.BillType = BillType.Text;
                         db.Reclaims.Add(Rf);
                         db.SaveChanges();

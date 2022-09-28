@@ -1,5 +1,5 @@
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     partial class Estrdad
     {

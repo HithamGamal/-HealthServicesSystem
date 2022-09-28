@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 using ModelDB;
 using System.Linq;
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMMedicinePricing : Telerik.WinControls.UI.RadForm
     {

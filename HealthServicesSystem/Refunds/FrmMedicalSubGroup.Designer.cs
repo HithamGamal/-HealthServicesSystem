@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     partial class FrmMedicalSubGroup
     {

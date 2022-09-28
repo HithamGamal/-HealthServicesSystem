@@ -1,11 +1,11 @@
 ﻿
-using MedicalServiceSystem.Reclaims;
+using HealthServicesSystem.Reclaims;
 using ModelDB;
 using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     public partial class FrmGenericLis : Form
     {

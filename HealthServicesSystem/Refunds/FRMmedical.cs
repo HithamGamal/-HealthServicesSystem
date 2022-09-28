@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using System.IO;
 using Telerik.Reporting.Processing;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMmedical : Telerik.WinControls.UI.RadForm
     {

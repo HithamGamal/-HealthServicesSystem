@@ -13,10 +13,10 @@ using Microsoft.VisualBasic; // Install-Package Microsoft.VisualBasic
 using Microsoft.VisualBasic.CompilerServices; // Install-Package Microsoft.VisualBasic
 using Telerik.WinControls.UI;
 using ModelDB;
-using MedicalServiceSystem.SystemSetting;
-using MedicalServiceSystem.Reclaims;
+using HealthServicesSystem.SystemSetting;
+using HealthServicesSystem.Reclaims;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
 
 

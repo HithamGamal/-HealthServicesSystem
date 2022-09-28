@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using ModelDB;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMApproveSearch : Telerik.WinControls.UI.RadForm
     {

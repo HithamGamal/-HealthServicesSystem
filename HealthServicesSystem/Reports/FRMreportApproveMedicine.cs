@@ -5,9 +5,9 @@ using System.Data;
 using System.Data.SqlClient;
 using ModelDB;
 using System.Linq;
-using MedicalServiceSystem.Reports;
+using HealthServicesSystem.Reports;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
 
     public partial class FRMreportApproveMedicine : Telerik.WinControls.UI.RadForm

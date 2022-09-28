@@ -11,7 +11,7 @@ using ModelDB;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FrmAddGroup : Telerik.WinControls.UI.RadForm
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using ModelDB;
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
 	public class ReportForAll
     {		

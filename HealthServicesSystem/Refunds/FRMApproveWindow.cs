@@ -10,9 +10,9 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Microsoft.VisualBasic;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMApproveWindow : Telerik.WinControls.UI.RadForm
     {

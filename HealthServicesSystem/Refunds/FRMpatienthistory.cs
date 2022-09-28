@@ -10,7 +10,7 @@ using Microsoft.VisualBasic;
 using ModelDB;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMpatienthistory : Telerik.WinControls.UI.RadForm
     {

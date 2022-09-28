@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     public partial class FrmMedicineATC : Form
     {

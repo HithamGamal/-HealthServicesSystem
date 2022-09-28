@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.SystemSetting
+namespace HealthServicesSystem.SystemSetting
 {
     public partial class ChangePassFrm : Telerik.WinControls.UI.RadForm
     {
