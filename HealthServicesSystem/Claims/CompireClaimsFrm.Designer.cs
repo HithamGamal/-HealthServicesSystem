@@ -53,33 +53,35 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.FileNoTxt = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.CenterNameDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.FYearTxt = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.FMonthDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.FYearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.MasterGrd = new Telerik.WinControls.UI.RadGridView();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.FileNoTxt = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FileNoTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FMonthDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FileNoTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +98,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.radLabel7);
             this.panel2.Controls.Add(this.radLabel6);
             this.panel2.Controls.Add(this.radLabel5);
             this.panel2.Controls.Add(this.FileNoTxt);
@@ -112,14 +115,50 @@
             this.panel2.Size = new System.Drawing.Size(1056, 609);
             this.panel2.TabIndex = 0;
             // 
+            // radLabel6
+            // 
+            this.radLabel6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel6.Location = new System.Drawing.Point(602, 306);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(70, 31);
+            this.radLabel6.TabIndex = 32;
+            this.radLabel6.Text = "رقم الملف :";
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Location = new System.Drawing.Point(588, 289);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(47, 31);
+            this.radLabel5.TabIndex = 31;
+            this.radLabel5.Text = ":السنة";
+            // 
+            // FileNoTxt
+            // 
+            this.FileNoTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.FileNoTxt.Location = new System.Drawing.Point(266, 186);
+            this.FileNoTxt.Name = "FileNoTxt";
+            this.FileNoTxt.NullText = "Enter FileNo";
+            this.FileNoTxt.Size = new System.Drawing.Size(143, 25);
+            this.FileNoTxt.TabIndex = 25;
+            // 
+            // radLabel4
+            // 
+            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel4.Location = new System.Drawing.Point(599, 289);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(47, 31);
+            this.radLabel4.TabIndex = 30;
+            this.radLabel4.Text = ":السنة";
+            // 
             // CenterNameDrp
             // 
             this.CenterNameDrp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.CenterNameDrp.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.CenterNameDrp.Location = new System.Drawing.Point(14, 46);
+            this.CenterNameDrp.Location = new System.Drawing.Point(23, 46);
             this.CenterNameDrp.Name = "CenterNameDrp";
             this.CenterNameDrp.NullText = "Select Center Name";
-            this.CenterNameDrp.Size = new System.Drawing.Size(394, 25);
+            this.CenterNameDrp.Size = new System.Drawing.Size(385, 25);
             this.CenterNameDrp.TabIndex = 28;
             // 
             // radLabel1
@@ -130,6 +169,24 @@
             this.radLabel1.Size = new System.Drawing.Size(45, 31);
             this.radLabel1.TabIndex = 29;
             this.radLabel1.Text = ":المركز";
+            // 
+            // FYearTxt
+            // 
+            this.FYearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.FYearTxt.Location = new System.Drawing.Point(23, 124);
+            this.FYearTxt.Name = "FYearTxt";
+            this.FYearTxt.NullText = "Enter Year";
+            this.FYearTxt.Size = new System.Drawing.Size(161, 25);
+            this.FYearTxt.TabIndex = 24;
+            // 
+            // radLabel3
+            // 
+            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Location = new System.Drawing.Point(137, 89);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(47, 31);
+            this.radLabel3.TabIndex = 26;
+            this.radLabel3.Text = ":السنة";
             // 
             // FMonthDrp
             // 
@@ -172,24 +229,6 @@
             this.radLabel2.Size = new System.Drawing.Size(51, 31);
             this.radLabel2.TabIndex = 25;
             this.radLabel2.Text = ": الشهر";
-            // 
-            // radLabel3
-            // 
-            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(137, 89);
-            this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(47, 31);
-            this.radLabel3.TabIndex = 26;
-            this.radLabel3.Text = ":السنة";
-            // 
-            // FYearTxt
-            // 
-            this.FYearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.FYearTxt.Location = new System.Drawing.Point(14, 124);
-            this.FYearTxt.Name = "FYearTxt";
-            this.FYearTxt.NullText = "Enter Year";
-            this.FYearTxt.Size = new System.Drawing.Size(170, 25);
-            this.FYearTxt.TabIndex = 24;
             // 
             // panel3
             // 
@@ -274,41 +313,14 @@
             this.MasterGrd.Size = new System.Drawing.Size(647, 609);
             this.MasterGrd.TabIndex = 2;
             // 
-            // radLabel4
+            // radLabel7
             // 
-            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(599, 289);
-            this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(47, 31);
-            this.radLabel4.TabIndex = 30;
-            this.radLabel4.Text = ":السنة";
-            // 
-            // FileNoTxt
-            // 
-            this.FileNoTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.FileNoTxt.Location = new System.Drawing.Point(266, 185);
-            this.FileNoTxt.Name = "FileNoTxt";
-            this.FileNoTxt.NullText = "Enter FileNo";
-            this.FileNoTxt.Size = new System.Drawing.Size(143, 25);
-            this.FileNoTxt.TabIndex = 25;
-            // 
-            // radLabel5
-            // 
-            this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(588, 289);
-            this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(47, 31);
-            this.radLabel5.TabIndex = 31;
-            this.radLabel5.Text = ":السنة";
-            // 
-            // radLabel6
-            // 
-            this.radLabel6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel6.Location = new System.Drawing.Point(602, 306);
-            this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(70, 31);
-            this.radLabel6.TabIndex = 32;
-            this.radLabel6.Text = "رقم الملف :";
+            this.radLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel7.Location = new System.Drawing.Point(503, 289);
+            this.radLabel7.Name = "radLabel7";
+            this.radLabel7.Size = new System.Drawing.Size(51, 31);
+            this.radLabel7.TabIndex = 33;
+            this.radLabel7.Text = ": الشهر";
             // 
             // CompireClaimsFrm
             // 
@@ -327,19 +339,20 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FileNoTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FMonthDrp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FileNoTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -361,5 +374,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadTextBox FileNoTxt;
         private Telerik.WinControls.UI.RadLabel radLabel4;
+        private Telerik.WinControls.UI.RadLabel radLabel7;
     }
 }
