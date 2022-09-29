@@ -1191,7 +1191,7 @@ namespace HealthServicesSystem
                             }
                             else
                             {
-                                MessageBox.Show("لا توجد بيانات لهذا الكشف", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("لا توجد بيانات لهذه الفترة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 radioButton3.Checked = false;
                                 return;
                             }
@@ -1239,7 +1239,7 @@ namespace HealthServicesSystem
                         }
                         else
                         {
-                            MessageBox.Show("لا توجد بيانات خلال الفترة المحددة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("لا توجد بيانات لهذا الكشف", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             radioButton4.Checked = false;
                             return;
                         }
