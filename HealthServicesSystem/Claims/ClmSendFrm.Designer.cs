@@ -70,6 +70,10 @@
             this.ViewBtn = new Telerik.WinControls.UI.RadButton();
             this.SendClmGrd = new Telerik.WinControls.UI.RadGridView();
             this.UnSendClmGrd = new Telerik.WinControls.UI.RadGridView();
+            this.ExpBtn = new Telerik.WinControls.UI.RadButton();
+            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -78,8 +82,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SendClmGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SendClmGrd.MasterTemplate)).BeginInit();
+            this.SendClmGrd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UnSendClmGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnSendClmGrd.MasterTemplate)).BeginInit();
+            this.UnSendClmGrd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,6 +180,8 @@
             // 
             // SendClmGrd
             // 
+            this.SendClmGrd.Controls.Add(this.ExpBtn);
+            this.SendClmGrd.Controls.Add(this.PrintBtn);
             this.SendClmGrd.Location = new System.Drawing.Point(39, 366);
             // 
             // 
@@ -250,6 +262,8 @@
             // 
             // UnSendClmGrd
             // 
+            this.UnSendClmGrd.Controls.Add(this.radButton1);
+            this.UnSendClmGrd.Controls.Add(this.radButton2);
             this.UnSendClmGrd.Location = new System.Drawing.Point(36, 54);
             // 
             // 
@@ -328,6 +342,42 @@
             this.UnSendClmGrd.TitleText = "قائمة الملفات الجاهزة للارسال";
             this.UnSendClmGrd.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.UnSendClmGrd_CommandCellClick);
             // 
+            // ExpBtn
+            // 
+            this.ExpBtn.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.ExpBtn.Location = new System.Drawing.Point(1005, 3);
+            this.ExpBtn.Name = "ExpBtn";
+            this.ExpBtn.Size = new System.Drawing.Size(95, 33);
+            this.ExpBtn.TabIndex = 33;
+            this.ExpBtn.Text = "تصدير ";
+            // 
+            // PrintBtn
+            // 
+            this.PrintBtn.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.PrintBtn.Location = new System.Drawing.Point(1103, 3);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(95, 33);
+            this.PrintBtn.TabIndex = 32;
+            this.PrintBtn.Text = "طباعة";
+            // 
+            // radButton1
+            // 
+            this.radButton1.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.radButton1.Location = new System.Drawing.Point(1005, 4);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(95, 33);
+            this.radButton1.TabIndex = 33;
+            this.radButton1.Text = "تصدير ";
+            // 
+            // radButton2
+            // 
+            this.radButton2.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.radButton2.Location = new System.Drawing.Point(1103, 4);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(95, 33);
+            this.radButton2.TabIndex = 32;
+            this.radButton2.Text = "طباعة";
+            // 
             // ClmSendFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,8 +401,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SendClmGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SendClmGrd)).EndInit();
+            this.SendClmGrd.ResumeLayout(false);
+            this.SendClmGrd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UnSendClmGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnSendClmGrd)).EndInit();
+            this.UnSendClmGrd.ResumeLayout(false);
+            this.UnSendClmGrd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -368,5 +426,9 @@
         private Telerik.WinControls.UI.RadButton ViewBtn;
         private Telerik.WinControls.UI.RadGridView SendClmGrd;
         private Telerik.WinControls.UI.RadGridView UnSendClmGrd;
+        private Telerik.WinControls.UI.RadButton ExpBtn;
+        private Telerik.WinControls.UI.RadButton PrintBtn;
+        private Telerik.WinControls.UI.RadButton radButton1;
+        private Telerik.WinControls.UI.RadButton radButton2;
     }
 }
