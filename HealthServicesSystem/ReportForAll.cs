@@ -28,7 +28,7 @@ namespace HealthServicesSystem
         public string Row18 { get; set; }
         public string Row19 { get; set; }
         public string Row20 { get; set; }
-
+        public int Row23 { get; set; }
     }
 
 }
