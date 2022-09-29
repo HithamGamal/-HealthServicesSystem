@@ -1,6 +1,6 @@
 ﻿using System;
-//using System.Collections.Generic;
-//using System.Linq;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,6 +10,9 @@ namespace ModelDB
     public class Reclaim : BaseEntity
     {
         public int Id { get; set; }
+        public int? SirkNo { get; set; }
+        public string BillType { get; set; }
+    
         public string ReclaimNo { get; set; }
         public DateTime ReclaimDate { get; set; }
         public decimal BillsTotal { get; set; }
@@ -43,8 +46,6 @@ namespace ModelDB
         public DateTime BirthDate { get; set; }
         public string SectorName { get; set; }
         public int? SectorId { get; set; }
-        public string BillType { get; set; }
-        public int? SirkNo { get; set; }
 
     }
     public enum ReclaimStatus
