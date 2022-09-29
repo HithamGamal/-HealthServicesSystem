@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,9 @@ namespace ModelDB
         public decimal  Value { get; set; }
         public ValueType ValueType { get; set; }
         public DicountType DicountType { get; set; }
+        public int GroupId  { get; set; }
+        [ForeignKey("GroupId")]
+        public virtual  ClmNonConfirmGroup ClmNonConfirmGroup { get; set; }
 
     }
     public enum ValueType
