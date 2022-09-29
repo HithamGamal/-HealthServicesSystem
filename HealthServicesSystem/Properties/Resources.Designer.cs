@@ -1093,6 +1093,16 @@ namespace HealthServicesSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap print_FILL0_wght100_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("print_FILL0_wght100_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Printer_Red {
             get {
                 object obj = ResourceManager.GetObject("Printer_Red", resourceCulture);
@@ -1246,6 +1256,16 @@ namespace HealthServicesSystem.Properties {
         internal static System.Drawing.Bitmap sticky_note_2_FILL0_wght400_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("sticky_note_2_FILL0_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_update_alt_FILL0_wght100_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("system_update_alt_FILL0_wght100_GRAD0_opsz24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
