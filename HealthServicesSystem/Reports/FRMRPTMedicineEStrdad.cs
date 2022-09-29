@@ -1216,7 +1216,7 @@ namespace HealthServicesSystem
                     {
 
                         db.Database.CommandTimeout = 0;
-                        int SrkNo = Convert.ToInt32(SirkNo.Text);
+                        //int SrkNo = Convert.ToInt32(SirkNo.Text);
                         //textBox1.Text = StrRPT2;
                         var GetDet = db.Database.SqlQuery<ReportForAll>("SELECT SirkNo AS Row23, InsurNo AS Row6, InsurName AS Row7, BillType, ReclaimDate AS Row13, MedicalTotal AS Row11, MedicineTotal AS Row12, ReclaimTotal AS Row21, CONVERT(decimal, ReclaimStatus) AS Row2 FROM dbo.Reclaims WHERE dbo.Reclaims.LocalityId=" + LocalityId.ToString() + " and (dbo.Reclaims.RowStatus <> 2) and dbo.Reclaims.SirkNo =" + SirkNo.Text + "").OrderBy(p => p.Row13).ToList();
                         //MessageBox.Show(GetDet.Count.ToString());
