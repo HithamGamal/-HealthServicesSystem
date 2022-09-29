@@ -58,21 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202209270933377_saif_2022_09_27.cs" />
-    <Compile Include="Migrations\202209270933377_saif_2022_09_27.designer.cs">
-      <DependentUpon>202209270933377_saif_2022_09_27.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209280710027_saif_2022_09_28.cs" />
-    <Compile Include="Migrations\202209280710027_saif_2022_09_28.designer.cs">
-      <DependentUpon>202209280710027_saif_2022_09_28.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209281003030_saif_2022_09_28_1.cs" />
-    <Compile Include="Migrations\202209281003030_saif_2022_09_28_1.designer.cs">
-      <DependentUpon>202209281003030_saif_2022_09_28_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209290630289_saif_2022_09_29_1.cs" />
-    <Compile Include="Migrations\202209290630289_saif_2022_09_29_1.designer.cs">
-      <DependentUpon>202209290630289_saif_2022_09_29_1.cs</DependentUpon>
+    <Compile Include="ClmNonConfirmGroup.cs" />
+    <Compile Include="Migrations\202209290953043_jjj.cs" />
+    <Compile Include="Migrations\202209290953043_jjj.designer.cs">
+      <DependentUpon>202209290953043_jjj.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
@@ -153,17 +142,8 @@
     <!--<Fakes Include="Fakes\EntityFramework.fakes" />-->
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202209270933377_saif_2022_09_27.resx">
-      <DependentUpon>202209270933377_saif_2022_09_27.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209280710027_saif_2022_09_28.resx">
-      <DependentUpon>202209280710027_saif_2022_09_28.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209281003030_saif_2022_09_28_1.resx">
-      <DependentUpon>202209281003030_saif_2022_09_28_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209290630289_saif_2022_09_29_1.resx">
-      <DependentUpon>202209290630289_saif_2022_09_29_1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202209290953043_jjj.resx">
+      <DependentUpon>202209290953043_jjj.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
