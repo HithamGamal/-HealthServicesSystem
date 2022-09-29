@@ -1,4 +1,4 @@
-﻿using MedicalServiceSystem.SystemSetting;
+﻿using HealthServicesSystem.SystemSetting;
 using ModelDB;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     public partial class ClmRequestFrm : Telerik.WinControls.UI.RadForm
     {

@@ -1,4 +1,4 @@
-﻿using MedicalServiceSystem.SystemSetting;
+﻿using HealthServicesSystem.SystemSetting;
 using ModelDB;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.Export;
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     public partial class ImportFileFrm : Telerik.WinControls.UI.RadForm
     {

@@ -1,5 +1,5 @@
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     partial class CenterNonConfirmRep
     {

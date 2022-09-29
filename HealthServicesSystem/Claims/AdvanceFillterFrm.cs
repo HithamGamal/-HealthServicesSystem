@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.Export;
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     public partial class AdvanceFillterFrm : Telerik.WinControls.UI.RadForm
     {
