@@ -26,9 +26,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Medicine System</ProductName>
+    <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>21</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -102,10 +104,7 @@
     <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI.Design, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2020.1.113.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms R1 2020\Bin\TelerikCommon.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="TelerikCommon, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="TelerikExport, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
@@ -981,382 +980,382 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\add.png" />
+    <Content Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AddNew.jpg" />
+    <Content Include="Resources\AddNew.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\addPerson.png" />
+    <Content Include="Resources\addPerson.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Aisologo.bmp" />
+    <Content Include="Resources\Aisologo.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\approval.png" />
+    <Content Include="Resources\approval.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Approve.png" />
+    <Content Include="Resources\Approve.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\assignment_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\assignment_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\attach.png" />
+    <Content Include="Resources\attach.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\attachment.png" />
+    <Content Include="Resources\attachment.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\baseline_block_black_18dp.png" />
+    <Content Include="Resources\baseline_block_black_18dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BINOCULR.ICO" />
+    <Content Include="Resources\BINOCULR.ICO" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Bloc Notes SZ.png" />
+    <Content Include="Resources\Bloc Notes SZ.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Book_Green.ico" />
+    <Content Include="Resources\Book_Green.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\clear.png" />
+    <Content Include="Resources\clear.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CompanyLogo.jpg" />
+    <Content Include="Resources\CompanyLogo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\copying.png" />
+    <Content Include="Resources\copying.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\create.png" />
+    <Content Include="Resources\create.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DELETE - Copy.BMP" />
+    <Content Include="Resources\DELETE - Copy.BMP" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DELETE.BMP" />
+    <Content Include="Resources\DELETE.BMP" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Delete.jpg" />
+    <Content Include="Resources\Delete.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\delete.png" />
+    <Content Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Disable.png" />
+    <Content Include="Resources\Disable.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Dock_About01.png" />
+    <Content Include="Resources\Dock_About01.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dwa.jpg" />
+    <Content Include="Resources\dwa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\edit.png" />
+    <Content Include="Resources\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Edit1.png" />
+    <Content Include="Resources\Edit1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\editdelete.png" />
+    <Content Include="Resources\editdelete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\EditImage.png" />
+    <Content Include="Resources\EditImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Enable5.png" />
+    <Content Include="Resources\Enable5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\encrypted.png" />
+    <Content Include="Resources\encrypted.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\error.png" />
+    <Content Include="Resources\error.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\event_busy_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\event_busy_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Excel.png" />
+    <Content Include="Resources\Excel.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\exec.png" />
+    <Content Include="Resources\exec.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fact_check_FILL0_wght400_GRAD0_opsz48 %281%29.png" />
+    <Content Include="Resources\fact_check_FILL0_wght400_GRAD0_opsz48 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fact_check_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\fact_check_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\file_download_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\file_download_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\filefind.png" />
+    <Content Include="Resources\filefind.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fileprint.png" />
+    <Content Include="Resources\fileprint.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FILES10.ICO" />
+    <Content Include="Resources\FILES10.ICO" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\filter_alt_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\filter_alt_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\flash_auto_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\flash_auto_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hh.jpg" />
+    <Content Include="Resources\hh.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_add_32.png" />
+    <Content Include="Resources\icons8_add_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_add_red_32.png" />
+    <Content Include="Resources\icons8_add_red_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_copy_32.png" />
+    <Content Include="Resources\icons8_copy_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_data_transfer_32.png" />
+    <Content Include="Resources\icons8_data_transfer_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_deleteAll_32.png" />
+    <Content Include="Resources\icons8_deleteAll_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_do_not_touch_32.png" />
+    <Content Include="Resources\icons8_do_not_touch_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_ecg_32.png" />
+    <Content Include="Resources\icons8_ecg_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_job_32.png" />
+    <Content Include="Resources\icons8_job_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_list_32.png" />
+    <Content Include="Resources\icons8_list_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_list_of_thumbnails_48.png" />
+    <Content Include="Resources\icons8_list_of_thumbnails_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_list_of_thumbnails1_48.png" />
+    <Content Include="Resources\icons8_list_of_thumbnails1_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_list1_32.png" />
+    <Content Include="Resources\icons8_list1_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_location_off_16.png" />
+    <Content Include="Resources\icons8_location_off_16.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_logout_rounded_left_32.png" />
+    <Content Include="Resources\icons8_logout_rounded_left_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_paste_32.png" />
+    <Content Include="Resources\icons8_paste_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_pill_16.png" />
+    <Content Include="Resources\icons8_pill_16.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_pills_32.png" />
+    <Content Include="Resources\icons8_pills_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_print_32.png" />
+    <Content Include="Resources\icons8_print_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_save_close_16.png" />
+    <Content Include="Resources\icons8_save_close_16.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_send_to_printer_16.png" />
+    <Content Include="Resources\icons8_send_to_printer_16.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_separated_lists_32.png" />
+    <Content Include="Resources\icons8_separated_lists_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_stethoscope_32.png" />
+    <Content Include="Resources\icons8_stethoscope_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_unavailable_32.png" />
+    <Content Include="Resources\icons8_unavailable_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_undo_alt_32.png" />
+    <Content Include="Resources\icons8_undo_alt_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_usb_connected_32.png" />
+    <Content Include="Resources\icons8_usb_connected_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-add-new-24.png" />
+    <Content Include="Resources\icons8-add-new-24.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-add-property-50.png" />
+    <Content Include="Resources\icons8-add-property-50.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-add-property-501.png" />
+    <Content Include="Resources\icons8-add-property-501.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-downloading-updates-48.png" />
+    <Content Include="Resources\icons8-downloading-updates-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-medical-64.png" />
+    <Content Include="Resources\icons8-medical-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-medical-641.png" />
+    <Content Include="Resources\icons8-medical-641.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-medicine-48.png" />
+    <Content Include="Resources\icons8-medicine-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-medicine-64.png" />
+    <Content Include="Resources\icons8-medicine-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-remove-48.png" />
+    <Content Include="Resources\icons8-remove-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-remove-481.png" />
+    <Content Include="Resources\icons8-remove-481.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-search-24.png" />
+    <Content Include="Resources\icons8-search-24.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-search-64.png" />
+    <Content Include="Resources\icons8-search-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-servers-group-80.png" />
+    <Content Include="Resources\icons8-servers-group-80.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-stop-gesture-48.png" />
+    <Content Include="Resources\icons8-stop-gesture-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Insurance.jpg" />
+    <Content Include="Resources\Insurance.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\InsuranceSystem.png" />
+    <Content Include="Resources\InsuranceSystem.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LoginIco.png" />
+    <Content Include="Resources\LoginIco.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LogoutIco.png" />
+    <Content Include="Resources\LogoutIco.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Medical_setup_96px.png" />
+    <Content Include="Resources\Medical_setup_96px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MedicalSubGrouping_96px.png" />
+    <Content Include="Resources\MedicalSubGrouping_96px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\menu_book_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\menu_book_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\more.png" />
+    <Content Include="Resources\more.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\NEW.BMP" />
+    <Content Include="Resources\NEW.BMP" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\new1.jpg" />
+    <Content Include="Resources\new1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\off.png" />
+    <Content Include="Resources\off.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\offline_pin_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\offline_pin_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\On.png" />
+    <Content Include="Resources\On.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\outline_hourglass_bottom_black_24dp.png" />
+    <Content Include="Resources\outline_hourglass_bottom_black_24dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\outline_hourglass_bottom_black_24dp1.png" />
+    <Content Include="Resources\outline_hourglass_bottom_black_24dp1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\outline_person_add_alt_black_18dp.png" />
+    <Content Include="Resources\outline_person_add_alt_black_18dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\outline_verified_black_18dp.png" />
+    <Content Include="Resources\outline_verified_black_18dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\photo.png" />
+    <Content Include="Resources\photo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\preview.png" />
+    <Content Include="Resources\preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\print.png" />
+    <Content Include="Resources\print.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Printer_Red.png" />
+    <Content Include="Resources\Printer_Red.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\receipt_long_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\receipt_long_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\removePerson.png" />
+    <Content Include="Resources\removePerson.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Renew.png" />
+    <Content Include="Resources\Renew.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SAVE.BMP" />
+    <Content Include="Resources\SAVE.BMP" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\saveAll.png" />
+    <Content Include="Resources\saveAll.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SaveImage.png" />
+    <Content Include="Resources\SaveImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
+    <Content Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search2.png" />
+    <Content Include="Resources\search2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search11.png" />
+    <Content Include="Resources\search11.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SearchForCard.png" />
+    <Content Include="Resources\SearchForCard.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\send_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\send_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Settings.png" />
+    <Content Include="Resources\Settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sss.png" />
+    <Content Include="Resources\sss.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StateLogo.jpg" />
+    <Content Include="Resources\StateLogo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sticky_note_2_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\sticky_note_2_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\task_alt_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\task_alt_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tenancy_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="Resources\tenancy_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Transaction.png" />
+    <Content Include="Resources\Transaction.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\transfer.png" />
+    <Content Include="Resources\transfer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\transfer1.png" />
+    <Content Include="Resources\transfer1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\upload.png" />
+    <Content Include="Resources\upload.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\UsersSetting.png" />
+    <Content Include="Resources\UsersSetting.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Xserve.png" />
+    <Content Include="Resources\Xserve.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">
@@ -1376,14 +1375,12 @@
     <Content Include="Resources\system_update_alt_FILL0_wght100_GRAD0_opsz24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!--<Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      -->
-  <!--<ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />-->
-  <!--
-  </Target>-->
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>
