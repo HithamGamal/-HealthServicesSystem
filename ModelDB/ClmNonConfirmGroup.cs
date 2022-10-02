@@ -9,6 +9,7 @@ namespace ModelDB
    public  class ClmNonConfirmGroup
     {
         public int Id { get; set; }
+
         public string GroupName { get; set; }
        
     }

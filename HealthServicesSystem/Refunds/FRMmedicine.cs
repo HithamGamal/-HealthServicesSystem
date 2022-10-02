@@ -353,14 +353,14 @@ namespace HealthServicesSystem.Reclaims
                 approvereason.ValueMember = "Id";
                 approvereason.SelectedIndex = -1;
 
-                var ReqCenter = db.CenterInfos.ToList();
+                var ReqCenter = db.CenterInfos.Where(p => p.IsEnabled == true).ToList();
                 RequistingParty.DataSource = ReqCenter;
                 RequistingParty.ValueMember = "Id";
                 RequistingParty.DisplayMember = "CenterName";
                 RequistingParty.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 RequistingParty.SelectedIndex = -1;
 
-                var ExcCenter = db.CenterInfos.ToList();
+                var ExcCenter = db.CenterInfos.Where(p => p.IsEnabled == true).ToList();
                 ExcutingParty.DataSource = ExcCenter;
                 ExcutingParty.ValueMember = "Id";
                 ExcutingParty.DisplayMember = "CenterName";

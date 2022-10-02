@@ -974,12 +974,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ModelDB\ModelDB.csproj">
-      <Project>{3fe9389c-1468-4345-bc6d-fa5db4a5dc68}</Project>
-      <Name>ModelDB</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1373,6 +1367,12 @@
     <Content Include="Resources\compare_FILL0_wght400_GRAD0_opsz48.png" />
     <Content Include="Resources\print_FILL0_wght100_GRAD0_opsz24.png" />
     <Content Include="Resources\system_update_alt_FILL0_wght100_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelDB\ModelDB.csproj">
+      <Project>{3fe9389c-1468-4345-bc6d-fa5db4a5dc68}</Project>
+      <Name>ModelDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
