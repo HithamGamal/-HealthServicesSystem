@@ -20,15 +20,22 @@ namespace HealthServicesSystem.Claims
 
         private void CompireClaimsFrm_Load(object sender, EventArgs e)
         {
-            dbContext db = new dbContext();
-            var qCenter = db.CenterInfos.Select(p => new { Id = p.Id, CenterName = p.Id + " " + p.CenterName }).ToList();
-            if (qCenter.Count > 0)
+            try
             {
-                CenterNameDrp.DataSource = qCenter;
-                CenterNameDrp.DisplayMember = "CenterName";
-                CenterNameDrp.ValueMember = "Id";
-                CenterNameDrp.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-                CenterNameDrp.SelectedIndex = -1;
+                dbContext db = new dbContext();
+                var qCenter = db.CenterInfos.Select(p => new { Id = p.Id, CenterName = p.Id + " " + p.CenterName }).ToList();
+                if (qCenter.Count > 0)
+                {
+                    CenterNameDrp.DataSource = qCenter;
+                    CenterNameDrp.DisplayMember = "CenterName";
+                    CenterNameDrp.ValueMember = "Id";
+                    CenterNameDrp.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                    CenterNameDrp.SelectedIndex = -1;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
