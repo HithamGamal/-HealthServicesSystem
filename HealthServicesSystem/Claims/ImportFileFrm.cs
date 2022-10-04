@@ -1,4 +1,4 @@
-﻿using MedicalServiceSystem.SystemSetting;
+﻿using HealthServicesSystem.SystemSetting;
 using ModelDB;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.Export;
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     public partial class ImportFileFrm : Telerik.WinControls.UI.RadForm
     {
@@ -327,7 +327,17 @@ namespace MedicalServiceSystem.Claims
                 _m = int.Parse(dt.Rows[0]["Mnth"].ToString()); 
                  _y = int.Parse(dt.Rows[0]["yr"].ToString());
 
-                var q = db.ClmImpFile .Where(p => p.CenterId == _cntrId && p.Month  == _m && p.year == _y).ToList();
+                //===============
+                OleDbDataAdapter da1 = new OleDbDataAdapter("SELECT sum( DetailsTb.Total) as Total  FROM DetailsTb ", con);
+                DataTable dt1 = new DataTable();
+                da1.Fill(dt1);
+
+             
+
+
+                    //===================
+
+                    var q = db.ClmImpFile .Where(p => p.CenterId == _cntrId && p.Month  == _m && p.year == _y).ToList();
                 if (q.Count==0)
                 {
                     _FileNo = 1;
@@ -342,7 +352,7 @@ namespace MedicalServiceSystem.Claims
                 // insert into imort
                 ClmImpFile im = new ClmImpFile();
                 im.CenterId = _cntrId;
-                im.Costs = 0;
+                im.Costs = Convert.ToDecimal ( dt.Rows[0]["Total"]);
                 im.Counts = dt.Rows.Count;
                 im.DrogCount = dt.Rows.Count;
                 im.DateIn = _now;
@@ -387,7 +397,17 @@ namespace MedicalServiceSystem.Claims
                             t.ImpId = impId ;
                             t.VisitDate = Convert.ToDateTime(dt.Rows[i]["VisitDate"].ToString());
                             t.VisitNo = dt.Rows[i]["VisitNo"].ToString();
-                            t.InsuranceNo = Convert.ToDouble(dt.Rows[i]["InsuranceNo"].ToString());
+                        double insNo = 0;
+                        string insNotxt = dt.Rows[i]["InsuranceNo"].ToString();
+                            if (insNotxt.Contains ("/"))
+                        {
+                            insNo= Convert.ToDouble ( insNotxt.Replace("/", "0"));
+                        }
+                            else
+                        {
+                            insNo = Convert.ToDouble(dt.Rows[i]["InsuranceNo"].ToString());
+                        }
+                            t.InsuranceNo = insNo ;
                             t.Months = int.Parse(dt.Rows[i]["Mnth"].ToString());
                             t.NoOfFile = int.Parse(dt.Rows[i]["MasterTb.Id"].ToString());
                             t.PatName = dt.Rows[i]["FullName"].ToString();

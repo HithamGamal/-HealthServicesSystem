@@ -13,10 +13,10 @@ using System.Linq;
 using System.IO;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 using ModelDB;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMBookInfo : Telerik.WinControls.UI.RadForm
     {

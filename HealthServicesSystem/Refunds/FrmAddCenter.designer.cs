@@ -10,7 +10,7 @@ using System.Linq;
 using System.Xml.Linq;
 using System.Threading.Tasks;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
 	[Microsoft.VisualBasic.CompilerServices.DesignerGenerated()]
 	public partial class FrmAddCenter : System.Windows.Forms.Form

@@ -10,6 +10,9 @@ namespace ModelDB
     public class Reclaim : BaseEntity
     {
         public int Id { get; set; }
+        public int? SirkNo { get; set; }
+        public string BillType { get; set; }
+    
         public string ReclaimNo { get; set; }
         public DateTime ReclaimDate { get; set; }
         public decimal BillsTotal { get; set; }

@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/HealthServicesSystem/v16
+/.vs/NewMedicine/v16/.suo
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/HealthServicesSystem/bin/Debug
+/HealthServicesSystem/obj/Debug
+/ModelDB/bin/Debug
+/ModelDB/Migrations
+/ModelDB/obj/Debug
+/packages

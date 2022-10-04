@@ -6,9 +6,9 @@ using
 using System.Linq;
 using Microsoft.VisualBasic;
 using System.Data.SqlClient;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     public partial class UserGroupFRM
     {

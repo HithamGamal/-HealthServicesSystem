@@ -40,7 +40,7 @@ namespace HealthServicesSystem
             [global::System.Diagnostics.DebuggerStepThroughAttribute()]
             protected override void OnCreateMainForm()
             {
-                this.MainForm = global::MedicalServiceSystem.SystemSetting.LoginForm.Default;
+                this.MainForm = global::HealthServicesSystem.SystemSetting.LoginForm.Default;
             }
         }
     }

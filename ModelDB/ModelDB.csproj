@@ -58,14 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202209190841367_2222.cs" />
-    <Compile Include="Migrations\202209190841367_2222.designer.cs">
-      <DependentUpon>202209190841367_2222.cs</DependentUpon>
+    <Compile Include="ClmNonConfirmGroup.cs" />
+    <Compile Include="Migrations\202209290953043_jjj.cs" />
+    <Compile Include="Migrations\202209290953043_jjj.designer.cs">
+      <DependentUpon>202209290953043_jjj.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202209200726511_22222223.cs" />
-    <Compile Include="Migrations\202209200726511_22222223.designer.cs">
-      <DependentUpon>202209200726511_22222223.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
     <Compile Include="RefuseMedicine.cs" />
@@ -103,7 +101,6 @@
     <Compile Include="dbContext.cs" />
     <Compile Include="CenterContract.cs" />
     <Compile Include="AdmRS.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pharmacist.cs" />
     <Compile Include="Generic.cs" />
     <Compile Include="GroupPermission.cs" />
@@ -145,11 +142,8 @@
     <!--<Fakes Include="Fakes\EntityFramework.fakes" />-->
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202209190841367_2222.resx">
-      <DependentUpon>202209190841367_2222.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209200726511_22222223.resx">
-      <DependentUpon>202209200726511_22222223.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202209290953043_jjj.resx">
+      <DependentUpon>202209290953043_jjj.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,7 +8,7 @@ using Microsoft.VisualBasic;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     [global::Microsoft.VisualBasic.CompilerServices.DesignerGenerated()]
     public

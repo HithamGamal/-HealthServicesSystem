@@ -11,7 +11,7 @@ using System.Xml.Linq;
 using System.Threading.Tasks;
 using ModelDB;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     public partial class FrmAddCenter
     {

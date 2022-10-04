@@ -12,10 +12,10 @@ using System.Data.Entity;
 using System.IO;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 using System.Linq;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMApproveMedicine : Telerik.WinControls.UI.RadForm
     {

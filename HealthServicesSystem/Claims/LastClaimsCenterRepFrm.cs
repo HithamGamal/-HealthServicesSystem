@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     public partial class LastClaimsCenterRepFrm : Telerik.WinControls.UI.RadForm
     {

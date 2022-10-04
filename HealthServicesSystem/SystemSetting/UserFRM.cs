@@ -10,7 +10,7 @@ using Microsoft.VisualBasic;
 using ModelDB;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.SystemSetting
+namespace HealthServicesSystem.SystemSetting
 {
     public partial class UserFRM : Telerik.WinControls.UI.RadForm
     {

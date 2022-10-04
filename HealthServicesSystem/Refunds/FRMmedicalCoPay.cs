@@ -1,4 +1,4 @@
-﻿using MedicalServiceSystem.SystemSetting;
+﻿using HealthServicesSystem.SystemSetting;
 using ModelDB;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using Telerik.Reporting.Processing;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMmedicalCoPay : Telerik.WinControls.UI.RadForm
     {

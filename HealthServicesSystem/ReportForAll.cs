@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using ModelDB;
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
 	public class ReportForAll
     {		
@@ -28,7 +28,7 @@ namespace MedicalServiceSystem
         public string Row18 { get; set; }
         public string Row19 { get; set; }
         public string Row20 { get; set; }
-
+        public int Row23 { get; set; }
     }
 
 }

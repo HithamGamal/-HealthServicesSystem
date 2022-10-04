@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using Telerik.Reporting;
 using Telerik.Reporting.Drawing;
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     /// <summary>
     /// Summary description for ClmReceiptReport.
@@ -41,7 +41,10 @@ namespace MedicalServiceSystem.Claims
                 SubReportError sr = new SubReportError();
                 subReport1.ReportSource = sr;
                 sr.DataSource = q;
+
+              
             }
+
 
 
         }

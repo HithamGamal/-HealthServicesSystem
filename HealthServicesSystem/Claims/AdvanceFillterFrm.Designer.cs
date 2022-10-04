@@ -1,4 +1,4 @@
-﻿namespace MedicalServiceSystem.Claims
+﻿namespace HealthServicesSystem.Claims
 {
     partial class AdvanceFillterFrm
     {
@@ -132,11 +132,16 @@
             this.radGridView1.AllowDrop = true;
             this.radGridView1.AutoGenerateHierarchy = true;
             this.radGridView1.AutoScroll = true;
+            this.radGridView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGridView1.EnableCustomDrawing = true;
             this.radGridView1.EnableCustomFiltering = true;
             this.radGridView1.EnableCustomGrouping = true;
             this.radGridView1.EnableCustomSorting = true;
+            this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.radGridView1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radGridView1.Location = new System.Drawing.Point(0, 0);
             // 
             // 
@@ -144,63 +149,79 @@
             this.radGridView1.MasterTemplate.AllowAddNewRow = false;
             this.radGridView1.MasterTemplate.AllowDeleteRow = false;
             this.radGridView1.MasterTemplate.AllowRowReorder = true;
+            this.radGridView1.MasterTemplate.AllowSearchRow = true;
             this.radGridView1.MasterTemplate.AutoExpandGroups = true;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "CenterName";
             gridViewTextBoxColumn1.HeaderText = "المركز";
             gridViewTextBoxColumn1.Name = "CenterName";
             gridViewTextBoxColumn1.Width = 300;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.FieldName = "FileNo";
             gridViewTextBoxColumn2.HeaderText = "رقم الملف";
             gridViewTextBoxColumn2.Name = "FileNo";
             gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
             gridViewTextBoxColumn3.FieldName = "Month";
             gridViewTextBoxColumn3.HeaderText = "الشهر";
             gridViewTextBoxColumn3.Name = "Month";
             gridViewTextBoxColumn3.Width = 80;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.FieldName = "Year";
             gridViewTextBoxColumn4.HeaderText = "السنة";
             gridViewTextBoxColumn4.Name = "Year";
             gridViewTextBoxColumn4.Width = 80;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
             gridViewTextBoxColumn5.FieldName = "PatName";
             gridViewTextBoxColumn5.HeaderText = "الاسم ";
             gridViewTextBoxColumn5.Name = "PatName";
             gridViewTextBoxColumn5.Width = 180;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
             gridViewTextBoxColumn6.FieldName = "InsuranceNo";
             gridViewTextBoxColumn6.HeaderText = "رقم التامين";
             gridViewTextBoxColumn6.Name = "InsuranceNo";
             gridViewTextBoxColumn6.Width = 100;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
             gridViewTextBoxColumn7.FieldName = "ClientId";
             gridViewTextBoxColumn7.HeaderText = "المخدم";
             gridViewTextBoxColumn7.Name = "ClientId";
             gridViewTextBoxColumn7.Width = 100;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
             gridViewTextBoxColumn8.FieldName = "VisitDate";
             gridViewTextBoxColumn8.HeaderText = "تاريخ الزيارة";
             gridViewTextBoxColumn8.Name = "VisitDate";
             gridViewTextBoxColumn8.Width = 80;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
             gridViewTextBoxColumn9.FieldName = "VisitType";
             gridViewTextBoxColumn9.HeaderText = "نوع الروشتة";
             gridViewTextBoxColumn9.Name = "VisitType";
             gridViewTextBoxColumn9.Width = 120;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
             gridViewTextBoxColumn10.FieldName = "Daignosis";
             gridViewTextBoxColumn10.HeaderText = "التشخيص";
             gridViewTextBoxColumn10.Name = "Daignosis";
             gridViewTextBoxColumn10.Width = 180;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
             gridViewTextBoxColumn11.FieldName = "GenericName";
             gridViewTextBoxColumn11.HeaderText = "الاسم العلمي";
             gridViewTextBoxColumn11.Name = "GenericName";
             gridViewTextBoxColumn11.Width = 250;
+            gridViewTextBoxColumn12.EnableExpressionEditor = false;
             gridViewTextBoxColumn12.FieldName = "TradeName";
             gridViewTextBoxColumn12.HeaderText = "الاسم التجاري";
             gridViewTextBoxColumn12.Name = "TradeName";
             gridViewTextBoxColumn12.Width = 250;
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
             gridViewTextBoxColumn13.FieldName = "Qty";
             gridViewTextBoxColumn13.HeaderText = "الكمية";
             gridViewTextBoxColumn13.Name = "Qty";
             gridViewTextBoxColumn13.Width = 80;
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
             gridViewTextBoxColumn14.FieldName = "UnitPrice";
             gridViewTextBoxColumn14.HeaderText = "سعر الوحدة";
             gridViewTextBoxColumn14.Name = "UnitPrice";
             gridViewTextBoxColumn14.Width = 80;
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
             gridViewTextBoxColumn15.FieldName = "TotalPrice";
             gridViewTextBoxColumn15.HeaderText = "الجملة";
             gridViewTextBoxColumn15.Name = "TotalPrice";
@@ -268,18 +289,20 @@
             // 
             // ExpBtn
             // 
-            this.ExpBtn.Location = new System.Drawing.Point(11, 1);
+            this.ExpBtn.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.ExpBtn.Location = new System.Drawing.Point(7, 12);
             this.ExpBtn.Name = "ExpBtn";
-            this.ExpBtn.Size = new System.Drawing.Size(95, 91);
+            this.ExpBtn.Size = new System.Drawing.Size(95, 72);
             this.ExpBtn.TabIndex = 29;
             this.ExpBtn.Text = "تصدير ";
             this.ExpBtn.Click += new System.EventHandler(this.ExpBtn_Click);
             // 
             // PrintBtn
             // 
-            this.PrintBtn.Location = new System.Drawing.Point(112, 3);
+            this.PrintBtn.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.PrintBtn.Location = new System.Drawing.Point(105, 12);
             this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(95, 91);
+            this.PrintBtn.Size = new System.Drawing.Size(95, 72);
             this.PrintBtn.TabIndex = 28;
             this.PrintBtn.Text = "طباعة";
             this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
@@ -311,7 +334,7 @@
             this.LMonthDrp.Items.Add(radListDataItem10);
             this.LMonthDrp.Items.Add(radListDataItem11);
             this.LMonthDrp.Items.Add(radListDataItem12);
-            this.LMonthDrp.Location = new System.Drawing.Point(316, 14);
+            this.LMonthDrp.Location = new System.Drawing.Point(316, 22);
             this.LMonthDrp.Name = "LMonthDrp";
             this.LMonthDrp.NullText = "Select Month";
             this.LMonthDrp.Size = new System.Drawing.Size(139, 25);
@@ -320,7 +343,7 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(457, 14);
+            this.radLabel4.Location = new System.Drawing.Point(457, 22);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(51, 31);
             this.radLabel4.TabIndex = 25;
@@ -329,7 +352,7 @@
             // radLabel5
             // 
             this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(459, 45);
+            this.radLabel5.Location = new System.Drawing.Point(459, 53);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(47, 31);
             this.radLabel5.TabIndex = 26;
@@ -338,7 +361,7 @@
             // LYearTxt
             // 
             this.LYearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LYearTxt.Location = new System.Drawing.Point(316, 45);
+            this.LYearTxt.Location = new System.Drawing.Point(316, 53);
             this.LYearTxt.Name = "LYearTxt";
             this.LYearTxt.NullText = "Enter Year";
             this.LYearTxt.Size = new System.Drawing.Size(139, 25);
@@ -390,7 +413,7 @@
             this.FMonthDrp.Items.Add(radListDataItem22);
             this.FMonthDrp.Items.Add(radListDataItem23);
             this.FMonthDrp.Items.Add(radListDataItem24);
-            this.FMonthDrp.Location = new System.Drawing.Point(527, 13);
+            this.FMonthDrp.Location = new System.Drawing.Point(527, 21);
             this.FMonthDrp.Name = "FMonthDrp";
             this.FMonthDrp.NullText = "Select Month";
             this.FMonthDrp.Size = new System.Drawing.Size(143, 25);
@@ -399,7 +422,7 @@
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel2.Location = new System.Drawing.Point(680, 13);
+            this.radLabel2.Location = new System.Drawing.Point(680, 21);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(51, 31);
             this.radLabel2.TabIndex = 19;
@@ -408,7 +431,7 @@
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(682, 44);
+            this.radLabel3.Location = new System.Drawing.Point(682, 52);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(47, 31);
             this.radLabel3.TabIndex = 20;
@@ -417,7 +440,7 @@
             // FYearTxt
             // 
             this.FYearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.FYearTxt.Location = new System.Drawing.Point(527, 44);
+            this.FYearTxt.Location = new System.Drawing.Point(527, 52);
             this.FYearTxt.Name = "FYearTxt";
             this.FYearTxt.NullText = "Enter Year";
             this.FYearTxt.Size = new System.Drawing.Size(143, 25);
@@ -425,9 +448,10 @@
             // 
             // ViewBtn
             // 
-            this.ViewBtn.Location = new System.Drawing.Point(210, 3);
+            this.ViewBtn.Image = global::HealthServicesSystem.Properties.Resources.icons8_search_24;
+            this.ViewBtn.Location = new System.Drawing.Point(202, 12);
             this.ViewBtn.Name = "ViewBtn";
-            this.ViewBtn.Size = new System.Drawing.Size(95, 91);
+            this.ViewBtn.Size = new System.Drawing.Size(95, 72);
             this.ViewBtn.TabIndex = 17;
             this.ViewBtn.Text = "عرض";
             this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);

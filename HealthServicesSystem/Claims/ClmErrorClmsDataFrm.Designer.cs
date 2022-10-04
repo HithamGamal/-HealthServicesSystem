@@ -1,4 +1,4 @@
-﻿namespace MedicalServiceSystem.Claims
+﻿namespace HealthServicesSystem.Claims
 {
     partial class ClmErrorClmsDataFrm
     {
@@ -60,6 +60,8 @@
             this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.NewBtn = new Telerik.WinControls.UI.RadButton();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.ExpBtn = new Telerik.WinControls.UI.RadButton();
+            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.IdTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
@@ -87,6 +89,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NewBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -376,11 +380,31 @@
             this.radGridView1.TabIndex = 42;
             this.radGridView1.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.radGridView1_CommandCellClick);
             // 
+            // ExpBtn
+            // 
+            this.ExpBtn.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.ExpBtn.Location = new System.Drawing.Point(846, 378);
+            this.ExpBtn.Name = "ExpBtn";
+            this.ExpBtn.Size = new System.Drawing.Size(81, 33);
+            this.ExpBtn.TabIndex = 44;
+            this.ExpBtn.Text = "تصدير ";
+            // 
+            // PrintBtn
+            // 
+            this.PrintBtn.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.PrintBtn.Location = new System.Drawing.Point(927, 378);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(76, 33);
+            this.PrintBtn.TabIndex = 43;
+            this.PrintBtn.Text = "طباعة";
+            // 
             // ClmErrorClmsDataFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 583);
+            this.Controls.Add(this.ExpBtn);
+            this.Controls.Add(this.PrintBtn);
             this.Controls.Add(this.radGridView1);
             this.Controls.Add(this.radGroupBox2);
             this.Controls.Add(this.radGroupBox1);
@@ -420,6 +444,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NewBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -451,5 +477,7 @@
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadButton PrinBtn;
         public Telerik.WinControls.UI.RadTextBox ReceiptId;
+        private Telerik.WinControls.UI.RadButton ExpBtn;
+        private Telerik.WinControls.UI.RadButton PrintBtn;
     }
 }

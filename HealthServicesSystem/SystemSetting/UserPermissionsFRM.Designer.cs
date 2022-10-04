@@ -1,4 +1,4 @@
-﻿namespace MedicalServiceSystem.SystemSetting
+﻿namespace HealthServicesSystem.SystemSetting
 {
     partial class UserPermissionsFRM
     {

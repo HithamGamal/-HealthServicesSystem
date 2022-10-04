@@ -1,4 +1,4 @@
-﻿namespace MedicalServiceSystem.Claims
+﻿namespace HealthServicesSystem.Claims
 {
     partial class ClmEnableFrm
     {
@@ -72,18 +72,28 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.YearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.ViewBtn = new Telerik.WinControls.UI.RadButton();
+            this.ExpBtn = new Telerik.WinControls.UI.RadButton();
+            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EnabledGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnabledGrd.MasterTemplate)).BeginInit();
+            this.EnabledGrd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NotEnabledGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotEnabledGrd.MasterTemplate)).BeginInit();
+            this.NotEnabledGrd.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +121,8 @@
             // 
             // EnabledGrd
             // 
+            this.EnabledGrd.Controls.Add(this.ExpBtn);
+            this.EnabledGrd.Controls.Add(this.PrintBtn);
             this.EnabledGrd.Location = new System.Drawing.Point(0, 267);
             // 
             // 
@@ -191,6 +203,8 @@
             // 
             // NotEnabledGrd
             // 
+            this.NotEnabledGrd.Controls.Add(this.radButton1);
+            this.NotEnabledGrd.Controls.Add(this.radButton2);
             this.NotEnabledGrd.Location = new System.Drawing.Point(3, 2);
             // 
             // 
@@ -352,6 +366,42 @@
             this.ViewBtn.Text = "عرض";
             this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);
             // 
+            // ExpBtn
+            // 
+            this.ExpBtn.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.ExpBtn.Location = new System.Drawing.Point(930, 6);
+            this.ExpBtn.Name = "ExpBtn";
+            this.ExpBtn.Size = new System.Drawing.Size(95, 33);
+            this.ExpBtn.TabIndex = 33;
+            this.ExpBtn.Text = "تصدير ";
+            // 
+            // PrintBtn
+            // 
+            this.PrintBtn.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.PrintBtn.Location = new System.Drawing.Point(1028, 6);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(95, 33);
+            this.PrintBtn.TabIndex = 32;
+            this.PrintBtn.Text = "طباعة";
+            // 
+            // radButton1
+            // 
+            this.radButton1.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.radButton1.Location = new System.Drawing.Point(930, 4);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(95, 33);
+            this.radButton1.TabIndex = 33;
+            this.radButton1.Text = "تصدير ";
+            // 
+            // radButton2
+            // 
+            this.radButton2.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.radButton2.Location = new System.Drawing.Point(1028, 4);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(95, 33);
+            this.radButton2.TabIndex = 32;
+            this.radButton2.Text = "طباعة";
+            // 
             // ClmEnableFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,8 +420,12 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EnabledGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnabledGrd)).EndInit();
+            this.EnabledGrd.ResumeLayout(false);
+            this.EnabledGrd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NotEnabledGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotEnabledGrd)).EndInit();
+            this.NotEnabledGrd.ResumeLayout(false);
+            this.NotEnabledGrd.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).EndInit();
@@ -379,6 +433,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -396,5 +454,9 @@
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadTextBox YearTxt;
         private Telerik.WinControls.UI.RadDropDownList MonthDrp;
+        private Telerik.WinControls.UI.RadButton ExpBtn;
+        private Telerik.WinControls.UI.RadButton PrintBtn;
+        private Telerik.WinControls.UI.RadButton radButton1;
+        private Telerik.WinControls.UI.RadButton radButton2;
     }
 }

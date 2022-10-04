@@ -1,6 +1,6 @@
 ﻿using Telerik.WinControls.UI;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     partial class FRMReception
     {
@@ -38,6 +38,8 @@ namespace MedicalServiceSystem.Reclaims
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
             this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Button7 = new Telerik.WinControls.UI.RadButton();
@@ -94,6 +96,8 @@ namespace MedicalServiceSystem.Reclaims
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.ChkMedicine = new System.Windows.Forms.CheckBox();
             this.ChkMedical = new System.Windows.Forms.CheckBox();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.BillType = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.Button7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button4)).BeginInit();
@@ -150,6 +154,8 @@ namespace MedicalServiceSystem.Reclaims
             ((System.ComponentModel.ISupportInitialize)(this.birhtdate11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -912,12 +918,39 @@ namespace MedicalServiceSystem.Reclaims
             this.ChkMedical.Text = "خدمة طبية";
             this.ChkMedical.UseVisualStyleBackColor = true;
             // 
+            // radLabel2
+            // 
+            this.radLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.radLabel2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
+            this.radLabel2.ForeColor = System.Drawing.Color.Black;
+            this.radLabel2.Location = new System.Drawing.Point(748, 46);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(75, 31);
+            this.radLabel2.TabIndex = 432;
+            this.radLabel2.Text = "نوع الفاتورة";
+            this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // BillType
+            // 
+            this.BillType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.BillType.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radListDataItem1.Text = "نهائية";
+            radListDataItem2.Text = "مبدئية";
+            this.BillType.Items.Add(radListDataItem1);
+            this.BillType.Items.Add(radListDataItem2);
+            this.BillType.Location = new System.Drawing.Point(595, 46);
+            this.BillType.Name = "BillType";
+            this.BillType.Size = new System.Drawing.Size(135, 28);
+            this.BillType.TabIndex = 431;
+            // 
             // FRMReception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1121, 583);
+            this.Controls.Add(this.radLabel2);
+            this.Controls.Add(this.BillType);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.TabControl1);
             this.Controls.Add(this.Button8);
@@ -1000,6 +1033,8 @@ namespace MedicalServiceSystem.Reclaims
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1061,7 +1096,7 @@ namespace MedicalServiceSystem.Reclaims
         internal Telerik.WinControls.UI.RadTextBox birhtdate1;
         internal Telerik.WinControls.UI.RadTextBox birhtdate11;
         private Telerik.WinControls.Themes.Office2010BlueTheme office2010BlueTheme1;
-        
+
         internal RadLabel radLabel1;
         internal RadTextBox Phone;
         internal RadButton BTNStop;
@@ -1070,6 +1105,8 @@ namespace MedicalServiceSystem.Reclaims
         private RadGroupBox radGroupBox1;
         private System.Windows.Forms.CheckBox ChkMedicine;
         private System.Windows.Forms.CheckBox ChkMedical;
+        internal RadLabel radLabel2;
+        internal RadDropDownList BillType;
         //private static FRMReception _Default;
         //public static FRMReception Default
         //{

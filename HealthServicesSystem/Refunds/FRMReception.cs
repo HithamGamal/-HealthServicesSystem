@@ -10,9 +10,9 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Microsoft.VisualBasic;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMReception : Telerik.WinControls.UI.RadForm
     {
@@ -102,6 +102,7 @@ namespace MedicalServiceSystem.Reclaims
             ClientId = 0;
             SectorName = "";
             SectorId = 0;
+            BillType.SelectedIndex = -1;
             money.Enabled = false;
             BillNo.Clear();
             GrdBill.Rows.Clear();
@@ -112,7 +113,8 @@ namespace MedicalServiceSystem.Reclaims
         {
             OperationDate.Value = PLC.getdate();
             UserId = LoginForm.Default.UserId;
-            LocalityId =PLC.LocalityId;
+            LocalityId = PLC.LocalityId;
+            BillType.SelectedIndex = -1;
             // MessageBox.Show(LocalityId.ToString());
             BillDate.Value = PLC.getdate();
             using (dbContext db = new dbContext())
@@ -348,8 +350,8 @@ namespace MedicalServiceSystem.Reclaims
                                     SectorName = dtSec.Rows[0]["SectorName"].ToString();
                                 }
                             }
-                         
-                                this.AcceptButton = null;
+
+                            this.AcceptButton = null;
                             PLC.conOld.Close();
                             db.SaveChanges();
                             this.Cursor = Cursors.Default;
@@ -380,7 +382,7 @@ namespace MedicalServiceSystem.Reclaims
                             // MsgBox(date1.Date)
                             string stri1 = null;
                             string str2 = null;
-                            if (Information.IsDBNull( dtsearch.Rows[0]["Thirdname"] )== false)
+                            if (Information.IsDBNull(dtsearch.Rows[0]["Thirdname"]) == false)
                             {
                                 stri1 = dtsearch.Rows[0]["Thirdname"].ToString().Trim();
                             }
@@ -465,6 +467,12 @@ namespace MedicalServiceSystem.Reclaims
                 {
                     MessageBox.Show("يجب ادخال بيانات المشترك أولاً", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     InsuranceNo.Focus();
+                    return;
+                }
+                if (BillType.SelectedIndex == -1)
+                {
+                    MessageBox.Show("يجب اختيار نوع القاتورة أولاً", "النظام" + (char)13 + "واذا لم يوجد المركز في القائمة فيجب اضافته", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    BillType.Focus();
                     return;
                 }
                 if (CenterList.SelectedIndex == -1)
@@ -632,9 +640,11 @@ namespace MedicalServiceSystem.Reclaims
                         Rf.Gender = sex.Text;
                         Rf.Server = ServerName.Text;
                         Rf.ClientId = Rec_No;
-                        Rf.BirthDate =Birthdate.Value ;
+                        Rf.BirthDate = Birthdate.Value;
                         Rf.SectorId = SectorId;
                         Rf.SectorName = SectorName;
+                        Rf.SirkNo = 0;
+                        Rf.BillType = BillType.Text;
                         db.Reclaims.Add(Rf);
                         db.SaveChanges();
                         int GId = db.Reclaims.Where(p => p.UserId == UserId).Max(p => p.Id);
@@ -683,10 +693,11 @@ namespace MedicalServiceSystem.Reclaims
                             if (Fref.Count > 0)
                             {
                                 Fref[0].BillsTotal = Convert.ToDecimal(money.Text);
-                                Fref[0].ReclaimTotal = 0;
+                                //Fref[0].ReclaimTotal = 0;
                                 Fref[0].Notes = medicalNote.Text.Trim();
                                 Fref[0].UpdateDate = OperationDate.Value;
                                 Fref[0].UpdateUser = UserId;
+                                Fref[0].BillType = BillType.Text;
                             }
                             db.Database.ExecuteSqlCommand("delete from ReclaimBills where ReclaimId=" + ReclaimId + " ");
                             for (int i = 0; i < GrdBill.RowCount; i++)

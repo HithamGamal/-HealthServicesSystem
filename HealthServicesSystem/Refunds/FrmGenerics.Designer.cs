@@ -1,4 +1,4 @@
-﻿namespace MedicalServiceSystem
+﻿namespace HealthServicesSystem
 {
     partial class FrmGenerics
     {

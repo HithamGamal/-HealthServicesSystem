@@ -1,4 +1,4 @@
-﻿namespace MedicalServiceSystem.Claims
+﻿namespace HealthServicesSystem.Claims
 {
     partial class ViewCenterListNonConfirmRepFrm
     {
@@ -44,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Telerik.ReportViewer.WinForms.ReportViewer();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.View2Btn = new Telerik.WinControls.UI.RadButton();
             this.CenterNameDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.MonthDrp = new Telerik.WinControls.UI.RadDropDownList();
@@ -51,10 +52,10 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.YearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.ViewBtn = new Telerik.WinControls.UI.RadButton();
-            this.View2Btn = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.View2Btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
@@ -62,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.View2Btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +109,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1180, 83);
             this.panel2.TabIndex = 0;
+            // 
+            // View2Btn
+            // 
+            this.View2Btn.Location = new System.Drawing.Point(12, 23);
+            this.View2Btn.Name = "View2Btn";
+            this.View2Btn.Size = new System.Drawing.Size(141, 36);
+            this.View2Btn.TabIndex = 17;
+            this.View2Btn.Text = "عرض المخالفات الصفرية";
             // 
             // CenterNameDrp
             // 
@@ -198,14 +206,6 @@
             this.ViewBtn.Text = "عرض المراكز المخالفة";
             this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);
             // 
-            // View2Btn
-            // 
-            this.View2Btn.Location = new System.Drawing.Point(12, 23);
-            this.View2Btn.Name = "View2Btn";
-            this.View2Btn.Size = new System.Drawing.Size(141, 36);
-            this.View2Btn.TabIndex = 17;
-            this.View2Btn.Text = "عرض المخالفات الصفرية";
-            // 
             // ViewCenterListNonConfirmRepFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,11 +218,13 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "عرض قائمة المخالفات للمراكز";
+            this.ThemeName = "Office2010Blue";
             this.Load += new System.EventHandler(this.ViewCenterListNonConfirmRepFrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.View2Btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).EndInit();
@@ -230,7 +232,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.View2Btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

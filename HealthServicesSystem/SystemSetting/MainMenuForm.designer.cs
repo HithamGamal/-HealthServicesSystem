@@ -1,4 +1,4 @@
-﻿namespace MedicalServiceSystem
+﻿namespace HealthServicesSystem
 {
     partial class MainMenuForm
     {
@@ -71,6 +71,8 @@
             this.EnableClms = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup40 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.SendClm = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup50 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.CompireClaims = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab2 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup41 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.RequestClm = new Telerik.WinControls.UI.RadButtonElement();
@@ -479,9 +481,10 @@
             // 
             // ribbonTab8
             // 
-            this.ribbonTab8.IsSelected = false;
+            this.ribbonTab8.IsSelected = true;
             this.ribbonTab8.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup36,
+            this.radRibbonBarGroup50,
             this.radRibbonBarGroup37,
             this.radRibbonBarGroup38,
             this.radRibbonBarGroup39,
@@ -584,9 +587,27 @@
             this.SendClm.Text = "ارسال المطالبة";
             this.SendClm.Click += new System.EventHandler(this.SendClm_Click);
             // 
+            // radRibbonBarGroup50
+            // 
+            this.radRibbonBarGroup50.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.CompireClaims});
+            this.radRibbonBarGroup50.Name = "radRibbonBarGroup50";
+            this.radRibbonBarGroup50.Text = "مطابقة البيانات";
+            // 
+            // CompireClaims
+            // 
+            this.CompireClaims.AutoSize = false;
+            this.CompireClaims.Bounds = new System.Drawing.Rectangle(0, 0, 80, 66);
+            this.CompireClaims.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.CompireClaims.Image = global::HealthServicesSystem.Properties.Resources.compare_FILL0_wght400_GRAD0_opsz48;
+            this.CompireClaims.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CompireClaims.Name = "CompireClaims";
+            this.CompireClaims.Text = "CompireClaims";
+            this.CompireClaims.Click += new System.EventHandler(this.CompireClaims_Click);
+            // 
             // ribbonTab2
             // 
-            this.ribbonTab2.IsSelected = true;
+            this.ribbonTab2.IsSelected = false;
             this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup41,
             this.radRibbonBarGroup42,
@@ -1465,5 +1486,7 @@
         private Telerik.WinControls.UI.RadButtonElement ClmReceipt;
         private Telerik.WinControls.UI.RadButtonElement EnableClms;
         private Telerik.WinControls.UI.RadButtonElement SendClm;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup50;
+        private Telerik.WinControls.UI.RadButtonElement CompireClaims;
     }
 }

@@ -1,5 +1,5 @@
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     partial class ClmReceiptReport
     {
@@ -32,6 +32,12 @@ namespace MedicalServiceSystem.Claims
             this.textBox48 = new Telerik.Reporting.TextBox();
             this.textBox51 = new Telerik.Reporting.TextBox();
             this.textBox50 = new Telerik.Reporting.TextBox();
+            this.textBox63 = new Telerik.Reporting.TextBox();
+            this.textBox64 = new Telerik.Reporting.TextBox();
+            this.UserIn = new Telerik.Reporting.TextBox();
+            this.UserPrint = new Telerik.Reporting.TextBox();
+            this.textBox65 = new Telerik.Reporting.TextBox();
+            this.textBox66 = new Telerik.Reporting.TextBox();
             this.reportHeaderSection1 = new Telerik.Reporting.ReportHeaderSection();
             this.ComanyName = new Telerik.Reporting.TextBox();
             this.ManagementName = new Telerik.Reporting.TextBox();
@@ -63,35 +69,29 @@ namespace MedicalServiceSystem.Claims
             this.textBox28 = new Telerik.Reporting.TextBox();
             this.textBox29 = new Telerik.Reporting.TextBox();
             this.textBox30 = new Telerik.Reporting.TextBox();
-            this.textBox34 = new Telerik.Reporting.TextBox();
-            this.textBox32 = new Telerik.Reporting.TextBox();
-            this.textBox33 = new Telerik.Reporting.TextBox();
-            this.textBox31 = new Telerik.Reporting.TextBox();
-            this.textBox35 = new Telerik.Reporting.TextBox();
-            this.textBox36 = new Telerik.Reporting.TextBox();
-            this.textBox43 = new Telerik.Reporting.TextBox();
-            this.textBox42 = new Telerik.Reporting.TextBox();
-            this.textBox37 = new Telerik.Reporting.TextBox();
-            this.textBox38 = new Telerik.Reporting.TextBox();
-            this.textBox41 = new Telerik.Reporting.TextBox();
-            this.textBox39 = new Telerik.Reporting.TextBox();
-            this.textBox40 = new Telerik.Reporting.TextBox();
             this.textBox56 = new Telerik.Reporting.TextBox();
             this.textBox55 = new Telerik.Reporting.TextBox();
             this.textBox57 = new Telerik.Reporting.TextBox();
             this.textBox61 = new Telerik.Reporting.TextBox();
             this.subReport1 = new Telerik.Reporting.SubReport();
             this.panel1 = new Telerik.Reporting.Panel();
+            this.textBox33 = new Telerik.Reporting.TextBox();
+            this.textBox34 = new Telerik.Reporting.TextBox();
+            this.textBox31 = new Telerik.Reporting.TextBox();
+            this.textBox32 = new Telerik.Reporting.TextBox();
+            this.textBox35 = new Telerik.Reporting.TextBox();
+            this.textBox36 = new Telerik.Reporting.TextBox();
+            this.textBox37 = new Telerik.Reporting.TextBox();
+            this.textBox38 = new Telerik.Reporting.TextBox();
+            this.textBox39 = new Telerik.Reporting.TextBox();
+            this.textBox40 = new Telerik.Reporting.TextBox();
+            this.textBox41 = new Telerik.Reporting.TextBox();
+            this.textBox42 = new Telerik.Reporting.TextBox();
+            this.textBox43 = new Telerik.Reporting.TextBox();
             this.textBox58 = new Telerik.Reporting.TextBox();
             this.textBox59 = new Telerik.Reporting.TextBox();
             this.textBox60 = new Telerik.Reporting.TextBox();
             this.textBox62 = new Telerik.Reporting.TextBox();
-            this.textBox63 = new Telerik.Reporting.TextBox();
-            this.textBox64 = new Telerik.Reporting.TextBox();
-            this.UserIn = new Telerik.Reporting.TextBox();
-            this.UserPrint = new Telerik.Reporting.TextBox();
-            this.textBox65 = new Telerik.Reporting.TextBox();
-            this.textBox66 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeaderSection1
@@ -155,7 +155,7 @@ namespace MedicalServiceSystem.Claims
             this.textBox18.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
             this.textBox18.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox18.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox18.Value = "MedCost";
+            this.textBox18.Value = "=MedCost";
             // 
             // textBox19
             // 
@@ -332,6 +332,91 @@ namespace MedicalServiceSystem.Claims
             this.textBox50.Style.Font.Bold = true;
             this.textBox50.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox50.Value = "=NextTime";
+            // 
+            // textBox63
+            // 
+            this.textBox63.KeepTogether = false;
+            this.textBox63.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.2D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
+            this.textBox63.Name = "textBox63";
+            this.textBox63.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.8D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox63.Style.Font.Bold = true;
+            this.textBox63.Style.Font.Name = "Sakkal Majalla";
+            this.textBox63.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.textBox63.Style.Font.Underline = true;
+            this.textBox63.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox63.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox63.Value = "Entered By :";
+            // 
+            // textBox64
+            // 
+            this.textBox64.KeepTogether = false;
+            this.textBox64.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.05D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
+            this.textBox64.Name = "textBox64";
+            this.textBox64.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.75D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox64.Style.Font.Bold = true;
+            this.textBox64.Style.Font.Name = "Sakkal Majalla";
+            this.textBox64.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.textBox64.Style.Font.Underline = true;
+            this.textBox64.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox64.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox64.Value = "Printed By :";
+            // 
+            // UserIn
+            // 
+            this.UserIn.KeepTogether = false;
+            this.UserIn.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
+            this.UserIn.Name = "UserIn";
+            this.UserIn.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.05D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.UserIn.Style.Font.Bold = true;
+            this.UserIn.Style.Font.Name = "Sakkal Majalla";
+            this.UserIn.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.UserIn.Style.Font.Underline = true;
+            this.UserIn.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.UserIn.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.UserIn.Value = "=UserIn";
+            // 
+            // UserPrint
+            // 
+            this.UserPrint.KeepTogether = false;
+            this.UserPrint.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.8D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
+            this.UserPrint.Name = "UserPrint";
+            this.UserPrint.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.2D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.UserPrint.Style.Font.Bold = true;
+            this.UserPrint.Style.Font.Name = "Sakkal Majalla";
+            this.UserPrint.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.UserPrint.Style.Font.Underline = true;
+            this.UserPrint.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.UserPrint.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.UserPrint.Value = "=UserPrint";
+            // 
+            // textBox65
+            // 
+            this.textBox65.Format = "{0:f}";
+            this.textBox65.KeepTogether = false;
+            this.textBox65.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
+            this.textBox65.Name = "textBox65";
+            this.textBox65.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.5D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox65.Style.Font.Bold = true;
+            this.textBox65.Style.Font.Name = "Sakkal Majalla";
+            this.textBox65.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.textBox65.Style.Font.Underline = true;
+            this.textBox65.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox65.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox65.Value = "=Now()";
+            // 
+            // textBox66
+            // 
+            this.textBox66.KeepTogether = false;
+            this.textBox66.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.5D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
+            this.textBox66.Name = "textBox66";
+            this.textBox66.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox66.Style.Font.Bold = true;
+            this.textBox66.Style.Font.Name = "Sakkal Majalla";
+            this.textBox66.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.textBox66.Style.Font.Underline = true;
+            this.textBox66.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox66.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox66.Value = "= PageNumber+\"/\"+ PageCount";
             // 
             // reportHeaderSection1
             // 
@@ -726,149 +811,6 @@ namespace MedicalServiceSystem.Claims
             this.textBox30.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox30.Value = " ﬁÌÌ„ «·„ÿ«·»… ";
             // 
-            // textBox34
-            // 
-            this.textBox34.KeepTogether = false;
-            this.textBox34.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.textBox34.Style.Font.Bold = true;
-            this.textBox34.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox34.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox34.Value = "=Entered";
-            // 
-            // textBox32
-            // 
-            this.textBox32.KeepTogether = false;
-            this.textBox32.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.7D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.textBox32.Style.Font.Bold = true;
-            this.textBox32.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox32.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox32.Value = "» -«œŒ«· «·»Ì«‰« ";
-            // 
-            // textBox33
-            // 
-            this.textBox33.KeepTogether = false;
-            this.textBox33.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.75D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.textBox33.Style.Font.Bold = true;
-            this.textBox33.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox33.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox33.Value = "=Sorted";
-            // 
-            // textBox31
-            // 
-            this.textBox31.KeepTogether = false;
-            this.textBox31.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.75D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.textBox31.Style.Font.Bold = true;
-            this.textBox31.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox31.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox31.Value = "√- «· —ﬁÌ„ Ê«· — Ì»";
-            // 
-            // textBox35
-            // 
-            this.textBox35.KeepTogether = false;
-            this.textBox35.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.05D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.textBox35.Style.Font.Bold = true;
-            this.textBox35.Style.Font.Name = "Sakkal Majalla";
-            this.textBox35.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.textBox35.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox35.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox35.Value = "«·„·«ÕŸ« : ";
-            // 
-            // textBox36
-            // 
-            this.textBox36.KeepTogether = false;
-            this.textBox36.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.65D), Telerik.Reporting.Drawing.Unit.Inch(0.548D));
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.1D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
-            this.textBox36.Style.Font.Bold = true;
-            this.textBox36.Style.Font.Name = "Sakkal Majalla";
-            this.textBox36.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.textBox36.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox36.Value = "«·“„‰ «·„” ﬁ—ﬁ ›Ì ›Õ’ «·„ÿ«·»…";
-            // 
-            // textBox43
-            // 
-            this.textBox43.KeepTogether = false;
-            this.textBox43.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.65D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.1D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox43.Style.Font.Bold = true;
-            this.textBox43.Style.Font.Name = "Sakkal Majalla";
-            this.textBox43.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.textBox43.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox43.Value = " ⁄œ„  ÿ«»ﬁ »Ì«‰«  «·„” ›ÌœÌ‰  ⁄œœ";
-            // 
-            // textBox42
-            // 
-            this.textBox42.KeepTogether = false;
-            this.textBox42.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.75D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox42.Style.Font.Name = "Sakkal Majalla";
-            this.textBox42.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.textBox42.Value = "=ErrorCount";
-            // 
-            // textBox37
-            // 
-            this.textBox37.Format = "{0:t}";
-            this.textBox37.KeepTogether = false;
-            this.textBox37.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.65D), Telerik.Reporting.Drawing.Unit.Inch(0.548D));
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
-            this.textBox37.Style.Font.Name = "Sakkal Majalla";
-            this.textBox37.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.textBox37.Value = "=TimeIn";
-            // 
-            // textBox38
-            // 
-            this.textBox38.KeepTogether = false;
-            this.textBox38.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.15D), Telerik.Reporting.Drawing.Unit.Inch(0.548D));
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
-            this.textBox38.Style.Font.Bold = true;
-            this.textBox38.Style.Font.Name = "Sakkal Majalla";
-            this.textBox38.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.textBox38.Value = "«·Ì";
-            // 
-            // textBox41
-            // 
-            this.textBox41.KeepTogether = false;
-            this.textBox41.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.75D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox41.Style.Font.Bold = true;
-            this.textBox41.Value = "«” „«—… »‰”»… ";
-            // 
-            // textBox39
-            // 
-            this.textBox39.Format = "{0:t}";
-            this.textBox39.KeepTogether = false;
-            this.textBox39.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.95D), Telerik.Reporting.Drawing.Unit.Inch(0.548D));
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
-            this.textBox39.Style.Font.Name = "Sakkal Majalla";
-            this.textBox39.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.textBox39.Value = "=TimeOut";
-            // 
-            // textBox40
-            // 
-            this.textBox40.KeepTogether = false;
-            this.textBox40.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.65D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox40.Style.Font.Name = "Sakkal Majalla";
-            this.textBox40.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.textBox40.Value = "=ErrorPercent";
-            // 
             // textBox56
             // 
             this.textBox56.KeepTogether = false;
@@ -950,6 +892,149 @@ namespace MedicalServiceSystem.Claims
             this.panel1.Name = "panel1";
             this.panel1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(7.35D), Telerik.Reporting.Drawing.Unit.Inch(1.148D));
             // 
+            // textBox33
+            // 
+            this.textBox33.KeepTogether = false;
+            this.textBox33.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.75D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox33.Style.Font.Bold = true;
+            this.textBox33.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox33.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox33.Value = "=Sorted";
+            // 
+            // textBox34
+            // 
+            this.textBox34.KeepTogether = false;
+            this.textBox34.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
+            this.textBox34.Name = "textBox34";
+            this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox34.Style.Font.Bold = true;
+            this.textBox34.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox34.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox34.Value = "=Entered";
+            // 
+            // textBox31
+            // 
+            this.textBox31.KeepTogether = false;
+            this.textBox31.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.75D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox31.Style.Font.Bold = true;
+            this.textBox31.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox31.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox31.Value = "√- «· —ﬁÌ„ Ê«· — Ì»";
+            // 
+            // textBox32
+            // 
+            this.textBox32.KeepTogether = false;
+            this.textBox32.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.7D), Telerik.Reporting.Drawing.Unit.Inch(0.1D));
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox32.Style.Font.Bold = true;
+            this.textBox32.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox32.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox32.Value = "» -«œŒ«· «·»Ì«‰« ";
+            // 
+            // textBox35
+            // 
+            this.textBox35.KeepTogether = false;
+            this.textBox35.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.05D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox35.Name = "textBox35";
+            this.textBox35.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox35.Style.Font.Bold = true;
+            this.textBox35.Style.Font.Name = "Sakkal Majalla";
+            this.textBox35.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.textBox35.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox35.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox35.Value = ":«·„·«ÕŸ« ";
+            // 
+            // textBox36
+            // 
+            this.textBox36.KeepTogether = false;
+            this.textBox36.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.65D), Telerik.Reporting.Drawing.Unit.Inch(0.548D));
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.1D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
+            this.textBox36.Style.Font.Bold = true;
+            this.textBox36.Style.Font.Name = "Sakkal Majalla";
+            this.textBox36.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.textBox36.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox36.Value = "«·“„‰ «·„” ﬁ—ﬁ ›Ì ›Õ’ «·„ÿ«·»…";
+            // 
+            // textBox37
+            // 
+            this.textBox37.Format = "{0:t}";
+            this.textBox37.KeepTogether = false;
+            this.textBox37.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.65D), Telerik.Reporting.Drawing.Unit.Inch(0.548D));
+            this.textBox37.Name = "textBox37";
+            this.textBox37.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
+            this.textBox37.Style.Font.Name = "Sakkal Majalla";
+            this.textBox37.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.textBox37.Value = "=TimeIn";
+            // 
+            // textBox38
+            // 
+            this.textBox38.KeepTogether = false;
+            this.textBox38.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.15D), Telerik.Reporting.Drawing.Unit.Inch(0.548D));
+            this.textBox38.Name = "textBox38";
+            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
+            this.textBox38.Style.Font.Bold = true;
+            this.textBox38.Style.Font.Name = "Sakkal Majalla";
+            this.textBox38.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.textBox38.Value = "«·Ì";
+            // 
+            // textBox39
+            // 
+            this.textBox39.Format = "{0:t}";
+            this.textBox39.KeepTogether = false;
+            this.textBox39.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.95D), Telerik.Reporting.Drawing.Unit.Inch(0.548D));
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
+            this.textBox39.Style.Font.Name = "Sakkal Majalla";
+            this.textBox39.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.textBox39.Value = "=TimeOut";
+            // 
+            // textBox40
+            // 
+            this.textBox40.KeepTogether = false;
+            this.textBox40.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.65D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
+            this.textBox40.Name = "textBox40";
+            this.textBox40.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox40.Style.Font.Name = "Sakkal Majalla";
+            this.textBox40.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.textBox40.Value = "=ErrorPercent";
+            // 
+            // textBox41
+            // 
+            this.textBox41.KeepTogether = false;
+            this.textBox41.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.75D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
+            this.textBox41.Name = "textBox41";
+            this.textBox41.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox41.Style.Font.Bold = true;
+            this.textBox41.Value = "«” „«—… »‰”»… ";
+            // 
+            // textBox42
+            // 
+            this.textBox42.KeepTogether = false;
+            this.textBox42.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.75D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
+            this.textBox42.Name = "textBox42";
+            this.textBox42.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox42.Style.Font.Name = "Sakkal Majalla";
+            this.textBox42.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.textBox42.Value = "=ErrorCount";
+            // 
+            // textBox43
+            // 
+            this.textBox43.KeepTogether = false;
+            this.textBox43.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.65D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
+            this.textBox43.Name = "textBox43";
+            this.textBox43.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.1D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox43.Style.Font.Bold = true;
+            this.textBox43.Style.Font.Name = "Sakkal Majalla";
+            this.textBox43.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.textBox43.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox43.Value = " ⁄œ„  ÿ«»ﬁ »Ì«‰«  «·„” ›ÌœÌ‰  ⁄œœ";
+            // 
             // textBox58
             // 
             this.textBox58.KeepTogether = false;
@@ -999,91 +1084,6 @@ namespace MedicalServiceSystem.Claims
             this.textBox62.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
             this.textBox62.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox62.Value = "=Notes";
-            // 
-            // textBox63
-            // 
-            this.textBox63.KeepTogether = false;
-            this.textBox63.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.2D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.8D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox63.Style.Font.Bold = true;
-            this.textBox63.Style.Font.Name = "Sakkal Majalla";
-            this.textBox63.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.textBox63.Style.Font.Underline = true;
-            this.textBox63.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox63.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox63.Value = "Entered By :";
-            // 
-            // textBox64
-            // 
-            this.textBox64.KeepTogether = false;
-            this.textBox64.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.05D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.75D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox64.Style.Font.Bold = true;
-            this.textBox64.Style.Font.Name = "Sakkal Majalla";
-            this.textBox64.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.textBox64.Style.Font.Underline = true;
-            this.textBox64.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox64.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox64.Value = "Printed By :";
-            // 
-            // UserIn
-            // 
-            this.UserIn.KeepTogether = false;
-            this.UserIn.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
-            this.UserIn.Name = "UserIn";
-            this.UserIn.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.05D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.UserIn.Style.Font.Bold = true;
-            this.UserIn.Style.Font.Name = "Sakkal Majalla";
-            this.UserIn.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.UserIn.Style.Font.Underline = true;
-            this.UserIn.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.UserIn.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.UserIn.Value = "=UserIn";
-            // 
-            // UserPrint
-            // 
-            this.UserPrint.KeepTogether = false;
-            this.UserPrint.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.8D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
-            this.UserPrint.Name = "UserPrint";
-            this.UserPrint.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.2D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.UserPrint.Style.Font.Bold = true;
-            this.UserPrint.Style.Font.Name = "Sakkal Majalla";
-            this.UserPrint.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.UserPrint.Style.Font.Underline = true;
-            this.UserPrint.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.UserPrint.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.UserPrint.Value = "=UserPrint";
-            // 
-            // textBox65
-            // 
-            this.textBox65.Format = "{0:f}";
-            this.textBox65.KeepTogether = false;
-            this.textBox65.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.5D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox65.Style.Font.Bold = true;
-            this.textBox65.Style.Font.Name = "Sakkal Majalla";
-            this.textBox65.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.textBox65.Style.Font.Underline = true;
-            this.textBox65.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox65.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox65.Value = "=Now()";
-            // 
-            // textBox66
-            // 
-            this.textBox66.KeepTogether = false;
-            this.textBox66.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.5D), Telerik.Reporting.Drawing.Unit.Inch(0.8D));
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.textBox66.Style.Font.Bold = true;
-            this.textBox66.Style.Font.Name = "Sakkal Majalla";
-            this.textBox66.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.textBox66.Style.Font.Underline = true;
-            this.textBox66.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox66.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox66.Value = "= PageNumber+\"/\"+ PageCount";
             // 
             // ClmReceiptReport
             // 

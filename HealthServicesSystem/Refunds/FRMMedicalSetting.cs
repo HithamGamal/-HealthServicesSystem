@@ -1,4 +1,4 @@
-﻿using MedicalServiceSystem.SystemSetting;
+﻿using HealthServicesSystem.SystemSetting;
 using ModelDB;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMMedicalSetting : Telerik.WinControls.UI.RadForm
     {

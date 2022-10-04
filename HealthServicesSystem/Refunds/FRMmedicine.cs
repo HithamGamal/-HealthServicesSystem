@@ -11,9 +11,9 @@ using Telerik.Reporting.Processing;
 using Telerik.WinControls;
 using System.Linq;
 using System.IO;
-using MedicalServiceSystem.SystemSetting;
+using HealthServicesSystem.SystemSetting;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMmedicine : Telerik.WinControls.UI.RadForm
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     [Microsoft.VisualBasic.CompilerServices.DesignerGenerated()]
     public partial class FRMRPTMedicalEStrdad

@@ -2,12 +2,12 @@
 using System.Windows.Forms;
 using System.Data;
 //using System.Data.sql;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
 using ModelDB;
 using System.Linq;
-using MedicalServiceSystem.Reports;
+using HealthServicesSystem.Reports;
 
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
 
     public partial class FRMRPTMedicineEStrdad : Telerik.WinControls.UI.RadForm
@@ -53,6 +53,8 @@ namespace MedicalServiceSystem
         public int UserId = 0;
         public int LocalityId = 0;
         public string StrRPT;
+        public string StrRPT1;
+        public string StrRPT2;
         public string LocalityName = "";
         public string LocalityName1 = "";
         public string LocalityName2 = "";
@@ -91,6 +93,13 @@ namespace MedicalServiceSystem
                         LocalityName2 = " dbo.ReclaimMedicals.LocalityId=" + LocalityId + " And";
                     }
                 }
+                int GetMaxSirk = 1;
+                var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0).Take(1).ToList();
+                if (GetSirk.Count > 0)
+                {
+                    GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
+                }
+                SirkNo.Text = GetMaxSirk.ToString();
                 var ReclaimRes = db.ReclaimMedicineReasonsLists.Where(p => p.Activated == true).ToList();
                 ApproveReason.DataSource = ReclaimRes;
                 ApproveReason.DisplayMember = "MedicineReason";
@@ -112,7 +121,10 @@ namespace MedicalServiceSystem
                 ExcutingParty.SelectedIndex = -1;
                 BillStatus.DataSource = Enum.GetValues(typeof(ReclaimStatus));
                 StrRPT = "SELECT dbo.Reclaims.InsurNo AS Row6, dbo.Reclaims.InsurName AS Row7, dbo.Reclaims.ReclaimDate AS Row13, dbo.ReclaimMedicineReasonsLists.MedicineReason AS Row8,  dbo.ReclaimMedicalReasonsLists.MedicalReason AS Row10, CenterInfoes_3.CenterName AS Row9, CenterInfoes_2.CenterName AS Row15, CenterInfoes_1.CenterName AS Row16, dbo.CenterInfoes.CenterName AS Row18,  dbo.Reclaims.MedicalTotal AS Row11, dbo.Reclaims.MedicineTotal AS Row12, dbo.Reclaims.ReclaimTotal AS Row21,convert(decimal,dbo.Reclaims.ReclaimStatus) AS Row2 FROM dbo.Reclaims INNER JOIN dbo.ReclaimMedicineReasonsLists ON dbo.Reclaims.ReclaimMedicineResonId = dbo.ReclaimMedicineReasonsLists.Id INNER JOIN dbo.ReclaimMedicalReasonsLists ON dbo.Reclaims.ReclaimMedicalResonId = dbo.ReclaimMedicalReasonsLists.Id INNER JOIN dbo.CenterInfoes ON dbo.Reclaims.RefMedicineExcCenterId = dbo.CenterInfoes.Id INNER JOIN   dbo.CenterInfoes AS CenterInfoes_1 ON dbo.Reclaims.RefMedicineReqCenterId = CenterInfoes_1.Id INNER JOIN  dbo.CenterInfoes AS CenterInfoes_2 ON dbo.Reclaims.RefMedicalExcCenterId = CenterInfoes_2.Id INNER JOIN dbo.CenterInfoes AS CenterInfoes_3 ON dbo.Reclaims.RefMedicalReqCenterId = CenterInfoes_3.Id WHERE " + LocalityName + " (dbo.Reclaims.RowStatus <> 2)";
+                StrRPT1 = "SELECT Id , InsurNo AS Row6, InsurName AS Row7, BillType, ReclaimDate AS Row13, MedicalTotal AS Row11, MedicineTotal AS Row12, ReclaimTotal AS Row21, CONVERT(decimal, ReclaimStatus) AS Row2 FROM dbo.Reclaims WHERE dbo.Reclaims.LocalityId=" + LocalityId.ToString() + " and (dbo.Reclaims.RowStatus <> 2) and dbo.Reclaims.SirkNo =0";
             }
+
+
 
         }
 
@@ -1124,6 +1136,115 @@ namespace MedicalServiceSystem
             else
             {
                 OrderedBy = "order by Row12 DESC";
+            }
+        }
+
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UserId == 44)
+            {
+                if (SirkNo.Text.Length > 0)
+                {
+                    if (radioButton3.Checked)
+                    {
+                        card_no.Clear();
+                        ApproveReason.SelectedIndex = -1;
+                        BillStatus.SelectedIndex = -1;
+                        RequistingParty.SelectedIndex = -1;
+                        ExcutingParty.SelectedIndex = -1;
+                        using (dbContext db = new dbContext())
+                        {
+
+                            db.Database.CommandTimeout = 0;
+                            int GetMaxSirk = 1;
+                            var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0).Take(1).ToList();
+                            if (GetSirk.Count > 0)
+                            {
+                                GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
+                            }
+                            SirkNo.Text = GetMaxSirk.ToString();
+                            var GetDet = db.Database.SqlQuery<ReportForAll>(StrRPT1).Where(p => p.Row21 > 0 && (p.Row13 >= d_start.Value && p.Row13 <= d_end.Value)).OrderBy(p => p.Row13).ToList();
+                            //MessageBox.Show(GetDet.Count.ToString());
+                            if (GetDet.Count > 0)
+                            {
+                                Cursor = Cursors.WaitCursor;
+                                RPTِEstrdadMedicine Rdet = new RPTِEstrdadMedicine();
+                                Rdet.DataSource = GetDet;
+                                Rdet.Locality.Value = db.Localities.Where(p => p.Id == PLC.LocalityId).ToList()[0].LocalityName;
+                                Rdet.StartDate.Value = d_start.Value.Date.ToShortDateString();
+                                Rdet.EndDate.Value = d_end.Value.Date.ToShortDateString();
+                                Rdet.ApproveCnt.Value = GetDet.Count.ToString();
+                                Rdet.SirkNo.Value = SirkNo.Text;
+                                //Rdet.DwaCNT.Value = GetDet.Count.ToString();
+                                RptiewChronics.ReportSource = Rdet;
+                                RptiewChronics.RefreshReport();
+                                RptiewChronics.Show();
+                                Cursor = Cursors.Default;
+                                radioButton3.Checked = false;
+                                for (int i = 0; i < GetDet.Count; i++)
+                                {
+                                    int SirkId = Convert.ToInt32(GetDet[i].Row5);
+                                    var UpdateSirk = db.Reclaims.Where(p => p.Id == SirkId).ToList();
+                                    UpdateSirk[0].SirkNo = Convert.ToInt32(SirkNo.Text);
+                                    db.SaveChanges();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("لا توجد بيانات لهذه الفترة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                radioButton3.Checked = false;
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void RadioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UserId == 44)
+            {
+                if (SirkNo.Text.Length > 0)
+                {
+                    card_no.Clear();
+                    ApproveReason.SelectedIndex = -1;
+                    BillStatus.SelectedIndex = -1;
+                    RequistingParty.SelectedIndex = -1;
+                    ExcutingParty.SelectedIndex = -1;
+                    using (dbContext db = new dbContext())
+                    {
+
+                        db.Database.CommandTimeout = 0;
+                        int SrkNo = Convert.ToInt32(SirkNo.Text);
+                        //textBox1.Text = StrRPT2;
+                        var GetDet = db.Database.SqlQuery<ReportForAll>("SELECT SirkNo AS Row23, InsurNo AS Row6, InsurName AS Row7, BillType, ReclaimDate AS Row13, MedicalTotal AS Row11, MedicineTotal AS Row12, ReclaimTotal AS Row21, CONVERT(decimal, ReclaimStatus) AS Row2 FROM dbo.Reclaims WHERE dbo.Reclaims.LocalityId=" + LocalityId.ToString() + " and (dbo.Reclaims.RowStatus <> 2) and dbo.Reclaims.SirkNo =" + SirkNo.Text + "").OrderBy(p => p.Row13).ToList();
+                        //MessageBox.Show(GetDet.Count.ToString());
+                        if (GetDet.Count > 0)
+                        {
+                            Cursor = Cursors.WaitCursor;
+                            RPTِEstrdadMedicine Rdet = new RPTِEstrdadMedicine();
+                            Rdet.DataSource = GetDet;
+                            Rdet.Locality.Value = db.Localities.Where(p => p.Id == PLC.LocalityId).ToList()[0].LocalityName;
+                            Rdet.StartDate.Value = d_start.Value.Date.ToShortDateString();
+                            Rdet.EndDate.Value = d_end.Value.Date.ToShortDateString();
+                            Rdet.ApproveCnt.Value = GetDet.Count.ToString();
+                            Rdet.SirkNo.Value = SirkNo.Text;
+                            //Rdet.DwaCNT.Value = GetDet.Count.ToString();
+                            RptiewChronics.ReportSource = Rdet;
+                            RptiewChronics.RefreshReport();
+                            RptiewChronics.Show();
+                            Cursor = Cursors.Default;
+                            radioButton4.Checked = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("لا توجد بيانات لهذا الكشف", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            radioButton4.Checked = false;
+                            return;
+                        }
+                    }
+                }
             }
         }
     }

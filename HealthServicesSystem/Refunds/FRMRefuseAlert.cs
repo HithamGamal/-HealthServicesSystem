@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using ModelDB;
 using Telerik.WinControls;
 using System.Linq;
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FRMRefuseAlert : Telerik.WinControls.UI.RadForm
     {

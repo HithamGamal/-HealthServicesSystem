@@ -1,4 +1,4 @@
-namespace MedicalServiceSystem
+namespace HealthServicesSystem
 {
     using System;
     using System.ComponentModel;

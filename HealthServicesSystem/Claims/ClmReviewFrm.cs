@@ -1,4 +1,4 @@
-﻿using MedicalServiceSystem.SystemSetting;
+﻿using HealthServicesSystem.SystemSetting;
 using ModelDB;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 
-namespace MedicalServiceSystem.Claims
+namespace HealthServicesSystem.Claims
 {
     public partial class ClmReviewFrm : Telerik.WinControls.UI.RadForm
     {
@@ -90,7 +90,7 @@ namespace MedicalServiceSystem.Claims
                 int _impId = int.Parse(ImpNoTxt.Text);
                 dbContext db = new dbContext();
 
-                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impId).ToList();
+                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impId).Take (1).ToList();
 
                 int _m = GetImpDet[0].Month;
                 int _y = GetImpDet[0].year;
@@ -117,23 +117,29 @@ namespace MedicalServiceSystem.Claims
             VisitDateTxt.Text = "";
             IdClmLb.Text ="";
             dbContext db = new dbContext();
-            var q = db.ClmImpFile.Where(p => p.RowStatus != RowStatus.Deleted ).Select(p => new { ImpId = p.Id, CenterName = p.Id+" "+ p.CenterInfo.CenterName }).ToList();
-            if (q.Count >0)
+            int UserId = LoginForm.Default.UserId;
+            var q = db.ClmImpFile.Where(p => p.RowStatus != RowStatus.Deleted  && p.AllocationUserId==UserId ).Select(p => new { ImpId = p.Id, CenterName = p.Id+" "+ p.CenterInfo.CenterName }).ToList();
+            if (q.Count > 0)
             {
                 ImpDrp.DataSource = q;
                 ImpDrp.DisplayMember = "CenterName";
                 ImpDrp.ValueMember = "ImpId";
                 ImpDrp.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 ImpDrp.SelectedIndex = -1;
+
+                var qnon = db.ClmNonConfirmType.Where(p => p.RowStatus != RowStatus.Deleted).Select(p => new { Id = p.Id, Name = p.Name, Value = p.Value, ValueType = p.ValueType }).ToList();
+                if (qnon.Count > 0)
+                {
+                    NonConfirmDrp.DataSource = qnon;
+                    NonConfirmDrp.DisplayMember = "Name";
+                    NonConfirmDrp.ValueMember = "Id";
+                    NonConfirmDrp.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                    NonConfirmDrp.SelectedIndex = -1;
+                }
             }
-            var qnon = db.ClmNonConfirmType.Where(p => p.RowStatus != RowStatus.Deleted).Select(p => new { Id = p.Id, Name = p.Name  ,Value = p.Value ,ValueType = p.ValueType }).ToList();
-            if (qnon.Count > 0)
+            else
             {
-                NonConfirmDrp.DataSource = qnon;
-                NonConfirmDrp.DisplayMember = "Name";
-                NonConfirmDrp.ValueMember = "Id";
-                NonConfirmDrp.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-                NonConfirmDrp.SelectedIndex = -1;
+                return;
             }
 
 
@@ -224,24 +230,31 @@ namespace MedicalServiceSystem.Claims
 
         private void SaveNextBtn_Click(object sender, EventArgs e)
         {
-            dbContext db = new dbContext();
-            int _impId = int.Parse(ImpNoTxt.Text);
-            int _VistId = int.Parse(VisitIdTxt.Text);
-            ClaimsCostTxt.Text = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Status == Status.Active && p.ClmMasterData.ImpId == _impId).Sum(p => p.TotalPrice).ToString();
-            //====================
-            var qu = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id == _VistId).ToList();
-            if (qu.Count >0)
+            try
             {
-                qu[0].IsReviewed = 1;
-                qu[0].ReviewDocId = _UserId;
-                qu[0].ReviewDate = PLC.getdatetime();
-                if(db.SaveChanges ()>0)
+                dbContext db = new dbContext();
+                int _impId = int.Parse(ImpNoTxt.Text);
+                int _VistId = int.Parse(VisitIdTxt.Text);
+                ClaimsCostTxt.Text = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Status == Status.Active && p.ClmMasterData.ImpId == _impId).Sum(p => p.TotalPrice).ToString();
+                //====================
+                var qu = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id == _VistId).Take(1).ToList();
+                if (qu.Count > 0)
                 {
-                    var qm = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id > _VistId).OrderBy(p => p.NoOfFile).Select(p => p.Id).FirstOrDefault();
+                    qu[0].IsReviewed = 1;
+                    qu[0].ReviewDocId = _UserId;
+                    qu[0].ReviewDate = PLC.getdatetime();
+                    if (db.SaveChanges() > 0)
+                    {
+                        var qm = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id > _VistId).OrderBy(p => p.NoOfFile).Select(p => p.Id).FirstOrDefault();
 
-                    VisitIdTxt.Text = qm.ToString();
+                        VisitIdTxt.Text = qm.ToString();
+                    }
+
                 }
-
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             //==================
 
@@ -326,7 +339,7 @@ namespace MedicalServiceSystem.Claims
                 {
                     int _Id = int.Parse(NonConfirmDrp.SelectedValue.ToString());
 
-                    var q = db.ClmNonConfirmType.Where(p => p.Id == _Id && p.RowStatus != RowStatus.Deleted).ToList();
+                    var q = db.ClmNonConfirmType.Where(p => p.Id == _Id && p.RowStatus != RowStatus.Deleted).Take (1).ToList();
                     if (q.Count > 0)
                     {
                         _NonConId = q[0].Id;
@@ -336,10 +349,12 @@ namespace MedicalServiceSystem.Claims
                        if (q[0].ValueType== ModelDB.ValueType.Percent)
                         {
                             Discounttxt .Text = (Convert.ToDecimal(ValueTxt.Text) * q[0].Value / 100).ToString();
+                            Discounttxt.Enabled = false;
                         }
                         else
                         {
                             Discounttxt.Text = q[0].Value.ToString();
+                            Discounttxt.Enabled = true ;
                         }
                         NetValue.Text = (Convert.ToDecimal(ValueTxt.Text) - Convert.ToDecimal(Discounttxt.Text)).ToString();
                     }
@@ -560,10 +575,11 @@ namespace MedicalServiceSystem.Claims
         {
             try
             {
+                int _impid = int.Parse(ImpDrp.SelectedValue.ToString());
                 int _ID = int.Parse(IdClmsTxt.Text);
                 dbContext db = new dbContext();
 
-                var qm = db.ClmMasterData.Where(p => p.NoOfFile == _ID && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0).OrderBy(p => p.NoOfFile).Take(1).ToList();
+                var qm = db.ClmMasterData.Where(p => p.NoOfFile == _ID && p.RowStatus != RowStatus.Deleted  && p.ImpId == _impid ).OrderBy(p => p.NoOfFile).Take(1).ToList();
                 if (qm.Count > 0)
                 {
                     VisitIdTxt.Text = qm[0].Id.ToString();

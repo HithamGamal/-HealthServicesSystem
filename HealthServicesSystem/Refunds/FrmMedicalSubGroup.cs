@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
-namespace MedicalServiceSystem.Reclaims
+namespace HealthServicesSystem.Reclaims
 {
     public partial class FrmMedicalSubGroup : Telerik.WinControls.UI.RadForm
     {
