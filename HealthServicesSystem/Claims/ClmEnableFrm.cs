@@ -60,7 +60,8 @@ namespace HealthServicesSystem.Claims
         }
         private void ClmEnableFrm_Load(object sender, EventArgs e)
         {
-
+            MonthDrp.SelectedIndex = PLC.getMonth() - 2;
+            YearTxt.Text = PLC.getyear().ToString();
         }
 
         private void ViewBtn_Click(object sender, EventArgs e)

@@ -629,5 +629,13 @@ namespace HealthServicesSystem
             form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
+
+        private void AddNonConfirm_Click(object sender, EventArgs e)
+        {
+            AddNonConfirmFrm form = new AddNonConfirmFrm();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
     }
 }

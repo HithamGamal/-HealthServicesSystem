@@ -23,6 +23,10 @@ namespace HealthServicesSystem.Claims
 
         private void AdvanceFillterFrm_Load(object sender, EventArgs e)
         {
+            FMonthDrp.SelectedIndex = PLC.getMonth() - 2;
+           LMonthDrp .SelectedIndex= PLC.getMonth() - 2;
+            FYearTxt.Text = PLC.getyear().ToString ();
+            LYearTxt.Text = PLC.getyear().ToString();
             dbContext db = new dbContext();
             var qCenter = db.CenterInfos.Select(p => new { Id = p.Id, CenterName = p.Id + " " + p.CenterName }).ToList();
             if (qCenter.Count > 0)

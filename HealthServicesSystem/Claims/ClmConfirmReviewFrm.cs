@@ -27,6 +27,8 @@ namespace HealthServicesSystem.Claims
         private void ClmConfirmReviewFrm_Load(object sender, EventArgs e)
         {
             dbContext db = new dbContext();
+            MonthDrp.SelectedIndex = PLC.getMonth() - 2;
+            YearTxt.Text = PLC.getyear().ToString();
             var q = db.CenterInfos.Where(p => p.IsEnabled  == true && p.HasContract== true  ).Select(p => new { Id = p.Id, CenterName = p.CenterName }).ToList();
             if (q.Count > 0)
             {

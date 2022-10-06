@@ -118,7 +118,7 @@ namespace HealthServicesSystem.Claims
             IdClmLb.Text ="";
             dbContext db = new dbContext();
             int UserId = LoginForm.Default.UserId;
-            var q = db.ClmImpFile.Where(p => p.RowStatus != RowStatus.Deleted  && p.AllocationUserId==UserId ).Select(p => new { ImpId = p.Id, CenterName = p.Id+" "+ p.CenterInfo.CenterName }).ToList();
+            var q = db.ClmImpFile.Where(p => p.RowStatus != RowStatus.Deleted  && p.AllocatedDocId==UserId ).Select(p => new { ImpId = p.Id, CenterName = p.Id+" "+ p.CenterInfo.CenterName }).ToList();
             if (q.Count > 0)
             {
                 ImpDrp.DataSource = q;
@@ -295,6 +295,7 @@ namespace HealthServicesSystem.Claims
                         MonthTxt.Text = q[0].Month.ToString();
                         YearTxt.Text = q[0].year.ToString();
                         ImpNoTxt.Text = q[0].Id.ToString();
+                        Counts.Text = q[0].DrogCount.ToString();
                     }
                 }
             }

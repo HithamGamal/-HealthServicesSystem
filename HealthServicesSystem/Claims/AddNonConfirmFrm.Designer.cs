@@ -28,51 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.NewBtn = new Telerik.WinControls.UI.RadButton();
+            this.ExitBtn = new Telerik.WinControls.UI.RadButton();
+            this.DiscoutValue = new Telerik.WinControls.UI.RadTextBox();
+            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.DelBtn = new Telerik.WinControls.UI.RadButton();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.DiscountFrm = new Telerik.WinControls.UI.RadDropDownList();
+            this.DiscountType = new Telerik.WinControls.UI.RadDropDownList();
+            this.GroupName = new Telerik.WinControls.UI.RadDropDownList();
+            this.NameTxt = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.IdTxt = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.NameTxt = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.GroupName = new Telerik.WinControls.UI.RadDropDownList();
-            this.DiscountType = new Telerik.WinControls.UI.RadDropDownList();
-            this.DiscountFrm = new Telerik.WinControls.UI.RadDropDownList();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.DiscoutValue = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.ExitBtn = new Telerik.WinControls.UI.RadButton();
-            this.DelBtn = new Telerik.WinControls.UI.RadButton();
-            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
-            this.NewBtn = new Telerik.WinControls.UI.RadButton();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscoutValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DelBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscountFrm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscountType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GroupName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscountType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscountFrm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscoutValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DelBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NewBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +101,176 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // radGridView1
+            // 
+            this.radGridView1.Location = new System.Drawing.Point(7, 277);
+            // 
+            // 
+            // 
+            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
+            this.radGridView1.MasterTemplate.AllowSearchRow = true;
+            gridViewTextBoxColumn1.FieldName = "Id";
+            gridViewTextBoxColumn1.HeaderText = "م";
+            gridViewTextBoxColumn1.Name = "Id";
+            gridViewTextBoxColumn1.Width = 80;
+            gridViewTextBoxColumn2.FieldName = "Name";
+            gridViewTextBoxColumn2.HeaderText = "اسم المخالفة";
+            gridViewTextBoxColumn2.Name = "Name";
+            gridViewTextBoxColumn2.Width = 250;
+            gridViewTextBoxColumn3.FieldName = "GroupName";
+            gridViewTextBoxColumn3.HeaderText = "المجموعة";
+            gridViewTextBoxColumn3.Name = "GroupName";
+            gridViewTextBoxColumn3.Width = 250;
+            gridViewTextBoxColumn4.FieldName = "DiscType";
+            gridViewTextBoxColumn4.HeaderText = "نوع الخصم";
+            gridViewTextBoxColumn4.Name = "DiscType";
+            gridViewTextBoxColumn4.Width = 80;
+            gridViewTextBoxColumn5.FieldName = "DiscFrm";
+            gridViewTextBoxColumn5.HeaderText = "خصم من";
+            gridViewTextBoxColumn5.Name = "DiscFrm";
+            gridViewTextBoxColumn5.Width = 80;
+            gridViewTextBoxColumn6.FieldName = "DiscValue";
+            gridViewTextBoxColumn6.HeaderText = "قيمة الخصم";
+            gridViewTextBoxColumn6.Name = "DiscValue";
+            gridViewTextBoxColumn6.Width = 80;
+            gridViewCommandColumn1.DefaultText = "عرض";
+            gridViewCommandColumn1.FieldName = "View";
+            gridViewCommandColumn1.HeaderText = "عرض";
+            gridViewCommandColumn1.Image = global::HealthServicesSystem.Properties.Resources.preview;
+            gridViewCommandColumn1.Name = "View";
+            gridViewCommandColumn1.Width = 80;
+            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewCommandColumn1});
+            this.radGridView1.MasterTemplate.EnableFiltering = true;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView1.Name = "radGridView1";
+            this.radGridView1.Size = new System.Drawing.Size(913, 228);
+            this.radGridView1.TabIndex = 41;
+            this.radGridView1.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.radGridView1_CommandCellClick);
+            // 
+            // NewBtn
+            // 
+            this.NewBtn.Location = new System.Drawing.Point(787, 22);
+            this.NewBtn.Name = "NewBtn";
+            this.NewBtn.Size = new System.Drawing.Size(125, 42);
+            this.NewBtn.TabIndex = 42;
+            this.NewBtn.Text = "&جديد";
+            this.NewBtn.Click += new System.EventHandler(this.NewBtn_Click);
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Location = new System.Drawing.Point(787, 166);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(125, 42);
+            this.ExitBtn.TabIndex = 43;
+            this.ExitBtn.Text = "&اغلاق";
+            // 
+            // DiscoutValue
+            // 
+            this.DiscoutValue.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.DiscoutValue.Location = new System.Drawing.Point(163, 216);
+            this.DiscoutValue.Name = "DiscoutValue";
+            this.DiscoutValue.Size = new System.Drawing.Size(527, 25);
+            this.DiscoutValue.TabIndex = 40;
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Location = new System.Drawing.Point(787, 70);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(125, 42);
+            this.SaveBtn.TabIndex = 44;
+            this.SaveBtn.Text = "&حفظ";
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Location = new System.Drawing.Point(705, 216);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(86, 31);
+            this.radLabel5.TabIndex = 39;
+            this.radLabel5.Text = ":قيمة الخصم";
+            // 
+            // radLabel3
+            // 
+            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Location = new System.Drawing.Point(696, 179);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(70, 31);
+            this.radLabel3.TabIndex = 38;
+            this.radLabel3.Text = ": خصم من";
+            // 
+            // DelBtn
+            // 
+            this.DelBtn.Location = new System.Drawing.Point(787, 118);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(125, 42);
+            this.DelBtn.TabIndex = 45;
+            this.DelBtn.Text = "&حذف";
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Location = new System.Drawing.Point(696, 139);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(77, 31);
+            this.radLabel1.TabIndex = 37;
+            this.radLabel1.Text = ":نوع الخصم";
+            // 
+            // DiscountFrm
+            // 
+            this.DiscountFrm.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.DiscountFrm.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.DiscountFrm.Location = new System.Drawing.Point(163, 185);
+            this.DiscountFrm.Name = "DiscountFrm";
+            this.DiscountFrm.NullText = "Select Group Name";
+            this.DiscountFrm.Size = new System.Drawing.Size(527, 25);
+            this.DiscountFrm.TabIndex = 36;
+            // 
+            // DiscountType
+            // 
+            this.DiscountType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.DiscountType.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.DiscountType.Location = new System.Drawing.Point(163, 145);
+            this.DiscountType.Name = "DiscountType";
+            this.DiscountType.NullText = "Select Group Name";
+            this.DiscountType.Size = new System.Drawing.Size(527, 25);
+            this.DiscountType.TabIndex = 35;
+            // 
+            // GroupName
+            // 
+            this.GroupName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.GroupName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.GroupName.Location = new System.Drawing.Point(163, 102);
+            this.GroupName.Name = "GroupName";
+            this.GroupName.NullText = "Select Group Name";
+            this.GroupName.Size = new System.Drawing.Size(527, 25);
+            this.GroupName.TabIndex = 34;
+            // 
+            // NameTxt
+            // 
+            this.NameTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.NameTxt.Location = new System.Drawing.Point(163, 58);
+            this.NameTxt.Name = "NameTxt";
+            this.NameTxt.Size = new System.Drawing.Size(527, 25);
+            this.NameTxt.TabIndex = 33;
+            // 
+            // radLabel4
+            // 
+            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel4.Location = new System.Drawing.Point(705, 58);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(72, 31);
+            this.radLabel4.TabIndex = 32;
+            this.radLabel4.Text = ":اسم  البند";
+            // 
             // IdTxt
             // 
             this.IdTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
@@ -108,6 +278,7 @@
             this.IdTxt.Name = "IdTxt";
             this.IdTxt.Size = new System.Drawing.Size(181, 25);
             this.IdTxt.TabIndex = 31;
+            this.IdTxt.TextChanged += new System.EventHandler(this.IdTxt_TextChanged);
             // 
             // radLabel13
             // 
@@ -127,170 +298,6 @@
             this.radLabel2.TabIndex = 28;
             this.radLabel2.Text = ": المجموعة";
             // 
-            // NameTxt
-            // 
-            this.NameTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.NameTxt.Location = new System.Drawing.Point(163, 58);
-            this.NameTxt.Name = "NameTxt";
-            this.NameTxt.Size = new System.Drawing.Size(527, 25);
-            this.NameTxt.TabIndex = 33;
-            // 
-            // radLabel4
-            // 
-            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(705, 58);
-            this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(72, 31);
-            this.radLabel4.TabIndex = 32;
-            this.radLabel4.Text = ":اسم  البند";
-            // 
-            // GroupName
-            // 
-            this.GroupName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.GroupName.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.GroupName.Location = new System.Drawing.Point(163, 102);
-            this.GroupName.Name = "GroupName";
-            this.GroupName.NullText = "Select Group Name";
-            this.GroupName.Size = new System.Drawing.Size(527, 25);
-            this.GroupName.TabIndex = 34;
-            // 
-            // DiscountType
-            // 
-            this.DiscountType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.DiscountType.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.DiscountType.Location = new System.Drawing.Point(163, 145);
-            this.DiscountType.Name = "DiscountType";
-            this.DiscountType.NullText = "Select Group Name";
-            this.DiscountType.Size = new System.Drawing.Size(527, 25);
-            this.DiscountType.TabIndex = 35;
-            // 
-            // DiscountFrm
-            // 
-            this.DiscountFrm.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.DiscountFrm.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.DiscountFrm.Location = new System.Drawing.Point(163, 185);
-            this.DiscountFrm.Name = "DiscountFrm";
-            this.DiscountFrm.NullText = "Select Group Name";
-            this.DiscountFrm.Size = new System.Drawing.Size(527, 25);
-            this.DiscountFrm.TabIndex = 36;
-            // 
-            // radLabel1
-            // 
-            this.radLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(696, 139);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(77, 31);
-            this.radLabel1.TabIndex = 37;
-            this.radLabel1.Text = ":نوع الخصم";
-            // 
-            // radLabel3
-            // 
-            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(696, 179);
-            this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(70, 31);
-            this.radLabel3.TabIndex = 38;
-            this.radLabel3.Text = ": خصم من";
-            // 
-            // DiscoutValue
-            // 
-            this.DiscoutValue.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.DiscoutValue.Location = new System.Drawing.Point(163, 216);
-            this.DiscoutValue.Name = "DiscoutValue";
-            this.DiscoutValue.Size = new System.Drawing.Size(527, 25);
-            this.DiscoutValue.TabIndex = 40;
-            // 
-            // radLabel5
-            // 
-            this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(705, 216);
-            this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(86, 31);
-            this.radLabel5.TabIndex = 39;
-            this.radLabel5.Text = ":قيمة الخصم";
-            // 
-            // radGridView1
-            // 
-            this.radGridView1.Location = new System.Drawing.Point(7, 277);
-            // 
-            // 
-            // 
-            gridViewTextBoxColumn7.FieldName = "Id";
-            gridViewTextBoxColumn7.HeaderText = "م";
-            gridViewTextBoxColumn7.Name = "Id";
-            gridViewTextBoxColumn7.Width = 80;
-            gridViewTextBoxColumn8.FieldName = "Name";
-            gridViewTextBoxColumn8.HeaderText = "اسم المخالفة";
-            gridViewTextBoxColumn8.Name = "Name";
-            gridViewTextBoxColumn8.Width = 250;
-            gridViewTextBoxColumn9.FieldName = "GroupName";
-            gridViewTextBoxColumn9.HeaderText = "المجموعة";
-            gridViewTextBoxColumn9.Name = "GroupName";
-            gridViewTextBoxColumn9.Width = 250;
-            gridViewTextBoxColumn10.FieldName = "DiscType";
-            gridViewTextBoxColumn10.HeaderText = "نوع الخصم";
-            gridViewTextBoxColumn10.Name = "DiscType";
-            gridViewTextBoxColumn10.Width = 80;
-            gridViewTextBoxColumn11.FieldName = "DiscFrm";
-            gridViewTextBoxColumn11.HeaderText = "خصم من";
-            gridViewTextBoxColumn11.Name = "DiscFrm";
-            gridViewTextBoxColumn11.Width = 80;
-            gridViewTextBoxColumn12.FieldName = "DiscValue";
-            gridViewTextBoxColumn12.HeaderText = "قيمة الخصم";
-            gridViewTextBoxColumn12.Name = "DiscValue";
-            gridViewTextBoxColumn12.Width = 80;
-            gridViewCommandColumn2.DefaultText = "عرض";
-            gridViewCommandColumn2.FieldName = "View";
-            gridViewCommandColumn2.HeaderText = "عرض";
-            gridViewCommandColumn2.Name = "View";
-            gridViewCommandColumn2.Width = 80;
-            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewCommandColumn2});
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.Size = new System.Drawing.Size(845, 228);
-            this.radGridView1.TabIndex = 41;
-            // 
-            // ExitBtn
-            // 
-            this.ExitBtn.Location = new System.Drawing.Point(787, 166);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(125, 42);
-            this.ExitBtn.TabIndex = 43;
-            this.ExitBtn.Text = "&اغلاق";
-            // 
-            // DelBtn
-            // 
-            this.DelBtn.Location = new System.Drawing.Point(787, 118);
-            this.DelBtn.Name = "DelBtn";
-            this.DelBtn.Size = new System.Drawing.Size(125, 42);
-            this.DelBtn.TabIndex = 45;
-            this.DelBtn.Text = "&حذف";
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Location = new System.Drawing.Point(787, 70);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(125, 42);
-            this.SaveBtn.TabIndex = 44;
-            this.SaveBtn.Text = "&حفظ";
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
-            // NewBtn
-            // 
-            this.NewBtn.Location = new System.Drawing.Point(787, 22);
-            this.NewBtn.Name = "NewBtn";
-            this.NewBtn.Size = new System.Drawing.Size(125, 42);
-            this.NewBtn.TabIndex = 42;
-            this.NewBtn.Text = "&جديد";
-            this.NewBtn.Click += new System.EventHandler(this.NewBtn_Click);
-            // 
             // AddNonConfirmFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,24 +314,24 @@
             this.Load += new System.EventHandler(this.AddNonConfirmFrm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscoutValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DelBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscountFrm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscountType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GroupName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscountType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscountFrm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscoutValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DelBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NewBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
