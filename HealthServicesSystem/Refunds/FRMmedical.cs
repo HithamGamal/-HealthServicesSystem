@@ -70,6 +70,8 @@ namespace HealthServicesSystem.Reclaims
             OperationNo.Focus();
             CustName.Clear();
             OperationDate.Value = PLC.getdate();
+            RequistingParty.SelectedIndex = -1;
+            ExcutingParty.SelectedIndex = -1;
             ServerName.Clear();
             ServiceListType.Clear();
             quantity.Clear();
@@ -531,12 +533,12 @@ namespace HealthServicesSystem.Reclaims
 
                 }
             }
-            catch (Exception )
+            catch (Exception)
             {
-                MessageBox.Show("توجد مشكلة في الاتصال بالمخدم الرئيسي للبيانات"+(char)13+"قم باعادة المحاولة مرة أخرى", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               return;
+                MessageBox.Show("توجد مشكلة في الاتصال بالمخدم الرئيسي للبيانات" + (char)13 + "قم باعادة المحاولة مرة أخرى", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            
+
         }
  
          
@@ -795,6 +797,14 @@ namespace HealthServicesSystem.Reclaims
         private void OperationNo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void RequistingParty_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if(RequistingParty.SelectedIndex != -1)
+            {
+                ExcutingParty.SelectedValue = RequistingParty.SelectedValue;
+            }
         }
     }
 }

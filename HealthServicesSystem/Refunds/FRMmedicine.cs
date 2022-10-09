@@ -338,7 +338,8 @@ namespace HealthServicesSystem.Reclaims
             UnitPrice.Clear();
             MoneyPaied.Clear();
             dwalist.Focus();
-
+            ExcutingParty.SelectedIndex =- 1;
+            RequistingParty.SelectedIndex = -1;
 
         }
         private void FRMmedicine_Load(object sender, EventArgs e)
@@ -782,6 +783,14 @@ namespace HealthServicesSystem.Reclaims
         private void OperationNo_Leave_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void RequistingParty_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if (RequistingParty.SelectedIndex != -1)
+            {
+                ExcutingParty.SelectedValue = RequistingParty.SelectedValue;
+            }
         }
     }
 }

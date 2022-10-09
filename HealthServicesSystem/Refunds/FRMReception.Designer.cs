@@ -920,6 +920,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             // radLabel2
             // 
+            this.radLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel2.BackColor = System.Drawing.Color.Transparent;
             this.radLabel2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
             this.radLabel2.ForeColor = System.Drawing.Color.Black;
@@ -932,6 +933,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             // BillType
             // 
+            this.BillType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BillType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.BillType.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             radListDataItem1.Text = "نهائية";

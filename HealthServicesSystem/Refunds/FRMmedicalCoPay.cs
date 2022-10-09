@@ -115,7 +115,8 @@ namespace HealthServicesSystem.Reclaims
             UnitPrice.Clear();
             MoneyPaied.Clear();
             ServiceList.Focus();
-
+            RequistingParty.SelectedIndex = -1;
+            ExcutingParty.SelectedIndex = -1;
 
         }
         private void FRMmedicalCoPay_Load(object sender, EventArgs e)
@@ -618,7 +619,10 @@ namespace HealthServicesSystem.Reclaims
 
         private void RequistingParty_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-
+            if (RequistingParty.SelectedIndex != -1)
+            {
+                ExcutingParty.SelectedValue = RequistingParty.SelectedValue;
+            }
         }
 
         private void RequistingParty_Leave(object sender, EventArgs e)

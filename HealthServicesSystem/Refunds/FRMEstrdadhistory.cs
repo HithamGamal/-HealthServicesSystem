@@ -80,7 +80,7 @@ namespace HealthServicesSystem.Reclaims
         {
             using (dbContext db = new dbContext())
             {
-                if (PLC.SubId.Length>0)
+                if (PLC.SubId.Length>0 && PLC.SubId !="0")
                 {
                     DateTime dat = PLC.getdate().AddYears(-1);
                     var GetMed = db.ReclaimMedicals.Where(p => p.Reclaim.InsurNo == PLC.SubId && p.DateIn >=dat).ToList();
@@ -107,7 +107,7 @@ namespace HealthServicesSystem.Reclaims
         {
             using (dbContext db = new dbContext())
             {
-                if (PLC.SubId.Length > 0)
+                if (PLC.SubId.Length > 0 && PLC.SubId != "0")
                 {
                     DateTime dat = PLC.getdate().AddYears(-1);
                     var GetMed = db.ReclaimMedicines.Where(p => p.Reclaim.InsurNo == PLC.SubId && p.DateIn >= dat).ToList();
