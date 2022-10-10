@@ -7,9 +7,9 @@ using System.Linq;
 internal static class PLC
 {
 	static dbContext db=new dbContext() ;
-	public static SqlConnection conClame = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=cntr;User ID=sa;Password=123;Trusted_Connection=False");
-	public static SqlConnection conNew = new SqlConnection("Data Source=192.168.100.10;Initial Catalog=InsuranceSystem;User ID=sa;Password=123;Trusted_Connection=False");
-	public static SqlConnection conOld = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=NewSubData;User ID=sa;Password=123;Trusted_Connection=False");
+	public static SqlConnection conClame = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=cntr;User ID=sa;Password=363;Trusted_Connection=False");
+	public static SqlConnection conNew = new SqlConnection("Data Source=192.168.100.10;Initial Catalog=InsuranceSystem;User ID=sa;Password=363;Trusted_Connection=False");
+	public static SqlConnection conOld = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=NewSubData;User ID=sa;Password=363;Trusted_Connection=False");
     //Get The date Of The Main Server:
 	public static DateTime getdate()
     {

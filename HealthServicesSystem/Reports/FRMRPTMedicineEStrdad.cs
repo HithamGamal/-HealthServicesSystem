@@ -958,37 +958,38 @@ namespace HealthServicesSystem
 
                     if (GetCent.Count > 0)
                     {
-                        DataTable dt = new DataTable();
-                        dt.Columns.Add("Row6",typeof(string));
-                        dt.Columns.Add("Row2", typeof(decimal));
-                        dt.Columns.Add("Row12", typeof(decimal));
-                        dt.Columns.Add("Row3", typeof(decimal));
-                        dt.Columns.Add("Row21", typeof(decimal));
-                        for (int i = 0; i < GetCent.Count; i++)
-                        {
-                            DataRow dr = dt.NewRow();
-                            dr["Row6"] = GetCent[i].Row6;
-                            dr["Row2"] = GetCent[i].Row2;
-                            dr["Row12"] = GetCent[i].Row12;
-                            dr["Row3"] = 0;
-                            dr["Row21"] = 0;
-                            dt.Rows.Add(dr);
-                        }
-                        decimal Freq = 0;
-                        decimal Cost = 0;
-                        for (int i = 0; i < dt.Rows.Count; i++)
-                        {
-                            Freq +=Convert.ToDecimal( dt.Rows[i]["Row2"]);
-                            Cost += Convert.ToDecimal(dt.Rows[i]["Row12"]);
-                        }
-                        for (int i = 0; i < dt.Rows.Count; i++)
-                        {
-                            dt.Rows[i]["Row3"] =Freq;
-                            dt.Rows[i]["Row21"] = Cost;
-                        }
+                       
                      
                         if (DrGrouping.SelectedIndex == 0)
                         {
+                            DataTable dt = new DataTable();
+                            dt.Columns.Add("Row6", typeof(string));
+                            dt.Columns.Add("Row2", typeof(decimal));
+                            dt.Columns.Add("Row12", typeof(decimal));
+                            dt.Columns.Add("Row3", typeof(decimal));
+                            dt.Columns.Add("Row21", typeof(decimal));
+                            for (int i = 0; i < GetCent.Count; i++)
+                            {
+                                DataRow dr = dt.NewRow();
+                                dr["Row6"] = GetCent[i].Row6;
+                                dr["Row2"] = GetCent[i].Row2;
+                                dr["Row12"] = GetCent[i].Row12;
+                                dr["Row3"] = 0;
+                                dr["Row21"] = 0;
+                                dt.Rows.Add(dr);
+                            }
+                            decimal Freq = 0;
+                            decimal Cost = 0;
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+                                Freq += Convert.ToDecimal(dt.Rows[i]["Row2"]);
+                                Cost += Convert.ToDecimal(dt.Rows[i]["Row12"]);
+                            }
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+                                dt.Rows[i]["Row3"] = Freq;
+                                dt.Rows[i]["Row21"] = Cost;
+                            }
                             RPTِEstrdadCount Rdet = new RPTِEstrdadCount();
                             Rdet.DataSource = dt;
                             Rdet.Locality.Value = db.Localities.Where(p => p.Id == PLC.LocalityId).ToList()[0].LocalityName;
@@ -1012,6 +1013,36 @@ namespace HealthServicesSystem
                         }
                         else
                         {
+                            DataTable dt = new DataTable();
+                            dt.Columns.Add("Row7", typeof(string));
+                            dt.Columns.Add("Row6", typeof(string));
+                            dt.Columns.Add("Row2", typeof(decimal));
+                            dt.Columns.Add("Row12", typeof(decimal));
+                            dt.Columns.Add("Row3", typeof(decimal));
+                            dt.Columns.Add("Row21", typeof(decimal));
+                            for (int i = 0; i < GetCent.Count; i++)
+                            {
+                                DataRow dr = dt.NewRow();
+                                dr["Row7"] = GetCent[i].Row7;
+                                dr["Row6"] = GetCent[i].Row6;
+                                dr["Row2"] = GetCent[i].Row2;
+                                dr["Row12"] = GetCent[i].Row12;
+                                dr["Row3"] = 0;
+                                dr["Row21"] = 0;
+                                dt.Rows.Add(dr);
+                            }
+                            decimal Freq = 0;
+                            decimal Cost = 0;
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+                                Freq += Convert.ToDecimal(dt.Rows[i]["Row2"]);
+                                Cost += Convert.ToDecimal(dt.Rows[i]["Row12"]);
+                            }
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+                                dt.Rows[i]["Row3"] = Freq;
+                                dt.Rows[i]["Row21"] = Cost;
+                            }
                             RPTِEstrdadCountLoc Rdet = new RPTِEstrdadCountLoc();
                             Rdet.DataSource = dt;
                             Rdet.Locality.Value = db.Localities.Where(p => p.Id == PLC.LocalityId).ToList()[0].LocalityName;
@@ -1171,7 +1202,7 @@ namespace HealthServicesSystem
 
         private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            if (UserId == 44)
+            if (UserId == 44 || UserId == 50)
             {
                 if (SirkNo.Text.Length > 0)
                 {
@@ -1193,7 +1224,7 @@ namespace HealthServicesSystem
                                 GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
                             }
                             SirkNo.Text = GetMaxSirk.ToString();
-                            var GetDet = db.Database.SqlQuery<ReportForAll>(StrRPT1).Where(p => p.Row21 > 0 && (p.Row13 >= d_start.Value && p.Row13 <= d_end.Value)).OrderBy(p => p.Row13).ToList();
+                            var GetDet = db.Database.SqlQuery<ReportForAll>(StrRPT1).Where(p => p.Row21 > 0).OrderBy(p => p.Row13).ToList();
                             //MessageBox.Show(GetDet.Count.ToString());
                             if (GetDet.Count > 0)
                             {
@@ -1233,7 +1264,7 @@ namespace HealthServicesSystem
 
         private void RadioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            if (UserId == 44)
+            if (UserId == 44 || UserId==50)
             {
                 if (SirkNo.Text.Length > 0)
                 {

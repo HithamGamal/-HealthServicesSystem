@@ -437,7 +437,7 @@ namespace HealthServicesSystem.Reclaims
                         Mst.ServicePrice = Convert.ToDecimal(UnitMaxPrice.Text);
                         Mst.ServiceFrequency = Convert.ToInt32(ServiceFrequency.Text);
                         Mst.Duration = Convert.ToInt32(Duration.Text);
-                        Mst.ListType= (ListType)Enum.Parse(typeof(ListType), ListType.SelectedText); 
+                        Mst.ListType= (ListType)Enum.Parse(typeof(ListType), ListType.Text); 
                         Mst.NeedApproveMent = Convert.ToBoolean(NeedApprovement.CheckState);
                         Mst.InContract = true;
                         Mst.IsEnabled = true;
@@ -459,7 +459,7 @@ namespace HealthServicesSystem.Reclaims
                             UpMed[0].ServicePrice = Convert.ToDecimal(UnitMaxPrice.Text);
                             UpMed[0].ServiceFrequency = Convert.ToInt32(ServiceFrequency.Text);
                             UpMed[0].Duration = Convert.ToInt32(Duration.Text);
-                            UpMed[0].ListType = (ListType)Enum.Parse(typeof(ListType), ListType.SelectedText);
+                            UpMed[0].ListType = (ListType)Enum.Parse(typeof(ListType), ListType.Text);
                             UpMed[0].NeedApproveMent = Convert.ToBoolean(NeedApprovement.CheckState);
                             UpMed[0].InContract = true;
                             UpMed[0].IsEnabled = true;

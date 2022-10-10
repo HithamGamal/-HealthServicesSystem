@@ -88,10 +88,10 @@ namespace HealthServicesSystem
             {
                 if (ChronicId == 0)
                 {
-                    ReclaimMedicineReasonsList tr = new ReclaimMedicineReasonsList();
-                    tr.MedicineReason = ChronicList.Text.Trim();
+                    ReclaimMedicalReasonsList tr = new ReclaimMedicalReasonsList();
+                    tr.MedicalReason = ChronicList.Text.Trim();
                     tr.Activated = true;
-                    db.ReclaimMedicineReasonsLists.Add(tr);
+                    db.ReclaimMedicalReasonsLists.Add(tr);
                     db.SaveChanges();
                     FillCombo();
                     radButton1.PerformClick();
