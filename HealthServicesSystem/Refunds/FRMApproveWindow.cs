@@ -380,7 +380,7 @@ namespace HealthServicesSystem.Reclaims
                             {
 
                                 this.Cursor = Cursors.WaitCursor;
-                                SqlConnection conNat = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=card_natoinal;User ID=sa;Password=363;Trusted_Connection=False");
+                                SqlConnection conNat = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=card_natoinal;User ID=sa;Password=123;Trusted_Connection=False");
                                 if (conNat.State == ConnectionState.Open)
                                 {
                                     conNat.Close();
