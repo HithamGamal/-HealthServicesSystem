@@ -94,6 +94,17 @@ namespace HealthServicesSystem
                     db.ReclaimMedicineReasonsLists.Add(tr);
                     db.SaveChanges();
                     FillCombo();
+                    int MaxId = db.ReclaimMedicineReasonsLists.Max(p => p.Id);
+                    for (int i = 0; i < GrdTrades.RowCount; i++)
+                    {
+                        if (Convert.ToInt32(GrdTrades.Rows[i].Cells["Id"].Value.ToString()) == MaxId)
+                        {
+                            GrdTrades.Rows[i].IsCurrent = true;
+                            GrdTrades.Rows[i].IsSelected = true;
+                            return;
+                        }
+
+                    }
                     radButton1.PerformClick();
                     MessageBox.Show("لقد تم حفظ البيانات", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -105,6 +116,17 @@ namespace HealthServicesSystem
                         Gtrade[0].MedicineReason = ChronicList.Text.Trim();
                         db.SaveChanges();
                         FillCombo();
+                        //int MaxId = db.ReclaimMedicalReasonsLists.Max(p => p.Id);
+                        for (int i = 0; i < GrdTrades.RowCount; i++)
+                        {
+                            if (Convert.ToInt32(GrdTrades.Rows[i].Cells["Id"].Value.ToString()) == ChronicId)
+                            {
+                                GrdTrades.Rows[i].IsCurrent = true;
+                                GrdTrades.Rows[i].IsSelected = true;
+                                return;
+                            }
+
+                        }
                         radButton1.PerformClick();
                         MessageBox.Show("لقد تم حفظ البيانات", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -279,6 +301,16 @@ namespace HealthServicesSystem
                                 db.SaveChanges();
                             }
                             FillCombo();
+                            for (int i = 0; i < GrdTrades.RowCount; i++)
+                            {
+                                if (Convert.ToInt32(GrdTrades.Rows[i].Cells["Id"].Value.ToString()) == ChronicId)
+                                {
+                                    GrdTrades.Rows[i].IsCurrent = true;
+                                   // GrdTrades.Rows[i].IsSelected = true;
+                                    return;
+                                }
+
+                            }
                         }
                     }
 
