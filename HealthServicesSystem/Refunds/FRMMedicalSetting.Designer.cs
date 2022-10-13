@@ -30,16 +30,16 @@ namespace HealthServicesSystem.Reclaims
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn3 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn4 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.Label1 = new Telerik.WinControls.UI.RadLabel();
             this.MedicaGroup = new Telerik.WinControls.UI.RadDropDownList();
             this.Label5 = new Telerik.WinControls.UI.RadLabel();
@@ -231,61 +231,61 @@ namespace HealthServicesSystem.Reclaims
             // 
             this.GRDMedical.MasterTemplate.AllowAddNewRow = false;
             this.GRDMedical.MasterTemplate.AllowColumnResize = false;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "Id";
-            gridViewTextBoxColumn6.HeaderText = "رقم الخدمة";
-            gridViewTextBoxColumn6.Name = "Id";
-            gridViewTextBoxColumn6.ReadOnly = true;
-            gridViewTextBoxColumn6.Width = 80;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "ServiceEName";
-            gridViewTextBoxColumn7.HeaderText = "اسم الخدمة انجليزي";
-            gridViewTextBoxColumn7.Name = "Medical";
-            gridViewTextBoxColumn7.ReadOnly = true;
-            gridViewTextBoxColumn7.Width = 200;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "ServiceAName";
-            gridViewTextBoxColumn8.HeaderText = "اسم الخدمة عربي";
-            gridViewTextBoxColumn8.Name = "Translations";
-            gridViewTextBoxColumn8.ReadOnly = true;
-            gridViewTextBoxColumn8.Width = 200;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "ServicePrice";
-            gridViewTextBoxColumn9.HeaderText = "أقصى سعر للخدمة";
-            gridViewTextBoxColumn9.Name = "MaxPice";
-            gridViewTextBoxColumn9.Width = 120;
-            gridViewCheckBoxColumn2.FieldName = "IsMushamat";
-            gridViewCheckBoxColumn2.HeaderText = "تصرف كمساهمة";
-            gridViewCheckBoxColumn2.Name = "column1";
-            gridViewCheckBoxColumn2.Width = 100;
-            gridViewCommandColumn3.EnableExpressionEditor = false;
-            gridViewCommandColumn3.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.MediumTime;
-            gridViewCommandColumn3.HeaderText = "تعديل";
-            gridViewCommandColumn3.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            gridViewCommandColumn3.Name = "Edit";
-            gridViewCommandColumn3.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
-            gridViewCommandColumn4.EnableExpressionEditor = false;
-            gridViewCommandColumn4.HeaderText = "حذف";
-            gridViewCommandColumn4.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            gridViewCommandColumn4.Name = "Delete";
-            gridViewTextBoxColumn10.FieldName = "IsEnabled";
-            gridViewTextBoxColumn10.HeaderText = "column2";
-            gridViewTextBoxColumn10.IsVisible = false;
-            gridViewTextBoxColumn10.Name = "IsEnabled";
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Id";
+            gridViewTextBoxColumn1.HeaderText = "رقم الخدمة";
+            gridViewTextBoxColumn1.Name = "Id";
+            gridViewTextBoxColumn1.ReadOnly = true;
+            gridViewTextBoxColumn1.Width = 80;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "ServiceEName";
+            gridViewTextBoxColumn2.HeaderText = "اسم الخدمة انجليزي";
+            gridViewTextBoxColumn2.Name = "Medical";
+            gridViewTextBoxColumn2.ReadOnly = true;
+            gridViewTextBoxColumn2.Width = 200;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "ServiceAName";
+            gridViewTextBoxColumn3.HeaderText = "اسم الخدمة عربي";
+            gridViewTextBoxColumn3.Name = "Translations";
+            gridViewTextBoxColumn3.ReadOnly = true;
+            gridViewTextBoxColumn3.Width = 200;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "ServicePrice";
+            gridViewTextBoxColumn4.HeaderText = "أقصى سعر للخدمة";
+            gridViewTextBoxColumn4.Name = "MaxPice";
+            gridViewTextBoxColumn4.Width = 120;
+            gridViewCheckBoxColumn1.FieldName = "IsMushamat";
+            gridViewCheckBoxColumn1.HeaderText = "تصرف كمساهمة";
+            gridViewCheckBoxColumn1.Name = "column1";
+            gridViewCheckBoxColumn1.Width = 100;
+            gridViewCommandColumn1.EnableExpressionEditor = false;
+            gridViewCommandColumn1.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.MediumTime;
+            gridViewCommandColumn1.HeaderText = "تعديل";
+            gridViewCommandColumn1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            gridViewCommandColumn1.Name = "Edit";
+            gridViewCommandColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
+            gridViewCommandColumn2.EnableExpressionEditor = false;
+            gridViewCommandColumn2.HeaderText = "حذف";
+            gridViewCommandColumn2.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            gridViewCommandColumn2.Name = "Delete";
+            gridViewTextBoxColumn5.FieldName = "IsEnabled";
+            gridViewTextBoxColumn5.HeaderText = "column2";
+            gridViewTextBoxColumn5.IsVisible = false;
+            gridViewTextBoxColumn5.Name = "IsEnabled";
             this.GRDMedical.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewCheckBoxColumn2,
-            gridViewCommandColumn3,
-            gridViewCommandColumn4,
-            gridViewTextBoxColumn10});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewCheckBoxColumn1,
+            gridViewCommandColumn1,
+            gridViewCommandColumn2,
+            gridViewTextBoxColumn5});
             this.GRDMedical.MasterTemplate.EnableFiltering = true;
-            sortDescriptor2.PropertyName = "Edit";
+            sortDescriptor1.PropertyName = "Edit";
             this.GRDMedical.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor2});
-            this.GRDMedical.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            sortDescriptor1});
+            this.GRDMedical.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.GRDMedical.Name = "GRDMedical";
             this.GRDMedical.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GRDMedical.ShowGroupPanel = false;
@@ -298,6 +298,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             // Button2
             // 
+            this.Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -328,6 +329,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             // Button4
             // 
+            this.Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -359,6 +361,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             // Button3
             // 
+            this.Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
