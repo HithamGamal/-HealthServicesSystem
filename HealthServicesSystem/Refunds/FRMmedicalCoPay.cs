@@ -123,20 +123,20 @@ namespace HealthServicesSystem.Reclaims
         {
             using (dbContext db = new dbContext())
             {
-                var ReclaimRes = db.ReclaimMedicalReasonsLists.Where(p=>p.Activated==true).ToList();
+                var ReclaimRes = db.ReclaimMedicalReasonsLists.Where(p=>p.Activated==true && p.Id>0).ToList();
                 ApproveReason.DataSource = ReclaimRes;
                 ApproveReason.DisplayMember = "MedicalReason";
                 ApproveReason.ValueMember = "Id";
                 ApproveReason.SelectedValue= 12;
 
-                var ReqCenter = db.CenterInfos.Where(p => p.IsEnabled == true).ToList();
+                var ReqCenter = db.CenterInfos.Where(p => p.IsEnabled == true && p.Id !=50000).ToList();
                 RequistingParty.DataSource = ReqCenter;
                 RequistingParty.ValueMember = "Id";
                 RequistingParty.DisplayMember = "CenterName";
                 RequistingParty.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 RequistingParty.SelectedIndex = -1;
 
-                var ExcCenter = db.CenterInfos.Where(p => p.IsEnabled == true).ToList();
+                var ExcCenter = db.CenterInfos.Where(p => p.IsEnabled == true && p.Id != 50000).ToList();
                 ExcutingParty.DataSource = ExcCenter;
                 ExcutingParty.ValueMember = "Id";
                 ExcutingParty.DisplayMember = "CenterName";
