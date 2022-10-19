@@ -102,7 +102,7 @@ namespace HealthServicesSystem.Reclaims
             ClientId = 0;
             SectorName = "";
             SectorId = 0;
-            BillType.SelectedIndex = -1;
+            BillType.SelectedIndex =0;
             money.Enabled = false;
             BillNo.Clear();
             GrdBill.Rows.Clear();
