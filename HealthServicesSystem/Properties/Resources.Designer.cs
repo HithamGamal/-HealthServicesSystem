@@ -393,6 +393,16 @@ namespace HealthServicesSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap event_busy_FILL0_wght400_GRAD0_opsz481 {
+            get {
+                object obj = ResourceManager.GetObject("event_busy_FILL0_wght400_GRAD0_opsz481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Excel {
             get {
                 object obj = ResourceManager.GetObject("Excel", resourceCulture);
