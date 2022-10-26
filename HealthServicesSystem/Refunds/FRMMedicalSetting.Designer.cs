@@ -425,7 +425,6 @@ namespace HealthServicesSystem.Reclaims
             this.Duration.Location = new System.Drawing.Point(465, 217);
             this.Duration.Name = "Duration";
             this.Duration.NullText = "ادخل عدد الشهور";
-            this.Duration.ReadOnly = true;
             this.Duration.Size = new System.Drawing.Size(104, 28);
             this.Duration.TabIndex = 8;
             this.Duration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -500,7 +499,7 @@ namespace HealthServicesSystem.Reclaims
             this.radLabel1.BackColor = System.Drawing.Color.Transparent;
             this.radLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel1.ForeColor = System.Drawing.Color.Black;
-            this.radLabel1.Location = new System.Drawing.Point(352, 217);
+            this.radLabel1.Location = new System.Drawing.Point(363, 217);
             this.radLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(87, 31);
@@ -513,7 +512,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             this.Sessions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Sessions.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sessions.Location = new System.Drawing.Point(225, 221);
+            this.Sessions.Location = new System.Drawing.Point(236, 217);
             this.Sessions.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Sessions.MaxLength = 9;
             this.Sessions.Name = "Sessions";

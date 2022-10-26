@@ -1920,16 +1920,20 @@ namespace HealthServicesSystem
                             dt.Columns.Add("Row6", typeof(string));
                             dt.Columns.Add("Row2", typeof(decimal));
                             dt.Columns.Add("Row12", typeof(decimal));
+                            dt.Columns.Add("Row11", typeof(decimal));
                             dt.Columns.Add("Row3", typeof(decimal));
                             dt.Columns.Add("Row21", typeof(decimal));
+                            dt.Columns.Add("Row22", typeof(decimal));
                             for (int i = 0; i < GetCent.Count; i++)
                             {
                                 DataRow dr = dt.NewRow();
                                 dr["Row6"] = GetCent[i].Row6;
                                 dr["Row2"] = GetCent[i].Row2;
                                 dr["Row12"] = GetCent[i].Row12;
+                                dr["Row11"] = GetCent[i].Row11;
+                                dr["Row21"] = GetCent[i].Row21;
                                 dr["Row3"] = 0;
-                                dr["Row21"] = 0;
+                                dr["Row22"] = 0;
                                 dt.Rows.Add(dr);
                             }
                             decimal Freq = 0;
@@ -1942,7 +1946,7 @@ namespace HealthServicesSystem
                             for (int i = 0; i < dt.Rows.Count; i++)
                             {
                                 dt.Rows[i]["Row3"] = Freq;
-                                dt.Rows[i]["Row21"] = Cost;
+                                dt.Rows[i]["Row22"] = Cost;
                             }
                             RPTِEstrdadCountSec Rdet = new RPTِEstrdadCountSec();
                             Rdet.DataSource = dt;
@@ -1972,6 +1976,7 @@ namespace HealthServicesSystem
                             dt.Columns.Add("Row7", typeof(string));
                             dt.Columns.Add("Row6", typeof(string));
                             dt.Columns.Add("Row2", typeof(decimal));
+                            dt.Columns.Add("Row11", typeof(decimal));
                             dt.Columns.Add("Row12", typeof(decimal));
                             dt.Columns.Add("Row3", typeof(decimal));
                             dt.Columns.Add("Row21", typeof(decimal));
@@ -1982,8 +1987,9 @@ namespace HealthServicesSystem
                                 dr["Row6"] = GetCent[i].Row6;
                                 dr["Row2"] = GetCent[i].Row2;
                                 dr["Row12"] = GetCent[i].Row12;
+                                dr["Row21"] = GetCent[i].Row21;
                                 dr["Row3"] = 0;
-                                dr["Row21"] = 0;
+                                dr["Row22"] = 0;
                                 dt.Rows.Add(dr);
                             }
                             decimal Freq = 0;
@@ -1996,7 +2002,7 @@ namespace HealthServicesSystem
                             for (int i = 0; i < dt.Rows.Count; i++)
                             {
                                 dt.Rows[i]["Row3"] = Freq;
-                                dt.Rows[i]["Row21"] = Cost;
+                                dt.Rows[i]["Row22"] = Cost;
                             }
                             RPTِEstrdadCountSecLoc Rdet = new RPTِEstrdadCountSecLoc();
                             Rdet.DataSource = dt;
