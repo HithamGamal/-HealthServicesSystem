@@ -86,8 +86,18 @@ namespace HealthServicesSystem.Reclaims
         {
             UserId = LoginForm.Default.UserId;
             LocalityId = PLC.LocalityId;
+
             using (dbContext db = new dbContext())
             {
+                var chkUser = db.Users.Where(p => p.Id == UserId).ToList();
+                if (chkUser[0].UserType == UserType.Admin)
+                {
+                    UnitPrice.ReadOnly = false;
+                }
+                else
+                {
+                    UnitPrice.ReadOnly = true;
+                }
                 var ReclaimRes = db.ReclaimMedicalReasonsLists.Where(p => p.Activated == true && p.Id > 0).ToList();
                 ApproveReason.DataSource = ReclaimRes;
                 ApproveReason.DisplayMember = "MedicalReason";

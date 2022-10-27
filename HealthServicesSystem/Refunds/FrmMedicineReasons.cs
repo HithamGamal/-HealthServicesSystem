@@ -63,7 +63,7 @@ namespace HealthServicesSystem
 
             using (dbContext db = new dbContext())
             {
-                var Tlist = db.ReclaimMedicineReasonsLists.Select(p => new { p.Id, p.MedicineReason, p.Activated }).ToList();
+                var Tlist = db.ReclaimMedicineReasonsLists.Select(p => new { p.Id, p.MedicineReason, p.Activated }).OrderBy(p=>p.Id).ToList();
 
                 ChronicList.DataSource = Tlist;
                 ChronicList.DisplayMember = "MedicineReason";
@@ -100,7 +100,7 @@ namespace HealthServicesSystem
                         if (Convert.ToInt32(GrdTrades.Rows[i].Cells["Id"].Value.ToString()) == MaxId)
                         {
                             GrdTrades.Rows[i].IsCurrent = true;
-                            GrdTrades.Rows[i].IsSelected = true;
+                            //GrdTrades.Rows[i].IsSelected = true;
                             return;
                         }
 
@@ -122,7 +122,7 @@ namespace HealthServicesSystem
                             if (Convert.ToInt32(GrdTrades.Rows[i].Cells["Id"].Value.ToString()) == ChronicId)
                             {
                                 GrdTrades.Rows[i].IsCurrent = true;
-                                GrdTrades.Rows[i].IsSelected = true;
+                                //GrdTrades.Rows[i].IsSelected = true;
                                 return;
                             }
 
@@ -366,6 +366,10 @@ namespace HealthServicesSystem
                         if (gtrade.Count > 0)
                         {
                             ChronicId = gtrade[0].Id;
+                        }
+                        else
+                        {
+                            ChronicId = 0;
                         }
                     }
 

@@ -35,8 +35,8 @@ namespace HealthServicesSystem.Reclaims
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn1 = new Telerik.WinControls.UI.GridViewImageColumn();
-            Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn2 = new Telerik.WinControls.UI.GridViewImageColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
             Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.GRDGroup = new Telerik.WinControls.UI.RadGridView();
@@ -91,16 +91,13 @@ namespace HealthServicesSystem.Reclaims
             gridViewTextBoxColumn4.Name = "SerANAme";
             gridViewTextBoxColumn4.ReadOnly = true;
             gridViewTextBoxColumn4.Width = 250;
-            gridViewImageColumn1.AllowFiltering = false;
-            gridViewImageColumn1.EnableExpressionEditor = false;
-            gridViewImageColumn1.HeaderText = "تعديل";
-            gridViewImageColumn1.Name = "BtnEditing";
-            gridViewImageColumn1.Width = 80;
-            gridViewImageColumn2.AllowFiltering = false;
-            gridViewImageColumn2.EnableExpressionEditor = false;
-            gridViewImageColumn2.HeaderText = "تفعيل/إلغاء تفعيل";
-            gridViewImageColumn2.Name = "BtnDeleting";
-            gridViewImageColumn2.Width = 120;
+            gridViewCommandColumn1.HeaderText = "تعديل";
+            gridViewCommandColumn1.Image = global::HealthServicesSystem.Properties.Resources.edit;
+            gridViewCommandColumn1.Name = "BtnEditing";
+            gridViewCommandColumn2.HeaderText = "تفعيل/الغاء تفعيل";
+            gridViewCommandColumn2.Image = global::HealthServicesSystem.Properties.Resources.DELETE;
+            gridViewCommandColumn2.Name = "BtnDeleting";
+            gridViewCommandColumn2.Width = 100;
             gridViewCheckBoxColumn1.EnableExpressionEditor = false;
             gridViewCheckBoxColumn1.FieldName = "IsEnabled";
             gridViewCheckBoxColumn1.HeaderText = "IsEnabled";
@@ -114,8 +111,8 @@ namespace HealthServicesSystem.Reclaims
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4,
-            gridViewImageColumn1,
-            gridViewImageColumn2,
+            gridViewCommandColumn1,
+            gridViewCommandColumn2,
             gridViewCheckBoxColumn1});
             this.GRDGroup.MasterTemplate.EnableFiltering = true;
             this.GRDGroup.MasterTemplate.ViewDefinition = tableViewDefinition1;

@@ -149,14 +149,14 @@ namespace HealthServicesSystem.Reclaims
                     using (dbContext db = new dbContext())
                     {
                         var SerA = db.MedicalServicesTemp.Where(p => p.SubGroupID == SubGrp).ToList();
-                        MedicalEnglish.DataSource = SerA;
-                        MedicalEnglish.ValueMember = "Id";
-                        MedicalEnglish.DisplayMember = "ServiceEName";
-                        MedicalEnglish.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-                        MedicalArabic.DataSource = SerA;
-                        MedicalArabic.DisplayMember = "ServiceAName";
-                        MedicalArabic.ValueMember = "Id";
-                        MedicalArabic.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                        //MedicalEnglish.DataSource = SerA;
+                        //MedicalEnglish.ValueMember = "Id";
+                        //MedicalEnglish.DisplayMember = "ServiceEName";
+                        //MedicalEnglish.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                        //MedicalArabic.DataSource = SerA;
+                        //MedicalArabic.DisplayMember = "ServiceAName";
+                        //MedicalArabic.ValueMember = "Id";
+                        //MedicalArabic.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                         GRDMedical.DataSource = SerA;
                     }
                 }
@@ -366,7 +366,7 @@ namespace HealthServicesSystem.Reclaims
                 SubGroup.Focus();
                 return;
             }
-            if (MedicalEnglish.Text.Length > 0)
+            if (MedicalEnglish.Text.Length == 0)
             {
                 MessageBox.Show("يجب كتابة الخدمة باللغة الانجليزية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 MedicalEnglish.Focus();

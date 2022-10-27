@@ -261,11 +261,13 @@ namespace HealthServicesSystem.Reclaims
             gridViewCommandColumn1.EnableExpressionEditor = false;
             gridViewCommandColumn1.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.MediumTime;
             gridViewCommandColumn1.HeaderText = "تعديل";
+            gridViewCommandColumn1.Image = global::HealthServicesSystem.Properties.Resources.edit;
             gridViewCommandColumn1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             gridViewCommandColumn1.Name = "Edit";
             gridViewCommandColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
             gridViewCommandColumn2.EnableExpressionEditor = false;
             gridViewCommandColumn2.HeaderText = "حذف";
+            gridViewCommandColumn2.Image = global::HealthServicesSystem.Properties.Resources.DELETE;
             gridViewCommandColumn2.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             gridViewCommandColumn2.Name = "Delete";
             gridViewTextBoxColumn5.FieldName = "IsEnabled";

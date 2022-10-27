@@ -158,6 +158,15 @@ namespace HealthServicesSystem.Reclaims
                 BillStatus.DataSource = Enum.GetValues(typeof(ReclaimStatus));
                 UserId = LoginForm.Default.UserId;
                 LocalityId = PLC.LocalityId;
+                var chkUser = db.Users.Where(p => p.Id == UserId).ToList();
+                if (chkUser[0].UserType == UserType.Admin)
+                {
+                    UnitPrice.ReadOnly = false;
+                }
+                else
+                {
+                    UnitPrice.ReadOnly = true;
+                }
             }
         }
 
