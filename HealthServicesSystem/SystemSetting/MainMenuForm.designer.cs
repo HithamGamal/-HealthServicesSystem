@@ -101,6 +101,8 @@
             this.FRMreportChronics = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup34 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FrmChronics = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup52 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.FrmAddChronicMedicine = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab3 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup22 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMReception = new Telerik.WinControls.UI.RadButtonElement();
@@ -201,7 +203,7 @@
             // 
             // ribbonTab5
             // 
-            this.ribbonTab5.IsSelected = true;
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup5,
             this.radRibbonBarGroup13,
@@ -502,7 +504,6 @@
             // 
             // ChangePassFrm
             // 
-            this.ChangePassFrm.Enabled = false;
             this.ChangePassFrm.Image = ((System.Drawing.Image)(resources.GetObject("ChangePassFrm.Image")));
             this.ChangePassFrm.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.ChangePassFrm.Name = "ChangePassFrm";
@@ -828,11 +829,12 @@
             // 
             // ribbonTab7
             // 
-            this.ribbonTab7.IsSelected = false;
+            this.ribbonTab7.IsSelected = true;
             this.ribbonTab7.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup32,
             this.radRibbonBarGroup33,
-            this.radRibbonBarGroup34});
+            this.radRibbonBarGroup34,
+            this.radRibbonBarGroup52});
             this.ribbonTab7.Name = "ribbonTab7";
             this.ribbonTab7.Text = "دفاتر الأمراض المزمنة";
             this.ribbonTab7.UseMnemonic = false;
@@ -888,6 +890,19 @@
             this.FrmChronics.Text = "اعداد قائمة الأمراض المزمنة";
             this.FrmChronics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.FrmChronics.Click += new System.EventHandler(this.RadButtonElement7_Click);
+            // 
+            // radRibbonBarGroup52
+            // 
+            this.radRibbonBarGroup52.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.FrmAddChronicMedicine});
+            this.radRibbonBarGroup52.Name = "radRibbonBarGroup52";
+            this.radRibbonBarGroup52.Text = "إدخال الأدوية";
+            // 
+            // FrmAddChronicMedicine
+            // 
+            this.FrmAddChronicMedicine.Enabled = false;
+            this.FrmAddChronicMedicine.Name = "FrmAddChronicMedicine";
+            this.FrmAddChronicMedicine.Text = "اضافة الأدوية للدفتر";
             // 
             // ribbonTab3
             // 
@@ -1523,5 +1538,7 @@
         private Telerik.WinControls.UI.RadButtonElement CompireClaims;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup51;
         private Telerik.WinControls.UI.RadButtonElement AddNonConfirm;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup52;
+        private Telerik.WinControls.UI.RadButtonElement FrmAddChronicMedicine;
     }
 }

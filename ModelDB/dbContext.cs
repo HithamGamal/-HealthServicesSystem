@@ -72,6 +72,7 @@ namespace ModelDB
         public DbSet<RefuseMedicineDetails> RefuseMedicineDetails { get; set; }
         public DbSet<StopSubsriber> StopSubsribers { get; set; }
         public DbSet<ClmNonConfirmGroup> ClmNonConfirmGroups { get; set; }
+        public DbSet<ChronicMedicine> ChronicMedicines { get; set; }
 
     }
 }

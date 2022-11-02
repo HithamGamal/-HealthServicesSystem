@@ -428,6 +428,12 @@
     <Compile Include="Refunds\FrmMedicalSubGroup.Designer.cs">
       <DependentUpon>FrmMedicalSubGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chronics\FrmAddChronicMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chronics\FrmAddChronicMedicine.Designer.cs">
+      <DependentUpon>FrmAddChronicMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Refunds\FRMmedicine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -842,6 +848,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FrmMedicalSubGroup.resx">
       <DependentUpon>FrmMedicalSubGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chronics\FrmAddChronicMedicine.resx">
+      <DependentUpon>FrmAddChronicMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FRMmedicine.resx">
       <DependentUpon>FRMmedicine.cs</DependentUpon>

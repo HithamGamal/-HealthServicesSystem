@@ -79,7 +79,12 @@
     <Compile Include="Migrations\202209290931551_jj.designer.cs">
       <DependentUpon>202209290931551_jj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211020828009_saif_2022_11_2.cs" />
+    <Compile Include="Migrations\202211020828009_saif_2022_11_2.designer.cs">
+      <DependentUpon>202211020828009_saif_2022_11_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ChronicMedicine.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
     <Compile Include="RefuseMedicine.cs" />
@@ -172,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209290931551_jj.resx">
       <DependentUpon>202209290931551_jj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211020828009_saif_2022_11_2.resx">
+      <DependentUpon>202211020828009_saif_2022_11_2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
