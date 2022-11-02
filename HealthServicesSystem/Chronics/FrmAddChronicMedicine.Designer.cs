@@ -41,7 +41,6 @@
             this.Button4 = new Telerik.WinControls.UI.RadButton();
             this.Button6 = new Telerik.WinControls.UI.RadButton();
             this.GroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.CustName = new Telerik.WinControls.UI.RadTextBox();
             this.card_no = new Telerik.WinControls.UI.RadTextBox();
             this.Label3 = new Telerik.WinControls.UI.RadLabel();
@@ -70,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Button6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox3)).BeginInit();
             this.GroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card_no)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label3)).BeginInit();
@@ -149,7 +147,6 @@
             this.GroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox3.BackColor = System.Drawing.Color.White;
-            this.GroupBox3.Controls.Add(this.radLabel6);
             this.GroupBox3.Controls.Add(this.CustName);
             this.GroupBox3.Controls.Add(this.card_no);
             this.GroupBox3.Controls.Add(this.Label3);
@@ -176,24 +173,6 @@
             this.GroupBox3.TabStop = false;
             this.GroupBox3.Text = " ";
             this.GroupBox3.Click += new System.EventHandler(this.GroupBox3_Click);
-            // 
-            // radLabel6
-            // 
-            this.radLabel6.AutoSize = false;
-            this.radLabel6.BackColor = System.Drawing.Color.Azure;
-            this.radLabel6.BorderVisible = true;
-            this.radLabel6.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel6.ForeColor = System.Drawing.Color.Purple;
-            this.radLabel6.Image = global::HealthServicesSystem.Properties.Resources.icons8_pills_32;
-            this.radLabel6.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.radLabel6.Location = new System.Drawing.Point(940, 11);
-            this.radLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(102, 38);
-            this.radLabel6.TabIndex = 440;
-            this.radLabel6.Text = "خدمة دوائية";
-            this.radLabel6.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel6.ThemeName = "Office2010Blue";
             // 
             // CustName
             // 
@@ -270,7 +249,7 @@
             this.BTNSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTNSearch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BTNSearch.Image = global::HealthServicesSystem.Properties.Resources.icons8_search_24;
-            this.BTNSearch.Location = new System.Drawing.Point(340, 12);
+            this.BTNSearch.Location = new System.Drawing.Point(590, 13);
             this.BTNSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BTNSearch.Name = "BTNSearch";
             this.BTNSearch.Size = new System.Drawing.Size(65, 28);
@@ -472,7 +451,7 @@
             this.dwalist.Name = "dwalist";
             this.dwalist.NullText = "ادخل اسم الدواء";
             this.dwalist.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dwalist.Size = new System.Drawing.Size(760, 28);
+            this.dwalist.Size = new System.Drawing.Size(742, 28);
             this.dwalist.TabIndex = 0;
             this.dwalist.ThemeName = "Office2010Blue";
             this.dwalist.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.dwalist_SelectedIndexChanged);
@@ -511,7 +490,7 @@
             this.Label11.BackColor = System.Drawing.Color.Transparent;
             this.Label11.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
             this.Label11.ForeColor = System.Drawing.Color.Crimson;
-            this.Label11.Location = new System.Drawing.Point(688, 13);
+            this.Label11.Location = new System.Drawing.Point(942, 14);
             this.Label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(67, 31);
@@ -525,7 +504,7 @@
             this.BookNo.BackColor = System.Drawing.Color.White;
             this.BookNo.Enabled = false;
             this.BookNo.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookNo.Location = new System.Drawing.Point(409, 12);
+            this.BookNo.Location = new System.Drawing.Point(659, 13);
             this.BookNo.Margin = new System.Windows.Forms.Padding(2);
             this.BookNo.MaxLength = 20;
             this.BookNo.Name = "BookNo";
@@ -581,7 +560,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "استرداد الخدمة الدوائية";
+            this.Text = "اضافة الأدوية إلى الدفتر";
             this.ThemeName = "Office2010Blue";
             this.Load += new System.EventHandler(this.FrmAddChronicMedicine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Button3)).EndInit();
@@ -590,7 +569,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox3)).EndInit();
             this.GroupBox3.ResumeLayout(false);
             this.GroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.card_no)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label3)).EndInit();
@@ -659,7 +637,6 @@
         internal Telerik.WinControls.UI.RadLabel mahliah;
         private Telerik.WinControls.Themes.Office2010BlueTheme office2010BlueTheme1;
         internal Telerik.WinControls.UI.RadLabel UnitInfo;
-        internal Telerik.WinControls.UI.RadLabel radLabel6;
         //private static FrmAddChronicMedicine _DefaultInstance;
         //public static FrmAddChronicMedicine Default
         //{

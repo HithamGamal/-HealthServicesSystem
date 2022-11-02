@@ -410,15 +410,7 @@ namespace HealthServicesSystem.Reclaims
 
         private void Percentage_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                MoneyPaied.Text = Convert.ToDecimal(Convert.ToDecimal(UnitPrice.Text) * Convert.ToDecimal(quantity.Text) * Convert.ToDecimal(Percentage.Text) / 100).ToString();
-            }
-            catch (Exception)
-            {
-
-
-            }
+        
         }
 
         private void Button8_Click(object sender, EventArgs e)
