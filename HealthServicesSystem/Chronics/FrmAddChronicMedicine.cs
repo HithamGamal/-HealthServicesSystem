@@ -163,8 +163,7 @@ namespace HealthServicesSystem.Reclaims
                 using (dbContext db = new dbContext())
                 {
                     db.Database.CommandTimeout = 0;
-                    int BNo = Convert.ToInt32(BookNo.Text);
-                    var FRef = db.ChronicsBooks.Where(p => p.BookNo == BNo && p.Activated==true && p.RowStatus != RowStatus.Deleted).Take(1).ToList();
+                    var FRef = db.ChronicsBooks.Where(p => p.InsurNo == card_no.Text.Trim() && p.Activated==true && p.RowStatus != RowStatus.Deleted).Take(1).ToList();
                     if (FRef.Count > 0)
                     {
 
@@ -351,11 +350,11 @@ namespace HealthServicesSystem.Reclaims
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            //if (Saved == false)
-            //{
-            //    MessageBox.Show("لم يتم حفظ بيانات لهذه المماملة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
+            if (Saved == false)
+            {
+                MessageBox.Show("لم يتم حفظ بيانات لهذه المماملة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             using (dbContext db = new dbContext())
             {
                 DialogResult a = 0;

@@ -876,7 +876,6 @@
             this.FrmAddChronicMedicine.Enabled = false;
             this.FrmAddChronicMedicine.Name = "FrmAddChronicMedicine";
             this.FrmAddChronicMedicine.Text = "اضافة الأدوية للدفتر";
-            this.FrmAddChronicMedicine.Click += new System.EventHandler(this.FrmAddChronicMedicine_Click);
             // 
             // ribbonTab3
             // 
