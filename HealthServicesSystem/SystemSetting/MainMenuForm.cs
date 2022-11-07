@@ -637,5 +637,14 @@ namespace HealthServicesSystem
             form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
+
+        private void CommitteeListBTN_Click(object sender, EventArgs e)
+        {
+            cooperationService form = new cooperationService();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+
+        }
     }
 }

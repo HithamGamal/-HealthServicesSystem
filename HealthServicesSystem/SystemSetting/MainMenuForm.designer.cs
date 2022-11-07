@@ -149,6 +149,8 @@
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.printCardBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.radRibbonBarGroup18 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.committeeListBTN = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -378,7 +380,8 @@
             this.radRibbonBarGroup17,
             this.radRibbonBarGroup19,
             this.radRibbonBarGroup20,
-            this.radRibbonBarGroup21});
+            this.radRibbonBarGroup21,
+            this.radRibbonBarGroup18});
             this.ribbonTab1.Name = "ribbonTab1";
             this.ribbonTab1.Text = "اعدادت عامة";
             this.ribbonTab1.UseMnemonic = false;
@@ -1308,6 +1311,19 @@
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.ThemeName = "Breeze";
             // 
+            // radRibbonBarGroup18
+            // 
+            this.radRibbonBarGroup18.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.committeeListBTN});
+            this.radRibbonBarGroup18.Name = "radRibbonBarGroup18";
+            this.radRibbonBarGroup18.Text = "قائمة المساهمات";
+            // 
+            // committeeListBTN
+            // 
+            this.committeeListBTN.Name = "committeeListBTN";
+            this.committeeListBTN.Text = "قائمة المساهمات";
+            this.committeeListBTN.Click += new System.EventHandler(this.CommitteeListBTN_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1457,5 +1473,7 @@
         private Telerik.WinControls.UI.RadButtonElement SendClm;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup50;
         private Telerik.WinControls.UI.RadButtonElement CompireClaims;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup18;
+        private Telerik.WinControls.UI.RadButtonElement committeeListBTN;
     }
 }
