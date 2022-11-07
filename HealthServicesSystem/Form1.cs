@@ -19,7 +19,7 @@ namespace HealthServicesSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Test")
+            MessageBox.Show("Test");
         }
     }
 }
