@@ -637,13 +637,5 @@ namespace HealthServicesSystem
             form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
-
-        private void FrmAddChronicMedicine_Click(object sender, EventArgs e)
-        {
-            FrmAddChronicMedicine form = new FrmAddChronicMedicine();
-            form.MdiParent = this;
-            form.WindowState = FormWindowState.Maximized;
-            form.Show();
-        }
     }
 }

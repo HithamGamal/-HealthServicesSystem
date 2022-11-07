@@ -102,12 +102,12 @@
             this.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Button3.Image = global::HealthServicesSystem.Properties.Resources.icons8_remove_481;
-            this.Button3.Location = new System.Drawing.Point(296, 473);
+            this.Button3.Location = new System.Drawing.Point(241, 473);
             this.Button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(156, 48);
+            this.Button3.Size = new System.Drawing.Size(211, 48);
             this.Button3.TabIndex = 398;
-            this.Button3.Text = "حذف";
+            this.Button3.Text = "حذف بيانات كل الأدوية";
             this.Button3.ThemeName = "Office2010Blue";
             this.ToolTip1.SetToolTip(this.Button3, "حذف");
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
