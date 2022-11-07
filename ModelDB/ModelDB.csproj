@@ -133,6 +133,7 @@
     <Compile Include="UserPermission.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>

@@ -1040,6 +1040,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SystemSetting\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemSetting\SystemSettingFRM.resx">
       <DependentUpon>SystemSettingFRM.cs</DependentUpon>
