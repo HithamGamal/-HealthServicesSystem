@@ -231,6 +231,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             this.GRDMedical.MasterTemplate.AllowAddNewRow = false;
             this.GRDMedical.MasterTemplate.AllowColumnResize = false;
+            this.GRDMedical.MasterTemplate.AutoGenerateColumns = false;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "Id";
             gridViewTextBoxColumn1.HeaderText = "رقم الخدمة";

@@ -200,7 +200,7 @@ namespace HealthServicesSystem.Reclaims
                             ServiceFrequency.Text = FSer[0].ServiceFrequency.ToString();
                             Duration.Text = FSer[0].Duration.ToString();
                             Sessions.Text = FSer[0].Sessions.ToString();
-
+                            UnitMaxPrice.Text = FSer[0].ServicePrice.ToString();
                         }
                     }
 
@@ -243,6 +243,7 @@ namespace HealthServicesSystem.Reclaims
                                 NeedApprovement.CheckState = CheckState.Unchecked;
                             }
                             ServiceFrequency.Text = FSer[0].ServiceFrequency.ToString();
+                            UnitMaxPrice.Text = FSer[0].ServicePrice.ToString();
                             Duration.Text = FSer[0].Duration.ToString();
                             Sessions.Text = FSer[0].Sessions.ToString();
 

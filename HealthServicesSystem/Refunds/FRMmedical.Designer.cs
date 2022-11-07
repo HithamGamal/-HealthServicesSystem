@@ -1024,6 +1024,7 @@
             this.GrdMedical.Size = new System.Drawing.Size(974, 141);
             this.GrdMedical.TabIndex = 6;
             this.GrdMedical.ThemeName = "Office2010Blue";
+            this.GrdMedical.Click += new System.EventHandler(this.GrdMedical_Click);
             // 
             // Button2
             // 
