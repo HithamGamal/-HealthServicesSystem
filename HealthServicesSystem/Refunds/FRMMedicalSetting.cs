@@ -301,6 +301,7 @@ namespace HealthServicesSystem.Reclaims
                         var FSer = db.MedicalServices.Where(p => p.Id == a).ToList();
                         if (FSer.Count > 0)
                         {
+                            MedicalId = FSer[0].Id;
                             MedicaGroup.SelectedValue = FSer[0].SubGroup.MainGroupId;
                             int subid = FSer[0].SubGroupID;
                             var Mg = db.MedicalSubGroups.Where(p => p.Id == subid).ToList();
@@ -556,7 +557,7 @@ namespace HealthServicesSystem.Reclaims
                             }
                         }
                     }
-                    db.Database.ExecuteSqlCommand("Update MedicalServicesTemp set Notes=null where Notes is not null");
+                    db.Database.ExecuteSqlCommand("Update MedicalServicesTemps set Notes=null where Notes is not null");
                     db.SaveChanges();
                 }
                 MessageBox.Show("لقد تم حفظ البيانات بنجاح", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Information);

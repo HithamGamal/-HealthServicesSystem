@@ -431,7 +431,7 @@ namespace HealthServicesSystem.Reclaims
                         var chkUser = db.Users.Where(p => p.Id == UserId).ToList();
                         if (chkUser[0].UserType == UserType.User)
                         {
-                            if (Convert.ToDecimal(UnitPrice.Text) > 0)
+                            if (Convert.ToDecimal(UnitPrice.Text) > 0 && SPrice>0)
                             {
                                 if (Convert.ToDecimal(UnitPrice.Text) > SPrice)
                                 {
