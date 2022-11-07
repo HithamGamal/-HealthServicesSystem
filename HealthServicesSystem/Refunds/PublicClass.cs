@@ -10,8 +10,9 @@ internal static class PLC
 	public static SqlConnection conClame = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=cntr;User ID=sa;Password=123;Trusted_Connection=False");
 	public static SqlConnection conNew = new SqlConnection("Data Source=192.168.100.10;Initial Catalog=InsuranceSystem;User ID=sa;Password=123;Trusted_Connection=False");
 	public static SqlConnection conOld = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=NewSubData;User ID=sa;Password=123;Trusted_Connection=False");
+    public static SqlConnection DbCailm = new SqlConnection("Data Source=.;Initial Catalog=clmdb;User ID=sa;Password=123;Trusted_Connection=False");
     //Get The date Of The Main Server:
-	public static DateTime getdate()
+    public static DateTime getdate()
     {
         var q = db.Database.SqlQuery<DateTime>("select getdate()");
         DateTime dt = q.First();
