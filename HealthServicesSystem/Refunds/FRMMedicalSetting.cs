@@ -149,14 +149,14 @@ namespace HealthServicesSystem.Reclaims
                     using (dbContext db = new dbContext())
                     {
                         var SerA = db.MedicalServicesTemp.Where(p => p.SubGroupID == SubGrp).ToList();
-                        MedicalEnglish.DataSource = SerA;
-                        MedicalEnglish.ValueMember = "Id";
-                        MedicalEnglish.DisplayMember = "ServiceEName";
-                        MedicalEnglish.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-                        MedicalArabic.DataSource = SerA;
-                        MedicalArabic.DisplayMember = "ServiceAName";
-                        MedicalArabic.ValueMember = "Id";
-                        MedicalArabic.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                        //MedicalEnglish.DataSource = SerA;
+                        //MedicalEnglish.ValueMember = "Id";
+                        //MedicalEnglish.DisplayMember = "ServiceEName";
+                        //MedicalEnglish.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                        //MedicalArabic.DataSource = SerA;
+                        //MedicalArabic.DisplayMember = "ServiceAName";
+                        //MedicalArabic.ValueMember = "Id";
+                        //MedicalArabic.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                         GRDMedical.DataSource = SerA;
                     }
                 }
@@ -366,7 +366,7 @@ namespace HealthServicesSystem.Reclaims
                 SubGroup.Focus();
                 return;
             }
-            if (MedicalEnglish.Text.Length > 0)
+            if (MedicalEnglish.Text.Length == 0)
             {
                 MessageBox.Show("يجب كتابة الخدمة باللغة الانجليزية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 MedicalEnglish.Focus();
@@ -437,7 +437,7 @@ namespace HealthServicesSystem.Reclaims
                         Mst.ServicePrice = Convert.ToDecimal(UnitMaxPrice.Text);
                         Mst.ServiceFrequency = Convert.ToInt32(ServiceFrequency.Text);
                         Mst.Duration = Convert.ToInt32(Duration.Text);
-                        Mst.ListType= (ListType)Enum.Parse(typeof(ListType), ListType.SelectedText); 
+                        Mst.ListType= (ListType)Enum.Parse(typeof(ListType), ListType.Text); 
                         Mst.NeedApproveMent = Convert.ToBoolean(NeedApprovement.CheckState);
                         Mst.InContract = true;
                         Mst.IsEnabled = true;
@@ -459,7 +459,7 @@ namespace HealthServicesSystem.Reclaims
                             UpMed[0].ServicePrice = Convert.ToDecimal(UnitMaxPrice.Text);
                             UpMed[0].ServiceFrequency = Convert.ToInt32(ServiceFrequency.Text);
                             UpMed[0].Duration = Convert.ToInt32(Duration.Text);
-                            UpMed[0].ListType = (ListType)Enum.Parse(typeof(ListType), ListType.SelectedText);
+                            UpMed[0].ListType = (ListType)Enum.Parse(typeof(ListType), ListType.Text);
                             UpMed[0].NeedApproveMent = Convert.ToBoolean(NeedApprovement.CheckState);
                             UpMed[0].InContract = true;
                             UpMed[0].IsEnabled = true;

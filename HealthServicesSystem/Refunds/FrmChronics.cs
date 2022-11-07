@@ -343,6 +343,10 @@ namespace HealthServicesSystem
                         {
                             ChronicId = gtrade[0].Id;
                         }
+                        else
+                        {
+                            ChronicId = 0;
+                        }
                     }
 
                 }

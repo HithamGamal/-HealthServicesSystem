@@ -21,8 +21,6 @@ namespace HealthServicesSystem.Claims
         private void LastClaimsCenterRepFrm_Load(object sender, EventArgs e)
         {
             dbContext db = new dbContext();
-            MonthDrp.SelectedIndex = PLC.getMonth() - 2;
-            YearTxt.Text = PLC.getyear().ToString();
             var qCenter = db.CenterInfos.Where(p=> p.HasContract ==true && p.IsEnabled == true) .Select(p => new { Id = p.Id, CenterName = p.Id + " " + p.CenterName }).ToList();
             if (qCenter.Count > 0)
             {

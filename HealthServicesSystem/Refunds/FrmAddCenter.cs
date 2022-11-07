@@ -131,7 +131,7 @@ namespace HealthServicesSystem
                     {
                         // FGrp(0).CenterName = Trim(CenterName.Text)
                         FGrp[0].CenterName = CenterName.Text.Trim();
-                        FGrp[0].CenterTypeId = (CenterType)Enum.Parse(typeof(CenterType), CenterType.SelectedText);
+                        FGrp[0].CenterTypeId = (CenterType)Enum.Parse(typeof(CenterType), CenterType.Text);
                         FGrp[0].Level1 = false;
                         FGrp[0].Level2 = false;
                         FGrp[0].Level3 = false;

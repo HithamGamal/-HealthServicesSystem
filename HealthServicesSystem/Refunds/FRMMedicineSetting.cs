@@ -293,7 +293,7 @@ namespace HealthServicesSystem.Reclaims
                     MedicineTemp Mct = new MedicineTemp();
                     int MAxId = db.MedicineTemps.Max(p => p.Id) + 1;
                     Mct.Id = MAxId;
-                    Mct.PL = (PLS)Enum.Parse(typeof(PLS), ListType.SelectedText);
+                    Mct.PL = (PLS)Enum.Parse(typeof(PLS), ListType.Text);
                     Mct.ATC_code = AtcCode.Text.Trim();
                     Mct.ATCId = Convert.ToInt32(ATCclassification.SelectedValue.ToString());
                     Mct.GenericId = Convert.ToInt32(GenericId.Text);
@@ -325,7 +325,7 @@ namespace HealthServicesSystem.Reclaims
                     var GetGen = db.MedicineTemps.Where(p => p.Id == MedicineId).ToList();
                     if (GetGen.Count > 0)
                     {
-                        GetGen[0].PL = (PLS)Enum.Parse(typeof(PLS), ListType.SelectedText);
+                        GetGen[0].PL = (PLS)Enum.Parse(typeof(PLS), ListType.Text);
                         GetGen[0].ATCId = Convert.ToInt32(ATCclassification.SelectedValue.ToString());
                         GetGen[0].ATC_code = AtcCode.Text.Trim();
                         GetGen[0].GenericId = Convert.ToInt32(GenericId.Text);

@@ -578,6 +578,7 @@
             this.RequistingParty.NullText = "اختر الجهة الطالبة للخدمة الدوائية";
             this.RequistingParty.Size = new System.Drawing.Size(400, 28);
             this.RequistingParty.TabIndex = 410;
+            this.RequistingParty.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.RequistingParty_SelectedIndexChanged);
             this.RequistingParty.GotFocus += new System.EventHandler(this.RequistingParty_Leave);
             // 
             // ExcutingParty

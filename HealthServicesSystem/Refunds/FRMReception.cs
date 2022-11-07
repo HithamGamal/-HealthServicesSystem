@@ -102,7 +102,7 @@ namespace HealthServicesSystem.Reclaims
             ClientId = 0;
             SectorName = "";
             SectorId = 0;
-            BillType.SelectedIndex = -1;
+            BillType.SelectedIndex =0;
             money.Enabled = false;
             BillNo.Clear();
             GrdBill.Rows.Clear();
@@ -119,7 +119,7 @@ namespace HealthServicesSystem.Reclaims
             BillDate.Value = PLC.getdate();
             using (dbContext db = new dbContext())
             {
-                var Gcenter = db.CenterInfos.ToList();
+                var Gcenter = db.CenterInfos.Where(p=>p.IsEnabled==true).ToList();
                 CenterList.DataSource = Gcenter;
                 CenterList.ValueMember = "Id";
                 CenterList.DisplayMember = "CenterName";

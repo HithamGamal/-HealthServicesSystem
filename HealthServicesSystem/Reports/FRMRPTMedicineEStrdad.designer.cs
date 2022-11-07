@@ -25,10 +25,10 @@ namespace HealthServicesSystem
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
             this.rd_books = new System.Windows.Forms.RadioButton();
             this.GroupControl1 = new System.Windows.Forms.Panel();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -182,10 +182,10 @@ namespace HealthServicesSystem
             // DrGrouping
             // 
             this.DrGrouping.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem1.Text = "بدون";
-            radListDataItem2.Text = "المحليات";
-            this.DrGrouping.Items.Add(radListDataItem1);
-            this.DrGrouping.Items.Add(radListDataItem2);
+            radListDataItem3.Text = "بدون";
+            radListDataItem4.Text = "المحليات";
+            this.DrGrouping.Items.Add(radListDataItem3);
+            this.DrGrouping.Items.Add(radListDataItem4);
             this.DrGrouping.Location = new System.Drawing.Point(81, 271);
             this.DrGrouping.Margin = new System.Windows.Forms.Padding(2);
             this.DrGrouping.Name = "DrGrouping";
@@ -204,10 +204,10 @@ namespace HealthServicesSystem
             // GroupingBy
             // 
             this.GroupingBy.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem3.Text = "التردد";
-            radListDataItem4.Text = "التكلفة";
-            this.GroupingBy.Items.Add(radListDataItem3);
-            this.GroupingBy.Items.Add(radListDataItem4);
+            radListDataItem5.Text = "التردد";
+            radListDataItem6.Text = "التكلفة";
+            this.GroupingBy.Items.Add(radListDataItem5);
+            this.GroupingBy.Items.Add(radListDataItem6);
             this.GroupingBy.Location = new System.Drawing.Point(230, 272);
             this.GroupingBy.Margin = new System.Windows.Forms.Padding(2);
             this.GroupingBy.Name = "GroupingBy";
@@ -563,13 +563,14 @@ namespace HealthServicesSystem
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(48, 30);
             this.textBox1.TabIndex = 77;
+            this.textBox1.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(200, 11);
+            this.label3.Location = new System.Drawing.Point(253, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 25);
             this.label3.TabIndex = 4;
@@ -580,7 +581,7 @@ namespace HealthServicesSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(457, 11);
+            this.label2.Location = new System.Drawing.Point(510, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 3;
@@ -589,7 +590,7 @@ namespace HealthServicesSystem
             // d_end
             // 
             this.d_end.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.d_end.Location = new System.Drawing.Point(32, 9);
+            this.d_end.Location = new System.Drawing.Point(85, 13);
             this.d_end.Name = "d_end";
             this.d_end.Size = new System.Drawing.Size(162, 34);
             this.d_end.TabIndex = 1;
@@ -597,7 +598,7 @@ namespace HealthServicesSystem
             // d_start
             // 
             this.d_start.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.d_start.Location = new System.Drawing.Point(289, 9);
+            this.d_start.Location = new System.Drawing.Point(342, 13);
             this.d_start.Name = "d_start";
             this.d_start.Size = new System.Drawing.Size(162, 34);
             this.d_start.TabIndex = 0;
