@@ -58,6 +58,8 @@
             this.CompanyConfig = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup21 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.ChangePassFrm = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup18 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.committeeListBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab8 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup36 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.ExportClms = new Telerik.WinControls.UI.RadButtonElement();
@@ -149,8 +151,6 @@
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.printCardBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
-            this.radRibbonBarGroup18 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.committeeListBTN = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -199,7 +199,7 @@
             // 
             // ribbonTab5
             // 
-            this.ribbonTab5.IsSelected = false;
+            this.ribbonTab5.IsSelected = true;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup5,
             this.radRibbonBarGroup13,
@@ -374,7 +374,7 @@
             // 
             // ribbonTab1
             // 
-            this.ribbonTab1.IsSelected = true;
+            this.ribbonTab1.IsSelected = false;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup16,
             this.radRibbonBarGroup17,
@@ -469,6 +469,19 @@
             this.ChangePassFrm.Text = "تغيير رمز المرور";
             this.ChangePassFrm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ChangePassFrm.Click += new System.EventHandler(this.ChangePassFrm_Click);
+            // 
+            // radRibbonBarGroup18
+            // 
+            this.radRibbonBarGroup18.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.committeeListBTN});
+            this.radRibbonBarGroup18.Name = "radRibbonBarGroup18";
+            this.radRibbonBarGroup18.Text = "قائمة المساهمات";
+            // 
+            // committeeListBTN
+            // 
+            this.committeeListBTN.Name = "committeeListBTN";
+            this.committeeListBTN.Text = "قائمة المساهمات";
+            this.committeeListBTN.Click += new System.EventHandler(this.CommitteeListBTN_Click);
             // 
             // ribbonTab8
             // 
@@ -1310,19 +1323,6 @@
             this.radStatusStrip1.SizingGrip = false;
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.ThemeName = "Breeze";
-            // 
-            // radRibbonBarGroup18
-            // 
-            this.radRibbonBarGroup18.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.committeeListBTN});
-            this.radRibbonBarGroup18.Name = "radRibbonBarGroup18";
-            this.radRibbonBarGroup18.Text = "قائمة المساهمات";
-            // 
-            // committeeListBTN
-            // 
-            this.committeeListBTN.Name = "committeeListBTN";
-            this.committeeListBTN.Text = "قائمة المساهمات";
-            this.committeeListBTN.Click += new System.EventHandler(this.CommitteeListBTN_Click);
             // 
             // MainMenuForm
             // 

@@ -1166,6 +1166,7 @@
     <Content Include="Resources\event_busy_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\event_busy_FILL0_wght400_GRAD0_opsz481.png" />
     <Content Include="Resources\Excel.png" />
   </ItemGroup>
   <ItemGroup>
