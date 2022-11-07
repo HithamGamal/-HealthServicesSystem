@@ -59,31 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClmNonConfirmGroup.cs" />
-    <Compile Include="Migrations\202209270933377_saif_2022_09_27.cs" />
-    <Compile Include="Migrations\202209270933377_saif_2022_09_27.designer.cs">
-      <DependentUpon>202209270933377_saif_2022_09_27.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209280710027_saif_2022_09_28.cs" />
-    <Compile Include="Migrations\202209280710027_saif_2022_09_28.designer.cs">
-      <DependentUpon>202209280710027_saif_2022_09_28.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209281003030_saif_2022_09_28_1.cs" />
-    <Compile Include="Migrations\202209281003030_saif_2022_09_28_1.designer.cs">
-      <DependentUpon>202209281003030_saif_2022_09_28_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209290630289_saif_2022_09_29_1.cs" />
-    <Compile Include="Migrations\202209290630289_saif_2022_09_29_1.designer.cs">
-      <DependentUpon>202209290630289_saif_2022_09_29_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209290931551_jj.cs" />
-    <Compile Include="Migrations\202209290931551_jj.designer.cs">
-      <DependentUpon>202209290931551_jj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211020828009_saif_2022_11_2.cs" />
-    <Compile Include="Migrations\202211020828009_saif_2022_11_2.designer.cs">
-      <DependentUpon>202211020828009_saif_2022_11_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="cooperationService.cs" />
+    <Compile Include="MedicalCommitteeRequest.cs" />
+    <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -163,24 +141,7 @@
     <!--<Fakes Include="Fakes\EntityFramework.fakes" />-->
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202209270933377_saif_2022_09_27.resx">
-      <DependentUpon>202209270933377_saif_2022_09_27.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209280710027_saif_2022_09_28.resx">
-      <DependentUpon>202209280710027_saif_2022_09_28.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209281003030_saif_2022_09_28_1.resx">
-      <DependentUpon>202209281003030_saif_2022_09_28_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209290630289_saif_2022_09_29_1.resx">
-      <DependentUpon>202209290630289_saif_2022_09_29_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209290931551_jj.resx">
-      <DependentUpon>202209290931551_jj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211020828009_saif_2022_11_2.resx">
-      <DependentUpon>202211020828009_saif_2022_11_2.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="ModelDB.sln" />
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

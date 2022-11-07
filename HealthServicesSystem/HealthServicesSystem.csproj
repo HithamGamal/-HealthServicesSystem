@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>48</ApplicationRevision>
+    <ApplicationRevision>44</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -83,9 +83,11 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -100,11 +102,15 @@
     <Reference Include="Telerik.WinControls, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.ChartView, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.GridView, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI.Design, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2020.1.113.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms R1 2020\Bin\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="TelerikExport, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
@@ -113,12 +119,6 @@
     </Compile>
     <Compile Include="Chronics\FRMBookInfo.Designer.cs">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Claims\AddNonConfirmFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Claims\AddNonConfirmFrm.Designer.cs">
-      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\AdvanceFillterFrm.cs">
       <SubType>Form</SubType>
@@ -290,6 +290,12 @@
     <Compile Include="Refunds\AllSupplierRPT.designer.cs">
       <DependentUpon>AllSupplierRPT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Refunds\CommiteeRPT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Refunds\CommiteeRPT.Designer.cs">
+      <DependentUpon>CommiteeRPT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Refunds\Estrdad.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -362,6 +368,12 @@
     <Compile Include="Refunds\FrmChronics.Designer.cs">
       <DependentUpon>FrmChronics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Refunds\FRMCooperationServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refunds\FRMCooperationServices.Designer.cs">
+      <DependentUpon>FRMCooperationServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Refunds\FrmDiagnosis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,6 +409,12 @@
     </Compile>
     <Compile Include="Refunds\FRMmedical.Designer.cs">
       <DependentUpon>FRMmedical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refunds\FRMMedicalCommitee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refunds\FRMMedicalCommitee.Designer.cs">
+      <DependentUpon>FRMMedicalCommitee.cs</DependentUpon>
     </Compile>
     <Compile Include="Refunds\FRMmedicalCoPay.cs">
       <SubType>Form</SubType>
@@ -488,6 +506,12 @@
     <Compile Include="Refunds\FrmPharmacist.Designer.cs">
       <DependentUpon>FrmPharmacist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Refunds\FRMpreviousRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refunds\FRMpreviousRequest.Designer.cs">
+      <DependentUpon>FRMpreviousRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Refunds\FRMReception.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -530,7 +554,25 @@
     <Compile Include="Refunds\FrmTrades.Designer.cs">
       <DependentUpon>FrmTrades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Refunds\physiotherapy_session_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Refunds\physiotherapy_session_rpt.Designer.cs">
+      <DependentUpon>physiotherapy_session_rpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Refunds\PublicClass.cs" />
+    <Compile Include="Refunds\RequestFrmRPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refunds\RequestFrmRPT.Designer.cs">
+      <DependentUpon>RequestFrmRPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refunds\TransferRPT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Refunds\TransferRPT.Designer.cs">
+      <DependentUpon>TransferRPT.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForAll.cs" />
     <Compile Include="Reports\FRMreportApproveMedicine.cs">
       <SubType>Form</SubType>
@@ -685,9 +727,6 @@
     <EmbeddedResource Include="Chronics\FRMBookInfo.resx">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Claims\AddNonConfirmFrm.resx">
-      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Claims\AdvanceFillterFrm.resx">
       <DependentUpon>AdvanceFillterFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -780,6 +819,9 @@
     <EmbeddedResource Include="Refunds\AllSupplierRPT.resx">
       <DependentUpon>AllSupplierRPT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\CommiteeRPT.resx">
+      <DependentUpon>CommiteeRPT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Refunds\Estrdad.resx">
       <DependentUpon>Estrdad.cs</DependentUpon>
     </EmbeddedResource>
@@ -816,6 +858,9 @@
     <EmbeddedResource Include="Refunds\FrmChronics.resx">
       <DependentUpon>FrmChronics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\FRMCooperationServices.resx">
+      <DependentUpon>FRMCooperationServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FrmDiagnosis.resx">
       <DependentUpon>FrmDiagnosis.cs</DependentUpon>
     </EmbeddedResource>
@@ -833,6 +878,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FRMmedical.resx">
       <DependentUpon>FRMmedical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\FRMMedicalCommitee.resx">
+      <DependentUpon>FRMMedicalCommitee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FRMmedicalCoPay.resx">
       <DependentUpon>FRMmedicalCoPay.cs</DependentUpon>
@@ -879,6 +927,9 @@
     <EmbeddedResource Include="Refunds\FrmPharmacist.resx">
       <DependentUpon>FrmPharmacist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\FRMpreviousRequest.resx">
+      <DependentUpon>FRMpreviousRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FRMReception.resx">
       <DependentUpon>FRMReception.cs</DependentUpon>
     </EmbeddedResource>
@@ -899,6 +950,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FrmTrades.resx">
       <DependentUpon>FrmTrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\physiotherapy_session_rpt.resx">
+      <DependentUpon>physiotherapy_session_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\RequestFrmRPT.resx">
+      <DependentUpon>RequestFrmRPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\TransferRPT.resx">
+      <DependentUpon>TransferRPT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FRMreportApproveMedicine.resx">
       <DependentUpon>FRMreportApproveMedicine.cs</DependentUpon>
