@@ -889,6 +889,20 @@
             this.FrmChronics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.FrmChronics.Click += new System.EventHandler(this.RadButtonElement7_Click);
             // 
+            // radRibbonBarGroup52
+            // 
+            this.radRibbonBarGroup52.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.FrmAddChronicMedicine});
+            this.radRibbonBarGroup52.Name = "radRibbonBarGroup52";
+            this.radRibbonBarGroup52.Text = "إدخال الأدوية";
+            // 
+            // FrmAddChronicMedicine
+            // 
+            this.FrmAddChronicMedicine.Enabled = false;
+            this.FrmAddChronicMedicine.Name = "FrmAddChronicMedicine";
+            this.FrmAddChronicMedicine.Text = "اضافة الأدوية للدفتر";
+            this.FrmAddChronicMedicine.Click += new System.EventHandler(this.FrmAddChronicMedicine_Click);
+            // 
             // ribbonTab3
             // 
             this.ribbonTab3.IsSelected = false;
