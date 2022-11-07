@@ -62,7 +62,6 @@
     <Compile Include="cooperationService.cs" />
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ChronicMedicine.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
