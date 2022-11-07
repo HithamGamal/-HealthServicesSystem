@@ -155,6 +155,7 @@
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.printCardBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.radRibbonBarGroup53 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -398,14 +399,15 @@
             // 
             // ribbonTab1
             // 
-            this.ribbonTab1.IsSelected = false;
+            this.ribbonTab1.IsSelected = true;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup16,
             this.radRibbonBarGroup17,
             this.radRibbonBarGroup18,
             this.radRibbonBarGroup19,
             this.radRibbonBarGroup20,
-            this.radRibbonBarGroup21});
+            this.radRibbonBarGroup21,
+            this.radRibbonBarGroup53});
             this.ribbonTab1.Name = "ribbonTab1";
             this.ribbonTab1.Text = "اعدادت عامة";
             this.ribbonTab1.UseMnemonic = false;
@@ -829,7 +831,7 @@
             // 
             // ribbonTab7
             // 
-            this.ribbonTab7.IsSelected = true;
+            this.ribbonTab7.IsSelected = false;
             this.ribbonTab7.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup32,
             this.radRibbonBarGroup33,
@@ -1386,6 +1388,11 @@
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.ThemeName = "Breeze";
             // 
+            // radRibbonBarGroup53
+            // 
+            this.radRibbonBarGroup53.Name = "radRibbonBarGroup53";
+            this.radRibbonBarGroup53.Text = "قائمة المساهمات";
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1541,5 +1548,6 @@
         private Telerik.WinControls.UI.RadButtonElement AddNonConfirm;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup52;
         private Telerik.WinControls.UI.RadButtonElement FrmAddChronicMedicine;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup53;
     }
 }
