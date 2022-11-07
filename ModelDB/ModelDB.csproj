@@ -62,7 +62,6 @@
     <Compile Include="cooperationService.cs" />
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ChronicMedicine.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -134,6 +133,7 @@
     <Compile Include="UserPermission.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
@@ -142,24 +142,7 @@
     <!--<Fakes Include="Fakes\EntityFramework.fakes" />-->
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202209270933377_saif_2022_09_27.resx">
-      <DependentUpon>202209270933377_saif_2022_09_27.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209280710027_saif_2022_09_28.resx">
-      <DependentUpon>202209280710027_saif_2022_09_28.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209281003030_saif_2022_09_28_1.resx">
-      <DependentUpon>202209281003030_saif_2022_09_28_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209290630289_saif_2022_09_29_1.resx">
-      <DependentUpon>202209290630289_saif_2022_09_29_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209290931551_jj.resx">
-      <DependentUpon>202209290931551_jj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211020828009_saif_2022_11_2.resx">
-      <DependentUpon>202211020828009_saif_2022_11_2.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="ModelDB.sln" />
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

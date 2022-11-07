@@ -60,6 +60,7 @@ namespace HealthServicesSystem.Reclaims
         public int ServiceId = 0;
         public bool Saved = false;
         public bool InList = false;
+        public decimal SPrice = 0;
         private void LoadData()
         {
             card_no.Clear();
@@ -89,15 +90,7 @@ namespace HealthServicesSystem.Reclaims
 
             using (dbContext db = new dbContext())
             {
-                var chkUser = db.Users.Where(p => p.Id == UserId).ToList();
-                if (chkUser[0].UserType == UserType.Admin)
-                {
-                    UnitPrice.ReadOnly = false;
-                }
-                else
-                {
-                    UnitPrice.ReadOnly = true;
-                }
+
                 var ReclaimRes = db.ReclaimMedicalReasonsLists.Where(p => p.Activated == true && p.Id > 0).ToList();
                 ApproveReason.DataSource = ReclaimRes;
                 ApproveReason.DisplayMember = "MedicalReason";
@@ -329,6 +322,7 @@ namespace HealthServicesSystem.Reclaims
             UnitPrice.Clear();
             MoneyPaied.Clear();
             ServiceList.Focus();
+            SPrice = 0;
 
 
         }
@@ -352,6 +346,7 @@ namespace HealthServicesSystem.Reclaims
                                 InList = getSer[0].InContract;
                                 Percentage.Text = 100.ToString();
                                 quantity.Text = 1.ToString();
+                                SPrice = getSer[0].ServicePrice;
                             }
                         }
                     }
@@ -385,6 +380,7 @@ namespace HealthServicesSystem.Reclaims
                                 InList = getSer[0].InContract;
                                 Percentage.Text = 100.ToString();
                                 quantity.Text = 1.ToString();
+                                SPrice = getSer[0].ServicePrice;
                             }
                         }
                     }
@@ -423,14 +419,35 @@ namespace HealthServicesSystem.Reclaims
 
         private void UnitPrice_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                MoneyPaied.Text = Convert.ToDecimal(Convert.ToDecimal(UnitPrice.Text) * Convert.ToDecimal(quantity.Text) * Convert.ToDecimal(Percentage.Text) / 100).ToString();
-            }
-            catch (Exception)
+            if (UnitPrice.Text.Length > 0)
             {
 
 
+                try
+                {
+                    using (dbContext db = new dbContext())
+                    {
+
+                        var chkUser = db.Users.Where(p => p.Id == UserId).ToList();
+                        if (chkUser[0].UserType == UserType.User)
+                        {
+                            if (Convert.ToDecimal(UnitPrice.Text) > 0)
+                            {
+                                if (Convert.ToDecimal(UnitPrice.Text) > SPrice)
+                                {
+                                    UnitPrice.Text = SPrice.ToString();
+                                }
+                            }
+                        }
+
+                    }
+                    MoneyPaied.Text = Convert.ToDecimal(Convert.ToDecimal(UnitPrice.Text) * Convert.ToDecimal(quantity.Text) * Convert.ToDecimal(Percentage.Text) / 100).ToString();
+                }
+                catch (Exception)
+                {
+
+
+                }
             }
         }
 
