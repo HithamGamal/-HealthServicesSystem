@@ -12,6 +12,7 @@ using HealthServicesSystem.SystemSetting;
 using HealthServicesSystem.Reclaims;
 using ModelDB;
 using HealthServicesSystem.Claims;
+using HealthServicesSystem.Refunds;
 
 namespace HealthServicesSystem
 {
@@ -641,6 +642,22 @@ namespace HealthServicesSystem
         private void FrmAddChronicMedicine_Click(object sender, EventArgs e)
         {
             FrmAddChronicMedicine frm = new FrmAddChronicMedicine();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void CommitteeBTN_Click(object sender, EventArgs e)
+        {
+            FRMMedicalCommitee frm = new FRMMedicalCommitee();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void CommitteeListBTN_Click(object sender, EventArgs e)
+        {
+            FRMCooperationServices frm = new FRMCooperationServices();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
