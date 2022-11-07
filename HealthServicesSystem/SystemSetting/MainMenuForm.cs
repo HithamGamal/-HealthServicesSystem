@@ -640,10 +640,10 @@ namespace HealthServicesSystem
 
         private void FrmAddChronicMedicine_Click(object sender, EventArgs e)
         {
-            FrmAddChronicMedicine form = new FrmAddChronicMedicine();
-            form.MdiParent = this;
-            form.WindowState = FormWindowState.Maximized;
-            form.Show();
+            FrmAddChronicMedicine frm = new FrmAddChronicMedicine();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
     }
 }
