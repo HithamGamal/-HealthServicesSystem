@@ -398,10 +398,11 @@ namespace HealthServicesSystem.Reclaims
             {
                 Sessions.Text = "0";
             }
-            try
-            {
+            //try
+            //{
                 using (dbContext db = new dbContext())
                 {
+                MessageBox.Show(MedicalId.ToString());
 
                     if (MedicalId == 0)
                     {
@@ -478,11 +479,11 @@ namespace HealthServicesSystem.Reclaims
                     GRDMedical.DataSource = Gmed;
                 }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void Button4_Click(object sender, EventArgs e)
