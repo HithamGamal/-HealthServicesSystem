@@ -402,7 +402,7 @@ namespace HealthServicesSystem.Reclaims
             //{
                 using (dbContext db = new dbContext())
                 {
-                MessageBox.Show(MedicalId.ToString());
+               
 
                     if (MedicalId == 0)
                     {
