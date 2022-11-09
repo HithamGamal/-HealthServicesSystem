@@ -68,6 +68,8 @@ namespace HealthServicesSystem.Reclaims
             this.NeedApprovement = new Telerik.WinControls.UI.RadCheckBox();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.ListType = new Telerik.WinControls.UI.RadDropDownList();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.Percentages = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Label1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MedicaGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label5)).BeginInit();
@@ -96,6 +98,8 @@ namespace HealthServicesSystem.Reclaims
             ((System.ComponentModel.ISupportInitialize)(this.NeedApprovement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Percentages)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -325,7 +329,7 @@ namespace HealthServicesSystem.Reclaims
             this.BtnAdd.Location = new System.Drawing.Point(12, 259);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(200, 53);
-            this.BtnAdd.TabIndex = 10;
+            this.BtnAdd.TabIndex = 11;
             this.BtnAdd.Text = "حفظ";
             this.BtnAdd.ThemeName = "Office2010Blue";
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
@@ -356,7 +360,7 @@ namespace HealthServicesSystem.Reclaims
             this.Button1.Location = new System.Drawing.Point(776, 259);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(192, 53);
-            this.Button1.TabIndex = 11;
+            this.Button1.TabIndex = 12;
             this.Button1.Text = "اضافة خدمة جديدة";
             this.Button1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.Button1.ThemeName = "Office2010Blue";
@@ -416,7 +420,7 @@ namespace HealthServicesSystem.Reclaims
             this.ServiceFrequency.Name = "ServiceFrequency";
             this.ServiceFrequency.NullText = "أقصى تردد";
             this.ServiceFrequency.Size = new System.Drawing.Size(109, 28);
-            this.ServiceFrequency.TabIndex = 7;
+            this.ServiceFrequency.TabIndex = 8;
             this.ServiceFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ServiceFrequency.ThemeName = "Office2010Blue";
             this.ServiceFrequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ServiceFrequency_KeyPress);
@@ -429,7 +433,7 @@ namespace HealthServicesSystem.Reclaims
             this.Duration.Name = "Duration";
             this.Duration.NullText = "ادخل عدد الشهور";
             this.Duration.Size = new System.Drawing.Size(104, 28);
-            this.Duration.TabIndex = 8;
+            this.Duration.TabIndex = 9;
             this.Duration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Duration.ThemeName = "Office2010Blue";
             this.Duration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Duration_KeyPress);
@@ -521,7 +525,7 @@ namespace HealthServicesSystem.Reclaims
             this.Sessions.Name = "Sessions";
             this.Sessions.NullText = "خدمة تحتاج الى جلسات";
             this.Sessions.Size = new System.Drawing.Size(123, 28);
-            this.Sessions.TabIndex = 9;
+            this.Sessions.TabIndex = 10;
             this.Sessions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Sessions.ThemeName = "Office2010Blue";
             this.Sessions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Sessions_KeyPress);
@@ -565,12 +569,43 @@ namespace HealthServicesSystem.Reclaims
             this.ListType.TabIndex = 4;
             this.ListType.ThemeName = "Office2010Blue";
             // 
+            // radLabel3
+            // 
+            this.radLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.ForeColor = System.Drawing.Color.Black;
+            this.radLabel3.Location = new System.Drawing.Point(383, 180);
+            this.radLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(140, 31);
+            this.radLabel3.TabIndex = 468;
+            this.radLabel3.Text = "النسبة المئوية للاسترداد";
+            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel3.ThemeName = "Office2010Blue";
+            // 
+            // Percentages
+            // 
+            this.Percentages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Percentages.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Percentages.Location = new System.Drawing.Point(236, 183);
+            this.Percentages.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Percentages.MaxLength = 9;
+            this.Percentages.Name = "Percentages";
+            this.Percentages.NullText = "النسبة";
+            this.Percentages.Size = new System.Drawing.Size(123, 28);
+            this.Percentages.TabIndex = 7;
+            this.Percentages.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Percentages.ThemeName = "Office2010Blue";
+            // 
             // FRMMedicalSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(980, 645);
+            this.Controls.Add(this.radLabel3);
+            this.Controls.Add(this.Percentages);
             this.Controls.Add(this.radLabel2);
             this.Controls.Add(this.ListType);
             this.Controls.Add(this.NeedApprovement);
@@ -639,6 +674,8 @@ namespace HealthServicesSystem.Reclaims
             ((System.ComponentModel.ISupportInitialize)(this.NeedApprovement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Percentages)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -673,6 +710,8 @@ namespace HealthServicesSystem.Reclaims
         private RadCheckBox NeedApprovement;
         internal RadLabel radLabel2;
         internal RadDropDownList ListType;
+        internal RadLabel radLabel3;
+        internal RadTextBox Percentages;
         //private static FRMMedicalSetting _Default;
         //public static FRMMedicalSetting Default
         //{

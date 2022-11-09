@@ -91,6 +91,10 @@
     <Compile Include="Migrations\202211070815587_saif_2022_11_07.designer.cs">
       <DependentUpon>202211070815587_saif_2022_11_07.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211090657001_saif_2022_11_09.cs" />
+    <Compile Include="Migrations\202211090657001_saif_2022_11_09.designer.cs">
+      <DependentUpon>202211090657001_saif_2022_11_09.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -193,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211070815587_saif_2022_11_07.resx">
       <DependentUpon>202211070815587_saif_2022_11_07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211090657001_saif_2022_11_09.resx">
+      <DependentUpon>202211090657001_saif_2022_11_09.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

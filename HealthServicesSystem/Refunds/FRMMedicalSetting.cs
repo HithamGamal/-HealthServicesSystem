@@ -201,6 +201,7 @@ namespace HealthServicesSystem.Reclaims
                             Duration.Text = FSer[0].Duration.ToString();
                             Sessions.Text = FSer[0].Sessions.ToString();
                             UnitMaxPrice.Text = FSer[0].ServicePrice.ToString();
+                            Percentages.Text = FSer[0].Percentag.ToString();
                         }
                     }
 
@@ -246,6 +247,7 @@ namespace HealthServicesSystem.Reclaims
                             UnitMaxPrice.Text = FSer[0].ServicePrice.ToString();
                             Duration.Text = FSer[0].Duration.ToString();
                             Sessions.Text = FSer[0].Sessions.ToString();
+                            Percentages.Text = FSer[0].Percentag.ToString();
 
                         }
                     }
@@ -327,6 +329,7 @@ namespace HealthServicesSystem.Reclaims
                             UnitMaxPrice.Text = FSer[0].ServicePrice.ToString();
                             ServiceFrequency.Text = FSer[0].ServiceFrequency.ToString();
                             Duration.Text = FSer[0].Duration.ToString();
+                            Percentages.Text = FSer[0].Percentag.ToString();
                         }
                     }
 
@@ -446,6 +449,7 @@ namespace HealthServicesSystem.Reclaims
                         Mst.IsEnabled = true;
                         Mst.Sessions = Convert.ToInt32(Sessions.Text);
                         Mst.Notes = "A";
+                        Mst.Percentag= Convert.ToInt32(Percentages.Text);
                         db.MedicalServicesTemp.Add(Mst);
                         db.SaveChanges();
 
@@ -466,6 +470,7 @@ namespace HealthServicesSystem.Reclaims
                             UpMed[0].NeedApproveMent = Convert.ToBoolean(NeedApprovement.CheckState);
                             UpMed[0].InContract = true;
                             UpMed[0].IsEnabled = true;
+                            UpMed[0].Percentag= Convert.ToInt32(Percentages.Text);
                             UpMed[0].Sessions = Convert.ToInt32(Sessions.Text);
                             UpMed[0].Notes = "U";
                             db.SaveChanges();
@@ -518,6 +523,7 @@ namespace HealthServicesSystem.Reclaims
                             mds.InContract = Gdata[i].InContract;
                             mds.IsEnabled = true;
                             mds.Sessions = Gdata[i].Sessions;
+                            mds.Percentag = Gdata[i].Percentag;
                             db.SaveChanges();
                         }
                     }
@@ -541,6 +547,7 @@ namespace HealthServicesSystem.Reclaims
                                 mdsU[0].InContract = GdataU[i].InContract;
                                 mdsU[0].IsEnabled = GdataU[i].IsEnabled;
                                 mdsU[0].Sessions = GdataU[i].Sessions;
+                                mdsU[0].Percentag = GdataU[i].Percentag;
                                 db.SaveChanges();
                             }
                         }

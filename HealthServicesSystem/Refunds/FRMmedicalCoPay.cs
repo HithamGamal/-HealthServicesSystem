@@ -242,7 +242,7 @@ namespace HealthServicesSystem.Reclaims
                                 UnitPrice.Text = getSer[0].ServicePrice.ToString();
                                 MedicalArabic.SelectedValue = getSer[0].Id;
                                 InList = getSer[0].InContract;
-                                Percentage.Text = 100.ToString();
+                                Percentage.Text = getSer[0].Percentag.ToString();
                                 quantity.Text = 1.ToString();
                             }
                         }
@@ -273,7 +273,7 @@ namespace HealthServicesSystem.Reclaims
                                 ServiceListType.Text = getSer[0].ListType.ToString();
                                 UnitPrice.Text = getSer[0].ServicePrice.ToString();
                                 ServiceList.SelectedValue = getSer[0].Id;
-                                Percentage.Text = 100.ToString();
+                                Percentage.Text = getSer[0].Percentag.ToString();
                                 InList = getSer[0].InContract;
                                 quantity.Text = 1.ToString();
                             }
