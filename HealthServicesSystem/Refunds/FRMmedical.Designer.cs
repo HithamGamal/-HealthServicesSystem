@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.GroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
             this.CustName = new Telerik.WinControls.UI.RadTextBox();
             this.Label3 = new Telerik.WinControls.UI.RadLabel();
@@ -230,13 +230,13 @@
             this.radLabel5.ForeColor = System.Drawing.Color.Purple;
             this.radLabel5.Image = global::HealthServicesSystem.Properties.Resources.icons8_stethoscope_32;
             this.radLabel5.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.radLabel5.Location = new System.Drawing.Point(890, 2);
+            this.radLabel5.Location = new System.Drawing.Point(827, 2);
             this.radLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(92, 38);
+            this.radLabel5.Size = new System.Drawing.Size(155, 38);
             this.radLabel5.TabIndex = 439;
             this.radLabel5.Text = "خدمة طبية";
-            this.radLabel5.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.radLabel5.ThemeName = "Office2010Blue";
             // 
             // radButton1
@@ -956,67 +956,67 @@
             this.GrdMedical.MasterTemplate.AllowAddNewRow = false;
             this.GrdMedical.MasterTemplate.AllowDeleteRow = false;
             this.GrdMedical.MasterTemplate.AllowDragToGroup = false;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.HeaderText = "م";
-            gridViewTextBoxColumn1.Name = "Column2";
-            gridViewTextBoxColumn1.ReadOnly = true;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Id";
-            gridViewTextBoxColumn2.HeaderText = "Id";
-            gridViewTextBoxColumn2.IsVisible = false;
-            gridViewTextBoxColumn2.Name = "Id";
-            gridViewTextBoxColumn3.FieldName = "MedicalId";
-            gridViewTextBoxColumn3.HeaderText = "column1";
-            gridViewTextBoxColumn3.IsVisible = false;
-            gridViewTextBoxColumn3.Name = "MedicalId";
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "ServiceEName";
-            gridViewTextBoxColumn4.HeaderText = "الخدمة";
-            gridViewTextBoxColumn4.Name = "ServiceEName";
-            gridViewTextBoxColumn4.ReadOnly = true;
-            gridViewTextBoxColumn4.Width = 400;
-            gridViewTextBoxColumn5.FieldName = "ReclaimTotal";
-            gridViewTextBoxColumn5.HeaderText = "المبلغ المدخل";
-            gridViewTextBoxColumn5.Name = "ReclaimTotal";
-            gridViewTextBoxColumn5.Width = 100;
-            gridViewCheckBoxColumn1.FieldName = "InContract";
-            gridViewCheckBoxColumn1.HeaderText = "داخل العقد";
-            gridViewCheckBoxColumn1.Name = "InContract";
-            gridViewCheckBoxColumn1.Width = 100;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.HeaderText = "unitprice";
-            gridViewTextBoxColumn6.IsVisible = false;
-            gridViewTextBoxColumn6.Name = "Up";
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "Quantity";
-            gridViewTextBoxColumn7.HeaderText = "quantity";
-            gridViewTextBoxColumn7.IsVisible = false;
-            gridViewTextBoxColumn7.Name = "Quantity";
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "ReclaimCost";
-            gridViewTextBoxColumn8.HeaderText = "المبلغ المسترد";
-            gridViewTextBoxColumn8.Name = "ReclaimCost";
-            gridViewTextBoxColumn8.ReadOnly = true;
-            gridViewTextBoxColumn8.Width = 100;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "Percentages";
-            gridViewTextBoxColumn9.HeaderText = "النسبة";
-            gridViewTextBoxColumn9.Name = "Percentages";
-            gridViewTextBoxColumn9.ReadOnly = true;
-            gridViewTextBoxColumn9.Width = 80;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.HeaderText = "م";
+            gridViewTextBoxColumn10.Name = "Column2";
+            gridViewTextBoxColumn10.ReadOnly = true;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.FieldName = "Id";
+            gridViewTextBoxColumn11.HeaderText = "Id";
+            gridViewTextBoxColumn11.IsVisible = false;
+            gridViewTextBoxColumn11.Name = "Id";
+            gridViewTextBoxColumn12.FieldName = "MedicalId";
+            gridViewTextBoxColumn12.HeaderText = "column1";
+            gridViewTextBoxColumn12.IsVisible = false;
+            gridViewTextBoxColumn12.Name = "MedicalId";
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
+            gridViewTextBoxColumn13.FieldName = "ServiceEName";
+            gridViewTextBoxColumn13.HeaderText = "الخدمة";
+            gridViewTextBoxColumn13.Name = "ServiceEName";
+            gridViewTextBoxColumn13.ReadOnly = true;
+            gridViewTextBoxColumn13.Width = 400;
+            gridViewTextBoxColumn14.FieldName = "ReclaimTotal";
+            gridViewTextBoxColumn14.HeaderText = "المبلغ المدخل";
+            gridViewTextBoxColumn14.Name = "ReclaimTotal";
+            gridViewTextBoxColumn14.Width = 100;
+            gridViewCheckBoxColumn2.FieldName = "InContract";
+            gridViewCheckBoxColumn2.HeaderText = "داخل العقد";
+            gridViewCheckBoxColumn2.Name = "InContract";
+            gridViewCheckBoxColumn2.Width = 100;
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
+            gridViewTextBoxColumn15.HeaderText = "unitprice";
+            gridViewTextBoxColumn15.IsVisible = false;
+            gridViewTextBoxColumn15.Name = "Up";
+            gridViewTextBoxColumn16.EnableExpressionEditor = false;
+            gridViewTextBoxColumn16.FieldName = "Quantity";
+            gridViewTextBoxColumn16.HeaderText = "quantity";
+            gridViewTextBoxColumn16.IsVisible = false;
+            gridViewTextBoxColumn16.Name = "Quantity";
+            gridViewTextBoxColumn17.EnableExpressionEditor = false;
+            gridViewTextBoxColumn17.FieldName = "ReclaimCost";
+            gridViewTextBoxColumn17.HeaderText = "المبلغ المسترد";
+            gridViewTextBoxColumn17.Name = "ReclaimCost";
+            gridViewTextBoxColumn17.ReadOnly = true;
+            gridViewTextBoxColumn17.Width = 100;
+            gridViewTextBoxColumn18.EnableExpressionEditor = false;
+            gridViewTextBoxColumn18.FieldName = "Percentages";
+            gridViewTextBoxColumn18.HeaderText = "النسبة";
+            gridViewTextBoxColumn18.Name = "Percentages";
+            gridViewTextBoxColumn18.ReadOnly = true;
+            gridViewTextBoxColumn18.Width = 80;
             this.GrdMedical.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewCheckBoxColumn1,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9});
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12,
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14,
+            gridViewCheckBoxColumn2,
+            gridViewTextBoxColumn15,
+            gridViewTextBoxColumn16,
+            gridViewTextBoxColumn17,
+            gridViewTextBoxColumn18});
             this.GrdMedical.MasterTemplate.EnableFiltering = true;
-            this.GrdMedical.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.GrdMedical.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.GrdMedical.Name = "GrdMedical";
             this.GrdMedical.ReadOnly = true;
             this.GrdMedical.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1024,6 +1024,7 @@
             this.GrdMedical.Size = new System.Drawing.Size(974, 141);
             this.GrdMedical.TabIndex = 6;
             this.GrdMedical.ThemeName = "Office2010Blue";
+            this.GrdMedical.Click += new System.EventHandler(this.GrdMedical_Click);
             // 
             // Button2
             // 
