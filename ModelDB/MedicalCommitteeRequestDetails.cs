@@ -16,6 +16,7 @@ namespace ModelDB
         public virtual MedicalCommitteeRequest MedicalCommitteeRequest { get; set; }
         public int ServiceId { get; set; }
         public string Service_Name{ get; set; }
+        public decimal Co_cost { get; set; }
         public decimal  Pat_cost { get; set; }
         public decimal Insur_cost { get; set; }
         public decimal ServiceCost { get; set; }
