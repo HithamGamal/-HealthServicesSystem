@@ -40,11 +40,14 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem1 = new Telerik.WinControls.UI.GridViewSummaryItem();
             Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem2 = new Telerik.WinControls.UI.GridViewSummaryItem();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.GroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.genderlbl = new System.Windows.Forms.Label();
+            this.addressLBL = new System.Windows.Forms.Label();
             this.phoneNoLBL = new System.Windows.Forms.Label();
             this.clientIdLBL = new System.Windows.Forms.Label();
             this.rqstId = new System.Windows.Forms.Label();
@@ -67,8 +70,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TotalCostTXT = new Telerik.WinControls.UI.RadTextBox();
             this.refund_check = new Telerik.WinControls.UI.RadCheckBox();
-            this.OperationDate = new Telerik.WinControls.UI.RadDateTimePicker();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.addBTN = new Telerik.WinControls.UI.RadButton();
             this.deny_check = new Telerik.WinControls.UI.RadCheckBox();
             this.approve_check = new Telerik.WinControls.UI.RadCheckBox();
@@ -83,7 +84,6 @@
             this.pat_cost_txt = new Telerik.WinControls.UI.RadTextBox();
             this.TXTAmount = new Telerik.WinControls.UI.RadTextBox();
             this.MAmount = new Telerik.WinControls.UI.RadRadioButton();
-            this.MPercentage = new Telerik.WinControls.UI.RadRadioButton();
             this.Label42 = new Telerik.WinControls.UI.RadLabel();
             this.ServiceCost = new Telerik.WinControls.UI.RadTextBox();
             this.Label18 = new Telerik.WinControls.UI.RadLabel();
@@ -94,16 +94,16 @@
             this.MedicalServiceEn = new Telerik.WinControls.UI.RadDropDownList();
             this.Label14 = new Telerik.WinControls.UI.RadLabel();
             this.GRDApprove = new Telerik.WinControls.UI.RadGridView();
+            this.OperationDate = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.physiotherapyrb = new Telerik.WinControls.UI.RadRadioButton();
             this.coRadio = new Telerik.WinControls.UI.RadRadioButton();
             this.transferRadio = new Telerik.WinControls.UI.RadRadioButton();
             this.printBTN = new Telerik.WinControls.UI.RadButton();
             this.newBTN = new Telerik.WinControls.UI.RadButton();
             this.saveBTN = new Telerik.WinControls.UI.RadButton();
             this.deleteBTN = new Telerik.WinControls.UI.RadButton();
-            this.physiotherapyrb = new Telerik.WinControls.UI.RadRadioButton();
-            this.genderlbl = new System.Windows.Forms.Label();
-            this.addressLBL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).BeginInit();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BTNpreviousRequest)).BeginInit();
@@ -126,8 +126,6 @@
             this.GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TotalCostTXT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refund_check)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OperationDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deny_check)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approve_check)).BeginInit();
@@ -143,7 +141,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pat_cost_txt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TXTAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MPercentage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label18)).BeginInit();
@@ -155,15 +152,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.Label14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRDApprove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRDApprove.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OperationDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.physiotherapyrb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coRadio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transferRadio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBTN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.physiotherapyrb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,6 +196,26 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.ThemeName = "Office2010Blue";
             this.GroupBox1.Click += new System.EventHandler(this.GroupBox1_Click);
+            // 
+            // genderlbl
+            // 
+            this.genderlbl.AutoSize = true;
+            this.genderlbl.Location = new System.Drawing.Point(263, 13);
+            this.genderlbl.Name = "genderlbl";
+            this.genderlbl.Size = new System.Drawing.Size(20, 25);
+            this.genderlbl.TabIndex = 417;
+            this.genderlbl.Text = "0";
+            this.genderlbl.Visible = false;
+            // 
+            // addressLBL
+            // 
+            this.addressLBL.AutoSize = true;
+            this.addressLBL.Location = new System.Drawing.Point(384, 69);
+            this.addressLBL.Name = "addressLBL";
+            this.addressLBL.Size = new System.Drawing.Size(20, 25);
+            this.addressLBL.TabIndex = 416;
+            this.addressLBL.Text = "0";
+            this.addressLBL.Visible = false;
             // 
             // phoneNoLBL
             // 
@@ -467,32 +486,6 @@
             this.refund_check.TabIndex = 39;
             this.refund_check.Text = "تحويل الى الاسترداد";
             // 
-            // OperationDate
-            // 
-            this.OperationDate.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.OperationDate.Location = new System.Drawing.Point(33, 121);
-            this.OperationDate.Name = "OperationDate";
-            this.OperationDate.Size = new System.Drawing.Size(172, 32);
-            this.OperationDate.TabIndex = 437;
-            this.OperationDate.TabStop = false;
-            this.OperationDate.Text = "2021/10/19";
-            this.OperationDate.ThemeName = "Office2010Blue";
-            this.OperationDate.Value = new System.DateTime(2021, 10, 19, 17, 14, 44, 473);
-            // 
-            // radLabel4
-            // 
-            this.radLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
-            this.radLabel4.ForeColor = System.Drawing.Color.Black;
-            this.radLabel4.Location = new System.Drawing.Point(216, 122);
-            this.radLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(74, 31);
-            this.radLabel4.TabIndex = 436;
-            this.radLabel4.Text = "تاريخ الطلب";
-            this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel4.ThemeName = "Office2010Blue";
-            // 
             // addBTN
             // 
             this.addBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -586,7 +579,6 @@
             this.GroupBox2.Controls.Add(this.pat_cost_txt);
             this.GroupBox2.Controls.Add(this.TXTAmount);
             this.GroupBox2.Controls.Add(this.MAmount);
-            this.GroupBox2.Controls.Add(this.MPercentage);
             this.GroupBox2.Controls.Add(this.Label42);
             this.GroupBox2.Controls.Add(this.ServiceCost);
             this.GroupBox2.HeaderText = "";
@@ -601,7 +593,7 @@
             // 
             this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
             this.radLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.radLabel3.Location = new System.Drawing.Point(348, 10);
+            this.radLabel3.Location = new System.Drawing.Point(439, 10);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(80, 30);
             this.radLabel3.TabIndex = 17;
@@ -614,7 +606,7 @@
             this.insur_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.insur_cost_txt.Enabled = false;
             this.insur_cost_txt.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.insur_cost_txt.Location = new System.Drawing.Point(239, 10);
+            this.insur_cost_txt.Location = new System.Drawing.Point(330, 10);
             this.insur_cost_txt.Name = "insur_cost_txt";
             this.insur_cost_txt.ReadOnly = true;
             this.insur_cost_txt.Size = new System.Drawing.Size(103, 32);
@@ -627,7 +619,7 @@
             // 
             this.radLabel2.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
             this.radLabel2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.radLabel2.Location = new System.Drawing.Point(128, 12);
+            this.radLabel2.Location = new System.Drawing.Point(219, 12);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(84, 30);
             this.radLabel2.TabIndex = 23;
@@ -640,7 +632,7 @@
             this.pat_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pat_cost_txt.Enabled = false;
             this.pat_cost_txt.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.pat_cost_txt.Location = new System.Drawing.Point(19, 12);
+            this.pat_cost_txt.Location = new System.Drawing.Point(110, 12);
             this.pat_cost_txt.Name = "pat_cost_txt";
             this.pat_cost_txt.ReadOnly = true;
             this.pat_cost_txt.Size = new System.Drawing.Size(103, 32);
@@ -654,7 +646,7 @@
             this.TXTAmount.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TXTAmount.Enabled = false;
             this.TXTAmount.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.TXTAmount.Location = new System.Drawing.Point(707, 10);
+            this.TXTAmount.Location = new System.Drawing.Point(798, 10);
             this.TXTAmount.MaxLength = 10;
             this.TXTAmount.Name = "TXTAmount";
             this.TXTAmount.Size = new System.Drawing.Size(133, 32);
@@ -666,28 +658,18 @@
             // 
             this.MAmount.Font = new System.Drawing.Font("Sakkal Majalla", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MAmount.ForeColor = System.Drawing.Color.Navy;
-            this.MAmount.Location = new System.Drawing.Point(846, 12);
+            this.MAmount.Location = new System.Drawing.Point(937, 12);
             this.MAmount.Name = "MAmount";
             this.MAmount.Size = new System.Drawing.Size(136, 30);
             this.MAmount.TabIndex = 19;
             this.MAmount.Text = "مساهمة اللجنة بمبلغ";
             this.MAmount.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.MAmount_ToggleStateChanged);
             // 
-            // MPercentage
-            // 
-            this.MPercentage.Font = new System.Drawing.Font("Sakkal Majalla", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MPercentage.ForeColor = System.Drawing.Color.Navy;
-            this.MPercentage.Location = new System.Drawing.Point(1044, 12);
-            this.MPercentage.Name = "MPercentage";
-            this.MPercentage.Size = new System.Drawing.Size(82, 30);
-            this.MPercentage.TabIndex = 18;
-            this.MPercentage.Text = "تحمل كامل";
-            // 
             // Label42
             // 
             this.Label42.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
             this.Label42.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Label42.Location = new System.Drawing.Point(556, 12);
+            this.Label42.Location = new System.Drawing.Point(647, 12);
             this.Label42.Name = "Label42";
             this.Label42.Size = new System.Drawing.Size(139, 30);
             this.Label42.TabIndex = 15;
@@ -700,7 +682,7 @@
             this.ServiceCost.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ServiceCost.Enabled = false;
             this.ServiceCost.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.ServiceCost.Location = new System.Drawing.Point(447, 12);
+            this.ServiceCost.Location = new System.Drawing.Point(538, 12);
             this.ServiceCost.Name = "ServiceCost";
             this.ServiceCost.ReadOnly = true;
             this.ServiceCost.Size = new System.Drawing.Size(103, 32);
@@ -867,6 +849,11 @@
             gridViewTextBoxColumn10.Name = "PatientPrice";
             gridViewTextBoxColumn10.ReadOnly = true;
             gridViewTextBoxColumn10.Width = 114;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.FieldName = "CoPrice";
+            gridViewTextBoxColumn11.HeaderText = "تكلفة المساهمة";
+            gridViewTextBoxColumn11.Name = "CoPrice";
+            gridViewTextBoxColumn11.Width = 78;
             gridViewCommandColumn1.EnableExpressionEditor = false;
             gridViewCommandColumn1.FieldName = "delete";
             gridViewCommandColumn1.HeaderText = "حذف";
@@ -883,6 +870,7 @@
             gridViewTextBoxColumn8,
             gridViewTextBoxColumn9,
             gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
             gridViewCommandColumn1});
             this.GRDApprove.MasterTemplate.EnableFiltering = true;
             gridViewSummaryItem1.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
@@ -906,6 +894,32 @@
             this.GRDApprove.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.MasterTemplate_CommandCellClick);
             this.GRDApprove.Click += new System.EventHandler(this.GRDApprove_Click);
             // 
+            // OperationDate
+            // 
+            this.OperationDate.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
+            this.OperationDate.Location = new System.Drawing.Point(33, 121);
+            this.OperationDate.Name = "OperationDate";
+            this.OperationDate.Size = new System.Drawing.Size(172, 32);
+            this.OperationDate.TabIndex = 437;
+            this.OperationDate.TabStop = false;
+            this.OperationDate.Text = "2021/10/19";
+            this.OperationDate.ThemeName = "Office2010Blue";
+            this.OperationDate.Value = new System.DateTime(2021, 10, 19, 17, 14, 44, 473);
+            // 
+            // radLabel4
+            // 
+            this.radLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
+            this.radLabel4.ForeColor = System.Drawing.Color.Black;
+            this.radLabel4.Location = new System.Drawing.Point(216, 122);
+            this.radLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(74, 31);
+            this.radLabel4.TabIndex = 436;
+            this.radLabel4.Text = "تاريخ الطلب";
+            this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel4.ThemeName = "Office2010Blue";
+            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -921,6 +935,16 @@
             this.radGroupBox1.TabIndex = 22;
             this.radGroupBox1.TabStop = false;
             this.radGroupBox1.ThemeName = "Office2010Blue";
+            // 
+            // physiotherapyrb
+            // 
+            this.physiotherapyrb.Font = new System.Drawing.Font("Sakkal Majalla", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.physiotherapyrb.ForeColor = System.Drawing.Color.Navy;
+            this.physiotherapyrb.Location = new System.Drawing.Point(91, 10);
+            this.physiotherapyrb.Name = "physiotherapyrb";
+            this.physiotherapyrb.Size = new System.Drawing.Size(85, 30);
+            this.physiotherapyrb.TabIndex = 408;
+            this.physiotherapyrb.Text = "علاج طبيعي";
             // 
             // coRadio
             // 
@@ -995,36 +1019,6 @@
             this.deleteBTN.Text = "حذف";
             this.deleteBTN.ThemeName = "Office2010Blue";
             // 
-            // physiotherapyrb
-            // 
-            this.physiotherapyrb.Font = new System.Drawing.Font("Sakkal Majalla", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.physiotherapyrb.ForeColor = System.Drawing.Color.Navy;
-            this.physiotherapyrb.Location = new System.Drawing.Point(91, 10);
-            this.physiotherapyrb.Name = "physiotherapyrb";
-            this.physiotherapyrb.Size = new System.Drawing.Size(85, 30);
-            this.physiotherapyrb.TabIndex = 408;
-            this.physiotherapyrb.Text = "علاج طبيعي";
-            // 
-            // genderlbl
-            // 
-            this.genderlbl.AutoSize = true;
-            this.genderlbl.Location = new System.Drawing.Point(263, 13);
-            this.genderlbl.Name = "genderlbl";
-            this.genderlbl.Size = new System.Drawing.Size(20, 25);
-            this.genderlbl.TabIndex = 417;
-            this.genderlbl.Text = "0";
-            this.genderlbl.Visible = false;
-            // 
-            // addressLBL
-            // 
-            this.addressLBL.AutoSize = true;
-            this.addressLBL.Location = new System.Drawing.Point(384, 69);
-            this.addressLBL.Name = "addressLBL";
-            this.addressLBL.Size = new System.Drawing.Size(20, 25);
-            this.addressLBL.TabIndex = 416;
-            this.addressLBL.Text = "0";
-            this.addressLBL.Visible = false;
-            // 
             // FRMMedicalCommitee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1074,8 +1068,6 @@
             this.GroupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TotalCostTXT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.refund_check)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OperationDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addBTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deny_check)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.approve_check)).EndInit();
@@ -1092,7 +1084,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pat_cost_txt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TXTAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MPercentage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label18)).EndInit();
@@ -1104,16 +1095,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.Label14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRDApprove.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRDApprove)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OperationDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.physiotherapyrb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coRadio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transferRadio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.printBTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newBTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveBTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBTN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.physiotherapyrb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1141,7 +1134,6 @@
         internal Telerik.WinControls.UI.RadGroupBox GroupBox2;
         internal Telerik.WinControls.UI.RadTextBox TXTAmount;
         internal Telerik.WinControls.UI.RadRadioButton MAmount;
-        internal Telerik.WinControls.UI.RadRadioButton MPercentage;
         internal Telerik.WinControls.UI.RadLabel Label18;
         internal Telerik.WinControls.UI.RadDropDownList ServiceType;
         internal Telerik.WinControls.UI.RadDropDownList ExcutingCenter;
