@@ -46,7 +46,7 @@
             this.textBox26 = new Telerik.Reporting.TextBox();
             this.textBox24 = new Telerik.Reporting.TextBox();
             this.textBox28 = new Telerik.Reporting.TextBox();
-            this.cost = new Telerik.Reporting.TextBox();
+            this.ServiceCost = new Telerik.Reporting.TextBox();
             this.reportFooterSection1 = new Telerik.Reporting.ReportFooterSection();
             this.textBox2 = new Telerik.Reporting.TextBox();
             this.textBox4 = new Telerik.Reporting.TextBox();
@@ -205,6 +205,7 @@
             this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(14D);
             this.textBox21.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox21.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox21.Style.Visible = false;
             this.textBox21.Value = "نثق فى كريم عنايتكم لإجراء الآتى :-  تتحمل الهيئة قيمة الخدمة";
             // 
             // textBox22
@@ -288,6 +289,7 @@
             this.textBox29.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(14D);
             this.textBox29.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox29.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox29.Style.Visible = false;
             this.textBox29.Value = "التشخيص";
             // 
             // pageFooterSection1
@@ -370,7 +372,7 @@
             this.textBox26,
             this.textBox24,
             this.textBox28,
-            this.cost});
+            this.ServiceCost});
             this.reportHeaderSection1.Name = "reportHeaderSection1";
             // 
             // pictureBox2
@@ -498,18 +500,19 @@
             this.textBox28.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox28.Value = "كود الخدمة";
             // 
-            // cost
+            // ServiceCost
             // 
-            this.cost.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.1D), Telerik.Reporting.Drawing.Unit.Inch(3.648D));
-            this.cost.Name = "cost";
-            this.cost.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
-            this.cost.Style.Font.Bold = true;
-            this.cost.Style.Font.Name = "Calibri";
-            this.cost.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-            this.cost.Style.Font.Underline = true;
-            this.cost.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.cost.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.cost.Value = "";
+            this.ServiceCost.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.1D), Telerik.Reporting.Drawing.Unit.Inch(3.648D));
+            this.ServiceCost.Name = "ServiceCost";
+            this.ServiceCost.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.ServiceCost.Style.Font.Bold = true;
+            this.ServiceCost.Style.Font.Name = "Calibri";
+            this.ServiceCost.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.ServiceCost.Style.Font.Underline = true;
+            this.ServiceCost.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.ServiceCost.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.ServiceCost.Style.Visible = false;
+            this.ServiceCost.Value = "=ServiceCost";
             // 
             // reportFooterSection1
             // 
@@ -636,7 +639,6 @@
         private Telerik.Reporting.TextBox textBox15;
         private Telerik.Reporting.TextBox textBox17;
         private Telerik.Reporting.TextBox textBox19;
-        private Telerik.Reporting.TextBox textBox21;
         private Telerik.Reporting.TextBox textBox22;
         private Telerik.Reporting.TextBox textBox25;
         private Telerik.Reporting.TextBox textBox29;
@@ -660,6 +662,7 @@
         public Telerik.Reporting.TextBox textBox28;
         public Telerik.Reporting.TextBox note;
         public Telerik.Reporting.TextBox rqstId;
-        public Telerik.Reporting.TextBox cost;
+        public Telerik.Reporting.TextBox ServiceCost;
+        public Telerik.Reporting.TextBox textBox21;
     }
 }

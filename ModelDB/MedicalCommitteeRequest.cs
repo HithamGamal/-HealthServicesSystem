@@ -25,6 +25,7 @@ namespace ModelDB
         public string CenterName { get; set; }
         public string Note { get; set; }
         public DateTime Date_In { get; set; }
+        public CardType CardType  { get; set; }
         public RequestType RequestType { get; set; }
         public RequestStatus RequestStatus { get; set; }
         public RowStatus rowStatus { get; set; }
@@ -40,6 +41,12 @@ namespace ModelDB
     {
         Transfer,
         Cooperation,
-        Physiotheraby
+        Physiotheraby,
+        Committee
+    }
+    public enum CardType
+    {
+        national,
+        local
     }
 }

@@ -11,6 +11,7 @@ internal static class PLC
 	public static SqlConnection conNew = new SqlConnection("Data Source=192.168.100.10;Initial Catalog=InsuranceSystem;User ID=sa;Password=123;Trusted_Connection=False");
 	public static SqlConnection conOld = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=NewSubData;User ID=sa;Password=123;Trusted_Connection=False");
     public static SqlConnection DbCailm = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=clmdb;User ID=sa;Password=123;Trusted_Connection=False");
+    public static SqlConnection DbNational = new SqlConnection("Data Source=192.168.100.4;Initial Catalog=card_natoinal;User ID=sa;Password=123;Trusted_Connection=False");
     //Get The date Of The Main Server:
     public static DateTime getdate()
     {

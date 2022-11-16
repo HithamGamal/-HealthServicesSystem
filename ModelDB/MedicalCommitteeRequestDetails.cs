@@ -20,6 +20,7 @@ namespace ModelDB
         public decimal  Pat_cost { get; set; }
         public decimal Insur_cost { get; set; }
         public decimal ServiceCost { get; set; }
+        public decimal InvoiceCost { get; set; }
         public RowStatus RowStatus { get; set; }
 
     }
