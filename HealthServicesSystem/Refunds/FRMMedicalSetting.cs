@@ -84,6 +84,7 @@ namespace HealthServicesSystem.Reclaims
             Duration.Text = "0";
             Sessions.Text = "0";
             MedicalId = 0;
+            Percentages.Text = "0";
         }
 
 
