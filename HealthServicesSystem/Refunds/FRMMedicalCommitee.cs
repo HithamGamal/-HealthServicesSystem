@@ -593,7 +593,7 @@ namespace HealthServicesSystem.Refunds
             physiotherapyrb.CheckState = CheckState.Unchecked;
             coRadio.CheckState = CheckState.Unchecked;
             patDataAlertLBL.Visible = false;
-                FulName.Enabled = false;
+            FulName.Enabled = false;
             TotalCostTB.Text = "";
             Co_CostTB.Text = "";
             ServiceCostTB.Text = "";
@@ -1516,5 +1516,7 @@ namespace HealthServicesSystem.Refunds
         {
 
         }
+
+        
     }
 }

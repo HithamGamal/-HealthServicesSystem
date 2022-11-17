@@ -633,10 +633,10 @@ namespace HealthServicesSystem
 
         private void AddNonConfirm_Click(object sender, EventArgs e)
         {
-            AddNonConfirmFrm form = new AddNonConfirmFrm();
-            form.MdiParent = this;
-            form.WindowState = FormWindowState.Maximized;
-            form.Show();
+            //AddNonConfirmFrm form = new AddNonConfirmFrm();
+            //form.MdiParent = this;
+            //form.WindowState = FormWindowState.Maximized;
+            //form.Show();
         }
 
         private void FrmAddChronicMedicine_Click(object sender, EventArgs e)
