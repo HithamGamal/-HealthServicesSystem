@@ -18,7 +18,12 @@ namespace HealthServicesSystem.Claims
         {
             InitializeComponent();
         }
+        public int _NonConId = 0;
+        public decimal _NonPercent = 0;
+        public int _NonType = 0;
+        public int _DicountType = 0;
         public int _UserId = LoginForm.Default.UserId;
+       
         private void radLabel13_Click(object sender, EventArgs e)
         {
 
@@ -109,6 +114,172 @@ namespace HealthServicesSystem.Claims
                     Name = p.ClmMasterData .PatName 
                     
                 }).ToList();
+        }
+
+        private void AddNonBtn_Click(object sender, EventArgs e)
+        {
+            dbContext db = new dbContext();
+            ////if (Convert.ToDecimal(ValueTxt.Text) > 0)
+            ////{
+            ////    
+            ////    int _impid = int.Parse(ImpDrp.SelectedValue.ToString());
+            ////    var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impid).ToList();
+            ////   
+            //// 
+            ////    int _m = GetImpDet[0].Month;
+            ////    int _y = GetImpDet[0].year;
+            ////    int _CenterId = GetImpDet[0].CenterId;
+
+            ////    decimal _NonVlaue = 0;
+
+            //int _visitId = 0;
+            //int _NonConfID = int.Parse(NonConfirmDrp.SelectedValue.ToString());
+            //for (int i = 0; i < radGridView1 .RowCount ; i++)
+            //{
+
+            
+            //int _idDet = int.Parse(radGridView1 .Rows [i].Cells["Id"].Value .ToString ());
+
+            //decimal ItemTotalPrice = db.ClmDetailsData.Where(p => p.Id == _idDet).Select(p => p.TotalPrice).FirstOrDefault();
+
+            //    var GetNonConInfo = db.ClmNonConfirmType.Where(p => p.Id == _NonConfID).Take(1).ToList();
+            //    _visitId= db.ClmDetailsData.Where(p => p.Id == _idDet).Select(p => p.MasterId).FirstOrDefault();
+
+            //    var q = db.ClmNonConfirmDet.Where(p => p.DetailsId == _idDet && p.RowStatus != RowStatus.Deleted).ToList();
+            //    if (q.Count > 0)
+            //    {
+            //        DialogResult d = MessageBox.Show("هل تريد ادراج مخالفة مرة اخرى ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //        if (d == DialogResult.No)
+            //        {
+            //            return;
+            //        }
+            //    }
+            //    ClmNonConfirmDet c = new ClmNonConfirmDet();
+            //    c.MasterId = _visitId ;
+            //    c.DateIn = PLC.getdatetime();
+            //    if (_DicountType == 0)
+            //    {
+            //        c.DetailsId = _idDet;
+            //        _NonVlaue = (ItemTotalPrice * _NonPercent) / 100;
+            //        var UpNon = db.ClmDetailsData.Where(p => p.Id == _idDet).ToList();
+            //        if (UpNon.Count > 0)
+            //        {
+            //            UpNon[0].NonConfItem = UpNon[0].NonConfItem + _NonVlaue;
+            //        }
+            //        if (GetNonConInfo[0].ValueType == ModelDB.ValueType.Percent)
+            //        {
+            //            c.Value = _NonVlaue;
+            //        }
+            //        else
+            //        {
+            //            c.Value = Convert.ToDecimal(Discounttxt.Text);
+            //        }
+
+            //    }
+            //    else if (_DicountType == 1)
+            //    {
+
+            //        var UpNon = db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).ToList();
+            //        if (UpNon.Count > 0)
+            //        {
+            //            foreach (var item in UpNon)
+            //            {
+            //                _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
+            //                item.NonConfVisit = item.NonConfVisit + _NonVlaue;
+
+            //            }
+            //            if (GetNonConInfo[0].ValueType == ModelDB.ValueType.Percent)
+            //            {
+            //                c.Value = (db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice) * _NonPercent) / 100;
+            //            }
+            //            else
+            //            {
+            //                c.Value = Convert.ToDecimal(Discounttxt.Text);
+            //            }
+
+            //        }
+            //        c.DetailsId = 0;
+            //    }
+            //    else if (_DicountType == 2)
+            //    {
+
+            //        var UpNon = db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).ToList();
+            //        if (UpNon.Count > 0)
+            //        {
+            //            foreach (var item in UpNon)
+            //            {
+            //                _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
+            //                item.NonConfClaims = item.NonConfClaims + _NonVlaue;
+
+            //            }
+            //            if (GetNonConInfo[0].ValueType == ModelDB.ValueType.Percent)
+            //            {
+            //                c.Value = (db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice) * _NonPercent) / 100;
+            //            }
+            //            else
+            //            {
+            //                c.Value = Convert.ToDecimal(Discounttxt.Text);
+            //            }
+
+
+            //        }
+            //        c.DetailsId = 0;
+
+            //    }
+
+
+            //    c.Percent = _NonPercent;
+            //    c.NonConfirmId = _NonConfID;
+            //    c.RowStatus = RowStatus.NewRow;
+            //    c.Status = Status.Active;
+            //    c.UserId = _UserId;
+            //    db.ClmNonConfirmDet.Add(c);
+            //    if (db.SaveChanges() > 0)
+            //    {
+
+            //        MessageBox.Show("تمت اضافة مخالفة");
+            //        NonConfirmDrp.SelectedIndex = -1;
+            //        GetNonConfirm();
+            //    }
+
+
+            //}
+        }
+
+        private void NonConfirmDrp_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    dbContext db = new dbContext();
+            //    if (NonConfirmDrp.SelectedValue != null)
+            //    {
+            //        int _Id = int.Parse(NonConfirmDrp.SelectedValue.ToString());
+
+            //        var q = db.ClmNonConfirmType.Where(p => p.Id == _Id && p.RowStatus != RowStatus.Deleted).Take(1).ToList();
+            //        if (q.Count > 0)
+            //        {
+            //            _NonConId = q[0].Id;
+            //            _NonPercent = q[0].Value;
+            //            _NonType = ((int)q[0].ValueType);
+            //            _DicountType = ((int)q[0].DicountType);
+            //            if (q[0].ValueType == ModelDB.ValueType.Percent)
+            //            {
+            //                Discounttxt.Text = (Convert.ToDecimal(ValueTxt.Text) * q[0].Value / 100).ToString();
+            //                Discounttxt.Enabled = false;
+            //            }
+            //            else
+            //            {
+            //                Discounttxt.Text = "0";
+            //                Discounttxt.Enabled = true;
+            //            }
+            //            NetValue.Text = (Convert.ToDecimal(ValueTxt.Text) - Convert.ToDecimal(Discounttxt.Text)).ToString();
+            //        }
+            //    }
+            //}
+            //catch
+            //{
+
+            //}
         }
     }
 }

@@ -43,8 +43,6 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem1 = new Telerik.WinControls.UI.GridViewSummaryItem();
-            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem2 = new Telerik.WinControls.UI.GridViewSummaryItem();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
@@ -72,7 +70,7 @@
             Telerik.WinControls.UI.RadListDataItem radListDataItem24 = new Telerik.WinControls.UI.RadListDataItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.radGridView2 = new Telerik.WinControls.UI.RadGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ExpBtn = new Telerik.WinControls.UI.RadButton();
             this.PrintBtn = new Telerik.WinControls.UI.RadButton();
@@ -89,8 +87,8 @@
             this.ViewBtn = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
@@ -120,38 +118,22 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.radGridView1);
+            this.panel3.Controls.Add(this.radGridView2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 100);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1212, 398);
             this.panel3.TabIndex = 1;
             // 
-            // radGridView1
+            // radGridView2
             // 
-            this.radGridView1.AllowDrop = true;
-            this.radGridView1.AutoGenerateHierarchy = true;
-            this.radGridView1.AutoScroll = true;
-            this.radGridView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radGridView1.EnableCustomDrawing = true;
-            this.radGridView1.EnableCustomFiltering = true;
-            this.radGridView1.EnableCustomGrouping = true;
-            this.radGridView1.EnableCustomSorting = true;
-            this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.radGridView1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(0, 0);
+            this.radGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radGridView2.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView1.MasterTemplate.AllowDeleteRow = false;
-            this.radGridView1.MasterTemplate.AllowRowReorder = true;
-            this.radGridView1.MasterTemplate.AllowSearchRow = true;
-            this.radGridView1.MasterTemplate.AutoExpandGroups = true;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            this.radGridView2.MasterTemplate.AllowAddNewRow = false;
+            this.radGridView2.MasterTemplate.AllowDeleteRow = false;
             gridViewTextBoxColumn1.FieldName = "CenterName";
             gridViewTextBoxColumn1.HeaderText = "المركز";
             gridViewTextBoxColumn1.Name = "CenterName";
@@ -171,7 +153,6 @@
             gridViewTextBoxColumn4.HeaderText = "السنة";
             gridViewTextBoxColumn4.Name = "Year";
             gridViewTextBoxColumn4.Width = 80;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
             gridViewTextBoxColumn5.FieldName = "PatName";
             gridViewTextBoxColumn5.HeaderText = "الاسم ";
             gridViewTextBoxColumn5.Name = "PatName";
@@ -226,7 +207,7 @@
             gridViewTextBoxColumn15.HeaderText = "الجملة";
             gridViewTextBoxColumn15.Name = "TotalPrice";
             gridViewTextBoxColumn15.Width = 100;
-            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.radGridView2.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
@@ -242,29 +223,13 @@
             gridViewTextBoxColumn13,
             gridViewTextBoxColumn14,
             gridViewTextBoxColumn15});
-            this.radGridView1.MasterTemplate.EnableCustomFiltering = true;
-            this.radGridView1.MasterTemplate.EnableCustomGrouping = true;
-            this.radGridView1.MasterTemplate.EnableCustomSorting = true;
-            this.radGridView1.MasterTemplate.EnableFiltering = true;
-            this.radGridView1.MasterTemplate.MultiSelect = true;
-            this.radGridView1.MasterTemplate.ShowGroupedColumns = true;
-            gridViewSummaryItem1.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
-            gridViewSummaryItem1.AggregateExpression = null;
-            gridViewSummaryItem1.FormatString = ": المجموع{0} ";
-            gridViewSummaryItem1.Name = "TotalPrice";
-            gridViewSummaryItem2.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Count;
-            gridViewSummaryItem2.AggregateExpression = null;
-            gridViewSummaryItem2.FormatString = "العدد:{0}";
-            gridViewSummaryItem2.Name = "FileNo";
-            this.radGridView1.MasterTemplate.SummaryRowsTop.Add(new Telerik.WinControls.UI.GridViewSummaryRowItem(new Telerik.WinControls.UI.GridViewSummaryItem[] {
-                gridViewSummaryItem1,
-                gridViewSummaryItem2}));
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.ReadOnly = true;
-            this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGridView1.Size = new System.Drawing.Size(1212, 398);
-            this.radGridView1.TabIndex = 0;
+            this.radGridView2.MasterTemplate.EnableFiltering = true;
+            this.radGridView2.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView2.Name = "radGridView2";
+            this.radGridView2.ReadOnly = true;
+            this.radGridView2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radGridView2.Size = new System.Drawing.Size(1212, 398);
+            this.radGridView2.TabIndex = 1;
             // 
             // panel2
             // 
@@ -472,8 +437,8 @@
             this.Load += new System.EventHandler(this.AdvanceFillterFrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
@@ -498,7 +463,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
         private System.Windows.Forms.Panel panel2;
         private Telerik.WinControls.UI.RadDropDownList LMonthDrp;
         private Telerik.WinControls.UI.RadLabel radLabel4;
@@ -513,5 +477,6 @@
         private Telerik.WinControls.UI.RadButton ViewBtn;
         private Telerik.WinControls.UI.RadButton ExpBtn;
         private Telerik.WinControls.UI.RadButton PrintBtn;
+        private Telerik.WinControls.UI.RadGridView radGridView2;
     }
 }

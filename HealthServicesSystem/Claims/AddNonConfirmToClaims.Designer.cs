@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem7 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem8 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem9 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem13 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem14 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem15 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem16 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem17 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem18 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem19 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem20 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem21 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem22 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem23 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem24 = new Telerik.WinControls.UI.RadListDataItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AddNonBtn = new Telerik.WinControls.UI.RadButton();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.NonConfirmDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
@@ -61,9 +62,9 @@
             this.YearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.MonthDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.CenterNameDrp = new Telerik.WinControls.UI.RadDropDownList();
-            this.AddNonBtn = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddNonBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NonConfirmDrp)).BeginInit();
@@ -78,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddNonBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +104,15 @@
             this.panel3.Size = new System.Drawing.Size(965, 328);
             this.panel3.TabIndex = 1;
             // 
+            // AddNonBtn
+            // 
+            this.AddNonBtn.Location = new System.Drawing.Point(12, 269);
+            this.AddNonBtn.Name = "AddNonBtn";
+            this.AddNonBtn.Size = new System.Drawing.Size(253, 50);
+            this.AddNonBtn.TabIndex = 17;
+            this.AddNonBtn.Text = "اضافة مخالفة";
+            this.AddNonBtn.Click += new System.EventHandler(this.AddNonBtn_Click);
+            // 
             // radGridView1
             // 
             this.radGridView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
@@ -116,40 +125,40 @@
             // 
             // 
             this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "Id";
-            gridViewTextBoxColumn1.HeaderText = "م";
-            gridViewTextBoxColumn1.Name = "Id";
-            gridViewTextBoxColumn1.Width = 100;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "ItemName";
-            gridViewTextBoxColumn2.HeaderText = "اسم الصنف";
-            gridViewTextBoxColumn2.Name = "ItemName";
-            gridViewTextBoxColumn2.Width = 300;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "Cost";
-            gridViewTextBoxColumn3.HeaderText = "المبلغ";
-            gridViewTextBoxColumn3.Name = "Cost";
-            gridViewTextBoxColumn3.Width = 100;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "Name";
-            gridViewTextBoxColumn4.HeaderText = "الاسم";
-            gridViewTextBoxColumn4.Name = "Name";
-            gridViewTextBoxColumn4.Width = 200;
-            gridViewCheckBoxColumn1.EnableExpressionEditor = false;
-            gridViewCheckBoxColumn1.FieldName = "Chk";
-            gridViewCheckBoxColumn1.HeaderText = "اختيار";
-            gridViewCheckBoxColumn1.MinWidth = 20;
-            gridViewCheckBoxColumn1.Name = "Chk";
-            gridViewCheckBoxColumn1.Width = 100;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "Id";
+            gridViewTextBoxColumn5.HeaderText = "م";
+            gridViewTextBoxColumn5.Name = "Id";
+            gridViewTextBoxColumn5.Width = 100;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "ItemName";
+            gridViewTextBoxColumn6.HeaderText = "اسم الصنف";
+            gridViewTextBoxColumn6.Name = "ItemName";
+            gridViewTextBoxColumn6.Width = 300;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "Cost";
+            gridViewTextBoxColumn7.HeaderText = "المبلغ";
+            gridViewTextBoxColumn7.Name = "Cost";
+            gridViewTextBoxColumn7.Width = 100;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "Name";
+            gridViewTextBoxColumn8.HeaderText = "الاسم";
+            gridViewTextBoxColumn8.Name = "Name";
+            gridViewTextBoxColumn8.Width = 200;
+            gridViewCheckBoxColumn2.EnableExpressionEditor = false;
+            gridViewCheckBoxColumn2.FieldName = "Chk";
+            gridViewCheckBoxColumn2.HeaderText = "اختيار";
+            gridViewCheckBoxColumn2.MinWidth = 20;
+            gridViewCheckBoxColumn2.Name = "Chk";
+            gridViewCheckBoxColumn2.Width = 100;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewCheckBoxColumn1});
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewCheckBoxColumn2});
             this.radGridView1.MasterTemplate.EnableFiltering = true;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radGridView1.Size = new System.Drawing.Size(941, 248);
@@ -165,6 +174,7 @@
             this.NonConfirmDrp.Size = new System.Drawing.Size(526, 27);
             this.NonConfirmDrp.TabIndex = 13;
             this.NonConfirmDrp.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.NonConfirmDrp_SelectedIndexChanged);
+            this.NonConfirmDrp.SelectedValueChanged += new System.EventHandler(this.NonConfirmDrp_SelectedValueChanged);
             // 
             // radLabel13
             // 
@@ -261,30 +271,30 @@
             // MonthDrp
             // 
             this.MonthDrp.Font = new System.Drawing.Font("Segoe UI", 11F);
-            radListDataItem1.Text = "يناير";
-            radListDataItem2.Text = "فبراير";
-            radListDataItem3.Text = "مارس";
-            radListDataItem4.Text = "ابريل";
-            radListDataItem5.Text = "مايو";
-            radListDataItem6.Text = "يونيو";
-            radListDataItem7.Text = "يوليو";
-            radListDataItem8.Text = "اغسطس";
-            radListDataItem9.Text = "سبتمبر";
-            radListDataItem10.Text = "اكتوبر";
-            radListDataItem11.Text = "نوفمبر";
-            radListDataItem12.Text = "ديسمبر";
-            this.MonthDrp.Items.Add(radListDataItem1);
-            this.MonthDrp.Items.Add(radListDataItem2);
-            this.MonthDrp.Items.Add(radListDataItem3);
-            this.MonthDrp.Items.Add(radListDataItem4);
-            this.MonthDrp.Items.Add(radListDataItem5);
-            this.MonthDrp.Items.Add(radListDataItem6);
-            this.MonthDrp.Items.Add(radListDataItem7);
-            this.MonthDrp.Items.Add(radListDataItem8);
-            this.MonthDrp.Items.Add(radListDataItem9);
-            this.MonthDrp.Items.Add(radListDataItem10);
-            this.MonthDrp.Items.Add(radListDataItem11);
-            this.MonthDrp.Items.Add(radListDataItem12);
+            radListDataItem13.Text = "يناير";
+            radListDataItem14.Text = "فبراير";
+            radListDataItem15.Text = "مارس";
+            radListDataItem16.Text = "ابريل";
+            radListDataItem17.Text = "مايو";
+            radListDataItem18.Text = "يونيو";
+            radListDataItem19.Text = "يوليو";
+            radListDataItem20.Text = "اغسطس";
+            radListDataItem21.Text = "سبتمبر";
+            radListDataItem22.Text = "اكتوبر";
+            radListDataItem23.Text = "نوفمبر";
+            radListDataItem24.Text = "ديسمبر";
+            this.MonthDrp.Items.Add(radListDataItem13);
+            this.MonthDrp.Items.Add(radListDataItem14);
+            this.MonthDrp.Items.Add(radListDataItem15);
+            this.MonthDrp.Items.Add(radListDataItem16);
+            this.MonthDrp.Items.Add(radListDataItem17);
+            this.MonthDrp.Items.Add(radListDataItem18);
+            this.MonthDrp.Items.Add(radListDataItem19);
+            this.MonthDrp.Items.Add(radListDataItem20);
+            this.MonthDrp.Items.Add(radListDataItem21);
+            this.MonthDrp.Items.Add(radListDataItem22);
+            this.MonthDrp.Items.Add(radListDataItem23);
+            this.MonthDrp.Items.Add(radListDataItem24);
             this.MonthDrp.Location = new System.Drawing.Point(561, 89);
             this.MonthDrp.Name = "MonthDrp";
             this.MonthDrp.NullText = "Select Month";
@@ -300,14 +310,6 @@
             this.CenterNameDrp.NullText = "Select Center Name";
             this.CenterNameDrp.Size = new System.Drawing.Size(526, 25);
             this.CenterNameDrp.TabIndex = 6;
-            // 
-            // AddNonBtn
-            // 
-            this.AddNonBtn.Location = new System.Drawing.Point(12, 269);
-            this.AddNonBtn.Name = "AddNonBtn";
-            this.AddNonBtn.Size = new System.Drawing.Size(253, 50);
-            this.AddNonBtn.TabIndex = 17;
-            this.AddNonBtn.Text = "اضافة مخالفة";
             // 
             // AddNonConfirmToClaims
             // 
@@ -326,6 +328,7 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddNonBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NonConfirmDrp)).EndInit();
@@ -341,7 +344,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddNonBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
