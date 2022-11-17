@@ -28,13 +28,13 @@
         /// </summary>
         public void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn3 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn4 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMedicalReasons));
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.namelbl = new Telerik.WinControls.UI.RadLabel();
             this.Savebtn = new Telerik.WinControls.UI.RadButton();
             this.radTextBox1 = new Telerik.WinControls.UI.RadTextBox();
@@ -105,7 +105,7 @@
             this.GrdTrades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GrdTrades.BackColor = System.Drawing.SystemColors.Control;
             this.GrdTrades.Cursor = System.Windows.Forms.Cursors.Default;
-            this.GrdTrades.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrdTrades.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
             this.GrdTrades.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GrdTrades.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GrdTrades.Location = new System.Drawing.Point(18, 119);
@@ -116,41 +116,47 @@
             this.GrdTrades.MasterTemplate.AllowAddNewRow = false;
             this.GrdTrades.MasterTemplate.AllowColumnReorder = false;
             this.GrdTrades.MasterTemplate.AllowSearchRow = true;
-            gridViewTextBoxColumn4.DataType = typeof(uint);
-            gridViewTextBoxColumn4.FieldName = "Id";
-            gridViewTextBoxColumn4.HeaderText = "كود السبب";
-            gridViewTextBoxColumn4.Name = "Id";
-            gridViewTextBoxColumn4.Width = 171;
-            gridViewTextBoxColumn5.FieldName = "MedicineReason";
-            gridViewTextBoxColumn5.HeaderText = "سبب الاسترداد";
-            gridViewTextBoxColumn5.Name = "MedicineReason";
-            gridViewTextBoxColumn5.Width = 714;
-            gridViewCommandColumn3.DefaultText = "Edit";
-            gridViewCommandColumn3.EnableExpressionEditor = false;
-            gridViewCommandColumn3.HeaderText = "Edit";
-            gridViewCommandColumn3.Name = "Edit";
-            gridViewCommandColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewCommandColumn3.UseDefaultText = true;
-            gridViewCommandColumn3.Width = 71;
-            gridViewCommandColumn4.DefaultText = "Delete";
-            gridViewCommandColumn4.HeaderText = "Delete";
-            gridViewCommandColumn4.Name = "Delete";
-            gridViewCommandColumn4.Width = 71;
-            gridViewTextBoxColumn6.FieldName = "Activated";
-            gridViewTextBoxColumn6.HeaderText = "column1";
-            gridViewTextBoxColumn6.IsVisible = false;
-            gridViewTextBoxColumn6.Name = "Activated";
-            gridViewTextBoxColumn6.Width = 300;
+            gridViewTextBoxColumn1.DataType = typeof(uint);
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Id";
+            gridViewTextBoxColumn1.HeaderText = "كود السبب";
+            gridViewTextBoxColumn1.Name = "Id";
+            gridViewTextBoxColumn1.Width = 171;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "MedicalReason";
+            gridViewTextBoxColumn2.HeaderText = "سبب الاسترداد";
+            gridViewTextBoxColumn2.Name = "MedicalReason";
+            gridViewTextBoxColumn2.Width = 714;
+            gridViewCommandColumn1.DefaultText = "Edit";
+            gridViewCommandColumn1.EnableExpressionEditor = false;
+            gridViewCommandColumn1.HeaderText = "Edit";
+            gridViewCommandColumn1.Image = ((System.Drawing.Image)(resources.GetObject("gridViewCommandColumn1.Image")));
+            gridViewCommandColumn1.Name = "Edit";
+            gridViewCommandColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewCommandColumn1.UseDefaultText = true;
+            gridViewCommandColumn1.Width = 71;
+            gridViewCommandColumn2.DefaultText = "Delete";
+            gridViewCommandColumn2.EnableExpressionEditor = false;
+            gridViewCommandColumn2.HeaderText = "Delete";
+            gridViewCommandColumn2.Image = ((System.Drawing.Image)(resources.GetObject("gridViewCommandColumn2.Image")));
+            gridViewCommandColumn2.Name = "Delete";
+            gridViewCommandColumn2.Width = 71;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Activated";
+            gridViewTextBoxColumn3.HeaderText = "column1";
+            gridViewTextBoxColumn3.IsVisible = false;
+            gridViewTextBoxColumn3.Name = "Activated";
+            gridViewTextBoxColumn3.Width = 300;
             this.GrdTrades.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewCommandColumn3,
-            gridViewCommandColumn4,
-            gridViewTextBoxColumn6});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewCommandColumn1,
+            gridViewCommandColumn2,
+            gridViewTextBoxColumn3});
             this.GrdTrades.MasterTemplate.EnableFiltering = true;
             this.GrdTrades.MasterTemplate.EnableGrouping = false;
             this.GrdTrades.MasterTemplate.EnableSorting = false;
-            this.GrdTrades.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.GrdTrades.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.GrdTrades.Name = "GrdTrades";
             this.GrdTrades.ReadOnly = true;
             this.GrdTrades.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

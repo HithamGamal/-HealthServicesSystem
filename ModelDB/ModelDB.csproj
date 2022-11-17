@@ -59,9 +59,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClmNonConfirmGroup.cs" />
-    <Compile Include="Migrations\202209290953043_jjj.cs" />
-    <Compile Include="Migrations\202209290953043_jjj.designer.cs">
-      <DependentUpon>202209290953043_jjj.cs</DependentUpon>
+    <Compile Include="cooperationService.cs" />
+    <Compile Include="MedicalCommitteeRequest.cs" />
+    <Compile Include="MedicalCommitteeRequestDetails.cs" />
+    <Compile Include="ChronicMedicine.cs" />
+    <Compile Include="Migrations\202211130513316_committee.cs" />
+    <Compile Include="Migrations\202211130513316_committee.designer.cs">
+      <DependentUpon>202211130513316_committee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211141228184_xxx.cs" />
+    <Compile Include="Migrations\202211141228184_xxx.designer.cs">
+      <DependentUpon>202211141228184_xxx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211150653049_iii.cs" />
+    <Compile Include="Migrations\202211150653049_iii.designer.cs">
+      <DependentUpon>202211150653049_iii.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202211151139423_25556.cs" />
     <Compile Include="Migrations\202211151139423_25556.designer.cs">
@@ -146,8 +158,17 @@
     <!--<Fakes Include="Fakes\EntityFramework.fakes" />-->
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202209290953043_jjj.resx">
-      <DependentUpon>202209290953043_jjj.cs</DependentUpon>
+    <Content Include="ModelDB.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202211130513316_committee.resx">
+      <DependentUpon>202211130513316_committee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211141228184_xxx.resx">
+      <DependentUpon>202211141228184_xxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211150653049_iii.resx">
+      <DependentUpon>202211150653049_iii.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211151139423_25556.resx">
       <DependentUpon>202211151139423_25556.cs</DependentUpon>

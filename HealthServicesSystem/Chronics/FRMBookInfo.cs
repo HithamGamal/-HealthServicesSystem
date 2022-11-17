@@ -212,6 +212,7 @@ namespace HealthServicesSystem.Reclaims
                             }
                         }
                     }
+                    db.Database.ExecuteSqlCommand("UPDATE [dbo].[ChronicsBooks] SET [Activated] = 0 WHERE InsurNo='" + card_no.Text + "'");
                     ChronicsBooks apv = new ChronicsBooks();
                     apv.CenterId = Convert.ToInt32(RequistingParty.SelectedValue);
                     apv.BookDate = BookDate.Value;
@@ -233,6 +234,7 @@ namespace HealthServicesSystem.Reclaims
                     apv.Server = ServerName.Text;
                     apv.ClientId = Rec_No;
                     apv.BirthDate = BirthDate;
+                    apv.Activated = true;
                     db.ChronicsBooks.Add(apv);
                     db.SaveChanges();
                     Saved = true;

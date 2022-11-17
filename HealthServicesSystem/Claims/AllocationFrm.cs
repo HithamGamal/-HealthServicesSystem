@@ -62,10 +62,8 @@ namespace HealthServicesSystem.Claims
         }
         private void AllocationFrm_Load(object sender, EventArgs e)
         {
-            MonthDrp.SelectedIndex = PLC.getMonth() - 2;
-            YearTxt.Text = PLC.getyear().ToString();
             dbContext db = new dbContext();
-            var q = db.Users.Where(p => p.UserStatus == 1 && p.GroupId ==7).Select(p => new { Id = p.Id, UserName = p.FullName }).ToList();
+            var q = db.Users.Where(p => p.UserStatus == 1).Select(p => new { Id = p.Id, UserName = p.FullName }).ToList();
             if(q.Count>0)
             {
                 UserName.DataSource = q;

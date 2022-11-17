@@ -20,6 +20,8 @@ namespace ModelDB
         public int CenterId { get; set; }
         [ForeignKey("CenterId")]
         public virtual CenterInfo CenterInfo { get; set; }
+        public bool Activated { get; set; }
+      
         public string PhoneNo { get; set; }
         public string InsurNo { get; set; }
         public string InsurName { get; set; }

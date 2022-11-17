@@ -12,6 +12,7 @@ using HealthServicesSystem.SystemSetting;
 using HealthServicesSystem.Reclaims;
 using ModelDB;
 using HealthServicesSystem.Claims;
+using HealthServicesSystem.Refunds;
 
 namespace HealthServicesSystem
 {
@@ -135,13 +136,13 @@ namespace HealthServicesSystem
         {
             using (dbContext db = new dbContext())
             {
-               //nam.Text = LogFRM.Default.UserName.Text;
+                //nam.Text = LogFRM.Default.UserName.Text;
 
 
-                string username =LoginForm .Default.FulName;
+                string username = LoginForm.Default.FulName;
                 if (username != "Admin")
                 {
-                  //  usernamelbl.Text = LoginForm.Default.FulName;
+                    //  usernamelbl.Text = LoginForm.Default.FulName;
                     int UserId = LoginForm.Default.UserId;
                     var usp = (from uspr in db.UserPermissions
                                join us in db.Users on
@@ -623,7 +624,7 @@ namespace HealthServicesSystem
 
         private void CompireClaims_Click(object sender, EventArgs e)
         {
-            
+
             CompireClaimsFrm form = new CompireClaimsFrm();
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
@@ -636,6 +637,30 @@ namespace HealthServicesSystem
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+        }
+
+        private void FrmAddChronicMedicine_Click(object sender, EventArgs e)
+        {
+            FrmAddChronicMedicine frm = new FrmAddChronicMedicine();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void CommitteeBTN_Click(object sender, EventArgs e)
+        {
+            FRMMedicalCommitee frm = new FRMMedicalCommitee();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void CommitteeListBTN_Click(object sender, EventArgs e)
+        {
+            FRMCooperationServices frm = new FRMCooperationServices();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
     }
 }

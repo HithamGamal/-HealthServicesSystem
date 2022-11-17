@@ -30,16 +30,16 @@ namespace HealthServicesSystem.Reclaims
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn3 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn4 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.Label1 = new Telerik.WinControls.UI.RadLabel();
             this.MedicaGroup = new Telerik.WinControls.UI.RadDropDownList();
             this.Label5 = new Telerik.WinControls.UI.RadLabel();
@@ -68,6 +68,8 @@ namespace HealthServicesSystem.Reclaims
             this.NeedApprovement = new Telerik.WinControls.UI.RadCheckBox();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.ListType = new Telerik.WinControls.UI.RadDropDownList();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.Percentages = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Label1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MedicaGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label5)).BeginInit();
@@ -96,6 +98,8 @@ namespace HealthServicesSystem.Reclaims
             ((System.ComponentModel.ISupportInitialize)(this.NeedApprovement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Percentages)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,61 +235,64 @@ namespace HealthServicesSystem.Reclaims
             // 
             this.GRDMedical.MasterTemplate.AllowAddNewRow = false;
             this.GRDMedical.MasterTemplate.AllowColumnResize = false;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "Id";
-            gridViewTextBoxColumn6.HeaderText = "رقم الخدمة";
-            gridViewTextBoxColumn6.Name = "Id";
-            gridViewTextBoxColumn6.ReadOnly = true;
-            gridViewTextBoxColumn6.Width = 80;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "ServiceEName";
-            gridViewTextBoxColumn7.HeaderText = "اسم الخدمة انجليزي";
-            gridViewTextBoxColumn7.Name = "Medical";
-            gridViewTextBoxColumn7.ReadOnly = true;
-            gridViewTextBoxColumn7.Width = 200;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "ServiceAName";
-            gridViewTextBoxColumn8.HeaderText = "اسم الخدمة عربي";
-            gridViewTextBoxColumn8.Name = "Translations";
-            gridViewTextBoxColumn8.ReadOnly = true;
-            gridViewTextBoxColumn8.Width = 200;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "ServicePrice";
-            gridViewTextBoxColumn9.HeaderText = "أقصى سعر للخدمة";
-            gridViewTextBoxColumn9.Name = "MaxPice";
-            gridViewTextBoxColumn9.Width = 120;
-            gridViewCheckBoxColumn2.FieldName = "IsMushamat";
-            gridViewCheckBoxColumn2.HeaderText = "تصرف كمساهمة";
-            gridViewCheckBoxColumn2.Name = "column1";
-            gridViewCheckBoxColumn2.Width = 100;
-            gridViewCommandColumn3.EnableExpressionEditor = false;
-            gridViewCommandColumn3.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.MediumTime;
-            gridViewCommandColumn3.HeaderText = "تعديل";
-            gridViewCommandColumn3.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            gridViewCommandColumn3.Name = "Edit";
-            gridViewCommandColumn3.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
-            gridViewCommandColumn4.EnableExpressionEditor = false;
-            gridViewCommandColumn4.HeaderText = "حذف";
-            gridViewCommandColumn4.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            gridViewCommandColumn4.Name = "Delete";
-            gridViewTextBoxColumn10.FieldName = "IsEnabled";
-            gridViewTextBoxColumn10.HeaderText = "column2";
-            gridViewTextBoxColumn10.IsVisible = false;
-            gridViewTextBoxColumn10.Name = "IsEnabled";
+            this.GRDMedical.MasterTemplate.AutoGenerateColumns = false;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Id";
+            gridViewTextBoxColumn1.HeaderText = "رقم الخدمة";
+            gridViewTextBoxColumn1.Name = "Id";
+            gridViewTextBoxColumn1.ReadOnly = true;
+            gridViewTextBoxColumn1.Width = 80;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "ServiceEName";
+            gridViewTextBoxColumn2.HeaderText = "اسم الخدمة انجليزي";
+            gridViewTextBoxColumn2.Name = "Medical";
+            gridViewTextBoxColumn2.ReadOnly = true;
+            gridViewTextBoxColumn2.Width = 200;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "ServiceAName";
+            gridViewTextBoxColumn3.HeaderText = "اسم الخدمة عربي";
+            gridViewTextBoxColumn3.Name = "Translations";
+            gridViewTextBoxColumn3.ReadOnly = true;
+            gridViewTextBoxColumn3.Width = 200;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "ServicePrice";
+            gridViewTextBoxColumn4.HeaderText = "أقصى سعر للخدمة";
+            gridViewTextBoxColumn4.Name = "MaxPice";
+            gridViewTextBoxColumn4.Width = 120;
+            gridViewCheckBoxColumn1.FieldName = "IsMushamat";
+            gridViewCheckBoxColumn1.HeaderText = "تصرف كمساهمة";
+            gridViewCheckBoxColumn1.Name = "column1";
+            gridViewCheckBoxColumn1.Width = 100;
+            gridViewCommandColumn1.EnableExpressionEditor = false;
+            gridViewCommandColumn1.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.MediumTime;
+            gridViewCommandColumn1.HeaderText = "تعديل";
+            gridViewCommandColumn1.Image = global::HealthServicesSystem.Properties.Resources.edit;
+            gridViewCommandColumn1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            gridViewCommandColumn1.Name = "Edit";
+            gridViewCommandColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
+            gridViewCommandColumn2.EnableExpressionEditor = false;
+            gridViewCommandColumn2.HeaderText = "حذف";
+            gridViewCommandColumn2.Image = global::HealthServicesSystem.Properties.Resources.DELETE;
+            gridViewCommandColumn2.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            gridViewCommandColumn2.Name = "Delete";
+            gridViewTextBoxColumn5.FieldName = "IsEnabled";
+            gridViewTextBoxColumn5.HeaderText = "column2";
+            gridViewTextBoxColumn5.IsVisible = false;
+            gridViewTextBoxColumn5.Name = "IsEnabled";
             this.GRDMedical.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewCheckBoxColumn2,
-            gridViewCommandColumn3,
-            gridViewCommandColumn4,
-            gridViewTextBoxColumn10});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewCheckBoxColumn1,
+            gridViewCommandColumn1,
+            gridViewCommandColumn2,
+            gridViewTextBoxColumn5});
             this.GRDMedical.MasterTemplate.EnableFiltering = true;
-            sortDescriptor2.PropertyName = "Edit";
+            sortDescriptor1.PropertyName = "Edit";
             this.GRDMedical.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor2});
-            this.GRDMedical.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            sortDescriptor1});
+            this.GRDMedical.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.GRDMedical.Name = "GRDMedical";
             this.GRDMedical.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GRDMedical.ShowGroupPanel = false;
@@ -298,6 +305,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             // Button2
             // 
+            this.Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -321,13 +329,14 @@ namespace HealthServicesSystem.Reclaims
             this.BtnAdd.Location = new System.Drawing.Point(12, 259);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(200, 53);
-            this.BtnAdd.TabIndex = 10;
+            this.BtnAdd.TabIndex = 11;
             this.BtnAdd.Text = "حفظ";
             this.BtnAdd.ThemeName = "Office2010Blue";
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Button4
             // 
+            this.Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -351,7 +360,7 @@ namespace HealthServicesSystem.Reclaims
             this.Button1.Location = new System.Drawing.Point(776, 259);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(192, 53);
-            this.Button1.TabIndex = 11;
+            this.Button1.TabIndex = 12;
             this.Button1.Text = "اضافة خدمة جديدة";
             this.Button1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.Button1.ThemeName = "Office2010Blue";
@@ -359,6 +368,7 @@ namespace HealthServicesSystem.Reclaims
             // 
             // Button3
             // 
+            this.Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -410,7 +420,7 @@ namespace HealthServicesSystem.Reclaims
             this.ServiceFrequency.Name = "ServiceFrequency";
             this.ServiceFrequency.NullText = "أقصى تردد";
             this.ServiceFrequency.Size = new System.Drawing.Size(109, 28);
-            this.ServiceFrequency.TabIndex = 7;
+            this.ServiceFrequency.TabIndex = 8;
             this.ServiceFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ServiceFrequency.ThemeName = "Office2010Blue";
             this.ServiceFrequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ServiceFrequency_KeyPress);
@@ -422,9 +432,8 @@ namespace HealthServicesSystem.Reclaims
             this.Duration.Location = new System.Drawing.Point(465, 217);
             this.Duration.Name = "Duration";
             this.Duration.NullText = "ادخل عدد الشهور";
-            this.Duration.ReadOnly = true;
             this.Duration.Size = new System.Drawing.Size(104, 28);
-            this.Duration.TabIndex = 8;
+            this.Duration.TabIndex = 9;
             this.Duration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Duration.ThemeName = "Office2010Blue";
             this.Duration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Duration_KeyPress);
@@ -497,7 +506,7 @@ namespace HealthServicesSystem.Reclaims
             this.radLabel1.BackColor = System.Drawing.Color.Transparent;
             this.radLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel1.ForeColor = System.Drawing.Color.Black;
-            this.radLabel1.Location = new System.Drawing.Point(352, 217);
+            this.radLabel1.Location = new System.Drawing.Point(363, 217);
             this.radLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(87, 31);
@@ -510,13 +519,13 @@ namespace HealthServicesSystem.Reclaims
             // 
             this.Sessions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Sessions.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sessions.Location = new System.Drawing.Point(225, 221);
+            this.Sessions.Location = new System.Drawing.Point(236, 217);
             this.Sessions.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Sessions.MaxLength = 9;
             this.Sessions.Name = "Sessions";
             this.Sessions.NullText = "خدمة تحتاج الى جلسات";
             this.Sessions.Size = new System.Drawing.Size(123, 28);
-            this.Sessions.TabIndex = 9;
+            this.Sessions.TabIndex = 10;
             this.Sessions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Sessions.ThemeName = "Office2010Blue";
             this.Sessions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Sessions_KeyPress);
@@ -560,12 +569,43 @@ namespace HealthServicesSystem.Reclaims
             this.ListType.TabIndex = 4;
             this.ListType.ThemeName = "Office2010Blue";
             // 
+            // radLabel3
+            // 
+            this.radLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.ForeColor = System.Drawing.Color.Black;
+            this.radLabel3.Location = new System.Drawing.Point(383, 180);
+            this.radLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(140, 31);
+            this.radLabel3.TabIndex = 468;
+            this.radLabel3.Text = "النسبة المئوية للاسترداد";
+            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel3.ThemeName = "Office2010Blue";
+            // 
+            // Percentages
+            // 
+            this.Percentages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Percentages.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Percentages.Location = new System.Drawing.Point(236, 183);
+            this.Percentages.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Percentages.MaxLength = 9;
+            this.Percentages.Name = "Percentages";
+            this.Percentages.NullText = "النسبة";
+            this.Percentages.Size = new System.Drawing.Size(123, 28);
+            this.Percentages.TabIndex = 7;
+            this.Percentages.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Percentages.ThemeName = "Office2010Blue";
+            // 
             // FRMMedicalSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(980, 645);
+            this.Controls.Add(this.radLabel3);
+            this.Controls.Add(this.Percentages);
             this.Controls.Add(this.radLabel2);
             this.Controls.Add(this.ListType);
             this.Controls.Add(this.NeedApprovement);
@@ -634,6 +674,8 @@ namespace HealthServicesSystem.Reclaims
             ((System.ComponentModel.ISupportInitialize)(this.NeedApprovement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Percentages)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -668,6 +710,8 @@ namespace HealthServicesSystem.Reclaims
         private RadCheckBox NeedApprovement;
         internal RadLabel radLabel2;
         internal RadDropDownList ListType;
+        internal RadLabel radLabel3;
+        internal RadTextBox Percentages;
         //private static FRMMedicalSetting _Default;
         //public static FRMMedicalSetting Default
         //{

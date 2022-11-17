@@ -20,8 +20,6 @@ namespace HealthServicesSystem.Claims
 
         private void ViewCenterNonConfirmFrm_Load(object sender, EventArgs e)
         {
-            MonthDrp.SelectedIndex = PLC.getMonth() - 2;
-            YearTxt.Text = PLC.getyear().ToString();
             dbContext db = new dbContext();
             var qCenter = db.CenterInfos.Where(p=> p.HasContract == true && p.IsEnabled== true).Select(p => new { Id = p.Id, CenterName = p.Id + " " + p.CenterName }).ToList();
             if (qCenter.Count > 0)

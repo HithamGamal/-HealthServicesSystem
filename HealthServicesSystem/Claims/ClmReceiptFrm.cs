@@ -234,7 +234,6 @@ namespace HealthServicesSystem.Claims
 
         private void ClmReceiptFrm_Load(object sender, EventArgs e)
         {
-          
             dbContext db = new dbContext();
             var qCenter = db.CenterInfos.Where(p=> p.IsEnabled == true && p.HasContract== true).Select(p => new { Id = p.Id, CenterName = p.Id + " " + p.CenterName }).ToList();
             if (qCenter.Count >0)

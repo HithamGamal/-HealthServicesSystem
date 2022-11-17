@@ -115,27 +115,28 @@ namespace HealthServicesSystem.Reclaims
             UnitPrice.Clear();
             MoneyPaied.Clear();
             ServiceList.Focus();
-
+            RequistingParty.SelectedIndex = -1;
+            ExcutingParty.SelectedIndex = -1;
 
         }
         private void FRMmedicalCoPay_Load(object sender, EventArgs e)
         {
             using (dbContext db = new dbContext())
             {
-                var ReclaimRes = db.ReclaimMedicalReasonsLists.Where(p=>p.Activated==true).ToList();
+                var ReclaimRes = db.ReclaimMedicalReasonsLists.Where(p=>p.Activated==true && p.Id>0).ToList();
                 ApproveReason.DataSource = ReclaimRes;
                 ApproveReason.DisplayMember = "MedicalReason";
                 ApproveReason.ValueMember = "Id";
                 ApproveReason.SelectedValue= 12;
 
-                var ReqCenter = db.CenterInfos.ToList();
+                var ReqCenter = db.CenterInfos.Where(p => p.IsEnabled == true && p.Id !=50000).ToList();
                 RequistingParty.DataSource = ReqCenter;
                 RequistingParty.ValueMember = "Id";
                 RequistingParty.DisplayMember = "CenterName";
                 RequistingParty.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 RequistingParty.SelectedIndex = -1;
 
-                var ExcCenter = db.CenterInfos.ToList();
+                var ExcCenter = db.CenterInfos.Where(p => p.IsEnabled == true && p.Id != 50000).ToList();
                 ExcutingParty.DataSource = ExcCenter;
                 ExcutingParty.ValueMember = "Id";
                 ExcutingParty.DisplayMember = "CenterName";
@@ -157,6 +158,15 @@ namespace HealthServicesSystem.Reclaims
                 BillStatus.DataSource = Enum.GetValues(typeof(ReclaimStatus));
                 UserId = LoginForm.Default.UserId;
                 LocalityId = PLC.LocalityId;
+                var chkUser = db.Users.Where(p => p.Id == UserId).ToList();
+                if (chkUser[0].UserType == UserType.Admin)
+                {
+                    UnitPrice.ReadOnly = false;
+                }
+                else
+                {
+                    UnitPrice.ReadOnly = true;
+                }
             }
         }
 
@@ -232,7 +242,7 @@ namespace HealthServicesSystem.Reclaims
                                 UnitPrice.Text = getSer[0].ServicePrice.ToString();
                                 MedicalArabic.SelectedValue = getSer[0].Id;
                                 InList = getSer[0].InContract;
-                                Percentage.Text = 100.ToString();
+                                Percentage.Text = getSer[0].Percentag.ToString();
                                 quantity.Text = 1.ToString();
                             }
                         }
@@ -263,7 +273,7 @@ namespace HealthServicesSystem.Reclaims
                                 ServiceListType.Text = getSer[0].ListType.ToString();
                                 UnitPrice.Text = getSer[0].ServicePrice.ToString();
                                 ServiceList.SelectedValue = getSer[0].Id;
-                                Percentage.Text = 100.ToString();
+                                Percentage.Text = getSer[0].Percentag.ToString();
                                 InList = getSer[0].InContract;
                                 quantity.Text = 1.ToString();
                             }
@@ -421,7 +431,7 @@ namespace HealthServicesSystem.Reclaims
                     var GetReclaim = db.Reclaims.Where(p => p.Id == ReclaimId).ToList();
                     if (GetReclaim.Count > 0)
                     {
-                        GetReclaim[0].ReclaimStatus = (ReclaimStatus)Enum.Parse(typeof(ReclaimStatus), BillStatus.SelectedText);
+                        GetReclaim[0].ReclaimStatus = (ReclaimStatus)Enum.Parse(typeof(ReclaimStatus), BillStatus.Text);
                         GetReclaim[0].ReclaimMedicalResonId = Convert.ToInt32(ApproveReason.SelectedValue);
                         GetReclaim[0].RefMedicalReqCenterId = Convert.ToInt32(RequistingParty.SelectedValue);
                         GetReclaim[0].RefMedicalExcCenterId = Convert.ToInt32(ExcutingParty.SelectedValue);
@@ -503,7 +513,7 @@ namespace HealthServicesSystem.Reclaims
                 using (dbContext db = new dbContext())
                 {
                    // var FrHistoryMc = db.ReclaimMedicines.Where(p => p.Reclaim.ReclaimNo == OperationNo.Text.Trim() && p.RowStatus != RowStatus.Deleted).Select(p => new { p.Reclaim.ReclaimNo, ServiceName = p.MedicineForReclaim.Generic_name, p.Reclaim.InsurNo, p.Reclaim.InsurName, p.Reclaim.ReclaimDate, p.Percentages, p.ReclaimCost, p.ReclaimTotal, p.Reclaim.BillsTotal, p.Reclaim.Server, p.Reclaim.ClientId, InContract = (p.MedicineForReclaim.InContract == true ? "داخل العقد" : "خارج العقد"), ServiceGroup = "أدوية" }).ToList();
-                    var FrHistoryMd = db.ReclaimMedicals.Where(p => p.Reclaim.ReclaimNo == OperationNo.Text.Trim() && p.RowStatus != RowStatus.Deleted && p.MedicalServices.ListType==ListType.مساهمة).Select(p => new { p.Reclaim.ReclaimNo, ServiceName = p.MedicalServices.ServiceAName, p.Reclaim.InsurNo, p.Reclaim.InsurName, p.Reclaim.ReclaimDate, p.Percentages, p.ReclaimCost, p.ReclaimTotal, p.Reclaim.BillsTotal, p.Reclaim.Server, p.Reclaim.ClientId, InContract = (p.MedicalServices.InContract == true ? "داخل العقد" : "خارج العقد"), ServiceGroup = "خدمات طبية مساهمات" }).ToList();
+                    var FrHistoryMd = db.ReclaimMedicals.Where(p => p.Reclaim.ReclaimNo == OperationNo.Text.Trim() && p.RowStatus != RowStatus.Deleted && p.MedicalServices.ListType==ListType.مساهمة).Select(p => new {p.Id, p.Reclaim.ReclaimNo, ServiceName = p.MedicalServices.ServiceAName, p.Reclaim.InsurNo, p.Reclaim.InsurName, p.Reclaim.ReclaimDate, p.Percentages, p.ReclaimCost, p.ReclaimTotal, p.Reclaim.BillsTotal, p.Reclaim.Server, p.Reclaim.ClientId, InContract = (p.MedicalServices.InContract == true ? "داخل العقد" : "خارج العقد"), ServiceGroup = "خدمات طبية مساهمات" }).ToList();
                    // var FrHistory = FrHistoryMc.Union(FrHistoryMd).ToList();
                     if (FrHistoryMd.Count > 0)
                     {
@@ -618,7 +628,10 @@ namespace HealthServicesSystem.Reclaims
 
         private void RequistingParty_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-
+            if (RequistingParty.SelectedIndex != -1)
+            {
+                ExcutingParty.SelectedValue = RequistingParty.SelectedValue;
+            }
         }
 
         private void RequistingParty_Leave(object sender, EventArgs e)
