@@ -27,6 +27,7 @@ namespace HealthServicesSystem.Refunds
         private void FRMMedicalCommitee_Load(object sender, EventArgs e)
         {
             OperationDate.Value = PLC.getdate();
+        
                 DateTime date1 = PLC.getdate();
                 UserId = LoginForm.Default.UserId;
                 LocalityId = PLC.LocalityId;
@@ -149,7 +150,7 @@ namespace HealthServicesSystem.Refunds
                         if (ser[0].IsStoped == true)
                         {
                             MessageBox.Show("هذا المشترك موقوف وسبب الايقاف هو :" + (char)13 + ser[0].Comment, "النظام", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                            this.Cursor = Cursors.Default;
+                            //this.Cursor = Cursors.Default;
                             return;
                         }
                     }
@@ -190,14 +191,22 @@ namespace HealthServicesSystem.Refunds
                             if (Convert.ToInt32(dtsearch.Rows[0]["Status"].ToString()) == 1)
                             {
                                 MessageBox.Show("هذا المشترك موقوف وسبب الايقاف هو :" + (char)13 + dtsearch.Rows[0]["Comment"], "النظام", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                                this.Cursor = Cursors.Default;
+                               // this.Cursor = Cursors.Default;
                                 return;
                             }
                         }
                         else
                         {
+                            MessageBox.Show("لا توجد بيانات", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             patDataAlertLBL.Visible = true;
+                            FulName.Text = "";
                             FulName.Enabled = true;
+                            genderlbl .Text = "";
+                            addressLBL.Text = "";
+                            phoneNoLBL.Text = "0";
+                            clientIdLBL.Text = "0";
+                            card_typeTB.Text = "2";
+                            return;
                         }
 
                         //if (ser[0].IsStoped == false)
@@ -252,13 +261,22 @@ namespace HealthServicesSystem.Refunds
                         }
                         else
                         {
+                            MessageBox.Show("لا توجد بيانات", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             patDataAlertLBL.Visible = true;
+                            FulName.Text = "";
                             FulName.Enabled = true;
+                            genderlbl.Text = "";
+                            addressLBL.Text = "";
+                            phoneNoLBL.Text = "0";
+                            clientIdLBL.Text = "0";
+                            card_typeTB.Text = "2";
+
+                            return;
                         }
 
                        
                     }
-                    this.Cursor = Cursors.WaitCursor;
+                   // this.Cursor = Cursors.WaitCursor;
                     string str111 = null;
                     str111 = insurance_no;
                     if (str111.Contains("/"))
@@ -413,15 +431,20 @@ namespace HealthServicesSystem.Refunds
                             this.AcceptButton = null;
                             PLC.conOld.Close();
                             db.SaveChanges();
-                            this.Cursor = Cursors.Default;
+                          //  this.Cursor = Cursors.Default;
                         }
                         else
                         {
-                            this.Cursor = Cursors.Default;
+                           /// this.Cursor = Cursors.Default;
                             MessageBox.Show("لا توجد بيانات", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             patDataAlertLBL.Visible = true;
+                            FulName.Text = "";
                             FulName.Enabled = true;
-
+                            genderlbl.Text = "";
+                            addressLBL.Text = "";
+                            phoneNoLBL.Text = "0";
+                            clientIdLBL.Text = "0";
+                            card_typeTB.Text = "2";
 
                             return;
                         }
@@ -565,7 +588,7 @@ namespace HealthServicesSystem.Refunds
             ServiceCost.Text = "";
             insur_cost_txt.Text = "";
             rqstId.Text = "0";
-            CO_listRB.CheckState = CheckState.Unchecked;
+            COlistRB.CheckState = CheckState.Unchecked;
             transferRadio.CheckState = CheckState.Unchecked;
             physiotherapyrb.CheckState = CheckState.Unchecked;
             coRadio.CheckState = CheckState.Unchecked;
@@ -756,6 +779,12 @@ namespace HealthServicesSystem.Refunds
             try
             {
                 int center_id = Convert.ToInt32(ExcutingCenter .SelectedValue);
+
+
+               
+
+                
+
                 if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
                 {
                     PLC.DbCailm.Close();
@@ -786,7 +815,7 @@ namespace HealthServicesSystem.Refunds
                     MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
                 }
-
+                
                 //try
                 //{
 
@@ -842,7 +871,7 @@ namespace HealthServicesSystem.Refunds
             catch (Exception)
             {
 
-                throw;
+                //throw;
             }
         }
 
@@ -921,6 +950,21 @@ namespace HealthServicesSystem.Refunds
 
         private void SaveBTN_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(TXTSearch.Text ))
+            {
+                RadMessageBox.Show("الرجاء ادخال بيانات المشترك !");
+                return;
+            }
+
+
+            if (GRDApprove.Rows.Count() >= 0 || Co_MedicalServiceEN.Text == "" || Co_MedicalServicesAR .Text == "")
+            {
+                RadMessageBox.Show("الرجاء اضافة الخدمات الطبية !");
+                return;
+
+            }
+
             MedicalCommitteeRequest rqst = new MedicalCommitteeRequest();
             MedicalCommitteeRequestDetails rqstDetails = new MedicalCommitteeRequestDetails();
 
@@ -984,6 +1028,10 @@ namespace HealthServicesSystem.Refunds
             else if (card_typeTB.Text == "1")
             {
                 rqst.CardType = CardType.national ;
+            }
+            else if (card_typeTB.Text == "2")
+            {
+                rqst.CardType = CardType.local;
             }
             rqst.rowStatus =RowStatus.NewRow;
             db.medicalCommitteeRequests.Add(rqst);
@@ -1293,12 +1341,12 @@ namespace HealthServicesSystem.Refunds
                 int service_id = Convert.ToInt32(Co_MedicalServiceEN .SelectedValue);
                 int center_id = Convert.ToInt32(Co_Centers.SelectedValue);
 
-                if (CO_listRB.IsChecked)
+                if (COlistRB.IsChecked)
                 {
                      var Cs = db.CooperationServices.Where(x => x.Id == service_id ).First();
 
                     ServiceCostTB.Text = Cs.Cost;
-                  //  ServiceCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(ServiceCostTB.Text));
+                   // ServiceCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(ServiceCostTB.Text));
 
                 }
                 else
@@ -1311,7 +1359,7 @@ namespace HealthServicesSystem.Refunds
                     if (dtService.Rows.Count > 0)
                     {
                         ServiceCostTB.Text = dtService.Rows[0]["servicecost"].ToString();
-                      //  ServiceCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(ServiceCostTB.Text));
+                     //   ServiceCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(ServiceCostTB.Text));
 
                     }
 
@@ -1342,12 +1390,106 @@ namespace HealthServicesSystem.Refunds
             //}
         }
 
-        private void CO_listRB_ToggleStateChanged(object sender, Telerik.WinControls.UI.StateChangedEventArgs args)
+
+        private void Co_CostTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (coRadio.IsChecked == true)
+            //Co_CostTB.Text = string.Format("{0:#,##0.00}", double.Parse(Co_CostTB.Text));
+
+        }
+
+        private void InvoiceCostTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          //  InvoiceCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(InvoiceCostTB.Text));
+
+        }
+
+        private void Co_Centers_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            try
+            {
+                int center_id = Convert.ToInt32(Co_Centers.SelectedValue);
+
+                if (COlistRB.Checked)
+                {
+                    Co_MedicalServiceEN.DataSource = "";
+                    Co_MedicalServicesAR.DataSource = "";
+
+                    var Cs = db.CooperationServices.ToList();
+                    Co_MedicalServiceEN.DataSource = Cs;
+                    Co_MedicalServiceEN.DisplayMember = "Service_EN_Name";
+                    Co_MedicalServiceEN.ValueMember = "Id";
+                    Co_MedicalServiceEN.SelectedIndex = -1;
+                    Co_MedicalServiceEN.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                    Co_MedicalServicesAR.DataSource = Cs;
+                    Co_MedicalServicesAR.DisplayMember = "Service_AR_Name";
+                    Co_MedicalServicesAR.ValueMember = "Id";
+                    Co_MedicalServicesAR.SelectedIndex = -1;
+                    Co_MedicalServicesAR.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                }
+                else
+                {
+
+                    if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
+                    {
+                        PLC.DbCailm.Close();
+                    }
+                    PLC.DbCailm.Open();
+
+                    SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT       services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T'", PLC.DbCailm);
+                    DataTable dtEnService = new DataTable();
+                    dtEnService.Clear();
+                    da_EN_service.Fill(dtEnService);
+                    //if (transferRadio.IsChecked)
+                    //{
+
+
+                    //   MsgBox (dtCenter .Rows .Count)
+                    if (dtEnService.Rows.Count > 0)
+                    {
+                        Co_MedicalServiceEN.DataSource = dtEnService;
+                        Co_MedicalServiceEN.DisplayMember = "service_name_english";
+                        Co_MedicalServiceEN.ValueMember = "service_id";
+                        Co_MedicalServiceEN.SelectedIndex = -1;
+                        Co_MedicalServiceEN.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                        Co_MedicalServicesAR.DataSource = dtEnService;
+                        Co_MedicalServicesAR.DisplayMember = "service_name";
+                        Co_MedicalServicesAR.ValueMember = "service_id";
+                        Co_MedicalServicesAR.SelectedIndex = -1;
+                        Co_MedicalServicesAR.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                    }
+
+                }
+
+              
+
+        }
+            catch (Exception)
+            {
+
+               // throw;
+            }
+        }
+
+        private void PhoneNoLBL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadGroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void COlistRB_ToggleStateChanged(object sender, Telerik.WinControls.UI.StateChangedEventArgs args)
+        {
+            if (COlistRB .IsChecked )
             {
                 Co_MedicalServiceEN.DataSource = "";
-                Co_MedicalServicesAR.DataSource= "";
+                Co_MedicalServicesAR.DataSource = "";
 
                 var Cs = db.CooperationServices.ToList();
                 Co_MedicalServiceEN.DataSource = Cs;
@@ -1363,69 +1505,14 @@ namespace HealthServicesSystem.Refunds
                 Co_MedicalServicesAR.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
             }
-        }
-
-        private void Co_CostTB_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           // Co_CostTB.Text = string.Format("{0:#,##0.00}", double.Parse(Co_CostTB.Text));
-
-        }
-
-        private void InvoiceCostTB_KeyPress(object sender, KeyPressEventArgs e)
-        {
-         //   InvoiceCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(InvoiceCostTB.Text));
-
-        }
-
-        private void Co_Centers_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
-        {
-            try
+            else
             {
-                int center_id = Convert.ToInt32(Co_Centers.SelectedValue);
-                if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
-                {
-                    PLC.DbCailm.Close();
-                }
-                PLC.DbCailm.Open();
-
-                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT       services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T'", PLC.DbCailm);
-                DataTable dtEnService = new DataTable();
-                dtEnService.Clear();
-                da_EN_service.Fill(dtEnService);
-                //if (transferRadio.IsChecked)
-                //{
-
-
-                //   MsgBox (dtCenter .Rows .Count)
-                if (dtEnService.Rows.Count > 0)
-                {
-                    Co_MedicalServiceEN.DataSource = dtEnService;
-                    Co_MedicalServiceEN.DisplayMember = "service_name_english";
-                    Co_MedicalServiceEN.ValueMember = "service_id";
-                    Co_MedicalServiceEN.SelectedIndex = -1;
-                    Co_MedicalServiceEN.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-
-                    Co_MedicalServicesAR.DataSource = dtEnService;
-                    Co_MedicalServicesAR.DisplayMember = "service_name";
-                    Co_MedicalServicesAR.ValueMember = "service_id";
-                    Co_MedicalServicesAR.SelectedIndex = -1;
-                    Co_MedicalServicesAR.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-
-                }
-
-
-
-              
-
-        }
-            catch (Exception)
-            {
-
-               // throw;
+                Co_MedicalServiceEN.DataSource = "";
+                Co_MedicalServicesAR.DataSource = "";
             }
         }
 
-        private void PhoneNoLBL_Click(object sender, EventArgs e)
+        private void ServiceCostTB_TextChanged(object sender, EventArgs e)
         {
 
         }

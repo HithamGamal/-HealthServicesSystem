@@ -73,9 +73,9 @@
             this.pictureBox1 = new Telerik.Reporting.PictureBox();
             this.textBox11 = new Telerik.Reporting.TextBox();
             this.rqst_date = new Telerik.Reporting.TextBox();
-            this.DepartmentName = new Telerik.Reporting.TextBox();
-            this.FormName = new Telerik.Reporting.TextBox();
             this.ComanyName = new Telerik.Reporting.TextBox();
+            this.FormName = new Telerik.Reporting.TextBox();
+            this.DepartmentName = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox3
@@ -222,9 +222,9 @@
             // 
             // patientname
             // 
-            this.patientname.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.029D), Telerik.Reporting.Drawing.Unit.Inch(0.648D));
+            this.patientname.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.648D));
             this.patientname.Name = "patientname";
-            this.patientname.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.934D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.patientname.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.963D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
             this.patientname.Style.Font.Bold = true;
             this.patientname.Style.Font.Name = "Calibri";
             this.patientname.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(12D);
@@ -296,7 +296,7 @@
             // 
             this.insur_no.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2D), Telerik.Reporting.Drawing.Unit.Inch(0.848D));
             this.insur_no.Name = "insur_no";
-            this.insur_no.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.185D), Telerik.Reporting.Drawing.Unit.Inch(0.364D));
+            this.insur_no.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.185D), Telerik.Reporting.Drawing.Unit.Inch(0.407D));
             this.insur_no.Style.Font.Bold = true;
             this.insur_no.Style.Font.Name = "Calibri";
             this.insur_no.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(12D);
@@ -723,17 +723,19 @@
             // pictureBox2
             // 
             this.pictureBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.084D), Telerik.Reporting.Drawing.Unit.Inch(0.048D));
-            this.pictureBox2.MimeType = "image/png";
+            this.pictureBox2.MimeType = "image/bmp";
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(1D));
+            this.pictureBox2.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.Center;
             this.pictureBox2.Value = ((object)(resources.GetObject("pictureBox2.Value")));
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.1D), Telerik.Reporting.Drawing.Unit.Inch(0.048D));
-            this.pictureBox1.MimeType = "image/png";
+            this.pictureBox1.MimeType = "image/jpeg";
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(1D));
+            this.pictureBox1.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.Center;
             this.pictureBox1.Value = ((object)(resources.GetObject("pictureBox1.Value")));
             // 
             // textBox11
@@ -758,19 +760,19 @@
             this.rqst_date.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.rqst_date.Value = "";
             // 
-            // DepartmentName
+            // ComanyName
             // 
-            this.DepartmentName.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.826D), Telerik.Reporting.Drawing.Unit.Cm(1.26D));
-            this.DepartmentName.Name = "DepartmentName";
-            this.DepartmentName.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(10.074D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
-            this.DepartmentName.Style.BackgroundColor = System.Drawing.Color.White;
-            this.DepartmentName.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
-            this.DepartmentName.Style.Font.Bold = true;
-            this.DepartmentName.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.DepartmentName.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.DepartmentName.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.DepartmentName.StyleName = "Normal.TableHeader";
-            this.DepartmentName.Value = "الإدارة العامة الخدمات الصحية";
+            this.ComanyName.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.826D), Telerik.Reporting.Drawing.Unit.Cm(0.63D));
+            this.ComanyName.Name = "ComanyName";
+            this.ComanyName.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(10.069D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.ComanyName.Style.BackgroundColor = System.Drawing.Color.White;
+            this.ComanyName.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
+            this.ComanyName.Style.Font.Bold = true;
+            this.ComanyName.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.ComanyName.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.ComanyName.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.ComanyName.StyleName = "Normal.TableHeader";
+            this.ComanyName.Value = "هيئة التأمين الصحي - ولاية الخرطوم";
             // 
             // FormName
             // 
@@ -786,19 +788,19 @@
             this.FormName.StyleName = "Normal.TableHeader";
             this.FormName.Value = "إدارة الخدمات الطبية";
             // 
-            // ComanyName
+            // DepartmentName
             // 
-            this.ComanyName.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.826D), Telerik.Reporting.Drawing.Unit.Cm(0.63D));
-            this.ComanyName.Name = "ComanyName";
-            this.ComanyName.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(10.069D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
-            this.ComanyName.Style.BackgroundColor = System.Drawing.Color.White;
-            this.ComanyName.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
-            this.ComanyName.Style.Font.Bold = true;
-            this.ComanyName.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
-            this.ComanyName.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.ComanyName.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.ComanyName.StyleName = "Normal.TableHeader";
-            this.ComanyName.Value = "هيئة التأمين الصحي - ولاية الخرطوم";
+            this.DepartmentName.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.826D), Telerik.Reporting.Drawing.Unit.Cm(1.26D));
+            this.DepartmentName.Name = "DepartmentName";
+            this.DepartmentName.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(10.074D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.DepartmentName.Style.BackgroundColor = System.Drawing.Color.White;
+            this.DepartmentName.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
+            this.DepartmentName.Style.Font.Bold = true;
+            this.DepartmentName.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(14D);
+            this.DepartmentName.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.DepartmentName.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.DepartmentName.StyleName = "Normal.TableHeader";
+            this.DepartmentName.Value = "الإدارة العامة الخدمات الصحية";
             // 
             // physiotherapy_session_rpt
             // 

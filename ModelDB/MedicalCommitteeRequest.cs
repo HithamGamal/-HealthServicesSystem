@@ -47,6 +47,7 @@ namespace ModelDB
     public enum CardType
     {
         national,
-        local
+        local,
+        manual
     }
 }
