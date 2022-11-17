@@ -63,37 +63,21 @@
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
-    <Compile Include="Migrations\202209270933377_saif_2022_09_27.cs" />
-    <Compile Include="Migrations\202209270933377_saif_2022_09_27.Designer.cs">
-      <DependentUpon>202209270933377_saif_2022_09_27.cs</DependentUpon>
+    <Compile Include="Migrations\202211130513316_committee.cs" />
+    <Compile Include="Migrations\202211130513316_committee.designer.cs">
+      <DependentUpon>202211130513316_committee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202209280710027_saif_2022_09_28.cs" />
-    <Compile Include="Migrations\202209280710027_saif_2022_09_28.Designer.cs">
-      <DependentUpon>202209280710027_saif_2022_09_28.cs</DependentUpon>
+    <Compile Include="Migrations\202211141228184_xxx.cs" />
+    <Compile Include="Migrations\202211141228184_xxx.designer.cs">
+      <DependentUpon>202211141228184_xxx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202209281003030_saif_2022_09_28_1.cs" />
-    <Compile Include="Migrations\202209281003030_saif_2022_09_28_1.Designer.cs">
-      <DependentUpon>202209281003030_saif_2022_09_28_1.cs</DependentUpon>
+    <Compile Include="Migrations\202211150653049_iii.cs" />
+    <Compile Include="Migrations\202211150653049_iii.designer.cs">
+      <DependentUpon>202211150653049_iii.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202209290630289_saif_2022_09_29_1.cs" />
-    <Compile Include="Migrations\202209290630289_saif_2022_09_29_1.Designer.cs">
-      <DependentUpon>202209290630289_saif_2022_09_29_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209290931551_jj.cs" />
-    <Compile Include="Migrations\202209290931551_jj.Designer.cs">
-      <DependentUpon>202209290931551_jj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211020828009_saif_2022_11_2.cs" />
-    <Compile Include="Migrations\202211020828009_saif_2022_11_2.Designer.cs">
-      <DependentUpon>202211020828009_saif_2022_11_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211070815587_saif_2022_11_07.cs" />
-    <Compile Include="Migrations\202211070815587_saif_2022_11_07.designer.cs">
-      <DependentUpon>202211070815587_saif_2022_11_07.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211090657001_saif_2022_11_09.cs" />
-    <Compile Include="Migrations\202211090657001_saif_2022_11_09.designer.cs">
-      <DependentUpon>202211090657001_saif_2022_11_09.cs</DependentUpon>
+    <Compile Include="Migrations\202211151139423_25556.cs" />
+    <Compile Include="Migrations\202211151139423_25556.designer.cs">
+      <DependentUpon>202211151139423_25556.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
@@ -177,29 +161,17 @@
     <Content Include="ModelDB.sln" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202209270933377_saif_2022_09_27.resx">
-      <DependentUpon>202209270933377_saif_2022_09_27.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202211130513316_committee.resx">
+      <DependentUpon>202211130513316_committee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209280710027_saif_2022_09_28.resx">
-      <DependentUpon>202209280710027_saif_2022_09_28.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202211141228184_xxx.resx">
+      <DependentUpon>202211141228184_xxx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209281003030_saif_2022_09_28_1.resx">
-      <DependentUpon>202209281003030_saif_2022_09_28_1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202211150653049_iii.resx">
+      <DependentUpon>202211150653049_iii.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209290630289_saif_2022_09_29_1.resx">
-      <DependentUpon>202209290630289_saif_2022_09_29_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209290931551_jj.resx">
-      <DependentUpon>202209290931551_jj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211020828009_saif_2022_11_2.resx">
-      <DependentUpon>202211020828009_saif_2022_11_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211070815587_saif_2022_11_07.resx">
-      <DependentUpon>202211070815587_saif_2022_11_07.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211090657001_saif_2022_11_09.resx">
-      <DependentUpon>202211090657001_saif_2022_11_09.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202211151139423_25556.resx">
+      <DependentUpon>202211151139423_25556.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

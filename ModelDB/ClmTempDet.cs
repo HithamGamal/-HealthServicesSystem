@@ -20,6 +20,8 @@ namespace ModelDB
         public int Qty { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal TotalPrice { get; set; }
-        
+        public decimal PatPrice { get; set; }
+        public decimal ClaimPrice { get; set; }
+
     }
 }

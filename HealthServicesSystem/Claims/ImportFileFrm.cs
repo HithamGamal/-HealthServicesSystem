@@ -172,7 +172,7 @@ namespace HealthServicesSystem.Claims
                 int id = int.Parse(MasterGrd.CurrentRow.Cells["Id"].Value.ToString());
                 if (MasterGrd.CurrentColumn.Name == "View")
                 {
-                    OleDbDataAdapter da = new OleDbDataAdapter("SELECT DetailsTb.ID, Generics.GenericName, Trades.TradeName, DetailsTb.Qty, DetailsTb.Price as UnitPrice, DetailsTb.Total as TotalPrice, DetailsTb.MasterId FROM(DetailsTb INNER JOIN Generics ON DetailsTb.GenericId = Generics.GenericId) INNER JOIN Trades ON(Generics.GenericId = Trades.GenericId) AND(DetailsTb.TradeId = Trades.TradeId) where Masterid = " + id + "", con);
+                    OleDbDataAdapter da = new OleDbDataAdapter("SELECT DetailsTb.ID, Generics.GenericName, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price as UnitPrice, DetailsTb.Total as TotalPrice, DetailsTb.MasterId FROM(DetailsTb INNER JOIN Generics ON DetailsTb.GenericId = Generics.GenericId)  where Masterid = " + id + "", con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
@@ -284,7 +284,7 @@ namespace HealthServicesSystem.Claims
                 dbContext db = new dbContext();
 
 
-                OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.CenterId, MasterTb.DateIn, MasterTb.UserName, MasterTb.Mnth, MasterTb.yr, MasterTb.VisitNo, MasterTb.VisitDate, MasterTb.DaignoseId, MasterTb.TypeId, DetailsTb.ID, DetailsTb.GenericId, DetailsTb.TradeId, DetailsTb.Qty, DetailsTb.Price, DetailsTb.Total, DetailsTb.UserName, DetailsTb.DateIn, Trades.TradeNAme FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID) INNER JOIN Trades ON DetailsTb.TradeId = Trades.TradeId Order by MasterTb.ID ", con);
+                OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.CenterId, MasterTb.DateIn, MasterTb.UserName, MasterTb.Mnth, MasterTb.yr, MasterTb.VisitNo, MasterTb.VisitDate, MasterTb.DaignoseId, MasterTb.TypeId, DetailsTb.ID, DetailsTb.GenericId, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price, DetailsTb.Total, DetailsTb.UserName, DetailsTb.DateIn FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID)  Order by MasterTb.ID ", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
@@ -317,7 +317,7 @@ namespace HealthServicesSystem.Claims
                 dbContext db = new dbContext();
 
 
-                OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.CenterId, MasterTb.DateIn, MasterTb.UserName, MasterTb.Mnth, MasterTb.yr, MasterTb.VisitNo, MasterTb.VisitDate, MasterTb.Daignoseid, MasterTb.TypeId, DetailsTb.ID, DetailsTb.GenericId, DetailsTb.TradeId, DetailsTb.Qty, DetailsTb.Price, DetailsTb.Total, DetailsTb.UserName, DetailsTb.DateIn, Trades.TradeNAme FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID) INNER JOIN Trades ON DetailsTb.TradeId = Trades.TradeId Order by MasterTb.ID ", con);
+                OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.CenterId, MasterTb.DateIn, MasterTb.UserName, MasterTb.Mnth, MasterTb.yr, MasterTb.VisitNo, MasterTb.VisitDate, MasterTb.Daignoseid, MasterTb.TypeId, DetailsTb.ID, DetailsTb.GenericId, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price, DetailsTb.Total, DetailsTb.UserName, DetailsTb.DateIn,DetailsTb.PatPrice,DetailsTb.ClaimPrice FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID) Order by MasterTb.ID ", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
@@ -401,7 +401,7 @@ namespace HealthServicesSystem.Claims
                         string insNotxt = dt.Rows[i]["InsuranceNo"].ToString();
                             if (insNotxt.Contains ("/"))
                         {
-                            insNo= Convert.ToDouble ( insNotxt.Replace("/", "0"));
+                            insNo= Convert.ToDouble ( insNotxt.Replace("/", "0").ToString().Replace ("-", "0"));
                         }
                             else
                         {
@@ -412,7 +412,8 @@ namespace HealthServicesSystem.Claims
                             t.NoOfFile = int.Parse(dt.Rows[i]["MasterTb.Id"].ToString());
                             t.PatName = dt.Rows[i]["FullName"].ToString();
                             t.Years = int.Parse(dt.Rows[i]["yr"].ToString());
-                            t.UserId = _UserId;
+                       
+                        t.UserId = _UserId;
                         t.DaignosisId = int.Parse(dt.Rows[i]["Daignoseid"].ToString()); 
                         t.ContractId= int.Parse(dt.Rows[i]["TypeId"].ToString());
                         t.DateIn = _now;
@@ -430,6 +431,8 @@ namespace HealthServicesSystem.Claims
                         d.TotalPrice = Convert.ToDecimal(dt.Rows[i]["Total"].ToString());
                         d.TradeName = dt.Rows[i]["TradeName"].ToString();
                         d.UnitPrice = Convert.ToDecimal(dt.Rows[i]["Price"].ToString());
+                        d.PatPrice = Convert.ToDecimal(dt.Rows[i]["PatPrice"].ToString());
+                        d.ClaimPrice = Convert.ToDecimal(dt.Rows[i]["ClaimPrice"].ToString());
                         d.UserId = _UserId;
                         d.DateIn = _now;
                         db.ClmTempDet.Add(d);

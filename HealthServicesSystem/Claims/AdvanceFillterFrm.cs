@@ -37,7 +37,7 @@ namespace HealthServicesSystem.Claims
 
         private void ViewBtn_Click(object sender, EventArgs e)
         {
-            radGridView1.DataSource = null;
+            radGridView2.DataSource = null;
             dbContext db = new dbContext();
           
 
@@ -98,12 +98,14 @@ namespace HealthServicesSystem.Claims
                 int _CenterId = int.Parse(CenterNameDrp.SelectedValue.ToString());
                 q = q.Where(p => p.CenterId == _CenterId).ToList();
             }
-            radGridView1.DataSource = q;
+         
+            radGridView2.DataSource = q;
+          
         }
 
         private void PrintBtn_Click(object sender, EventArgs e)
         {
-            radGridView1.PrintPreview();
+            radGridView2.PrintPreview();
         }
 
         private void ExpBtn_Click(object sender, EventArgs e)
@@ -111,9 +113,14 @@ namespace HealthServicesSystem.Claims
             SaveFileDialog  s = new SaveFileDialog ();
            
             s.ShowDialog();
-            GridViewSpreadExport spreadExporter = new GridViewSpreadExport(this.radGridView1);
+            GridViewSpreadExport spreadExporter = new GridViewSpreadExport(this.radGridView2);
             SpreadExportRenderer exportRenderer = new SpreadExportRenderer();
             spreadExporter.RunExport(s.FileName+ ".xlsx", exportRenderer);
+        }
+
+        private void radGridView2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

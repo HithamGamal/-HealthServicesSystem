@@ -20,6 +20,8 @@ namespace ModelDB
         public int Qty { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal TotalPrice { get; set; }
+        public decimal  PatPrice { get; set; }
+        public decimal  ClaimPrice { get; set; }
         public decimal  NonConfItem { get; set; }
         public decimal NonConfVisit { get; set; }
         public decimal NonConfClaims { get; set; }
