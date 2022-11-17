@@ -552,7 +552,7 @@ namespace HealthServicesSystem
 
         private void NonConfirmReport_Click(object sender, EventArgs e)
         {
-            Claims.AdvanceFillterFrm form = new Claims.AdvanceFillterFrm();
+            Claims.NonConfirmFiltterFrm form = new Claims.NonConfirmFiltterFrm();
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
