@@ -76,7 +76,6 @@ namespace HealthServicesSystem.Reclaims
             MedicaGroup.SelectedIndex = -1;
             SubGroup.SelectedIndex = -1;
             MedicalArabic.SelectedIndex = -1;
-          //  MedicalArabic.SelectedIndex = -1;
             MedicalEnglish.SelectedIndex = -1;
             ListType.SelectedIndex=0;
             NeedApprovement.Checked = false;
