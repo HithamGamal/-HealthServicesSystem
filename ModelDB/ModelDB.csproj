@@ -75,9 +75,9 @@
     <Compile Include="Migrations\202211150653049_iii.designer.cs">
       <DependentUpon>202211150653049_iii.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202211151139423_25556.cs" />
-    <Compile Include="Migrations\202211151139423_25556.designer.cs">
-      <DependentUpon>202211151139423_25556.cs</DependentUpon>
+    <Compile Include="Migrations\202211170802209_clms.cs" />
+    <Compile Include="Migrations\202211170802209_clms.designer.cs">
+      <DependentUpon>202211170802209_clms.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
@@ -170,8 +170,8 @@
     <EmbeddedResource Include="Migrations\202211150653049_iii.resx">
       <DependentUpon>202211150653049_iii.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211151139423_25556.resx">
-      <DependentUpon>202211151139423_25556.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202211170802209_clms.resx">
+      <DependentUpon>202211170802209_clms.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
