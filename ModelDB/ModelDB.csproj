@@ -63,22 +63,6 @@
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
-    <Compile Include="Migrations\202211130513316_committee.cs" />
-    <Compile Include="Migrations\202211130513316_committee.designer.cs">
-      <DependentUpon>202211130513316_committee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211141228184_xxx.cs" />
-    <Compile Include="Migrations\202211141228184_xxx.designer.cs">
-      <DependentUpon>202211141228184_xxx.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211150653049_iii.cs" />
-    <Compile Include="Migrations\202211150653049_iii.designer.cs">
-      <DependentUpon>202211150653049_iii.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211170802209_clms.cs" />
-    <Compile Include="Migrations\202211170802209_clms.designer.cs">
-      <DependentUpon>202211170802209_clms.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -159,20 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ModelDB.sln" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202211130513316_committee.resx">
-      <DependentUpon>202211130513316_committee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211141228184_xxx.resx">
-      <DependentUpon>202211141228184_xxx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211150653049_iii.resx">
-      <DependentUpon>202211150653049_iii.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211170802209_clms.resx">
-      <DependentUpon>202211170802209_clms.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
