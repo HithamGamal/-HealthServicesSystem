@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using HealthServicesSystem.Reclaims;
 using Telerik.WinControls;
+using Telerik.Reporting.Processing;
 
 namespace HealthServicesSystem.Refunds
 {
@@ -564,6 +565,7 @@ namespace HealthServicesSystem.Refunds
 
         public void clear()
         {
+            i = 1;
             TotalCostTXT.Text = "";
             TXTSearch.Text = "";
             MedicalServiceEn.SelectedIndex = -1;
@@ -598,7 +600,7 @@ namespace HealthServicesSystem.Refunds
             Co_CostTB.Text = "";
             ServiceCostTB.Text = "";
             InvoiceCostTB.Text = "";
-
+            ExcutingCenter.Text = ""; 
         }
         private void NewBTN_Click(object sender, EventArgs e)
         {
@@ -667,15 +669,14 @@ namespace HealthServicesSystem.Refunds
                
                 
 
-                RequestFrmRPT frm = new RequestFrmRPT();
+                //RequestFrmRPT frm = new RequestFrmRPT();
 
-                frm.reportViewer1.ReportSource = rpt;
-                frm.reportViewer1.RefreshReport();
-                frm.Show();
-
-                //////RequestFrmRPT pr = new RequestFrmRPT();
-                //////PrintDialog pg = new PrintDialog();
-                //////pr.PrintReport(rpt, pg.PrinterSettings);
+                //frm.reportViewer1.ReportSource = rpt;
+                //frm.reportViewer1.RefreshReport();
+                //frm.Show();
+                ReportProcessor pr = new ReportProcessor();
+                PrintDialog pg = new PrintDialog();
+                pr.PrintReport(rpt, pg.PrinterSettings);
             }
             if (physiotherapyrb.IsChecked)
             {
@@ -692,14 +693,16 @@ namespace HealthServicesSystem.Refunds
 
                 RequestFrmRPT frm = new RequestFrmRPT();
 
-                frm.reportViewer1.ReportSource = rpt;
-                frm.reportViewer1.RefreshReport();
-                frm.Show();
+                //frm.reportViewer1.ReportSource = rpt;
+                //frm.reportViewer1.RefreshReport();
+                //frm.Show();
 
                 //////RequestFrmRPT pr = new RequestFrmRPT();
                 //////PrintDialog pg = new PrintDialog();
                 //////pr.PrintReport(rpt, pg.PrinterSettings);
-
+                ReportProcessor pr = new ReportProcessor();
+                PrintDialog pg = new PrintDialog();
+                pr.PrintReport(rpt, pg.PrinterSettings);
             }
         }
         private void PrintBTN_Click(object sender, EventArgs e)
@@ -781,9 +784,10 @@ namespace HealthServicesSystem.Refunds
                 int center_id = Convert.ToInt32(ExcutingCenter .SelectedValue);
 
 
+
+
                
 
-                
 
                 if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
                 {
@@ -795,12 +799,12 @@ namespace HealthServicesSystem.Refunds
                 DataTable dtEnService = new DataTable();
                 dtEnService.Clear();
                 da_EN_service.Fill(dtEnService);
-                //if (transferRadio.IsChecked)
-                //{
+                if (!coRadio.IsChecked)
+                {
 
 
-                //   MsgBox (dtCenter .Rows .Count)
-                if (dtEnService.Rows.Count > 0)
+                    //   MsgBox (dtCenter .Rows .Count)
+                    if (dtEnService.Rows.Count > 0)
                 {
                     MedicalServiceEn.DataSource = dtEnService;
                     MedicalServiceEn.DisplayMember = "service_name_english";
@@ -815,58 +819,60 @@ namespace HealthServicesSystem.Refunds
                     MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
                 }
-                
-                //try
-                //{
 
-                //    if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
-                //    {
-                //        PLC.DbCailm.Close();
-                //    }
-                //    PLC.DbCailm.Open();
+                    //try
+                    //{
 
-                //    SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT   service_id,service_name_english FROM services where status='T' ", PLC.DbCailm);
-                //    DataTable dtEnService = new DataTable();
-                //    dtEnService.Clear();
-                //    da_EN_service.Fill(dtEnService);
-                //    if (transferRadio.IsChecked)
-                //    {
+                    //    if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
+                    //    {
+                    //        PLC.DbCailm.Close();
+                    //    }
+                    //    PLC.DbCailm.Open();
 
-
-                //    //   MsgBox (dtCenter .Rows .Count)
-                //    if (dtEnService.Rows.Count > 0)
-                //    {
-                //        MedicalServiceEn.DataSource = dtEnService;
-                //        MedicalServiceEn.DisplayMember = "service_name_english";
-                //        MedicalServiceEn.ValueMember = "service_id";
-                //        MedicalServiceEn.SelectedIndex = -1;
-                //        MedicalServiceEn.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-
-                //        MedicalServiceAr.DataSource = dtEnService ;
-                //        MedicalServiceAr.DisplayMember = "service_name";
-                //        MedicalServiceAr.ValueMember = "service_id";
-                //        MedicalServiceAr.SelectedIndex = -1;
-                //        MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-
-                //    }
+                    //    SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT   service_id,service_name_english FROM services where status='T' ", PLC.DbCailm);
+                    //    DataTable dtEnService = new DataTable();
+                    //    dtEnService.Clear();
+                    //    da_EN_service.Fill(dtEnService);
+                    //    if (transferRadio.IsChecked)
+                    //    {
 
 
-                //    SqlDataAdapter da_AR_service = new SqlDataAdapter("SELECT   service_id,service_name FROM services where status='T'", PLC.DbCailm);
-                //    DataTable dtARService = new DataTable();
-                //    dtARService.Clear();
-                //    da_AR_service.Fill(dtARService);
-                //    //   MsgBox (dtCenter .Rows .Count)
-                //    if (dtARService.Rows.Count > 0)
-                //    {
+                    //    //   MsgBox (dtCenter .Rows .Count)
+                    //    if (dtEnService.Rows.Count > 0)
+                    //    {
+                    //        MedicalServiceEn.DataSource = dtEnService;
+                    //        MedicalServiceEn.DisplayMember = "service_name_english";
+                    //        MedicalServiceEn.ValueMember = "service_id";
+                    //        MedicalServiceEn.SelectedIndex = -1;
+                    //        MedicalServiceEn.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
-                //        MedicalServiceAr.DataSource = dtARService;
-                //        MedicalServiceAr.DisplayMember = "service_name";
-                //        MedicalServiceAr.ValueMember = "service_id";
-                //        MedicalServiceAr.SelectedIndex = -1;
-                //        MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                    //        MedicalServiceAr.DataSource = dtEnService ;
+                    //        MedicalServiceAr.DisplayMember = "service_name";
+                    //        MedicalServiceAr.ValueMember = "service_id";
+                    //        MedicalServiceAr.SelectedIndex = -1;
+                    //        MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
-                //    }
-                //    }
+                    //    }
+
+
+                    //    SqlDataAdapter da_AR_service = new SqlDataAdapter("SELECT   service_id,service_name FROM services where status='T'", PLC.DbCailm);
+                    //    DataTable dtARService = new DataTable();
+                    //    dtARService.Clear();
+                    //    da_AR_service.Fill(dtARService);
+                    //    //   MsgBox (dtCenter .Rows .Count)
+                    //    if (dtARService.Rows.Count > 0)
+                    //    {
+
+                    //        MedicalServiceAr.DataSource = dtARService;
+                    //        MedicalServiceAr.DisplayMember = "service_name";
+                    //        MedicalServiceAr.ValueMember = "service_id";
+                    //        MedicalServiceAr.SelectedIndex = -1;
+                    //        MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                    //    }
+                        //}
+
+                }
             }
             catch (Exception)
             {
