@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.IdTxt = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -286,7 +286,6 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Image = global::HealthServicesSystem.Properties.Resources.transfer;
             this.ExitBtn.Location = new System.Drawing.Point(4, 219);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(143, 42);
@@ -296,7 +295,6 @@
             // 
             // PrinBtn
             // 
-            this.PrinBtn.Image = global::HealthServicesSystem.Properties.Resources.icons8_send_to_printer_16;
             this.PrinBtn.Location = new System.Drawing.Point(4, 171);
             this.PrinBtn.Name = "PrinBtn";
             this.PrinBtn.Size = new System.Drawing.Size(143, 42);
@@ -306,7 +304,6 @@
             // 
             // DelBtn
             // 
-            this.DelBtn.Image = global::HealthServicesSystem.Properties.Resources.delete2;
             this.DelBtn.Location = new System.Drawing.Point(4, 123);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(143, 42);
@@ -316,7 +313,6 @@
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Image = global::HealthServicesSystem.Properties.Resources.saveAll;
             this.SaveBtn.Location = new System.Drawing.Point(4, 75);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(143, 42);
@@ -326,7 +322,6 @@
             // 
             // NewBtn
             // 
-            this.NewBtn.Image = global::HealthServicesSystem.Properties.Resources.add;
             this.NewBtn.Location = new System.Drawing.Point(4, 27);
             this.NewBtn.Name = "NewBtn";
             this.NewBtn.Size = new System.Drawing.Size(143, 42);
@@ -341,46 +336,45 @@
             // 
             // 
             this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            gridViewTextBoxColumn7.FieldName = "Id";
-            gridViewTextBoxColumn7.HeaderText = "م";
-            gridViewTextBoxColumn7.Name = "Id";
-            gridViewTextBoxColumn7.Width = 60;
-            gridViewTextBoxColumn8.FieldName = "GroupName";
-            gridViewTextBoxColumn8.HeaderText = "النوع";
-            gridViewTextBoxColumn8.Name = "GroupName";
-            gridViewTextBoxColumn8.Width = 120;
-            gridViewTextBoxColumn9.FieldName = "ErrorName";
-            gridViewTextBoxColumn9.HeaderText = "البيان";
-            gridViewTextBoxColumn9.Name = "ErrorName";
-            gridViewTextBoxColumn9.Width = 200;
-            gridViewTextBoxColumn10.FieldName = "VisitNo";
-            gridViewTextBoxColumn10.HeaderText = "رقم الروشتة";
-            gridViewTextBoxColumn10.Name = "VisitNo";
-            gridViewTextBoxColumn10.Width = 80;
-            gridViewTextBoxColumn11.FieldName = "Cost";
-            gridViewTextBoxColumn11.HeaderText = "التكلفة";
-            gridViewTextBoxColumn11.Name = "Cost";
-            gridViewTextBoxColumn11.Width = 80;
-            gridViewTextBoxColumn12.FieldName = "Notes";
-            gridViewTextBoxColumn12.HeaderText = "ملاحظات";
-            gridViewTextBoxColumn12.Name = "Notes";
-            gridViewTextBoxColumn12.Width = 200;
-            gridViewCommandColumn2.DefaultText = "عرض";
-            gridViewCommandColumn2.FieldName = "View";
-            gridViewCommandColumn2.HeaderText = "عرض";
-            gridViewCommandColumn2.Image = global::HealthServicesSystem.Properties.Resources.preview;
-            gridViewCommandColumn2.Name = "View";
-            gridViewCommandColumn2.UseDefaultText = true;
-            gridViewCommandColumn2.Width = 60;
+            gridViewTextBoxColumn1.FieldName = "Id";
+            gridViewTextBoxColumn1.HeaderText = "م";
+            gridViewTextBoxColumn1.Name = "Id";
+            gridViewTextBoxColumn1.Width = 60;
+            gridViewTextBoxColumn2.FieldName = "GroupName";
+            gridViewTextBoxColumn2.HeaderText = "النوع";
+            gridViewTextBoxColumn2.Name = "GroupName";
+            gridViewTextBoxColumn2.Width = 120;
+            gridViewTextBoxColumn3.FieldName = "ErrorName";
+            gridViewTextBoxColumn3.HeaderText = "البيان";
+            gridViewTextBoxColumn3.Name = "ErrorName";
+            gridViewTextBoxColumn3.Width = 200;
+            gridViewTextBoxColumn4.FieldName = "VisitNo";
+            gridViewTextBoxColumn4.HeaderText = "رقم الروشتة";
+            gridViewTextBoxColumn4.Name = "VisitNo";
+            gridViewTextBoxColumn4.Width = 80;
+            gridViewTextBoxColumn5.FieldName = "Cost";
+            gridViewTextBoxColumn5.HeaderText = "التكلفة";
+            gridViewTextBoxColumn5.Name = "Cost";
+            gridViewTextBoxColumn5.Width = 80;
+            gridViewTextBoxColumn6.FieldName = "Notes";
+            gridViewTextBoxColumn6.HeaderText = "ملاحظات";
+            gridViewTextBoxColumn6.Name = "Notes";
+            gridViewTextBoxColumn6.Width = 200;
+            gridViewCommandColumn1.DefaultText = "عرض";
+            gridViewCommandColumn1.FieldName = "View";
+            gridViewCommandColumn1.HeaderText = "عرض";
+            gridViewCommandColumn1.Name = "View";
+            gridViewCommandColumn1.UseDefaultText = true;
+            gridViewCommandColumn1.Width = 60;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewCommandColumn2});
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewCommandColumn1});
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.Size = new System.Drawing.Size(992, 199);
             this.radGridView1.TabIndex = 42;
@@ -394,7 +388,6 @@
             this.ExpBtn.Size = new System.Drawing.Size(81, 33);
             this.ExpBtn.TabIndex = 44;
             this.ExpBtn.Text = "تصدير ";
-            this.ExpBtn.Click += new System.EventHandler(this.ExpBtn_Click);
             // 
             // PrintBtn
             // 
@@ -404,7 +397,6 @@
             this.PrintBtn.Size = new System.Drawing.Size(76, 33);
             this.PrintBtn.TabIndex = 43;
             this.PrintBtn.Text = "طباعة";
-            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
             // ClmErrorClmsDataFrm
             // 

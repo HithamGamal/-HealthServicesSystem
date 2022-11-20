@@ -65,35 +65,35 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.EnabledGrd = new Telerik.WinControls.UI.RadGridView();
-            this.ExpBtn = new Telerik.WinControls.UI.RadButton();
-            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
             this.NotEnabledGrd = new Telerik.WinControls.UI.RadGridView();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
-            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.MonthDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.YearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.ViewBtn = new Telerik.WinControls.UI.RadButton();
+            this.ExpBtn = new Telerik.WinControls.UI.RadButton();
+            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EnabledGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnabledGrd.MasterTemplate)).BeginInit();
             this.EnabledGrd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotEnabledGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotEnabledGrd.MasterTemplate)).BeginInit();
             this.NotEnabledGrd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,7 +170,7 @@
             gridViewTextBoxColumn8.Width = 100;
             gridViewCommandColumn1.DefaultText = "إلغاء التصريح";
             gridViewCommandColumn1.FieldName = "UnEnable";
-            gridViewCommandColumn1.HeaderText = "إلغاء التصريح";
+            gridViewCommandColumn1.HeaderText = "تصدير";
             gridViewCommandColumn1.Name = "UnEnable";
             gridViewCommandColumn1.UseDefaultText = true;
             gridViewCommandColumn1.Width = 100;
@@ -200,26 +200,6 @@
             this.EnabledGrd.TabIndex = 2;
             this.EnabledGrd.TitleText = "قائمة الملفات المصرحة";
             this.EnabledGrd.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.EnabledGrd_CommandCellClick);
-            // 
-            // ExpBtn
-            // 
-            this.ExpBtn.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
-            this.ExpBtn.Location = new System.Drawing.Point(930, 6);
-            this.ExpBtn.Name = "ExpBtn";
-            this.ExpBtn.Size = new System.Drawing.Size(95, 33);
-            this.ExpBtn.TabIndex = 33;
-            this.ExpBtn.Text = "تصدير ";
-            this.ExpBtn.Click += new System.EventHandler(this.ExpBtn_Click);
-            // 
-            // PrintBtn
-            // 
-            this.PrintBtn.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
-            this.PrintBtn.Location = new System.Drawing.Point(1028, 6);
-            this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(95, 33);
-            this.PrintBtn.TabIndex = 32;
-            this.PrintBtn.Text = "طباعة";
-            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
             // NotEnabledGrd
             // 
@@ -272,7 +252,7 @@
             gridViewTextBoxColumn16.Width = 100;
             gridViewCommandColumn2.DefaultText = "تصريح";
             gridViewCommandColumn2.FieldName = "Enable";
-            gridViewCommandColumn2.HeaderText = "تصريح";
+            gridViewCommandColumn2.HeaderText = "تصدير";
             gridViewCommandColumn2.Name = "Enable";
             gridViewCommandColumn2.UseDefaultText = true;
             gridViewCommandColumn2.Width = 100;
@@ -302,26 +282,6 @@
             this.NotEnabledGrd.TabIndex = 1;
             this.NotEnabledGrd.TitleText = "قائمة الملفات الغير مصرحة";
             this.NotEnabledGrd.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.NotEnabledGrd_CommandCellClick);
-            // 
-            // radButton1
-            // 
-            this.radButton1.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
-            this.radButton1.Location = new System.Drawing.Point(930, 4);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(95, 33);
-            this.radButton1.TabIndex = 33;
-            this.radButton1.Text = "تصدير ";
-            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
-            // 
-            // radButton2
-            // 
-            this.radButton2.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
-            this.radButton2.Location = new System.Drawing.Point(1028, 4);
-            this.radButton2.Name = "radButton2";
-            this.radButton2.Size = new System.Drawing.Size(95, 33);
-            this.radButton2.TabIndex = 32;
-            this.radButton2.Text = "طباعة";
-            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
             // 
             // panel2
             // 
@@ -406,6 +366,42 @@
             this.ViewBtn.Text = "عرض";
             this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);
             // 
+            // ExpBtn
+            // 
+            this.ExpBtn.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.ExpBtn.Location = new System.Drawing.Point(930, 6);
+            this.ExpBtn.Name = "ExpBtn";
+            this.ExpBtn.Size = new System.Drawing.Size(95, 33);
+            this.ExpBtn.TabIndex = 33;
+            this.ExpBtn.Text = "تصدير ";
+            // 
+            // PrintBtn
+            // 
+            this.PrintBtn.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.PrintBtn.Location = new System.Drawing.Point(1028, 6);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(95, 33);
+            this.PrintBtn.TabIndex = 32;
+            this.PrintBtn.Text = "طباعة";
+            // 
+            // radButton1
+            // 
+            this.radButton1.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.radButton1.Location = new System.Drawing.Point(930, 4);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(95, 33);
+            this.radButton1.TabIndex = 33;
+            this.radButton1.Text = "تصدير ";
+            // 
+            // radButton2
+            // 
+            this.radButton2.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.radButton2.Location = new System.Drawing.Point(1028, 4);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(95, 33);
+            this.radButton2.TabIndex = 32;
+            this.radButton2.Text = "طباعة";
+            // 
             // ClmEnableFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,14 +422,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.EnabledGrd)).EndInit();
             this.EnabledGrd.ResumeLayout(false);
             this.EnabledGrd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotEnabledGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotEnabledGrd)).EndInit();
             this.NotEnabledGrd.ResumeLayout(false);
             this.NotEnabledGrd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).EndInit();
@@ -441,6 +433,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

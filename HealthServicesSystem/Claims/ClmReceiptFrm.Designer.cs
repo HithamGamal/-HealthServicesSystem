@@ -40,16 +40,16 @@
             Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn21 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn5 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn6 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DataErrorDrp = new Telerik.WinControls.UI.RadDropDownList();
@@ -485,7 +485,6 @@
             // 
             // ErrorNotesBtn
             // 
-            this.ErrorNotesBtn.Image = global::HealthServicesSystem.Properties.Resources.more;
             this.ErrorNotesBtn.Location = new System.Drawing.Point(24, 154);
             this.ErrorNotesBtn.Name = "ErrorNotesBtn";
             this.ErrorNotesBtn.Size = new System.Drawing.Size(164, 42);
@@ -495,7 +494,6 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Image = global::HealthServicesSystem.Properties.Resources.transfer;
             this.ExitBtn.Location = new System.Drawing.Point(24, 245);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(164, 42);
@@ -505,7 +503,6 @@
             // 
             // PrinBtn
             // 
-            this.PrinBtn.Image = global::HealthServicesSystem.Properties.Resources.print;
             this.PrinBtn.Location = new System.Drawing.Point(24, 200);
             this.PrinBtn.Name = "PrinBtn";
             this.PrinBtn.Size = new System.Drawing.Size(164, 42);
@@ -515,7 +512,6 @@
             // 
             // DelBtn
             // 
-            this.DelBtn.Image = global::HealthServicesSystem.Properties.Resources.delete2;
             this.DelBtn.Location = new System.Drawing.Point(24, 108);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(164, 42);
@@ -525,7 +521,6 @@
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Image = global::HealthServicesSystem.Properties.Resources.saveAll;
             this.SaveBtn.Location = new System.Drawing.Point(24, 60);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(164, 42);
@@ -535,7 +530,6 @@
             // 
             // NewBtn
             // 
-            this.NewBtn.Image = global::HealthServicesSystem.Properties.Resources.add;
             this.NewBtn.Location = new System.Drawing.Point(24, 12);
             this.NewBtn.Name = "NewBtn";
             this.NewBtn.Size = new System.Drawing.Size(164, 42);
@@ -560,57 +554,55 @@
             // 
             this.radGridView1.MasterTemplate.AllowAddNewRow = false;
             this.radGridView1.MasterTemplate.AllowDeleteRow = false;
-            gridViewTextBoxColumn1.FieldName = "Id";
-            gridViewTextBoxColumn1.HeaderText = "م";
-            gridViewTextBoxColumn1.Name = "Id";
-            gridViewTextBoxColumn2.FieldName = "ImpId";
-            gridViewTextBoxColumn2.HeaderText = "رقم التصدير";
-            gridViewTextBoxColumn2.Name = "ImpId";
-            gridViewTextBoxColumn2.Width = 80;
-            gridViewTextBoxColumn3.FieldName = "FileNo";
-            gridViewTextBoxColumn3.HeaderText = "رقم الملف";
-            gridViewTextBoxColumn3.Name = "FileNo";
-            gridViewTextBoxColumn3.ReadOnly = true;
-            gridViewTextBoxColumn3.Width = 75;
-            gridViewTextBoxColumn4.FieldName = "FileName";
-            gridViewTextBoxColumn4.HeaderText = "اسم الملف";
-            gridViewTextBoxColumn4.Name = "FileName";
-            gridViewTextBoxColumn4.Width = 150;
-            gridViewTextBoxColumn5.FieldName = "TotalClaims";
-            gridViewTextBoxColumn5.HeaderText = "جملة المطالبة";
-            gridViewTextBoxColumn5.Name = "TotalClaims";
-            gridViewTextBoxColumn5.Width = 150;
-            gridViewTextBoxColumn6.FieldName = "Counts";
-            gridViewTextBoxColumn6.HeaderText = "عدد الروشتات";
-            gridViewTextBoxColumn6.Name = "Counts";
-            gridViewTextBoxColumn6.Width = 150;
-            gridViewTextBoxColumn7.FieldName = "BoxFileNo";
-            gridViewTextBoxColumn7.HeaderText = "عدد البوكس فايل";
-            gridViewTextBoxColumn7.Name = "BoxFileNo";
-            gridViewTextBoxColumn7.Width = 150;
-            gridViewCommandColumn1.DefaultText = "حفظ";
-            gridViewCommandColumn1.HeaderText = "حفظ";
-            gridViewCommandColumn1.Image = global::HealthServicesSystem.Properties.Resources.saveAll;
-            gridViewCommandColumn1.Name = "Save";
-            gridViewCommandColumn1.Width = 100;
-            gridViewCommandColumn2.DefaultText = "حذف";
-            gridViewCommandColumn2.FieldName = "حذف";
-            gridViewCommandColumn2.HeaderText = "حذف";
-            gridViewCommandColumn2.Image = global::HealthServicesSystem.Properties.Resources.delete2;
-            gridViewCommandColumn2.Name = "Del";
-            gridViewCommandColumn2.UseDefaultText = true;
-            gridViewCommandColumn2.Width = 100;
+            gridViewTextBoxColumn15.FieldName = "Id";
+            gridViewTextBoxColumn15.HeaderText = "م";
+            gridViewTextBoxColumn15.Name = "Id";
+            gridViewTextBoxColumn16.FieldName = "ImpId";
+            gridViewTextBoxColumn16.HeaderText = "رقم التصدير";
+            gridViewTextBoxColumn16.Name = "ImpId";
+            gridViewTextBoxColumn16.Width = 80;
+            gridViewTextBoxColumn17.FieldName = "FileNo";
+            gridViewTextBoxColumn17.HeaderText = "رقم الملف";
+            gridViewTextBoxColumn17.Name = "FileNo";
+            gridViewTextBoxColumn17.ReadOnly = true;
+            gridViewTextBoxColumn17.Width = 75;
+            gridViewTextBoxColumn18.FieldName = "FileName";
+            gridViewTextBoxColumn18.HeaderText = "اسم الملف";
+            gridViewTextBoxColumn18.Name = "FileName";
+            gridViewTextBoxColumn18.Width = 150;
+            gridViewTextBoxColumn19.FieldName = "TotalClaims";
+            gridViewTextBoxColumn19.HeaderText = "جملة المطالبة";
+            gridViewTextBoxColumn19.Name = "TotalClaims";
+            gridViewTextBoxColumn19.Width = 150;
+            gridViewTextBoxColumn20.FieldName = "Counts";
+            gridViewTextBoxColumn20.HeaderText = "عدد الروشتات";
+            gridViewTextBoxColumn20.Name = "Counts";
+            gridViewTextBoxColumn20.Width = 150;
+            gridViewTextBoxColumn21.FieldName = "BoxFileNo";
+            gridViewTextBoxColumn21.HeaderText = "عدد البوكس فايل";
+            gridViewTextBoxColumn21.Name = "BoxFileNo";
+            gridViewTextBoxColumn21.Width = 150;
+            gridViewCommandColumn5.DefaultText = "حفظ";
+            gridViewCommandColumn5.HeaderText = "حفظ";
+            gridViewCommandColumn5.Name = "Save";
+            gridViewCommandColumn5.Width = 100;
+            gridViewCommandColumn6.DefaultText = "حذف";
+            gridViewCommandColumn6.FieldName = "حذف";
+            gridViewCommandColumn6.HeaderText = "حذف";
+            gridViewCommandColumn6.Name = "Del";
+            gridViewCommandColumn6.UseDefaultText = true;
+            gridViewCommandColumn6.Width = 100;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewCommandColumn1,
-            gridViewCommandColumn2});
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            gridViewTextBoxColumn15,
+            gridViewTextBoxColumn16,
+            gridViewTextBoxColumn17,
+            gridViewTextBoxColumn18,
+            gridViewTextBoxColumn19,
+            gridViewTextBoxColumn20,
+            gridViewTextBoxColumn21,
+            gridViewCommandColumn5,
+            gridViewCommandColumn6});
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radGridView1.ShowGroupPanel = false;
