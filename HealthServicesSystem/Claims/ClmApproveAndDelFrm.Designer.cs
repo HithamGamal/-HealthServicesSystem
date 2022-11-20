@@ -41,6 +41,8 @@
             Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem1 = new Telerik.WinControls.UI.GridViewSummaryItem();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.ExpBtn = new Telerik.WinControls.UI.RadButton();
+            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
             this.ViewBtn = new Telerik.WinControls.UI.RadButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -49,19 +51,17 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.ProcessLb = new Telerik.WinControls.UI.RadLabel();
-            this.ExpBtn = new Telerik.WinControls.UI.RadButton();
-            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             this.radGridView1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileNoLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpNoLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessLb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,12 +117,14 @@
             gridViewCommandColumn1.DefaultText = "تصدير";
             gridViewCommandColumn1.FieldName = "Exp";
             gridViewCommandColumn1.HeaderText = "تصدير";
+            gridViewCommandColumn1.Image = global::HealthServicesSystem.Properties.Resources.saveAll;
             gridViewCommandColumn1.Name = "Exp";
             gridViewCommandColumn1.Width = 100;
             gridViewCommandColumn1.WrapText = true;
             gridViewCommandColumn2.DefaultText = "حذف";
             gridViewCommandColumn2.FieldName = "Del";
             gridViewCommandColumn2.HeaderText = "حذف";
+            gridViewCommandColumn2.Image = global::HealthServicesSystem.Properties.Resources.delete2;
             gridViewCommandColumn2.Name = "Del";
             gridViewCommandColumn2.Width = 100;
             gridViewCommandColumn2.WrapText = true;
@@ -152,6 +154,26 @@
             this.radGridView1.TabIndex = 0;
             this.radGridView1.TitleText = "قائمة المراكز المطالبات المؤقتة";
             this.radGridView1.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.radGridView1_CommandCellClick);
+            // 
+            // ExpBtn
+            // 
+            this.ExpBtn.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.ExpBtn.Location = new System.Drawing.Point(993, 3);
+            this.ExpBtn.Name = "ExpBtn";
+            this.ExpBtn.Size = new System.Drawing.Size(95, 33);
+            this.ExpBtn.TabIndex = 33;
+            this.ExpBtn.Text = "تصدير ";
+            this.ExpBtn.Click += new System.EventHandler(this.ExpBtn_Click);
+            // 
+            // PrintBtn
+            // 
+            this.PrintBtn.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.PrintBtn.Location = new System.Drawing.Point(1091, 3);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(95, 33);
+            this.PrintBtn.TabIndex = 32;
+            this.PrintBtn.Text = "طباعة";
+            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
             // ViewBtn
             // 
@@ -229,24 +251,6 @@
             this.ProcessLb.Text = "Process :0%";
             this.ProcessLb.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ExpBtn
-            // 
-            this.ExpBtn.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
-            this.ExpBtn.Location = new System.Drawing.Point(993, 3);
-            this.ExpBtn.Name = "ExpBtn";
-            this.ExpBtn.Size = new System.Drawing.Size(95, 33);
-            this.ExpBtn.TabIndex = 33;
-            this.ExpBtn.Text = "تصدير ";
-            // 
-            // PrintBtn
-            // 
-            this.PrintBtn.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
-            this.PrintBtn.Location = new System.Drawing.Point(1091, 3);
-            this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(95, 33);
-            this.PrintBtn.TabIndex = 32;
-            this.PrintBtn.Text = "طباعة";
-            // 
             // ClmApproveAndDelFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,14 +275,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             this.radGridView1.ResumeLayout(false);
             this.radGridView1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileNoLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpNoLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessLb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -158,6 +158,7 @@
             gridViewCommandColumn1.DefaultText = "حذف";
             gridViewCommandColumn1.FieldName = "Del";
             gridViewCommandColumn1.HeaderText = "حذف";
+            gridViewCommandColumn1.Image = global::HealthServicesSystem.Properties.Resources.delete2;
             gridViewCommandColumn1.Name = "Del";
             gridViewCommandColumn1.Width = 60;
             gridViewCommandColumn1.WrapText = true;
@@ -235,12 +236,14 @@
             gridViewCommandColumn2.DefaultText = "عرض";
             gridViewCommandColumn2.FieldName = "View";
             gridViewCommandColumn2.HeaderText = "عرض";
+            gridViewCommandColumn2.Image = global::HealthServicesSystem.Properties.Resources.preview;
             gridViewCommandColumn2.Name = "View";
             gridViewCommandColumn2.Width = 60;
             gridViewCommandColumn2.WrapText = true;
             gridViewCommandColumn3.DefaultText = "حذف";
             gridViewCommandColumn3.FieldName = "Del";
             gridViewCommandColumn3.HeaderText = "حذف";
+            gridViewCommandColumn3.Image = global::HealthServicesSystem.Properties.Resources.delete2;
             gridViewCommandColumn3.Name = "Del";
             gridViewCommandColumn3.Width = 60;
             gridViewCommandColumn3.WrapText = true;
@@ -442,6 +445,7 @@
             gridViewTextBoxColumn14.Width = 100;
             gridViewCommandColumn4.FieldName = "View";
             gridViewCommandColumn4.HeaderText = "عرض";
+            gridViewCommandColumn4.Image = global::HealthServicesSystem.Properties.Resources.preview;
             gridViewCommandColumn4.Name = "View";
             gridViewCommandColumn4.Width = 80;
             this.MonthGrd.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
