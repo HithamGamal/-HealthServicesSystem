@@ -638,7 +638,7 @@ namespace HealthServicesSystem.Refunds
 
         public void print()
         {
-            if (transferRadio.IsChecked || coRadio.IsChecked || radPageView2.SelectedPage.Name == "CooperationCommittee")
+            if (transferRadio.IsChecked || coRadio.IsChecked )
             {
                 int id = Convert.ToInt32(rqstId.Text);
                 TransferRPT rpt = new TransferRPT();
@@ -655,15 +655,15 @@ namespace HealthServicesSystem.Refunds
                     rpt.ServiceCost.Visible = true;
                     rpt.textBox21 .Visible = true;
                 }
-                if (radPageView2.SelectedPage.Name == "CooperationCommittee")
-                {
-                    rpt.centername.Value = Co_Centers .Text;
-                    rpt.note.Value = noteTXT.Text;
-                }
-                else
-                {
+                //if (radPageView2.SelectedPage.Name == "CooperationCommittee")
+                //{
+                //    rpt.centername.Value = Co_Centers .Text;
+                //    rpt.note.Value = noteTXT.Text;
+                //}
+                //else
+                //{
                     rpt.centername.Value = ExcutingCenter.Text;
-                }
+               // }
                
                 
 
@@ -958,7 +958,14 @@ namespace HealthServicesSystem.Refunds
             }
 
 
-            if (GRDApprove.Rows.Count() >= 0 || Co_MedicalServiceEN.Text == "" || Co_MedicalServicesAR .Text == "")
+            if (GRDApprove.Rows.Count() < 0 && radPageView2.SelectedPage.Name == "ApproveRequest")
+            {
+                RadMessageBox.Show("الرجاء اضافة الخدمات الطبية !");
+                return;
+
+            }
+
+            if (radPageView2.SelectedPage.Name == "CooperationCommittee" && (Co_MedicalServiceEN.Text == "" || Co_MedicalServicesAR.Text == ""))
             {
                 RadMessageBox.Show("الرجاء اضافة الخدمات الطبية !");
                 return;
@@ -973,6 +980,7 @@ namespace HealthServicesSystem.Refunds
             rqst.PhoneNo = phoneNoLBL.Text;
             rqst.Gender =genderlbl.Text ;
             rqst.Address = addressLBL.Text ;
+            rqst.CenterName  = ExcutingCenter.Text ;
             rqst.Server = clientIdLBL.Text;
             rqst.ClientId =clientIdLBL.Text;
             rqst.BirthDate = BirthDate.Value;
@@ -1491,7 +1499,7 @@ namespace HealthServicesSystem.Refunds
                 Co_MedicalServiceEN.DataSource = "";
                 Co_MedicalServicesAR.DataSource = "";
 
-                var Cs = db.CooperationServices.ToList();
+                var Cs = db.CooperationServices.Where(x=>x.rowStatus != RowStatus.Deleted).ToList();
                 Co_MedicalServiceEN.DataSource = Cs;
                 Co_MedicalServiceEN.DisplayMember = "Service_EN_Name";
                 Co_MedicalServiceEN.ValueMember = "Id";
@@ -1509,6 +1517,51 @@ namespace HealthServicesSystem.Refunds
             {
                 Co_MedicalServiceEN.DataSource = "";
                 Co_MedicalServicesAR.DataSource = "";
+
+                if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
+                {
+                    PLC.DbCailm.Close();
+                }
+                PLC.DbCailm.Open();
+
+                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  service_id, service_name,service_name_english FROM services where status='T' ", PLC.DbCailm);
+                DataTable dtEnService = new DataTable();
+                dtEnService.Clear();
+                da_EN_service.Fill(dtEnService);
+                //if (transferRadio.IsChecked)
+                //{
+
+
+                //   MsgBox (dtCenter .Rows .Count)
+                if (dtEnService.Rows.Count > 0)
+                {
+                    MedicalServiceEn.DataSource = dtEnService;
+                    MedicalServiceEn.DisplayMember = "service_name_english";
+                    MedicalServiceEn.ValueMember = "service_id";
+                    MedicalServiceEn.SelectedIndex = -1;
+                    MedicalServiceEn.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                    MedicalServiceAr.DataSource = dtEnService;
+                    MedicalServiceAr.DisplayMember = "service_name";
+                    MedicalServiceAr.ValueMember = "service_id";
+                    MedicalServiceAr.SelectedIndex = -1;
+                    MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+
+
+                    Co_MedicalServiceEN.DataSource = dtEnService;
+                    Co_MedicalServiceEN.DisplayMember = "service_name_english";
+                    Co_MedicalServiceEN.ValueMember = "service_id";
+                    Co_MedicalServiceEN.SelectedIndex = -1;
+                    Co_MedicalServiceEN.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                    Co_MedicalServicesAR.DataSource = dtEnService;
+                    Co_MedicalServicesAR.DisplayMember = "service_name";
+                    Co_MedicalServicesAR.ValueMember = "service_id";
+                    Co_MedicalServicesAR.SelectedIndex = -1;
+                    Co_MedicalServicesAR.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                }
             }
         }
 
