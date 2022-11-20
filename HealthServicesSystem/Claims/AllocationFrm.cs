@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.Export;
 
 namespace HealthServicesSystem.Claims
 {
@@ -63,7 +64,7 @@ namespace HealthServicesSystem.Claims
         private void AllocationFrm_Load(object sender, EventArgs e)
         {
             dbContext db = new dbContext();
-            var q = db.Users.Where(p => p.UserStatus == 1).Select(p => new { Id = p.Id, UserName = p.FullName }).ToList();
+            var q = db.Users.Where(p => p.UserStatus == 1 && p.GroupId ==5).Select(p => new { Id = p.Id, UserName = p.FullName }).ToList();
             if(q.Count>0)
             {
                 UserName.DataSource = q;
@@ -161,6 +162,36 @@ namespace HealthServicesSystem.Claims
                 FillAllocat();
                 FillNotAllocat();
             }
+        }
+
+        private void ExpBtn_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog s = new SaveFileDialog();
+
+            s.ShowDialog();
+            GridViewSpreadExport spreadExporter = new GridViewSpreadExport(this.UnAllocatGrd);
+            SpreadExportRenderer exportRenderer = new SpreadExportRenderer();
+            spreadExporter.RunExport(s.FileName + ".xlsx", exportRenderer);
+        }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog s = new SaveFileDialog();
+
+            s.ShowDialog();
+            GridViewSpreadExport spreadExporter = new GridViewSpreadExport(this.AllocatGrd);
+            SpreadExportRenderer exportRenderer = new SpreadExportRenderer();
+            spreadExporter.RunExport(s.FileName + ".xlsx", exportRenderer);
+        }
+
+        private void PrintBtn_Click(object sender, EventArgs e)
+        {
+            UnAllocatGrd.PrintPreview();
+        }
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            AllocatGrd.PrintPreview();
         }
     }
 }

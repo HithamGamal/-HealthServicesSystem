@@ -82,11 +82,11 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.YearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.AllocatGrd = new Telerik.WinControls.UI.RadGridView();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.UnAllocatGrd = new Telerik.WinControls.UI.RadGridView();
             this.ExpBtn = new Telerik.WinControls.UI.RadButton();
             this.PrintBtn = new Telerik.WinControls.UI.RadButton();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
-            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
@@ -110,13 +110,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.AllocatGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllocatGrd.MasterTemplate)).BeginInit();
             this.AllocatGrd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAllocatGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAllocatGrd.MasterTemplate)).BeginInit();
             this.UnAllocatGrd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -417,6 +417,26 @@
             this.AllocatGrd.TitleText = "قائمة الملفات الموزعة";
             this.AllocatGrd.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.AllocatGrd_CommandCellClick);
             // 
+            // radButton1
+            // 
+            this.radButton1.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.radButton1.Location = new System.Drawing.Point(832, 5);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(95, 33);
+            this.radButton1.TabIndex = 33;
+            this.radButton1.Text = "تصدير ";
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
+            // 
+            // radButton2
+            // 
+            this.radButton2.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.radButton2.Location = new System.Drawing.Point(930, 5);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(95, 33);
+            this.radButton2.TabIndex = 32;
+            this.radButton2.Text = "طباعة";
+            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
+            // 
             // UnAllocatGrd
             // 
             this.UnAllocatGrd.Controls.Add(this.ExpBtn);
@@ -508,6 +528,7 @@
             this.ExpBtn.Size = new System.Drawing.Size(95, 33);
             this.ExpBtn.TabIndex = 31;
             this.ExpBtn.Text = "تصدير ";
+            this.ExpBtn.Click += new System.EventHandler(this.ExpBtn_Click);
             // 
             // PrintBtn
             // 
@@ -517,24 +538,7 @@
             this.PrintBtn.Size = new System.Drawing.Size(95, 33);
             this.PrintBtn.TabIndex = 30;
             this.PrintBtn.Text = "طباعة";
-            // 
-            // radButton1
-            // 
-            this.radButton1.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
-            this.radButton1.Location = new System.Drawing.Point(832, 5);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(95, 33);
-            this.radButton1.TabIndex = 33;
-            this.radButton1.Text = "تصدير ";
-            // 
-            // radButton2
-            // 
-            this.radButton2.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
-            this.radButton2.Location = new System.Drawing.Point(930, 5);
-            this.radButton2.Name = "radButton2";
-            this.radButton2.Size = new System.Drawing.Size(95, 33);
-            this.radButton2.TabIndex = 32;
-            this.radButton2.Text = "طباعة";
+            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
             // AllocationFrm
             // 
@@ -576,14 +580,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.AllocatGrd)).EndInit();
             this.AllocatGrd.ResumeLayout(false);
             this.AllocatGrd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAllocatGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAllocatGrd)).EndInit();
             this.UnAllocatGrd.ResumeLayout(false);
             this.UnAllocatGrd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
