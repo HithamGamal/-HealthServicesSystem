@@ -118,6 +118,12 @@
     <Compile Include="Chronics\FRMBookInfo.Designer.cs">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Claims\AddNonConfirmToClaims.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\AddNonConfirmToClaims.Designer.cs">
+      <DependentUpon>AddNonConfirmToClaims.cs</DependentUpon>
+    </Compile>
     <Compile Include="Claims\AdvanceFillterFrm.cs">
       <SubType>Form</SubType>
     </Compile>

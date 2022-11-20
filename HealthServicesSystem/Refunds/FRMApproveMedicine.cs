@@ -64,7 +64,9 @@ namespace HealthServicesSystem.Reclaims
         public int insurId = 0;
         public bool Saved = false;
         public string Rec_No = "";
-        string Phone;
+        public string Phone;
+        public string Gender;
+        public string ClientId;
         public DateTime BirthDate = PLC.getdate();
         private void LoadData()
         {
@@ -439,8 +441,7 @@ namespace HealthServicesSystem.Reclaims
 
                     if (SubscriberType.SelectedIndex == 0)
                     {
-                        string Gender;
-                        string ClientId;
+
 
                         if (card_no.Text.Contains("/"))
                         {
@@ -918,13 +919,35 @@ namespace HealthServicesSystem.Reclaims
 
                     else
                     {
-                        this.Cursor = Cursors.Default;
-                        FRMAddStudent.Default.card_no.Text = card_no.Text;
-                        FRMAddStudent.Default.ful_name.Clear();
-                        FRMAddStudent.Default.Age.Clear();
-                        FRMAddStudent.Default.Sex.SelectedIndex = -1;
-                        FRMAddStudent.Default.University.SelectedIndex = -1;
-                        FRMAddStudent.Default.ShowDialog();
+                        var ChkN = db.ApproveMedicines.Where(p => p.InsurNo == card_no.Text).Take(1).ToList();
+                        if (ChkN.Count() > 0)
+                        {
+                            ChkSearch = true;
+                            BirthDate = ChkN[0].BirthDate;
+                            Age.Text = DateAndTime.DateDiff(DateInterval.Year, BirthDate, PLC.getdate()).ToString();
+
+                            // Phone.Text = result.phone
+
+                            CustName.Text = ChkN[0].InsurName;
+
+
+                            Gender = ChkN[0].Gender;
+                            Sex.Text = Gender;
+                            Rec_No = ChkN[0].ClientId;
+
+
+                            ServerName.Text = ChkN[0].Server;
+                        }
+                        else
+                        {
+                            this.Cursor = Cursors.Default;
+                            FRMAddStudent.Default.card_no.Text = card_no.Text;
+                            FRMAddStudent.Default.ful_name.Clear();
+                            FRMAddStudent.Default.Age.Clear();
+                            FRMAddStudent.Default.Sex.SelectedIndex = -1;
+                            FRMAddStudent.Default.University.SelectedIndex = -1;
+                            FRMAddStudent.Default.ShowDialog();
+                        }
                     }
                 }
             }
@@ -1131,7 +1154,7 @@ namespace HealthServicesSystem.Reclaims
             using (dbContext db = new dbContext())
             {
                 // var ChkSub = dbs.Where(p => p.InsurNo == card_no.Text).ToList();
-               if (SubscriberType.SelectedIndex == 0 && ChkSearch==false && card_no.Text.Length == 11 && !card_no.Text.Contains("/"))
+                if (SubscriberType.SelectedIndex == 0 && ChkSearch == false && card_no.Text.Length == 11 && !card_no.Text.Contains("/"))
                 {
                     if (CustName.Text.Length == 0)
                     {
@@ -1168,7 +1191,7 @@ namespace HealthServicesSystem.Reclaims
                         ServerName.Text = dt.Rows[0]["StateName"].ToString();
                     }
                     BirthDate = PLC.getdate().AddYears(-Convert.ToInt32(Age.Text));
-                   
+
                     //Subscriber Sc = new Subscriber();
                     //Sc.PhoneNo = "";
                     //Sc.InsurNo = card_no.Text.Trim();
@@ -1639,7 +1662,7 @@ namespace HealthServicesSystem.Reclaims
                 db.SaveChanges();
 
 
-            
+
                 // var FId = dbs.Where(p => p.InsurNo == card_no.Text).ToList()[0].Id;
                 Fr.InsurId = card_no.Text;
             }
