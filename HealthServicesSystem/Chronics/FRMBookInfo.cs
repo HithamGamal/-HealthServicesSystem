@@ -823,12 +823,12 @@ namespace HealthServicesSystem.Reclaims
                     PhoneNo.Focus();
                     return;
                 }
-                if (DocumentNo.Text.Length == 0)
-                {
-                    MessageBox.Show("يجب ادخال رقم الايصال المادي", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    DocumentNo.Focus();
-                    return;
-                }
+                //if (DocumentNo.Text.Length == 0)
+                //{
+                //    MessageBox.Show("يجب ادخال رقم الايصال المادي", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //    DocumentNo.Focus();
+                //    return;
+                //}
 
 
                 if (GrdDwa.RowCount == 0)
