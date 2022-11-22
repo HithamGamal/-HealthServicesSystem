@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ModelDB
 {
-    public class MedicalCommitteeRequestDetails
+    public class MedicalCommitteeRequestDetails : BaseEntity
     {
         public int Id { get; set; }
         public string InsurId { get; set; }
@@ -21,7 +21,6 @@ namespace ModelDB
         public decimal Insur_cost { get; set; }
         public decimal ServiceCost { get; set; }
         public decimal InvoiceCost { get; set; }
-        public RowStatus RowStatus { get; set; }
 
     }
 }
