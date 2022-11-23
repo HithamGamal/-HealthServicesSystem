@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>66</ApplicationRevision>
+    <ApplicationRevision>68</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -115,6 +115,18 @@
     </Compile>
     <Compile Include="Chronics\FRMBookInfo.Designer.cs">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\AddNonConfirmFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\AddNonConfirmFrm.Designer.cs">
+      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\AddNonConfirmToClaims.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\AddNonConfirmToClaims.Designer.cs">
+      <DependentUpon>AddNonConfirmToClaims.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\AdvanceFillterFrm.cs">
       <SubType>Form</SubType>
