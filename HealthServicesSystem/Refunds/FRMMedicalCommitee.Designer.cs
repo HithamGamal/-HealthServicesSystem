@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn21 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn22 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem3 = new Telerik.WinControls.UI.GridViewSummaryItem();
-            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem4 = new Telerik.WinControls.UI.GridViewSummaryItem();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn23 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn24 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn25 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn26 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn27 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn28 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn29 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn30 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn31 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn32 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn33 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn3 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem5 = new Telerik.WinControls.UI.GridViewSummaryItem();
+            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem6 = new Telerik.WinControls.UI.GridViewSummaryItem();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.GroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.patDataAlertLBL = new Telerik.WinControls.UI.RadLabel();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
@@ -78,11 +78,8 @@
             this.Label16 = new Telerik.WinControls.UI.RadLabel();
             this.GroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.insur_cost_txt = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.pat_cost_txt = new Telerik.WinControls.UI.RadTextBox();
             this.Label42 = new Telerik.WinControls.UI.RadLabel();
-            this.ServiceCost = new Telerik.WinControls.UI.RadTextBox();
             this.ExcutingCenter = new Telerik.WinControls.UI.RadDropDownList();
             this.Label55 = new Telerik.WinControls.UI.RadLabel();
             this.MedicalServiceAr = new Telerik.WinControls.UI.RadDropDownList();
@@ -110,15 +107,18 @@
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
-            this.InvoiceCostTB = new Telerik.WinControls.UI.RadTextBox();
-            this.TotalCostTB = new Telerik.WinControls.UI.RadTextBox();
-            this.Co_CostTB = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
-            this.ServiceCostTB = new Telerik.WinControls.UI.RadTextBox();
             this.refund_check = new Telerik.WinControls.UI.RadCheckBox();
             this.deny_check = new Telerik.WinControls.UI.RadCheckBox();
             this.approve_check = new Telerik.WinControls.UI.RadCheckBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.InvoiceCostTB = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.ServiceCostTB = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.Co_CostTB = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.TotalCostTB = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.ServiceCost = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.insur_cost_txt = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.pat_cost_txt = new Telerik.WinControls.UI.RadMaskedEditBox();
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).BeginInit();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patDataAlertLBL)).BeginInit();
@@ -155,11 +155,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox2)).BeginInit();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insur_cost_txt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pat_cost_txt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExcutingCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MedicalServiceAr)).BeginInit();
@@ -189,15 +186,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InvoiceCostTB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TotalCostTB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Co_CostTB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceCostTB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refund_check)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deny_check)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approve_check)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoiceCostTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceCostTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Co_CostTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCostTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insur_cost_txt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pat_cost_txt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -517,7 +517,7 @@
             this.GroupBox3.HeaderText = "";
             this.GroupBox3.Location = new System.Drawing.Point(3, 3);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(1366, 442);
+            this.GroupBox3.Size = new System.Drawing.Size(1363, 442);
             this.GroupBox3.TabIndex = 408;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.ThemeName = "Office2010Blue";
@@ -628,12 +628,12 @@
             // 
             this.GroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.GroupBox2.BackColor = System.Drawing.Color.AliceBlue;
-            this.GroupBox2.Controls.Add(this.radLabel3);
-            this.GroupBox2.Controls.Add(this.insur_cost_txt);
-            this.GroupBox2.Controls.Add(this.radLabel2);
             this.GroupBox2.Controls.Add(this.pat_cost_txt);
-            this.GroupBox2.Controls.Add(this.Label42);
+            this.GroupBox2.Controls.Add(this.insur_cost_txt);
             this.GroupBox2.Controls.Add(this.ServiceCost);
+            this.GroupBox2.Controls.Add(this.radLabel3);
+            this.GroupBox2.Controls.Add(this.radLabel2);
+            this.GroupBox2.Controls.Add(this.Label42);
             this.GroupBox2.HeaderText = "";
             this.GroupBox2.Location = new System.Drawing.Point(169, 154);
             this.GroupBox2.Name = "GroupBox2";
@@ -654,20 +654,6 @@
             this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel3.ThemeName = "Office2010Blue";
             // 
-            // insur_cost_txt
-            // 
-            this.insur_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.insur_cost_txt.Enabled = false;
-            this.insur_cost_txt.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.insur_cost_txt.Location = new System.Drawing.Point(440, 10);
-            this.insur_cost_txt.Name = "insur_cost_txt";
-            this.insur_cost_txt.ReadOnly = true;
-            this.insur_cost_txt.Size = new System.Drawing.Size(103, 32);
-            this.insur_cost_txt.TabIndex = 16;
-            this.insur_cost_txt.Text = "0";
-            this.insur_cost_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.insur_cost_txt.ThemeName = "Office2010Blue";
-            // 
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
@@ -680,20 +666,6 @@
             this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel2.ThemeName = "Office2010Blue";
             // 
-            // pat_cost_txt
-            // 
-            this.pat_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pat_cost_txt.Enabled = false;
-            this.pat_cost_txt.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.pat_cost_txt.Location = new System.Drawing.Point(75, 10);
-            this.pat_cost_txt.Name = "pat_cost_txt";
-            this.pat_cost_txt.ReadOnly = true;
-            this.pat_cost_txt.Size = new System.Drawing.Size(103, 32);
-            this.pat_cost_txt.TabIndex = 22;
-            this.pat_cost_txt.Text = "0";
-            this.pat_cost_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.pat_cost_txt.ThemeName = "Office2010Blue";
-            // 
             // Label42
             // 
             this.Label42.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
@@ -705,20 +677,6 @@
             this.Label42.Text = "التكلفة الفعلية للخدمة";
             this.Label42.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.Label42.ThemeName = "Office2010Blue";
-            // 
-            // ServiceCost
-            // 
-            this.ServiceCost.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ServiceCost.Enabled = false;
-            this.ServiceCost.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.ServiceCost.Location = new System.Drawing.Point(833, 8);
-            this.ServiceCost.Name = "ServiceCost";
-            this.ServiceCost.ReadOnly = true;
-            this.ServiceCost.Size = new System.Drawing.Size(103, 32);
-            this.ServiceCost.TabIndex = 6;
-            this.ServiceCost.Text = "0";
-            this.ServiceCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ServiceCost.ThemeName = "Office2010Blue";
             // 
             // ExcutingCenter
             // 
@@ -799,99 +757,99 @@
             // 
             this.GRDApprove.MasterTemplate.AllowAddNewRow = false;
             this.GRDApprove.MasterTemplate.AllowDeleteRow = false;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "Id";
-            gridViewTextBoxColumn12.HeaderText = "Id";
-            gridViewTextBoxColumn12.IsVisible = false;
-            gridViewTextBoxColumn12.Name = "Id";
-            gridViewTextBoxColumn12.Width = 46;
-            gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.HeaderText = "م";
-            gridViewTextBoxColumn13.Name = "Ser";
-            gridViewTextBoxColumn13.ReadOnly = true;
-            gridViewTextBoxColumn13.Width = 44;
-            gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.FieldName = "InsurId";
-            gridViewTextBoxColumn14.HeaderText = "InsurId";
-            gridViewTextBoxColumn14.IsVisible = false;
-            gridViewTextBoxColumn14.Name = "InsurId";
-            gridViewTextBoxColumn14.Width = 74;
-            gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.FieldName = "CenterServicesId";
-            gridViewTextBoxColumn15.HeaderText = "CenterServicesId";
-            gridViewTextBoxColumn15.IsVisible = false;
-            gridViewTextBoxColumn15.Name = "CenterServicesId";
-            gridViewTextBoxColumn15.Width = 137;
-            gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.FieldName = "ServiceId";
-            gridViewTextBoxColumn16.HeaderText = "ServiceId";
-            gridViewTextBoxColumn16.Name = "ServiceId";
-            gridViewTextBoxColumn16.Width = 89;
-            gridViewTextBoxColumn17.EnableExpressionEditor = false;
-            gridViewTextBoxColumn17.FieldName = "ServiceEName";
-            gridViewTextBoxColumn17.HeaderText = "الخدمة انجليزي";
-            gridViewTextBoxColumn17.Name = "ServiceEName";
-            gridViewTextBoxColumn17.ReadOnly = true;
-            gridViewTextBoxColumn17.Width = 250;
-            gridViewTextBoxColumn18.EnableExpressionEditor = false;
-            gridViewTextBoxColumn18.FieldName = "ServiceAName";
-            gridViewTextBoxColumn18.HeaderText = "الخدمة عربي ";
-            gridViewTextBoxColumn18.Name = "ServiceAName";
-            gridViewTextBoxColumn18.ReadOnly = true;
-            gridViewTextBoxColumn18.Width = 250;
-            gridViewTextBoxColumn19.EnableExpressionEditor = false;
-            gridViewTextBoxColumn19.FieldName = "ServicePrice";
-            gridViewTextBoxColumn19.HeaderText = "تكلفة الخدمة";
-            gridViewTextBoxColumn19.Name = "ServicePrice";
-            gridViewTextBoxColumn19.Width = 103;
-            gridViewTextBoxColumn20.EnableExpressionEditor = false;
-            gridViewTextBoxColumn20.FieldName = "InsurPrice";
-            gridViewTextBoxColumn20.HeaderText = "تحمل التأمين";
-            gridViewTextBoxColumn20.Name = "InsurPrice";
-            gridViewTextBoxColumn20.ReadOnly = true;
-            gridViewTextBoxColumn20.Width = 101;
-            gridViewTextBoxColumn21.EnableExpressionEditor = false;
-            gridViewTextBoxColumn21.FieldName = "PatientPrice";
-            gridViewTextBoxColumn21.HeaderText = "تحمل المشترك";
-            gridViewTextBoxColumn21.Name = "PatientPrice";
-            gridViewTextBoxColumn21.ReadOnly = true;
-            gridViewTextBoxColumn21.Width = 114;
-            gridViewTextBoxColumn22.EnableExpressionEditor = false;
-            gridViewTextBoxColumn22.FieldName = "CoPrice";
-            gridViewTextBoxColumn22.HeaderText = "تكلفة المساهمة";
-            gridViewTextBoxColumn22.Name = "CoPrice";
-            gridViewTextBoxColumn22.Width = 78;
-            gridViewCommandColumn2.EnableExpressionEditor = false;
-            gridViewCommandColumn2.FieldName = "delete";
-            gridViewCommandColumn2.HeaderText = "حذف";
-            gridViewCommandColumn2.Name = "delete";
-            gridViewCommandColumn2.Width = 89;
+            gridViewTextBoxColumn23.EnableExpressionEditor = false;
+            gridViewTextBoxColumn23.FieldName = "Id";
+            gridViewTextBoxColumn23.HeaderText = "Id";
+            gridViewTextBoxColumn23.IsVisible = false;
+            gridViewTextBoxColumn23.Name = "Id";
+            gridViewTextBoxColumn23.Width = 46;
+            gridViewTextBoxColumn24.EnableExpressionEditor = false;
+            gridViewTextBoxColumn24.HeaderText = "م";
+            gridViewTextBoxColumn24.Name = "Ser";
+            gridViewTextBoxColumn24.ReadOnly = true;
+            gridViewTextBoxColumn24.Width = 44;
+            gridViewTextBoxColumn25.EnableExpressionEditor = false;
+            gridViewTextBoxColumn25.FieldName = "InsurId";
+            gridViewTextBoxColumn25.HeaderText = "InsurId";
+            gridViewTextBoxColumn25.IsVisible = false;
+            gridViewTextBoxColumn25.Name = "InsurId";
+            gridViewTextBoxColumn25.Width = 74;
+            gridViewTextBoxColumn26.EnableExpressionEditor = false;
+            gridViewTextBoxColumn26.FieldName = "CenterServicesId";
+            gridViewTextBoxColumn26.HeaderText = "CenterServicesId";
+            gridViewTextBoxColumn26.IsVisible = false;
+            gridViewTextBoxColumn26.Name = "CenterServicesId";
+            gridViewTextBoxColumn26.Width = 137;
+            gridViewTextBoxColumn27.EnableExpressionEditor = false;
+            gridViewTextBoxColumn27.FieldName = "ServiceId";
+            gridViewTextBoxColumn27.HeaderText = "ServiceId";
+            gridViewTextBoxColumn27.Name = "ServiceId";
+            gridViewTextBoxColumn27.Width = 89;
+            gridViewTextBoxColumn28.EnableExpressionEditor = false;
+            gridViewTextBoxColumn28.FieldName = "ServiceEName";
+            gridViewTextBoxColumn28.HeaderText = "الخدمة انجليزي";
+            gridViewTextBoxColumn28.Name = "ServiceEName";
+            gridViewTextBoxColumn28.ReadOnly = true;
+            gridViewTextBoxColumn28.Width = 250;
+            gridViewTextBoxColumn29.EnableExpressionEditor = false;
+            gridViewTextBoxColumn29.FieldName = "ServiceAName";
+            gridViewTextBoxColumn29.HeaderText = "الخدمة عربي ";
+            gridViewTextBoxColumn29.Name = "ServiceAName";
+            gridViewTextBoxColumn29.ReadOnly = true;
+            gridViewTextBoxColumn29.Width = 250;
+            gridViewTextBoxColumn30.EnableExpressionEditor = false;
+            gridViewTextBoxColumn30.FieldName = "ServicePrice";
+            gridViewTextBoxColumn30.HeaderText = "تكلفة الخدمة";
+            gridViewTextBoxColumn30.Name = "ServicePrice";
+            gridViewTextBoxColumn30.Width = 103;
+            gridViewTextBoxColumn31.EnableExpressionEditor = false;
+            gridViewTextBoxColumn31.FieldName = "InsurPrice";
+            gridViewTextBoxColumn31.HeaderText = "تحمل التأمين";
+            gridViewTextBoxColumn31.Name = "InsurPrice";
+            gridViewTextBoxColumn31.ReadOnly = true;
+            gridViewTextBoxColumn31.Width = 101;
+            gridViewTextBoxColumn32.EnableExpressionEditor = false;
+            gridViewTextBoxColumn32.FieldName = "PatientPrice";
+            gridViewTextBoxColumn32.HeaderText = "تحمل المشترك";
+            gridViewTextBoxColumn32.Name = "PatientPrice";
+            gridViewTextBoxColumn32.ReadOnly = true;
+            gridViewTextBoxColumn32.Width = 114;
+            gridViewTextBoxColumn33.EnableExpressionEditor = false;
+            gridViewTextBoxColumn33.FieldName = "CoPrice";
+            gridViewTextBoxColumn33.HeaderText = "تكلفة المساهمة";
+            gridViewTextBoxColumn33.Name = "CoPrice";
+            gridViewTextBoxColumn33.Width = 78;
+            gridViewCommandColumn3.EnableExpressionEditor = false;
+            gridViewCommandColumn3.FieldName = "delete";
+            gridViewCommandColumn3.HeaderText = "حذف";
+            gridViewCommandColumn3.Name = "delete";
+            gridViewCommandColumn3.Width = 89;
             this.GRDApprove.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn12,
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18,
-            gridViewTextBoxColumn19,
-            gridViewTextBoxColumn20,
-            gridViewTextBoxColumn21,
-            gridViewTextBoxColumn22,
-            gridViewCommandColumn2});
+            gridViewTextBoxColumn23,
+            gridViewTextBoxColumn24,
+            gridViewTextBoxColumn25,
+            gridViewTextBoxColumn26,
+            gridViewTextBoxColumn27,
+            gridViewTextBoxColumn28,
+            gridViewTextBoxColumn29,
+            gridViewTextBoxColumn30,
+            gridViewTextBoxColumn31,
+            gridViewTextBoxColumn32,
+            gridViewTextBoxColumn33,
+            gridViewCommandColumn3});
             this.GRDApprove.MasterTemplate.EnableFiltering = true;
-            gridViewSummaryItem3.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
-            gridViewSummaryItem3.AggregateExpression = null;
-            gridViewSummaryItem3.FormatString = "{0}";
-            gridViewSummaryItem3.Name = "InsurPrice";
-            gridViewSummaryItem4.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
-            gridViewSummaryItem4.AggregateExpression = null;
-            gridViewSummaryItem4.FormatString = "{0}";
-            gridViewSummaryItem4.Name = "PatientPrice";
+            gridViewSummaryItem5.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
+            gridViewSummaryItem5.AggregateExpression = null;
+            gridViewSummaryItem5.FormatString = "{0}";
+            gridViewSummaryItem5.Name = "InsurPrice";
+            gridViewSummaryItem6.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
+            gridViewSummaryItem6.AggregateExpression = null;
+            gridViewSummaryItem6.FormatString = "{0}";
+            gridViewSummaryItem6.Name = "PatientPrice";
             this.GRDApprove.MasterTemplate.SummaryRowsBottom.Add(new Telerik.WinControls.UI.GridViewSummaryRowItem(new Telerik.WinControls.UI.GridViewSummaryItem[] {
-                gridViewSummaryItem3,
-                gridViewSummaryItem4}));
-            this.GRDApprove.MasterTemplate.ViewDefinition = tableViewDefinition2;
+                gridViewSummaryItem5,
+                gridViewSummaryItem6}));
+            this.GRDApprove.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.GRDApprove.Name = "GRDApprove";
             this.GRDApprove.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GRDApprove.ShowGroupPanel = false;
@@ -906,7 +864,7 @@
             this.printBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.printBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.printBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printBTN.Location = new System.Drawing.Point(210, 618);
+            this.printBTN.Location = new System.Drawing.Point(25, 621);
             this.printBTN.Name = "printBTN";
             this.printBTN.Size = new System.Drawing.Size(137, 36);
             this.printBTN.TabIndex = 411;
@@ -920,7 +878,7 @@
             this.newBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.newBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.newBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newBTN.Location = new System.Drawing.Point(905, 615);
+            this.newBTN.Location = new System.Drawing.Point(955, 617);
             this.newBTN.Name = "newBTN";
             this.newBTN.Size = new System.Drawing.Size(137, 36);
             this.newBTN.TabIndex = 409;
@@ -933,7 +891,7 @@
             this.saveBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.saveBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBTN.Location = new System.Drawing.Point(676, 615);
+            this.saveBTN.Location = new System.Drawing.Point(726, 617);
             this.saveBTN.Name = "saveBTN";
             this.saveBTN.Size = new System.Drawing.Size(137, 36);
             this.saveBTN.TabIndex = 408;
@@ -946,12 +904,13 @@
             this.deleteBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.deleteBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBTN.Location = new System.Drawing.Point(455, 615);
+            this.deleteBTN.Location = new System.Drawing.Point(505, 617);
             this.deleteBTN.Name = "deleteBTN";
             this.deleteBTN.Size = new System.Drawing.Size(137, 36);
             this.deleteBTN.TabIndex = 410;
             this.deleteBTN.Text = "حذف";
             this.deleteBTN.ThemeName = "Office2010Blue";
+            this.deleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
             // radPageView2
             // 
@@ -1139,14 +1098,14 @@
             // 
             this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox3.BackColor = System.Drawing.Color.AliceBlue;
+            this.radGroupBox3.Controls.Add(this.TotalCostTB);
             this.radGroupBox3.Controls.Add(this.radLabel11);
+            this.radGroupBox3.Controls.Add(this.Co_CostTB);
             this.radGroupBox3.Controls.Add(this.radLabel5);
+            this.radGroupBox3.Controls.Add(this.ServiceCostTB);
             this.radGroupBox3.Controls.Add(this.radLabel6);
             this.radGroupBox3.Controls.Add(this.InvoiceCostTB);
-            this.radGroupBox3.Controls.Add(this.TotalCostTB);
-            this.radGroupBox3.Controls.Add(this.Co_CostTB);
             this.radGroupBox3.Controls.Add(this.radLabel7);
-            this.radGroupBox3.Controls.Add(this.ServiceCostTB);
             this.radGroupBox3.HeaderText = "";
             this.radGroupBox3.Location = new System.Drawing.Point(97, 185);
             this.radGroupBox3.Name = "radGroupBox3";
@@ -1190,53 +1149,6 @@
             this.radLabel6.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel6.ThemeName = "Office2010Blue";
             // 
-            // InvoiceCostTB
-            // 
-            this.InvoiceCostTB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.InvoiceCostTB.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.InvoiceCostTB.ForeColor = System.Drawing.Color.Crimson;
-            this.InvoiceCostTB.Location = new System.Drawing.Point(976, 11);
-            this.InvoiceCostTB.Name = "InvoiceCostTB";
-            this.InvoiceCostTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.InvoiceCostTB.Size = new System.Drawing.Size(103, 32);
-            this.InvoiceCostTB.TabIndex = 16;
-            this.InvoiceCostTB.Text = "0";
-            this.InvoiceCostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InvoiceCostTB.ThemeName = "Office2010Blue";
-            this.InvoiceCostTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InvoiceCostTB_KeyPress);
-            // 
-            // TotalCostTB
-            // 
-            this.TotalCostTB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TotalCostTB.Enabled = false;
-            this.TotalCostTB.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.TotalCostTB.ForeColor = System.Drawing.Color.Crimson;
-            this.TotalCostTB.Location = new System.Drawing.Point(25, 13);
-            this.TotalCostTB.Name = "TotalCostTB";
-            this.TotalCostTB.ReadOnly = true;
-            this.TotalCostTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TotalCostTB.Size = new System.Drawing.Size(103, 32);
-            this.TotalCostTB.TabIndex = 22;
-            this.TotalCostTB.Text = "0";
-            this.TotalCostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TotalCostTB.ThemeName = "Office2010Blue";
-            // 
-            // Co_CostTB
-            // 
-            this.Co_CostTB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Co_CostTB.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.Co_CostTB.ForeColor = System.Drawing.Color.Crimson;
-            this.Co_CostTB.Location = new System.Drawing.Point(294, 9);
-            this.Co_CostTB.MaxLength = 10;
-            this.Co_CostTB.Name = "Co_CostTB";
-            this.Co_CostTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Co_CostTB.Size = new System.Drawing.Size(133, 32);
-            this.Co_CostTB.TabIndex = 21;
-            this.Co_CostTB.Text = "0";
-            this.Co_CostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Co_CostTB.TextChanged += new System.EventHandler(this.Co_CostTB_TextChanged);
-            this.Co_CostTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Co_CostTB_KeyPress);
-            // 
             // radLabel7
             // 
             this.radLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
@@ -1248,23 +1160,6 @@
             this.radLabel7.Text = "التكلفة الفعلية للخدمة ";
             this.radLabel7.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel7.ThemeName = "Office2010Blue";
-            // 
-            // ServiceCostTB
-            // 
-            this.ServiceCostTB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ServiceCostTB.Enabled = false;
-            this.ServiceCostTB.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.ServiceCostTB.ForeColor = System.Drawing.Color.Crimson;
-            this.ServiceCostTB.Location = new System.Drawing.Point(648, 11);
-            this.ServiceCostTB.Name = "ServiceCostTB";
-            this.ServiceCostTB.ReadOnly = true;
-            this.ServiceCostTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ServiceCostTB.Size = new System.Drawing.Size(103, 32);
-            this.ServiceCostTB.TabIndex = 6;
-            this.ServiceCostTB.Text = "0";
-            this.ServiceCostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ServiceCostTB.ThemeName = "Office2010Blue";
-            this.ServiceCostTB.TextChanged += new System.EventHandler(this.ServiceCostTB_TextChanged);
             // 
             // refund_check
             // 
@@ -1307,6 +1202,104 @@
             this.radLabel1.Text = "قرار اللجنة :";
             this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel1.ThemeName = "Office2010Blue";
+            // 
+            // InvoiceCostTB
+            // 
+            this.InvoiceCostTB.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.InvoiceCostTB.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvoiceCostTB.ForeColor = System.Drawing.Color.Crimson;
+            this.InvoiceCostTB.Location = new System.Drawing.Point(954, 9);
+            this.InvoiceCostTB.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            this.InvoiceCostTB.Name = "InvoiceCostTB";
+            this.InvoiceCostTB.Size = new System.Drawing.Size(125, 29);
+            this.InvoiceCostTB.TabIndex = 451;
+            this.InvoiceCostTB.TabStop = false;
+            this.InvoiceCostTB.Text = "0";
+            this.InvoiceCostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ServiceCostTB
+            // 
+            this.ServiceCostTB.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ServiceCostTB.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiceCostTB.ForeColor = System.Drawing.Color.Crimson;
+            this.ServiceCostTB.Location = new System.Drawing.Point(618, 11);
+            this.ServiceCostTB.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            this.ServiceCostTB.Name = "ServiceCostTB";
+            this.ServiceCostTB.Size = new System.Drawing.Size(125, 29);
+            this.ServiceCostTB.TabIndex = 452;
+            this.ServiceCostTB.TabStop = false;
+            this.ServiceCostTB.Text = "0";
+            this.ServiceCostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Co_CostTB
+            // 
+            this.Co_CostTB.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Co_CostTB.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Co_CostTB.ForeColor = System.Drawing.Color.Crimson;
+            this.Co_CostTB.Location = new System.Drawing.Point(302, 11);
+            this.Co_CostTB.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            this.Co_CostTB.Name = "Co_CostTB";
+            this.Co_CostTB.Size = new System.Drawing.Size(125, 29);
+            this.Co_CostTB.TabIndex = 453;
+            this.Co_CostTB.TabStop = false;
+            this.Co_CostTB.Text = "0";
+            this.Co_CostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TotalCostTB
+            // 
+            this.TotalCostTB.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TotalCostTB.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCostTB.ForeColor = System.Drawing.Color.Crimson;
+            this.TotalCostTB.Location = new System.Drawing.Point(5, 12);
+            this.TotalCostTB.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            this.TotalCostTB.Name = "TotalCostTB";
+            this.TotalCostTB.Size = new System.Drawing.Size(125, 29);
+            this.TotalCostTB.TabIndex = 454;
+            this.TotalCostTB.TabStop = false;
+            this.TotalCostTB.Text = "0";
+            this.TotalCostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ServiceCost
+            // 
+            this.ServiceCost.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ServiceCost.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiceCost.ForeColor = System.Drawing.Color.Crimson;
+            this.ServiceCost.Location = new System.Drawing.Point(813, 11);
+            this.ServiceCost.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            this.ServiceCost.Name = "ServiceCost";
+            this.ServiceCost.Size = new System.Drawing.Size(125, 29);
+            this.ServiceCost.TabIndex = 455;
+            this.ServiceCost.TabStop = false;
+            this.ServiceCost.Text = "0";
+            this.ServiceCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // insur_cost_txt
+            // 
+            this.insur_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.insur_cost_txt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insur_cost_txt.ForeColor = System.Drawing.Color.Crimson;
+            this.insur_cost_txt.Location = new System.Drawing.Point(437, 12);
+            this.insur_cost_txt.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            this.insur_cost_txt.Name = "insur_cost_txt";
+            this.insur_cost_txt.Size = new System.Drawing.Size(125, 29);
+            this.insur_cost_txt.TabIndex = 456;
+            this.insur_cost_txt.TabStop = false;
+            this.insur_cost_txt.Text = "0";
+            this.insur_cost_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pat_cost_txt
+            // 
+            this.pat_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pat_cost_txt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pat_cost_txt.ForeColor = System.Drawing.Color.Crimson;
+            this.pat_cost_txt.Location = new System.Drawing.Point(56, 10);
+            this.pat_cost_txt.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            this.pat_cost_txt.Name = "pat_cost_txt";
+            this.pat_cost_txt.Size = new System.Drawing.Size(125, 29);
+            this.pat_cost_txt.TabIndex = 457;
+            this.pat_cost_txt.TabStop = false;
+            this.pat_cost_txt.Text = "0";
+            this.pat_cost_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FRMMedicalCommitee
             // 
@@ -1371,11 +1364,8 @@
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insur_cost_txt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pat_cost_txt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExcutingCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MedicalServiceAr)).EndInit();
@@ -1407,15 +1397,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InvoiceCostTB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TotalCostTB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Co_CostTB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceCostTB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.refund_check)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deny_check)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.approve_check)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoiceCostTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceCostTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Co_CostTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCostTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insur_cost_txt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pat_cost_txt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1442,7 +1435,6 @@
         internal Telerik.WinControls.UI.RadDropDownList ExcutingCenter;
         internal Telerik.WinControls.UI.RadLabel Label55;
         internal Telerik.WinControls.UI.RadLabel Label42;
-        internal Telerik.WinControls.UI.RadTextBox ServiceCost;
         internal Telerik.WinControls.UI.RadDropDownList MedicalServiceAr;
         internal Telerik.WinControls.UI.RadDropDownList MedicalServiceEn;
         internal Telerik.WinControls.UI.RadLabel Label14;
@@ -1460,9 +1452,7 @@
         internal Telerik.WinControls.UI.RadTextBox TotalCostTXT;
         public System.Windows.Forms.Label rqstId;
         internal Telerik.WinControls.UI.RadLabel radLabel2;
-        internal Telerik.WinControls.UI.RadTextBox pat_cost_txt;
         internal Telerik.WinControls.UI.RadLabel radLabel3;
-        internal Telerik.WinControls.UI.RadTextBox insur_cost_txt;
         public System.Windows.Forms.Label phoneNoLBL;
         public System.Windows.Forms.Label clientIdLBL;
         internal Telerik.WinControls.UI.RadRadioButton physiotherapyrb;
@@ -1476,12 +1466,8 @@
         private System.Windows.Forms.Label label7;
         internal Telerik.WinControls.UI.RadGroupBox radGroupBox3;
         internal Telerik.WinControls.UI.RadLabel radLabel5;
-        internal Telerik.WinControls.UI.RadTextBox InvoiceCostTB;
         internal Telerik.WinControls.UI.RadLabel radLabel6;
-        internal Telerik.WinControls.UI.RadTextBox TotalCostTB;
-        internal Telerik.WinControls.UI.RadTextBox Co_CostTB;
         internal Telerik.WinControls.UI.RadLabel radLabel7;
-        internal Telerik.WinControls.UI.RadTextBox ServiceCostTB;
         private Telerik.WinControls.UI.RadCheckBox refund_check;
         private Telerik.WinControls.UI.RadCheckBox deny_check;
         private Telerik.WinControls.UI.RadCheckBox approve_check;
@@ -1498,5 +1484,12 @@
         internal Telerik.WinControls.UI.RadLabel patDataAlertLBL;
         internal Telerik.WinControls.UI.RadLabel radLabel13;
         private Telerik.WinControls.UI.RadCheckBox COlistRB;
+        private Telerik.WinControls.UI.RadMaskedEditBox TotalCostTB;
+        private Telerik.WinControls.UI.RadMaskedEditBox Co_CostTB;
+        private Telerik.WinControls.UI.RadMaskedEditBox ServiceCostTB;
+        private Telerik.WinControls.UI.RadMaskedEditBox InvoiceCostTB;
+        private Telerik.WinControls.UI.RadMaskedEditBox ServiceCost;
+        private Telerik.WinControls.UI.RadMaskedEditBox pat_cost_txt;
+        private Telerik.WinControls.UI.RadMaskedEditBox insur_cost_txt;
     }
 }

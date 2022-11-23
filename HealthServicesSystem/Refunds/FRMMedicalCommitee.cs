@@ -15,11 +15,12 @@ namespace HealthServicesSystem.Refunds
     public partial class FRMMedicalCommitee : Telerik.WinControls.UI.RadForm
     {
         public string ServerName;
-        public int UserId = 0;
         public int LocalityId = 0;
         int i = 1;
         decimal totalCost = 0;
         dbContext db = new dbContext();
+        public int _UserId = LoginForm.Default.UserId;
+        DateTime date1 = PLC.getdate();
         public FRMMedicalCommitee()
         {
             InitializeComponent();
@@ -29,8 +30,8 @@ namespace HealthServicesSystem.Refunds
         {
             OperationDate.Value = PLC.getdate();
         
-                DateTime date1 = PLC.getdate();
-                UserId = LoginForm.Default.UserId;
+               
+                _UserId = LoginForm.Default.UserId;
                 LocalityId = PLC.LocalityId;
                
             using (dbContext  db = new dbContext())
@@ -614,8 +615,13 @@ namespace HealthServicesSystem.Refunds
             string centerId = ExcutingCenter.ValueMember;
             string medical_service_en = MedicalServiceEn.Text;
             string medical_service_ar = MedicalServiceAr.Text;
-            string service_id = MedicalServiceAr.SelectedValue.ToString();
-            decimal Service_Cost =Convert.ToDecimal( ServiceCost .Text);
+
+            int service_id = Convert.ToInt32(MedicalServiceAr.SelectedValue) ;
+            if (service_id ==0)
+            {
+                service_id = Convert.ToInt32(MedicalServiceEn.SelectedValue);
+            }
+            decimal Service_Cost =Convert.ToDecimal(ServiceCost.Text);
             decimal patient_cost = Convert.ToDecimal(pat_cost_txt .Text);
             decimal insurance_cost = Convert.ToDecimal(insur_cost_txt .Text);
             decimal co_cost = 0;
@@ -757,6 +763,7 @@ namespace HealthServicesSystem.Refunds
                     var Cs = db.CooperationServices.Where(x => x.Id == serviceId).First();
 
                     ServiceCost.Text = Cs.Cost;
+                    MedicalServiceAr .SelectedText = Cs.Service_AR_Name ;
                     insur_cost_txt.Text = Cs.Cost;
                     pat_cost_txt.Text = "0";
                 }
@@ -896,6 +903,7 @@ namespace HealthServicesSystem.Refunds
                         {
                             var da = db.CooperationServices.Where(x => x.Id == service_id).First();
                             pat_cost_txt.Text = "0";
+                            MedicalServiceEn.SelectedText  = da.Service_EN_Name;
                             ServiceCost.Text = da.Cost;
                             insur_cost_txt.Text = da.Cost;
                         }
@@ -938,6 +946,7 @@ namespace HealthServicesSystem.Refunds
                     int serviceId = Convert.ToInt32(MedicalServiceEn.SelectedValue);
                     var Cs = db.CooperationServices.Where(x => x.Id == serviceId).First();
 
+                    MedicalServiceEn.SelectedText = Cs.Service_EN_Name;
                     ServiceCost.Text = Cs.Cost;
                     insur_cost_txt.Text = Cs.Cost;
                 }
@@ -964,15 +973,19 @@ namespace HealthServicesSystem.Refunds
             }
 
 
-            if (GRDApprove.Rows.Count() >= 0 || Co_MedicalServiceEN.Text == "" || Co_MedicalServicesAR .Text == "")
-            {
-                RadMessageBox.Show("الرجاء اضافة الخدمات الطبية !");
-                return;
+            //if (GRDApprove.Rows.Count() >= 0 || Co_MedicalServiceEN.Text == "" || Co_MedicalServicesAR .Text == "")
+            //{
+            //    RadMessageBox.Show("الرجاء اضافة الخدمات الطبية !");
+            //    return;
 
-            }
+            //}
 
             MedicalCommitteeRequest rqst = new MedicalCommitteeRequest();
             MedicalCommitteeRequestDetails rqstDetails = new MedicalCommitteeRequestDetails();
+
+            var id = db.medicalCommitteeRequests .Select(x => x.Id).Max();
+            db.Database.ExecuteSqlCommand("DBCC CHECKIDENT('MedicalCommitteeRequests',RESEED," + id + ");");
+
 
             rqst.InsurNo = TXTSearch.Text;
             rqst.InsurName = FulName.Text;
@@ -984,7 +997,6 @@ namespace HealthServicesSystem.Refunds
             rqst.BirthDate = BirthDate.Value;
             rqst.SectorName = "";
             rqst.SectorId = 0;
-            rqst.Date_In =DateTime.Today.Date;
             rqst.Note = noteTXT.Text;
 
             if (transferRadio.IsChecked)
@@ -1039,7 +1051,9 @@ namespace HealthServicesSystem.Refunds
             {
                 rqst.CardType = CardType.local;
             }
-            rqst.rowStatus =RowStatus.NewRow;
+            rqst.UserId = _UserId;
+            rqst.DateIn = PLC.getdate();
+            rqst.RowStatus =RowStatus.NewRow;
             db.medicalCommitteeRequests.Add(rqst);
             db.SaveChanges();
 
@@ -1059,6 +1073,8 @@ namespace HealthServicesSystem.Refunds
                     rqstDetails.Insur_cost = Convert.ToDecimal(row.Cells["InsurPrice"].Value.ToString());
                     rqstDetails.ServiceCost = Convert.ToDecimal(row.Cells["ServicePrice"].Value.ToString());
                     rqstDetails.InvoiceCost = 0;
+                    rqstDetails.UserId = _UserId;
+                    rqstDetails.DateIn = PLC.getdate();
                     rqstDetails.RowStatus = RowStatus.NewRow;
                     db.medicalCommitteeRequestDetails.Add(rqstDetails);
                     db.SaveChanges();
@@ -1076,6 +1092,8 @@ namespace HealthServicesSystem.Refunds
                 rqstDetails.Insur_cost = 0;
                 rqstDetails.ServiceCost = Convert.ToInt32(ServiceCostTB .Text);
                 rqstDetails.InvoiceCost =Convert.ToInt32( InvoiceCostTB.Text);
+                rqstDetails.UserId =_UserId;
+                rqstDetails.DateIn = PLC.getdate();
                 rqstDetails.RowStatus = RowStatus.NewRow;
                 db.medicalCommitteeRequestDetails.Add(rqstDetails);
                 db.SaveChanges();
@@ -1224,9 +1242,15 @@ namespace HealthServicesSystem.Refunds
                 
                 int id = Convert.ToInt32(rqstId.Text);
                 int serivesId =Convert.ToInt32( GRDApprove.CurrentRow.Cells ["ServiceId"].Value );
-                var del = db.medicalCommitteeRequestDetails.Where(x=>x.RequestId== id && x.ServiceId== serivesId ).First();
-                del.RowStatus = RowStatus.Deleted;
-                db.SaveChanges();
+                if (id !=0)
+                {
+                    var del = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id && x.ServiceId == serivesId).First();
+                    del.RowStatus = RowStatus.Deleted;
+                    del.UserDeleted = _UserId;
+                    del.DeleteDate = PLC.getdate();
+                    db.SaveChanges();
+                }
+               
                 GRDApprove.CurrentRow.Delete();
                 RadMessageBox.Show("تم الحذف");
             }
@@ -1257,7 +1281,7 @@ namespace HealthServicesSystem.Refunds
                 if (Inv_Cost > totalCost)
                 {
                     TotalCostTB.Text = totalCost.ToString();
-                    TotalCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(TotalCostTB.Text));
+                   // TotalCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(TotalCostTB.Text));
                 }
                 else
                 {
@@ -1519,6 +1543,39 @@ namespace HealthServicesSystem.Refunds
         }
 
         private void ServiceCostTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(rqstId.Text);
+                if (id==0)
+                {
+                    clear();
+                }
+                else
+                {
+                    var del = db.medicalCommitteeRequests.Where(x => x.Id  == id ).First();
+                    del.RowStatus = RowStatus.Deleted;
+                    del.UserDeleted = _UserId;
+                    del.DeleteDate = PLC.getdate();
+
+                    db.SaveChanges();
+                    
+                }
+                RadMessageBox.Show("تم الحذف");
+            }
+            catch (Exception ex)
+            {
+                RadMessageBox.Show("لم يتم الحذف"+ ex.Message);
+                // throw;
+            }
+        }
+
+        private void Insur_cost_txt_TextChanged(object sender, EventArgs e)
         {
 
         }

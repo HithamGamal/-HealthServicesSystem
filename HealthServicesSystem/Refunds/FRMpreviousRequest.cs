@@ -17,7 +17,7 @@ namespace HealthServicesSystem.Refunds
         private void FRMpreviousRequest_Load(object sender, EventArgs e)
         {
             var rqsts = (from m in db.medicalCommitteeRequests
-                        where m.rowStatus != RowStatus.Deleted
+                        where m.RowStatus != RowStatus.Deleted
                          select new { Id = m.Id, InsurNo = m.InsurNo, InsurName = m.InsurName,
                              TotalCost = m.MedicalTotal,
                              CenterName = m.CenterName , RequsetType = m.RequestType })

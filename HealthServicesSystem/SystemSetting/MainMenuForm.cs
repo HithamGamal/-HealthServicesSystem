@@ -25,114 +25,142 @@ namespace HealthServicesSystem
 
         }
 
+        public void OpenForm(Form form)
+        {
+            //timer1.Stop();
+            //timer1.Start();
+
+            if (ActiveMdiChild != null)
+            {
+                //MessageBox.Show(form.Name);
+                foreach (var item in MdiChildren)
+                {
+
+                    if (item.Name == form.Name)
+                    {
+                        // MessageBox.Show(item.Text);
+                        item.WindowState = FormWindowState.Maximized;
+                    }
+                    else if (ActiveMdiChild.Name != form.Name)
+                    {
+
+                        //ActiveMdiChild.Close();
+                        form.MdiParent = this;
+                        form.WindowState = FormWindowState.Maximized;
+                        form.Show();
+                    }
+
+                }
+
+            }
+        }
+
+                //private void AddPaysheet_Click(object sender, EventArgs e)
+                //{
+                //    PaysheetForm form = new PaysheetForm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
 
 
-        //private void AddPaysheet_Click(object sender, EventArgs e)
-        //{
-        //    PaysheetForm form = new PaysheetForm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
+
+                //}
+
+                //private void NewClient_Click(object sender, EventArgs e)
+                //{
+                //    ClientForm form = new ClientForm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //    //Forms.ClientShow();
+
+                //}
 
 
 
-        //}
+                //private void NewContract_Click(object sender, EventArgs e)
+                //{
+                //    ContractForm form = new ContractForm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
-        //private void NewClient_Click(object sender, EventArgs e)
-        //{
-        //    ClientForm form = new ClientForm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //    //Forms.ClientShow();
+                //private void NewCard_Click(object sender, EventArgs e)
+                //{
+                //    CardForm form = new CardForm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
-        //}
+                //private void NewSubSector_Click(object sender, EventArgs e)
+                //{
+                //    SubSectorForm form = new SubSectorForm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
+                //private void NewArea_Click(object sender, EventArgs e)
+                //{
+                //    AreaForm form = new AreaForm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
+                //private void Target_Click(object sender, EventArgs e)
+                //{
+                //    TargetForm form = new TargetForm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
-        //private void NewContract_Click(object sender, EventArgs e)
-        //{
-        //    ContractForm form = new ContractForm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
+                //private void PaysheetAccountingReviewBTN_Click(object sender, EventArgs e)
+                //{
+                //    PaysheetAccountReviewFRM form = new PaysheetAccountReviewFRM();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
-        //private void NewCard_Click(object sender, EventArgs e)
-        //{
-        //    CardForm form = new CardForm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
+                //private void PaysheetReviewBTN_Click(object sender, EventArgs e)
+                //{
+                //    PaysheetReviewFRM form = new PaysheetReviewFRM();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
-        //private void NewSubSector_Click(object sender, EventArgs e)
-        //{
-        //    SubSectorForm form = new SubSectorForm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
+                //private void reviewCardBTN_Click(object sender, EventArgs e)
+                //{
+                //    CardRevisionFrm form = new CardRevisionFrm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
-        //private void NewArea_Click(object sender, EventArgs e)
-        //{
-        //    AreaForm form = new AreaForm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
+                //private void printCardBTN_Click(object sender, EventArgs e)
+                //{
+                //    PrintCardFrm form = new PrintCardFrm();
+                //    form.MdiParent = this;
+                //    form.WindowState = FormWindowState.Maximized;
+                //    form.Show();
+                //}
 
-        //private void Target_Click(object sender, EventArgs e)
-        //{
-        //    TargetForm form = new TargetForm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
+                //private void radRibbonBarGroup10_Click(object sender, EventArgs e)
+                //{
 
-        //private void PaysheetAccountingReviewBTN_Click(object sender, EventArgs e)
-        //{
-        //    PaysheetAccountReviewFRM form = new PaysheetAccountReviewFRM();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
+                //}
 
-        //private void PaysheetReviewBTN_Click(object sender, EventArgs e)
-        //{
-        //    PaysheetReviewFRM form = new PaysheetReviewFRM();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
+                //private void radButtonElement1_Click(object sender, EventArgs e)
+                //{
+                //    PaySheetStatusFRM.Default.ShowDialog();
+                //}
 
-        //private void reviewCardBTN_Click(object sender, EventArgs e)
-        //{
-        //    CardRevisionFrm form = new CardRevisionFrm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
-
-        //private void printCardBTN_Click(object sender, EventArgs e)
-        //{
-        //    PrintCardFrm form = new PrintCardFrm();
-        //    form.MdiParent = this;
-        //    form.WindowState = FormWindowState.Maximized;
-        //    form.Show();
-        //}
-
-        //private void radRibbonBarGroup10_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void radButtonElement1_Click(object sender, EventArgs e)
-        //{
-        //    PaySheetStatusFRM.Default.ShowDialog();
-        //}
-
-        private void MainMenuForm_Load(object sender, EventArgs e)
+                private void MainMenuForm_Load(object sender, EventArgs e)
         {
             using (dbContext db = new dbContext())
             {
@@ -246,6 +274,7 @@ namespace HealthServicesSystem
         private void FRMApproveMedicine_Click(object sender, EventArgs e)
         {
             FRMApproveMedicine form = new FRMApproveMedicine();
+            //OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -254,6 +283,7 @@ namespace HealthServicesSystem
         private void FrmAppMedicineTyp_Click(object sender, EventArgs e)
         {
             FrmAppMedicineTyp form = new FrmAppMedicineTyp();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -262,6 +292,7 @@ namespace HealthServicesSystem
         private void FrmPharmacist_Click(object sender, EventArgs e)
         {
             FrmPharmacist form = new FrmPharmacist();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -270,6 +301,7 @@ namespace HealthServicesSystem
         private void UserFRM_Click(object sender, EventArgs e)
         {
             UserFRM form = new UserFRM();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -278,6 +310,7 @@ namespace HealthServicesSystem
         private void UserGroup_Click(object sender, EventArgs e)
         {
             UserGroupFRM form = new UserGroupFRM();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -286,6 +319,7 @@ namespace HealthServicesSystem
         private void UserPermissionsFRM_Click(object sender, EventArgs e)
         {
             UserPermissionsFRM form = new UserPermissionsFRM();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -294,6 +328,7 @@ namespace HealthServicesSystem
         private void GroupPermissionsFRM_Click(object sender, EventArgs e)
         {
             GroupPermissionsFRM form = new GroupPermissionsFRM();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -302,6 +337,7 @@ namespace HealthServicesSystem
         private void CompanyConfig_Click(object sender, EventArgs e)
         {
             CompanyConfig form = new CompanyConfig();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -310,6 +346,7 @@ namespace HealthServicesSystem
         private void ChangePassFrm_Click(object sender, EventArgs e)
         {
             ChangePassFrm form = new ChangePassFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -318,6 +355,7 @@ namespace HealthServicesSystem
         private void RadButtonElement7_Click(object sender, EventArgs e)
         {
             FrmChronics form = new FrmChronics();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -326,6 +364,7 @@ namespace HealthServicesSystem
         private void FRMBookInfo_Click(object sender, EventArgs e)
         {
             FRMBookInfo form = new FRMBookInfo();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -334,6 +373,7 @@ namespace HealthServicesSystem
         private void FRMreportChronics_Click(object sender, EventArgs e)
         {
             FRMreportChronics form = new FRMreportChronics();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -342,6 +382,7 @@ namespace HealthServicesSystem
         private void FRMReception_Click(object sender, EventArgs e)
         {
             FRMReception form = new FRMReception();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -350,6 +391,7 @@ namespace HealthServicesSystem
         private void FRMmedicine_Click(object sender, EventArgs e)
         {
             FRMmedicine form = new FRMmedicine();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -358,6 +400,7 @@ namespace HealthServicesSystem
         private void FRMmedical_Click(object sender, EventArgs e)
         {
             FRMmedical form = new FRMmedical();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -366,6 +409,7 @@ namespace HealthServicesSystem
         private void FRMmedicalCoPay_Click(object sender, EventArgs e)
         {
             FRMmedicalCoPay form = new FRMmedicalCoPay();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -379,6 +423,7 @@ namespace HealthServicesSystem
         private void FRMRPTMedicalEStrdad_Click(object sender, EventArgs e)
         {
             FRMRPTMedicalEStrdad form = new FRMRPTMedicalEStrdad();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -387,6 +432,7 @@ namespace HealthServicesSystem
         private void FRMRPTMedicineEStrdad_Click(object sender, EventArgs e)
         {
             FRMRPTMedicineEStrdad form = new FRMRPTMedicineEStrdad();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -395,6 +441,7 @@ namespace HealthServicesSystem
         private void FRMMedicineSetting_Click(object sender, EventArgs e)
         {
             FRMMedicineSetting form = new FRMMedicineSetting();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -403,6 +450,7 @@ namespace HealthServicesSystem
         private void FRMMedicinePricing_Click(object sender, EventArgs e)
         {
             FRMMedicinePricing form = new FRMMedicinePricing();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -412,6 +460,7 @@ namespace HealthServicesSystem
         {
 
             FrmDiagnosis form = new FrmDiagnosis();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -420,6 +469,7 @@ namespace HealthServicesSystem
         private void FrmGenerics_Click(object sender, EventArgs e)
         {
             FrmGenerics form = new FrmGenerics();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -428,6 +478,7 @@ namespace HealthServicesSystem
         private void FrmTrades_Click(object sender, EventArgs e)
         {
             FrmTrades form = new FrmTrades();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -436,6 +487,7 @@ namespace HealthServicesSystem
         private void FrmMedicineOut_Click(object sender, EventArgs e)
         {
             FrmMedicineOut form = new FrmMedicineOut();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -444,6 +496,7 @@ namespace HealthServicesSystem
         private void FRMMedicalSetting_Click(object sender, EventArgs e)
         {
             FRMMedicalSetting form = new FRMMedicalSetting();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -452,6 +505,7 @@ namespace HealthServicesSystem
         private void FrmMedicalGroup_Click(object sender, EventArgs e)
         {
             FrmMedicalGroup form = new FrmMedicalGroup();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -460,6 +514,7 @@ namespace HealthServicesSystem
         private void FrmMedicalSubGroup_Click(object sender, EventArgs e)
         {
             FrmMedicalSubGroup form = new FrmMedicalSubGroup();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -473,6 +528,7 @@ namespace HealthServicesSystem
         private void RadButtonElement2_Click(object sender, EventArgs e)
         {
             FrmDiagnosis form = new FrmDiagnosis();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -481,6 +537,7 @@ namespace HealthServicesSystem
         private void FrmMedicineReasons_Click(object sender, EventArgs e)
         {
             FrmMedicineReasons form = new FrmMedicineReasons();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -489,6 +546,7 @@ namespace HealthServicesSystem
         private void FrmMedicalReasons_Click(object sender, EventArgs e)
         {
             FrmMedicalReasons form = new FrmMedicalReasons();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -497,6 +555,7 @@ namespace HealthServicesSystem
         private void FRMApproveSearch_Click(object sender, EventArgs e)
         {
             FRMApproveSearch form = new FRMApproveSearch();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -505,6 +564,7 @@ namespace HealthServicesSystem
         private void FRMApproveMedicineReorts_Click(object sender, EventArgs e)
         {
             FRMreportApproveMedicine form = new FRMreportApproveMedicine();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -513,6 +573,7 @@ namespace HealthServicesSystem
         private void RequestClm_Click(object sender, EventArgs e)
         {
             Claims.ClmRequestFrm form = new Claims.ClmRequestFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -521,6 +582,7 @@ namespace HealthServicesSystem
         private void AllocationClm_Click(object sender, EventArgs e)
         {
             Claims.AllocationFrm form = new Claims.AllocationFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -529,6 +591,7 @@ namespace HealthServicesSystem
         private void MedicenReview_Click(object sender, EventArgs e)
         {
             Claims.ClmReviewFrm form = new Claims.ClmReviewFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -537,6 +600,7 @@ namespace HealthServicesSystem
         private void ClmConfirm_Click(object sender, EventArgs e)
         {
             Claims.ClmConfirmReviewFrm form = new Claims.ClmConfirmReviewFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -553,6 +617,7 @@ namespace HealthServicesSystem
         private void NonConfirmReport_Click(object sender, EventArgs e)
         {
             Claims.NonConfirmFiltterFrm form = new Claims.NonConfirmFiltterFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -561,6 +626,7 @@ namespace HealthServicesSystem
         private void FillterData_Click(object sender, EventArgs e)
         {
             Claims.AdvanceFillterFrm form = new Claims.AdvanceFillterFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -569,14 +635,17 @@ namespace HealthServicesSystem
         private void CenterListNonConfirm_Click(object sender, EventArgs e)
         {
             Claims.ViewCenterListNonConfirmRepFrm form = new Claims.ViewCenterListNonConfirmRepFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
 
-        private void LastClaimsCenter_Click(object sender, EventArgs e)
+
+            private void LastClaimsCenter_Click(object sender, EventArgs e)
         {
             Claims.LastClaimsCenterRepFrm form = new Claims.LastClaimsCenterRepFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -585,6 +654,7 @@ namespace HealthServicesSystem
         private void ExportClms_Click(object sender, EventArgs e)
         {
             Claims.ImportFileFrm form = new Claims.ImportFileFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -601,6 +671,7 @@ namespace HealthServicesSystem
         private void ClmReceipt_Click(object sender, EventArgs e)
         {
             Claims.ClmReceiptFrm form = new Claims.ClmReceiptFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -609,6 +680,7 @@ namespace HealthServicesSystem
         private void EnableClms_Click(object sender, EventArgs e)
         {
             Claims.ClmEnableFrm form = new Claims.ClmEnableFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -617,6 +689,7 @@ namespace HealthServicesSystem
         private void SendClm_Click(object sender, EventArgs e)
         {
             Claims.ClmSendFrm form = new Claims.ClmSendFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -626,6 +699,7 @@ namespace HealthServicesSystem
         {
 
             CompireClaimsFrm form = new CompireClaimsFrm();
+            // OpenForm(form);
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
@@ -633,15 +707,16 @@ namespace HealthServicesSystem
 
         private void AddNonConfirm_Click(object sender, EventArgs e)
         {
-            AddNonConfirmFrm form = new AddNonConfirmFrm();
-            form.MdiParent = this;
-            form.WindowState = FormWindowState.Maximized;
-            form.Show();
+            //AddNonConfirmFrm form = new AddNonConfirmFrm();
+            //form.MdiParent = this;
+            //form.WindowState = FormWindowState.Maximized;
+            //form.Show();
         }
 
         private void FrmAddChronicMedicine_Click(object sender, EventArgs e)
         {
             FrmAddChronicMedicine frm = new FrmAddChronicMedicine();
+            // OpenForm(form);
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
@@ -650,6 +725,7 @@ namespace HealthServicesSystem
         private void CommitteeBTN_Click(object sender, EventArgs e)
         {
             FRMMedicalCommitee frm = new FRMMedicalCommitee();
+            // OpenForm(form);
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
@@ -658,6 +734,7 @@ namespace HealthServicesSystem
         private void CommitteeListBTN_Click(object sender, EventArgs e)
         {
             FRMCooperationServices frm = new FRMCooperationServices();
+            // OpenForm(form);
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();

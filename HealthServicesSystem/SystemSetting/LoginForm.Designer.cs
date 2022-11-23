@@ -93,7 +93,6 @@
             this.LoginBTN.Size = new System.Drawing.Size(132, 41);
             this.LoginBTN.TabIndex = 3;
             this.LoginBTN.Text = "دخول";
-            this.LoginBTN.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.LoginBTN.ThemeName = "Office2010Blue";
             this.LoginBTN.Click += new System.EventHandler(this.LoginBTN_Click);
             // 
@@ -130,7 +129,6 @@
             this.LogoutBTN.Size = new System.Drawing.Size(132, 41);
             this.LogoutBTN.TabIndex = 3;
             this.LogoutBTN.Text = "خروج";
-            this.LogoutBTN.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutBTN.ThemeName = "Office2010Blue";
             this.LogoutBTN.Click += new System.EventHandler(this.LogoutBTN_Click);
             // 

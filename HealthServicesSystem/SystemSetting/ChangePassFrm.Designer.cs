@@ -38,6 +38,7 @@
             this.RePassword = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.alertLBL = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.usernameslbl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oldpasslbl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newpasslbl)).BeginInit();
@@ -49,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertLBL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             // 
             this.usernameslbl.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameslbl.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.usernameslbl.Location = new System.Drawing.Point(285, 34);
+            this.usernameslbl.Location = new System.Drawing.Point(359, 37);
             this.usernameslbl.Name = "usernameslbl";
             this.usernameslbl.Size = new System.Drawing.Size(84, 26);
             this.usernameslbl.TabIndex = 0;
@@ -68,7 +70,7 @@
             // 
             this.oldpasslbl.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oldpasslbl.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.oldpasslbl.Location = new System.Drawing.Point(285, 74);
+            this.oldpasslbl.Location = new System.Drawing.Point(359, 77);
             this.oldpasslbl.Name = "oldpasslbl";
             this.oldpasslbl.Size = new System.Drawing.Size(90, 26);
             this.oldpasslbl.TabIndex = 1;
@@ -80,7 +82,7 @@
             // 
             this.newpasslbl.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newpasslbl.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.newpasslbl.Location = new System.Drawing.Point(285, 114);
+            this.newpasslbl.Location = new System.Drawing.Point(359, 117);
             this.newpasslbl.Name = "newpasslbl";
             this.newpasslbl.Size = new System.Drawing.Size(92, 26);
             this.newpasslbl.TabIndex = 1;
@@ -91,7 +93,7 @@
             // oldpasstxt
             // 
             this.oldpasstxt.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.oldpasstxt.Location = new System.Drawing.Point(34, 69);
+            this.oldpasstxt.Location = new System.Drawing.Point(108, 72);
             this.oldpasstxt.Name = "oldpasstxt";
             this.oldpasstxt.PasswordChar = '*';
             this.oldpasstxt.Size = new System.Drawing.Size(223, 20);
@@ -101,7 +103,7 @@
             // newpasstxt
             // 
             this.newpasstxt.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.newpasstxt.Location = new System.Drawing.Point(34, 109);
+            this.newpasstxt.Location = new System.Drawing.Point(108, 112);
             this.newpasstxt.Name = "newpasstxt";
             this.newpasstxt.PasswordChar = '*';
             this.newpasstxt.Size = new System.Drawing.Size(223, 20);
@@ -112,30 +114,32 @@
             // 
             this.usernamelbl.AutoSize = false;
             this.usernamelbl.BorderVisible = true;
-            this.usernamelbl.Font = new System.Drawing.Font("Sakkal Majalla", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernamelbl.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernamelbl.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.usernamelbl.Location = new System.Drawing.Point(34, 33);
+            this.usernamelbl.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usernamelbl.Location = new System.Drawing.Point(108, 36);
             this.usernamelbl.Name = "usernamelbl";
-            this.usernamelbl.Size = new System.Drawing.Size(223, 20);
+            this.usernamelbl.Size = new System.Drawing.Size(223, 27);
             this.usernamelbl.TabIndex = 1;
             this.usernamelbl.Text = "radLabel4";
-            this.usernamelbl.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.usernamelbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.usernamelbl.ThemeName = "Breeze";
             // 
             // Updatebtn
             // 
             this.Updatebtn.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Updatebtn.Location = new System.Drawing.Point(168, 187);
+            this.Updatebtn.Location = new System.Drawing.Point(213, 188);
             this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(110, 24);
+            this.Updatebtn.Size = new System.Drawing.Size(118, 39);
             this.Updatebtn.TabIndex = 5;
             this.Updatebtn.Text = "تحديث";
             this.Updatebtn.ThemeName = "Breeze";
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
             // 
             // RePassword
             // 
             this.RePassword.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.RePassword.Location = new System.Drawing.Point(34, 146);
+            this.RePassword.Location = new System.Drawing.Point(108, 149);
             this.RePassword.Name = "RePassword";
             this.RePassword.PasswordChar = '*';
             this.RePassword.Size = new System.Drawing.Size(223, 20);
@@ -146,7 +150,7 @@
             // 
             this.radLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.radLabel1.Location = new System.Drawing.Point(285, 151);
+            this.radLabel1.Location = new System.Drawing.Point(359, 154);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(131, 26);
             this.radLabel1.TabIndex = 5;
@@ -169,19 +173,32 @@
             this.radGroupBox1.Controls.Add(this.oldpasstxt);
             this.radGroupBox1.Controls.Add(this.newpasstxt);
             this.radGroupBox1.HeaderText = "تغيير كلمة المرور";
-            this.radGroupBox1.Location = new System.Drawing.Point(12, 12);
+            this.radGroupBox1.Location = new System.Drawing.Point(12, 53);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(504, 232);
+            this.radGroupBox1.Size = new System.Drawing.Size(582, 232);
             this.radGroupBox1.TabIndex = 7;
             this.radGroupBox1.Text = "تغيير كلمة المرور";
             this.radGroupBox1.ThemeName = "Office2010Blue";
+            // 
+            // alertLBL
+            // 
+            this.alertLBL.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alertLBL.ForeColor = System.Drawing.Color.ForestGreen;
+            this.alertLBL.Location = new System.Drawing.Point(268, 23);
+            this.alertLBL.Name = "alertLBL";
+            this.alertLBL.Size = new System.Drawing.Size(75, 24);
+            this.alertLBL.TabIndex = 8;
+            this.alertLBL.Text = "radLabel2";
+            this.alertLBL.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.alertLBL.Visible = false;
             // 
             // ChangePassFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(522, 250);
+            this.ClientSize = new System.Drawing.Size(606, 297);
+            this.Controls.Add(this.alertLBL);
             this.Controls.Add(this.radGroupBox1);
             this.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
@@ -191,8 +208,10 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تحديث رمز المرور";
             this.ThemeName = "Office2010Blue";
+            this.Load += new System.EventHandler(this.ChangePassFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usernameslbl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oldpasslbl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newpasslbl)).EndInit();
@@ -205,8 +224,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alertLBL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -223,6 +244,7 @@
         private Telerik.WinControls.UI.RadTextBox RePassword;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
+        public Telerik.WinControls.UI.RadLabel alertLBL;
 
         //private static ChangePassFrm _Default;
         //public static ChangePassFrm Default
