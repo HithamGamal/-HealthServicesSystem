@@ -982,9 +982,12 @@ namespace HealthServicesSystem.Reclaims
                         var Fdwa = db.Medicines.Where(p => p.Id == ServiceId).ToList();
                         if (Fdwa.Count > 0)
                         {
-                            if( Convert.IsDBNull(Fdwa[0].NOTE) == false)
+                            if( Convert.IsDBNull(Fdwa[0].NOTE.ToString()) == false)
                             {
-                                MessageBox.Show("Note :" + (char)13 + Fdwa[0].NOTE, "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                if (Fdwa[0].NOTE.ToString() != "")
+                                {
+                                    MessageBox.Show("Note :" + (char)13 + Fdwa[0].NOTE.ToString(), "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                }
                             }
                         }
                     }
