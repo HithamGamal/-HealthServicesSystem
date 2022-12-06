@@ -977,7 +977,19 @@ namespace HealthServicesSystem.Reclaims
                 if (dwalist.ContainsFocus)
                 {
                     ServiceId = Convert.ToInt32(dwalist.SelectedValue);
-                }
+                    using (dbContext db = new dbContext())
+                    {
+                        var Fdwa = db.Medicines.Where(p => p.Id == ServiceId).ToList();
+                        if (Fdwa.Count > 0)
+                        {
+                            if( Convert.IsDBNull(Fdwa[0].NOTE) == false)
+                            {
+                                MessageBox.Show("Note :" + (char)13 + Fdwa[0].NOTE, "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                    }
+
+                    }
             }
             catch (Exception)
             {
