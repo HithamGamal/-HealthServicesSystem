@@ -128,6 +128,8 @@
             this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup53 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.committeeBTN = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup55 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.CommitteeReports = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab6 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup30 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMApproveMedicine = new Telerik.WinControls.UI.RadButtonElement();
@@ -208,7 +210,7 @@
             // 
             // ribbonTab5
             // 
-            this.ribbonTab5.IsSelected = true;
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup5,
             this.radRibbonBarGroup13,
@@ -1067,11 +1069,12 @@
             // 
             // ribbonTab4
             // 
-            this.ribbonTab4.IsSelected = false;
+            this.ribbonTab4.IsSelected = true;
             this.ribbonTab4.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup27,
             this.radRibbonBarGroup28,
-            this.radRibbonBarGroup53});
+            this.radRibbonBarGroup53,
+            this.radRibbonBarGroup55});
             this.ribbonTab4.Name = "ribbonTab4";
             this.ribbonTab4.Text = "موافقات الخدمة الطبية";
             this.ribbonTab4.UseMnemonic = false;
@@ -1132,6 +1135,20 @@
             this.committeeBTN.Name = "committeeBTN";
             this.committeeBTN.Text = "موافقات اللجنة الطبية";
             this.committeeBTN.Click += new System.EventHandler(this.CommitteeBTN_Click);
+            // 
+            // radRibbonBarGroup55
+            // 
+            this.radRibbonBarGroup55.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.CommitteeReports});
+            this.radRibbonBarGroup55.Name = "radRibbonBarGroup55";
+            this.radRibbonBarGroup55.Text = "التقارير";
+            // 
+            // CommitteeReports
+            // 
+            this.CommitteeReports.Enabled = false;
+            this.CommitteeReports.Name = "CommitteeReports";
+            this.CommitteeReports.Text = "تقرير لجنة المساهمات والتحاويل";
+            this.CommitteeReports.Click += new System.EventHandler(this.CommitteeReports_Click);
             // 
             // ribbonTab6
             // 
@@ -1579,5 +1596,7 @@
         private Telerik.WinControls.UI.RadButtonElement committeeBTN;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup54;
         private Telerik.WinControls.UI.RadButtonElement committeeListBTN;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup55;
+        private Telerik.WinControls.UI.RadButtonElement CommitteeReports;
     }
 }

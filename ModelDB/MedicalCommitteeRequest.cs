@@ -44,8 +44,8 @@ namespace ModelDB
     }
     public enum CardType
     {
-        national,
-        local,
-        manual
+        ولائي,
+        ولاية_الخرطوم,
+        يدوي
     }
 }

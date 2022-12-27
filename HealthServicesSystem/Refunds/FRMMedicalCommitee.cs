@@ -668,12 +668,11 @@ namespace HealthServicesSystem.Refunds
                     rpt.centername.Value = Co_Centers .Text;
                     rpt.note.Value = noteTXT.Text;
                 }
-                else
+               else if (radPageView2.SelectedPage.Name == "ApproveRequest") 
                 {
                     rpt.centername.Value = ExcutingCenter.Text;
                 }
                
-                
 
                 //RequestFrmRPT frm = new RequestFrmRPT();
 
@@ -1041,15 +1040,15 @@ namespace HealthServicesSystem.Refunds
 
             if (card_typeTB .Text=="0")
             {
-                rqst.CardType = CardType.local;
+                rqst.CardType = CardType.ولاية_الخرطوم ;
             }
             else if (card_typeTB.Text == "1")
             {
-                rqst.CardType = CardType.national ;
+                rqst.CardType = CardType.ولائي   ;
             }
             else if (card_typeTB.Text == "2")
             {
-                rqst.CardType = CardType.local;
+                rqst.CardType = CardType.يدوي ;
             }
             rqst.UserId = _UserId;
             rqst.DateIn = PLC.getdate();
