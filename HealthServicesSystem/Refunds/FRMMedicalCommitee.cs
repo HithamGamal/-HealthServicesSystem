@@ -66,50 +66,50 @@ namespace HealthServicesSystem.Refunds
 
 
 
-                    if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
-                {
-                    PLC.DbCailm.Close();
-                }
-                PLC.DbCailm.Open();
+                //////    if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
+                //////{
+                //////    PLC.DbCailm.Close();
+                //////}
+                //////PLC.DbCailm.Open();
 
-                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  service_id, service_name,service_name_english FROM services where status='T' ", PLC.DbCailm);
-                DataTable dtEnService = new DataTable();
-                dtEnService.Clear();
-                da_EN_service.Fill(dtEnService);
-                //if (transferRadio.IsChecked)
-                //{
-
-
-                    //   MsgBox (dtCenter .Rows .Count)
-                    if (dtEnService.Rows.Count > 0)
-                    {
-                        MedicalServiceEn.DataSource = dtEnService;
-                        MedicalServiceEn.DisplayMember = "service_name_english";
-                        MedicalServiceEn.ValueMember = "service_id";
-                        MedicalServiceEn.SelectedIndex = -1;
-                        MedicalServiceEn.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-
-                        MedicalServiceAr.DataSource = dtEnService;
-                        MedicalServiceAr.DisplayMember = "service_name";
-                        MedicalServiceAr.ValueMember = "service_id";
-                        MedicalServiceAr.SelectedIndex = -1;
-                        MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                //////SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  service_id, service_name,service_name_english FROM services where status='T' ", PLC.DbCailm);
+                //////DataTable dtEnService = new DataTable();
+                //////dtEnService.Clear();
+                //////da_EN_service.Fill(dtEnService);
+                ////////if (transferRadio.IsChecked)
+                ////////{
 
 
+                //////    //   MsgBox (dtCenter .Rows .Count)
+                //////    if (dtEnService.Rows.Count > 0)
+                //////    {
+                //////        MedicalServiceEn.DataSource = dtEnService;
+                //////        MedicalServiceEn.DisplayMember = "service_name_english";
+                //////        MedicalServiceEn.ValueMember = "service_id";
+                //////        MedicalServiceEn.SelectedIndex = -1;
+                //////        MedicalServiceEn.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
-                        Co_MedicalServiceEN .DataSource = dtEnService;
-                        Co_MedicalServiceEN.DisplayMember = "service_name_english";
-                        Co_MedicalServiceEN.ValueMember = "service_id";
-                        Co_MedicalServiceEN.SelectedIndex = -1;
-                        Co_MedicalServiceEN.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                //////        MedicalServiceAr.DataSource = dtEnService;
+                //////        MedicalServiceAr.DisplayMember = "service_name";
+                //////        MedicalServiceAr.ValueMember = "service_id";
+                //////        MedicalServiceAr.SelectedIndex = -1;
+                //////        MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
-                        Co_MedicalServicesAR.DataSource = dtEnService;
-                        Co_MedicalServicesAR.DisplayMember = "service_name";
-                        Co_MedicalServicesAR.ValueMember = "service_id";
-                        Co_MedicalServicesAR.SelectedIndex = -1;
-                        Co_MedicalServicesAR.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
-                    }
+
+                //////        Co_MedicalServiceEN .DataSource = dtEnService;
+                //////        Co_MedicalServiceEN.DisplayMember = "service_name_english";
+                //////        Co_MedicalServiceEN.ValueMember = "service_id";
+                //////        Co_MedicalServiceEN.SelectedIndex = -1;
+                //////        Co_MedicalServiceEN.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                //////        Co_MedicalServicesAR.DataSource = dtEnService;
+                //////        Co_MedicalServicesAR.DisplayMember = "service_name";
+                //////        Co_MedicalServicesAR.ValueMember = "service_id";
+                //////        Co_MedicalServicesAR.SelectedIndex = -1;
+                //////        Co_MedicalServicesAR.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                //////    }
 
 
 
@@ -731,6 +731,7 @@ namespace HealthServicesSystem.Refunds
                     {
                         int service_id = Convert.ToInt32(MedicalServiceEn.SelectedValue);
                         int center_id = Convert.ToInt32(ExcutingCenter.SelectedValue);
+                        int service_cost = 0;
                         SqlDataAdapter da_service = new SqlDataAdapter("SELECT   servicecost,pat_cost,pat_servicecost FROM servicecost where status= 'Active' and center_id=" + center_id + " and service_id=" + service_id + "", PLC.DbCailm);
                         DataTable dtService = new DataTable();
                         dtService.Clear();
@@ -738,9 +739,10 @@ namespace HealthServicesSystem.Refunds
                         //   MsgBox (dtCenter .Rows .Count)
                         if (dtService.Rows.Count > 0)
                         {
-                            pat_cost_txt.Text = dtService.Rows[0]["pat_cost"].ToString();
-                            ServiceCost.Text = dtService.Rows[0]["servicecost"].ToString();
-                            insur_cost_txt.Text = dtService.Rows[0]["pat_servicecost"].ToString();
+                            service_cost =  Convert.ToInt32(dtService.Rows[0]["servicecost"].ToString())+Convert.ToInt32(dtService.Rows[0]["pat_servicecost"].ToString());
+                            pat_cost_txt.Text = dtService.Rows[0]["pat_servicecost"].ToString();
+                            ServiceCost.Text = service_cost .ToString();
+                            insur_cost_txt.Text = dtService.Rows[0]["servicecost"].ToString();
                         }
                     }
                     catch (Exception)
@@ -801,7 +803,7 @@ namespace HealthServicesSystem.Refunds
                 }
                 PLC.DbCailm.Open();
 
-                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT       services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T'", PLC.DbCailm);
+                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T'", PLC.DbCailm);
                 DataTable dtEnService = new DataTable();
                 dtEnService.Clear();
                 da_EN_service.Fill(dtEnService);
@@ -898,6 +900,7 @@ namespace HealthServicesSystem.Refunds
                     {
                         int service_id = Convert.ToInt32(MedicalServiceAr.SelectedValue);
                         int center_id = Convert.ToInt32(ExcutingCenter.SelectedValue);
+                        int service_cost = 0;
                         if (coRadio.IsChecked == true)
                         {
                             var da = db.CooperationServices.Where(x => x.Id == service_id).First();
@@ -917,9 +920,12 @@ namespace HealthServicesSystem.Refunds
                             //   MsgBox (dtCenter .Rows .Count)
                             if (dtService.Rows.Count > 0)
                             {
-                                pat_cost_txt.Text = dtService.Rows[0]["pat_cost"].ToString();
-                                ServiceCost.Text = dtService.Rows[0]["servicecost"].ToString();
-                                insur_cost_txt.Text = dtService.Rows[0]["pat_servicecost"].ToString();
+                                
+                                service_cost = Convert.ToInt32(dtService.Rows[0]["servicecost"].ToString()) + Convert.ToInt32(dtService.Rows[0]["pat_servicecost"].ToString());
+                                pat_cost_txt.Text = dtService.Rows[0]["pat_servicecost"].ToString();
+                                ServiceCost.Text = service_cost.ToString();
+                                insur_cost_txt.Text = dtService.Rows[0]["servicecost"].ToString();
+
                             }
                             else
                             {
@@ -1182,17 +1188,17 @@ namespace HealthServicesSystem.Refunds
                 //   MsgBox (dtCenter .Rows .Count)
                 if (dtEnService.Rows.Count > 0)
                 {
-                    MedicalServiceEn.DataSource = dtEnService;
-                    MedicalServiceEn.DisplayMember = "service_name_english";
-                    MedicalServiceEn.ValueMember = "service_id";
-                    MedicalServiceEn.SelectedIndex = -1;
-                    MedicalServiceEn.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                    //MedicalServiceEn.DataSource = dtEnService;
+                    //MedicalServiceEn.DisplayMember = "service_name_english";
+                    //MedicalServiceEn.ValueMember = "service_id";
+                    //MedicalServiceEn.SelectedIndex = -1;
+                    //MedicalServiceEn.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
-                    MedicalServiceAr.DataSource = dtEnService;
-                    MedicalServiceAr.DisplayMember = "service_name";
-                    MedicalServiceAr.ValueMember = "service_id";
-                    MedicalServiceAr.SelectedIndex = -1;
-                    MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                    //MedicalServiceAr.DataSource = dtEnService;
+                    //MedicalServiceAr.DisplayMember = "service_name";
+                    //MedicalServiceAr.ValueMember = "service_id";
+                    //MedicalServiceAr.SelectedIndex = -1;
+                    //MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
                 }
 

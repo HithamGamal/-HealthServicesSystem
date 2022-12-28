@@ -63,10 +63,6 @@
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
-    <Compile Include="Migrations\202211230614048_saif_2022_11_23.cs" />
-    <Compile Include="Migrations\202211230614048_saif_2022_11_23.designer.cs">
-      <DependentUpon>202211230614048_saif_2022_11_23.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -147,11 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ModelDB.sln" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202211230614048_saif_2022_11_23.resx">
-      <DependentUpon>202211230614048_saif_2022_11_23.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
