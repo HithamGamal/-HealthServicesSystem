@@ -17,6 +17,7 @@ namespace HealthServicesSystem.Refunds
         public string ServerName;
         public int LocalityId = 0;
         int i = 1;
+        int clientId = 0;
         decimal totalCost = 0;
         dbContext db = new dbContext();
         public int _UserId = LoginForm.Default.UserId;
@@ -42,7 +43,7 @@ namespace HealthServicesSystem.Refunds
                         PLC.DbCailm.Close();
                     }
                     PLC.DbCailm.Open();
-                    SqlDataAdapter daCenter = new SqlDataAdapter("SELECT   center_id,center_name FROM   centers   where center_status= 'فعال'", PLC.DbCailm);
+                    SqlDataAdapter daCenter = new SqlDataAdapter("SELECT   center_id,center_name FROM   centers   WHERE center_id IN (SELECT center_id FROM  servicecost WHERE status='Active') AND center_status= 'فعال'", PLC.DbCailm);
                 DataTable dtCenter = new DataTable();
                 dtCenter.Clear();
                 daCenter.Fill(dtCenter);
@@ -132,6 +133,7 @@ namespace HealthServicesSystem.Refunds
         {
             find_insurance_no(TXTSearch.Text);
             transaction_history(TXTSearch.Text);
+            clientId = Convert.ToInt32(clientIdLBL.Text);
         }
 
         private void GRDApprove_Click(object sender, EventArgs e)
@@ -559,8 +561,6 @@ namespace HealthServicesSystem.Refunds
                 FRMEstrdadhistory frh = new FRMEstrdadhistory();
                 PLC.FlagMedical = 1;
                 frh.ShowDialog();
-             
-
             }
         }
 
@@ -596,12 +596,17 @@ namespace HealthServicesSystem.Refunds
             physiotherapyrb.CheckState = CheckState.Unchecked;
             coRadio.CheckState = CheckState.Unchecked;
             patDataAlertLBL.Visible = false;
-                FulName.Enabled = false;
+            FulName.Enabled = false;
             TotalCostTB.Text = "";
             Co_CostTB.Text = "";
             ServiceCostTB.Text = "";
             InvoiceCostTB.Text = "";
-            ExcutingCenter.Text = ""; 
+            ExcutingCenter.Text = "";
+            clientId = 0;
+            pat_cost_txt.Enabled = false;
+            ServiceCost.Enabled = false;
+            insur_cost_txt.Enabled = false;
+
         }
         private void NewBTN_Click(object sender, EventArgs e)
         {
@@ -650,7 +655,7 @@ namespace HealthServicesSystem.Refunds
             {
                 int id = Convert.ToInt32(rqstId.Text);
                 TransferRPT rpt = new TransferRPT();
-                var data = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id).Select(x => new { service_id = x.ServiceId, pat_cost = x.Pat_cost, service_Name = x.Service_Name, ServiceCost= x.Insur_cost }).ToList();
+                var data = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id).Select(x => new { service_id = x.ServiceId, pat_cost = x.Pat_cost, service_Name = x.Service_Name, ServiceCost= x.Insur_cost , center=x.MedicalCommitteeRequest.CenterName }).ToList();
                 rpt.DataSource = data;
                 rpt.rqstId.Value = rqstId.Text;
                 rpt.patientname.Value = FulName.Text;
@@ -672,9 +677,9 @@ namespace HealthServicesSystem.Refunds
                 {
                     rpt.centername.Value = ExcutingCenter.Text;
                 }
-               
 
-                //RequestFrmRPT frm = new RequestFrmRPT();
+
+                RequestFrmRPT frm = new RequestFrmRPT();
 
                 //frm.reportViewer1.ReportSource = rpt;
                 //frm.reportViewer1.RefreshReport();
@@ -803,7 +808,7 @@ namespace HealthServicesSystem.Refunds
                 }
                 PLC.DbCailm.Open();
 
-                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T'", PLC.DbCailm);
+                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T' AND  dbo.services.is_new='Y'", PLC.DbCailm);
                 DataTable dtEnService = new DataTable();
                 dtEnService.Clear();
                 da_EN_service.Fill(dtEnService);
@@ -878,8 +883,10 @@ namespace HealthServicesSystem.Refunds
                     //        MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
 
                     //    }
-                        //}
-
+                    //}
+                    pat_cost_txt.Text = "0";
+                    ServiceCost.Text = "0";
+                    insur_cost_txt.Text = "0";
                 }
             }
             catch (Exception)
@@ -971,6 +978,10 @@ namespace HealthServicesSystem.Refunds
         private void SaveBTN_Click(object sender, EventArgs e)
         {
 
+            int y = PLC.getdate().Year;
+            int m = PLC.getdate().Month;
+
+
             if (string.IsNullOrEmpty(TXTSearch.Text ))
             {
                 RadMessageBox.Show("الرجاء ادخال بيانات المشترك !");
@@ -1028,6 +1039,7 @@ namespace HealthServicesSystem.Refunds
 
                 rqst.MedicalTotal = Convert.ToDecimal(TotalCostTXT.Text);
                 rqst.CenterId = Convert.ToInt32(ExcutingCenter.SelectedValue);
+                rqst.CenterName = ExcutingCenter.Text;
             }
 
 
@@ -1106,7 +1118,7 @@ namespace HealthServicesSystem.Refunds
             }
 
 
-            MessageBox.Show("تم الحفظ بنجاح!");
+          ///  MessageBox.Show("تم الحفظ بنجاح!");
             print();
             clear();
         }
@@ -1169,6 +1181,7 @@ namespace HealthServicesSystem.Refunds
 
         private void TransferRadio_ToggleStateChanged(object sender, Telerik.WinControls.UI.StateChangedEventArgs args)
         {
+            
             if (transferRadio.IsChecked  || physiotherapyrb.IsChecked)
             {
                 if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
@@ -1177,7 +1190,7 @@ namespace HealthServicesSystem.Refunds
                 }
                 PLC.DbCailm.Open();
 
-                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  service_id, service_name,service_name_english FROM services where status='T' ", PLC.DbCailm);
+                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  service_id, service_name,service_name_english FROM services where status='T' AND  dbo.services.is_new='Y' ", PLC.DbCailm);
                 DataTable dtEnService = new DataTable();
                 dtEnService.Clear();
                 da_EN_service.Fill(dtEnService);
@@ -1205,6 +1218,18 @@ namespace HealthServicesSystem.Refunds
 
 
                 //}
+            }
+
+            var q = (from m in db.exceptionClients
+                     where m.ClientId == clientId
+                     select m).Count();
+
+
+            if (q > 0)
+            {
+                pat_cost_txt.Enabled = true;
+                ServiceCost.Enabled = true;
+                insur_cost_txt.Enabled = true;
             }
             pat_cost_txt.Text = "0";
             ServiceCost.Text = "0";
@@ -1472,7 +1497,7 @@ namespace HealthServicesSystem.Refunds
                     }
                     PLC.DbCailm.Open();
 
-                    SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT       services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T'", PLC.DbCailm);
+                    SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T' AND  dbo.services.is_new='Y'", PLC.DbCailm);
                     DataTable dtEnService = new DataTable();
                     dtEnService.Clear();
                     da_EN_service.Fill(dtEnService);
