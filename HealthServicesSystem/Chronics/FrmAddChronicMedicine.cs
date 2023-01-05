@@ -127,6 +127,7 @@ namespace HealthServicesSystem.Reclaims
                             rm.GenericId = ServiceId;
                             rm.OperationDate = PLC.getdate();
                             rm.Quantity = Convert.ToInt32(GrdDwa.Rows[i].Cells["quantity"].Value);
+                            rm.UserId = UserId;
                             db.ChronicMedicines.Add(rm);
 
 
@@ -136,7 +137,7 @@ namespace HealthServicesSystem.Reclaims
                         db.SaveChanges();
                     }
                     Saved = true;
-                        var ApproveToday = db.ChronicMedicines .Where(p =>  p.OperationDate == OperationDate.Value).GroupBy(p=> p.InsurNo).Select(p => new {Id= 1, p.Key }).ToList();
+                        var ApproveToday = db.ChronicMedicines .Where(p =>  p.OperationDate == OperationDate.Value && p.UserId==UserId).GroupBy(p=> p.InsurNo).Select(p => new {Id= 1, p.Key }).ToList();
                         GrdDailyWork.DataSource = ApproveToday;
                         if (GrdDailyWork.RowCount > 0)
                         {
