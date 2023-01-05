@@ -125,18 +125,35 @@ namespace HealthServicesSystem.Reclaims
                             ChronicMedicine rm = new ChronicMedicine();
                             rm.InsurNo = card_no.Text;
                             rm.GenericId = ServiceId;
+                            rm.OperationDate = PLC.getdate();
                             rm.Quantity = Convert.ToInt32(GrdDwa.Rows[i].Cells["quantity"].Value);
                             db.ChronicMedicines.Add(rm);
 
 
                         }
-                        //  }
+                        
 
                         db.SaveChanges();
-                        Saved = true;
+                    }
+                    Saved = true;
+                        var ApproveToday = db.ChronicMedicines .Where(p =>  p.OperationDate == OperationDate.Value).GroupBy(p=> p.InsurNo).Select(p => new {Id= 1, p.Key }).ToList();
+                        GrdDailyWork.DataSource = ApproveToday;
+                        if (GrdDailyWork.RowCount > 0)
+                        {
+                            for (int i = 0; i < GrdDailyWork.RowCount; i++)
+                            {
+                                GrdDailyWork.Rows[i].Cells[0].Value = i + 1;
+                            }
+                            if (GrdDailyWork.RowCount > 0)
+                            {
+                                GrdDailyWork.Rows[GrdDailyWork.RowCount - 1].IsCurrent = true;
+                                GrdDailyWork.Rows[GrdDailyWork.RowCount - 1].IsSelected = true;
+
+                            }
+                        }
                         MessageBox.Show("لقد تم حفظ بيانات الأدوية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    }
+                   // }
                 }
             }
             catch (Exception)
@@ -217,7 +234,7 @@ namespace HealthServicesSystem.Reclaims
                                 {
                                     StrUnit = Dbunit[0].Unit.Unit_Name;
                                 }
-                                UnitInfo.Text = "تكتب بأصغر وحدة " + " " + "وأصغر وحدة هي " + StrUnit;
+                                //UnitInfo.Text = "تكتب بأصغر وحدة " + " " + "وأصغر وحدة هي " + StrUnit;
                                 quantity.Text = 1.ToString();
                             }
                         }
@@ -641,6 +658,49 @@ namespace HealthServicesSystem.Reclaims
             if ((!(char.IsControl(e.KeyChar))) && (!(char.IsDigit(e.KeyChar))))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void GrdDailyWork_CommandCellClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            if (GrdDailyWork.RowCount > 0)
+            {
+                using (dbContext db = new dbContext())
+                {
+                  string   insurNO = e.Row.Cells["InsurNo"].Value.ToString();
+                    if (GrdDailyWork.CurrentColumn.Name == "Show")
+                    {
+                        var FRef = db.ChronicsBooks.Where(p => p.InsurNo == insurNO && p.Activated == true && p.RowStatus != RowStatus.Deleted).Take(1).ToList();
+                        if (FRef.Count > 0)
+                        {
+
+                            BookId = FRef[0].Id;
+                            card_no.Text = FRef[0].InsurNo;
+                            CustName.Text = FRef[0].InsurName;
+                            //OperationDate.Value = FRef[0].ReclaimDate;
+                            ServerName.Text = FRef[0].Server;
+                            //var FrefMd = db.ReclaimMedicals.Where(p => p.BookId == BookId).ToList();
+                            // medicalsum.Text = FRef[0].MedicineTotal.ToString();
+                            FillGrid();
+
+
+                            //if (FrefMl.Count > 0)
+                            //{
+                            //    Saved = true;
+
+
+                            //    BillStatus.SelectedIndex = Convert.ToInt32(FrefMl[0].ReclaimStatus);
+                            //    approvereason.SelectedValue = FrefMl[0].ReclaimMedicineResonId;
+
+                            //    for (int i = 0; i < FrefMl.Count; i++)
+                            //    {
+                            //        GrdDwa.Rows[i].Cells[0].Value = i + 1;
+                            //    }
+
+                            //}
+                        }
+                    }
+                }
             }
         }
     }

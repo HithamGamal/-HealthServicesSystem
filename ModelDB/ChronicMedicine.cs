@@ -15,6 +15,8 @@ namespace ModelDB
         [ForeignKey("GenericId")]
         public virtual MedicineForReclaim MedicineForReclaim { get; set; }
         public int Quantity { get; set; }
-        
+        public DateTime OperationDate { get; set; }
+
+
     }
 }

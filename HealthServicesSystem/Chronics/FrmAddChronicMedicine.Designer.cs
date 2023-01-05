@@ -34,6 +34,11 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddChronicMedicine));
             this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
             this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -51,7 +56,6 @@
             this.Label16 = new Telerik.WinControls.UI.RadLabel();
             this.Label15 = new Telerik.WinControls.UI.RadLabel();
             this.GroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.UnitInfo = new Telerik.WinControls.UI.RadLabel();
             this.GrdDwa = new Telerik.WinControls.UI.RadGridView();
             this.totalcostsum = new Telerik.WinControls.UI.RadTextBox();
             this.ChSave = new Telerik.WinControls.UI.RadCheckBox();
@@ -64,6 +68,8 @@
             this.BookNo = new Telerik.WinControls.UI.RadTextBox();
             this.Label9 = new Telerik.WinControls.UI.RadLabel();
             this.ServerName = new Telerik.WinControls.UI.RadTextBox();
+            this.LBLDaily = new Telerik.WinControls.UI.RadLabel();
+            this.GrdDailyWork = new Telerik.WinControls.UI.RadGridView();
             ((System.ComponentModel.ISupportInitialize)(this.Button3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button6)).BeginInit();
@@ -80,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Label15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).BeginInit();
             this.GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UnitInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrdDwa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrdDwa.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalcostsum)).BeginInit();
@@ -94,6 +99,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BookNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LBLDaily)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdDailyWork)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdDailyWork.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +110,7 @@
             this.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Button3.Image = global::HealthServicesSystem.Properties.Resources.icons8_remove_481;
-            this.Button3.Location = new System.Drawing.Point(241, 473);
+            this.Button3.Location = new System.Drawing.Point(241, 481);
             this.Button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(211, 48);
@@ -117,7 +125,7 @@
             this.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Button4.Image = global::HealthServicesSystem.Properties.Resources.icons8_downloading_updates_48;
-            this.Button4.Location = new System.Drawing.Point(460, 473);
+            this.Button4.Location = new System.Drawing.Point(460, 481);
             this.Button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(156, 48);
@@ -132,7 +140,7 @@
             this.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Button6.Image = global::HealthServicesSystem.Properties.Resources.icons8_add_32;
-            this.Button6.Location = new System.Drawing.Point(622, 473);
+            this.Button6.Location = new System.Drawing.Point(622, 481);
             this.Button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(156, 48);
@@ -168,7 +176,7 @@
             this.GroupBox3.Location = new System.Drawing.Point(1, 2);
             this.GroupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(1045, 527);
+            this.GroupBox3.Size = new System.Drawing.Size(1054, 711);
             this.GroupBox3.TabIndex = 348;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.Text = " ";
@@ -301,8 +309,9 @@
             // 
             this.GroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBox1.Controls.Add(this.UnitInfo);
+            this.GroupBox1.Controls.Add(this.LBLDaily);
             this.GroupBox1.Controls.Add(this.GrdDwa);
+            this.GroupBox1.Controls.Add(this.GrdDailyWork);
             this.GroupBox1.Controls.Add(this.totalcostsum);
             this.GroupBox1.Controls.Add(this.ChSave);
             this.GroupBox1.Controls.Add(this.Label13);
@@ -315,25 +324,10 @@
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.GroupBox1.Size = new System.Drawing.Size(1035, 356);
+            this.GroupBox1.Size = new System.Drawing.Size(1054, 356);
             this.GroupBox1.TabIndex = 5;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.ThemeName = "Office2010Blue";
-            // 
-            // UnitInfo
-            // 
-            this.UnitInfo.BackColor = System.Drawing.Color.Transparent;
-            this.UnitInfo.BorderVisible = true;
-            this.UnitInfo.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
-            this.UnitInfo.ForeColor = System.Drawing.Color.Crimson;
-            this.UnitInfo.Location = new System.Drawing.Point(151, 39);
-            this.UnitInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.UnitInfo.Name = "UnitInfo";
-            this.UnitInfo.Size = new System.Drawing.Size(153, 31);
-            this.UnitInfo.TabIndex = 439;
-            this.UnitInfo.Text = "تكتب الكمية بأصغر وحدة";
-            this.UnitInfo.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.UnitInfo.ThemeName = "Office2010Blue";
             // 
             // GrdDwa
             // 
@@ -342,7 +336,7 @@
             this.GrdDwa.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
             this.GrdDwa.ForeColor = System.Drawing.Color.Black;
             this.GrdDwa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GrdDwa.Location = new System.Drawing.Point(4, 102);
+            this.GrdDwa.Location = new System.Drawing.Point(6, 41);
             this.GrdDwa.Margin = new System.Windows.Forms.Padding(2);
             // 
             // 
@@ -384,7 +378,7 @@
             this.GrdDwa.Name = "GrdDwa";
             this.GrdDwa.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GrdDwa.ShowGroupPanel = false;
-            this.GrdDwa.Size = new System.Drawing.Size(1015, 231);
+            this.GrdDwa.Size = new System.Drawing.Size(1015, 134);
             this.GrdDwa.TabIndex = 6;
             this.GrdDwa.ThemeName = "Office2010Blue";
             // 
@@ -462,10 +456,10 @@
             this.Button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.Button1.Font = new System.Drawing.Font("Sakkal Majalla", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Button1.Location = new System.Drawing.Point(60, 38);
+            this.Button1.Location = new System.Drawing.Point(62, 4);
             this.Button1.Margin = new System.Windows.Forms.Padding(2);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(52, 44);
+            this.Button1.Size = new System.Drawing.Size(52, 34);
             this.Button1.TabIndex = 6;
             this.Button1.Text = "+";
             this.Button1.ThemeName = "Office2010Blue";
@@ -476,10 +470,10 @@
             this.Button2.BackColor = System.Drawing.SystemColors.Highlight;
             this.Button2.Font = new System.Drawing.Font("Sakkal Majalla", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Button2.Location = new System.Drawing.Point(4, 38);
+            this.Button2.Location = new System.Drawing.Point(6, 4);
             this.Button2.Margin = new System.Windows.Forms.Padding(2);
             this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(52, 44);
+            this.Button2.Size = new System.Drawing.Size(52, 34);
             this.Button2.TabIndex = 5;
             this.Button2.Text = "-";
             this.Button2.ThemeName = "Office2010Blue";
@@ -543,6 +537,69 @@
             this.ServerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ServerName.ThemeName = "Office2010Blue";
             // 
+            // LBLDaily
+            // 
+            this.LBLDaily.BackColor = System.Drawing.Color.Transparent;
+            this.LBLDaily.BorderVisible = true;
+            this.LBLDaily.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDaily.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.LBLDaily.Location = new System.Drawing.Point(920, 177);
+            this.LBLDaily.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBLDaily.Name = "LBLDaily";
+            this.LBLDaily.Size = new System.Drawing.Size(110, 31);
+            this.LBLDaily.TabIndex = 441;
+            this.LBLDaily.Text = "التصاديق اليومية";
+            this.LBLDaily.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.LBLDaily.ThemeName = "Office2010Blue";
+            // 
+            // GrdDailyWork
+            // 
+            this.GrdDailyWork.BackColor = System.Drawing.Color.Transparent;
+            this.GrdDailyWork.Cursor = System.Windows.Forms.Cursors.Default;
+            this.GrdDailyWork.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
+            this.GrdDailyWork.ForeColor = System.Drawing.Color.Black;
+            this.GrdDailyWork.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GrdDailyWork.Location = new System.Drawing.Point(4, 206);
+            this.GrdDailyWork.Margin = new System.Windows.Forms.Padding(2);
+            // 
+            // 
+            // 
+            this.GrdDailyWork.MasterTemplate.AllowAddNewRow = false;
+            this.GrdDailyWork.MasterTemplate.AllowDeleteRow = false;
+            gridViewTextBoxColumn6.HeaderText = "م";
+            gridViewTextBoxColumn6.Name = "Serial";
+            gridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn7.DataType = typeof(int);
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "Id";
+            gridViewTextBoxColumn7.HeaderText = "رقم التصديق";
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.Name = "Id";
+            gridViewTextBoxColumn7.Width = 150;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "InsurNo";
+            gridViewTextBoxColumn8.HeaderText = "رقم التأمين";
+            gridViewTextBoxColumn8.Name = "InsurNo";
+            gridViewTextBoxColumn8.ReadOnly = true;
+            gridViewTextBoxColumn8.Width = 500;
+            gridViewCommandColumn1.HeaderText = "عرض";
+            gridViewCommandColumn1.Name = "Show";
+            gridViewCommandColumn1.Width = 100;
+            this.GrdDailyWork.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewCommandColumn1});
+            this.GrdDailyWork.MasterTemplate.EnableFiltering = true;
+            this.GrdDailyWork.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.GrdDailyWork.Name = "GrdDailyWork";
+            this.GrdDailyWork.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.GrdDailyWork.ShowGroupPanel = false;
+            this.GrdDailyWork.Size = new System.Drawing.Size(1024, 158);
+            this.GrdDailyWork.TabIndex = 440;
+            this.GrdDailyWork.ThemeName = "Office2010Blue";
+            this.GrdDailyWork.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.GrdDailyWork_CommandCellClick);
+            // 
             // FrmAddChronicMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -581,7 +638,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).EndInit();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UnitInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrdDwa.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrdDwa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalcostsum)).EndInit();
@@ -595,6 +651,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BookNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LBLDaily)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdDailyWork.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdDailyWork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -636,7 +695,8 @@
         internal Telerik.WinControls.UI.RadDateTimePicker OperationDate;
         internal Telerik.WinControls.UI.RadLabel mahliah;
         private Telerik.WinControls.Themes.Office2010BlueTheme office2010BlueTheme1;
-        internal Telerik.WinControls.UI.RadLabel UnitInfo;
+        internal Telerik.WinControls.UI.RadLabel LBLDaily;
+        internal Telerik.WinControls.UI.RadGridView GrdDailyWork;
         //private static FrmAddChronicMedicine _DefaultInstance;
         //public static FrmAddChronicMedicine Default
         //{
