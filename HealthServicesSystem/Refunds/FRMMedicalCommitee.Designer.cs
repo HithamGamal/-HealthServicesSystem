@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMMedicalCommitee));
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -344,7 +345,7 @@
             this.BTNpreviousRequest.BackColor = System.Drawing.Color.White;
             this.BTNpreviousRequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTNpreviousRequest.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BTNpreviousRequest.Image = global::HealthServicesSystem.Properties.Resources.icons8_search_24;
+            this.BTNpreviousRequest.Image = ((System.Drawing.Image)(resources.GetObject("BTNpreviousRequest.Image")));
             this.BTNpreviousRequest.Location = new System.Drawing.Point(13, 21);
             this.BTNpreviousRequest.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BTNpreviousRequest.Name = "BTNpreviousRequest";
@@ -621,7 +622,7 @@
             this.TotalCostTXT.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TotalCostTXT.Enabled = false;
             this.TotalCostTXT.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.TotalCostTXT.Location = new System.Drawing.Point(14, 67);
+            this.TotalCostTXT.Location = new System.Drawing.Point(14, 68);
             this.TotalCostTXT.Name = "TotalCostTXT";
             this.TotalCostTXT.ReadOnly = true;
             this.TotalCostTXT.Size = new System.Drawing.Size(63, 32);
@@ -761,6 +762,7 @@
             this.ExcutingCenter.TabIndex = 13;
             this.ExcutingCenter.ThemeName = "Office2010Blue";
             this.ExcutingCenter.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.ExcutingCenter_SelectedIndexChanged);
+            this.ExcutingCenter.Click += new System.EventHandler(this.ExcutingCenter_Click);
             this.ExcutingCenter.Enter += new System.EventHandler(this.ExcutingCenter_Enter);
             ((Telerik.WinControls.UI.RadDropDownListElement)(this.ExcutingCenter.GetChildAt(0))).RightToLeft = true;
             // 
@@ -1026,7 +1028,7 @@
             this.CooperationCommittee.Controls.Add(this.radGroupBox2);
             this.CooperationCommittee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CooperationCommittee.ForeColor = System.Drawing.Color.Maroon;
-            this.CooperationCommittee.ItemSize = new System.Drawing.SizeF(675F, 29F);
+            this.CooperationCommittee.ItemSize = new System.Drawing.SizeF(672F, 30F);
             this.CooperationCommittee.Location = new System.Drawing.Point(12, 40);
             this.CooperationCommittee.Name = "CooperationCommittee";
             this.CooperationCommittee.Size = new System.Drawing.Size(1372, 450);

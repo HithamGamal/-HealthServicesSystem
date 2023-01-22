@@ -662,6 +662,7 @@ namespace HealthServicesSystem.Refunds
                 if (coRadio.IsChecked)
                 {
                     rpt.ServiceCost.Visible = true;
+                    rpt.textBox13.Visible = true;
                     rpt.textBox21 .Visible = true;
                 }
                 if (radPageView2.SelectedPage.Name == "CooperationCommittee")
@@ -673,8 +674,8 @@ namespace HealthServicesSystem.Refunds
                 {
                     rpt.centername.Value = ExcutingCenter.Text;
                 }
-               
-                
+
+
 
                 //RequestFrmRPT frm = new RequestFrmRPT();
 
@@ -725,7 +726,7 @@ namespace HealthServicesSystem.Refunds
         private void MedicalServiceEn_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
    {
 
-            if (transferRadio.IsChecked)
+            if (transferRadio.IsChecked || physiotherapyrb.IsChecked)
             {
                 if (MedicalServiceEn.SelectedIndex != -1)
                 {
@@ -828,7 +829,7 @@ namespace HealthServicesSystem.Refunds
 
         private void MedicalServiceAr_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            if (transferRadio.IsChecked)
+            if (transferRadio.IsChecked || physiotherapyrb.IsChecked)
             {
                 if (MedicalServiceAr.SelectedIndex > 0)
                 {
@@ -955,13 +956,14 @@ namespace HealthServicesSystem.Refunds
                 rqst.RequestType = RequestType.Committee ;
                 rqst.MedicalTotal = Convert.ToDecimal(TotalCostTB .Text);
                 rqst.CenterId = Convert.ToInt32(Co_Centers.SelectedValue);
-
+                rqst.CenterName = Co_Centers.SelectedText;
             }
             else
             {
 
                 rqst.MedicalTotal = Convert.ToDecimal(TotalCostTXT.Text);
                 rqst.CenterId = Convert.ToInt32(ExcutingCenter.SelectedValue);
+                rqst.CenterName =ExcutingCenter.Text;
             }
 
 
@@ -1040,7 +1042,7 @@ namespace HealthServicesSystem.Refunds
             }
 
 
-            MessageBox.Show("تم الحفظ بنجاح!");
+            //MessageBox.Show("تم الحفظ بنجاح!");
             print();
             clear();
         }
@@ -1103,7 +1105,7 @@ namespace HealthServicesSystem.Refunds
 
         private void TransferRadio_ToggleStateChanged(object sender, Telerik.WinControls.UI.StateChangedEventArgs args)
         {
-            if (transferRadio.IsChecked  || physiotherapyrb.IsChecked)
+            if (transferRadio.IsChecked )
             {
                 if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
                 {
@@ -1111,7 +1113,7 @@ namespace HealthServicesSystem.Refunds
                 }
                 PLC.DbCailm.Open();
 
-                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  service_id, service_name,service_name_english FROM services where status='T' AND IS_NEW= 'Y'", PLC.DbCailm);
+                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  service_id, service_name,service_name_english FROM services where status='T' AND IS_NEW= 'Y' and serv_typ_id !=77", PLC.DbCailm);
                 DataTable dtEnService = new DataTable();
                 dtEnService.Clear();
                 da_EN_service.Fill(dtEnService);
@@ -1202,7 +1204,46 @@ namespace HealthServicesSystem.Refunds
 
         private void Physiotherapyrb_ToggleStateChanged(object sender, Telerik.WinControls.UI.StateChangedEventArgs args)
         {
+            if (physiotherapyrb .IsChecked)
+            {
+                if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
+                {
+                    PLC.DbCailm.Close();
+                }
+                PLC.DbCailm.Open();
 
+                SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT  service_id, service_name,service_name_english FROM services where status='T' AND IS_NEW= 'Y' and serv_typ_id =77", PLC.DbCailm);
+                DataTable dtEnService = new DataTable();
+                dtEnService.Clear();
+                da_EN_service.Fill(dtEnService);
+                //if (transferRadio.IsChecked)
+                //{
+
+
+                //   MsgBox (dtCenter .Rows .Count)
+                if (dtEnService.Rows.Count > 0)
+                {
+                    MedicalServiceEn.DataSource = dtEnService;
+                    MedicalServiceEn.DisplayMember = "service_name_english";
+                    MedicalServiceEn.ValueMember = "service_id";
+                    MedicalServiceEn.SelectedIndex = -1;
+                    MedicalServiceEn.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                    MedicalServiceAr.DataSource = dtEnService;
+                    MedicalServiceAr.DisplayMember = "service_name";
+                    MedicalServiceAr.ValueMember = "service_id";
+                    MedicalServiceAr.SelectedIndex = -1;
+                    MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+                }
+
+
+
+                //}
+            }
+            pat_cost_txt.Text = "0";
+            ServiceCost.Text = "0";
+            insur_cost_txt.Text = "0";
         }
 
         private void Co_CostTB_TextChanged(object sender, EventArgs e)
@@ -1536,6 +1577,11 @@ namespace HealthServicesSystem.Refunds
             {
                 InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[1];
             }
+        }
+
+        private void ExcutingCenter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
