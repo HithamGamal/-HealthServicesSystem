@@ -116,12 +116,6 @@
     <Compile Include="Chronics\FRMBookInfo.Designer.cs">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Claims\AddNonConfirmFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Claims\AddNonConfirmFrm.Designer.cs">
-      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Claims\AddNonConfirmToClaims.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -734,9 +728,6 @@
     </Compile>
     <EmbeddedResource Include="Chronics\FRMBookInfo.resx">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Claims\AddNonConfirmFrm.resx">
-      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\AdvanceFillterFrm.resx">
       <DependentUpon>AdvanceFillterFrm.cs</DependentUpon>
