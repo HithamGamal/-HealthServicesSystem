@@ -63,17 +63,9 @@
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
-    <Compile Include="Migrations\202211230614048_saif_2022_11_23.cs" />
-    <Compile Include="Migrations\202211230614048_saif_2022_11_23.designer.cs">
-      <DependentUpon>202211230614048_saif_2022_11_23.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202301051048327_saif_2023_1_5.cs" />
-    <Compile Include="Migrations\202301051048327_saif_2023_1_5.designer.cs">
-      <DependentUpon>202301051048327_saif_2023_1_5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202301051101227_saif_2023_1_5_1.cs" />
-    <Compile Include="Migrations\202301051101227_saif_2023_1_5_1.designer.cs">
-      <DependentUpon>202301051101227_saif_2023_1_5_1.cs</DependentUpon>
+    <Compile Include="Migrations\202301080641475_ad.cs" />
+    <Compile Include="Migrations\202301080641475_ad.designer.cs">
+      <DependentUpon>202301080641475_ad.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202301051105290_saif_2023_1_5_2.cs" />
     <Compile Include="Migrations\202301051105290_saif_2023_1_5_2.designer.cs">
@@ -165,14 +157,8 @@
     <Content Include="ModelDB.sln" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202211230614048_saif_2022_11_23.resx">
-      <DependentUpon>202211230614048_saif_2022_11_23.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301051048327_saif_2023_1_5.resx">
-      <DependentUpon>202301051048327_saif_2023_1_5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301051101227_saif_2023_1_5_1.resx">
-      <DependentUpon>202301051101227_saif_2023_1_5_1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301080641475_ad.resx">
+      <DependentUpon>202301080641475_ad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301051105290_saif_2023_1_5_2.resx">
       <DependentUpon>202301051105290_saif_2023_1_5_2.cs</DependentUpon>
