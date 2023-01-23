@@ -208,7 +208,7 @@
             // 
             // ribbonTab5
             // 
-            this.ribbonTab5.IsSelected = true;
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup5,
             this.radRibbonBarGroup13,
@@ -848,7 +848,7 @@
             // 
             // ribbonTab7
             // 
-            this.ribbonTab7.IsSelected = false;
+            this.ribbonTab7.IsSelected = true;
             this.ribbonTab7.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup32,
             this.radRibbonBarGroup33,

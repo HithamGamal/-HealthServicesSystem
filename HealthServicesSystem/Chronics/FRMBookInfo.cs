@@ -67,7 +67,7 @@ namespace HealthServicesSystem.Reclaims
         public bool Saved = false;
         public DateTime BirthDate = PLC.getdate();
         public string Rec_No = "";
-        private void LoadData()
+        public void LoadData()
         {
             flag = 0;
             SubscriberType.SelectedIndex = 0;
@@ -762,6 +762,7 @@ namespace HealthServicesSystem.Reclaims
         {
             UserId = LoginForm.Default.UserId;
             LocalityId = PLC.LocalityId;
+
 
             LoadData();
             //BookType.DataSource = Enum.GetValues(typeof(BookType));

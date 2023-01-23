@@ -75,6 +75,14 @@
     <Compile Include="Migrations\202301051101227_saif_2023_1_5_1.designer.cs">
       <DependentUpon>202301051101227_saif_2023_1_5_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301051105290_saif_2023_1_5_2.cs" />
+    <Compile Include="Migrations\202301051105290_saif_2023_1_5_2.designer.cs">
+      <DependentUpon>202301051105290_saif_2023_1_5_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301080651084_asd.cs" />
+    <Compile Include="Migrations\202301080651084_asd.designer.cs">
+      <DependentUpon>202301080651084_asd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -165,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301051101227_saif_2023_1_5_1.resx">
       <DependentUpon>202301051101227_saif_2023_1_5_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301051105290_saif_2023_1_5_2.resx">
+      <DependentUpon>202301051105290_saif_2023_1_5_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301080651084_asd.resx">
+      <DependentUpon>202301080651084_asd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

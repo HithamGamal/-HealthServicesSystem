@@ -293,6 +293,21 @@ namespace HealthServicesSystem.Reclaims
                 dwalist.DisplayMember = "Generic_name";
                 dwalist.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 dwalist.SelectedIndex = -1;
+                var ApproveToday = db.ChronicMedicines.Where(p => p.OperationDate == OperationDate.Value && p.UserId == UserId).GroupBy(p => p.InsurNo).Select(p => new { Id = 1, p.Key }).ToList();
+                GrdDailyWork.DataSource = ApproveToday;
+                if (GrdDailyWork.RowCount > 0)
+                {
+                    for (int i = 0; i < GrdDailyWork.RowCount; i++)
+                    {
+                        GrdDailyWork.Rows[i].Cells[0].Value = i + 1;
+                    }
+                    if (GrdDailyWork.RowCount > 0)
+                    {
+                        GrdDailyWork.Rows[GrdDailyWork.RowCount - 1].IsCurrent = true;
+                        GrdDailyWork.Rows[GrdDailyWork.RowCount - 1].IsSelected = true;
+
+                    }
+                }
                 //  BillStatus.DataSource = Enum.GetValues(typeof(ReclaimStatus));
                 //FRMEstrdadWaiting.Default.ShowDialog();
             }

@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>74</ApplicationRevision>
+    <ApplicationRevision>76</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -502,6 +502,12 @@
     <Compile Include="Refunds\FRMMedicineSetting.Designer.cs">
       <DependentUpon>FRMMedicineSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chronics\FRMChronicWaitList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chronics\FRMChronicWaitList.Designer.cs">
+      <DependentUpon>FRMChronicWaitList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Refunds\FRMpatienthistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -931,6 +937,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FRMMedicineSetting.resx">
       <DependentUpon>FRMMedicineSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chronics\FRMChronicWaitList.resx">
+      <DependentUpon>FRMChronicWaitList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FRMpatienthistory.resx">
       <DependentUpon>FRMpatienthistory.cs</DependentUpon>
