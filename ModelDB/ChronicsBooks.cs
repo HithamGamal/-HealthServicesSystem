@@ -21,7 +21,7 @@ namespace ModelDB
         [ForeignKey("CenterId")]
         public virtual CenterInfo CenterInfo { get; set; }
         public bool Activated { get; set; }
-      
+        public bool Excepted { get; set; }
         public string PhoneNo { get; set; }
         public string InsurNo { get; set; }
         public string InsurName { get; set; }

@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>78</ApplicationRevision>
+    <ApplicationRevision>79</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -115,6 +115,18 @@
     </Compile>
     <Compile Include="Chronics\FRMBookInfo.Designer.cs">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chronics\FRMChronicWaitList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chronics\FRMChronicWaitList.Designer.cs">
+      <DependentUpon>FRMChronicWaitList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\AddNonConfirmFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\AddNonConfirmFrm.Designer.cs">
+      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\AddNonConfirmToClaims.cs">
       <SubType>Form</SubType>
@@ -728,6 +740,12 @@
     </Compile>
     <EmbeddedResource Include="Chronics\FRMBookInfo.resx">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chronics\FRMChronicWaitList.resx">
+      <DependentUpon>FRMChronicWaitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\AddNonConfirmFrm.resx">
+      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\AdvanceFillterFrm.resx">
       <DependentUpon>AdvanceFillterFrm.cs</DependentUpon>
