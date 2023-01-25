@@ -369,10 +369,10 @@ namespace HealthServicesSystem.Reclaims
 
         private void BTNSearch_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
 
-            if (!string.IsNullOrEmpty(card_no.Text))
+                if (!string.IsNullOrEmpty(card_no.Text))
             {
 
                 using (dbContext db = new dbContext())
@@ -404,7 +404,7 @@ namespace HealthServicesSystem.Reclaims
                         dadocNo.Fill(dtdocNo);
                         if (dtdocNo.Rows.Count > 0)
                         {
-                            DocumentNo.Text = dtdocNo.Rows[0]["DocNo"].ToString();
+                            DocumentNo.Text = dtdocNo.Rows[dtdocNo.Rows.Count-1]["DocNo"].ToString();
                         }
                         string srr = "select top 1 * from Cards where InsuranceNo=" + card_no.Text + " and RowStatus<>2";
                         SqlDataAdapter dasearch = new SqlDataAdapter(srr, PLC.conNew);
@@ -742,20 +742,20 @@ namespace HealthServicesSystem.Reclaims
 
 
             }
-            //  }
+            }
 
-            //catch (Exception ex)
-            //{
+            catch (Exception ex)
+            {
 
-            //    MessageBox.Show("توجد مشلكلة في جلب البيانات" + (char)13 + "تأكد من الرقم الصحيح" + (char)13 + ex.Message, "النظام", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("توجد مشلكلة في جلب البيانات" + (char)13 + "تأكد من الرقم الصحيح" + (char)13 + ex.Message, "النظام", MessageBoxButtons.OK, MessageBoxIcon.None);
 
-            //    this.AcceptButton = null;
+                this.AcceptButton = null;
 
-            //    this.Cursor = Cursors.Default;
+                this.Cursor = Cursors.Default;
 
-            //    return;
+                return;
 
-            //}
+            }
 
         }
 

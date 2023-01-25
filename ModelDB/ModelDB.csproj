@@ -63,10 +63,6 @@
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
-    <Compile Include="Migrations\202301080641475_ad.cs" />
-    <Compile Include="Migrations\202301080641475_ad.designer.cs">
-      <DependentUpon>202301080641475_ad.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202301051105290_saif_2023_1_5_2.cs" />
     <Compile Include="Migrations\202301051105290_saif_2023_1_5_2.designer.cs">
       <DependentUpon>202301051105290_saif_2023_1_5_2.cs</DependentUpon>
@@ -157,9 +153,6 @@
     <Content Include="ModelDB.sln" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301080641475_ad.resx">
-      <DependentUpon>202301080641475_ad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301051105290_saif_2023_1_5_2.resx">
       <DependentUpon>202301051105290_saif_2023_1_5_2.cs</DependentUpon>
     </EmbeddedResource>
