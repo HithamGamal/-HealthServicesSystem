@@ -21,7 +21,9 @@ namespace HealthServicesSystem.Refunds
         dbContext db = new dbContext();
         public int _UserId = LoginForm.Default.UserId;
         DateTime date1 = PLC.getdate();
-       
+        string y ;
+        string m ;
+        string d ;
         public FRMMedicalCommitee()
         {
             InitializeComponent();
@@ -30,9 +32,9 @@ namespace HealthServicesSystem.Refunds
         private void FRMMedicalCommitee_Load(object sender, EventArgs e)
         {
             OperationDate.Value = PLC.getdate();
-            int y = date1.Year;
-            int m = date1.Month;
-            int d = date1.Day;
+            y = date1.Year.ToString().Substring(1,2);
+            m = date1.Month.ToString();
+            d = date1.Day.ToString();
 
             _UserId = LoginForm.Default.UserId;
                 LocalityId = PLC.LocalityId;
@@ -938,7 +940,8 @@ namespace HealthServicesSystem.Refunds
             var id = db.medicalCommitteeRequests .Select(x => x.Id).Max();
             db.Database.ExecuteSqlCommand("DBCC CHECKIDENT('MedicalCommitteeRequests',RESEED," + id + ");");
 
-            rqst.Code = "";
+
+            rqst.Code = y+m+d+_UserId+id;
             rqst.InsurNo = TXTSearch.Text;
             rqst.InsurName = FulName.Text;
             rqst.PhoneNo = phoneNoLBL.Text;
