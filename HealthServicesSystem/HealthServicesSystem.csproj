@@ -79,6 +79,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ModelDB">
+      <HintPath>..\ModelDB\obj\Debug\ModelDB.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -1458,12 +1461,6 @@
     <Content Include="Resources\compare_FILL0_wght400_GRAD0_opsz48.png" />
     <Content Include="Resources\print_FILL0_wght100_GRAD0_opsz24.png" />
     <Content Include="Resources\system_update_alt_FILL0_wght100_GRAD0_opsz24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ModelDB\ModelDB.csproj">
-      <Project>{3fe9389c-1468-4345-bc6d-fa5db4a5dc68}</Project>
-      <Name>ModelDB</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
