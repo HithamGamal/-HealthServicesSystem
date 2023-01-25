@@ -815,8 +815,15 @@ namespace HealthServicesSystem.Refunds
                     ServiceCost.Text = serviceCost.ToString();
                     insur_cost_txt.Text = dtService.Rows[0]["servicecost"].ToString();
                 }
+                else
+                {
+                    pat_cost_txt.Text = "0";
+                    ServiceCost.Text = "0";
+                    insur_cost_txt.Text = "0";
 
                 }
+
+            }
 
 
             catch (Exception)

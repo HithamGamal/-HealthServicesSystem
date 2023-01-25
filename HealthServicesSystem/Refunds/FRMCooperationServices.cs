@@ -106,5 +106,10 @@ namespace HealthServicesSystem.Refunds
                 fillgrid();
             }
         }
+
+        private void RadButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

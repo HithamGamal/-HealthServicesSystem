@@ -24,6 +24,8 @@ namespace ModelDB
         public int CenterId { get; set; }
         public string CenterName { get; set; }
         public string Note { get; set; }
+        public string Code { get; set; }
+        public string CenterFrom { get; set; }
         public CardType CardType  { get; set; }
         public RequestType RequestType { get; set; }
         public RequestStatus RequestStatus { get; set; }
