@@ -21,6 +21,7 @@ namespace HealthServicesSystem.Refunds
         dbContext db = new dbContext();
         public int _UserId = LoginForm.Default.UserId;
         DateTime date1 = PLC.getdate();
+       
         public FRMMedicalCommitee()
         {
             InitializeComponent();
@@ -29,9 +30,11 @@ namespace HealthServicesSystem.Refunds
         private void FRMMedicalCommitee_Load(object sender, EventArgs e)
         {
             OperationDate.Value = PLC.getdate();
-        
-               
-                _UserId = LoginForm.Default.UserId;
+            int y = date1.Year;
+            int m = date1.Month;
+            int d = date1.Day;
+
+            _UserId = LoginForm.Default.UserId;
                 LocalityId = PLC.LocalityId;
                
             using (dbContext  db = new dbContext())
@@ -625,6 +628,7 @@ namespace HealthServicesSystem.Refunds
             decimal Service_Cost =Convert.ToDecimal(ServiceCost.Text);
             decimal patient_cost = Convert.ToDecimal(pat_cost_txt .Text);
             decimal insurance_cost = Convert.ToDecimal(insur_cost_txt .Text);
+            decimal allow_cost = Convert.ToDecimal(allow_cost_txt  .Text);
             decimal co_cost = 0;
             if (transferRadio .IsChecked)
             {
@@ -632,7 +636,8 @@ namespace HealthServicesSystem.Refunds
             }
 
           
-            GRDApprove.Rows.Add(i,i,insurance_no,centerId,service_id, medical_service_en, medical_service_ar, Service_Cost, insurance_cost,patient_cost,co_cost  );
+            GRDApprove.Rows.Add(i,i,insurance_no,centerId,service_id, medical_service_en, 
+                                medical_service_ar, Service_Cost, insurance_cost,patient_cost,co_cost,allow_cost   );
 
             i++;
 
@@ -933,7 +938,7 @@ namespace HealthServicesSystem.Refunds
             var id = db.medicalCommitteeRequests .Select(x => x.Id).Max();
             db.Database.ExecuteSqlCommand("DBCC CHECKIDENT('MedicalCommitteeRequests',RESEED," + id + ");");
 
-
+            rqst.Code = "";
             rqst.InsurNo = TXTSearch.Text;
             rqst.InsurName = FulName.Text;
             rqst.PhoneNo = phoneNoLBL.Text;
@@ -944,6 +949,7 @@ namespace HealthServicesSystem.Refunds
             rqst.BirthDate = BirthDate.Value;
             rqst.SectorName = "";
             rqst.SectorId = 0;
+            rqst.CenterFrom = fromCenterDropdown .SelectedText;
             rqst.Note = noteTXT.Text;
 
             if (transferRadio.IsChecked)
@@ -1020,6 +1026,7 @@ namespace HealthServicesSystem.Refunds
                     rqstDetails.Pat_cost = Convert.ToDecimal(row.Cells["PatientPrice"].Value.ToString());
                     rqstDetails.Insur_cost = Convert.ToDecimal(row.Cells["InsurPrice"].Value.ToString());
                     rqstDetails.ServiceCost = Convert.ToDecimal(row.Cells["ServicePrice"].Value.ToString());
+                    rqstDetails.AllowCost  = Convert.ToDecimal(row.Cells["allowCost"].Value.ToString());
                     rqstDetails.InvoiceCost = 0;
                     rqstDetails.UserId = _UserId;
                     rqstDetails.DateIn = PLC.getdate();
