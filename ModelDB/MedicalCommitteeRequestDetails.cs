@@ -21,6 +21,7 @@ namespace ModelDB
         public decimal Insur_cost { get; set; }
         public decimal ServiceCost { get; set; }
         public decimal InvoiceCost { get; set; }
+        public decimal AllowCost { get; set; }
 
     }
 }
