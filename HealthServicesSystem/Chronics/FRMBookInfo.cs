@@ -264,6 +264,7 @@ namespace HealthServicesSystem.Reclaims
                     apv.ClientId = Rec_No;
                     apv.BirthDate = BirthDate;
                     apv.Activated = true;
+                    apv.Excepted =Convert.ToBoolean( RDExcepted.CheckState);
                     db.ChronicsBooks.Add(apv);
                     db.SaveChanges();
                     Saved = true;
@@ -308,6 +309,7 @@ namespace HealthServicesSystem.Reclaims
                         GetAppv[0].RowStatus = RowStatus.Edited;
                         GetAppv[0].Status = Status.Active;
                         GetAppv[0].Notes = Notes.Text.Trim();
+                        GetAppv[0].Excepted = Convert.ToBoolean(RDExcepted.CheckState);
                         db.SaveChanges();
                         Saved = true;
 
