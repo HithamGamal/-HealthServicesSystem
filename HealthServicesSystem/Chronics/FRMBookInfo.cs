@@ -77,6 +77,7 @@ namespace HealthServicesSystem.Reclaims
             CustName.Clear();
             BirthDate = PLC.getdate();
             ChronicLst.SelectedIndex = -1;
+            RDExcepted.Checked = false;
             BookDate.Value = PLC.getdate();
             ServerName.Clear();
             PhoneNo.Clear();
@@ -131,6 +132,32 @@ namespace HealthServicesSystem.Reclaims
                 return;
 
             }
+            DateTime Da1 = new DateTime(PLC.getdate().Year, PLC.getdate().Month, 1);
+            DateTime Da2 = new DateTime(PLC.getdate().Year, PLC.getdate().Month, DateTime.DaysInMonth(PLC.getdate().Year, PLC.getdate().Month));
+            if (RDExcepted.Checked == true)
+            {
+                using (dbContext db = new dbContext())
+                {
+                    var FChk = db.ChronicsBooks.Where(p => p.Excepted == true && (p.BookDate >= Da1 && p.BookDate <= Da2) && p.RowStatus != RowStatus.Deleted).ToList();
+                    if (FChk.Count > 0)
+                    {
+                        if (FChk.Count >= 12)
+                        {
+                            MessageBox.Show("عدد الدفاتر التي تم استثنائها من الدفع اكتمل وهو 12" + (char)13 + "لايمكن ادخال بيانات هذا الدفتر", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+            }
+            else if (RDExcepted.Checked == false)
+            {
+                if (DocumentNo.Text.Length == 0)
+                {
+                    MessageBox.Show("لم يتم تحصيل قيمة الدفتر", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    DocumentNo.Focus();
+                    return;
+                }
+            }
             else if (BookType.SelectedIndex == 0)
             {
                 using (dbContext db = new dbContext())
@@ -162,6 +189,8 @@ namespace HealthServicesSystem.Reclaims
                 NewMedical();
                 return;
             }
+      
+
             if (flag == 0)
             {
                 using (dbContext db = new dbContext())
@@ -193,7 +222,7 @@ namespace HealthServicesSystem.Reclaims
             {
                 using (dbContext db = new dbContext())
                 {
-
+               
                     // insurId = dbs.Where(p => p.InsurNo == card_no.Text).First().Id;
                     var Fhis1 = db.ChronicsBooks.Where(p => p.InsurNo == card_no.Text && p.RowStatus != RowStatus.Deleted).ToList();
                     if (Fhis1.Count > 0)
@@ -223,7 +252,7 @@ namespace HealthServicesSystem.Reclaims
                     apv.LocalityId = PLC.LocalityId;
                     apv.DateIn = BookDate.Value;
                     apv.RowStatus = RowStatus.NewRow;
-                    apv.DocNo = 0;
+                    apv.DocNo = Convert.ToDecimal(DocumentNo.Text);
                     apv.Status = Status.Active;
                     apv.Notes = Notes.Text.Trim();
                     apv.LocalityId = PLC.LocalityId;
@@ -275,7 +304,7 @@ namespace HealthServicesSystem.Reclaims
                         GetAppv[0].UpdateUser = UserId;
                         GetAppv[0].LocalityId = PLC.LocalityId;
                         GetAppv[0].DateIn = BookDate.Value;
-                        GetAppv[0].DocNo = 0;
+                        GetAppv[0].DocNo = Convert.ToDecimal(DocumentNo.Text); 
                         GetAppv[0].RowStatus = RowStatus.Edited;
                         GetAppv[0].Status = Status.Active;
                         GetAppv[0].Notes = Notes.Text.Trim();
@@ -365,6 +394,18 @@ namespace HealthServicesSystem.Reclaims
                             PLC.conNew.Close();
                         }
                         PLC.conNew.Open();
+                        DateTime Dat1 = PLC.getdate().AddDays(-10);
+                        DateTime Dat2 = PLC.getdate().AddDays(1);
+                        string FdocNo = "SELECT  [Id] as DocNo FROM [InsuranceSystem].[dbo].[CustomerPayments] Where InsuranceNo=" + card_no.Text + " and PayDate  >= '"+ Dat1 + "'  and (PayTypeId=4 or PayTypeId=6 or PayTypeId=8) ";
+                        //MessageBox.Show(srr);
+                        SqlDataAdapter dadocNo = new SqlDataAdapter(FdocNo, PLC.conNew);
+                        DataTable dtdocNo = new DataTable();
+                        dtdocNo.Clear();
+                        dadocNo.Fill(dtdocNo);
+                        if (dtdocNo.Rows.Count > 0)
+                        {
+                            DocumentNo.Text = dtdocNo.Rows[0]["DocNo"].ToString();
+                        }
                         string srr = "select top 1 * from Cards where InsuranceNo=" + card_no.Text + " and RowStatus<>2";
                         SqlDataAdapter dasearch = new SqlDataAdapter(srr, PLC.conNew);
                         DataTable dtsearch = new DataTable();
@@ -1151,6 +1192,19 @@ namespace HealthServicesSystem.Reclaims
             else
             {
                 InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[0];
+            }
+        }
+
+        private void RDExcepted_ToggleStateChanged(object sender, Telerik.WinControls.UI.StateChangedEventArgs args)
+        {
+            if (RDExcepted.Checked == true)
+            {
+                DocumentNo.Text = "0";
+                DocumentNo.ReadOnly = true;
+            }
+            else
+            {
+                DocumentNo.ReadOnly = false;
             }
         }
     }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelDB
@@ -21,7 +17,7 @@ namespace ModelDB
         [ForeignKey("CenterId")]
         public virtual CenterInfo CenterInfo { get; set; }
         public bool Activated { get; set; }
-      
+        public bool Excepted { get; set; }
         public string PhoneNo { get; set; }
         public string InsurNo { get; set; }
         public string InsurName { get; set; }
