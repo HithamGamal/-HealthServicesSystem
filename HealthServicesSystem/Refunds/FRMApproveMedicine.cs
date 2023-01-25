@@ -159,6 +159,7 @@ namespace HealthServicesSystem.Reclaims
                     apv.Server = ServerName.Text;
                     apv.ClientId = Rec_No;
                     apv.BirthDate = BirthDate;
+                    
                     db.ApproveMedicines.Add(apv);
                     db.SaveChanges();
                     ApproveNo = db.ApproveMedicines.Where(p => p.InsurNo == card_no.Text && p.UserId == UserId).Max(p => p.Id);

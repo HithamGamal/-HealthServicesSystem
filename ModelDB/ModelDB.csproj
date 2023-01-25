@@ -63,14 +63,6 @@
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
-    <Compile Include="Migrations\202301250544570_cost.cs" />
-    <Compile Include="Migrations\202301250544570_cost.designer.cs">
-      <DependentUpon>202301250544570_cost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202301250610582_d.cs" />
-    <Compile Include="Migrations\202301250610582_d.designer.cs">
-      <DependentUpon>202301250610582_d.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -151,14 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ModelDB.sln" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301250544570_cost.resx">
-      <DependentUpon>202301250544570_cost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301250610582_d.resx">
-      <DependentUpon>202301250610582_d.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
