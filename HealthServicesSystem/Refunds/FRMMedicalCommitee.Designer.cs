@@ -81,6 +81,8 @@
             this.Label10 = new Telerik.WinControls.UI.RadLabel();
             this.Label16 = new Telerik.WinControls.UI.RadLabel();
             this.GroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.allow_cost_txt = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
             this.pat_cost_txt = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.insur_cost_txt = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.ServiceCost = new Telerik.WinControls.UI.RadMaskedEditBox();
@@ -123,8 +125,7 @@
             this.deny_check = new Telerik.WinControls.UI.RadCheckBox();
             this.approve_check = new Telerik.WinControls.UI.RadCheckBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.allow_cost_txt = new Telerik.WinControls.UI.RadMaskedEditBox();
-            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
+            this.codelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).BeginInit();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patDataAlertLBL)).BeginInit();
@@ -162,6 +163,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Label16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox2)).BeginInit();
             this.GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allow_cost_txt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pat_cost_txt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insur_cost_txt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceCost)).BeginInit();
@@ -206,8 +209,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.deny_check)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approve_check)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allow_cost_txt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,6 +217,7 @@
             this.GroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.GroupBox1.Controls.Add(this.codelbl);
             this.GroupBox1.Controls.Add(this.patDataAlertLBL);
             this.GroupBox1.Controls.Add(this.card_typeTB);
             this.GroupBox1.Controls.Add(this.genderlbl);
@@ -310,7 +312,6 @@
             this.phoneNoLBL.TabIndex = 415;
             this.phoneNoLBL.Text = "0";
             this.phoneNoLBL.Visible = false;
-            this.phoneNoLBL.Click += new System.EventHandler(this.PhoneNoLBL_Click);
             // 
             // clientIdLBL
             // 
@@ -529,7 +530,7 @@
             this.GroupBox3.HeaderText = "";
             this.GroupBox3.Location = new System.Drawing.Point(3, 3);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(1363, 444);
+            this.GroupBox3.Size = new System.Drawing.Size(1363, 371);
             this.GroupBox3.TabIndex = 408;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.ThemeName = "Office2010Blue";
@@ -539,7 +540,7 @@
             // 
             this.radLabel12.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel12.ForeColor = System.Drawing.Color.MediumBlue;
-            this.radLabel12.Location = new System.Drawing.Point(465, 113);
+            this.radLabel12.Location = new System.Drawing.Point(465, 61);
             this.radLabel12.Name = "radLabel12";
             this.radLabel12.Size = new System.Drawing.Size(130, 31);
             this.radLabel12.TabIndex = 441;
@@ -552,11 +553,12 @@
             this.fromCenterDropdown.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.fromCenterDropdown.DropDownHeight = 120;
             this.fromCenterDropdown.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromCenterDropdown.Location = new System.Drawing.Point(679, 113);
+            this.fromCenterDropdown.Location = new System.Drawing.Point(679, 61);
             this.fromCenterDropdown.Name = "fromCenterDropdown";
             this.fromCenterDropdown.Size = new System.Drawing.Size(364, 28);
             this.fromCenterDropdown.TabIndex = 440;
             this.fromCenterDropdown.ThemeName = "Office2010Blue";
+            this.fromCenterDropdown.Enter += new System.EventHandler(this.FromCenterDropdown_Enter);
             ((Telerik.WinControls.UI.RadDropDownListElement)(this.fromCenterDropdown.GetChildAt(0))).RightToLeft = true;
             // 
             // addBTN
@@ -565,7 +567,7 @@
             this.addBTN.Font = new System.Drawing.Font("Sakkal Majalla", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.addBTN.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addBTN.Location = new System.Drawing.Point(14, 151);
+            this.addBTN.Location = new System.Drawing.Point(14, 136);
             this.addBTN.Name = "addBTN";
             this.addBTN.Size = new System.Drawing.Size(69, 51);
             this.addBTN.TabIndex = 439;
@@ -627,7 +629,7 @@
             this.TotalCostTXT.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TotalCostTXT.Enabled = false;
             this.TotalCostTXT.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.TotalCostTXT.Location = new System.Drawing.Point(14, 68);
+            this.TotalCostTXT.Location = new System.Drawing.Point(14, 98);
             this.TotalCostTXT.Name = "TotalCostTXT";
             this.TotalCostTXT.ReadOnly = true;
             this.TotalCostTXT.Size = new System.Drawing.Size(63, 32);
@@ -640,7 +642,7 @@
             // 
             this.Label10.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label10.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Label10.Location = new System.Drawing.Point(1064, 113);
+            this.Label10.Location = new System.Drawing.Point(1064, 61);
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(110, 31);
             this.Label10.TabIndex = 15;
@@ -652,7 +654,7 @@
             // 
             this.Label16.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label16.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Label16.Location = new System.Drawing.Point(465, 68);
+            this.Label16.Location = new System.Drawing.Point(465, 98);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(180, 31);
             this.Label16.TabIndex = 15;
@@ -673,16 +675,43 @@
             this.GroupBox2.Controls.Add(this.radLabel2);
             this.GroupBox2.Controls.Add(this.Label42);
             this.GroupBox2.HeaderText = "";
-            this.GroupBox2.Location = new System.Drawing.Point(85, 151);
+            this.GroupBox2.Location = new System.Drawing.Point(85, 136);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(1202, 51);
             this.GroupBox2.TabIndex = 19;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.ThemeName = "Office2010Blue";
             // 
+            // allow_cost_txt
+            // 
+            this.allow_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.allow_cost_txt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allow_cost_txt.ForeColor = System.Drawing.Color.Crimson;
+            this.allow_cost_txt.Location = new System.Drawing.Point(21, 11);
+            this.allow_cost_txt.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            this.allow_cost_txt.Name = "allow_cost_txt";
+            this.allow_cost_txt.Size = new System.Drawing.Size(125, 29);
+            this.allow_cost_txt.TabIndex = 459;
+            this.allow_cost_txt.TabStop = false;
+            this.allow_cost_txt.Text = "0";
+            this.allow_cost_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // radLabel14
+            // 
+            this.radLabel14.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
+            this.radLabel14.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.radLabel14.Location = new System.Drawing.Point(152, 11);
+            this.radLabel14.Name = "radLabel14";
+            this.radLabel14.Size = new System.Drawing.Size(77, 30);
+            this.radLabel14.TabIndex = 458;
+            this.radLabel14.Text = "تحمل اضافي ";
+            this.radLabel14.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel14.ThemeName = "Office2010Blue";
+            // 
             // pat_cost_txt
             // 
             this.pat_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pat_cost_txt.Enabled = false;
             this.pat_cost_txt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pat_cost_txt.ForeColor = System.Drawing.Color.Crimson;
             this.pat_cost_txt.Location = new System.Drawing.Point(266, 12);
@@ -697,6 +726,7 @@
             // insur_cost_txt
             // 
             this.insur_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.insur_cost_txt.Enabled = false;
             this.insur_cost_txt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insur_cost_txt.ForeColor = System.Drawing.Color.Crimson;
             this.insur_cost_txt.Location = new System.Drawing.Point(534, 12);
@@ -711,6 +741,7 @@
             // ServiceCost
             // 
             this.ServiceCost.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ServiceCost.Enabled = false;
             this.ServiceCost.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ServiceCost.ForeColor = System.Drawing.Color.Crimson;
             this.ServiceCost.Location = new System.Drawing.Point(772, 11);
@@ -763,13 +794,12 @@
             this.ExcutingCenter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.ExcutingCenter.DropDownHeight = 120;
             this.ExcutingCenter.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExcutingCenter.Location = new System.Drawing.Point(83, 113);
+            this.ExcutingCenter.Location = new System.Drawing.Point(83, 61);
             this.ExcutingCenter.Name = "ExcutingCenter";
             this.ExcutingCenter.Size = new System.Drawing.Size(364, 28);
             this.ExcutingCenter.TabIndex = 13;
             this.ExcutingCenter.ThemeName = "Office2010Blue";
             this.ExcutingCenter.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.ExcutingCenter_SelectedIndexChanged);
-            this.ExcutingCenter.Click += new System.EventHandler(this.ExcutingCenter_Click);
             this.ExcutingCenter.Enter += new System.EventHandler(this.ExcutingCenter_Enter);
             ((Telerik.WinControls.UI.RadDropDownListElement)(this.ExcutingCenter.GetChildAt(0))).RightToLeft = true;
             // 
@@ -789,7 +819,7 @@
             this.MedicalServiceAr.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.MedicalServiceAr.DropDownHeight = 120;
             this.MedicalServiceAr.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MedicalServiceAr.Location = new System.Drawing.Point(83, 69);
+            this.MedicalServiceAr.Location = new System.Drawing.Point(83, 99);
             this.MedicalServiceAr.Name = "MedicalServiceAr";
             this.MedicalServiceAr.Size = new System.Drawing.Size(364, 28);
             this.MedicalServiceAr.TabIndex = 12;
@@ -803,7 +833,7 @@
             this.MedicalServiceEn.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.MedicalServiceEn.DropDownHeight = 120;
             this.MedicalServiceEn.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MedicalServiceEn.Location = new System.Drawing.Point(679, 69);
+            this.MedicalServiceEn.Location = new System.Drawing.Point(679, 99);
             this.MedicalServiceEn.Name = "MedicalServiceEn";
             this.MedicalServiceEn.Size = new System.Drawing.Size(364, 28);
             this.MedicalServiceEn.TabIndex = 11;
@@ -816,7 +846,7 @@
             // 
             this.Label14.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label14.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Label14.Location = new System.Drawing.Point(1064, 65);
+            this.Label14.Location = new System.Drawing.Point(1064, 95);
             this.Label14.Name = "Label14";
             this.Label14.Size = new System.Drawing.Size(193, 31);
             this.Label14.TabIndex = 15;
@@ -832,7 +862,7 @@
             this.GRDApprove.Font = new System.Drawing.Font("Sakkal Majalla", 9.75F);
             this.GRDApprove.ForeColor = System.Drawing.Color.Crimson;
             this.GRDApprove.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GRDApprove.Location = new System.Drawing.Point(13, 208);
+            this.GRDApprove.Location = new System.Drawing.Point(13, 188);
             // 
             // 
             // 
@@ -940,7 +970,7 @@
             this.GRDApprove.Name = "GRDApprove";
             this.GRDApprove.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GRDApprove.ShowGroupPanel = false;
-            this.GRDApprove.Size = new System.Drawing.Size(1274, 216);
+            this.GRDApprove.Size = new System.Drawing.Size(1274, 177);
             this.GRDApprove.TabIndex = 16;
             this.GRDApprove.ThemeName = "Office2010Blue";
             this.GRDApprove.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.MasterTemplate_CommandCellClick);
@@ -951,7 +981,7 @@
             this.printBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.printBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.printBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printBTN.Location = new System.Drawing.Point(25, 621);
+            this.printBTN.Location = new System.Drawing.Point(58, 546);
             this.printBTN.Name = "printBTN";
             this.printBTN.Size = new System.Drawing.Size(137, 36);
             this.printBTN.TabIndex = 411;
@@ -965,7 +995,7 @@
             this.newBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.newBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.newBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newBTN.Location = new System.Drawing.Point(955, 617);
+            this.newBTN.Location = new System.Drawing.Point(976, 546);
             this.newBTN.Name = "newBTN";
             this.newBTN.Size = new System.Drawing.Size(137, 36);
             this.newBTN.TabIndex = 409;
@@ -978,7 +1008,7 @@
             this.saveBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.saveBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBTN.Location = new System.Drawing.Point(726, 617);
+            this.saveBTN.Location = new System.Drawing.Point(747, 546);
             this.saveBTN.Name = "saveBTN";
             this.saveBTN.Size = new System.Drawing.Size(137, 36);
             this.saveBTN.TabIndex = 408;
@@ -991,7 +1021,7 @@
             this.deleteBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.deleteBTN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBTN.Location = new System.Drawing.Point(505, 617);
+            this.deleteBTN.Location = new System.Drawing.Point(526, 546);
             this.deleteBTN.Name = "deleteBTN";
             this.deleteBTN.Size = new System.Drawing.Size(137, 36);
             this.deleteBTN.TabIndex = 410;
@@ -1012,7 +1042,7 @@
             this.radPageView2.Name = "radPageView2";
             this.radPageView2.PageBackColor = System.Drawing.Color.White;
             this.radPageView2.SelectedPage = this.ApproveRequest;
-            this.radPageView2.Size = new System.Drawing.Size(1396, 502);
+            this.radPageView2.Size = new System.Drawing.Size(1396, 427);
             this.radPageView2.TabIndex = 438;
             this.radPageView2.ThemeName = "Office2010Blue";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView2.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
@@ -1032,7 +1062,7 @@
             this.ApproveRequest.ItemSize = new System.Drawing.SizeF(708F, 29F);
             this.ApproveRequest.Location = new System.Drawing.Point(10, 38);
             this.ApproveRequest.Name = "ApproveRequest";
-            this.ApproveRequest.Size = new System.Drawing.Size(1375, 453);
+            this.ApproveRequest.Size = new System.Drawing.Size(1375, 378);
             this.ApproveRequest.Text = "خطابات الموافقة الطبية";
             this.ApproveRequest.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1042,9 +1072,9 @@
             this.CooperationCommittee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CooperationCommittee.ForeColor = System.Drawing.Color.Maroon;
             this.CooperationCommittee.ItemSize = new System.Drawing.SizeF(675F, 29F);
-            this.CooperationCommittee.Location = new System.Drawing.Point(12, 40);
+            this.CooperationCommittee.Location = new System.Drawing.Point(10, 38);
             this.CooperationCommittee.Name = "CooperationCommittee";
-            this.CooperationCommittee.Size = new System.Drawing.Size(1372, 450);
+            this.CooperationCommittee.Size = new System.Drawing.Size(1375, 453);
             this.CooperationCommittee.Text = "لجنة المساهمات";
             this.CooperationCommittee.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1070,9 +1100,8 @@
             this.radGroupBox2.HeaderText = "";
             this.radGroupBox2.Location = new System.Drawing.Point(6, 12);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(1363, 422);
+            this.radGroupBox2.Size = new System.Drawing.Size(1366, 422);
             this.radGroupBox2.TabIndex = 0;
-            this.radGroupBox2.Click += new System.EventHandler(this.RadGroupBox2_Click);
             // 
             // COlistRB
             // 
@@ -1346,37 +1375,21 @@
             this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel1.ThemeName = "Office2010Blue";
             // 
-            // allow_cost_txt
+            // codelbl
             // 
-            this.allow_cost_txt.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.allow_cost_txt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.allow_cost_txt.ForeColor = System.Drawing.Color.Crimson;
-            this.allow_cost_txt.Location = new System.Drawing.Point(21, 11);
-            this.allow_cost_txt.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
-            this.allow_cost_txt.Name = "allow_cost_txt";
-            this.allow_cost_txt.Size = new System.Drawing.Size(125, 29);
-            this.allow_cost_txt.TabIndex = 459;
-            this.allow_cost_txt.TabStop = false;
-            this.allow_cost_txt.Text = "0";
-            this.allow_cost_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // radLabel14
-            // 
-            this.radLabel14.Font = new System.Drawing.Font("Sakkal Majalla", 14F);
-            this.radLabel14.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.radLabel14.Location = new System.Drawing.Point(152, 11);
-            this.radLabel14.Name = "radLabel14";
-            this.radLabel14.Size = new System.Drawing.Size(77, 30);
-            this.radLabel14.TabIndex = 458;
-            this.radLabel14.Text = "تحمل اضافي ";
-            this.radLabel14.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel14.ThemeName = "Office2010Blue";
+            this.codelbl.AutoSize = true;
+            this.codelbl.Location = new System.Drawing.Point(243, 21);
+            this.codelbl.Name = "codelbl";
+            this.codelbl.Size = new System.Drawing.Size(20, 25);
+            this.codelbl.TabIndex = 440;
+            this.codelbl.Text = "0";
+            this.codelbl.Visible = false;
             // 
             // FRMMedicalCommitee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1413, 665);
+            this.ClientSize = new System.Drawing.Size(1413, 589);
             this.Controls.Add(this.radPageView2);
             this.Controls.Add(this.printBTN);
             this.Controls.Add(this.newBTN);
@@ -1436,6 +1449,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox2)).EndInit();
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allow_cost_txt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pat_cost_txt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insur_cost_txt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceCost)).EndInit();
@@ -1482,8 +1497,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.deny_check)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.approve_check)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allow_cost_txt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1570,5 +1583,6 @@
         internal Telerik.WinControls.UI.RadDropDownList fromCenterDropdown;
         private Telerik.WinControls.UI.RadMaskedEditBox allow_cost_txt;
         internal Telerik.WinControls.UI.RadLabel radLabel14;
+        public System.Windows.Forms.Label codelbl;
     }
 }
