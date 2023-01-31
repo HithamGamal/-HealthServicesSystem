@@ -586,23 +586,25 @@
             this.ExcutingParty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.ExcutingParty.DropDownHeight = 95;
             this.ExcutingParty.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExcutingParty.Location = new System.Drawing.Point(32, 49);
+            this.ExcutingParty.Location = new System.Drawing.Point(21, 49);
             this.ExcutingParty.Margin = new System.Windows.Forms.Padding(2);
             this.ExcutingParty.Name = "ExcutingParty";
             this.ExcutingParty.NullText = "اختر الجهة المنفذة للخدمة الدوائية";
-            this.ExcutingParty.Size = new System.Drawing.Size(390, 28);
+            this.ExcutingParty.Size = new System.Drawing.Size(401, 28);
             this.ExcutingParty.TabIndex = 411;
+            this.ExcutingParty.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.ExcutingParty_SelectedIndexChanged);
             this.ExcutingParty.GotFocus += new System.EventHandler(this.ExcutingParty_Leave);
             // 
             // approvereason
             // 
             this.approvereason.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.approvereason.Location = new System.Drawing.Point(32, 8);
+            this.approvereason.Location = new System.Drawing.Point(21, 8);
             this.approvereason.Margin = new System.Windows.Forms.Padding(2);
             this.approvereason.Name = "approvereason";
             this.approvereason.NullText = "اختر سبب الاسترداد";
-            this.approvereason.Size = new System.Drawing.Size(390, 28);
+            this.approvereason.Size = new System.Drawing.Size(401, 28);
             this.approvereason.TabIndex = 1;
+            this.approvereason.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Approvereason_SelectedIndexChanged);
             this.approvereason.GotFocus += new System.EventHandler(this.Approvereason_Leave);
             // 
             // BillStatus

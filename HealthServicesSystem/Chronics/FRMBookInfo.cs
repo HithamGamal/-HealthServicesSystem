@@ -728,16 +728,16 @@ namespace HealthServicesSystem.Reclaims
 
                             ServerName.Text = ChkN[0].Server;
                         }
-                        else
-                        {
-                            this.Cursor = Cursors.Default;
-                            FRMAddStudent.Default.card_no.Text = card_no.Text;
-                            FRMAddStudent.Default.ful_name.Clear();
-                            FRMAddStudent.Default.Age.Clear();
-                            FRMAddStudent.Default.Sex.SelectedIndex = -1;
-                            FRMAddStudent.Default.University.SelectedIndex = -1;
-                            FRMAddStudent.Default.ShowDialog();
-                        }
+                        //else
+                        //{
+                        //    this.Cursor = Cursors.Default;
+                        //    FRMAddStudent.Default.card_no.Text = card_no.Text;
+                        //    FRMAddStudent.Default.ful_name.Clear();
+                        //    FRMAddStudent.Default.Age.Clear();
+                        //    FRMAddStudent.Default.Sex.SelectedIndex = -1;
+                        //    FRMAddStudent.Default.University.SelectedIndex = -1;
+                        //    FRMAddStudent.Default.ShowDialog();
+                        //}
                     }
 
                 }

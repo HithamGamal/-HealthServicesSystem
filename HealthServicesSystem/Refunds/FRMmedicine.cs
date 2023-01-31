@@ -792,5 +792,15 @@ namespace HealthServicesSystem.Reclaims
                 ExcutingParty.SelectedValue = RequistingParty.SelectedValue;
             }
         }
+
+        private void ExcutingParty_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+
+        }
+
+        private void Approvereason_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+
+        }
     }
 }
