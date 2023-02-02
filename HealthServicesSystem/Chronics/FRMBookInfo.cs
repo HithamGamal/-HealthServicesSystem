@@ -138,7 +138,7 @@ namespace HealthServicesSystem.Reclaims
             {
                 using (dbContext db = new dbContext())
                 {
-                    var FChk = db.ChronicsBooks.Where(p => p.Excepted == true && (p.BookDate >= Da1 && p.BookDate <= Da2) && p.RowStatus != RowStatus.Deleted).ToList();
+                    var FChk = db.ChronicsBooks.Where(p => p.Excepted == true && (p.BookDate >= Da1 && p.BookDate <= Da2) && p.RowStatus != RowStatus.Deleted && p.LocalityId==LocalityId).ToList();
                     if (FChk.Count > 0)
                     {
                         if (FChk.Count >= 12)
