@@ -63,6 +63,19 @@
     <Compile Include="MedicalCommitteeRequest.cs" />
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
+    <Compile Include="MedicinePriceGroup.cs" />
+    <Compile Include="Migrations\202302050634569_saif_2023_2_5.cs" />
+    <Compile Include="Migrations\202302050634569_saif_2023_2_5.designer.cs">
+      <DependentUpon>202302050634569_saif_2023_2_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302050646269_saif_2023_2_5_1.cs" />
+    <Compile Include="Migrations\202302050646269_saif_2023_2_5_1.designer.cs">
+      <DependentUpon>202302050646269_saif_2023_2_5_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302050703294_saif_2023_2_5_2.cs" />
+    <Compile Include="Migrations\202302050703294_saif_2023_2_5_2.designer.cs">
+      <DependentUpon>202302050703294_saif_2023_2_5_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -143,6 +156,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ModelDB.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202302050634569_saif_2023_2_5.resx">
+      <DependentUpon>202302050634569_saif_2023_2_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302050646269_saif_2023_2_5_1.resx">
+      <DependentUpon>202302050646269_saif_2023_2_5_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302050703294_saif_2023_2_5_2.resx">
+      <DependentUpon>202302050703294_saif_2023_2_5_2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
