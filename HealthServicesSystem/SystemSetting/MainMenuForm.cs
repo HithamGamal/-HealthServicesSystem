@@ -739,5 +739,24 @@ namespace HealthServicesSystem
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
+
+        private void FRMmedicineOutPrice_Click(object sender, EventArgs e)
+        {
+            FRMmedicineOutPrice frm = new FRMmedicineOutPrice();
+            // OpenForm(form);
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void FRMmedicineOutPrice_Click_1(object sender, EventArgs e)
+        {
+            FRMmedicineOutPrice frm = new FRMmedicineOutPrice();
+           
+            // OpenForm(form);
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }

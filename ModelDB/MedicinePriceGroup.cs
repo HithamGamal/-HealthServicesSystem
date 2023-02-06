@@ -7,10 +7,12 @@ namespace ModelDB
     {
 
 		public int Id { get; set; }
-		public string GroupNameName { get; set; }
+		public string GroupName { get; set; }
 
-        public decimal GroupMaxGroup  { get; set; }
-		public bool IsEnabled { get; set; }
+        public decimal MaxPrice  { get; set; }
+        public int Percentag { get; set; }
+
+        public bool IsEnabled { get; set; }
       
 	}
 }

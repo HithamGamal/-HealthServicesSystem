@@ -159,6 +159,8 @@
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.printCardBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
+            this.FRMmedicineOutPrice = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -225,7 +227,8 @@
             this.radRibbonBarGroup5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
             this.radRibbonBarGroup5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.FRMMedicineSetting,
-            this.FRMMedicinePricing});
+            this.FRMMedicinePricing,
+            this.radButtonElement3});
             this.radRibbonBarGroup5.Name = "radRibbonBarGroup5";
             this.radRibbonBarGroup5.Text = "اعداد قائمة الدواء";
             // 
@@ -848,7 +851,7 @@
             // 
             // ribbonTab7
             // 
-            this.ribbonTab7.IsSelected = true;
+            this.ribbonTab7.IsSelected = false;
             this.ribbonTab7.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup32,
             this.radRibbonBarGroup33,
@@ -926,7 +929,7 @@
             // 
             // ribbonTab3
             // 
-            this.ribbonTab3.IsSelected = false;
+            this.ribbonTab3.IsSelected = true;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup22,
             this.radRibbonBarGroup23,
@@ -958,8 +961,11 @@
             // 
             // radRibbonBarGroup23
             // 
+            this.radRibbonBarGroup23.AutoSize = false;
+            this.radRibbonBarGroup23.Bounds = new System.Drawing.Rectangle(0, 0, 260, 102);
             this.radRibbonBarGroup23.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.FRMmedicine});
+            this.FRMmedicine,
+            this.FRMmedicineOutPrice});
             this.radRibbonBarGroup23.Name = "radRibbonBarGroup23";
             this.radRibbonBarGroup23.Text = "استرداد الخدمة الدوائية";
             // 
@@ -1067,7 +1073,7 @@
             // 
             // ribbonTab4
             // 
-            this.ribbonTab4.IsSelected = true;
+            this.ribbonTab4.IsSelected = false;
             this.ribbonTab4.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup27,
             this.radRibbonBarGroup28,
@@ -1419,6 +1425,24 @@
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.ThemeName = "Breeze";
             // 
+            // radButtonElement3
+            // 
+            this.radButtonElement3.Name = "radButtonElement3";
+            this.radButtonElement3.Text = "New button";
+            // 
+            // FRMmedicineOutPrice
+            // 
+            this.FRMmedicineOutPrice.AutoSize = false;
+            this.FRMmedicineOutPrice.Bounds = new System.Drawing.Rectangle(0, 0, 126, 74);
+            this.FRMmedicineOutPrice.Name = "FRMmedicineOutPrice";
+            this.FRMmedicineOutPrice.Text = "استرداد الخدمة الدوائية مساهمات";
+            this.FRMmedicineOutPrice.TextWrap = true;
+            this.FRMmedicineOutPrice.Click += new System.EventHandler(this.FRMmedicineOutPrice_Click_1);
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.FRMmedicineOutPrice.GetChildAt(1).GetChildAt(1))).TextWrap = true;
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.FRMmedicineOutPrice.GetChildAt(1).GetChildAt(1))).LineLimit = true;
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.FRMmedicineOutPrice.GetChildAt(1).GetChildAt(1))).Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.FRMmedicineOutPrice.GetChildAt(1).GetChildAt(1))).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.Auto;
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1579,5 +1603,7 @@
         private Telerik.WinControls.UI.RadButtonElement committeeBTN;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup54;
         private Telerik.WinControls.UI.RadButtonElement committeeListBTN;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement3;
+        private Telerik.WinControls.UI.RadButtonElement FRMmedicineOutPrice;
     }
 }
