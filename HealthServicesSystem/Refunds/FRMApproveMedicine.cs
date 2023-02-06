@@ -1620,6 +1620,7 @@ namespace HealthServicesSystem.Reclaims
             Fr.CustName = CustName.Text;
             Fr.Sex = Sex.Text;
             Fr.ServerName = ServerName.Text;
+            Fr.BirthDate = BirthDate;
             Fr.Rec_No = Rec_No;
             using (dbContext db = new dbContext())
             {
@@ -1661,7 +1662,7 @@ namespace HealthServicesSystem.Reclaims
                     ServerName.Text = dt.Rows[0]["StateName"].ToString();
                 }
                 conNat.Close();
-                BirthDate = PLC.getdate().AddYears(-Convert.ToInt32(Age.Text));
+               // BirthDate = PLC.getdate().AddYears(-Convert.ToInt32(Age.Text));
                 //Subscriber Sc = new Subscriber();
                 //Sc.PhoneNo = "";
                 //Sc.InsurNo = card_no.Text.Trim();

@@ -338,6 +338,7 @@ namespace HealthServicesSystem.Reclaims
             UnitPrice.Clear();
             MoneyPaied.Clear();
             dwalist.Focus();
+            MaxCost.Clear();
             ExcutingParty.SelectedIndex =- 1;
             RequistingParty.SelectedIndex = -1;
 

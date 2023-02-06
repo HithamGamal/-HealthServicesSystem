@@ -268,6 +268,7 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
+                if (Trade.ContainsFocus) {
 
                 if (Trade.SelectedIndex != -1)
                 {
@@ -281,12 +282,11 @@ namespace HealthServicesSystem.Reclaims
                         }
                     }
                 }
-
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+
             }
         }
         public void FillGrid()
@@ -322,6 +322,7 @@ namespace HealthServicesSystem.Reclaims
             UnitPrice.Clear();
             MoneyPaied.Clear();
             Trade.Focus();
+            MaxCost.Clear();
             ExcutingParty.SelectedIndex = -1;
             RequistingParty.SelectedIndex = -1;
 
@@ -352,7 +353,7 @@ namespace HealthServicesSystem.Reclaims
                 ExcutingParty.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 ExcutingParty.SelectedIndex = -1;
 
-                var EngSer = db.MedicinePriceGroups.Where(p => p.IsEnabled == true).ToList();
+                var EngSer = db.MedicinePriceGroups.Where(p => p.IsEnabled == true && p.Id>1).ToList();
                 MedicineGroup.DataSource = EngSer;
                 MedicineGroup.ValueMember = "Id";
                 MedicineGroup.DisplayMember = "GroupName";
@@ -835,15 +836,17 @@ namespace HealthServicesSystem.Reclaims
                     using (dbContext db = new dbContext())
                     {
                         int GenericId = Convert.ToInt32(Generic.SelectedValue);
-                        var gen = db.Trades.Where(p => p.GenericId == GenericId && p.IsActive == 1).ToList();
-                        Trade.DataSource = gen;
-                        Trade.ValueMember = "Id";
-                        Trade.DisplayMember = "TradeName";
-                        Trade.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-                        Trade.SelectedIndex = -1;
-                        //using (dbContext db = new dbContext())
-                        //{
-                        //    ServiceId = Convert.ToInt32(Generic.SelectedValue);
+                        if (Convert.IsDBNull(GenericId) == false)
+                        {
+                            var gen = db.Trades.Where(p => p.GenericId == GenericId && p.IsActive == 1).ToList();
+                            Trade.DataSource = gen;
+                            Trade.ValueMember = "Id";
+                            Trade.DisplayMember = "TradeName";
+                            Trade.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                            Trade.SelectedIndex = -1;
+                            //using (dbContext db = new dbContext())
+                            //{
+                            //    ServiceId = Convert.ToInt32(Generic.SelectedValue);
                             var getSer = db.MedicineForReclaims.Where(p => p.Id == ServiceId).ToList();
                             if (getSer.Count > 0)
                             {
@@ -860,11 +863,12 @@ namespace HealthServicesSystem.Reclaims
                                 UnitPrice.Text = getSer[0].UnitCost.ToString();
                                 // MaxCost.Text = getSer[0].MaxCost.ToString();
                                 InList = getSer[0].InContract;
-                              //  Percentage.Text = 75.ToString();
+                                //  Percentage.Text = 75.ToString();
                                 quantity.Text = 1.ToString();
                             }
                         }
-                    //}
+                        //}
+                    }
                 }
             }
             catch

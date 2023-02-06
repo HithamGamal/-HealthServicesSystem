@@ -915,6 +915,7 @@
             this.Percentage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Percentage.MaxLength = 5;
             this.Percentage.Name = "Percentage";
+            this.Percentage.ReadOnly = true;
             this.Percentage.Size = new System.Drawing.Size(66, 28);
             this.Percentage.TabIndex = 5;
             this.Percentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
