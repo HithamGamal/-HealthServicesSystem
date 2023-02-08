@@ -1662,20 +1662,6 @@ namespace HealthServicesSystem.Reclaims
                     ServerName.Text = dt.Rows[0]["StateName"].ToString();
                 }
                 conNat.Close();
-               // BirthDate = PLC.getdate().AddYears(-Convert.ToInt32(Age.Text));
-                //Subscriber Sc = new Subscriber();
-                //Sc.PhoneNo = "";
-                //Sc.InsurNo = card_no.Text.Trim();
-                //Sc.InsurName = CustName.Text;
-                //Sc.Gender = Sex.Text;
-                //Sc.Server = ServerName.Text;
-                //Sc.ClientId = ClientId.ToString();
-                //Sc.BirthDate = Birthdate;
-                //Sc.LocalityId = PLC.LocalityId;
-                //Sc.IsStoped = false;
-                //Sc.StopCard = new DateTime(1900, 1, 1);
-
-                //dbs.Add(Sc);
                 db.SaveChanges();
 
 

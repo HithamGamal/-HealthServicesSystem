@@ -435,16 +435,15 @@ namespace HealthServicesSystem.Reclaims
                         GetReclaim[0].ReclaimMedicalResonId = Convert.ToInt32(ApproveReason.SelectedValue);
                         GetReclaim[0].RefMedicalReqCenterId = Convert.ToInt32(RequistingParty.SelectedValue);
                         GetReclaim[0].RefMedicalExcCenterId = Convert.ToInt32(ExcutingParty.SelectedValue);
-                        GetReclaim[0].MedicalTotal = Convert.ToDecimal(MoneySum.Text);
-                        GetReclaim[0].ReclaimTotal = Convert.ToDecimal(MoneySum.Text) + Convert.ToDecimal(dwasum.Text);
-                        db.Database.ExecuteSqlCommand("delete from ReclaimMedicals where ReclaimId=" + ReclaimId + "");
+                        
                         for (int i = 0; i < GrdMedical.RowCount; i++)
                         {
                             ServiceId = Convert.ToInt32(GrdMedical.Rows[i].Cells["MedicalId"].Value);
+                            db.Database.ExecuteSqlCommand("delete from ReclaimMedicals where ReclaimId=" + ReclaimId + " and MedicalId=" + ServiceId + "");
                             //var ChkReclaim = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId && p.MedicalId == ServiceId).ToList();
                             //if (ChkReclaim.Count == 0)
                             //{
-                                ReclaimMedical rm = new ReclaimMedical();
+                            ReclaimMedical rm = new ReclaimMedical();
                                 rm.ReclaimId = ReclaimId;
                                 rm.MedicalId = ServiceId;
                                 rm.Quantity = Convert.ToInt32(GrdMedical.Rows[i].Cells["quantity"].Value);
@@ -455,10 +454,24 @@ namespace HealthServicesSystem.Reclaims
                                 rm.LocalityId = PLC.LocalityId;
                                 rm.DateIn = PLC.getdate();
                                 db.ReclaimMedicals.Add(rm);
-                               
+                            db.SaveChanges();
 
                            // }
                         }
+                        var Fmc = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).ToList();
+                        decimal MedicneTotal = 0;
+                        decimal MedicalTotal = 0;
+                        if (Fmc.Count > 0)
+                        {
+                            MedicneTotal = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
+                        }
+                        var Fmd = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).ToList();
+                        if (Fmd.Count > 0)
+                        {
+                            MedicalTotal = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
+                        }
+                        GetReclaim[0].MedicineTotal = MedicneTotal;
+                        GetReclaim[0].ReclaimTotal = MedicneTotal + MedicalTotal;
                         db.SaveChanges();
                         Saved = true;
                         MessageBox.Show("لقد تم حفظ بيانات الخدمات الطبية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Information);

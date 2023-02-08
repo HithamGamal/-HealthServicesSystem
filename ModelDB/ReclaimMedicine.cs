@@ -17,9 +17,11 @@ namespace ModelDB
         [ForeignKey("MedicineId")]
         public virtual MedicineForReclaim MedicineForReclaim { get; set; }
         public int Quantity { get; set; }
+        public int Frequency { get; set; }
         public decimal ReclaimCost { get; set; }
         public decimal ReclaimTotal { get; set; }
         public int Percentages { get; set; }
-        
+        public decimal UnitPrice { get; set; }
+
     }
 }

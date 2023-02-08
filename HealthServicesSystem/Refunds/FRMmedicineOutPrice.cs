@@ -84,7 +84,7 @@ namespace HealthServicesSystem.Reclaims
             MedicineGroup.SelectedIndex = -1;
             Generic.SelectedIndex = -1;
             Trade.SelectedIndex = -1;
-            approvereason.SelectedIndex = -1;
+            approvereason.SelectedValue = 4;
             RequistingParty.SelectedIndex = -1;
             ExcutingParty.SelectedIndex = -1;
             Saved = false;
@@ -100,8 +100,8 @@ namespace HealthServicesSystem.Reclaims
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 if (OperationNo.Text.Length == 0)
                 {
                     MessageBox.Show("لا توجد بيانات لهذه المماملة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -134,7 +134,7 @@ namespace HealthServicesSystem.Reclaims
                 }
                 using (dbContext db = new dbContext())
                 {
-
+                db.Database.CommandTimeout = 0;
                     var GetReclaim = db.Reclaims.Where(p => p.Id == ReclaimId).ToList();
                     if (GetReclaim.Count > 0)
                     {
@@ -144,41 +144,54 @@ namespace HealthServicesSystem.Reclaims
                         GetReclaim[0].RefMedicineExcCenterId = Convert.ToInt32(ExcutingParty.SelectedValue);
                         GetReclaim[0].MedicineTotal = Convert.ToDecimal(MoneySum.Text);
                         GetReclaim[0].ReclaimTotal = Convert.ToDecimal(MoneySum.Text) + Convert.ToDecimal(medicalsum.Text);
-                        db.Database.ExecuteSqlCommand("delete from ReclaimMedicines where ReclaimId=" + ReclaimId + "");
+                        //db.Database.ExecuteSqlCommand("delete from ReclaimMedicines where ReclaimId=" + ReclaimId + "");
                         for (int i = 0; i < GrdDwa.RowCount; i++)
                         {
                             ServiceId = Convert.ToInt32(GrdDwa.Rows[i].Cells["MedicalId"].Value);
-                            //var ChkReclaim = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineId == ServiceId).ToList();
-                            //if (ChkReclaim.Count == 0)
-                            //{
-                            ReclaimMedicine rm = new ReclaimMedicine();
+                        db.Database.ExecuteSqlCommand("delete from ReclaimMedicines where ReclaimId=" + ReclaimId + " and MedicineId=" + ServiceId + "");
+                        //var ChkReclaim = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineId == ServiceId).ToList();
+                        //if (ChkReclaim.Count == 0)
+                        //{
+                        ReclaimMedicine rm = new ReclaimMedicine();
                             rm.ReclaimId = ReclaimId;
                             rm.MedicineId = ServiceId;
                             rm.Quantity = Convert.ToInt32(GrdDwa.Rows[i].Cells["quantity"].Value);
                             rm.ReclaimTotal = Convert.ToDecimal(GrdDwa.Rows[i].Cells["ReclaimTotal"].Value);
                             rm.ReclaimCost = Convert.ToDecimal(GrdDwa.Rows[i].Cells["ReclaimCost"].Value);
                             rm.Percentages = Convert.ToInt32(GrdDwa.Rows[i].Cells["Percentages"].Value);
+                            rm.UnitPrice=Convert.ToDecimal(GrdDwa.Rows[i].Cells["UnitPrice"].Value); ;
                             rm.UserId = UserId;
                             rm.DateIn = PLC.getdate();
                             rm.LocalityId = PLC.LocalityId;
                             db.ReclaimMedicines.Add(rm);
-
+                        db.SaveChanges();
 
                             // }
                         }
-
-                        db.SaveChanges();
+                    var Fmc = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).ToList();
+                    decimal MedicneTotal = 0;
+                    decimal MedicalTotal = 0;
+                    if (Fmc.Count > 0) {
+                         MedicneTotal = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
+                    }
+                    var Fmd = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).ToList();
+                    if (Fmd.Count > 0) {
+                        MedicalTotal = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
+                    }
+                    GetReclaim[0].MedicineTotal = MedicneTotal;
+                    GetReclaim[0].ReclaimTotal = MedicneTotal + MedicalTotal;
+                    db.SaveChanges();
                         Saved = true;
                         MessageBox.Show("لقد تم حفظ بيانات الأدوية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                 }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("توجد مشكلة في الاتصال بالمخدم الرئيسي للبيانات" + (char)13 + "قم باعادة المحاولة مرة أخرى", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("توجد مشكلة في الاتصال بالمخدم الرئيسي للبيانات" + (char)13 + "قم باعادة المحاولة مرة أخرى", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
 
 
@@ -226,7 +239,13 @@ namespace HealthServicesSystem.Reclaims
                         {
                             MedSum = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimTotal);
                         }
-                        medicalsum.Text = MedSum.ToString();
+                        var Mec = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract == true).ToList();
+                        decimal MecSum = 0;
+                        if (Mec.Count > 0)
+                        {
+                            MecSum = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract==true).Sum(p => p.ReclaimTotal);
+                        }
+                        ReDwaSum.Text = MecSum.ToString();
                         string CardNo = card_no.Text;
                         PLC.SubId = FRef[0].InsurNo;
                         var FrHistoryMd = db.Reclaims.Where(p => p.InsurNo == PLC.SubId && p.IsMedicine == true && p.MedicineTotal > 0).ToList();
@@ -293,7 +312,8 @@ namespace HealthServicesSystem.Reclaims
         {
             using (dbContext db = new dbContext())
             {
-                var FrefMl = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).Select(p => new { p.Id, p.MedicineForReclaim.Generic_name, p.MedicineForReclaim.InContract, p.ReclaimTotal, p.ReclaimCost, MedicalId = p.MedicineId, p.Quantity, p.Percentages, p.Reclaim.ReclaimStatus, p.Reclaim.ReclaimMedicineResonId }).ToList();
+                db.Database.CommandTimeout = 0;
+                var FrefMl = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract==false).Select(p => new { p.Id, p.MedicineForReclaim.Generic_name, p.MedicineForReclaim.InContract, p.ReclaimTotal, p.ReclaimCost, MedicalId = p.MedicineId, p.Quantity, p.Percentages, p.Reclaim.ReclaimStatus, p.Reclaim.ReclaimMedicineResonId }).ToList();
                 //  GrdDwa.DataSource = FrefMl;
                 if (FrefMl.Count > 0)
                 {
@@ -315,16 +335,19 @@ namespace HealthServicesSystem.Reclaims
         }
         private void NewMedical()
         {
+            Generic.SelectedIndex = -1;
             Trade.SelectedIndex = -1;
             ServiceListType.Clear();
             quantity.Clear();
             Percentage.Clear();
             UnitPrice.Clear();
             MoneyPaied.Clear();
+            TotalPaied.Clear();
             Trade.Focus();
             MaxCost.Clear();
             ExcutingParty.SelectedIndex = -1;
             RequistingParty.SelectedIndex = -1;
+            approvereason.SelectedValue = 6;
 
         }
         private void FRMmedicineOutPrice_Load(object sender, EventArgs e)
@@ -337,7 +360,7 @@ namespace HealthServicesSystem.Reclaims
                 approvereason.DataSource = ReclaimRes;
                 approvereason.DisplayMember = "MedicineReason";
                 approvereason.ValueMember = "Id";
-                approvereason.SelectedIndex = -1;
+                
 
                 var ReqCenter = db.CenterInfos.Where(p => p.IsEnabled == true && p.Id != 50000).ToList();
                 RequistingParty.DataSource = ReqCenter;
@@ -412,14 +435,14 @@ namespace HealthServicesSystem.Reclaims
             if (Convert.ToDecimal(MoneyPaied.Text) > Convert.ToDecimal(MaxCost.Text) && Convert.ToDecimal(MaxCost.Text) > 0)
             {
                 MessageBox.Show("المبلغ المدخل أكبر من أقصى مبلغ لاسترداد هذا الدواء", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                NewMedical();
+               // NewMedical();
                 return;
             }
-            decimal MedSum = Convert.ToDecimal(MoneySum.Text) + Convert.ToDecimal(MoneyPaied.Text) + Convert.ToDecimal(medicalsum.Text);
+            decimal MedSum = Convert.ToDecimal(ReDwaSum.Text)+ Convert.ToDecimal(MoneySum.Text) + Convert.ToDecimal(MoneyPaied.Text) + Convert.ToDecimal(medicalsum.Text);
             if (MedSum > Convert.ToDecimal(initMoney.Text))
             {
                 MessageBox.Show("المبلغ المدخل أكبر من اجمالي الفاتورة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                NewMedical();
+              //  NewMedical();
                 return;
             }
             using (dbContext db = new dbContext())
@@ -464,7 +487,7 @@ namespace HealthServicesSystem.Reclaims
 
             //}
             // GrdDwa.DataSource = null;
-            GrdDwa.Rows.Add(GrdDwa.RowCount + 1, 0, ServiceId.ToString(), Generic.Text, (Convert.ToDecimal(UnitPrice.Text) * Convert.ToDecimal(quantity.Text)).ToString(), InList, UnitPrice.Text, quantity.Text, MoneyPaied.Text, Percentage.Text);
+            GrdDwa.Rows.Add(GrdDwa.RowCount + 1, 0, ServiceId.ToString(), Generic.Text, TotalPaied.Text, InList, UnitPrice.Text, quantity.Text, MoneyPaied.Text, Percentage.Text);
             decimal Mtotal = 0;
             for (int i = 0; i < GrdDwa.RowCount; i++)
             {
@@ -512,6 +535,7 @@ namespace HealthServicesSystem.Reclaims
             }
             using (dbContext db = new dbContext())
             {
+                db.Database.CommandTimeout = 0;
                 DialogResult a = 0;
                 a = MessageBox.Show("سوف يتم حذف بيانات كل الأدوية المدخلة", "النظام", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2);
                 if (a == DialogResult.Yes)
@@ -603,6 +627,7 @@ namespace HealthServicesSystem.Reclaims
             {
                 using (dbContext db = new dbContext())
                 {
+                    db.Database.CommandTimeout = 0;
                     var FrHistoryMc = db.ReclaimMedicines.Where(p => p.Reclaim.ReclaimNo == OperationNo.Text.Trim() && p.RowStatus != RowStatus.Deleted).Select(p => new { p.Id, p.Reclaim.ReclaimNo, ServiceName = p.MedicineForReclaim.Generic_name, p.Reclaim.InsurNo, p.Reclaim.InsurName, p.Reclaim.ReclaimDate, p.Percentages, p.ReclaimCost, p.ReclaimTotal, p.Reclaim.BillsTotal, p.Reclaim.Server, p.Reclaim.ClientId, InContract = (p.MedicineForReclaim.InContract == true ? "داخل العقد" : "خارج العقد"), ServiceGroup = "أدوية" }).ToList();
                     var FrHistoryMd = db.ReclaimMedicals.Where(p => p.Reclaim.ReclaimNo == OperationNo.Text.Trim() && p.RowStatus != RowStatus.Deleted).Select(p => new { p.Id, p.Reclaim.ReclaimNo, ServiceName = p.MedicalServices.ServiceAName, p.Reclaim.InsurNo, p.Reclaim.InsurName, p.Reclaim.ReclaimDate, p.Percentages, p.ReclaimCost, p.ReclaimTotal, p.Reclaim.BillsTotal, p.Reclaim.Server, p.Reclaim.ClientId, InContract = (p.MedicalServices.InContract == true ? "داخل العقد" : "خارج العقد"), ServiceGroup = "خدمات طبية" }).ToList();
                     var FrHistory = FrHistoryMc.Union(FrHistoryMd).ToList();
@@ -789,6 +814,7 @@ namespace HealthServicesSystem.Reclaims
         {
             using (dbContext db = new dbContext())
             {
+                db.Database.CommandTimeout = 0;
                 DialogResult a = 0;
                 a = MessageBox.Show("سوف يتم رفض استرداد الخدمة الدوائية", "النظام", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2);
                 if (a == DialogResult.Yes)
@@ -895,6 +921,48 @@ namespace HealthServicesSystem.Reclaims
             {
 
 
+            }
+        }
+
+        private void TotalPaied_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
+        }
+
+        private void Quantity_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
+        }
+
+        private void Percentage_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
+            }
+            catch (Exception)
+            {
+
+                return;
             }
         }
     }
