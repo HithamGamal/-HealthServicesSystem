@@ -28,23 +28,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
             this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.BTNDel = new Telerik.WinControls.UI.RadButton();
@@ -76,6 +75,7 @@
             this.Label16 = new Telerik.WinControls.UI.RadLabel();
             this.OperationDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.GroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.ApprovementId = new System.Windows.Forms.Label();
             this.LBLNotes = new Telerik.WinControls.UI.RadLabel();
             this.Atachment = new Telerik.WinControls.UI.RadTextBox();
             this.LBLDuration = new Telerik.WinControls.UI.RadLabel();
@@ -94,7 +94,6 @@
             this.CustName = new Telerik.WinControls.UI.RadTextBox();
             this.card_no = new Telerik.WinControls.UI.RadTextBox();
             this.ServerName = new Telerik.WinControls.UI.RadTextBox();
-            this.ApprovementId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BTNDel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNNew)).BeginInit();
@@ -298,10 +297,8 @@
             this.SubscriberType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.SubscriberType.DropDownHeight = 95;
             this.SubscriberType.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem5.Text = "مشترك تأمين";
-            radListDataItem6.Text = "طلاب";
-            this.SubscriberType.Items.Add(radListDataItem5);
-            this.SubscriberType.Items.Add(radListDataItem6);
+            radListDataItem1.Text = "مشترك تأمين";
+            this.SubscriberType.Items.Add(radListDataItem1);
             this.SubscriberType.Location = new System.Drawing.Point(832, 12);
             this.SubscriberType.Margin = new System.Windows.Forms.Padding(2);
             this.SubscriberType.Name = "SubscriberType";
@@ -356,10 +353,10 @@
             this.Sex.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.Sex.DropDownHeight = 95;
             this.Sex.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem1.Text = "ذكر";
-            radListDataItem2.Text = "انثي      ";
-            this.Sex.Items.Add(radListDataItem1);
+            radListDataItem2.Text = "ذكر";
+            radListDataItem3.Text = "انثي      ";
             this.Sex.Items.Add(radListDataItem2);
+            this.Sex.Items.Add(radListDataItem3);
             this.Sex.Location = new System.Drawing.Point(875, 50);
             this.Sex.Margin = new System.Windows.Forms.Padding(2);
             this.Sex.Name = "Sex";
@@ -395,32 +392,32 @@
             // 
             this.GrdDailyWork.MasterTemplate.AllowAddNewRow = false;
             this.GrdDailyWork.MasterTemplate.AllowDeleteRow = false;
-            gridViewTextBoxColumn11.HeaderText = "م";
-            gridViewTextBoxColumn11.Name = "Serial";
-            gridViewTextBoxColumn11.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn12.DataType = typeof(int);
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "Id";
-            gridViewTextBoxColumn12.HeaderText = "رقم التصديق";
-            gridViewTextBoxColumn12.IsVisible = false;
-            gridViewTextBoxColumn12.Name = "Id";
-            gridViewTextBoxColumn12.Width = 150;
-            gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.FieldName = "InsurName";
-            gridViewTextBoxColumn13.HeaderText = "الاسم";
-            gridViewTextBoxColumn13.Name = "SubscriberName";
-            gridViewTextBoxColumn13.ReadOnly = true;
-            gridViewTextBoxColumn13.Width = 500;
-            gridViewCommandColumn2.HeaderText = "عرض";
-            gridViewCommandColumn2.Name = "Show";
-            gridViewCommandColumn2.Width = 100;
+            gridViewTextBoxColumn1.HeaderText = "م";
+            gridViewTextBoxColumn1.Name = "Serial";
+            gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn2.DataType = typeof(int);
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Id";
+            gridViewTextBoxColumn2.HeaderText = "رقم التصديق";
+            gridViewTextBoxColumn2.IsVisible = false;
+            gridViewTextBoxColumn2.Name = "Id";
+            gridViewTextBoxColumn2.Width = 150;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "InsurName";
+            gridViewTextBoxColumn3.HeaderText = "الاسم";
+            gridViewTextBoxColumn3.Name = "SubscriberName";
+            gridViewTextBoxColumn3.ReadOnly = true;
+            gridViewTextBoxColumn3.Width = 500;
+            gridViewCommandColumn1.HeaderText = "عرض";
+            gridViewCommandColumn1.Name = "Show";
+            gridViewCommandColumn1.Width = 100;
             this.GrdDailyWork.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewTextBoxColumn13,
-            gridViewCommandColumn2});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewCommandColumn1});
             this.GrdDailyWork.MasterTemplate.EnableFiltering = true;
-            this.GrdDailyWork.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.GrdDailyWork.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.GrdDailyWork.Name = "GrdDailyWork";
             this.GrdDailyWork.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GrdDailyWork.ShowGroupPanel = false;
@@ -634,6 +631,17 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.ThemeName = "Office2010Blue";
             // 
+            // ApprovementId
+            // 
+            this.ApprovementId.BackColor = System.Drawing.Color.Black;
+            this.ApprovementId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApprovementId.ForeColor = System.Drawing.Color.White;
+            this.ApprovementId.Location = new System.Drawing.Point(388, 184);
+            this.ApprovementId.Name = "ApprovementId";
+            this.ApprovementId.Size = new System.Drawing.Size(333, 31);
+            this.ApprovementId.TabIndex = 445;
+            this.ApprovementId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LBLNotes
             // 
             this.LBLNotes.BackColor = System.Drawing.Color.Transparent;
@@ -703,53 +711,53 @@
             // 
             this.GrdDwa.MasterTemplate.AllowAddNewRow = false;
             this.GrdDwa.MasterTemplate.AllowDeleteRow = false;
-            gridViewTextBoxColumn14.DataType = typeof(int);
-            gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.HeaderText = "م";
-            gridViewTextBoxColumn14.Name = "clmSer";
-            gridViewTextBoxColumn14.ReadOnly = true;
-            gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.FieldName = "Generic_name";
-            gridViewTextBoxColumn15.HeaderText = "الدواء";
-            gridViewTextBoxColumn15.Name = "Generic_name";
-            gridViewTextBoxColumn15.ReadOnly = true;
-            gridViewTextBoxColumn15.Width = 500;
-            gridViewTextBoxColumn16.DataType = typeof(int);
-            gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.FieldName = "Quantity";
-            gridViewTextBoxColumn16.HeaderText = "كمية الدواء";
-            gridViewTextBoxColumn16.Name = "Quantity";
-            gridViewTextBoxColumn16.Width = 100;
-            gridViewTextBoxColumn17.DataType = typeof(decimal);
-            gridViewTextBoxColumn17.EnableExpressionEditor = false;
-            gridViewTextBoxColumn17.FieldName = "ApprovedQuantity";
-            gridViewTextBoxColumn17.HeaderText = "الكمية المصدقة";
-            gridViewTextBoxColumn17.Name = "ApprovedQuantity";
-            gridViewTextBoxColumn17.Width = 100;
-            gridViewTextBoxColumn18.DataType = typeof(int);
-            gridViewTextBoxColumn18.EnableExpressionEditor = false;
-            gridViewTextBoxColumn18.FieldName = "Id";
-            gridViewTextBoxColumn18.HeaderText = "Id";
-            gridViewTextBoxColumn18.IsVisible = false;
-            gridViewTextBoxColumn18.Name = "Id";
-            gridViewTextBoxColumn19.FieldName = "ServiceId";
-            gridViewTextBoxColumn19.HeaderText = "ServiceId";
-            gridViewTextBoxColumn19.IsVisible = false;
-            gridViewTextBoxColumn19.Name = "ServiceId";
-            gridViewTextBoxColumn20.FieldName = "ApproveDuration";
-            gridViewTextBoxColumn20.HeaderText = "مدة التصديق";
-            gridViewTextBoxColumn20.Name = "ApproveDuration";
-            gridViewTextBoxColumn20.Width = 100;
+            gridViewTextBoxColumn4.DataType = typeof(int);
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.HeaderText = "م";
+            gridViewTextBoxColumn4.Name = "clmSer";
+            gridViewTextBoxColumn4.ReadOnly = true;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "Generic_name";
+            gridViewTextBoxColumn5.HeaderText = "الدواء";
+            gridViewTextBoxColumn5.Name = "Generic_name";
+            gridViewTextBoxColumn5.ReadOnly = true;
+            gridViewTextBoxColumn5.Width = 500;
+            gridViewTextBoxColumn6.DataType = typeof(int);
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "Quantity";
+            gridViewTextBoxColumn6.HeaderText = "كمية الدواء";
+            gridViewTextBoxColumn6.Name = "Quantity";
+            gridViewTextBoxColumn6.Width = 100;
+            gridViewTextBoxColumn7.DataType = typeof(decimal);
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "ApprovedQuantity";
+            gridViewTextBoxColumn7.HeaderText = "الكمية المصدقة";
+            gridViewTextBoxColumn7.Name = "ApprovedQuantity";
+            gridViewTextBoxColumn7.Width = 100;
+            gridViewTextBoxColumn8.DataType = typeof(int);
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "Id";
+            gridViewTextBoxColumn8.HeaderText = "Id";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "Id";
+            gridViewTextBoxColumn9.FieldName = "ServiceId";
+            gridViewTextBoxColumn9.HeaderText = "ServiceId";
+            gridViewTextBoxColumn9.IsVisible = false;
+            gridViewTextBoxColumn9.Name = "ServiceId";
+            gridViewTextBoxColumn10.FieldName = "ApproveDuration";
+            gridViewTextBoxColumn10.HeaderText = "مدة التصديق";
+            gridViewTextBoxColumn10.Name = "ApproveDuration";
+            gridViewTextBoxColumn10.Width = 100;
             this.GrdDwa.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18,
-            gridViewTextBoxColumn19,
-            gridViewTextBoxColumn20});
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10});
             this.GrdDwa.MasterTemplate.EnableFiltering = true;
-            this.GrdDwa.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.GrdDwa.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.GrdDwa.Name = "GrdDwa";
             this.GrdDwa.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GrdDwa.ShowGroupPanel = false;
@@ -945,17 +953,6 @@
             this.ServerName.TabIndex = 5;
             this.ServerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ServerName.ThemeName = "Office2010Blue";
-            // 
-            // ApprovementId
-            // 
-            this.ApprovementId.BackColor = System.Drawing.Color.Black;
-            this.ApprovementId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApprovementId.ForeColor = System.Drawing.Color.White;
-            this.ApprovementId.Location = new System.Drawing.Point(388, 184);
-            this.ApprovementId.Name = "ApprovementId";
-            this.ApprovementId.Size = new System.Drawing.Size(333, 31);
-            this.ApprovementId.TabIndex = 445;
-            this.ApprovementId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FRMApproveMedicine
             // 

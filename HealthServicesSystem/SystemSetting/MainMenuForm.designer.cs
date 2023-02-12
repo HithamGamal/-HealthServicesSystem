@@ -159,6 +159,8 @@
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.printCardBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
+            this.FRMmedicineOutPrice = new Telerik.WinControls.UI.RadButtonElement();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             this.locality = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement3 = new Telerik.WinControls.UI.RadLabelElement();
@@ -232,7 +234,8 @@
             this.radRibbonBarGroup5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
             this.radRibbonBarGroup5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.FRMMedicineSetting,
-            this.FRMMedicinePricing});
+            this.FRMMedicinePricing,
+            this.radButtonElement3});
             this.radRibbonBarGroup5.Name = "radRibbonBarGroup5";
             this.radRibbonBarGroup5.Text = "اعداد قائمة الدواء";
             // 
@@ -933,7 +936,7 @@
             // 
             // ribbonTab3
             // 
-            this.ribbonTab3.IsSelected = false;
+            this.ribbonTab3.IsSelected = true;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup22,
             this.radRibbonBarGroup23,
@@ -965,8 +968,11 @@
             // 
             // radRibbonBarGroup23
             // 
+            this.radRibbonBarGroup23.AutoSize = false;
+            this.radRibbonBarGroup23.Bounds = new System.Drawing.Rectangle(0, 0, 260, 102);
             this.radRibbonBarGroup23.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.FRMmedicine});
+            this.FRMmedicine,
+            this.FRMmedicineOutPrice});
             this.radRibbonBarGroup23.Name = "radRibbonBarGroup23";
             this.radRibbonBarGroup23.Text = "استرداد الخدمة الدوائية";
             // 
@@ -1655,6 +1661,8 @@
         private Telerik.WinControls.UI.RadButtonElement committeeBTN;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup54;
         private Telerik.WinControls.UI.RadButtonElement committeeListBTN;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement3;
+        private Telerik.WinControls.UI.RadButtonElement FRMmedicineOutPrice;
         private Telerik.WinControls.UI.RadLabelElement radLabelElement1;
         private Telerik.WinControls.UI.RadLabelElement locality;
         private Telerik.WinControls.UI.RadLabelElement radLabelElement3;

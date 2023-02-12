@@ -138,7 +138,7 @@ namespace HealthServicesSystem.Reclaims
             {
                 using (dbContext db = new dbContext())
                 {
-                    var FChk = db.ChronicsBooks.Where(p => p.Excepted == true && (p.BookDate >= Da1 && p.BookDate <= Da2) && p.RowStatus != RowStatus.Deleted).ToList();
+                    var FChk = db.ChronicsBooks.Where(p => p.Excepted == true && (p.BookDate >= Da1 && p.BookDate <= Da2) && p.RowStatus != RowStatus.Deleted && p.LocalityId==LocalityId).ToList();
                     if (FChk.Count > 0)
                     {
                         if (FChk.Count >= 12)
@@ -728,16 +728,16 @@ namespace HealthServicesSystem.Reclaims
 
                             ServerName.Text = ChkN[0].Server;
                         }
-                        else
-                        {
-                            this.Cursor = Cursors.Default;
-                            FRMAddStudent.Default.card_no.Text = card_no.Text;
-                            FRMAddStudent.Default.ful_name.Clear();
-                            FRMAddStudent.Default.Age.Clear();
-                            FRMAddStudent.Default.Sex.SelectedIndex = -1;
-                            FRMAddStudent.Default.University.SelectedIndex = -1;
-                            FRMAddStudent.Default.ShowDialog();
-                        }
+                        //else
+                        //{
+                        //    this.Cursor = Cursors.Default;
+                        //    FRMAddStudent.Default.card_no.Text = card_no.Text;
+                        //    FRMAddStudent.Default.ful_name.Clear();
+                        //    FRMAddStudent.Default.Age.Clear();
+                        //    FRMAddStudent.Default.Sex.SelectedIndex = -1;
+                        //    FRMAddStudent.Default.University.SelectedIndex = -1;
+                        //    FRMAddStudent.Default.ShowDialog();
+                        //}
                     }
 
                 }

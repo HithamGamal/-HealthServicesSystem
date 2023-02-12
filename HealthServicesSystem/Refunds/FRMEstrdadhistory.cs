@@ -107,11 +107,12 @@ namespace HealthServicesSystem.Reclaims
         {
             using (dbContext db = new dbContext())
             {
+                db.Database.CommandTimeout = 0;
                 if (PLC.SubId.Length > 0 && PLC.SubId != "0")
                 {
                     DateTime dat = PLC.getdate().AddYears(-1);
                     var GetMed = db.ReclaimMedicines.Where(p => p.Reclaim.InsurNo == PLC.SubId && p.DateIn >= dat).ToList();
-                    if (GetMed.Count > 0)
+                    if (GetMed.Count > 0) 
                     {
                         Grid_service.Rows.Clear();
                         for (int i = 0; i < GetMed.Count; i++)

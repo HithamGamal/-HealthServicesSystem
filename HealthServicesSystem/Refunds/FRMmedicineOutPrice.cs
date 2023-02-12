@@ -15,9 +15,9 @@ using HealthServicesSystem.SystemSetting;
 
 namespace HealthServicesSystem.Reclaims
 {
-    public partial class FRMmedicine : Telerik.WinControls.UI.RadForm
+    public partial class FRMmedicineOutPrice : Telerik.WinControls.UI.RadForm
     {
-        public FRMmedicine()
+        public FRMmedicineOutPrice()
         {
             InitializeComponent();
             if (defaultInstance == null)
@@ -26,18 +26,18 @@ namespace HealthServicesSystem.Reclaims
 
         #region Default Instance
 
-        private static FRMmedicine defaultInstance;
+        private static FRMmedicineOutPrice defaultInstance;
 
         /// <summary>
         /// Added by the VB.Net to C# Converter to support default instance behavour in C#
         /// </summary>
-        public static FRMmedicine Default
+        public static FRMmedicineOutPrice Default
         {
             get
             {
                 if (defaultInstance == null)
                 {
-                    defaultInstance = new FRMmedicine();
+                    defaultInstance = new FRMmedicineOutPrice();
                     defaultInstance.FormClosed += new FormClosedEventHandler(defaultInstance_FormClosed);
                 }
 
@@ -70,18 +70,21 @@ namespace HealthServicesSystem.Reclaims
             OperationNo.Clear();
             OperationNo.Focus();
             CustName.Clear();
-            dwalist.SelectedIndex = -1;
+            Trade.SelectedIndex = -1;
             OperationDate.Value = PLC.getdate();
             ServerName.Clear();
             ServiceListType.Clear();
             quantity.Clear();
             Percentage.Clear();
             UnitPrice.Clear();
-            TotalPaied.Clear();
+            MoneyPaied.Clear();
             medicalsum.Clear();
             MoneySum.Clear();
             GrdDwa.Rows.Clear();
-            approvereason.SelectedIndex = -1;
+            MedicineGroup.SelectedIndex = -1;
+            Generic.SelectedIndex = -1;
+            Trade.SelectedIndex = -1;
+            approvereason.SelectedValue = 4;
             RequistingParty.SelectedIndex = -1;
             ExcutingParty.SelectedIndex = -1;
             Saved = false;
@@ -97,8 +100,8 @@ namespace HealthServicesSystem.Reclaims
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 if (OperationNo.Text.Length == 0)
                 {
                     MessageBox.Show("لا توجد بيانات لهذه المماملة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -131,8 +134,7 @@ namespace HealthServicesSystem.Reclaims
                 }
                 using (dbContext db = new dbContext())
                 {
-                    db.Database.CommandTimeout = 0;
-
+                db.Database.CommandTimeout = 0;
                     var GetReclaim = db.Reclaims.Where(p => p.Id == ReclaimId).ToList();
                     if (GetReclaim.Count > 0)
                     {
@@ -140,58 +142,56 @@ namespace HealthServicesSystem.Reclaims
                         GetReclaim[0].ReclaimMedicineResonId = Convert.ToInt32(approvereason.SelectedValue);
                         GetReclaim[0].RefMedicineReqCenterId = Convert.ToInt32(RequistingParty.SelectedValue);
                         GetReclaim[0].RefMedicineExcCenterId = Convert.ToInt32(ExcutingParty.SelectedValue);
-   
-                        
+                        GetReclaim[0].MedicineTotal = Convert.ToDecimal(MoneySum.Text);
+                        GetReclaim[0].ReclaimTotal = Convert.ToDecimal(MoneySum.Text) + Convert.ToDecimal(medicalsum.Text);
+                        //db.Database.ExecuteSqlCommand("delete from ReclaimMedicines where ReclaimId=" + ReclaimId + "");
                         for (int i = 0; i < GrdDwa.RowCount; i++)
                         {
                             ServiceId = Convert.ToInt32(GrdDwa.Rows[i].Cells["MedicalId"].Value);
-                            db.Database.ExecuteSqlCommand("delete from ReclaimMedicines where ReclaimId=" + ReclaimId + " and MedicineId="+ ServiceId + "");
-                            //var ChkReclaim = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineId == ServiceId).ToList();
-                            //if (ChkReclaim.Count == 0)
-                            //{
-                            ReclaimMedicine rm = new ReclaimMedicine();
+                        db.Database.ExecuteSqlCommand("delete from ReclaimMedicines where ReclaimId=" + ReclaimId + " and MedicineId=" + ServiceId + "");
+                        //var ChkReclaim = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineId == ServiceId).ToList();
+                        //if (ChkReclaim.Count == 0)
+                        //{
+                        ReclaimMedicine rm = new ReclaimMedicine();
                             rm.ReclaimId = ReclaimId;
                             rm.MedicineId = ServiceId;
                             rm.Quantity = Convert.ToInt32(GrdDwa.Rows[i].Cells["quantity"].Value);
                             rm.ReclaimTotal = Convert.ToDecimal(GrdDwa.Rows[i].Cells["ReclaimTotal"].Value);
                             rm.ReclaimCost = Convert.ToDecimal(GrdDwa.Rows[i].Cells["ReclaimCost"].Value);
                             rm.Percentages = Convert.ToInt32(GrdDwa.Rows[i].Cells["Percentages"].Value);
-                            rm.UnitPrice = Convert.ToDecimal(GrdDwa.Rows[i].Cells["UnitPrice"].Value);
+                            rm.UnitPrice=Convert.ToDecimal(GrdDwa.Rows[i].Cells["UnitPrice"].Value); ;
                             rm.UserId = UserId;
                             rm.DateIn = PLC.getdate();
                             rm.LocalityId = PLC.LocalityId;
                             db.ReclaimMedicines.Add(rm);
-                            db.SaveChanges();
+                        db.SaveChanges();
 
                             // }
                         }
-                        var Fmc = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).ToList();
-                        decimal MedicneTotal = 0;
-                        decimal MedicalTotal = 0;
-                        if (Fmc.Count > 0)
-                        {
-                            MedicneTotal = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
-                        }
-                        var Fmd = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).ToList();
-                        if (Fmd.Count > 0)
-                        {
-                            MedicalTotal = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
-                        }
-                        GetReclaim[0].MedicineTotal = MedicneTotal;
-                        GetReclaim[0].ReclaimTotal = MedicneTotal + MedicalTotal;
-                        db.SaveChanges();
-                        db.SaveChanges();
+                    var Fmc = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).ToList();
+                    decimal MedicneTotal = 0;
+                    decimal MedicalTotal = 0;
+                    if (Fmc.Count > 0) {
+                         MedicneTotal = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
+                    }
+                    var Fmd = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).ToList();
+                    if (Fmd.Count > 0) {
+                        MedicalTotal = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
+                    }
+                    GetReclaim[0].MedicineTotal = MedicneTotal;
+                    GetReclaim[0].ReclaimTotal = MedicneTotal + MedicalTotal;
+                    db.SaveChanges();
                         Saved = true;
                         MessageBox.Show("لقد تم حفظ بيانات الأدوية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                 }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("توجد مشكلة في الاتصال بالمخدم الرئيسي للبيانات" + (char)13 + "قم باعادة المحاولة مرة أخرى", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("توجد مشكلة في الاتصال بالمخدم الرئيسي للبيانات" + (char)13 + "قم باعادة المحاولة مرة أخرى", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
 
 
@@ -229,6 +229,7 @@ namespace HealthServicesSystem.Reclaims
                         RequistingParty.SelectedValue = FRef[0].RefMedicineReqCenterId;
                         BillStatus.SelectedIndex = Convert.ToInt32(FRef[0].ReclaimStatus);
                         ExcutingParty.SelectedValue = FRef[0].RefMedicineExcCenterId;
+                       
                         //var FrefMd = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).ToList();
                         // medicalsum.Text = FRef[0].MedicineTotal.ToString();
                         FillGrid();
@@ -238,12 +239,11 @@ namespace HealthServicesSystem.Reclaims
                         {
                             MedSum = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimTotal);
                         }
-                        medicalsum.Text = MedSum.ToString();
-                        var Mec = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract == false).ToList();
+                        var Mec = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract == true).ToList();
                         decimal MecSum = 0;
                         if (Mec.Count > 0)
                         {
-                            MecSum = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract == false).Sum(p => p.ReclaimTotal);
+                            MecSum = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract==true).Sum(p => p.ReclaimTotal);
                         }
                         ReDwaSum.Text = MecSum.ToString();
                         string CardNo = card_no.Text;
@@ -287,45 +287,25 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
-                if (dwalist.ContainsFocus)
+                if (Trade.ContainsFocus) {
+
+                if (Trade.SelectedIndex != -1)
                 {
-                    if (dwalist.SelectedIndex != -1)
+                    using (dbContext db = new dbContext())
                     {
-                        using (dbContext db = new dbContext())
+                        ServiceId = Convert.ToInt32(Trade.SelectedValue);
+                        var getSer = db.Trades.Where(p => p.Id == ServiceId).ToList();
+                        if (getSer.Count > 0)
                         {
-                            ServiceId = Convert.ToInt32(dwalist.SelectedValue);
-                            var getSer = db.MedicineForReclaims.Where(p => p.Id == ServiceId).ToList();
-                            if (getSer.Count > 0)
-                            {
-                                if (getSer[0].InContract == true)
-                                {
-                                    ServiceListType.Text = "داخل العقد";
-                                }
-                                else
-                                {
-                                    ServiceListType.Text = "خارج العقد";
-                                }
-                                string StrUnit = "";
-                                var Dbunit = db.Medicines.Where(p => p.Id == ServiceId).ToList();
-                                if (Dbunit.Count > 0)
-                                {
-                                    StrUnit = Dbunit[0].Unit.Unit_Name;
-                                }
-                                UnitInfo.Text = "تكتب بأصغر وحدة " + " " + "وأصغر وحدة هي " + StrUnit;
-                                UnitPrice.Text = getSer[0].UnitCost.ToString();
-                                MaxCost.Text = getSer[0].MaxCost.ToString();
-                                InList = getSer[0].InContract;
-                                Percentage.Text = 75.ToString();
-                                quantity.Text = 1.ToString();
-                            }
+                            Generic.SelectedValue = getSer[0].GenericId;
                         }
                     }
+                }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+
             }
         }
         public void FillGrid()
@@ -333,7 +313,7 @@ namespace HealthServicesSystem.Reclaims
             using (dbContext db = new dbContext())
             {
                 db.Database.CommandTimeout = 0;
-                var FrefMl = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract == true).Select(p => new { p.Id, p.MedicineForReclaim.Generic_name, p.MedicineForReclaim.InContract, p.ReclaimTotal, p.ReclaimCost, MedicalId = p.MedicineId, p.Quantity, p.Percentages, p.Reclaim.ReclaimStatus, p.Reclaim.ReclaimMedicineResonId }).ToList();
+                var FrefMl = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract==false).Select(p => new { p.Id, p.MedicineForReclaim.Generic_name, p.MedicineForReclaim.InContract, p.ReclaimTotal, p.ReclaimCost, MedicalId = p.MedicineId, p.Quantity, p.Percentages, p.Reclaim.ReclaimStatus, p.Reclaim.ReclaimMedicineResonId }).ToList();
                 //  GrdDwa.DataSource = FrefMl;
                 if (FrefMl.Count > 0)
                 {
@@ -355,20 +335,22 @@ namespace HealthServicesSystem.Reclaims
         }
         private void NewMedical()
         {
-            dwalist.SelectedIndex = -1;
+            Generic.SelectedIndex = -1;
+            Trade.SelectedIndex = -1;
             ServiceListType.Clear();
             quantity.Clear();
             Percentage.Clear();
             UnitPrice.Clear();
+            MoneyPaied.Clear();
             TotalPaied.Clear();
-            dwalist.Focus();
+            Trade.Focus();
             MaxCost.Clear();
-            TotalPaied.Clear();
             ExcutingParty.SelectedIndex = -1;
             RequistingParty.SelectedIndex = -1;
+            approvereason.SelectedValue = 6;
 
         }
-        private void FRMmedicine_Load(object sender, EventArgs e)
+        private void FRMmedicineOutPrice_Load(object sender, EventArgs e)
         {
             UserId = LoginForm.Default.UserId;
             LocalityId = PLC.LocalityId;
@@ -378,7 +360,7 @@ namespace HealthServicesSystem.Reclaims
                 approvereason.DataSource = ReclaimRes;
                 approvereason.DisplayMember = "MedicineReason";
                 approvereason.ValueMember = "Id";
-                approvereason.SelectedIndex = -1;
+                
 
                 var ReqCenter = db.CenterInfos.Where(p => p.IsEnabled == true && p.Id != 50000).ToList();
                 RequistingParty.DataSource = ReqCenter;
@@ -394,12 +376,19 @@ namespace HealthServicesSystem.Reclaims
                 ExcutingParty.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 ExcutingParty.SelectedIndex = -1;
 
-                var EngSer = db.MedicineForReclaims.Where(p => p.IsVisible == true && p.GroupId == 1).ToList();
-                dwalist.DataSource = EngSer;
-                dwalist.ValueMember = "Id";
-                dwalist.DisplayMember = "Generic_name";
-                dwalist.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-                dwalist.SelectedIndex = -1;
+                var EngSer = db.MedicinePriceGroups.Where(p => p.IsEnabled == true && p.Id>1).ToList();
+                MedicineGroup.DataSource = EngSer;
+                MedicineGroup.ValueMember = "Id";
+                MedicineGroup.DisplayMember = "GroupName";
+                MedicineGroup.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                MedicineGroup.SelectedIndex = -1;
+
+                var gen = db.Generics.Where(p => p.IsActive == 1).ToList();
+                Generic.DataSource = gen;
+                Generic.ValueMember = "Id";
+                Generic.DisplayMember = "GenericName";
+                Generic.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                Generic.SelectedIndex = -1;
                 BillStatus.DataSource = Enum.GetValues(typeof(ReclaimStatus));
                 //FRMEstrdadWaiting.Default.ShowDialog();
             }
@@ -419,10 +408,16 @@ namespace HealthServicesSystem.Reclaims
                 OperationNo.Focus();
                 return;
             }
-            if (dwalist.SelectedIndex == -1)
+            if (MedicineGroup.SelectedIndex == -1)
+            {
+                MessageBox.Show("يجب اختيار  مجموعةالدواء", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MedicineGroup.Focus();
+                return;
+            }
+            if (Generic.SelectedIndex == -1)
             {
                 MessageBox.Show("يجب اختيار الدواء", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                dwalist.Focus();
+                Trade.Focus();
                 return;
             }
             if (quantity.Text.Length == 0)
@@ -440,17 +435,42 @@ namespace HealthServicesSystem.Reclaims
             if (Convert.ToDecimal(MoneyPaied.Text) > Convert.ToDecimal(MaxCost.Text) && Convert.ToDecimal(MaxCost.Text) > 0)
             {
                 MessageBox.Show("المبلغ المدخل أكبر من أقصى مبلغ لاسترداد هذا الدواء", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                NewMedical();
+               // NewMedical();
                 return;
             }
-            decimal MedSum = Convert.ToDecimal(ReDwaSum.Text) + Convert.ToDecimal(MoneySum.Text) + Convert.ToDecimal(MoneyPaied.Text) + Convert.ToDecimal(medicalsum.Text);
+            decimal MedSum = Convert.ToDecimal(ReDwaSum.Text)+ Convert.ToDecimal(MoneySum.Text) + Convert.ToDecimal(MoneyPaied.Text) + Convert.ToDecimal(medicalsum.Text);
             if (MedSum > Convert.ToDecimal(initMoney.Text))
             {
                 MessageBox.Show("المبلغ المدخل أكبر من اجمالي الفاتورة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                NewMedical();
+              //  NewMedical();
                 return;
             }
-            ServiceId = Convert.ToInt32(dwalist.SelectedValue.ToString());
+            using (dbContext db = new dbContext())
+            {
+                var ChkGen = db.MedicineForReclaims.Where(p => p.Generic_name == Generic.Text).ToList();
+                if (ChkGen.Count == 0)
+                {
+                    MedicineForReclaim Mpg = new MedicineForReclaim();
+                    Mpg.Id = db.MedicineForReclaims.Max(p => p.Id) + 1;
+                    Mpg.Generic_name = Generic.Text.Trim();
+                    Mpg.UnitCost = Convert.ToDecimal(UnitPrice.Text);
+                    Mpg.MaxCost = 0;
+                    Mpg.InContract = false;
+                    Mpg.Activated = 1;
+                    Mpg.IsVisible = true;
+                    Mpg.FromTheList = false;
+                    Mpg.Percentag = 0;
+                    db.MedicineForReclaims.Add(Mpg);
+                    Mpg.GroupId = Convert.ToInt32(MedicineGroup.SelectedValue);
+                    db.SaveChanges();
+
+                }
+          
+            var ChkGen1 = db.MedicineForReclaims.Where(p => p.Generic_name == Generic.Text).ToList();
+            if (ChkGen1.Count > 0)
+            {
+                    ServiceId = ChkGen1[0].Id;
+            }
             bool SerStatus = false;
             if (BillStatus.SelectedIndex == 0)
             {
@@ -467,7 +487,7 @@ namespace HealthServicesSystem.Reclaims
 
             //}
             // GrdDwa.DataSource = null;
-            GrdDwa.Rows.Add(GrdDwa.RowCount + 1, 0, ServiceId.ToString(), dwalist.Text, TotalPaied.Text, InList, UnitPrice.Text, quantity.Text, MoneyPaied.Text, Percentage.Text);
+            GrdDwa.Rows.Add(GrdDwa.RowCount + 1, 0, ServiceId.ToString(), Generic.Text, TotalPaied.Text, InList, UnitPrice.Text, quantity.Text, MoneyPaied.Text, Percentage.Text);
             decimal Mtotal = 0;
             for (int i = 0; i < GrdDwa.RowCount; i++)
             {
@@ -475,6 +495,7 @@ namespace HealthServicesSystem.Reclaims
 
             }
             MoneySum.Text = Mtotal.ToString();
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -558,28 +579,27 @@ namespace HealthServicesSystem.Reclaims
 
         private void UnitPrice_TextChanged(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    MoneyPaied.Text = Convert.ToDecimal(Convert.ToDecimal(UnitPrice.Text) * Convert.ToDecimal(quantity.Text) * Convert.ToDecimal(Percentage.Text) / 100).ToString();
-            //}
-            //catch (Exception)
-            //{
+            try
+            {
+                MoneyPaied.Text = Convert.ToDecimal(Convert.ToDecimal(UnitPrice.Text) * Convert.ToDecimal(quantity.Text) * Convert.ToDecimal(Percentage.Text) / 100).ToString();
+            }
+            catch (Exception)
+            {
 
 
-            //}
+            }
         }
 
         private void quantity_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
-                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text))/100).ToString();
+                MoneyPaied.Text = Convert.ToDecimal(Convert.ToDecimal(UnitPrice.Text) * Convert.ToDecimal(quantity.Text) * Convert.ToDecimal(Percentage.Text) / 100).ToString();
             }
             catch (Exception)
             {
 
-                return;
+
             }
         }
 
@@ -587,13 +607,12 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
-                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
-                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
+                MoneyPaied.Text = Convert.ToDecimal(Convert.ToDecimal(UnitPrice.Text) * Convert.ToDecimal(quantity.Text) * Convert.ToDecimal(Percentage.Text) / 100).ToString();
             }
             catch (Exception)
             {
 
-                return;
+
             }
         }
 
@@ -834,20 +853,48 @@ namespace HealthServicesSystem.Reclaims
 
         }
 
-        private void GroupName_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        private void Generic_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
             try
             {
-                using (dbContext db = new dbContext())
+                if (Generic.ContainsFocus)
                 {
-                    db.Database.CommandTimeout = 0;
-                    // int GrupId = Convert.ToInt32(GroupName.SelectedValue);
-                    var EngSer = db.MedicineForReclaims.Where(p => p.IsVisible == true && p.GroupId == 1).ToList();
-                    dwalist.DataSource = EngSer;
-                    dwalist.ValueMember = "Id";
-                    dwalist.DisplayMember = "Generic_name";
-                    dwalist.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-                    dwalist.SelectedIndex = -1;
+                    using (dbContext db = new dbContext())
+                    {
+                        int GenericId = Convert.ToInt32(Generic.SelectedValue);
+                        if (Convert.IsDBNull(GenericId) == false)
+                        {
+                            var gen = db.Trades.Where(p => p.GenericId == GenericId && p.IsActive == 1).ToList();
+                            Trade.DataSource = gen;
+                            Trade.ValueMember = "Id";
+                            Trade.DisplayMember = "TradeName";
+                            Trade.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+                            Trade.SelectedIndex = -1;
+                            //using (dbContext db = new dbContext())
+                            //{
+                            //    ServiceId = Convert.ToInt32(Generic.SelectedValue);
+                            var getSer = db.MedicineForReclaims.Where(p => p.Id == ServiceId).ToList();
+                            if (getSer.Count > 0)
+                            {
+
+                                ServiceListType.Text = "خارج العقد";
+
+                                string StrUnit = "";
+                                var Dbunit = db.Medicines.Where(p => p.Id == ServiceId).ToList();
+                                if (Dbunit.Count > 0)
+                                {
+                                    StrUnit = Dbunit[0].Unit.Unit_Name;
+                                }
+                                UnitInfo.Text = "تكتب بأصغر وحدة " + " " + "وأصغر وحدة هي " + StrUnit;
+                                UnitPrice.Text = getSer[0].UnitCost.ToString();
+                                // MaxCost.Text = getSer[0].MaxCost.ToString();
+                                InList = getSer[0].InContract;
+                                //  Percentage.Text = 75.ToString();
+                                quantity.Text = 1.ToString();
+                            }
+                        }
+                        //}
+                    }
                 }
             }
             catch
@@ -857,12 +904,60 @@ namespace HealthServicesSystem.Reclaims
             }
         }
 
-        private void MoneyPaied_TextChanged(object sender, EventArgs e)
+        private void MedicineGroup_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            try
+            {
+                using (dbContext db = new dbContext())
+                {
+                    int GroupId = Convert.ToInt32(MedicineGroup.SelectedValue);
+                    var Mg = db.MedicinePriceGroups.Where(p => p.Id == GroupId).ToList();
+                      MaxCost.Text= Mg[0].MaxPrice.ToString();
+                    Percentage.Text = Mg[0].Percentag.ToString();
+
+                }
+            }
+            catch
+            {
+
+
+            }
+        }
+
+        private void TotalPaied_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
-                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text))/100).ToString();
+                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
+        }
+
+        private void Quantity_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
+        }
+
+        private void Percentage_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
             }
             catch (Exception)
             {

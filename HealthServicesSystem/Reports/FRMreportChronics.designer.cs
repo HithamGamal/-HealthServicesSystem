@@ -40,6 +40,7 @@ namespace HealthServicesSystem
             this.d_start = new System.Windows.Forms.DateTimePicker();
             this.sector_no = new System.Windows.Forms.TextBox();
             this.RptiewChronics = new Telerik.ReportViewer.WinForms.ReportViewer();
+            this.RdExcepted = new System.Windows.Forms.RadioButton();
             this.GroupControl1.SuspendLayout();
             this.GroupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -66,6 +67,7 @@ namespace HealthServicesSystem
             this.GroupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupControl1.BackColor = System.Drawing.Color.LightGray;
             this.GroupControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GroupControl1.Controls.Add(this.RdExcepted);
             this.GroupControl1.Controls.Add(this.label1);
             this.GroupControl1.Controls.Add(this.RDBookTYP);
             this.GroupControl1.Controls.Add(this.RDUsers);
@@ -245,6 +247,22 @@ namespace HealthServicesSystem
             this.RptiewChronics.Size = new System.Drawing.Size(1028, 526);
             this.RptiewChronics.TabIndex = 43;
             // 
+            // RdExcepted
+            // 
+            this.RdExcepted.Appearance = System.Windows.Forms.Appearance.Button;
+            this.RdExcepted.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.RdExcepted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RdExcepted.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdExcepted.ForeColor = System.Drawing.Color.Purple;
+            this.RdExcepted.Location = new System.Drawing.Point(29, 295);
+            this.RdExcepted.Name = "RdExcepted";
+            this.RdExcepted.Size = new System.Drawing.Size(279, 38);
+            this.RdExcepted.TabIndex = 44;
+            this.RdExcepted.Text = "تفاصيل الدفاتر المستثناء";
+            this.RdExcepted.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RdExcepted.UseVisualStyleBackColor = false;
+            this.RdExcepted.CheckedChanged += new System.EventHandler(this.RdExcepted_CheckedChanged);
+            // 
             // FRMreportChronics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,5 +311,6 @@ namespace HealthServicesSystem
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Telerik.ReportViewer.WinForms.ReportViewer RptiewChronics;
+        internal System.Windows.Forms.RadioButton RdExcepted;
     }
 }

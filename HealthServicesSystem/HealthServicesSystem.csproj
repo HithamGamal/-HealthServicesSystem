@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>82</ApplicationRevision>
+    <ApplicationRevision>90</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -462,6 +462,12 @@
     </Compile>
     <Compile Include="Chronics\FrmAddChronicMedicine.Designer.cs">
       <DependentUpon>FrmAddChronicMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refunds\FRMmedicineOutPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refunds\FRMmedicineOutPrice.Designer.cs">
+      <DependentUpon>FRMmedicineOutPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Refunds\FRMmedicine.cs">
       <SubType>Form</SubType>
@@ -913,6 +919,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chronics\FrmAddChronicMedicine.resx">
       <DependentUpon>FrmAddChronicMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\FRMmedicineOutPrice.resx">
+      <DependentUpon>FRMmedicineOutPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FRMmedicine.resx">
       <DependentUpon>FRMmedicine.cs</DependentUpon>

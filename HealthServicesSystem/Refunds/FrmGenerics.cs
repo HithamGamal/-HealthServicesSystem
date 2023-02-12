@@ -61,7 +61,7 @@ namespace HealthServicesSystem
         {
             using (dbContext db = new dbContext())
             {
-                var Tlist = db.Generics.Select(p => new { p.Id, p.GenericName, p.Unit.Unit_Name, p.IsActive }).ToList();
+                var Tlist = db.Generics.Select(p => new { p.Id, p.GenericName, p.IsActive }).ToList();
 
                 GenericName.DataSource = Tlist;
                 GenericName.DisplayMember = "GenericName";
@@ -93,7 +93,7 @@ namespace HealthServicesSystem
                 {
                     Generic gn = new Generic();
                     gn.GenericName = GenericName.Text.Trim();
-                    gn.Unit_Id = Convert.ToInt32(GenericName.SelectedValue.ToString());
+                  //  gn.Unit_Id = Convert.ToInt32(GenericName.SelectedValue.ToString());
                     gn.IsActive = 0;
                     db.Generics.Add(gn);
                     db.SaveChanges();
@@ -107,7 +107,7 @@ namespace HealthServicesSystem
                     if (Gtrade.Count > 0)
                     {
                         Gtrade[0].GenericName = GenericName.Text.Trim();
-                        Gtrade[0].Unit_Id = Convert.ToInt32(Unit.SelectedValue.ToString());
+                       // Gtrade[0].Unit_Id = Convert.ToInt32(Unit.SelectedValue.ToString());
                         db.SaveChanges();
                         FillCombo();
                         radButton1.PerformClick();
@@ -295,7 +295,7 @@ namespace HealthServicesSystem
                     if (Gtrade.Count > 0)
                     {
                             GenericName.SelectedValue = Gtrade[0].Id;
-                            Unit.SelectedValue = Gtrade[0].Unit_Id;
+                           // Unit.SelectedValue = Gtrade[0].Unit_Id;
                             GenericId= Gtrade[0].Id;
                     }
 
@@ -323,7 +323,7 @@ namespace HealthServicesSystem
                         var gGeneric = db.Generics.Where(p => p.Id == GenericId).ToList();
                         if (gGeneric.Count > 0)
                         {
-                            Unit.SelectedValue = gGeneric[0].Unit_Id;
+                           // Unit.SelectedValue = gGeneric[0].Unit_Id;
                         }
                     }
 
@@ -348,7 +348,7 @@ namespace HealthServicesSystem
                         var gGeneric = db.Generics.Where(p => p.GenericName == GenericName.Text).ToList();
                         if (gGeneric.Count > 0)
                         {
-                            Unit.SelectedValue = gGeneric[0].Unit_Id;
+                            //Unit.SelectedValue = gGeneric[0].Unit_Id;
                             GenericId = gGeneric[0].Id;
                         }
                     }

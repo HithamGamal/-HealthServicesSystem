@@ -259,5 +259,30 @@ namespace HealthServicesSystem
                 }
             }
         }
+
+        private void RdExcepted_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RdExcepted.Checked)
+            {
+                using (dbContext db = new dbContext())
+                {
+                    var GetDet = db.Database.SqlQuery<ReportForAll>("SELECT dbo.ChronicsBooks.BookNo AS Row1, dbo.ChronicsBooks.BookDate AS Row13, dbo.ChronicsBooks.DocNo AS Row2, dbo.ChronicsBooks.InsurName AS Row6, dbo.ChronicsBooks.InsurNo AS Row7,  dbo.CenterInfoes.CenterName AS Row8, dbo.ChronicBookTypes.BookType AS Row9 FROM  dbo.ChronicsBooks INNER JOIN dbo.CenterInfoes ON dbo.ChronicsBooks.CenterId = dbo.CenterInfoes.Id INNER JOIN dbo.Chronics INNER JOIN dbo.ChronicBooksDetails ON dbo.Chronics.Id = dbo.ChronicBooksDetails.ChronicId ON dbo.ChronicsBooks.Id = dbo.ChronicBooksDetails.BookId INNER JOIN dbo.Localities ON dbo.ChronicsBooks.LocalityId = dbo.Localities.Id INNER JOIN dbo.Users ON dbo.ChronicsBooks.UserId = dbo.Users.Id INNER JOIN  dbo.ChronicBookTypes ON dbo.ChronicsBooks.BookTypeId = dbo.ChronicBookTypes.Id where " + LocalityName + " (dbo.ChronicsBooks.BookDate between '" + d_start.Value + "' and '" + d_end.Value + "') and dbo.ChronicsBooks.RowStatus<>2 and ChronicsBooks.Activated=1 and ChronicsBooks.Excepted=1  GROUP BY dbo.ChronicsBooks.BookNo, dbo.ChronicsBooks.BookDate, dbo.ChronicsBooks.DocNo, dbo.ChronicsBooks.InsurName, dbo.ChronicsBooks.InsurNo, dbo.CenterInfoes.CenterName, dbo.ChronicBookTypes.BookType").ToList();
+                    //MessageBox.Show(GetDet.Count.ToString());
+                    if (GetDet.Count > 0)
+                    {
+
+                        RPTChronicBooksDetails Rdet = new RPTChronicBooksDetails();
+                        Rdet.DataSource = GetDet;
+                        Rdet.Locality.Value = db.Localities.Where(p => p.Id == PLC.LocalityId).ToList()[0].LocalityName;
+                        Rdet.StartDate.Value = d_start.Value.Date.ToShortDateString();
+                        Rdet.EndDate.Value = d_end.Value.Date.ToShortDateString();
+                        RptiewChronics.ReportSource = Rdet;
+                        RptiewChronics.RefreshReport();
+                        RptiewChronics.Show();
+                    }
+                }
+
+            }
+        }
     }
 }

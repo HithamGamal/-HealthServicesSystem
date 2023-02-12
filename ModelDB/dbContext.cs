@@ -76,6 +76,7 @@ namespace ModelDB
         public DbSet<cooperationService> CooperationServices { get; set; }
         public DbSet<MedicalCommitteeRequest > medicalCommitteeRequests { get; set; }
         public DbSet<MedicalCommitteeRequestDetails> medicalCommitteeRequestDetails { get; set; }
+        public DbSet<MedicinePriceGroup> MedicinePriceGroups { get; set; }
 
     }
 }
