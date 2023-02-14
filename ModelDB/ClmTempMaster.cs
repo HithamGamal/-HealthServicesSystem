@@ -20,7 +20,7 @@ namespace ModelDB
         public string VisitNo { get; set; }
         public DateTime VisitDate { get; set; }
 
-        public double InsuranceNo { get; set; }
+        public string  InsuranceNo { get; set; }
         public string PatName { get; set; }
         public int Age { get; set; }
         public int Gender { get; set; }

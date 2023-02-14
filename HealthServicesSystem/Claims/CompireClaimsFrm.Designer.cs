@@ -40,80 +40,80 @@
             Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn5 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn6 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem5 = new Telerik.WinControls.UI.GridViewSummaryItem();
-            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem6 = new Telerik.WinControls.UI.GridViewSummaryItem();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem1 = new Telerik.WinControls.UI.GridViewSummaryItem();
+            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem2 = new Telerik.WinControls.UI.GridViewSummaryItem();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
-            this.FileNoTxt = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.PersentTxt = new Telerik.WinControls.UI.RadLabel();
+            this.TotalNonTxt = new Telerik.WinControls.UI.RadLabel();
+            this.TotalCurrectTxt = new Telerik.WinControls.UI.RadLabel();
+            this.TotalNewCardTxt = new Telerik.WinControls.UI.RadLabel();
+            this.CountOldTxt = new Telerik.WinControls.UI.RadLabel();
+            this.TotalNationalTxt = new Telerik.WinControls.UI.RadLabel();
+            this.TotalCountTxt = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.OfdBtn = new Telerik.WinControls.UI.RadButton();
             this.CenterNameDrp = new Telerik.WinControls.UI.RadDropDownList();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.FYearTxt = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.FMonthDrp = new Telerik.WinControls.UI.RadDropDownList();
+            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.FileNoTxt = new Telerik.WinControls.UI.RadTextBox();
+            this.FMonthDrp = new Telerik.WinControls.UI.RadDropDownList();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.FYearTxt = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.MasterGrd = new Telerik.WinControls.UI.RadGridView();
-            this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel17 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
-            this.OfdBtn = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FileNoTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PersentTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalNonTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCurrectTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalNewCardTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountOldTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalNationalTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCountTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
+            this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OfdBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FMonthDrp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FileNoTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FMonthDrp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
-            this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
-            this.radGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OfdBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,31 +139,188 @@
             this.panel2.Size = new System.Drawing.Size(423, 626);
             this.panel2.TabIndex = 0;
             // 
-            // radLabel7
+            // radGroupBox2
             // 
-            this.radLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel7.Location = new System.Drawing.Point(320, 166);
-            this.radLabel7.Name = "radLabel7";
-            this.radLabel7.Size = new System.Drawing.Size(70, 31);
-            this.radLabel7.TabIndex = 33;
-            this.radLabel7.Text = ": رقم الملف";
+            this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.PersentTxt);
+            this.radGroupBox2.Controls.Add(this.TotalNonTxt);
+            this.radGroupBox2.Controls.Add(this.TotalCurrectTxt);
+            this.radGroupBox2.Controls.Add(this.TotalNewCardTxt);
+            this.radGroupBox2.Controls.Add(this.CountOldTxt);
+            this.radGroupBox2.Controls.Add(this.TotalNationalTxt);
+            this.radGroupBox2.Controls.Add(this.TotalCountTxt);
+            this.radGroupBox2.Controls.Add(this.radLabel12);
+            this.radGroupBox2.Controls.Add(this.radLabel11);
+            this.radGroupBox2.Controls.Add(this.radLabel10);
+            this.radGroupBox2.Controls.Add(this.radLabel9);
+            this.radGroupBox2.Controls.Add(this.radLabel8);
+            this.radGroupBox2.Controls.Add(this.radLabel6);
+            this.radGroupBox2.Controls.Add(this.radLabel5);
+            this.radGroupBox2.HeaderText = "";
+            this.radGroupBox2.Location = new System.Drawing.Point(3, 285);
+            this.radGroupBox2.Name = "radGroupBox2";
+            this.radGroupBox2.Size = new System.Drawing.Size(408, 334);
+            this.radGroupBox2.TabIndex = 35;
             // 
-            // FileNoTxt
+            // PersentTxt
             // 
-            this.FileNoTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.FileNoTxt.Location = new System.Drawing.Point(247, 200);
-            this.FileNoTxt.Name = "FileNoTxt";
-            this.FileNoTxt.NullText = "Enter FileNo";
-            this.FileNoTxt.Size = new System.Drawing.Size(143, 25);
-            this.FileNoTxt.TabIndex = 25;
+            this.PersentTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersentTxt.ForeColor = System.Drawing.Color.Red;
+            this.PersentTxt.Location = new System.Drawing.Point(97, 234);
+            this.PersentTxt.Name = "PersentTxt";
+            this.PersentTxt.Size = new System.Drawing.Size(17, 31);
+            this.PersentTxt.TabIndex = 46;
+            this.PersentTxt.Text = "0";
             // 
-            // radLabel4
+            // TotalNonTxt
             // 
-            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(599, 289);
-            this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(2, 2);
-            this.radLabel4.TabIndex = 30;
+            this.TotalNonTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalNonTxt.ForeColor = System.Drawing.Color.Red;
+            this.TotalNonTxt.Location = new System.Drawing.Point(97, 197);
+            this.TotalNonTxt.Name = "TotalNonTxt";
+            this.TotalNonTxt.Size = new System.Drawing.Size(17, 31);
+            this.TotalNonTxt.TabIndex = 45;
+            this.TotalNonTxt.Text = "0";
+            // 
+            // TotalCurrectTxt
+            // 
+            this.TotalCurrectTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCurrectTxt.ForeColor = System.Drawing.Color.Red;
+            this.TotalCurrectTxt.Location = new System.Drawing.Point(97, 160);
+            this.TotalCurrectTxt.Name = "TotalCurrectTxt";
+            this.TotalCurrectTxt.Size = new System.Drawing.Size(17, 31);
+            this.TotalCurrectTxt.TabIndex = 44;
+            this.TotalCurrectTxt.Text = "0";
+            // 
+            // TotalNewCardTxt
+            // 
+            this.TotalNewCardTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalNewCardTxt.ForeColor = System.Drawing.Color.Red;
+            this.TotalNewCardTxt.Location = new System.Drawing.Point(97, 132);
+            this.TotalNewCardTxt.Name = "TotalNewCardTxt";
+            this.TotalNewCardTxt.Size = new System.Drawing.Size(17, 31);
+            this.TotalNewCardTxt.TabIndex = 43;
+            this.TotalNewCardTxt.Text = "0";
+            // 
+            // CountOldTxt
+            // 
+            this.CountOldTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountOldTxt.ForeColor = System.Drawing.Color.Red;
+            this.CountOldTxt.Location = new System.Drawing.Point(97, 95);
+            this.CountOldTxt.Name = "CountOldTxt";
+            this.CountOldTxt.Size = new System.Drawing.Size(17, 31);
+            this.CountOldTxt.TabIndex = 42;
+            this.CountOldTxt.Text = "0";
+            // 
+            // TotalNationalTxt
+            // 
+            this.TotalNationalTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalNationalTxt.ForeColor = System.Drawing.Color.Red;
+            this.TotalNationalTxt.Location = new System.Drawing.Point(97, 58);
+            this.TotalNationalTxt.Name = "TotalNationalTxt";
+            this.TotalNationalTxt.Size = new System.Drawing.Size(17, 31);
+            this.TotalNationalTxt.TabIndex = 41;
+            this.TotalNationalTxt.Text = "0";
+            // 
+            // TotalCountTxt
+            // 
+            this.TotalCountTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCountTxt.ForeColor = System.Drawing.Color.Red;
+            this.TotalCountTxt.Location = new System.Drawing.Point(97, 21);
+            this.TotalCountTxt.Name = "TotalCountTxt";
+            this.TotalCountTxt.Size = new System.Drawing.Size(17, 31);
+            this.TotalCountTxt.TabIndex = 40;
+            this.TotalCountTxt.Text = "0";
+            // 
+            // radLabel12
+            // 
+            this.radLabel12.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel12.Location = new System.Drawing.Point(224, 232);
+            this.radLabel12.Name = "radLabel12";
+            this.radLabel12.Size = new System.Drawing.Size(115, 31);
+            this.radLabel12.TabIndex = 39;
+            this.radLabel12.Text = "نسبة عدم التطابق";
+            // 
+            // radLabel11
+            // 
+            this.radLabel11.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel11.Location = new System.Drawing.Point(224, 197);
+            this.radLabel11.Name = "radLabel11";
+            this.radLabel11.Size = new System.Drawing.Size(174, 31);
+            this.radLabel11.TabIndex = 38;
+            this.radLabel11.Text = "عدد الاستمارات الغير مطابقة";
+            // 
+            // radLabel10
+            // 
+            this.radLabel10.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel10.Location = new System.Drawing.Point(224, 160);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(149, 31);
+            this.radLabel10.TabIndex = 38;
+            this.radLabel10.Text = "عدد الاستمارات المطابقة";
+            // 
+            // radLabel9
+            // 
+            this.radLabel9.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel9.Location = new System.Drawing.Point(224, 132);
+            this.radLabel9.Name = "radLabel9";
+            this.radLabel9.Size = new System.Drawing.Size(146, 31);
+            this.radLabel9.TabIndex = 37;
+            this.radLabel9.Text = "جملة البطاقات الجديدة";
+            // 
+            // radLabel8
+            // 
+            this.radLabel8.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel8.Location = new System.Drawing.Point(224, 95);
+            this.radLabel8.Name = "radLabel8";
+            this.radLabel8.Size = new System.Drawing.Size(145, 31);
+            this.radLabel8.TabIndex = 36;
+            this.radLabel8.Text = "جملة البطاقات القديمة";
+            // 
+            // radLabel6
+            // 
+            this.radLabel6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel6.Location = new System.Drawing.Point(224, 58);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(143, 31);
+            this.radLabel6.TabIndex = 35;
+            this.radLabel6.Text = "جماة البطاقات القومية";
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Location = new System.Drawing.Point(224, 21);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(106, 31);
+            this.radLabel5.TabIndex = 34;
+            this.radLabel5.Text = "جملة الاستمارات";
+            // 
+            // radGroupBox1
+            // 
+            this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.OfdBtn);
+            this.radGroupBox1.Controls.Add(this.CenterNameDrp);
+            this.radGroupBox1.Controls.Add(this.radLabel7);
+            this.radGroupBox1.Controls.Add(this.radLabel2);
+            this.radGroupBox1.Controls.Add(this.FileNoTxt);
+            this.radGroupBox1.Controls.Add(this.FMonthDrp);
+            this.radGroupBox1.Controls.Add(this.radLabel3);
+            this.radGroupBox1.Controls.Add(this.FYearTxt);
+            this.radGroupBox1.Controls.Add(this.radLabel1);
+            this.radGroupBox1.HeaderText = "";
+            this.radGroupBox1.Location = new System.Drawing.Point(3, 12);
+            this.radGroupBox1.Name = "radGroupBox1";
+            this.radGroupBox1.Size = new System.Drawing.Size(408, 270);
+            this.radGroupBox1.TabIndex = 34;
+            // 
+            // OfdBtn
+            // 
+            this.OfdBtn.Location = new System.Drawing.Point(6, 203);
+            this.OfdBtn.Name = "OfdBtn";
+            this.OfdBtn.Size = new System.Drawing.Size(161, 33);
+            this.OfdBtn.TabIndex = 34;
+            this.OfdBtn.Text = "عرض";
+            this.OfdBtn.Click += new System.EventHandler(this.OfdBtn_Click);
             // 
             // CenterNameDrp
             // 
@@ -175,32 +332,32 @@
             this.CenterNameDrp.Size = new System.Drawing.Size(385, 25);
             this.CenterNameDrp.TabIndex = 28;
             // 
-            // radLabel1
+            // radLabel7
             // 
-            this.radLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(345, 26);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(45, 31);
-            this.radLabel1.TabIndex = 29;
-            this.radLabel1.Text = ":المركز";
+            this.radLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel7.Location = new System.Drawing.Point(320, 166);
+            this.radLabel7.Name = "radLabel7";
+            this.radLabel7.Size = new System.Drawing.Size(70, 31);
+            this.radLabel7.TabIndex = 33;
+            this.radLabel7.Text = ": رقم الملف";
             // 
-            // FYearTxt
+            // radLabel2
             // 
-            this.FYearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.FYearTxt.Location = new System.Drawing.Point(6, 138);
-            this.FYearTxt.Name = "FYearTxt";
-            this.FYearTxt.NullText = "Enter Year";
-            this.FYearTxt.Size = new System.Drawing.Size(161, 25);
-            this.FYearTxt.TabIndex = 24;
+            this.radLabel2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Location = new System.Drawing.Point(339, 103);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(51, 31);
+            this.radLabel2.TabIndex = 25;
+            this.radLabel2.Text = ": الشهر";
             // 
-            // radLabel3
+            // FileNoTxt
             // 
-            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(120, 103);
-            this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(47, 31);
-            this.radLabel3.TabIndex = 26;
-            this.radLabel3.Text = ":السنة";
+            this.FileNoTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.FileNoTxt.Location = new System.Drawing.Point(247, 200);
+            this.FileNoTxt.Name = "FileNoTxt";
+            this.FileNoTxt.NullText = "Enter FileNo";
+            this.FileNoTxt.Size = new System.Drawing.Size(143, 25);
+            this.FileNoTxt.TabIndex = 25;
             // 
             // FMonthDrp
             // 
@@ -235,14 +392,40 @@
             this.FMonthDrp.Size = new System.Drawing.Size(195, 25);
             this.FMonthDrp.TabIndex = 27;
             // 
-            // radLabel2
+            // radLabel3
             // 
-            this.radLabel2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel2.Location = new System.Drawing.Point(339, 103);
-            this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(51, 31);
-            this.radLabel2.TabIndex = 25;
-            this.radLabel2.Text = ": الشهر";
+            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Location = new System.Drawing.Point(120, 103);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(47, 31);
+            this.radLabel3.TabIndex = 26;
+            this.radLabel3.Text = ":السنة";
+            // 
+            // FYearTxt
+            // 
+            this.FYearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.FYearTxt.Location = new System.Drawing.Point(6, 138);
+            this.FYearTxt.Name = "FYearTxt";
+            this.FYearTxt.NullText = "Enter Year";
+            this.FYearTxt.Size = new System.Drawing.Size(161, 25);
+            this.FYearTxt.TabIndex = 24;
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Location = new System.Drawing.Point(345, 26);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(45, 31);
+            this.radLabel1.TabIndex = 29;
+            this.radLabel1.Text = ":المركز";
+            // 
+            // radLabel4
+            // 
+            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel4.Location = new System.Drawing.Point(599, 289);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(2, 2);
+            this.radLabel4.TabIndex = 30;
             // 
             // panel3
             // 
@@ -263,251 +446,69 @@
             this.MasterGrd.MasterTemplate.AllowAddNewRow = false;
             this.MasterGrd.MasterTemplate.AllowDeleteRow = false;
             this.MasterGrd.MasterTemplate.AllowSearchRow = true;
-            gridViewTextBoxColumn13.FieldName = "Id";
-            gridViewTextBoxColumn13.HeaderText = "م";
-            gridViewTextBoxColumn13.Name = "Id";
-            gridViewTextBoxColumn13.Width = 80;
-            gridViewTextBoxColumn14.FieldName = "InsuranceNo";
-            gridViewTextBoxColumn14.HeaderText = "رقم التأمين";
-            gridViewTextBoxColumn14.Name = "InsuranceNo";
-            gridViewTextBoxColumn14.Width = 100;
-            gridViewTextBoxColumn15.FieldName = "PatName";
-            gridViewTextBoxColumn15.HeaderText = "الاسم";
-            gridViewTextBoxColumn15.Name = "PatName";
-            gridViewTextBoxColumn15.Width = 250;
-            gridViewTextBoxColumn16.FieldName = "Cost";
-            gridViewTextBoxColumn16.HeaderText = "المبلغ";
-            gridViewTextBoxColumn16.Name = "Cost";
-            gridViewTextBoxColumn16.Width = 120;
-            gridViewTextBoxColumn17.FieldName = "Age";
-            gridViewTextBoxColumn17.HeaderText = "العمر";
-            gridViewTextBoxColumn17.Name = "Age";
-            gridViewTextBoxColumn17.Width = 60;
-            gridViewTextBoxColumn18.FieldName = "Types";
-            gridViewTextBoxColumn18.HeaderText = "نوع الروشتة";
-            gridViewTextBoxColumn18.Name = "Types";
-            gridViewTextBoxColumn18.Width = 200;
-            gridViewCommandColumn5.DefaultText = "عرض";
-            gridViewCommandColumn5.FieldName = "View";
-            gridViewCommandColumn5.HeaderText = "عرض";
-            gridViewCommandColumn5.Name = "View";
-            gridViewCommandColumn5.Width = 60;
-            gridViewCommandColumn5.WrapText = true;
-            gridViewCommandColumn6.DefaultText = "حذف";
-            gridViewCommandColumn6.FieldName = "Del";
-            gridViewCommandColumn6.HeaderText = "حذف";
-            gridViewCommandColumn6.Name = "Del";
-            gridViewCommandColumn6.Width = 60;
-            gridViewCommandColumn6.WrapText = true;
+            gridViewTextBoxColumn1.FieldName = "Id";
+            gridViewTextBoxColumn1.HeaderText = "م";
+            gridViewTextBoxColumn1.Name = "Id";
+            gridViewTextBoxColumn1.Width = 80;
+            gridViewTextBoxColumn2.FieldName = "InsuranceNo";
+            gridViewTextBoxColumn2.HeaderText = "رقم التأمين";
+            gridViewTextBoxColumn2.Name = "InsuranceNo";
+            gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn3.FieldName = "PatName";
+            gridViewTextBoxColumn3.HeaderText = "الاسم";
+            gridViewTextBoxColumn3.Name = "PatName";
+            gridViewTextBoxColumn3.Width = 250;
+            gridViewTextBoxColumn4.FieldName = "Cost";
+            gridViewTextBoxColumn4.HeaderText = "المبلغ";
+            gridViewTextBoxColumn4.Name = "Cost";
+            gridViewTextBoxColumn4.Width = 120;
+            gridViewTextBoxColumn5.FieldName = "Age";
+            gridViewTextBoxColumn5.HeaderText = "العمر";
+            gridViewTextBoxColumn5.Name = "Age";
+            gridViewTextBoxColumn5.Width = 60;
+            gridViewTextBoxColumn6.FieldName = "Types";
+            gridViewTextBoxColumn6.HeaderText = "نوع الروشتة";
+            gridViewTextBoxColumn6.Name = "Types";
+            gridViewTextBoxColumn6.Width = 200;
+            gridViewCommandColumn1.DefaultText = "عرض";
+            gridViewCommandColumn1.FieldName = "View";
+            gridViewCommandColumn1.HeaderText = "عرض";
+            gridViewCommandColumn1.Name = "View";
+            gridViewCommandColumn1.Width = 60;
+            gridViewCommandColumn1.WrapText = true;
+            gridViewCommandColumn2.DefaultText = "حذف";
+            gridViewCommandColumn2.FieldName = "Del";
+            gridViewCommandColumn2.HeaderText = "حذف";
+            gridViewCommandColumn2.Name = "Del";
+            gridViewCommandColumn2.Width = 60;
+            gridViewCommandColumn2.WrapText = true;
             this.MasterGrd.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18,
-            gridViewCommandColumn5,
-            gridViewCommandColumn6});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewCommandColumn1,
+            gridViewCommandColumn2});
             this.MasterGrd.MasterTemplate.EnableFiltering = true;
             this.MasterGrd.MasterTemplate.EnableGrouping = false;
-            gridViewSummaryItem5.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Count;
-            gridViewSummaryItem5.AggregateExpression = null;
-            gridViewSummaryItem5.FormatString = "العدد:{0}";
-            gridViewSummaryItem5.Name = "Id";
-            gridViewSummaryItem6.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
-            gridViewSummaryItem6.AggregateExpression = null;
-            gridViewSummaryItem6.FormatString = "التكلفة:{0}";
-            gridViewSummaryItem6.Name = "Cost";
+            gridViewSummaryItem1.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Count;
+            gridViewSummaryItem1.AggregateExpression = null;
+            gridViewSummaryItem1.FormatString = "العدد:{0}";
+            gridViewSummaryItem1.Name = "Id";
+            gridViewSummaryItem2.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
+            gridViewSummaryItem2.AggregateExpression = null;
+            gridViewSummaryItem2.FormatString = "التكلفة:{0}";
+            gridViewSummaryItem2.Name = "Cost";
             this.MasterGrd.MasterTemplate.SummaryRowsTop.Add(new Telerik.WinControls.UI.GridViewSummaryRowItem(new Telerik.WinControls.UI.GridViewSummaryItem[] {
-                gridViewSummaryItem5,
-                gridViewSummaryItem6}));
-            this.MasterGrd.MasterTemplate.ViewDefinition = tableViewDefinition3;
+                gridViewSummaryItem1,
+                gridViewSummaryItem2}));
+            this.MasterGrd.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.MasterGrd.Name = "MasterGrd";
             this.MasterGrd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.MasterGrd.Size = new System.Drawing.Size(949, 626);
             this.MasterGrd.TabIndex = 2;
-            // 
-            // radGroupBox1
-            // 
-            this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.OfdBtn);
-            this.radGroupBox1.Controls.Add(this.CenterNameDrp);
-            this.radGroupBox1.Controls.Add(this.radLabel7);
-            this.radGroupBox1.Controls.Add(this.radLabel2);
-            this.radGroupBox1.Controls.Add(this.FileNoTxt);
-            this.radGroupBox1.Controls.Add(this.FMonthDrp);
-            this.radGroupBox1.Controls.Add(this.radLabel3);
-            this.radGroupBox1.Controls.Add(this.FYearTxt);
-            this.radGroupBox1.Controls.Add(this.radLabel1);
-            this.radGroupBox1.HeaderText = "";
-            this.radGroupBox1.Location = new System.Drawing.Point(3, 12);
-            this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(408, 270);
-            this.radGroupBox1.TabIndex = 34;
-            // 
-            // radGroupBox2
-            // 
-            this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox2.Controls.Add(this.radLabel19);
-            this.radGroupBox2.Controls.Add(this.radLabel18);
-            this.radGroupBox2.Controls.Add(this.radLabel17);
-            this.radGroupBox2.Controls.Add(this.radLabel16);
-            this.radGroupBox2.Controls.Add(this.radLabel15);
-            this.radGroupBox2.Controls.Add(this.radLabel14);
-            this.radGroupBox2.Controls.Add(this.radLabel13);
-            this.radGroupBox2.Controls.Add(this.radLabel12);
-            this.radGroupBox2.Controls.Add(this.radLabel11);
-            this.radGroupBox2.Controls.Add(this.radLabel10);
-            this.radGroupBox2.Controls.Add(this.radLabel9);
-            this.radGroupBox2.Controls.Add(this.radLabel8);
-            this.radGroupBox2.Controls.Add(this.radLabel6);
-            this.radGroupBox2.Controls.Add(this.radLabel5);
-            this.radGroupBox2.HeaderText = "";
-            this.radGroupBox2.Location = new System.Drawing.Point(3, 285);
-            this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(408, 334);
-            this.radGroupBox2.TabIndex = 35;
-            // 
-            // radLabel5
-            // 
-            this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(224, 21);
-            this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(106, 31);
-            this.radLabel5.TabIndex = 34;
-            this.radLabel5.Text = "جملة الاستمارات";
-            // 
-            // radLabel6
-            // 
-            this.radLabel6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel6.Location = new System.Drawing.Point(224, 58);
-            this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(143, 31);
-            this.radLabel6.TabIndex = 35;
-            this.radLabel6.Text = "جماة البطاقات القومية";
-            // 
-            // radLabel8
-            // 
-            this.radLabel8.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel8.Location = new System.Drawing.Point(224, 95);
-            this.radLabel8.Name = "radLabel8";
-            this.radLabel8.Size = new System.Drawing.Size(145, 31);
-            this.radLabel8.TabIndex = 36;
-            this.radLabel8.Text = "جملة البطاقات القديمة";
-            // 
-            // radLabel9
-            // 
-            this.radLabel9.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel9.Location = new System.Drawing.Point(224, 132);
-            this.radLabel9.Name = "radLabel9";
-            this.radLabel9.Size = new System.Drawing.Size(146, 31);
-            this.radLabel9.TabIndex = 37;
-            this.radLabel9.Text = "جملة البطاقات الجديدة";
-            // 
-            // radLabel10
-            // 
-            this.radLabel10.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel10.Location = new System.Drawing.Point(224, 160);
-            this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(149, 31);
-            this.radLabel10.TabIndex = 38;
-            this.radLabel10.Text = "عدد الاستمارات المطابقة";
-            // 
-            // radLabel11
-            // 
-            this.radLabel11.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel11.Location = new System.Drawing.Point(224, 197);
-            this.radLabel11.Name = "radLabel11";
-            this.radLabel11.Size = new System.Drawing.Size(174, 31);
-            this.radLabel11.TabIndex = 38;
-            this.radLabel11.Text = "عدد الاستمارات الغير مطابقة";
-            // 
-            // radLabel12
-            // 
-            this.radLabel12.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel12.Location = new System.Drawing.Point(224, 232);
-            this.radLabel12.Name = "radLabel12";
-            this.radLabel12.Size = new System.Drawing.Size(115, 31);
-            this.radLabel12.TabIndex = 39;
-            this.radLabel12.Text = "نسبة عدم التطابق";
-            // 
-            // radLabel13
-            // 
-            this.radLabel13.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel13.ForeColor = System.Drawing.Color.Red;
-            this.radLabel13.Location = new System.Drawing.Point(97, 21);
-            this.radLabel13.Name = "radLabel13";
-            this.radLabel13.Size = new System.Drawing.Size(17, 31);
-            this.radLabel13.TabIndex = 40;
-            this.radLabel13.Text = "0";
-            // 
-            // radLabel14
-            // 
-            this.radLabel14.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel14.ForeColor = System.Drawing.Color.Red;
-            this.radLabel14.Location = new System.Drawing.Point(97, 58);
-            this.radLabel14.Name = "radLabel14";
-            this.radLabel14.Size = new System.Drawing.Size(17, 31);
-            this.radLabel14.TabIndex = 41;
-            this.radLabel14.Text = "0";
-            // 
-            // radLabel15
-            // 
-            this.radLabel15.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel15.ForeColor = System.Drawing.Color.Red;
-            this.radLabel15.Location = new System.Drawing.Point(97, 95);
-            this.radLabel15.Name = "radLabel15";
-            this.radLabel15.Size = new System.Drawing.Size(17, 31);
-            this.radLabel15.TabIndex = 42;
-            this.radLabel15.Text = "0";
-            // 
-            // radLabel16
-            // 
-            this.radLabel16.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel16.ForeColor = System.Drawing.Color.Red;
-            this.radLabel16.Location = new System.Drawing.Point(97, 132);
-            this.radLabel16.Name = "radLabel16";
-            this.radLabel16.Size = new System.Drawing.Size(17, 31);
-            this.radLabel16.TabIndex = 43;
-            this.radLabel16.Text = "0";
-            // 
-            // radLabel17
-            // 
-            this.radLabel17.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel17.ForeColor = System.Drawing.Color.Red;
-            this.radLabel17.Location = new System.Drawing.Point(97, 160);
-            this.radLabel17.Name = "radLabel17";
-            this.radLabel17.Size = new System.Drawing.Size(17, 31);
-            this.radLabel17.TabIndex = 44;
-            this.radLabel17.Text = "0";
-            // 
-            // radLabel18
-            // 
-            this.radLabel18.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel18.ForeColor = System.Drawing.Color.Red;
-            this.radLabel18.Location = new System.Drawing.Point(97, 197);
-            this.radLabel18.Name = "radLabel18";
-            this.radLabel18.Size = new System.Drawing.Size(17, 31);
-            this.radLabel18.TabIndex = 45;
-            this.radLabel18.Text = "0";
-            // 
-            // radLabel19
-            // 
-            this.radLabel19.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel19.ForeColor = System.Drawing.Color.Red;
-            this.radLabel19.Location = new System.Drawing.Point(97, 234);
-            this.radLabel19.Name = "radLabel19";
-            this.radLabel19.Size = new System.Drawing.Size(17, 31);
-            this.radLabel19.TabIndex = 46;
-            this.radLabel19.Text = "0";
-            // 
-            // OfdBtn
-            // 
-            this.OfdBtn.Location = new System.Drawing.Point(6, 203);
-            this.OfdBtn.Name = "OfdBtn";
-            this.OfdBtn.Size = new System.Drawing.Size(161, 33);
-            this.OfdBtn.TabIndex = 34;
-            this.OfdBtn.Text = "عرض";
             // 
             // CompireClaimsFrm
             // 
@@ -526,39 +527,39 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FileNoTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FMonthDrp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MasterGrd.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MasterGrd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
-            this.radGroupBox1.ResumeLayout(false);
-            this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PersentTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalNonTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCurrectTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalNewCardTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountOldTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalNationalTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCountTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
+            this.radGroupBox1.ResumeLayout(false);
+            this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OfdBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CenterNameDrp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FileNoTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FMonthDrp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MasterGrd.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MasterGrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -588,13 +589,13 @@
         private Telerik.WinControls.UI.RadLabel radLabel8;
         private Telerik.WinControls.UI.RadLabel radLabel6;
         private Telerik.WinControls.UI.RadLabel radLabel5;
-        private Telerik.WinControls.UI.RadLabel radLabel19;
-        private Telerik.WinControls.UI.RadLabel radLabel18;
-        private Telerik.WinControls.UI.RadLabel radLabel17;
-        private Telerik.WinControls.UI.RadLabel radLabel16;
-        private Telerik.WinControls.UI.RadLabel radLabel15;
-        private Telerik.WinControls.UI.RadLabel radLabel14;
-        private Telerik.WinControls.UI.RadLabel radLabel13;
+        private Telerik.WinControls.UI.RadLabel PersentTxt;
+        private Telerik.WinControls.UI.RadLabel TotalNonTxt;
+        private Telerik.WinControls.UI.RadLabel TotalCurrectTxt;
+        private Telerik.WinControls.UI.RadLabel TotalNewCardTxt;
+        private Telerik.WinControls.UI.RadLabel CountOldTxt;
+        private Telerik.WinControls.UI.RadLabel TotalNationalTxt;
+        private Telerik.WinControls.UI.RadLabel TotalCountTxt;
         private Telerik.WinControls.UI.RadButton OfdBtn;
     }
 }

@@ -44,7 +44,7 @@ namespace HealthServicesSystem.Claims
             // 
             // pageHeaderSection1
             // 
-            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.2D);
+            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.053D);
             this.pageHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.PharName,
             this.Det,
@@ -157,7 +157,7 @@ namespace HealthServicesSystem.Claims
             // 
             // detail
             // 
-            this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(0.6D);
+            this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(0.236D);
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox10,
             this.textBox8,
@@ -168,7 +168,7 @@ namespace HealthServicesSystem.Claims
             // 
             // textBox10
             // 
-            this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(25.687D), Telerik.Reporting.Drawing.Unit.Cm(0.462D));
+            this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(25.687D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.2D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.textBox10.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -179,7 +179,7 @@ namespace HealthServicesSystem.Claims
             // 
             // textBox8
             // 
-            this.textBox8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(8.387D), Telerik.Reporting.Drawing.Unit.Cm(0.462D));
+            this.textBox8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(8.387D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(15.3D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.textBox8.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -191,7 +191,7 @@ namespace HealthServicesSystem.Claims
             // textBox6
             // 
             this.textBox6.Format = "{0:N2}";
-            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.037D), Telerik.Reporting.Drawing.Unit.Cm(0.462D));
+            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.037D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.15D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.textBox6.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -202,7 +202,7 @@ namespace HealthServicesSystem.Claims
             // 
             // textBox4
             // 
-            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(23.687D), Telerik.Reporting.Drawing.Unit.Cm(0.462D));
+            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(23.687D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.textBox4.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -214,7 +214,7 @@ namespace HealthServicesSystem.Claims
             // textBox9
             // 
             this.textBox9.Format = "{0:N0}";
-            this.textBox9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.187D), Telerik.Reporting.Drawing.Unit.Cm(0.462D));
+            this.textBox9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.187D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.2D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.textBox9.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -247,7 +247,7 @@ namespace HealthServicesSystem.Claims
             // 
             // reportHeaderSection1
             // 
-            this.reportHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.5D);
+            this.reportHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.362D);
             this.reportHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox22,
             this.textBox21,
@@ -258,7 +258,7 @@ namespace HealthServicesSystem.Claims
             // 
             // textBox22
             // 
-            this.textBox22.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(25.687D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
+            this.textBox22.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(25.687D), Telerik.Reporting.Drawing.Unit.Cm(0.12D));
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.2D), Telerik.Reporting.Drawing.Unit.Cm(0.8D));
             this.textBox22.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -272,7 +272,7 @@ namespace HealthServicesSystem.Claims
             // 
             // textBox21
             // 
-            this.textBox21.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(8.387D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
+            this.textBox21.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(8.387D), Telerik.Reporting.Drawing.Unit.Cm(0.12D));
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(15.3D), Telerik.Reporting.Drawing.Unit.Cm(0.8D));
             this.textBox21.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -286,7 +286,7 @@ namespace HealthServicesSystem.Claims
             // 
             // textBox20
             // 
-            this.textBox20.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.037D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
+            this.textBox20.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.037D), Telerik.Reporting.Drawing.Unit.Cm(0.12D));
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.15D), Telerik.Reporting.Drawing.Unit.Cm(0.8D));
             this.textBox20.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -300,7 +300,7 @@ namespace HealthServicesSystem.Claims
             // 
             // textBox19
             // 
-            this.textBox19.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(23.687D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
+            this.textBox19.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(23.687D), Telerik.Reporting.Drawing.Unit.Cm(0.12D));
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2D), Telerik.Reporting.Drawing.Unit.Cm(0.8D));
             this.textBox19.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -314,7 +314,7 @@ namespace HealthServicesSystem.Claims
             // 
             // textBox18
             // 
-            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.187D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
+            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.187D), Telerik.Reporting.Drawing.Unit.Cm(0.12D));
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.2D), Telerik.Reporting.Drawing.Unit.Cm(0.8D));
             this.textBox18.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -328,7 +328,7 @@ namespace HealthServicesSystem.Claims
             // 
             // reportFooterSection1
             // 
-            this.reportFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.5D);
+            this.reportFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.356D);
             this.reportFooterSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox12,
             this.textBox13,
@@ -393,7 +393,7 @@ namespace HealthServicesSystem.Claims
             // textBox17
             // 
             this.textBox17.Format = "{0:N0}";
-            this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.588D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
+            this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.588D), Telerik.Reporting.Drawing.Unit.Cm(0.202D));
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.15D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.textBox17.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
