@@ -60,10 +60,11 @@ namespace HealthServicesSystem.SystemSetting
 
         #endregion
         public int UserId = 0;
-        //public string Username = "";
+      //  public string Username = "";
         //public int counter = 0;
         public int LocalityId = 0;
         public string FulName;
+        int i = 0;
         private void LoginBTN_Click(object sender, EventArgs e)
         {
             if (UserName.Text == "")
@@ -79,6 +80,8 @@ namespace HealthServicesSystem.SystemSetting
                 return;
             }
 
+
+            
             //try
             //{
             //  var stId = db.Stocks.ToList();
@@ -106,6 +109,17 @@ namespace HealthServicesSystem.SystemSetting
                         }
                         UserId = chk[0].Id;
                         FulName = chk[0].FullName;
+
+                        if (UserPassWord.Text == "123" && i != 1)
+                        {
+                            ChangePassFrm frm = new ChangePassFrm();
+                            frm.alertLBL.Text = "**الرجاء تغيير كلمة المرور الافتراضية";
+                            frm.alertLBL.Visible = true;
+                            frm.Show();
+                            i = 1;
+
+                            return;
+                        }
                         // CheckLogin();
                         //  MessageBox.Show(UserId.ToString());
                         MainMenuForm mfr = new MainMenuForm();
@@ -114,6 +128,7 @@ namespace HealthServicesSystem.SystemSetting
                         mfr.Show();
                         // StockId = int.Parse(Stock.SelectedValue.ToString());
 
+                        
                     }
                     else
                     {

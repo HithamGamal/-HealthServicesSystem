@@ -16,6 +16,9 @@ namespace ModelDB
         public bool IsVisible { get; set; }
         public bool FromTheList { get; set; }
         public int Percentag { get; set; }
+        public int GroupId { get; set; }
+        [ForeignKey("GroupId")]
+        public virtual MedicinePriceGroup MedicinePriceGroups { get; set; }
 
     }
 }

@@ -159,6 +159,15 @@
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.printCardBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
+            this.FRMmedicineOutPrice = new Telerik.WinControls.UI.RadButtonElement();
+            this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
+            this.locality = new Telerik.WinControls.UI.RadLabelElement();
+            this.radLabelElement3 = new Telerik.WinControls.UI.RadLabelElement();
+            this.radLabelElement4 = new Telerik.WinControls.UI.RadLabelElement();
+            this.usernamelbl = new Telerik.WinControls.UI.RadLabelElement();
+            this.radLabelElement6 = new Telerik.WinControls.UI.RadLabelElement();
+            this.date = new Telerik.WinControls.UI.RadLabelElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -225,7 +234,8 @@
             this.radRibbonBarGroup5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
             this.radRibbonBarGroup5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.FRMMedicineSetting,
-            this.FRMMedicinePricing});
+            this.FRMMedicinePricing,
+            this.radButtonElement3});
             this.radRibbonBarGroup5.Name = "radRibbonBarGroup5";
             this.radRibbonBarGroup5.Text = "اعداد قائمة الدواء";
             // 
@@ -660,7 +670,7 @@
             // 
             // ribbonTab2
             // 
-            this.ribbonTab2.IsSelected = true;
+            this.ribbonTab2.IsSelected = false;
             this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup41,
             this.radRibbonBarGroup42,
@@ -926,7 +936,7 @@
             // 
             // ribbonTab3
             // 
-            this.ribbonTab3.IsSelected = false;
+            this.ribbonTab3.IsSelected = true;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup22,
             this.radRibbonBarGroup23,
@@ -958,8 +968,11 @@
             // 
             // radRibbonBarGroup23
             // 
+            this.radRibbonBarGroup23.AutoSize = false;
+            this.radRibbonBarGroup23.Bounds = new System.Drawing.Rectangle(0, 0, 260, 102);
             this.radRibbonBarGroup23.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.FRMmedicine});
+            this.FRMmedicine,
+            this.FRMmedicineOutPrice});
             this.radRibbonBarGroup23.Name = "radRibbonBarGroup23";
             this.radRibbonBarGroup23.Text = "استرداد الخدمة الدوائية";
             // 
@@ -1125,12 +1138,12 @@
             this.radRibbonBarGroup53.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.committeeBTN});
             this.radRibbonBarGroup53.Name = "radRibbonBarGroup53";
-            this.radRibbonBarGroup53.Text = "الموافقات الطبية";
+            this.radRibbonBarGroup53.Text = "موافقات اللجنة الطبية";
             // 
             // committeeBTN
             // 
             this.committeeBTN.Name = "committeeBTN";
-            this.committeeBTN.Text = "الموافقات الطبية";
+            this.committeeBTN.Text = "موافقات اللجنة الطبية";
             this.committeeBTN.Click += new System.EventHandler(this.CommitteeBTN_Click);
             // 
             // ribbonTab6
@@ -1412,12 +1425,81 @@
             // 
             // radStatusStrip1
             // 
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 619);
+            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radLabelElement1,
+            this.locality,
+            this.radLabelElement3,
+            this.radLabelElement4,
+            this.usernamelbl,
+            this.radLabelElement6,
+            this.date});
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 613);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1192, 26);
+            this.radStatusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radStatusStrip1.Size = new System.Drawing.Size(1192, 32);
             this.radStatusStrip1.SizingGrip = false;
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.ThemeName = "Breeze";
+            // 
+            // radLabelElement1
+            // 
+            this.radLabelElement1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.radLabelElement1.Name = "radLabelElement1";
+            this.radStatusStrip1.SetSpring(this.radLabelElement1, false);
+            this.radLabelElement1.Text = "المحلية:";
+            this.radLabelElement1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabelElement1.TextWrap = true;
+            // 
+            // locality
+            // 
+            this.locality.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.locality.Name = "locality";
+            this.radStatusStrip1.SetSpring(this.locality, false);
+            this.locality.Text = "locality";
+            this.locality.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.locality.TextWrap = true;
+            // 
+            // radLabelElement3
+            // 
+            this.radLabelElement3.Name = "radLabelElement3";
+            this.radStatusStrip1.SetSpring(this.radLabelElement3, false);
+            this.radLabelElement3.Text = "                                                            ";
+            this.radLabelElement3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabelElement3.TextWrap = true;
+            // 
+            // radLabelElement4
+            // 
+            this.radLabelElement4.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.radLabelElement4.Name = "radLabelElement4";
+            this.radStatusStrip1.SetSpring(this.radLabelElement4, false);
+            this.radLabelElement4.Text = "اسم المستخدم:";
+            this.radLabelElement4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabelElement4.TextWrap = true;
+            // 
+            // usernamelbl
+            // 
+            this.usernamelbl.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.usernamelbl.Name = "usernamelbl";
+            this.radStatusStrip1.SetSpring(this.usernamelbl, false);
+            this.usernamelbl.Text = "username";
+            this.usernamelbl.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.usernamelbl.TextWrap = true;
+            // 
+            // radLabelElement6
+            // 
+            this.radLabelElement6.Name = "radLabelElement6";
+            this.radStatusStrip1.SetSpring(this.radLabelElement6, false);
+            this.radLabelElement6.Text = "                                                                                 " +
+    "                                  ";
+            this.radLabelElement6.TextWrap = true;
+            // 
+            // date
+            // 
+            this.date.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.date.Name = "date";
+            this.radStatusStrip1.SetSpring(this.date, false);
+            this.date.Text = "date";
+            this.date.TextWrap = true;
             // 
             // MainMenuForm
             // 
@@ -1427,6 +1509,7 @@
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radRibbonBar1);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsMdiContainer = true;
             this.Name = "MainMenuForm";
             // 
             // 
@@ -1578,5 +1661,14 @@
         private Telerik.WinControls.UI.RadButtonElement committeeBTN;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup54;
         private Telerik.WinControls.UI.RadButtonElement committeeListBTN;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement3;
+        private Telerik.WinControls.UI.RadButtonElement FRMmedicineOutPrice;
+        private Telerik.WinControls.UI.RadLabelElement radLabelElement1;
+        private Telerik.WinControls.UI.RadLabelElement locality;
+        private Telerik.WinControls.UI.RadLabelElement radLabelElement3;
+        private Telerik.WinControls.UI.RadLabelElement radLabelElement4;
+        private Telerik.WinControls.UI.RadLabelElement usernamelbl;
+        private Telerik.WinControls.UI.RadLabelElement radLabelElement6;
+        private Telerik.WinControls.UI.RadLabelElement date;
     }
 }

@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using Telerik.WinControls.Export;
 
 namespace HealthServicesSystem.Claims
 {
@@ -162,36 +161,6 @@ namespace HealthServicesSystem.Claims
                 FillAllocat();
                 FillNotAllocat();
             }
-        }
-
-        private void ExpBtn_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog s = new SaveFileDialog();
-
-            s.ShowDialog();
-            GridViewSpreadExport spreadExporter = new GridViewSpreadExport(this.UnAllocatGrd);
-            SpreadExportRenderer exportRenderer = new SpreadExportRenderer();
-            spreadExporter.RunExport(s.FileName + ".xlsx", exportRenderer);
-        }
-
-        private void radButton1_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog s = new SaveFileDialog();
-
-            s.ShowDialog();
-            GridViewSpreadExport spreadExporter = new GridViewSpreadExport(this.AllocatGrd);
-            SpreadExportRenderer exportRenderer = new SpreadExportRenderer();
-            spreadExporter.RunExport(s.FileName + ".xlsx", exportRenderer);
-        }
-
-        private void PrintBtn_Click(object sender, EventArgs e)
-        {
-            UnAllocatGrd.PrintPreview();
-        }
-
-        private void radButton2_Click(object sender, EventArgs e)
-        {
-            AllocatGrd.PrintPreview();
         }
     }
 }

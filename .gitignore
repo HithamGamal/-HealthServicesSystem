@@ -17,3 +17,5 @@
 /HealthServicesSystem/obj/Release
 /.vs/-HealthServicesSystem/v16
 /UpgradeLog.htm
+/HealthServicesSystem/Reports
+/ModelDB/ExceptionClient.cs

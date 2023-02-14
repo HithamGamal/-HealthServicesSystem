@@ -64,7 +64,9 @@ namespace HealthServicesSystem.Reclaims
         public int insurId = 0;
         public bool Saved = false;
         public string Rec_No = "";
-        string Phone;
+        public string Phone;
+        public string Gender;
+        public string ClientId;
         public DateTime BirthDate = PLC.getdate();
         private void LoadData()
         {
@@ -157,6 +159,7 @@ namespace HealthServicesSystem.Reclaims
                     apv.Server = ServerName.Text;
                     apv.ClientId = Rec_No;
                     apv.BirthDate = BirthDate;
+                    
                     db.ApproveMedicines.Add(apv);
                     db.SaveChanges();
                     ApproveNo = db.ApproveMedicines.Where(p => p.InsurNo == card_no.Text && p.UserId == UserId).Max(p => p.Id);
@@ -439,8 +442,7 @@ namespace HealthServicesSystem.Reclaims
 
                     if (SubscriberType.SelectedIndex == 0)
                     {
-                        string Gender;
-                        string ClientId;
+
 
                         if (card_no.Text.Contains("/"))
                         {
@@ -918,13 +920,35 @@ namespace HealthServicesSystem.Reclaims
 
                     else
                     {
-                        this.Cursor = Cursors.Default;
-                        FRMAddStudent.Default.card_no.Text = card_no.Text;
-                        FRMAddStudent.Default.ful_name.Clear();
-                        FRMAddStudent.Default.Age.Clear();
-                        FRMAddStudent.Default.Sex.SelectedIndex = -1;
-                        FRMAddStudent.Default.University.SelectedIndex = -1;
-                        FRMAddStudent.Default.ShowDialog();
+                        var ChkN = db.ApproveMedicines.Where(p => p.InsurNo == card_no.Text).Take(1).ToList();
+                        if (ChkN.Count() > 0)
+                        {
+                            ChkSearch = true;
+                            BirthDate = ChkN[0].BirthDate;
+                            Age.Text = DateAndTime.DateDiff(DateInterval.Year, BirthDate, PLC.getdate()).ToString();
+
+                            // Phone.Text = result.phone
+
+                            CustName.Text = ChkN[0].InsurName;
+
+
+                            Gender = ChkN[0].Gender;
+                            Sex.Text = Gender;
+                            Rec_No = ChkN[0].ClientId;
+
+
+                            ServerName.Text = ChkN[0].Server;
+                        }
+                        //else
+                        //{
+                        //    this.Cursor = Cursors.Default;
+                        //    FRMAddStudent.Default.card_no.Text = card_no.Text;
+                        //    FRMAddStudent.Default.ful_name.Clear();
+                        //    FRMAddStudent.Default.Age.Clear();
+                        //    FRMAddStudent.Default.Sex.SelectedIndex = -1;
+                        //    FRMAddStudent.Default.University.SelectedIndex = -1;
+                        //    FRMAddStudent.Default.ShowDialog();
+                        //}
                     }
                 }
             }
@@ -954,7 +978,22 @@ namespace HealthServicesSystem.Reclaims
                 if (dwalist.ContainsFocus)
                 {
                     ServiceId = Convert.ToInt32(dwalist.SelectedValue);
-                }
+                    using (dbContext db = new dbContext())
+                    {
+                        var Fdwa = db.Medicines.Where(p => p.Id == ServiceId).ToList();
+                        if (Fdwa.Count > 0)
+                        {
+                            if( Convert.IsDBNull(Fdwa[0].NOTE.ToString()) == false)
+                            {
+                                if (Fdwa[0].NOTE.ToString() != "")
+                                {
+                                    MessageBox.Show("Note :" + (char)13 + Fdwa[0].NOTE.ToString(), "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                }
+                            }
+                        }
+                    }
+
+                    }
             }
             catch (Exception)
             {
@@ -1131,7 +1170,7 @@ namespace HealthServicesSystem.Reclaims
             using (dbContext db = new dbContext())
             {
                 // var ChkSub = dbs.Where(p => p.InsurNo == card_no.Text).ToList();
-               if (SubscriberType.SelectedIndex == 0 && ChkSearch==false && card_no.Text.Length == 11 && !card_no.Text.Contains("/"))
+                if (SubscriberType.SelectedIndex == 0 && ChkSearch == false && card_no.Text.Length == 11 && !card_no.Text.Contains("/"))
                 {
                     if (CustName.Text.Length == 0)
                     {
@@ -1168,7 +1207,7 @@ namespace HealthServicesSystem.Reclaims
                         ServerName.Text = dt.Rows[0]["StateName"].ToString();
                     }
                     BirthDate = PLC.getdate().AddYears(-Convert.ToInt32(Age.Text));
-                   
+
                     //Subscriber Sc = new Subscriber();
                     //Sc.PhoneNo = "";
                     //Sc.InsurNo = card_no.Text.Trim();
@@ -1581,6 +1620,7 @@ namespace HealthServicesSystem.Reclaims
             Fr.CustName = CustName.Text;
             Fr.Sex = Sex.Text;
             Fr.ServerName = ServerName.Text;
+            Fr.BirthDate = BirthDate;
             Fr.Rec_No = Rec_No;
             using (dbContext db = new dbContext())
             {
@@ -1622,24 +1662,10 @@ namespace HealthServicesSystem.Reclaims
                     ServerName.Text = dt.Rows[0]["StateName"].ToString();
                 }
                 conNat.Close();
-                BirthDate = PLC.getdate().AddYears(-Convert.ToInt32(Age.Text));
-                //Subscriber Sc = new Subscriber();
-                //Sc.PhoneNo = "";
-                //Sc.InsurNo = card_no.Text.Trim();
-                //Sc.InsurName = CustName.Text;
-                //Sc.Gender = Sex.Text;
-                //Sc.Server = ServerName.Text;
-                //Sc.ClientId = ClientId.ToString();
-                //Sc.BirthDate = Birthdate;
-                //Sc.LocalityId = PLC.LocalityId;
-                //Sc.IsStoped = false;
-                //Sc.StopCard = new DateTime(1900, 1, 1);
-
-                //dbs.Add(Sc);
                 db.SaveChanges();
 
 
-            
+
                 // var FId = dbs.Where(p => p.InsurNo == card_no.Text).ToList()[0].Id;
                 Fr.InsurId = card_no.Text;
             }

@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using Telerik.WinControls.Export;
 
 namespace HealthServicesSystem.Claims
 {
@@ -132,36 +131,6 @@ namespace HealthServicesSystem.Claims
                     }
                 }
             }
-        }
-
-        private void radButton2_Click(object sender, EventArgs e)
-        {
-            EnabledGrd.PrintPreview();
-        }
-
-        private void PrintBtn_Click(object sender, EventArgs e)
-        {
-            EnabledGrd.PrintPreview();
-        }
-
-        private void radButton1_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog s = new SaveFileDialog();
-
-            s.ShowDialog();
-            GridViewSpreadExport spreadExporter = new GridViewSpreadExport(this.NotEnabledGrd );
-            SpreadExportRenderer exportRenderer = new SpreadExportRenderer();
-            spreadExporter.RunExport(s.FileName + ".xlsx", exportRenderer);
-        }
-
-        private void ExpBtn_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog s = new SaveFileDialog();
-
-            s.ShowDialog();
-            GridViewSpreadExport spreadExporter = new GridViewSpreadExport(this.EnabledGrd );
-            SpreadExportRenderer exportRenderer = new SpreadExportRenderer();
-            spreadExporter.RunExport(s.FileName + ".xlsx", exportRenderer);
         }
     }
 }

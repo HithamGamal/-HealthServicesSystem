@@ -63,7 +63,7 @@ namespace HealthServicesSystem
         {
             using (dbContext db = new dbContext())
             {
-                var Tlist = db.Generics.Where(p=>p.IsActive==0).Select(p => new { p.Id, p.GenericName, p.Unit.Unit_Name }).ToList();
+                var Tlist = db.Generics.Where(p=>p.IsActive==0).Select(p => new { p.Id, p.GenericName }).ToList();
                 GrdGenerics.DataSource = Tlist;
             }
         }

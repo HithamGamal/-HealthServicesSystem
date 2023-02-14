@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>61</ApplicationRevision>
+    <ApplicationRevision>90</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -79,6 +79,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ModelDB">
+      <HintPath>..\ModelDB\obj\Debug\ModelDB.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -116,11 +119,11 @@
     <Compile Include="Chronics\FRMBookInfo.Designer.cs">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Claims\AddNonConfirmFrm.cs">
+    <Compile Include="Chronics\FRMChronicWaitList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Claims\AddNonConfirmFrm.Designer.cs">
-      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
+    <Compile Include="Chronics\FRMChronicWaitList.Designer.cs">
+      <DependentUpon>FRMChronicWaitList.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\AddNonConfirmToClaims.cs">
       <SubType>Form</SubType>
@@ -460,6 +463,12 @@
     <Compile Include="Chronics\FrmAddChronicMedicine.Designer.cs">
       <DependentUpon>FrmAddChronicMedicine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Refunds\FRMmedicineOutPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refunds\FRMmedicineOutPrice.Designer.cs">
+      <DependentUpon>FRMmedicineOutPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Refunds\FRMmedicine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -735,11 +744,8 @@
     <EmbeddedResource Include="Chronics\FRMBookInfo.resx">
       <DependentUpon>FRMBookInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Claims\AddNonConfirmFrm.resx">
-      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Claims\AddNonConfirmToClaims.resx">
-      <DependentUpon>AddNonConfirmToClaims.cs</DependentUpon>
+    <EmbeddedResource Include="Chronics\FRMChronicWaitList.resx">
+      <DependentUpon>FRMChronicWaitList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\AdvanceFillterFrm.resx">
       <DependentUpon>AdvanceFillterFrm.cs</DependentUpon>
@@ -913,6 +919,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chronics\FrmAddChronicMedicine.resx">
       <DependentUpon>FrmAddChronicMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refunds\FRMmedicineOutPrice.resx">
+      <DependentUpon>FRMmedicineOutPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Refunds\FRMmedicine.resx">
       <DependentUpon>FRMmedicine.cs</DependentUpon>
@@ -1461,12 +1470,6 @@
     <Content Include="Resources\compare_FILL0_wght400_GRAD0_opsz48.png" />
     <Content Include="Resources\print_FILL0_wght100_GRAD0_opsz24.png" />
     <Content Include="Resources\system_update_alt_FILL0_wght100_GRAD0_opsz24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ModelDB\ModelDB.csproj">
-      <Project>{3fe9389c-1468-4345-bc6d-fa5db4a5dc68}</Project>
-      <Name>ModelDB</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

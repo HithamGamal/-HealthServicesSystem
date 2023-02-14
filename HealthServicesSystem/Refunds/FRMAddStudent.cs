@@ -49,10 +49,10 @@ namespace HealthServicesSystem.Reclaims
         {
             defaultInstance = null;
         }
-        public int LocalityId ;
-		public string UserName = "";
-		private void Button1_Click(object sender, System.EventArgs e)
-		{
+        public int LocalityId;
+        public string UserName = "";
+        private void Button1_Click(object sender, System.EventArgs e)
+        {
             if (card_no.Text.Length == 0)
             {
                 MessageBox.Show("يجب ادخال بيانات المشترك", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -71,7 +71,7 @@ namespace HealthServicesSystem.Reclaims
                 Sex.Focus();
                 return;
             }
-            if (Age.Text.Length== 0)
+            if (Age.Text.Length == 0)
             {
                 MessageBox.Show("يجب ادخال العمر", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 Age.Focus();
@@ -101,20 +101,25 @@ namespace HealthServicesSystem.Reclaims
                 //    Sc.IsStoped = false;
                 //    dbs.Add(Sc);
                 //    db.SaveChanges();
-                    FRMApproveMedicine.Default.card_no.Text = card_no.Text.Trim();
-                    FRMApproveMedicine.Default.CustName.Text = ful_name.Text.Trim();
-                    FRMApproveMedicine.Default.Sex.SelectedIndex = Sex.SelectedIndex;
-                    FRMApproveMedicine.Default.ServerName.Text = University.Text.Trim();
-                    FRMApproveMedicine.Default.Age.Text = Age.Text.Trim();
+                FRMApproveMedicine.Default.card_no.Text = card_no.Text.Trim();
+                FRMApproveMedicine.Default.CustName.Text = ful_name.Text.Trim();
+                FRMApproveMedicine.Default.Sex.SelectedIndex = Sex.SelectedIndex;
+                FRMApproveMedicine.Default.ServerName.Text = University.Text.Trim();
+                FRMApproveMedicine.Default.Age.Text = Age.Text.Trim();
+                FRMBookInfo.Default.card_no.Text = card_no.Text.Trim();
+                FRMBookInfo.Default.CustName.Text = ful_name.Text.Trim();
+                FRMBookInfo.Default.Sex.SelectedIndex = Sex.SelectedIndex;
+                FRMBookInfo.Default.ServerName.Text = University.Text.Trim();
+                FRMBookInfo.Default.Age.Text = Age.Text.Trim();
 
-               // }
+                // }
             }
-            
-                this.Close();
-		}
 
-		private void patienthistory_Load(object sender, System.EventArgs e)
-		{
+            this.Close();
+        }
+
+        private void patienthistory_Load(object sender, System.EventArgs e)
+        {
             LocalityId = FRMApproveMedicine.Default.LocalityId;
             using (dbContext db = new dbContext())
             {
@@ -132,31 +137,31 @@ namespace HealthServicesSystem.Reclaims
                 University.ValueMember = "Id";
                 University.DisplayMember = "ArabicClientName";
                 University.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
-                
-                }
+
             }
+        }
 
-		private void grid_transfer_CellContentClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-		{
+        private void grid_transfer_CellContentClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
 
-		}
+        }
 
-		private void grid_transfer_Click(object sender, System.EventArgs e)
-		{
+        private void grid_transfer_Click(object sender, System.EventArgs e)
+        {
 
-		}
+        }
 
-		private void card_ser_TextChanged(object sender, EventArgs e)
-		{
+        private void card_ser_TextChanged(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void Label6_Click(object sender, EventArgs e)
-		{
+        private void Label6_Click(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-    
+
 
         private void RadButton1_Click_1(object sender, EventArgs e)
         {
