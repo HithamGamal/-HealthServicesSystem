@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>95</ApplicationRevision>
+    <ApplicationRevision>90</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -74,14 +74,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Interop.WIA">
+      <HintPath>\\192.168.100.10\d$\Share\Interop.WIA.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="ModelDB">
-      <HintPath>..\ModelDB\obj\Debug\ModelDB.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -292,6 +293,12 @@
     </Compile>
     <Compile Include="Claims\ViewReceiptRepFrm.Designer.cs">
       <DependentUpon>ViewReceiptRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Committee\ExceptionReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Committee\ExceptionReason.Designer.cs">
+      <DependentUpon>ExceptionReason.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -833,6 +840,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ViewReceiptRepFrm.resx">
       <DependentUpon>ViewReceiptRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Committee\ExceptionReason.resx">
+      <DependentUpon>ExceptionReason.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -1480,6 +1490,13 @@
     <Content Include="Resources\print_FILL0_wght100_GRAD0_opsz24.png" />
     <Content Include="Resources\system_update_alt_FILL0_wght100_GRAD0_opsz24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelDB\ModelDB.csproj">
+      <Project>{3fe9389c-1468-4345-bc6d-fa5db4a5dc68}</Project>
+      <Name>ModelDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
