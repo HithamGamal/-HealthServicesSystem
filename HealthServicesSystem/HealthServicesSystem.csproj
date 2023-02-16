@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>90</ApplicationRevision>
+    <ApplicationRevision>95</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -208,6 +208,12 @@
     </Compile>
     <Compile Include="Claims\ClmSendFrm.Designer.cs">
       <DependentUpon>ClmSendFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ClmsFilterCenterDataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\ClmsFilterCenterDataFrm.Designer.cs">
+      <DependentUpon>ClmsFilterCenterDataFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\CompireClaimsFrm.cs">
       <SubType>Form</SubType>
@@ -785,6 +791,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ClmSendFrm.resx">
       <DependentUpon>ClmSendFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\ClmsFilterCenterDataFrm.resx">
+      <DependentUpon>ClmsFilterCenterDataFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CompireClaimsFrm.resx">
       <DependentUpon>CompireClaimsFrm.cs</DependentUpon>
