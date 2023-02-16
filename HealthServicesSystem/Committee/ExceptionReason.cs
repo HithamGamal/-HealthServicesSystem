@@ -11,6 +11,8 @@ namespace HealthServicesSystem.Committee
 {
     public partial class ExceptionReason : Telerik.WinControls.UI.RadForm
     {
+        public string x = "";
+        public string c = "";
         public ExceptionReason()
         {
             InitializeComponent();
@@ -18,19 +20,19 @@ namespace HealthServicesSystem.Committee
 
         private void ApproveBTN_Click(object sender, EventArgs e)
         {
-            if (ExecptionReason.SelectedText =="" || CoInsuranceType.SelectedText == ""|| ExecptionCost.Text == "")
+            if (ExecptionReason.Text =="" || CoInsuranceType.Text == ""|| ExecptionCost.Text == "")
             {
                 RadMessageBox.Show("الرجاء اكمال البيانات !");
             }
-
-
+            x = ExecptionReason.Text;
+            c = CoInsuranceType.Text;
+            this.Hide();
         }
 
         private void ExceptionReason_Load(object sender, EventArgs e)
         {
             ExecptionReason.SelectedIndex = -1;
-            CoInsuranceType.SelectedIndex = -1;
-
+         
         }
     }
 }
