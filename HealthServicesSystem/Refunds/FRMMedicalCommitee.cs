@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using HealthServicesSystem.Reclaims;
 using Telerik.WinControls;
 using Telerik.Reporting.Processing;
+using Telerik.WinControls.UI;
 
 namespace HealthServicesSystem.Refunds
 {
@@ -928,7 +929,8 @@ namespace HealthServicesSystem.Refunds
                 RadMessageBox.Show("الرجاء ادخال بيانات المشترك !");
                 return;
             }
-
+           // RadMessageBox.Show( GRDApprove.SelectedRows.);
+            //  int i= Convert.ToInt32(GRDApprove.SummaryRowsBottom["allowCost"] );
 
             //if (GRDApprove.Rows.Count() >= 0 || Co_MedicalServiceEN.Text == "" || Co_MedicalServicesAR .Text == "")
             //{
@@ -1336,8 +1338,8 @@ namespace HealthServicesSystem.Refunds
 
         private void Co_Centers_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 int center_id = Convert.ToInt32(Co_Centers.SelectedValue);
 
                 if (COlistRB.Checked)
@@ -1398,14 +1400,14 @@ namespace HealthServicesSystem.Refunds
 
                 }
 
-              
 
-        //}
-        //    catch (Exception)
-        //    {
 
-        //       // throw;
-        //    }
+            }
+            catch (Exception)
+            {
+
+                // throw;
+            }
         }
 
         
@@ -1473,7 +1475,7 @@ namespace HealthServicesSystem.Refunds
 
       
         private void TXTSearch_KeyDown(object sender, KeyEventArgs e)
-        {
+       {
              if (e.KeyCode == Keys.Enter)
             {
 

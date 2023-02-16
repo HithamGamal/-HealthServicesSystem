@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ModelDB
 {
-  public  class MedicalCommitteeRequest : BaseEntity
+    public  class MedicalCommitteeRequest : BaseEntity
     {
 
         public int Id { get; set; }
@@ -26,6 +22,8 @@ namespace ModelDB
         public string Note { get; set; }
         public string Code { get; set; }
         public string CenterFrom { get; set; }
+        public string ExceptionReason { get; set; }
+        public string CoInsurance { get; set; }
         public CardType CardType  { get; set; }
         public RequestType RequestType { get; set; }
         public RequestStatus RequestStatus { get; set; }
