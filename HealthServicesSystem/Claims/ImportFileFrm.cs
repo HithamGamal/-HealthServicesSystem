@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,7 +39,7 @@ namespace HealthServicesSystem.Claims
             int m = int.Parse(MonthGrd.CurrentRow.Cells["Mnth"].Value.ToString());
             int y = int.Parse(MonthGrd.CurrentRow.Cells["yr"].Value.ToString());
             OleDbConnection con = new OleDbConnection(@"Provider= Microsoft.JET.OLEDB.4.0; Data Source =" + PathFile.Text + ";Persist Security Info =False;");
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName AS PatNAme, MasterTb.Age, MasterTb.Gender, Sum(DetailsTb.Total) AS Cost,ContractType.ContractName  AS types FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID) INNER JOIN ContractType ON MasterTb.TypeId = ContractType.Id  Where  Mnth = " + m + " and yr= " + y + " GROUP BY MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.TypeId, ContractType.ContractName", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, (MasterTb.FullName) AS PatNAme, MasterTb.Age, MasterTb.Gender, Sum(DetailsTb.Total) AS Cost,ContractType.ContractName  AS types FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID) INNER JOIN ContractType ON MasterTb.TypeId = ContractType.Id  Where  Mnth = " + m + " and yr= " + y + " GROUP BY MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.TypeId, ContractType.ContractName", con);
 
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -160,6 +161,12 @@ namespace HealthServicesSystem.Claims
                 if (MonthGrd.CurrentColumn .Name=="View")
                 {
                     fillMasterGrid();
+                }
+                else if (MonthGrd.CurrentColumn.Name == "Det")
+                {
+                    ClmsFilterCenterDataFrm frm = new ClmsFilterCenterDataFrm();
+                    frm.Path = PathFile.Text;
+                    frm.ShowDialog();
                 }
             }
         }
@@ -319,8 +326,8 @@ namespace HealthServicesSystem.Claims
                 OleDbConnection con = new OleDbConnection(@"Provider= Microsoft.JET.OLEDB.4.0; Data Source =" + PathFile.Text + ";Persist Security Info =False;");
                 dbContext db = new dbContext();
 
-
-                OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.CenterId, MasterTb.DateIn, MasterTb.UserName, MasterTb.Mnth, MasterTb.yr, MasterTb.VisitNo, MasterTb.VisitDate, MasterTb.Daignoseid, MasterTb.TypeId, DetailsTb.ID, DetailsTb.GenericId, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price, DetailsTb.Total, DetailsTb.UserName, DetailsTb.DateIn,DetailsTb.PatPrice,DetailsTb.ClaimPrice FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID)  where DetailsTb.GenericId <>0 Order by MasterTb.ID  ", con);
+            db.Database.CommandTimeout = 0;
+                OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.CenterId, MasterTb.DateIn, MasterTb.UserName, MasterTb.Mnth, MasterTb.yr, MasterTb.VisitNo, MasterTb.VisitDate, MasterTb.Daignoseid, MasterTb.TypeId, DetailsTb.ID, DetailsTb.GenericId, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price, DetailsTb.Total, DetailsTb.UserName, DetailsTb.DateIn,DetailsTb.PatPrice,DetailsTb.ClaimPrice FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID)    Order by MasterTb.ID  ", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
@@ -470,6 +477,73 @@ namespace HealthServicesSystem.Claims
         private void ExitExpBtn_Click(object sender, EventArgs e)
         {
            backgroundWorker1.CancelAsync();
+        }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+            OleDbConnection con = new OleDbConnection(@"Provider= Microsoft.JET.OLEDB.4.0; Data Source =" + PathFile.Text + ";Persist Security Info =False;");
+            dbContext db = new dbContext();
+            DateTime _now = PLC.getdatetime();
+            db.Database.CommandTimeout = 0;
+
+            var q = db.ClmImpFile.Where(p => p.CenterId == _cntrId && p.Month == _m && p.year == _y).ToList();
+            if (q.Count == 0)
+            {
+                _FileNo = 1;
+            }
+            else
+            {
+                _FileNo = q.Max(p => p.FileNo) + 1;
+            }
+
+
+
+            // insert into imort
+            ClmImpFile im = new ClmImpFile();
+            im.CenterId = _cntrId;
+            im.Costs = 0;
+            im.Counts = 0;
+            im.DrogCount = 0;
+            im.DateIn = _now;
+            im.UserId = _UserId;
+            im.RowStatus = RowStatus.NewRow;
+            im.Status = Status.Active;
+            im.year = _y;
+            im.Month = _m;
+            im.ImpDate = _now;
+            im.FileNo = _FileNo;
+            im.FilePath = PathFile.Text;
+            im.ClmStatus = ClmStatus.Temporary;
+            im.TemporaryUserId = _UserId;
+            im.TemporaryDate = PLC.getdatetime();
+            db.ClmImpFile.Add(im);
+            if (db.SaveChanges() > 0)
+            {
+                impId = im.Id;
+            }
+
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT ID as NoOfFile ,"+0+" as CleintId, InsuranceNo , FullName as PatName, Age , Gender , CenterId , Mnth as Months, yr as Years, VisitNo , VisitDate , Daignoseid as DaignosisId, TypeId as ContractId ," + _FileNo + " as FileNo  ," + impId + " as ImpId ,"+0+ " as UserId ,VisitDate as DateIn ," +0+ " as Status ,"+0+" as RowStatus ,"+0+ " as LocalityId FROM MasterTb", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+              
+                string connstr = db.Database.Connection.ConnectionString;
+                SqlConnection Sqlcon = new SqlConnection("Data Source =.; Initial Catalog = MedicalServiceDb; User ID = sa; Password = 123");
+                SqlBulkCopy bluk = new SqlBulkCopy(Sqlcon);
+                bluk.DestinationTableName = "ClmTempMasters";
+                if (Sqlcon.State == ConnectionState.Open) Sqlcon.Close();
+                Sqlcon.Open();
+                bluk.WriteToServer(dt);
+                Sqlcon.Close();
+
+
+
+
+
+
+            }
         }
     }
 }

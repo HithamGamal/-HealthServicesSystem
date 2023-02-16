@@ -52,6 +52,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn4 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn5 = new Telerik.WinControls.UI.GridViewCommandColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -59,6 +60,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.MasterGrd = new Telerik.WinControls.UI.RadGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.FileNoLb = new Telerik.WinControls.UI.RadLabel();
             this.ImpNoLb = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
@@ -84,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd.MasterTemplate)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileNoLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpNoLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
@@ -201,6 +204,7 @@
             // MasterGrd
             // 
             this.MasterGrd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MasterGrd.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MasterGrd.Location = new System.Drawing.Point(0, 0);
             // 
             // 
@@ -216,9 +220,9 @@
             gridViewTextBoxColumn8.HeaderText = "رقم التأمين";
             gridViewTextBoxColumn8.Name = "InsuranceNo";
             gridViewTextBoxColumn8.Width = 100;
-            gridViewTextBoxColumn9.FieldName = "PatName";
+            gridViewTextBoxColumn9.FieldName = "PatNAme";
             gridViewTextBoxColumn9.HeaderText = "الاسم";
-            gridViewTextBoxColumn9.Name = "PatName";
+            gridViewTextBoxColumn9.Name = "PatNAme";
             gridViewTextBoxColumn9.Width = 250;
             gridViewTextBoxColumn10.FieldName = "Cost";
             gridViewTextBoxColumn10.HeaderText = "المبلغ";
@@ -275,6 +279,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.radButton1);
             this.panel2.Controls.Add(this.FileNoLb);
             this.panel2.Controls.Add(this.ImpNoLb);
             this.panel2.Controls.Add(this.radLabel3);
@@ -297,6 +302,16 @@
             this.panel2.Size = new System.Drawing.Size(455, 553);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // radButton1
+            // 
+            this.radButton1.Location = new System.Drawing.Point(6, 198);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(136, 34);
+            this.radButton1.TabIndex = 8;
+            this.radButton1.Text = "تصدير المطالبة";
+            this.radButton1.Visible = false;
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
             // FileNoLb
             // 
@@ -444,10 +459,16 @@
             gridViewCommandColumn4.HeaderText = "عرض";
             gridViewCommandColumn4.Name = "View";
             gridViewCommandColumn4.Width = 80;
+            gridViewCommandColumn5.DefaultText = "عرض  التفاصيل";
+            gridViewCommandColumn5.FieldName = "Det";
+            gridViewCommandColumn5.HeaderText = "عرض التفاصيل";
+            gridViewCommandColumn5.Name = "Det";
+            gridViewCommandColumn5.Width = 100;
             this.MonthGrd.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn13,
             gridViewTextBoxColumn14,
-            gridViewCommandColumn4});
+            gridViewCommandColumn4,
+            gridViewCommandColumn5});
             this.MonthGrd.MasterTemplate.EnableGrouping = false;
             this.MonthGrd.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.MonthGrd.Name = "MonthGrd";
@@ -492,6 +513,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileNoLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpNoLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
@@ -537,5 +559,6 @@
         private Telerik.WinControls.UI.RadLabel ImpNoLb;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;
+        private Telerik.WinControls.UI.RadButton radButton1;
     }
 }
