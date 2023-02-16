@@ -31,5 +31,32 @@ namespace HealthServicesSystem.Claims
                 CenterNameDrp.SelectedIndex = -1;
             }
         }
+
+        private void OfdBtn_Click(object sender, EventArgs e)
+        {
+            int _m = FMonthDrp.SelectedIndex + 1;
+            int _y = int.Parse(FYearTxt.Text);
+            int _cntrId = int.Parse(CenterNameDrp.SelectedValue.ToString());
+            int _FileNo = 0;
+            if (FileNoTxt.Text.Trim().Length > 0)
+            {
+                _FileNo = int.Parse(FileNoTxt.Text);
+            }
+            dbContext db = new dbContext();
+            var q = db.ClmTempMaster.Where(p => p.Months == _m && p.Years == _y && p.CenterId == _cntrId && (_FileNo == 0 || p.FileNo == _FileNo)).ToList();
+            if (q.Count>0)
+            {
+                TotalCountTxt.Text = q.Count().ToString ();
+                var GetNatq= q.Where(p => p.InsuranceNo.Length == 11).Select(p => new
+                {
+                    InsNo = p.InsuranceNo,
+                    No =Convert.ToInt32( p.InsuranceNo.Substring(0, 2))
+
+                }).Where(p => p.No >= 40 && p.No <= 60).ToList();
+                TotalNationalTxt.Text = GetNatq.Count().ToString();
+                CountOldTxt.Text = q.Where(p => p.InsuranceNo.ToString().Contains("/")).Count().ToString();
+
+            }
+        }
     }
 }

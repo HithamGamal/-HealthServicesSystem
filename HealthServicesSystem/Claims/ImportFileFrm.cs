@@ -172,7 +172,7 @@ namespace HealthServicesSystem.Claims
                 int id = int.Parse(MasterGrd.CurrentRow.Cells["Id"].Value.ToString());
                 if (MasterGrd.CurrentColumn.Name == "View")
                 {
-                    OleDbDataAdapter da = new OleDbDataAdapter("SELECT DetailsTb.ID, Generics.GenericName, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price as UnitPrice, DetailsTb.Total as TotalPrice, DetailsTb.MasterId FROM(DetailsTb INNER JOIN Generics ON DetailsTb.GenericId = Generics.GenericId)  where Masterid = " + id + "", con);
+                    OleDbDataAdapter da = new OleDbDataAdapter("SELECT DetailsTb.ID, Generics.GenericName, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price as UnitPrice, DetailsTb.Total as TotalPrice, DetailsTb.MasterId FROM(DetailsTb INNER JOIN Generics ON DetailsTb.GenericId = Generics.GenericId)  where Masterid = " + id + " and DetailsTb.GenericId<> 0", con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
@@ -216,7 +216,7 @@ namespace HealthServicesSystem.Claims
                 {
                     DialogResult d = MessageBox.Show("هل تريد الحذف؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (d == DialogResult.No) return;
-                    OleDbDataAdapter da = new OleDbDataAdapter("SELECT * from  DetailsTb where id = " + id + "", con);
+                    OleDbDataAdapter da = new OleDbDataAdapter("SELECT  * from  DetailsTb where id = " + id + "", con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
@@ -254,6 +254,7 @@ namespace HealthServicesSystem.Claims
                 PrintCenterReportFrm frm = new PrintCenterReportFrm();
                 frm.typid = 1;
                 frm.filePath = PathFile.Text;
+                frm.PharName = CenterName.Text;
                 frm.ShowDialog();
             }
         }
@@ -272,7 +273,9 @@ namespace HealthServicesSystem.Claims
                 {
                     PrintCenterReportFrm frm = new PrintCenterReportFrm();
                     frm.typid = 2;
-                    frm.ShowDialog();
+                frm.filePath = PathFile.Text;
+                frm.PharName = CenterName.Text;
+                frm.ShowDialog();
                 }
             }
 
@@ -317,7 +320,7 @@ namespace HealthServicesSystem.Claims
                 dbContext db = new dbContext();
 
 
-                OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.CenterId, MasterTb.DateIn, MasterTb.UserName, MasterTb.Mnth, MasterTb.yr, MasterTb.VisitNo, MasterTb.VisitDate, MasterTb.Daignoseid, MasterTb.TypeId, DetailsTb.ID, DetailsTb.GenericId, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price, DetailsTb.Total, DetailsTb.UserName, DetailsTb.DateIn,DetailsTb.PatPrice,DetailsTb.ClaimPrice FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID) Order by MasterTb.ID ", con);
+                OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID, MasterTb.InsuranceNo, MasterTb.FullName, MasterTb.Age, MasterTb.Gender, MasterTb.CenterId, MasterTb.DateIn, MasterTb.UserName, MasterTb.Mnth, MasterTb.yr, MasterTb.VisitNo, MasterTb.VisitDate, MasterTb.Daignoseid, MasterTb.TypeId, DetailsTb.ID, DetailsTb.GenericId, DetailsTb.TradeName, DetailsTb.Qty, DetailsTb.Price, DetailsTb.Total, DetailsTb.UserName, DetailsTb.DateIn,DetailsTb.PatPrice,DetailsTb.ClaimPrice FROM(DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID)  where DetailsTb.GenericId <>0 Order by MasterTb.ID  ", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
@@ -397,16 +400,10 @@ namespace HealthServicesSystem.Claims
                             t.ImpId = impId ;
                             t.VisitDate = Convert.ToDateTime(dt.Rows[i]["VisitDate"].ToString());
                             t.VisitNo = dt.Rows[i]["VisitNo"].ToString();
-                        double insNo = 0;
+                        string  insNo ;
                         string insNotxt = dt.Rows[i]["InsuranceNo"].ToString();
-                            if (insNotxt.Contains ("/"))
-                        {
-                            insNo= Convert.ToDouble ( insNotxt.Replace("/", "0").ToString().Replace ("-", "0"));
-                        }
-                            else
-                        {
-                            insNo = Convert.ToDouble(dt.Rows[i]["InsuranceNo"].ToString());
-                        }
+                       insNo = dt.Rows[i]["InsuranceNo"].ToString();
+                       
                             t.InsuranceNo = insNo ;
                             t.Months = int.Parse(dt.Rows[i]["Mnth"].ToString());
                             t.NoOfFile = int.Parse(dt.Rows[i]["MasterTb.Id"].ToString());

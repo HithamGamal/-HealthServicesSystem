@@ -18,6 +18,7 @@ namespace HealthServicesSystem.Claims
         }
         public int typid = 0;
         public string filePath = "";
+        public string PharName = "";
         private void PrintCenterReportFrm_Load(object sender, EventArgs e)
         {
             OleDbConnection con = new OleDbConnection(@"Provider= Microsoft.JET.OLEDB.4.0; Data Source =" + filePath + ";Persist Security Info =False;");
@@ -34,6 +35,7 @@ namespace HealthServicesSystem.Claims
                     CustomerReport rep = new CustomerReport();
                     rep.DataSource = dt;
                     rep.Det.Value = "تقرير المسير  لشهر  " + dt.Rows[0]["mnth"];
+                    rep.PharName.Value  = PharName;
                     reportViewer1.ReportSource = rep;
                     reportViewer1.RefreshReport();
                 }
@@ -45,6 +47,7 @@ namespace HealthServicesSystem.Claims
 
                 OleDbDataAdapter da = new OleDbDataAdapter("SELECT DetailsTb.GenericId as ItemId, Generics.GenericName as ItemName, sum( DetailsTb.Qty) as Qty, Sum(DetailsTb.Total) as TotalPrice FROM DetailsTb INNER JOIN Generics ON DetailsTb.GenericId = Generics.GenericId  group by DetailsTb.GenericId , Generics.GenericName", con);
                 DataTable dt = new DataTable();
+                dt.Clear();
                 da.Fill(dt);
 
                 if (dt.Rows.Count > 0)
@@ -52,6 +55,7 @@ namespace HealthServicesSystem.Claims
                     ItemsReport rep = new ItemsReport();
                     rep.DataSource = dt;
                     rep.Det.Value = "تقرير الادوية  ";
+                    rep.PharName.Value = PharName;
                     reportViewer1.ReportSource = rep;
                     reportViewer1.RefreshReport();
                 }
