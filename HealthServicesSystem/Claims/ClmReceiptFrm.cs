@@ -59,7 +59,7 @@ namespace HealthServicesSystem.Claims
                 {
                    
                     var q1 = db.ClmImpFile.Where(p => p.Month == m && p.year == y && p.CenterId == centerId && p.RowStatus != RowStatus.Deleted )
-                        .Select(p => new { Id = 0,ImpId=p.Id, FileNo = p.FileNo, Counts = p.Counts, TotalClaims = p.Costs }).ToList() ;
+                        .Select(p => new { Id = 0,ImpId=p.Id, FileNo = p.FileNo, FileName= "جهاز "+ p.FileNo, Counts = p.Counts, TotalClaims = p.Costs }).ToList() ;
                         if (q1.Count >0)
                     {
                         radGridView1.DataSource = q1;

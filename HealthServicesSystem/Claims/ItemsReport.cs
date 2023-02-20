@@ -19,6 +19,7 @@ namespace HealthServicesSystem.Claims
             //
             InitializeComponent();
 
+
             //
             // TODO: Add any constructor code after InitializeComponent call
             //

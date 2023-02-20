@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using HealthServicesSystem.Reclaims;
 using Telerik.WinControls;
 using Telerik.Reporting.Processing;
+using Telerik.WinControls.UI;
+using HealthServicesSystem.Committee;
 
 namespace HealthServicesSystem.Refunds
 {
@@ -25,6 +27,10 @@ namespace HealthServicesSystem.Refunds
         string m ;
         string d ;
         string usercode ;
+
+
+
+
         public FRMMedicalCommitee()
         {
             InitializeComponent();
@@ -50,8 +56,8 @@ namespace HealthServicesSystem.Refunds
                         PLC.DbCailm.Close();
                     }
                     PLC.DbCailm.Open();
-                    SqlDataAdapter daCenter = new SqlDataAdapter("SELECT   center_id,center_name FROM   centers   where center_status= 'فعال' and center_id in (select center_id from servicecost where status ='Active')", PLC.DbCailm);
-                    SqlDataAdapter daCenter1 = new SqlDataAdapter("SELECT   center_id,center_name FROM   centers   where center_status= 'فعال' and center_id in (select center_id from servicecost where status ='Active')", PLC.DbCailm);
+                SqlDataAdapter daCenter = new SqlDataAdapter("SELECT   center_id,center_name FROM   centers   where center_status= 'فعال' and center_id in (select center_id from servicecost where status ='Active')", PLC.DbCailm);
+                SqlDataAdapter daCenter1 = new SqlDataAdapter("SELECT   center_id,center_name FROM   centers   where center_status= 'فعال' and center_id in (select center_id from servicecost where status ='Active')", PLC.DbCailm);
                 DataTable dtCenter = new DataTable();
                 DataTable dtCenter1 = new DataTable();
                 dtCenter.Clear();
@@ -586,7 +592,6 @@ namespace HealthServicesSystem.Refunds
         private void AddBTN_Click(object sender, EventArgs e)
         {
 
-
             string insurance_no = TXTSearch.Text;
             string centerId = ExcutingCenter.ValueMember;
             string medical_service_en = MedicalServiceEn.Text;
@@ -611,6 +616,20 @@ namespace HealthServicesSystem.Refunds
                 decimal totalCost = 0;
 
                 totalCost = allow_cost + insurance_cost ;
+
+                //if (allow_cost == 0)
+                //{
+
+                //}
+                //if (allow_cost = 0)
+                //{
+
+                //}
+                //if (allow_cost == 0)
+                //{
+
+                //}
+
 
                 if (totalCost <= Service_Cost)
                 {
@@ -648,45 +667,7 @@ namespace HealthServicesSystem.Refunds
 
         public void print()
         {
-            if (transferRadio.IsChecked || coRadio.IsChecked || radPageView2.SelectedPage.Name == "CooperationCommittee")
-            {
-                int id = Convert.ToInt32(rqstId.Text);
-                TransferRPT rpt = new TransferRPT();
-                var data = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id).Select(x => new { service_id = x.ServiceId, pat_cost = x.Pat_cost, service_Name = x.Service_Name, ServiceCost= x.Insur_cost }).ToList();
-                rpt.DataSource = data;
-                rpt.rqstId.Value = codelbl.Text;
-                rpt.patientname.Value = FulName.Text;
-                rpt.insur_no.Value = TXTSearch.Text;
-                rpt.cor_no.Value = clientIdLBL.Text;
-                rpt.rqst_date.Value = DateTime.Today.Date.ToShortDateString();
-                rpt.phone_no.Value = phoneNoLBL.Text;
-                if (coRadio.IsChecked)
-                {
-                    rpt.ServiceCost.Visible = true;
-                    rpt.textBox13.Visible = true;
-                    rpt.textBox21 .Visible = true;
-                }
-                if (radPageView2.SelectedPage.Name == "CooperationCommittee")
-                {
-                    rpt.centername.Value = Co_Centers .Text;
-                    rpt.note.Value = noteTXT.Text;
-                }
-                else
-                {
-                    rpt.centername.Value = ExcutingCenter.Text;
-                }
-
-
-
-                //RequestFrmRPT frm = new RequestFrmRPT();
-
-                //frm.reportViewer1.ReportSource = rpt;
-                //frm.reportViewer1.RefreshReport();
-                //frm.Show();
-                ReportProcessor pr = new ReportProcessor();
-                PrintDialog pg = new PrintDialog();
-                pr.PrintReport(rpt, pg.PrinterSettings);
-            }
+            ExceptionReason form = new ExceptionReason();
             if (physiotherapyrb.IsChecked)
             {
                 int id = Convert.ToInt32(rqstId.Text);
@@ -712,6 +693,55 @@ namespace HealthServicesSystem.Refunds
                 ReportProcessor pr = new ReportProcessor();
                 PrintDialog pg = new PrintDialog();
                 pr.PrintReport(rpt, pg.PrinterSettings);
+            }
+            else
+            {
+                int id = Convert.ToInt32(rqstId.Text);
+                TransferRPT rpt = new TransferRPT();
+                var data = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id)
+                    .Select(x => new { service_id = x.ServiceId, pat_cost = x.Pat_cost,
+                        service_Name = x.Service_Name, ServiceCost = x.Insur_cost }).ToList();
+                rpt.DataSource = data;
+                rpt.rqstId.Value = codelbl.Text;
+                rpt.patientname.Value = FulName.Text;
+                rpt.insur_no.Value = TXTSearch.Text;
+                rpt.cor_no.Value = clientIdLBL.Text;
+                rpt.rqst_date.Value = DateTime.Today.Date.ToShortDateString();
+                rpt.phone_no.Value = phoneNoLBL.Text;
+                if (coRadio.IsChecked)
+                {
+                    rpt.ServiceCost.Visible = true;
+                    rpt.textBox13.Visible = true;
+                    rpt.textBox21.Visible = true;
+                }
+                if (radPageView2.SelectedPage.Name == "CooperationCommittee")
+                {
+                    rpt.centername.Value = Co_Centers.Text;
+                    rpt.CoInsuranceType.Value = noteTXT.Text;
+                }
+                else
+                {
+                    rpt.centername.Value = ExcutingCenter.Text;
+                    rpt.textBox13.Value = "0";
+                    rpt.CoInsuranceType.Value = form.x ;
+                    rpt.amount.Value = form.c;
+                }
+
+
+
+                //RequestFrmRPT frm = new RequestFrmRPT();
+
+                //frm.reportViewer1.ReportSource = rpt;
+                //frm.reportViewer1.RefreshReport();
+                //frm.Show();
+                if (transferRadio.IsChecked || coRadio.IsChecked)
+                {
+
+                
+                ReportProcessor pr = new ReportProcessor();
+                PrintDialog pg = new PrintDialog();
+                pr.PrintReport(rpt, pg.PrinterSettings);
+                }
             }
         }
         private void PrintBTN_Click(object sender, EventArgs e)
@@ -898,20 +928,41 @@ namespace HealthServicesSystem.Refunds
 
         private void SaveBTN_Click(object sender, EventArgs e)
         {
+            int allowCost = 0;
+            int PatientPrice = 0;
+            string reason = "";
+            string coInsuranceType = "";
 
             if (string.IsNullOrEmpty(TXTSearch.Text ))
             {
                 RadMessageBox.Show("الرجاء ادخال بيانات المشترك !");
                 return;
             }
+           
+            foreach (var item in GRDApprove.Rows)
+            {
+               allowCost += Convert.ToInt32( item.Cells["allowCost"].Value);
+               PatientPrice += Convert.ToInt32( item.Cells["PatientPrice"].Value);
+            }
 
-
-            //if (GRDApprove.Rows.Count() >= 0 || Co_MedicalServiceEN.Text == "" || Co_MedicalServicesAR .Text == "")
-            //{
-            //    RadMessageBox.Show("الرجاء اضافة الخدمات الطبية !");
-            //    return;
-
-            //}
+            if (allowCost > 0)
+            {
+                ExceptionReason form = new ExceptionReason();
+                if (allowCost == PatientPrice)
+                {
+                    form.CoInsuranceType.SelectedIndex = 0;
+                }
+                else
+                {
+                    form.CoInsuranceType.SelectedIndex =1;
+                }
+                form.ExecptionCost.Text= allowCost.ToString();
+                form.ShowDialog();
+                reason = form.x;
+                coInsuranceType = form.c;
+            }
+            RadMessageBox.Show(i.ToString()) ;
+           
 
             MedicalCommitteeRequest rqst = new MedicalCommitteeRequest();
             MedicalCommitteeRequestDetails rqstDetails = new MedicalCommitteeRequestDetails();
@@ -987,6 +1038,8 @@ namespace HealthServicesSystem.Refunds
             {
                 rqst.CardType = CardType.local;
             }
+            rqst.ExceptionReason = reason;
+            rqst.CoInsurance = coInsuranceType;
             rqst.UserId = _UserId;
             rqst.DateIn = PLC.getdate();
             rqst.RowStatus =RowStatus.NewRow;
@@ -1019,16 +1072,16 @@ namespace HealthServicesSystem.Refunds
             }
             else
             {
-
+                
                 rqstDetails.RequestId = rqst.Id;
                 rqstDetails.InsurId = TXTSearch.Text;
                 rqstDetails.ServiceId = Convert.ToInt32(Co_MedicalServicesAR.SelectedValue);
                 rqstDetails.Service_Name = Co_MedicalServicesAR.Text ;
-                rqstDetails.Co_cost = Convert.ToInt32(Co_CostTB.Text);
+                rqstDetails.Co_cost = Convert.ToDecimal(Co_CostTB.Text);
                 rqstDetails.Pat_cost = 0;
                 rqstDetails.Insur_cost = 0;
-                rqstDetails.ServiceCost = Convert.ToInt32(ServiceCostTB .Text);
-                rqstDetails.InvoiceCost =Convert.ToInt32( InvoiceCostTB.Text);
+                rqstDetails.ServiceCost = Convert.ToDecimal(ServiceCostTB .Text);
+                rqstDetails.InvoiceCost =Convert.ToDecimal( InvoiceCostTB.Text);
                 rqstDetails.UserId =_UserId;
                 rqstDetails.DateIn = PLC.getdate();
                 rqstDetails.RowStatus = RowStatus.NewRow;
@@ -1262,6 +1315,8 @@ namespace HealthServicesSystem.Refunds
                 else
                 {
                     RadMessageBox.Show("عفواً،، مبلغ المساهمة أكبر من تكلفة الفاتورة");
+                    TotalCostTB.Text ="";
+                    return;
                 }
 
 
@@ -1278,80 +1333,10 @@ namespace HealthServicesSystem.Refunds
 
        
 
-        private void Co_MedicalServiceEN_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (InputLanguage.InstalledInputLanguages[0].Culture.Name.ToLower().Contains("en"))
-            {
-                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[1];
-            }
-            else
-            {
-                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[0];
-            }
-        }
-
-        private void Co_MedicalServicesAR_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (InputLanguage.InstalledInputLanguages[0].Culture.Name.ToLower().Contains("ar"))
-            {
-                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[1];
-            }
-            else
-            {
-                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[0];
-            }
-        }
-
-        private void Co_serviceDrop_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
+     
        
 
-        private void Co_MedicalServiceEN_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
-        {
-            try
-            {
-                int service_id = Convert.ToInt32(Co_MedicalServiceEN .SelectedValue);
-                int center_id = Convert.ToInt32(Co_Centers.SelectedValue);
-
-                if (COlistRB.IsChecked)
-                {
-                     var Cs = db.CooperationServices.Where(x => x.Id == service_id ).First();
-
-                    ServiceCostTB.Text = Cs.Cost;
-                   // ServiceCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(ServiceCostTB.Text));
-
-                }
-                else
-                {
-                    SqlDataAdapter da_service = new SqlDataAdapter("SELECT   servicecost,pat_cost,pat_servicecost FROM servicecost where status= 'Active' and center_id=" + center_id + " and service_id=" + service_id + "", PLC.DbCailm);
-                    DataTable dtService = new DataTable();
-                    dtService.Clear();
-                    da_service.Fill(dtService);
-                    //   MsgBox (dtCenter .Rows .Count)
-                    if (dtService.Rows.Count > 0)
-                    {
-                        ServiceCostTB.Text = dtService.Rows[0]["servicecost"].ToString();
-                     //   ServiceCostTB.Text = string.Format("{0:#,##0.00}", double.Parse(ServiceCostTB.Text));
-
-                    }
-
-                }
-                
-
-
-
-
-
-            }
-            catch (Exception)
-            {
-
-                //  throw;
-            }
-        }
+       
 
         private void Co_Centers_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1412,10 +1397,13 @@ namespace HealthServicesSystem.Refunds
                     }
                     PLC.DbCailm.Open();
 
-                    SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT       services.service_name,services.service_id,services.service_name_english FROM centers INNER JOIN   servicecost ON centers.center_id =servicecost.center_id INNER JOIN   services ON servicecost.service_id =services.service_id WHERE   centers.center_id = " + center_id + " and dbo.services.status='T' AND dbo.services.IS_NEW= 'Y'", PLC.DbCailm);
+
+
+                    SqlDataAdapter da_EN_service = new SqlDataAdapter("SELECT        dbo.services.service_id, dbo.services.service_name, dbo.services.service_name_english FROM       dbo.services INNER JOIN  dbo.servicecost ON dbo.services.service_id = dbo.servicecost.service_id where dbo.services.status='T' AND dbo.services.IS_NEW= 'Y' and dbo.servicecost.center_id =" + center_id + " ", PLC.DbCailm);
                     DataTable dtEnService = new DataTable();
                     dtEnService.Clear();
                     da_EN_service.Fill(dtEnService);
+
                     //if (transferRadio.IsChecked)
                     //{
 
@@ -1439,13 +1427,13 @@ namespace HealthServicesSystem.Refunds
 
                 }
 
-              
 
-        }
+
+            }
             catch (Exception)
             {
 
-               // throw;
+                // throw;
             }
         }
 
@@ -1514,7 +1502,7 @@ namespace HealthServicesSystem.Refunds
 
       
         private void TXTSearch_KeyDown(object sender, KeyEventArgs e)
-        {
+       {
              if (e.KeyCode == Keys.Enter)
             {
 
@@ -1563,6 +1551,126 @@ namespace HealthServicesSystem.Refunds
         }
 
         private void FromCenterDropdown_Enter(object sender, EventArgs e)
+        {
+            if (InputLanguage.InstalledInputLanguages[0].Culture.Name.ToLower().Contains("en"))
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[1];
+            }
+            else
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[0];
+            }
+        }
+
+        private void Co_MedicalServiceEN_Enter(object sender, EventArgs e)
+        {
+            if (InputLanguage.InstalledInputLanguages[0].Culture.Name.ToLower().Contains("en"))
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[0];
+            }
+            else
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[1];
+            }
+        }
+
+        private void Co_MedicalServicesAR_Enter(object sender, EventArgs e)
+        {
+            if (InputLanguage.InstalledInputLanguages[0].Culture.Name.ToLower().Contains("en"))
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[1];
+            }
+            else
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[0];
+            }
+        }
+
+        private void Co_MedicalServiceEN_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            try
+            {
+
+           
+            int serviceId = Convert.ToInt32(Co_MedicalServiceEN.SelectedValue);
+            int center_id = Convert.ToInt32(Co_Centers.SelectedValue);
+            if (COlistRB.Checked)
+            {
+                var Cs = db.CooperationServices.Where(x => x.Id == serviceId).First();
+
+                MedicalServiceEn.SelectedText = Cs.Service_EN_Name;
+                    ServiceCostTB.Text = Cs.Cost;
+            }
+            else
+            {
+
+                SqlDataAdapter da_service = new SqlDataAdapter("SELECT   servicecost,pat_cost,pat_servicecost FROM servicecost where status= 'Active' and center_id=" + center_id + " and service_id=" + serviceId + "", PLC.DbCailm);
+                DataTable dtService = new DataTable();
+                dtService.Clear();
+                da_service.Fill(dtService);
+                //   MsgBox (dtCenter .Rows .Count)
+                if (dtService.Rows.Count > 0)
+                {
+                    int serviceCost = Convert.ToInt32(dtService.Rows[0]["pat_servicecost"]) + Convert.ToInt32(dtService.Rows[0]["servicecost"]);
+                        ServiceCostTB.Text = serviceCost.ToString();
+                }
+            }
+            }
+            catch (Exception)
+            {
+
+                // throw;
+            }
+        }
+
+        private void Co_MedicalServicesAR_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            try
+            {
+
+           
+            int serviceId = Convert.ToInt32(Co_MedicalServicesAR.SelectedValue);
+            int center_id = Convert.ToInt32(Co_Centers.SelectedValue);
+
+            if (COlistRB.Checked)
+            {
+
+            
+            var Cs = db.CooperationServices.Where(x => x.Id == serviceId).First();
+
+            MedicalServiceEn.SelectedText = Cs.Service_EN_Name;
+                    ServiceCostTB.Text = Cs.Cost;
+            }
+            else
+            {
+
+                SqlDataAdapter da_service = new SqlDataAdapter("SELECT   servicecost,pat_cost,pat_servicecost FROM servicecost where status= 'Active' and center_id=" + center_id + " and service_id=" + serviceId + "", PLC.DbCailm);
+                DataTable dtService = new DataTable();
+                dtService.Clear();
+                da_service.Fill(dtService);
+                //   MsgBox (dtCenter .Rows .Count)
+                if (dtService.Rows.Count > 0)
+                {
+                    int serviceCost = Convert.ToInt32(dtService.Rows[0]["pat_servicecost"]) + Convert.ToInt32(dtService.Rows[0]["servicecost"]);
+                        ServiceCostTB.Text = serviceCost.ToString();
+                }
+            }
+            }
+            catch (Exception)
+            {
+
+                //   throw;
+            }
+
+
+        }
+
+        private void Co_CostTB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Co_Centers_Enter(object sender, EventArgs e)
         {
             if (InputLanguage.InstalledInputLanguages[0].Culture.Name.ToLower().Contains("en"))
             {

@@ -165,9 +165,8 @@ namespace HealthServicesSystem
             using (dbContext db = new dbContext())
             {
                 //nam.Text = LogFRM.Default.UserName.Text;
-
-
                 string username = LoginForm.Default.FulName;
+
                 if (username != "Admin")
                 {
                     //  usernamelbl.Text = LoginForm.Default.FulName;
@@ -181,6 +180,13 @@ namespace HealthServicesSystem
                                {
                                    FormName = frm.FormName
                                }).ToList();
+
+
+                    var localityName = db.Localities.FirstOrDefault(x => x.Id == LoginForm.Default.LocalityId).LocalityName;
+                    
+                    usernamelbl.Text = username;
+                    locality.Text = localityName;
+                    date.Text = PLC.getdate().ToShortDateString();
                     if (usp.Count > 0)
                     {
                         for (int i = 0; i <= usp.Count - 1; i++)

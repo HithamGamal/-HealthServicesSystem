@@ -44,8 +44,10 @@
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem1 = new Telerik.WinControls.UI.GridViewSummaryItem();
             Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem2 = new Telerik.WinControls.UI.GridViewSummaryItem();
+            Telerik.WinControls.UI.GridViewSummaryItem gridViewSummaryItem3 = new Telerik.WinControls.UI.GridViewSummaryItem();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.GroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.codelbl = new System.Windows.Forms.Label();
             this.patDataAlertLBL = new Telerik.WinControls.UI.RadLabel();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.card_typeTB = new System.Windows.Forms.Label();
@@ -103,12 +105,12 @@
             this.ApproveRequest = new Telerik.WinControls.UI.RadPageViewPage();
             this.CooperationCommittee = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.Co_MedicalServiceEN = new Telerik.WinControls.UI.RadDropDownList();
             this.COlistRB = new Telerik.WinControls.UI.RadCheckBox();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.Co_Centers = new Telerik.WinControls.UI.RadDropDownList();
             this.Co_MedicalServicesAR = new Telerik.WinControls.UI.RadDropDownList();
-            this.Co_MedicalServiceEN = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.noteTXT = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -125,7 +127,6 @@
             this.deny_check = new Telerik.WinControls.UI.RadCheckBox();
             this.approve_check = new Telerik.WinControls.UI.RadCheckBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.codelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).BeginInit();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patDataAlertLBL)).BeginInit();
@@ -188,12 +189,12 @@
             this.CooperationCommittee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Co_MedicalServiceEN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.COlistRB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Co_Centers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Co_MedicalServicesAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Co_MedicalServiceEN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
@@ -248,6 +249,16 @@
             this.GroupBox1.Text = "بيانات المشترك";
             this.GroupBox1.ThemeName = "Office2010Blue";
             this.GroupBox1.Click += new System.EventHandler(this.GroupBox1_Click);
+            // 
+            // codelbl
+            // 
+            this.codelbl.AutoSize = true;
+            this.codelbl.Location = new System.Drawing.Point(243, 21);
+            this.codelbl.Name = "codelbl";
+            this.codelbl.Size = new System.Drawing.Size(20, 25);
+            this.codelbl.TabIndex = 440;
+            this.codelbl.Text = "0";
+            this.codelbl.Visible = false;
             // 
             // patDataAlertLBL
             // 
@@ -382,6 +393,7 @@
             this.searchBTN.Name = "searchBTN";
             this.searchBTN.Size = new System.Drawing.Size(41, 27);
             this.searchBTN.TabIndex = 4;
+            this.searchBTN.Click += new System.EventHandler(this.SearchBTN_Click);
             // 
             // TXTSearch
             // 
@@ -862,7 +874,7 @@
             this.GRDApprove.Font = new System.Drawing.Font("Sakkal Majalla", 9.75F);
             this.GRDApprove.ForeColor = System.Drawing.Color.Crimson;
             this.GRDApprove.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GRDApprove.Location = new System.Drawing.Point(13, 188);
+            this.GRDApprove.Location = new System.Drawing.Point(14, 188);
             // 
             // 
             // 
@@ -963,14 +975,20 @@
             gridViewSummaryItem2.AggregateExpression = null;
             gridViewSummaryItem2.FormatString = "{0}";
             gridViewSummaryItem2.Name = "PatientPrice";
+            gridViewSummaryItem3.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum;
+            gridViewSummaryItem3.AggregateExpression = null;
+            gridViewSummaryItem3.FormatString = "{0}";
+            gridViewSummaryItem3.Name = "allowCost";
             this.GRDApprove.MasterTemplate.SummaryRowsBottom.Add(new Telerik.WinControls.UI.GridViewSummaryRowItem(new Telerik.WinControls.UI.GridViewSummaryItem[] {
                 gridViewSummaryItem1,
-                gridViewSummaryItem2}));
+                gridViewSummaryItem2,
+                gridViewSummaryItem3}));
             this.GRDApprove.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.GRDApprove.Name = "GRDApprove";
+            this.GRDApprove.ReadOnly = true;
             this.GRDApprove.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GRDApprove.ShowGroupPanel = false;
-            this.GRDApprove.Size = new System.Drawing.Size(1274, 177);
+            this.GRDApprove.Size = new System.Drawing.Size(1273, 177);
             this.GRDApprove.TabIndex = 16;
             this.GRDApprove.ThemeName = "Office2010Blue";
             this.GRDApprove.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.MasterTemplate_CommandCellClick);
@@ -1074,7 +1092,7 @@
             this.CooperationCommittee.ItemSize = new System.Drawing.SizeF(675F, 29F);
             this.CooperationCommittee.Location = new System.Drawing.Point(10, 38);
             this.CooperationCommittee.Name = "CooperationCommittee";
-            this.CooperationCommittee.Size = new System.Drawing.Size(1375, 453);
+            this.CooperationCommittee.Size = new System.Drawing.Size(1375, 378);
             this.CooperationCommittee.Text = "لجنة المساهمات";
             this.CooperationCommittee.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1083,12 +1101,12 @@
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGroupBox2.Controls.Add(this.Co_MedicalServiceEN);
             this.radGroupBox2.Controls.Add(this.COlistRB);
             this.radGroupBox2.Controls.Add(this.radLabel8);
             this.radGroupBox2.Controls.Add(this.radLabel9);
             this.radGroupBox2.Controls.Add(this.Co_Centers);
             this.radGroupBox2.Controls.Add(this.Co_MedicalServicesAR);
-            this.radGroupBox2.Controls.Add(this.Co_MedicalServiceEN);
             this.radGroupBox2.Controls.Add(this.radLabel10);
             this.radGroupBox2.Controls.Add(this.noteTXT);
             this.radGroupBox2.Controls.Add(this.label7);
@@ -1100,8 +1118,22 @@
             this.radGroupBox2.HeaderText = "";
             this.radGroupBox2.Location = new System.Drawing.Point(6, 12);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(1366, 422);
+            this.radGroupBox2.Size = new System.Drawing.Size(1366, 363);
             this.radGroupBox2.TabIndex = 0;
+            // 
+            // Co_MedicalServiceEN
+            // 
+            this.Co_MedicalServiceEN.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.Co_MedicalServiceEN.DropDownHeight = 120;
+            this.Co_MedicalServiceEN.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Co_MedicalServiceEN.Location = new System.Drawing.Point(721, 124);
+            this.Co_MedicalServiceEN.Name = "Co_MedicalServiceEN";
+            this.Co_MedicalServiceEN.Size = new System.Drawing.Size(364, 28);
+            this.Co_MedicalServiceEN.TabIndex = 443;
+            this.Co_MedicalServiceEN.ThemeName = "Office2010Blue";
+            this.Co_MedicalServiceEN.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Co_MedicalServiceEN_SelectedIndexChanged);
+            this.Co_MedicalServiceEN.Enter += new System.EventHandler(this.Co_MedicalServiceEN_Enter);
+            ((Telerik.WinControls.UI.RadDropDownListElement)(this.Co_MedicalServiceEN.GetChildAt(0))).RightToLeft = true;
             // 
             // COlistRB
             // 
@@ -1150,6 +1182,7 @@
             this.Co_Centers.ThemeName = "Office2010Blue";
             this.Co_Centers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Co_Centers_KeyDown);
             this.Co_Centers.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Co_Centers_SelectedIndexChanged);
+            this.Co_Centers.Enter += new System.EventHandler(this.Co_Centers_Enter);
             ((Telerik.WinControls.UI.RadDropDownListElement)(this.Co_Centers.GetChildAt(0))).RightToLeft = true;
             // 
             // Co_MedicalServicesAR
@@ -1162,22 +1195,9 @@
             this.Co_MedicalServicesAR.Size = new System.Drawing.Size(314, 28);
             this.Co_MedicalServicesAR.TabIndex = 444;
             this.Co_MedicalServicesAR.ThemeName = "Office2010Blue";
-            this.Co_MedicalServicesAR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Co_MedicalServicesAR_KeyPress);
+            this.Co_MedicalServicesAR.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Co_MedicalServicesAR_SelectedIndexChanged);
+            this.Co_MedicalServicesAR.Enter += new System.EventHandler(this.Co_MedicalServicesAR_Enter);
             ((Telerik.WinControls.UI.RadDropDownListElement)(this.Co_MedicalServicesAR.GetChildAt(0))).RightToLeft = true;
-            // 
-            // Co_MedicalServiceEN
-            // 
-            this.Co_MedicalServiceEN.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.Co_MedicalServiceEN.DropDownHeight = 120;
-            this.Co_MedicalServiceEN.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Co_MedicalServiceEN.Location = new System.Drawing.Point(721, 124);
-            this.Co_MedicalServiceEN.Name = "Co_MedicalServiceEN";
-            this.Co_MedicalServiceEN.Size = new System.Drawing.Size(364, 28);
-            this.Co_MedicalServiceEN.TabIndex = 443;
-            this.Co_MedicalServiceEN.ThemeName = "Office2010Blue";
-            this.Co_MedicalServiceEN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Co_MedicalServiceEN_KeyPress);
-            this.Co_MedicalServiceEN.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Co_MedicalServiceEN_SelectedIndexChanged);
-            ((Telerik.WinControls.UI.RadDropDownListElement)(this.Co_MedicalServiceEN.GetChildAt(0))).RightToLeft = true;
             // 
             // radLabel10
             // 
@@ -1268,6 +1288,8 @@
             this.Co_CostTB.TabStop = false;
             this.Co_CostTB.Text = "0";
             this.Co_CostTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Co_CostTB.Click += new System.EventHandler(this.Co_CostTB_Click);
+            this.Co_CostTB.TextChanged += new System.EventHandler(this.Co_CostTB_TextChanged);
             // 
             // radLabel5
             // 
@@ -1375,16 +1397,6 @@
             this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel1.ThemeName = "Office2010Blue";
             // 
-            // codelbl
-            // 
-            this.codelbl.AutoSize = true;
-            this.codelbl.Location = new System.Drawing.Point(243, 21);
-            this.codelbl.Name = "codelbl";
-            this.codelbl.Size = new System.Drawing.Size(20, 25);
-            this.codelbl.TabIndex = 440;
-            this.codelbl.Text = "0";
-            this.codelbl.Visible = false;
-            // 
             // FRMMedicalCommitee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1475,12 +1487,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Co_MedicalServiceEN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.COlistRB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Co_Centers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Co_MedicalServicesAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Co_MedicalServiceEN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);

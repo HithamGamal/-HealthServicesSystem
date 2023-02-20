@@ -64,29 +64,13 @@
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
     <Compile Include="MedicinePriceGroup.cs" />
-    <Compile Include="Migrations\202302050634569_saif_2023_2_5.cs" />
-    <Compile Include="Migrations\202302050634569_saif_2023_2_5.designer.cs">
-      <DependentUpon>202302050634569_saif_2023_2_5.cs</DependentUpon>
+    <Compile Include="Migrations\202302160611035_d.cs" />
+    <Compile Include="Migrations\202302160611035_d.designer.cs">
+      <DependentUpon>202302160611035_d.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202302050646269_saif_2023_2_5_1.cs" />
-    <Compile Include="Migrations\202302050646269_saif_2023_2_5_1.designer.cs">
-      <DependentUpon>202302050646269_saif_2023_2_5_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302050703294_saif_2023_2_5_2.cs" />
-    <Compile Include="Migrations\202302050703294_saif_2023_2_5_2.designer.cs">
-      <DependentUpon>202302050703294_saif_2023_2_5_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302060621014_saif_2023_2_6.cs" />
-    <Compile Include="Migrations\202302060621014_saif_2023_2_6.designer.cs">
-      <DependentUpon>202302060621014_saif_2023_2_6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302060640586_saif_2023_2_6_1.cs" />
-    <Compile Include="Migrations\202302060640586_saif_2023_2_6_1.designer.cs">
-      <DependentUpon>202302060640586_saif_2023_2_6_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302070805332_saif_2023_2_7.cs" />
-    <Compile Include="Migrations\202302070805332_saif_2023_2_7.designer.cs">
-      <DependentUpon>202302070805332_saif_2023_2_7.cs</DependentUpon>
+    <Compile Include="Migrations\202302160631036_a.cs" />
+    <Compile Include="Migrations\202302160631036_a.designer.cs">
+      <DependentUpon>202302160631036_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202302190946088_saif_23023_02_19.cs" />
     <Compile Include="Migrations\202302190946088_saif_23023_02_19.designer.cs">
@@ -174,23 +158,11 @@
     <Content Include="ModelDB.sln" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202302050634569_saif_2023_2_5.resx">
-      <DependentUpon>202302050634569_saif_2023_2_5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202302160611035_d.resx">
+      <DependentUpon>202302160611035_d.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302050646269_saif_2023_2_5_1.resx">
-      <DependentUpon>202302050646269_saif_2023_2_5_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302050703294_saif_2023_2_5_2.resx">
-      <DependentUpon>202302050703294_saif_2023_2_5_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302060621014_saif_2023_2_6.resx">
-      <DependentUpon>202302060621014_saif_2023_2_6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302060640586_saif_2023_2_6_1.resx">
-      <DependentUpon>202302060640586_saif_2023_2_6_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302070805332_saif_2023_2_7.resx">
-      <DependentUpon>202302070805332_saif_2023_2_7.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202302160631036_a.resx">
+      <DependentUpon>202302160631036_a.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302190946088_saif_23023_02_19.resx">
       <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
