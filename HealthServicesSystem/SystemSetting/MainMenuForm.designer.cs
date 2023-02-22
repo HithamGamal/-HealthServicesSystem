@@ -34,6 +34,7 @@
             this.radRibbonBarGroup5 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMMedicineSetting = new Telerik.WinControls.UI.RadButtonElement();
             this.FRMMedicinePricing = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup13 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FrmGenerics = new Telerik.WinControls.UI.RadButtonElement();
             this.FrmTrades = new Telerik.WinControls.UI.RadButtonElement();
@@ -110,6 +111,7 @@
             this.FRMReception = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup23 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMmedicine = new Telerik.WinControls.UI.RadButtonElement();
+            this.FRMmedicineOutPrice = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup24 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMmedical = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup26 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -159,8 +161,6 @@
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.printCardBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
-            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
-            this.FRMmedicineOutPrice = new Telerik.WinControls.UI.RadButtonElement();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             this.locality = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement3 = new Telerik.WinControls.UI.RadLabelElement();
@@ -217,7 +217,7 @@
             // 
             // ribbonTab5
             // 
-            this.ribbonTab5.IsSelected = true;
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup5,
             this.radRibbonBarGroup13,
@@ -259,6 +259,10 @@
             this.FRMMedicinePricing.Text = "أسعار الأدوية";
             this.FRMMedicinePricing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.FRMMedicinePricing.Click += new System.EventHandler(this.FRMMedicinePricing_Click);
+            // 
+            // radButtonElement3
+            // 
+            this.radButtonElement3.Name = "radButtonElement3";
             // 
             // radRibbonBarGroup13
             // 
@@ -985,6 +989,15 @@
             this.FRMmedicine.Text = "استرداد الخدمة الدوائية";
             this.FRMmedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.FRMmedicine.Click += new System.EventHandler(this.FRMmedicine_Click);
+            // 
+            // FRMmedicineOutPrice
+            // 
+            this.FRMmedicineOutPrice.AutoSize = false;
+            this.FRMmedicineOutPrice.Bounds = new System.Drawing.Rectangle(0, 0, 130, 74);
+            this.FRMmedicineOutPrice.Name = "FRMmedicineOutPrice";
+            this.FRMmedicineOutPrice.Text = "استرداد الخدمة الدوائية مساهمات";
+            this.FRMmedicineOutPrice.TextWrap = true;
+            this.FRMmedicineOutPrice.Click += new System.EventHandler(this.FRMmedicineOutPrice_Click_2);
             // 
             // radRibbonBarGroup24
             // 

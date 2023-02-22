@@ -757,9 +757,12 @@ namespace HealthServicesSystem
 
         private void FRMmedicineOutPrice_Click_1(object sender, EventArgs e)
         {
+          
+        }
+
+        private void FRMmedicineOutPrice_Click_2(object sender, EventArgs e)
+        {
             FRMmedicineOutPrice frm = new FRMmedicineOutPrice();
-           
-            // OpenForm(form);
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
