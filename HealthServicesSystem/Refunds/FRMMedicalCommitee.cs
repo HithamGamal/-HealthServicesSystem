@@ -10,6 +10,7 @@ using HealthServicesSystem.Reclaims;
 using Telerik.WinControls;
 using Telerik.Reporting.Processing;
 using Telerik.WinControls.UI;
+using HealthServicesSystem.Committee;
 
 namespace HealthServicesSystem.Refunds
 {
@@ -666,7 +667,7 @@ namespace HealthServicesSystem.Refunds
 
         public void print()
         {
-           
+            ExceptionReason form = new ExceptionReason();
             if (physiotherapyrb.IsChecked)
             {
                 int id = Convert.ToInt32(rqstId.Text);
@@ -697,7 +698,9 @@ namespace HealthServicesSystem.Refunds
             {
                 int id = Convert.ToInt32(rqstId.Text);
                 TransferRPT rpt = new TransferRPT();
-                var data = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id).Select(x => new { service_id = x.ServiceId, pat_cost = x.Pat_cost, service_Name = x.Service_Name, ServiceCost = x.Insur_cost }).ToList();
+                var data = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id)
+                    .Select(x => new { service_id = x.ServiceId, pat_cost = x.Pat_cost,
+                        service_Name = x.Service_Name, ServiceCost = x.Insur_cost }).ToList();
                 rpt.DataSource = data;
                 rpt.rqstId.Value = codelbl.Text;
                 rpt.patientname.Value = FulName.Text;
@@ -714,12 +717,14 @@ namespace HealthServicesSystem.Refunds
                 if (radPageView2.SelectedPage.Name == "CooperationCommittee")
                 {
                     rpt.centername.Value = Co_Centers.Text;
-                    rpt.note.Value = noteTXT.Text;
+                    rpt.CoInsuranceType.Value = noteTXT.Text;
                 }
                 else
                 {
                     rpt.centername.Value = ExcutingCenter.Text;
                     rpt.textBox13.Value = "0";
+                    rpt.CoInsuranceType.Value = form.x ;
+                    rpt.amount.Value = form.c;
                 }
 
 
@@ -923,21 +928,41 @@ namespace HealthServicesSystem.Refunds
 
         private void SaveBTN_Click(object sender, EventArgs e)
         {
+            int allowCost = 0;
+            int PatientPrice = 0;
+            string reason = "";
+            string coInsuranceType = "";
 
             if (string.IsNullOrEmpty(TXTSearch.Text ))
             {
                 RadMessageBox.Show("الرجاء ادخال بيانات المشترك !");
                 return;
             }
-           // RadMessageBox.Show( GRDApprove.SelectedRows.);
-            //  int i= Convert.ToInt32(GRDApprove.SummaryRowsBottom["allowCost"] );
+           
+            foreach (var item in GRDApprove.Rows)
+            {
+               allowCost += Convert.ToInt32( item.Cells["allowCost"].Value);
+               PatientPrice += Convert.ToInt32( item.Cells["PatientPrice"].Value);
+            }
 
-            //if (GRDApprove.Rows.Count() >= 0 || Co_MedicalServiceEN.Text == "" || Co_MedicalServicesAR .Text == "")
-            //{
-            //    RadMessageBox.Show("الرجاء اضافة الخدمات الطبية !");
-            //    return;
-
-            //}
+            if (allowCost > 0)
+            {
+                ExceptionReason form = new ExceptionReason();
+                if (allowCost == PatientPrice)
+                {
+                    form.CoInsuranceType.SelectedIndex = 0;
+                }
+                else
+                {
+                    form.CoInsuranceType.SelectedIndex =1;
+                }
+                form.ExecptionCost.Text= allowCost.ToString();
+                form.ShowDialog();
+                reason = form.x;
+                coInsuranceType = form.c;
+            }
+            RadMessageBox.Show(i.ToString()) ;
+           
 
             MedicalCommitteeRequest rqst = new MedicalCommitteeRequest();
             MedicalCommitteeRequestDetails rqstDetails = new MedicalCommitteeRequestDetails();
@@ -1013,6 +1038,8 @@ namespace HealthServicesSystem.Refunds
             {
                 rqst.CardType = CardType.local;
             }
+            rqst.ExceptionReason = reason;
+            rqst.CoInsurance = coInsuranceType;
             rqst.UserId = _UserId;
             rqst.DateIn = PLC.getdate();
             rqst.RowStatus =RowStatus.NewRow;

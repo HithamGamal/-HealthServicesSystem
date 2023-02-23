@@ -102,11 +102,11 @@ namespace HealthServicesSystem
                     var Fcen = db.CenterInfos.ToList();
                     if (Fcen.Count > 0)
                     {
-                        CenterId = db.CenterInfos.Where(p => p.Id > 50000).Max(p => p.Id) + 1;
+                        CenterId = db.CenterInfos.Where(p => p.Id > 2000001).Max(p => p.Id) + 1;
                     }
                     else
                     {
-                        CenterId = 50000;
+                        CenterId = 2000001;
                     }
                     CenterInfo cr = new CenterInfo();
                     cr.Id = CenterId;

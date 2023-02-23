@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem7 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.ExecptionReason = new Telerik.WinControls.UI.RadDropDownList();
@@ -71,12 +71,12 @@
             // ExecptionReason
             // 
             this.ExecptionReason.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            radListDataItem5.Text = "استثناء  من المدير العام";
-            radListDataItem6.Text = "استثناء مدير الادارة العامة للخدمات الصحية";
-            radListDataItem7.Text = "استثناء مدير الخدمات الطبية";
-            this.ExecptionReason.Items.Add(radListDataItem5);
-            this.ExecptionReason.Items.Add(radListDataItem6);
-            this.ExecptionReason.Items.Add(radListDataItem7);
+            radListDataItem1.Text = "استثناء  من المدير العام";
+            radListDataItem2.Text = "استثناء مدير الادارة العامة للخدمات الصحية";
+            radListDataItem3.Text = "استثناء مدير الخدمات الطبية";
+            this.ExecptionReason.Items.Add(radListDataItem1);
+            this.ExecptionReason.Items.Add(radListDataItem2);
+            this.ExecptionReason.Items.Add(radListDataItem3);
             this.ExecptionReason.Location = new System.Drawing.Point(24, 44);
             this.ExecptionReason.Name = "ExecptionReason";
             this.ExecptionReason.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -86,10 +86,10 @@
             // CoInsuranceType
             // 
             this.CoInsuranceType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            radListDataItem1.Text = "تحمل كامل";
-            radListDataItem2.Text = "تحمل بمبلغ مالي";
-            this.CoInsuranceType.Items.Add(radListDataItem1);
-            this.CoInsuranceType.Items.Add(radListDataItem2);
+            radListDataItem4.Text = "تحمل كامل";
+            radListDataItem5.Text = "تحمل بمبلغ مالي";
+            this.CoInsuranceType.Items.Add(radListDataItem4);
+            this.CoInsuranceType.Items.Add(radListDataItem5);
             this.CoInsuranceType.Location = new System.Drawing.Point(24, 96);
             this.CoInsuranceType.Name = "CoInsuranceType";
             this.CoInsuranceType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -117,6 +117,7 @@
             // 
             // ExecptionCost
             // 
+            this.ExecptionCost.Enabled = false;
             this.ExecptionCost.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.ExecptionCost.Location = new System.Drawing.Point(24, 152);
             this.ExecptionCost.MaskType = Telerik.WinControls.UI.MaskType.Numeric;

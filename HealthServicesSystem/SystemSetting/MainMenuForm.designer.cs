@@ -993,10 +993,6 @@
             this.FRMmedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.FRMmedicine.Click += new System.EventHandler(this.FRMmedicine_Click);
             // 
-            // FRMmedicineOutPrice
-            // 
-            this.FRMmedicineOutPrice.Name = "FRMmedicineOutPrice";
-            // 
             // radRibbonBarGroup24
             // 
             this.radRibbonBarGroup24.Items.AddRange(new Telerik.WinControls.RadItem[] {

@@ -64,9 +64,17 @@
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
     <Compile Include="MedicinePriceGroup.cs" />
-    <Compile Include="Migrations\202302140625054_22222.cs" />
-    <Compile Include="Migrations\202302140625054_22222.designer.cs">
-      <DependentUpon>202302140625054_22222.cs</DependentUpon>
+    <Compile Include="Migrations\202302160611035_d.cs" />
+    <Compile Include="Migrations\202302160611035_d.designer.cs">
+      <DependentUpon>202302160611035_d.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302160631036_a.cs" />
+    <Compile Include="Migrations\202302160631036_a.designer.cs">
+      <DependentUpon>202302160631036_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302190946088_saif_23023_02_19.cs" />
+    <Compile Include="Migrations\202302190946088_saif_23023_02_19.designer.cs">
+      <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202302160752254_22222223.cs" />
     <Compile Include="Migrations\202302160752254_22222223.designer.cs">
@@ -154,8 +162,14 @@
     <Content Include="ModelDB.sln" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202302140625054_22222.resx">
-      <DependentUpon>202302140625054_22222.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202302160611035_d.resx">
+      <DependentUpon>202302160611035_d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302160631036_a.resx">
+      <DependentUpon>202302160631036_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302190946088_saif_23023_02_19.resx">
+      <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302160752254_22222223.resx">
       <DependentUpon>202302160752254_22222223.cs</DependentUpon>
