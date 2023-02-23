@@ -68,6 +68,10 @@
     <Compile Include="Migrations\202302140625054_22222.designer.cs">
       <DependentUpon>202302140625054_22222.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302160752254_22222223.cs" />
+    <Compile Include="Migrations\202302160752254_22222223.designer.cs">
+      <DependentUpon>202302160752254_22222223.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -152,6 +156,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202302140625054_22222.resx">
       <DependentUpon>202302140625054_22222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302160752254_22222223.resx">
+      <DependentUpon>202302160752254_22222223.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

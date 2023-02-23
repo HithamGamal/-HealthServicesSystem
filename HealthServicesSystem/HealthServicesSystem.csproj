@@ -156,6 +156,12 @@
     <Compile Include="Claims\CenterNonConfirmRep.Designer.cs">
       <DependentUpon>CenterNonConfirmRep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Claims\CheckClaimsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\CheckClaimsFrm.Designer.cs">
+      <DependentUpon>CheckClaimsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Claims\ClmApproveAndDelFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,12 @@
     </Compile>
     <Compile Include="Claims\CompireClaimsFrm.Designer.cs">
       <DependentUpon>CompireClaimsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\CenterSummeryRep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\CenterSummeryRep.Designer.cs">
+      <DependentUpon>CenterSummeryRep.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\CustomerReport.cs">
       <SubType>Component</SubType>
@@ -772,6 +784,9 @@
     <EmbeddedResource Include="Claims\CenterNonConfirmRep.resx">
       <DependentUpon>CenterNonConfirmRep.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Claims\CheckClaimsFrm.resx">
+      <DependentUpon>CheckClaimsFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Claims\ClmApproveAndDelFrm.resx">
       <DependentUpon>ClmApproveAndDelFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -804,6 +819,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CompireClaimsFrm.resx">
       <DependentUpon>CompireClaimsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\CenterSummeryRep.resx">
+      <DependentUpon>CenterSummeryRep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CustomerReport.resx">
       <DependentUpon>CustomerReport.cs</DependentUpon>
