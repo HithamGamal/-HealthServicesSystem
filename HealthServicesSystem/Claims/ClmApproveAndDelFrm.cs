@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -138,80 +139,153 @@ namespace HealthServicesSystem.Claims
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             dbContext db = new dbContext();
-
-            var q = db.ClmTempMaster.Where(p => p.RowStatus != RowStatus.Deleted && p.Months == _m && p.Years == _y && p.CenterId == _cntrId && p.FileNo == _FileNo).ToList();
-            
-
-            if (q.Count > 0)
+            int _mId = 0;
+            int pi = 0;
+            var q = db.ClmTempDet.Where(p => p.RowStatus != RowStatus.Deleted && p.ClmTempMaster.Months == _m && p.ClmTempMaster.Years == _y && p.ClmTempMaster.CenterId == _cntrId && p.ClmTempMaster.FileNo == _FileNo).ToList();
+            if (q.Count >0)
             {
-                impId = q[0].ImpId;
-                int i = 0;
-                          
+          
                 foreach (var item in q)
                 {
-                    i = i + 1;
-
-                    if (backgroundWorker1.CancellationPending == true)
+                    
+                    crunt = item .MasterId ;
+                    if (_id != crunt)
                     {
-                        e.Cancel = true;
-                        return;
-                    }
-                    System.Threading.Thread.Sleep(100);
-                    backgroundWorker1.ReportProgress(i);
+                        backgroundWorker1.ReportProgress(pi);
+                        ClmMasterData t = new ClmMasterData();
+                        t.Age = item.ClmTempMaster.Age;
+                        t.CenterId = item.ClmTempMaster.CenterId;
+                        t.CleintId = 0;
+                        t.FileNo = _FileNo;
+                        t.Gender = item.ClmTempMaster.Gender;
+                        t.ImpId = impId;
+                        t.VisitDate = item.ClmTempMaster.VisitDate;
+                        t.VisitNo = item.ClmTempMaster.VisitNo;
+                        string insNo;
+                        string insNotxt = item.ClmTempMaster.InsuranceNo;
+                        insNo = item.ClmTempMaster.InsuranceNo.ToString();
 
+                        t.InsuranceNo = insNo;
+                        t.Months = item.ClmTempMaster.Months;
+                        t.NoOfFile = item.ClmTempMaster.NoOfFile;
+                        t.PatName = item.ClmTempMaster.PatName;
+                        t.Years = item.ClmTempMaster.Years;
 
-
-                    ClmMasterData t = new ClmMasterData();
-                    t.Age = item.Age;
-                    t.CenterId = item.CenterId;
-                    t.CleintId = item.CleintId;
-                    t.FileNo = item.FileNo;
-                    t.Gender = item.Gender;
-
-                    t.ImpId = item.ImpId;
-                    t.VisitDate = item.VisitDate;
-                    t.VisitNo = item.VisitNo;
-                    t.InsuranceNo = item.InsuranceNo;
-                    t.Months = item.Months;
-                    t.NoOfFile = item.NoOfFile;
-                    t.PatName = item.PatName;
-                    t.Years = item.Years;
-                    t.UserId = _UserId;
-                    t.DateIn = _now;
-                    t.DaignosisId = item.DaignosisId;
-                    t.ContractId = item.ContractId;
-
-                    db.ClmMasterData.Add(t);
-                    if (db.SaveChanges() > 0)
-                    {
-                        var qdet = db.ClmTempDet.Where(p => p.RowStatus != RowStatus.Deleted && p.MasterId == item.Id).ToList();
-                        if (qdet.Count > 0)
+                        t.UserId = _UserId;
+                        t.DaignosisId = item.ClmTempMaster.DaignosisId;
+                        t.ContractId = item.ClmTempMaster.ContractId;
+                        t.DateIn = _now;
+                        _id = item.MasterId ;
+                        db.ClmMasterData.Add(t);
+                        pi++;
+                       if( db.SaveChanges()>0)
                         {
-                            foreach (var item1 in qdet)
-                            {
-
-
-                                ClmDetailsData d = new ClmDetailsData();
-                                d.GenericId = item1.GenericId;
-                                d.MasterId = t.Id;
-                                d.Qty = item1.Qty;
-                                d.TotalPrice = item1.TotalPrice;
-                                d.TradeName = item1.TradeName;
-                                d.UnitPrice = item1.UnitPrice;
-                                d.UserId = _UserId;
-                                d.DateIn = _now;
-                                db.ClmDetailsData.Add(d);
-
-                                if (db.SaveChanges() > 0)
-                                {
-
-                                }
-
-                            }
+                            _mId = t.Id;
                         }
 
                     }
+
+                            ClmDetailsData d = new ClmDetailsData();
+                            d.GenericId = item .GenericId;
+                            d.MasterId = _mId;
+                            d.Qty = item .Qty;
+                            d.TotalPrice = item .TotalPrice;
+                            d.TradeName = item.TradeName ;
+                            d.UnitPrice = item .UnitPrice ;
+                            d.PatPrice = item .PatPrice ;
+                            d.ClaimPrice = item.ClaimPrice;
+                            d.UserId = _UserId;
+                            d.DateIn = _now;
+                            db.ClmDetailsData.Add(d);
+
+
+                   
+                        
+                    }
+                if (db.SaveChanges() > 0)
+                {
+
                 }
+               
+            }
+            //==================================================
+            // var q = db.ClmTempMaster.Where(p => p.RowStatus != RowStatus.Deleted && p.Months == _m && p.Years == _y && p.CenterId == _cntrId && p.FileNo == _FileNo).ToList();
+
+
+                // if (q.Count > 0)
+                // {
+
+
+
+                //===================================
+                //impId = q[0].ImpId;
+                //int i = 0;
+
+                //foreach (var item in q)
+                //{
+                //    i = i + 1;
+
+                //    if (backgroundWorker1.CancellationPending == true)
+                //    {
+                //        e.Cancel = true;
+                //        return;
+                //    }
+                //    System.Threading.Thread.Sleep(0);
+                //    backgroundWorker1.ReportProgress(i);
+
+
+
+                //    ClmMasterData t = new ClmMasterData();
+                //    t.Age = item.Age;
+                //    t.CenterId = item.CenterId;
+                //    t.CleintId = item.CleintId;
+                //    t.FileNo = item.FileNo;
+                //    t.Gender = item.Gender;
+
+                //    t.ImpId = item.ImpId;
+                //    t.VisitDate = item.VisitDate;
+                //    t.VisitNo = item.VisitNo;
+                //    t.InsuranceNo = item.InsuranceNo;
+                //    t.Months = item.Months;
+                //    t.NoOfFile = item.NoOfFile;
+                //    t.PatName = item.PatName;
+                //    t.Years = item.Years;
+                //    t.UserId = _UserId;
+                //    t.DateIn = _now;
+                //    t.DaignosisId = item.DaignosisId;
+                //    t.ContractId = item.ContractId;
+
+                //    db.ClmMasterData.Add(t);
+                //    if (db.SaveChanges() > 0)
+                //    {
+                //        var qdet = db.ClmTempDet.Where(p => p.RowStatus != RowStatus.Deleted && p.MasterId == item.Id).ToList();
+                //        if (qdet.Count > 0)
+                //        {
+                //            foreach (var item1 in qdet)
+                //            {
+
+
+                //                ClmDetailsData d = new ClmDetailsData();
+                //                d.GenericId = item1.GenericId;
+                //                d.MasterId = t.Id;
+                //                d.Qty = item1.Qty;
+                //                d.TotalPrice = item1.TotalPrice;
+                //                d.TradeName = item1.TradeName;
+                //                d.UnitPrice = item1.UnitPrice;
+                //                d.UserId = _UserId;
+                //                d.DateIn = _now;
+                //                db.ClmDetailsData.Add(d);
+
+                //                if (db.SaveChanges() > 0)
+                //                {
+
+                //                }
+
+                //            }
+                //        }
+
+                //    }
+                //  }
                 var qUpdate = db.ClmImpFile.Where(p => p.RowStatus != RowStatus.Deleted && p.Id == impId).ToList();
                 if(qUpdate.Count >0)
                 {
@@ -221,7 +295,7 @@ namespace HealthServicesSystem.Claims
                     db.SaveChanges();
                 }
             }
-        }
+        
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
@@ -258,5 +332,6 @@ namespace HealthServicesSystem.Claims
         {
 
         }
+      
     }
 }
