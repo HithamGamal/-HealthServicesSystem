@@ -75,10 +75,10 @@
             this.FYearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DetailsGrd = new Telerik.WinControls.UI.RadGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrd.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
@@ -93,18 +93,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetailsGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetailsGrd.MasterTemplate)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // MasterGrd
             // 
             this.MasterGrd.AutoScroll = true;
-            this.MasterGrd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MasterGrd.Location = new System.Drawing.Point(0, 0);
             // 
             // 
@@ -186,7 +185,7 @@
             this.MasterGrd.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.MasterGrd.Name = "MasterGrd";
             this.MasterGrd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.MasterGrd.Size = new System.Drawing.Size(989, 622);
+            this.MasterGrd.Size = new System.Drawing.Size(989, 393);
             this.MasterGrd.TabIndex = 35;
             this.MasterGrd.TitleText = "البيانات الغير متطابقة";
             this.MasterGrd.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.MasterGrd_CommandCellClick);
@@ -330,15 +329,6 @@
             this.panel1.Size = new System.Drawing.Size(1330, 622);
             this.panel1.TabIndex = 37;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.radGroupBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(989, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(341, 622);
-            this.panel2.TabIndex = 0;
-            // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
@@ -418,6 +408,15 @@
             this.DetailsGrd.Size = new System.Drawing.Size(989, 223);
             this.DetailsGrd.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.radGroupBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(989, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(341, 622);
+            this.panel2.TabIndex = 0;
+            // 
             // CheckClaimsFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,11 +446,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.FYearTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DetailsGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetailsGrd)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

@@ -60,7 +60,7 @@ namespace HealthServicesSystem.Claims
 
                         Id = p.Key.Id,
                         FileNo= p.Key.FileNo ,
-                        VisitNo = p.Key.VisitNo,
+                        VisitNo = p.Key.NoOfFile,
                         VisitDate= p.Key.VisitDate,
                         InsuranceNo = p.Key.InsuranceNo,
                         PatName = p.Key.PatName,
