@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202302160631036_a.designer.cs">
       <DependentUpon>202302160631036_a.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302190951122_ad.cs" />
+    <Compile Include="Migrations\202302190951122_ad.designer.cs">
+      <DependentUpon>202302190951122_ad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -159,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302160631036_a.resx">
       <DependentUpon>202302160631036_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302190951122_ad.resx">
+      <DependentUpon>202302190951122_ad.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
