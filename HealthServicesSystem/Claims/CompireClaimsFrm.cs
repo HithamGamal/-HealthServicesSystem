@@ -34,6 +34,7 @@ namespace HealthServicesSystem.Claims
 
         private void OfdBtn_Click(object sender, EventArgs e)
         {
+            MasterGrd.DataSource = null;
             int _m = FMonthDrp.SelectedIndex + 1;
             int _y = int.Parse(FYearTxt.Text);
             int _cntrId = int.Parse(CenterNameDrp.SelectedValue.ToString());
@@ -47,16 +48,43 @@ namespace HealthServicesSystem.Claims
             if (q.Count>0)
             {
                 TotalCountTxt.Text = q.Count().ToString ();
-                var GetNatq= q.Where(p => p.InsuranceNo.Length == 11).Select(p => new
+                var GetNatq= q.Where(p => p.InsuranceNo.Length == 11 && !p.InsuranceNo .Contains("/") &&( p.InsuranceNo.StartsWith("4") || p.InsuranceNo.StartsWith("5")|| p.InsuranceNo.StartsWith("6"))).Select(p => new
                 {
                     InsNo = p.InsuranceNo,
-                    No =Convert.ToInt32( p.InsuranceNo.Substring(0, 2))
+                    No = p.InsuranceNo.Substring(0,2)
 
-                }).Where(p => p.No >= 40 && p.No <= 60).ToList();
+                }).ToList();
                 TotalNationalTxt.Text = GetNatq.Count().ToString();
                 CountOldTxt.Text = q.Where(p => p.InsuranceNo.ToString().Contains("/")).Count().ToString();
+                TotalNewCardTxt.Text  = q.Where(p => p.InsuranceNo.Length == 9 && p.InsuranceNo.StartsWith("10")).Count().ToString();
+                TotalCurrectTxt.Text = (int.Parse(TotalNationalTxt.Text) + int.Parse(CountOldTxt.Text) + int.Parse(TotalNewCardTxt.Text)).ToString();
+                TotalNonTxt.Text = (int.Parse(TotalCountTxt.Text) - int.Parse(TotalCurrectTxt.Text)).ToString();
+               decimal Per =  ((Convert.ToDecimal(TotalNonTxt.Text) / Convert.ToDecimal(TotalCountTxt.Text)*100) );
+                PersentTxt.Text =Math.Round ( Per,2).ToString();
+                // fill 
+
+                var ErrorQ = q.Where(p => !(p.InsuranceNo.Length == 9 && p.InsuranceNo.StartsWith("10"))).ToList();
+                var ErrorQ2 = ErrorQ. Where  (p=>! ( p.InsuranceNo.Length == 11 && (p.InsuranceNo.StartsWith ("4")|| p.InsuranceNo.StartsWith("5") || p.InsuranceNo.StartsWith("6") ))).Select(
+
+                    p => new
+                    {
+
+                        Id= p.Id,
+                        InsuranceNo= p.InsuranceNo ,
+                        PatName = p.PatName,
+                        
+                        Age= p.Age ,
+                        Types=p.ContractId
+
+
+                    }).ToList();
+                if (ErrorQ2 .Count>0)
+                {
+                    MasterGrd.DataSource = ErrorQ2;
+                }
 
             }
+
         }
     }
 }

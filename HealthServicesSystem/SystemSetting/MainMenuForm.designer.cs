@@ -34,6 +34,7 @@
             this.radRibbonBarGroup5 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMMedicineSetting = new Telerik.WinControls.UI.RadButtonElement();
             this.FRMMedicinePricing = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup13 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FrmGenerics = new Telerik.WinControls.UI.RadButtonElement();
             this.FrmTrades = new Telerik.WinControls.UI.RadButtonElement();
@@ -71,6 +72,8 @@
             this.CompireClaims = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup37 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.AppoveClaims = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup55 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.CheckClaimsM = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup38 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.ClmReceipt = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup39 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -110,6 +113,7 @@
             this.FRMReception = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup23 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMmedicine = new Telerik.WinControls.UI.RadButtonElement();
+            this.FRMmedicineOutPrice = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup24 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMmedical = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup26 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -159,8 +163,6 @@
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.printCardBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
-            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
-            this.FRMmedicineOutPrice = new Telerik.WinControls.UI.RadButtonElement();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             this.locality = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement3 = new Telerik.WinControls.UI.RadLabelElement();
@@ -217,7 +219,7 @@
             // 
             // ribbonTab5
             // 
-            this.ribbonTab5.IsSelected = true;
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup5,
             this.radRibbonBarGroup13,
@@ -259,6 +261,10 @@
             this.FRMMedicinePricing.Text = "أسعار الأدوية";
             this.FRMMedicinePricing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.FRMMedicinePricing.Click += new System.EventHandler(this.FRMMedicinePricing_Click);
+            // 
+            // radButtonElement3
+            // 
+            this.radButtonElement3.Name = "radButtonElement3";
             // 
             // radRibbonBarGroup13
             // 
@@ -542,11 +548,12 @@
             // 
             // ribbonTab8
             // 
-            this.ribbonTab8.IsSelected = false;
+            this.ribbonTab8.IsSelected = true;
             this.ribbonTab8.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup36,
             this.radRibbonBarGroup50,
             this.radRibbonBarGroup37,
+            this.radRibbonBarGroup55,
             this.radRibbonBarGroup38,
             this.radRibbonBarGroup39,
             this.radRibbonBarGroup40});
@@ -610,6 +617,25 @@
             this.AppoveClaims.Name = "AppoveClaims";
             this.AppoveClaims.Text = "اعتماد المطالبة المؤقتة";
             this.AppoveClaims.Click += new System.EventHandler(this.AppoveClaims_Click);
+            // 
+            // radRibbonBarGroup55
+            // 
+            this.radRibbonBarGroup55.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.CheckClaimsM});
+            this.radRibbonBarGroup55.Name = "radRibbonBarGroup55";
+            this.radRibbonBarGroup55.Text = "التحقق من المطالبة";
+            // 
+            // CheckClaimsM
+            // 
+            this.CheckClaimsM.AutoSize = false;
+            this.CheckClaimsM.Bounds = new System.Drawing.Rectangle(0, 0, 90, 66);
+            this.CheckClaimsM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.CheckClaimsM.Enabled = false;
+            this.CheckClaimsM.Image = global::HealthServicesSystem.Properties.Resources.fact_check_FILL0_wght400_GRAD0_opsz48__1_;
+            this.CheckClaimsM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CheckClaimsM.Name = "CheckClaimsM";
+            this.CheckClaimsM.Text = "التحقق من المطالبة";
+            this.CheckClaimsM.Click += new System.EventHandler(this.CheckClaimsM_Click_1);
             // 
             // radRibbonBarGroup38
             // 
@@ -936,7 +962,7 @@
             // 
             // ribbonTab3
             // 
-            this.ribbonTab3.IsSelected = true;
+            this.ribbonTab3.IsSelected = false;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup22,
             this.radRibbonBarGroup23,
@@ -985,6 +1011,10 @@
             this.FRMmedicine.Text = "استرداد الخدمة الدوائية";
             this.FRMmedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.FRMmedicine.Click += new System.EventHandler(this.FRMmedicine_Click);
+            // 
+            // FRMmedicineOutPrice
+            // 
+            this.FRMmedicineOutPrice.Name = "FRMmedicineOutPrice";
             // 
             // radRibbonBarGroup24
             // 
@@ -1670,5 +1700,7 @@
         private Telerik.WinControls.UI.RadLabelElement usernamelbl;
         private Telerik.WinControls.UI.RadLabelElement radLabelElement6;
         private Telerik.WinControls.UI.RadLabelElement date;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup55;
+        private Telerik.WinControls.UI.RadButtonElement CheckClaimsM;
     }
 }
