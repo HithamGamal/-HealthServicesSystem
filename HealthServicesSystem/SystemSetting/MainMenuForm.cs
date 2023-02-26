@@ -762,10 +762,7 @@ namespace HealthServicesSystem
 
         private void FRMmedicineOutPrice_Click_2(object sender, EventArgs e)
         {
-            FRMmedicineOutPrice frm = new FRMmedicineOutPrice();
-            frm.MdiParent = this;
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
+          
         }
 
         private void CheckClaimsM_Click(object sender, EventArgs e)
@@ -783,6 +780,14 @@ namespace HealthServicesSystem
             CheckClaimsFrm frm = new CheckClaimsFrm();
 
             // OpenForm(form);
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void FRMmedicineOutPrice_Click_3(object sender, EventArgs e)
+        {
+            FRMmedicineOutPrice frm = new FRMmedicineOutPrice();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();

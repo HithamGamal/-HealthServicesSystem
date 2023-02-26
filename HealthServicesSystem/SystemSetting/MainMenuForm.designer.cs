@@ -1019,6 +1019,7 @@
             this.FRMmedicineOutPrice.Name = "FRMmedicineOutPrice";
             this.FRMmedicineOutPrice.Text = "استرداد خدمة دوائية مساهمات";
             this.FRMmedicineOutPrice.TextWrap = true;
+            this.FRMmedicineOutPrice.Click += new System.EventHandler(this.FRMmedicineOutPrice_Click_3);
             // 
             // radRibbonBarGroup24
             // 
