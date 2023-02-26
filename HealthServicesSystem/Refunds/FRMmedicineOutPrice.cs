@@ -889,7 +889,7 @@ namespace HealthServicesSystem.Reclaims
                                 UnitPrice.Text = getSer[0].UnitCost.ToString();
                                 // MaxCost.Text = getSer[0].MaxCost.ToString();
                                 InList = getSer[0].InContract;
-                                //  Percentage.Text = 75.ToString();
+                                ////  Percentage.Text = 75.ToString();
                                 quantity.Text = 1.ToString();
                             }
                         }
