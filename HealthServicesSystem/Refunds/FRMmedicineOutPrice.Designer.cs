@@ -858,7 +858,7 @@
             this.Label13.Size = new System.Drawing.Size(105, 62);
             this.Label13.TabIndex = 451;
             this.Label13.Text = "الكمية الحقيقية للدواء";
-            this.Label13.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label13.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.Label13.ThemeName = "Office2010Blue";
             // 
             // Label19
@@ -873,7 +873,7 @@
             this.Label19.Size = new System.Drawing.Size(112, 62);
             this.Label19.TabIndex = 453;
             this.Label19.Text = "مبلغ الدواء في الدواء في الفاتورة";
-            this.Label19.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label19.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.Label19.ThemeName = "Office2010Blue";
             // 
             // TotalPaied

@@ -156,6 +156,18 @@
     <Compile Include="Claims\CenterNonConfirmRep.Designer.cs">
       <DependentUpon>CenterNonConfirmRep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Claims\CenterSummeryRep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\CenterSummeryRep.Designer.cs">
+      <DependentUpon>CenterSummeryRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\CheckClaimsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\CheckClaimsFrm.Designer.cs">
+      <DependentUpon>CheckClaimsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Claims\ClmApproveAndDelFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -616,6 +628,12 @@
     <Compile Include="Reports\FRMreportChronics.designer.cs">
       <DependentUpon>FRMreportChronics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FRMRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FRMRequests.Designer.cs">
+      <DependentUpon>FRMRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FRMRPTMedicalEStrdad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -639,6 +657,24 @@
     </Compile>
     <Compile Include="Reports\RPTChronicBooksDetails.Designer.cs">
       <DependentUpon>RPTChronicBooksDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPTRequestByCost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPTRequestByCost.Designer.cs">
+      <DependentUpon>RPTRequestByCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPTRequestsByCount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPTRequestsByCount.Designer.cs">
+      <DependentUpon>RPTRequestsByCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RPTRequestsByServices.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RPTRequestsByServices.Designer.cs">
+      <DependentUpon>RPTRequestsByServices.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RPTِApproveDWACount.cs">
       <SubType>Component</SubType>
@@ -771,6 +807,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CenterNonConfirmRep.resx">
       <DependentUpon>CenterNonConfirmRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\CenterSummeryRep.resx">
+      <DependentUpon>CenterSummeryRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\CheckClaimsFrm.resx">
+      <DependentUpon>CheckClaimsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ClmApproveAndDelFrm.resx">
       <DependentUpon>ClmApproveAndDelFrm.cs</DependentUpon>
@@ -1008,6 +1050,9 @@
     <EmbeddedResource Include="Reports\FRMreportChronics.resx">
       <DependentUpon>FRMreportChronics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FRMRequests.resx">
+      <DependentUpon>FRMRequests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FRMRPTMedicalEStrdad.resx">
       <DependentUpon>FRMRPTMedicalEStrdad.cs</DependentUpon>
     </EmbeddedResource>
@@ -1019,6 +1064,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPTChronicBooksDetails.resx">
       <DependentUpon>RPTChronicBooksDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPTRequestByCost.resx">
+      <DependentUpon>RPTRequestByCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPTRequestsByCount.resx">
+      <DependentUpon>RPTRequestsByCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RPTRequestsByServices.resx">
+      <DependentUpon>RPTRequestsByServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPTِApproveDWACount.resx">
       <DependentUpon>RPTِApproveDWACount.cs</DependentUpon>
