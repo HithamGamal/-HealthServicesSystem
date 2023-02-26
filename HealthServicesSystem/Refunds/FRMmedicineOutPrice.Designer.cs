@@ -48,6 +48,8 @@
             this.Button6 = new Telerik.WinControls.UI.RadButton();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.GroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
+            this.ReDwaSum = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.CustName = new Telerik.WinControls.UI.RadTextBox();
             this.card_no = new Telerik.WinControls.UI.RadTextBox();
@@ -103,8 +105,6 @@
             this.OperationNo = new Telerik.WinControls.UI.RadTextBox();
             this.Label9 = new Telerik.WinControls.UI.RadLabel();
             this.ServerName = new Telerik.WinControls.UI.RadTextBox();
-            this.ReDwaSum = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Button8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button4)).BeginInit();
@@ -112,6 +112,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox3)).BeginInit();
             this.GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReDwaSum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card_no)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label3)).BeginInit();
@@ -170,8 +172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.OperationNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReDwaSum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,11 +286,39 @@
             this.GroupBox3.Location = new System.Drawing.Point(1, 2);
             this.GroupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(1045, 704);
+            this.GroupBox3.Size = new System.Drawing.Size(1045, 692);
             this.GroupBox3.TabIndex = 348;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.Text = " ";
             this.GroupBox3.Click += new System.EventHandler(this.GroupBox3_Click);
+            // 
+            // ReDwaSum
+            // 
+            this.ReDwaSum.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ReDwaSum.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReDwaSum.Location = new System.Drawing.Point(30, 81);
+            this.ReDwaSum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ReDwaSum.MaxLength = 255;
+            this.ReDwaSum.Name = "ReDwaSum";
+            this.ReDwaSum.ReadOnly = true;
+            this.ReDwaSum.Size = new System.Drawing.Size(131, 28);
+            this.ReDwaSum.TabIndex = 442;
+            this.ReDwaSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ReDwaSum.ThemeName = "Office2010Blue";
+            // 
+            // radLabel6
+            // 
+            this.radLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.radLabel6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
+            this.radLabel6.ForeColor = System.Drawing.Color.Maroon;
+            this.radLabel6.Location = new System.Drawing.Point(165, 79);
+            this.radLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(114, 31);
+            this.radLabel6.TabIndex = 441;
+            this.radLabel6.Text = "اجمالي مبلغ الدواء ";
+            this.radLabel6.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel6.ThemeName = "Office2010Blue";
             // 
             // label1
             // 
@@ -830,21 +858,22 @@
             this.Label13.Size = new System.Drawing.Size(105, 62);
             this.Label13.TabIndex = 451;
             this.Label13.Text = "الكمية الحقيقية للدواء";
-            this.Label13.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.Label13.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Label13.ThemeName = "Office2010Blue";
             // 
             // Label19
             // 
+            this.Label19.AutoSize = false;
             this.Label19.BackColor = System.Drawing.Color.Transparent;
             this.Label19.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
             this.Label19.ForeColor = System.Drawing.Color.Black;
-            this.Label19.Location = new System.Drawing.Point(937, 141);
+            this.Label19.Location = new System.Drawing.Point(916, 131);
             this.Label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(81, 31);
+            this.Label19.Size = new System.Drawing.Size(112, 62);
             this.Label19.TabIndex = 453;
-            this.Label19.Text = "مبلغ الفاتورة";
-            this.Label19.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.Label19.Text = "مبلغ الدواء في الدواء في الفاتورة";
+            this.Label19.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Label19.ThemeName = "Office2010Blue";
             // 
             // TotalPaied
@@ -854,7 +883,7 @@
             this.TotalPaied.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TotalPaied.MaxLength = 20;
             this.TotalPaied.Name = "TotalPaied";
-            this.TotalPaied.Size = new System.Drawing.Size(115, 28);
+            this.TotalPaied.Size = new System.Drawing.Size(102, 28);
             this.TotalPaied.TabIndex = 3;
             this.TotalPaied.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TotalPaied.ThemeName = "Office2010Blue";
@@ -1152,40 +1181,12 @@
             this.ServerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ServerName.ThemeName = "Office2010Blue";
             // 
-            // ReDwaSum
-            // 
-            this.ReDwaSum.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ReDwaSum.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReDwaSum.Location = new System.Drawing.Point(30, 81);
-            this.ReDwaSum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ReDwaSum.MaxLength = 255;
-            this.ReDwaSum.Name = "ReDwaSum";
-            this.ReDwaSum.ReadOnly = true;
-            this.ReDwaSum.Size = new System.Drawing.Size(131, 28);
-            this.ReDwaSum.TabIndex = 442;
-            this.ReDwaSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ReDwaSum.ThemeName = "Office2010Blue";
-            // 
-            // radLabel6
-            // 
-            this.radLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F);
-            this.radLabel6.ForeColor = System.Drawing.Color.Maroon;
-            this.radLabel6.Location = new System.Drawing.Point(165, 79);
-            this.radLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(114, 31);
-            this.radLabel6.TabIndex = 441;
-            this.radLabel6.Text = "اجمالي مبلغ الدواء ";
-            this.radLabel6.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel6.ThemeName = "Office2010Blue";
-            // 
             // FRMmedicineOutPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1046, 705);
+            this.ClientSize = new System.Drawing.Size(1046, 696);
             this.Controls.Add(this.GroupBox3);
             this.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1208,6 +1209,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GroupBox3)).EndInit();
             this.GroupBox3.ResumeLayout(false);
             this.GroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReDwaSum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.card_no)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label3)).EndInit();
@@ -1269,8 +1272,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.OperationNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReDwaSum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
