@@ -69,7 +69,6 @@
             this.ProcessLb = new Telerik.WinControls.UI.RadLabel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.ExpBtn = new Telerik.WinControls.UI.RadButton();
-            this.DetailsBtn = new Telerik.WinControls.UI.RadButton();
             this.MasterBtn = new Telerik.WinControls.UI.RadButton();
             this.CenterName = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -94,7 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExitExpBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DetailsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
@@ -288,7 +286,6 @@
             this.panel2.Controls.Add(this.ProcessLb);
             this.panel2.Controls.Add(this.progressBar1);
             this.panel2.Controls.Add(this.ExpBtn);
-            this.panel2.Controls.Add(this.DetailsBtn);
             this.panel2.Controls.Add(this.MasterBtn);
             this.panel2.Controls.Add(this.CenterName);
             this.panel2.Controls.Add(this.radLabel1);
@@ -310,7 +307,6 @@
             this.radButton1.Size = new System.Drawing.Size(136, 34);
             this.radButton1.TabIndex = 8;
             this.radButton1.Text = "تصدير المطالبة";
-            this.radButton1.Visible = false;
             this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
             // FileNoLb
@@ -388,22 +384,13 @@
             this.ExpBtn.Text = "تصدير المطالبة";
             this.ExpBtn.Click += new System.EventHandler(this.ExpBtn_Click);
             // 
-            // DetailsBtn
-            // 
-            this.DetailsBtn.Location = new System.Drawing.Point(6, 494);
-            this.DetailsBtn.Name = "DetailsBtn";
-            this.DetailsBtn.Size = new System.Drawing.Size(403, 34);
-            this.DetailsBtn.TabIndex = 6;
-            this.DetailsBtn.Text = "طباعة الادوية";
-            this.DetailsBtn.Click += new System.EventHandler(this.DetailsBtn_Click);
-            // 
             // MasterBtn
             // 
             this.MasterBtn.Location = new System.Drawing.Point(6, 460);
             this.MasterBtn.Name = "MasterBtn";
             this.MasterBtn.Size = new System.Drawing.Size(403, 34);
             this.MasterBtn.TabIndex = 5;
-            this.MasterBtn.Text = "طباعة المسير";
+            this.MasterBtn.Text = "عرض التقرير";
             this.MasterBtn.Click += new System.EventHandler(this.MasterBtn_Click);
             // 
             // CenterName
@@ -521,7 +508,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExitExpBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DetailsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CenterName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
@@ -549,7 +535,6 @@
         private Telerik.WinControls.UI.RadLabel CenterName;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadButton MasterBtn;
-        private Telerik.WinControls.UI.RadButton DetailsBtn;
         private Telerik.WinControls.UI.RadButton ExpBtn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ProgressBar progressBar1;

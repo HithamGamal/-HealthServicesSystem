@@ -27,7 +27,8 @@ namespace HealthServicesSystem.Refunds
         string m ;
         string d ;
         string usercode ;
-
+        string reason = "";
+        string coInsuranceType = "";
 
 
 
@@ -683,16 +684,16 @@ namespace HealthServicesSystem.Refunds
 
                 RequestFrmRPT frm = new RequestFrmRPT();
 
-                //frm.reportViewer1.ReportSource = rpt;
-                //frm.reportViewer1.RefreshReport();
-                //frm.Show();
+                frm.reportViewer1.ReportSource = rpt;
+                frm.reportViewer1.RefreshReport();
+                frm.Show();
 
                 //////RequestFrmRPT pr = new RequestFrmRPT();
                 //////PrintDialog pg = new PrintDialog();
                 //////pr.PrintReport(rpt, pg.PrinterSettings);
-                ReportProcessor pr = new ReportProcessor();
-                PrintDialog pg = new PrintDialog();
-                pr.PrintReport(rpt, pg.PrinterSettings);
+                //ReportProcessor pr = new ReportProcessor();
+                //PrintDialog pg = new PrintDialog();
+                //pr.PrintReport(rpt, pg.PrinterSettings);
             }
             else
             {
@@ -723,25 +724,27 @@ namespace HealthServicesSystem.Refunds
                 {
                     rpt.centername.Value = ExcutingCenter.Text;
                     rpt.textBox13.Value = "0";
-                    rpt.CoInsuranceType.Value = form.x ;
-                    rpt.amount.Value = form.c;
+                    rpt.CoInsuranceType.Value =  reason;
+                    rpt.amount.Value = coInsuranceType;
+                    rpt.amount.Visible = true;
+                    rpt.textBox6.Visible = true;
                 }
 
 
 
-                //RequestFrmRPT frm = new RequestFrmRPT();
+                RequestFrmRPT frm = new RequestFrmRPT();
 
-                //frm.reportViewer1.ReportSource = rpt;
-                //frm.reportViewer1.RefreshReport();
-                //frm.Show();
-                if (transferRadio.IsChecked || coRadio.IsChecked)
-                {
+                frm.reportViewer1.ReportSource = rpt;
+                frm.reportViewer1.RefreshReport();
+                frm.Show();
+                //if (transferRadio.IsChecked || coRadio.IsChecked)
+                //{
 
                 
-                ReportProcessor pr = new ReportProcessor();
-                PrintDialog pg = new PrintDialog();
-                pr.PrintReport(rpt, pg.PrinterSettings);
-                }
+                //ReportProcessor pr = new ReportProcessor();
+                //PrintDialog pg = new PrintDialog();
+                //pr.PrintReport(rpt, pg.PrinterSettings);
+                //}
             }
         }
         private void PrintBTN_Click(object sender, EventArgs e)
@@ -759,7 +762,7 @@ namespace HealthServicesSystem.Refunds
 
             if (transferRadio.IsChecked || physiotherapyrb.IsChecked)
             {
-                if (MedicalServiceAr.SelectedIndex > 0)
+                if (MedicalServiceEn.SelectedIndex > 0)
                 {
                     try
                     {
@@ -820,6 +823,10 @@ namespace HealthServicesSystem.Refunds
         {
             try
             {
+                if (coRadio.IsChecked != true)
+                {
+
+              
                 int center_id = Convert.ToInt32(ExcutingCenter.SelectedValue);
                 int service_id = Convert.ToInt32(MedicalServiceAr.SelectedValue);
 
@@ -850,7 +857,7 @@ namespace HealthServicesSystem.Refunds
 
                 }
 
-
+                }
 
 
 
@@ -864,7 +871,7 @@ namespace HealthServicesSystem.Refunds
 
 
         private void MedicalServiceAr_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
-        {
+       {
             if (transferRadio.IsChecked || physiotherapyrb.IsChecked)
             {
                 if (MedicalServiceAr.SelectedIndex > 0)
@@ -906,7 +913,7 @@ namespace HealthServicesSystem.Refunds
             {
                 try
                 {
-                    int serviceId = Convert.ToInt32(MedicalServiceEn.SelectedValue);
+                    int serviceId = Convert.ToInt32(MedicalServiceAr.SelectedValue);
                     var Cs = db.CooperationServices.Where(x => x.Id == serviceId).First();
 
                     MedicalServiceEn.SelectedText = Cs.Service_EN_Name;
@@ -930,8 +937,7 @@ namespace HealthServicesSystem.Refunds
         {
             int allowCost = 0;
             int PatientPrice = 0;
-            string reason = "";
-            string coInsuranceType = "";
+          
 
             if (string.IsNullOrEmpty(TXTSearch.Text ))
             {
@@ -961,7 +967,6 @@ namespace HealthServicesSystem.Refunds
                 reason = form.x;
                 coInsuranceType = form.c;
             }
-            RadMessageBox.Show(i.ToString()) ;
            
 
             MedicalCommitteeRequest rqst = new MedicalCommitteeRequest();

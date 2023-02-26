@@ -252,16 +252,18 @@ namespace HealthServicesSystem.Claims
         {
             OleDbConnection con = new OleDbConnection(@"Provider= Microsoft.JET.OLEDB.4.0; Data Source =" + PathFile.Text + ";Persist Security Info =False;");
 
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID as Id, first(MasterTb.InsuranceNo) as InsNo, first(MasterTb.FullName) as FullName, first(MasterTb.VisitDate) as VisitDate, Sum(DetailsTb.Total) as TotalPrice FROM DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID  group by MasterTb.ID", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT MasterTb.ID as Id, first(MasterTb.InsuranceNo) as InsNo,first(MasterTb.Mnth) as Mn,first(MasterTb.Yr) as Yr, first(MasterTb.FullName) as FullName, first(MasterTb.VisitDate) as VisitDate, Sum(DetailsTb.Total) as TotalPrice FROM DetailsTb INNER JOIN MasterTb ON DetailsTb.MasterId = MasterTb.ID  group by MasterTb.ID", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
             if (dt.Rows.Count > 0)
             {
                 PrintCenterReportFrm frm = new PrintCenterReportFrm();
-                frm.typid = 1;
+              
                 frm.filePath = PathFile.Text;
                 frm.PharName = CenterName.Text;
+                frm.Mon =int.Parse ( dt.Rows[0]["Mn"].ToString ());
+                frm.yr = int.Parse(dt.Rows[0]["Yr"].ToString());
                 frm.ShowDialog();
             }
         }
@@ -382,75 +384,139 @@ namespace HealthServicesSystem.Claims
                 {
                     impId = im.Id;
                 }
-              
+                int i = 0;
                 //
                 int Msrtid = 0;
-                    for (int i = 0; i < dt.Rows.Count; i++)
+                foreach (DataRow item in dt.Rows)
+
+                {
+                    if (backgroundWorker1.CancellationPending == true)
                     {
-                        if (backgroundWorker1.CancellationPending == true)
-                        {
-                            e.Cancel = true;
-                            return;
-                        }
-                        System.Threading.Thread.Sleep(100);
-                        backgroundWorker1.ReportProgress(i);
+                        e.Cancel = true;
+                        return;
+                    }
+                   // System.Threading.Thread.Sleep(100);
+                    backgroundWorker1.ReportProgress(i++);
 
-                        crunt = int.Parse(dt.Rows[i]["MasterTb.ID"].ToString());
-                        if (_id != crunt)
-                        {
-                            ClmTempMaster t = new ClmTempMaster();
-                            t.Age = int.Parse(dt.Rows[i]["Age"].ToString());
-                            t.CenterId = int.Parse(dt.Rows[i]["CenterId"].ToString());
-                            t.CleintId = 0;
-                            t.FileNo = _FileNo ;
-                            t.Gender = int.Parse(dt.Rows[i]["Gender"].ToString());
-                            t.ImpId = impId ;
-                            t.VisitDate = Convert.ToDateTime(dt.Rows[i]["VisitDate"].ToString());
-                            t.VisitNo = dt.Rows[i]["VisitNo"].ToString();
-                        string  insNo ;
-                        string insNotxt = dt.Rows[i]["InsuranceNo"].ToString();
-                       insNo = dt.Rows[i]["InsuranceNo"].ToString();
-                       
-                            t.InsuranceNo = insNo ;
-                            t.Months = int.Parse(dt.Rows[i]["Mnth"].ToString());
-                            t.NoOfFile = int.Parse(dt.Rows[i]["MasterTb.Id"].ToString());
-                            t.PatName = dt.Rows[i]["FullName"].ToString();
-                            t.Years = int.Parse(dt.Rows[i]["yr"].ToString());
-                       
+                    crunt = int.Parse(item["MasterTb.ID"].ToString());
+                    if (_id != crunt)
+                    {
+                        ClmTempMaster t = new ClmTempMaster();
+                        t.Age = int.Parse(item["Age"].ToString());
+                        t.CenterId = int.Parse(item["CenterId"].ToString());
+                        t.CleintId = 0;
+                        t.FileNo = _FileNo;
+                        t.Gender = int.Parse(item["Gender"].ToString());
+                        t.ImpId = impId;
+                        t.VisitDate = Convert.ToDateTime(item["VisitDate"].ToString());
+                        t.VisitNo = item["VisitNo"].ToString();
+                        string insNo;
+                        string insNotxt = item["InsuranceNo"].ToString();
+                        insNo = item["InsuranceNo"].ToString();
+
+                        t.InsuranceNo = insNo;
+                        t.Months = int.Parse(item["Mnth"].ToString());
+                        t.NoOfFile = int.Parse(item["MasterTb.Id"].ToString());
+                        t.PatName = item["FullName"].ToString();
+                        t.Years = int.Parse(item["yr"].ToString());
+
                         t.UserId = _UserId;
-                        t.DaignosisId = int.Parse(dt.Rows[i]["Daignoseid"].ToString()); 
-                        t.ContractId= int.Parse(dt.Rows[i]["TypeId"].ToString());
+                        t.DaignosisId = int.Parse(item["Daignoseid"].ToString());
+                        t.ContractId = int.Parse(item["TypeId"].ToString());
                         t.DateIn = _now;
-                            _id = t.NoOfFile;
-                            db.ClmTempMaster.Add(t);
-                            if (db.SaveChanges() > 0)
-                            {
-                                Msrtid = t.Id;
-                            }
-                        }
-                        ClmTempDet d = new ClmTempDet();
-                        d.GenericId = int.Parse(dt.Rows[i]["GenericId"].ToString());
-                        d.MasterId = Msrtid;
-                        d.Qty = int.Parse(dt.Rows[i]["Qty"].ToString());
-                        d.TotalPrice = Convert.ToDecimal(dt.Rows[i]["Total"].ToString());
-                        d.TradeName = dt.Rows[i]["TradeName"].ToString();
-                        d.UnitPrice = Convert.ToDecimal(dt.Rows[i]["Price"].ToString());
-                        d.PatPrice = Convert.ToDecimal(dt.Rows[i]["PatPrice"].ToString());
-                        d.ClaimPrice = Convert.ToDecimal(dt.Rows[i]["ClaimPrice"].ToString());
-                        d.UserId = _UserId;
-                        d.DateIn = _now;
-                        db.ClmTempDet.Add(d);
-
+                        _id = t.NoOfFile;
+                        db.ClmTempMaster.Add(t);
                         if (db.SaveChanges() > 0)
                         {
-
+                            Msrtid = t.Id;
                         }
-                     
+                    }
+                    ClmTempDet d = new ClmTempDet();
+                    d.GenericId = int.Parse(item["GenericId"].ToString());
+                    d.MasterId = Msrtid;
+                    d.Qty = int.Parse(item["Qty"].ToString());
+                    d.TotalPrice = Convert.ToDecimal(item["Total"].ToString());
+                    d.TradeName = item["TradeName"].ToString();
+                    d.UnitPrice = Convert.ToDecimal(item["Price"].ToString());
+                    d.PatPrice = Convert.ToDecimal(item["PatPrice"].ToString());
+                    d.ClaimPrice = Convert.ToDecimal(item["ClaimPrice"].ToString());
+                    d.UserId = _UserId;
+                    d.DateIn = _now;
+                    db.ClmTempDet.Add(d);
+
+                    if (db.SaveChanges() > 0)
+                    {
+
                     }
                 }
 
-            
-        }
+                    // end for each
+                    //for (int i = 0; i < dt.Rows.Count; i++)
+                    //{
+                    //    if (backgroundWorker1.CancellationPending == true)
+                    //    {
+                    //        e.Cancel = true;
+                    //        return;
+                    //    }
+                    //    System.Threading.Thread.Sleep(100);
+                    //    backgroundWorker1.ReportProgress(i);
+
+                    //    crunt = int.Parse(dt.Rows[i]["MasterTb.ID"].ToString());
+                    //    if (_id != crunt)
+                    //    {
+                    //        ClmTempMaster t = new ClmTempMaster();
+                    //        t.Age = int.Parse(dt.Rows[i]["Age"].ToString());
+                    //        t.CenterId = int.Parse(dt.Rows[i]["CenterId"].ToString());
+                    //        t.CleintId = 0;
+                    //        t.FileNo = _FileNo ;
+                    //        t.Gender = int.Parse(dt.Rows[i]["Gender"].ToString());
+                    //        t.ImpId = impId ;
+                    //        t.VisitDate = Convert.ToDateTime(dt.Rows[i]["VisitDate"].ToString());
+                    //        t.VisitNo = dt.Rows[i]["VisitNo"].ToString();
+                    //    string  insNo ;
+                    //    string insNotxt = dt.Rows[i]["InsuranceNo"].ToString();
+                    //   insNo = dt.Rows[i]["InsuranceNo"].ToString();
+
+                    //        t.InsuranceNo = insNo ;
+                    //        t.Months = int.Parse(dt.Rows[i]["Mnth"].ToString());
+                    //        t.NoOfFile = int.Parse(dt.Rows[i]["MasterTb.Id"].ToString());
+                    //        t.PatName = dt.Rows[i]["FullName"].ToString();
+                    //        t.Years = int.Parse(dt.Rows[i]["yr"].ToString());
+
+                    //    t.UserId = _UserId;
+                    //    t.DaignosisId = int.Parse(dt.Rows[i]["Daignoseid"].ToString()); 
+                    //    t.ContractId= int.Parse(dt.Rows[i]["TypeId"].ToString());
+                    //    t.DateIn = _now;
+                    //        _id = t.NoOfFile;
+                    //        db.ClmTempMaster.Add(t);
+                    //        if (db.SaveChanges() > 0)
+                    //        {
+                    //            Msrtid = t.Id;
+                    //        }
+                    //    }
+                    //    ClmTempDet d = new ClmTempDet();
+                    //    d.GenericId = int.Parse(dt.Rows[i]["GenericId"].ToString());
+                    //    d.MasterId = Msrtid;
+                    //    d.Qty = int.Parse(dt.Rows[i]["Qty"].ToString());
+                    //    d.TotalPrice = Convert.ToDecimal(dt.Rows[i]["Total"].ToString());
+                    //    d.TradeName = dt.Rows[i]["TradeName"].ToString();
+                    //    d.UnitPrice = Convert.ToDecimal(dt.Rows[i]["Price"].ToString());
+                    //    d.PatPrice = Convert.ToDecimal(dt.Rows[i]["PatPrice"].ToString());
+                    //    d.ClaimPrice = Convert.ToDecimal(dt.Rows[i]["ClaimPrice"].ToString());
+                    //    d.UserId = _UserId;
+                    //    d.DateIn = _now;
+                    //    db.ClmTempDet.Add(d);
+
+                    //    if (db.SaveChanges() > 0)
+                    //    {
+
+                    //    }
+
+                    // }
+                }
+
+
+            }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
@@ -522,22 +588,50 @@ namespace HealthServicesSystem.Claims
                 impId = im.Id;
             }
 
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT ID as NoOfFile ,"+0+" as CleintId, InsuranceNo , FullName as PatName, Age , Gender , CenterId , Mnth as Months, yr as Years, VisitNo , VisitDate , Daignoseid as DaignosisId, TypeId as ContractId ," + _FileNo + " as FileNo  ," + impId + " as ImpId ,"+0+ " as UserId ,VisitDate as DateIn ," +0+ " as Status ,"+0+" as RowStatus ,"+0+ " as LocalityId FROM MasterTb", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM MasterTb", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
             if (dt.Rows.Count > 0)
             {
-              
+                int batchsize=100;
                 string connstr = db.Database.Connection.ConnectionString;
                 SqlConnection Sqlcon = new SqlConnection("Data Source =.; Initial Catalog = MedicalServiceDb; User ID = sa; Password = 123");
-                SqlBulkCopy bluk = new SqlBulkCopy(Sqlcon);
-                bluk.DestinationTableName = "ClmTempMasters";
-                if (Sqlcon.State == ConnectionState.Open) Sqlcon.Close();
-                Sqlcon.Open();
-                bluk.WriteToServer(dt);
-                Sqlcon.Close();
+                using (SqlBulkCopy bluk = new SqlBulkCopy("Data Source =.; Initial Catalog = MedicalServiceDb; User ID = sa; Password = 123", SqlBulkCopyOptions.KeepIdentity))
+                {
+                    bluk.DestinationTableName = "ClmTempMasters";
+                    bluk.BatchSize = batchsize;
+                    bluk.ColumnMappings.Add("PharmcyId", "CenterId");
+                    bluk.ColumnMappings.Add("TypeId", "ContractId");
+                    bluk.ColumnMappings.Add("DaignoseId", "DaignosisId");
+                    bluk.ColumnMappings.Add(impId, "ImpId");
+                    bluk.ColumnMappings.Add("Mnth", "Months");
+                    bluk.ColumnMappings.Add(_FileNo, "FileNo");
+                    bluk.ColumnMappings.Add("yr", "Years");
+                    bluk.ColumnMappings.Add("ID", "NoOfFile");
+                    bluk.ColumnMappings.Add("VisitNo", "VisitNo");
+                    bluk.ColumnMappings.Add("VisitDate", "VisitDate");
+                    bluk.ColumnMappings.Add("InsuranceNo", "InsuranceNo");
+                    bluk.ColumnMappings.Add("FullName", "PatName");
+                    bluk.ColumnMappings.Add("Age", "Age");
+                    bluk.ColumnMappings.Add("Gender", "Gender");
+                    bluk.ColumnMappings.Add("ClientId", "CleintId");
+                    bluk.ColumnMappings.Add(0, "UserId");
+                    bluk.ColumnMappings.Add("DateIn", "DateIn");
+                    bluk.ColumnMappings.Add(0, "Status");
+                    bluk.ColumnMappings.Add(0, "RowStatus");
+                    bluk.ColumnMappings.Add(0, "LocalityId");
+                    bluk.ColumnMappings.Add(0, "UpdateUser");
+                    bluk.ColumnMappings.Add("1900-01-01", "UpdateDate");
+                    bluk.ColumnMappings.Add(0, "UserDeleted");
+                    bluk.ColumnMappings.Add("1900-01-01", "DeleteDate");
 
+
+                    //if (Sqlcon.State == ConnectionState.Open) Sqlcon.Close();
+                    //Sqlcon.Open();
+                    bluk.WriteToServer(dt);
+                    //Sqlcon.Close();
+                }
 
 
 
