@@ -691,9 +691,9 @@ namespace HealthServicesSystem.Refunds
                 //////RequestFrmRPT pr = new RequestFrmRPT();
                 //////PrintDialog pg = new PrintDialog();
                 //////pr.PrintReport(rpt, pg.PrinterSettings);
-                //ReportProcessor pr = new ReportProcessor();
-                //PrintDialog pg = new PrintDialog();
-                //pr.PrintReport(rpt, pg.PrinterSettings);
+                //////////ReportProcessor pr = new ReportProcessor();
+                //////////PrintDialog pg = new PrintDialog();
+                //////////pr.PrintReport(rpt, pg.PrinterSettings);
             }
             else
             {
@@ -724,10 +724,20 @@ namespace HealthServicesSystem.Refunds
                 {
                     rpt.centername.Value = ExcutingCenter.Text;
                     rpt.textBox13.Value = "0";
-                    rpt.CoInsuranceType.Value =  reason;
-                    rpt.amount.Value = coInsuranceType;
-                    rpt.amount.Visible = true;
-                    rpt.textBox6.Visible = true;
+                    if (coInsuranceType == "")
+                    {
+                        rpt.CoInsuranceType.Value = "حسب أسعار التعاقد";
+                        rpt.amount.Visible = false;
+                        rpt.textBox6.Visible = false;
+                    }
+                    else
+                    {
+                        rpt.CoInsuranceType.Value = reason;
+                        rpt.amount.Value = coInsuranceType;
+                        rpt.amount.Visible = true;
+                        rpt.textBox6.Visible = true;
+                    }
+                    
                 }
 
 
@@ -737,14 +747,14 @@ namespace HealthServicesSystem.Refunds
                 frm.reportViewer1.ReportSource = rpt;
                 frm.reportViewer1.RefreshReport();
                 frm.Show();
-                //if (transferRadio.IsChecked || coRadio.IsChecked)
-                //{
+                if (transferRadio.IsChecked || coRadio.IsChecked)
+                {
 
-                
-                //ReportProcessor pr = new ReportProcessor();
-                //PrintDialog pg = new PrintDialog();
-                //pr.PrintReport(rpt, pg.PrinterSettings);
-                //}
+
+                    ReportProcessor pr = new ReportProcessor();
+                    PrintDialog pg = new PrintDialog();
+                    pr.PrintReport(rpt, pg.PrinterSettings);
+                }
             }
         }
         private void PrintBTN_Click(object sender, EventArgs e)
