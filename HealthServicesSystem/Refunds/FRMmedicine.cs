@@ -573,7 +573,7 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
-                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                UnitPrice.Text = Math.Round((Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)), 4).ToString();
                 MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text))/100).ToString();
             }
             catch (Exception)
@@ -587,7 +587,7 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
-                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                UnitPrice.Text = Math.Round((Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)), 4).ToString();
                 MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
             }
             catch (Exception)
@@ -861,7 +861,7 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
-                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                UnitPrice.Text = Math.Round((Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)), 4).ToString();
                 MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text))/100).ToString();
             }
             catch (Exception)

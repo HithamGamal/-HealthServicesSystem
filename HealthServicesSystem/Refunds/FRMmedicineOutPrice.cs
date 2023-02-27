@@ -889,11 +889,11 @@ namespace HealthServicesSystem.Reclaims
                                 UnitPrice.Text = getSer[0].UnitCost.ToString();
                                 // MaxCost.Text = getSer[0].MaxCost.ToString();
                                 InList = getSer[0].InContract;
-                                //  Percentage.Text = 75.ToString();
+                                ////  Percentage.Text = 75.ToString();
                                 quantity.Text = 1.ToString();
                             }
                         }
-                        //}
+                       // //}
                     }
                 }
             }
@@ -928,7 +928,7 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
-                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                UnitPrice.Text = Math.Round((Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)), 4).ToString();
                 MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
             }
             catch (Exception)
@@ -942,7 +942,7 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
-                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                UnitPrice.Text =Math.Round( (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)),4).ToString();
                 MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
             }
             catch (Exception)
@@ -956,7 +956,7 @@ namespace HealthServicesSystem.Reclaims
         {
             try
             {
-                UnitPrice.Text = (Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)).ToString();
+                UnitPrice.Text = Math.Round((Convert.ToDecimal(TotalPaied.Text) / Convert.ToDecimal(quantity.Text)), 4).ToString();
                 MoneyPaied.Text = ((Convert.ToDecimal(TotalPaied.Text) * Convert.ToDecimal(Percentage.Text)) / 100).ToString();
             }
             catch (Exception)

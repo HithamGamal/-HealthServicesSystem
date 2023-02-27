@@ -548,7 +548,7 @@
             // 
             // ribbonTab8
             // 
-            this.ribbonTab8.IsSelected = true;
+            this.ribbonTab8.IsSelected = false;
             this.ribbonTab8.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup36,
             this.radRibbonBarGroup50,
@@ -962,7 +962,7 @@
             // 
             // ribbonTab3
             // 
-            this.ribbonTab3.IsSelected = false;
+            this.ribbonTab3.IsSelected = true;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup22,
             this.radRibbonBarGroup23,
@@ -1014,7 +1014,12 @@
             // 
             // FRMmedicineOutPrice
             // 
+            this.FRMmedicineOutPrice.AutoSize = false;
+            this.FRMmedicineOutPrice.Bounds = new System.Drawing.Rectangle(0, 0, 130, 74);
             this.FRMmedicineOutPrice.Name = "FRMmedicineOutPrice";
+            this.FRMmedicineOutPrice.Text = "استرداد خدمة دوائية مساهمات";
+            this.FRMmedicineOutPrice.TextWrap = true;
+            this.FRMmedicineOutPrice.Click += new System.EventHandler(this.FRMmedicineOutPrice_Click_3);
             // 
             // radRibbonBarGroup24
             // 

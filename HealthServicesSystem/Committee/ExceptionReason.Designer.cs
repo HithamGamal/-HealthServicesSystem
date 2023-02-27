@@ -145,6 +145,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "الاستثناء";
             this.Load += new System.EventHandler(this.ExceptionReason_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
