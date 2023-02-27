@@ -22,6 +22,8 @@ namespace ModelDB
         public decimal TotalPrice { get; set; }
         public decimal PatPrice { get; set; }
         public decimal ClaimPrice { get; set; }
+        public int NoOfFile { get; set; }
+        public int ImpId { get; set; }
 
     }
 }

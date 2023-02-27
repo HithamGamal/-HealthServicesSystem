@@ -9,6 +9,7 @@ namespace ModelDB
 {
    public  class ClmDetailsData:BaseEntity 
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public int MasterId { get; set; }
         [ForeignKey("MasterId")]

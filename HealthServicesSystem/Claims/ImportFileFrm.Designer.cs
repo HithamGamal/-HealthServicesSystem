@@ -307,6 +307,7 @@
             this.radButton1.Size = new System.Drawing.Size(136, 34);
             this.radButton1.TabIndex = 8;
             this.radButton1.Text = "تصدير المطالبة";
+            this.radButton1.Visible = false;
             this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
             // FileNoLb
