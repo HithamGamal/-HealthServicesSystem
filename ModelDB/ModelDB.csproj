@@ -64,21 +64,25 @@
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
     <Compile Include="MedicinePriceGroup.cs" />
-    <Compile Include="Migrations\202302160611035_d.cs" />
-    <Compile Include="Migrations\202302160611035_d.designer.cs">
-      <DependentUpon>202302160611035_d.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302160631036_a.cs" />
-    <Compile Include="Migrations\202302160631036_a.designer.cs">
-      <DependentUpon>202302160631036_a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302190946088_saif_23023_02_19.cs" />
-    <Compile Include="Migrations\202302190946088_saif_23023_02_19.designer.cs">
-      <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202302160752254_22222223.cs" />
     <Compile Include="Migrations\202302160752254_22222223.designer.cs">
       <DependentUpon>202302160752254_22222223.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302270647386_222.cs" />
+    <Compile Include="Migrations\202302270647386_222.designer.cs">
+      <DependentUpon>202302270647386_222.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302270719237_222355.cs" />
+    <Compile Include="Migrations\202302270719237_222355.designer.cs">
+      <DependentUpon>202302270719237_222355.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302271111215_2225.cs" />
+    <Compile Include="Migrations\202302271111215_2225.designer.cs">
+      <DependentUpon>202302271111215_2225.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302271157139_2225225.cs" />
+    <Compile Include="Migrations\202302271157139_2225225.designer.cs">
+      <DependentUpon>202302271157139_2225225.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
@@ -162,17 +166,20 @@
     <Content Include="ModelDB.sln" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202302160611035_d.resx">
-      <DependentUpon>202302160611035_d.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302160631036_a.resx">
-      <DependentUpon>202302160631036_a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302190946088_saif_23023_02_19.resx">
-      <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302160752254_22222223.resx">
       <DependentUpon>202302160752254_22222223.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302270647386_222.resx">
+      <DependentUpon>202302270647386_222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302270719237_222355.resx">
+      <DependentUpon>202302270719237_222355.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302271111215_2225.resx">
+      <DependentUpon>202302271111215_2225.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302271157139_2225225.resx">
+      <DependentUpon>202302271157139_2225225.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
