@@ -120,8 +120,14 @@ namespace HealthServicesSystem.Reclaims
         {
             if (card_no.Text.Length == 0)
             {
-                MessageBox.Show("لا توجد بيانات لهذه المماملة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("لا توجد بيانات للمشترك", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 card_no.Focus();
+                return;
+            }
+            if (Sex.Text.Length == 0)
+            {
+                MessageBox.Show("يجب ادخال نوع المشترك", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Sex.Focus();
                 return;
             }
             if (GrdDwa.RowCount == 0)
@@ -427,14 +433,23 @@ namespace HealthServicesSystem.Reclaims
                         {
                             var FamHistory1 = db.ApproveMedicineDetails.Where(p => p.ApproveMedicine.InsurNo == card_no.Text).Select(p => new { apv = p.ApproveMedicine }).Take(1).ToList();
                             CustName.Text = FamHistory1[0].apv.InsurName;
-                            Gender = FamHistory1[0].apv.Gender;
+                            if (FamHistory1[0].apv.Gender.Length > 0)
+                            {
+                                Gender = FamHistory1[0].apv.Gender;
+                            }
+                            else
+                            {
+
+                            }
                             Sex.Text = FamHistory1[0].apv.Gender;
                             BirthDate = FamHistory1[0].apv.BirthDate;
                             Age.Text = DateAndTime.DateDiff(DateInterval.Year, BirthDate, PLC.getdate()).ToString();
                             Rec_No = FamHistory1[0].apv.ClientId;
                             ServerName.Text = FamHistory1[0].apv.Server;
                             int LocalId = FamHistory1[0].apv.LocalityId;
-                            this.AcceptButton = null;
+                            this.Cursor = Cursors.Default;
+                            return;
+                            // this.AcceptButton = null;
                         }
 
 
