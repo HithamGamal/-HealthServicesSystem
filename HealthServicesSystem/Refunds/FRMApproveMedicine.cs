@@ -159,7 +159,7 @@ namespace HealthServicesSystem.Reclaims
                     apv.Server = ServerName.Text;
                     apv.ClientId = Rec_No;
                     apv.BirthDate = BirthDate;
-                    
+
                     db.ApproveMedicines.Add(apv);
                     db.SaveChanges();
                     ApproveNo = db.ApproveMedicines.Where(p => p.InsurNo == card_no.Text && p.UserId == UserId).Max(p => p.Id);
@@ -423,7 +423,19 @@ namespace HealthServicesSystem.Reclaims
                             FRMpatienthistory.Default.Grid_service.Rows.Add("Show", i + 1, Funion[i].ReclaimNo, Funion[i].ApproveCode, Funion[i].ServiceName, Funion[i].Quantity, Funion[i].ApprovedQuantity, Funion[i].Cost, Funion[i].ReclaimDate.ToShortDateString(), Funion[i].UserName, Funion[i].System, ReqCenter, ExcCenter, Funion[i].Note, Funion[i].Id);
                         }
                         FRMpatienthistory.Default.Totals.Text = SumCost.ToString();
-
+                        if (card_no.Text.Length == 11)
+                        {
+                            var FamHistory1 = db.ApproveMedicineDetails.Where(p => p.ApproveMedicine.InsurNo == card_no.Text).Select(p => new { apv = p.ApproveMedicine }).Take(1).ToList();
+                            CustName.Text = FamHistory1[0].apv.InsurName;
+                            Gender = FamHistory1[0].apv.Gender;
+                            Sex.Text = FamHistory1[0].apv.Gender;
+                            BirthDate = FamHistory1[0].apv.BirthDate;
+                            Age.Text = DateAndTime.DateDiff(DateInterval.Year, BirthDate, PLC.getdate()).ToString();
+                            Rec_No = FamHistory1[0].apv.ClientId;
+                            ServerName.Text = FamHistory1[0].apv.Server;
+                            int LocalId = FamHistory1[0].apv.LocalityId;
+                            this.AcceptButton = null;
+                        }
 
 
                     }
@@ -983,7 +995,7 @@ namespace HealthServicesSystem.Reclaims
                         var Fdwa = db.Medicines.Where(p => p.Id == ServiceId).ToList();
                         if (Fdwa.Count > 0)
                         {
-                            if( Convert.IsDBNull(Fdwa[0].NOTE.ToString()) == false)
+                            if (Convert.IsDBNull(Fdwa[0].NOTE.ToString()) == false)
                             {
                                 if (Fdwa[0].NOTE.ToString() != "")
                                 {
@@ -993,7 +1005,7 @@ namespace HealthServicesSystem.Reclaims
                         }
                     }
 
-                    }
+                }
             }
             catch (Exception)
             {
