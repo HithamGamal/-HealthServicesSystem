@@ -429,6 +429,10 @@ namespace HealthServicesSystem.Reclaims
                             FRMpatienthistory.Default.Grid_service.Rows.Add("Show", i + 1, Funion[i].ReclaimNo, Funion[i].ApproveCode, Funion[i].ServiceName, Funion[i].Quantity, Funion[i].ApprovedQuantity, Funion[i].Cost, Funion[i].ReclaimDate.ToShortDateString(), Funion[i].UserName, Funion[i].System, ReqCenter, ExcCenter, Funion[i].Note, Funion[i].Id);
                         }
                         FRMpatienthistory.Default.Totals.Text = SumCost.ToString();
+                        if (Funion.Count() > 0 || Frefuse.Count() > 0)
+                        {
+                            FRMpatienthistory.Default.ShowDialog();
+                        }
                         if (card_no.Text.Length == 11)
                         {
                             var FamHistory1 = db.ApproveMedicineDetails.Where(p => p.ApproveMedicine.InsurNo == card_no.Text).Select(p => new { apv = p.ApproveMedicine }).Take(1).ToList();
@@ -454,10 +458,7 @@ namespace HealthServicesSystem.Reclaims
 
 
                     }
-                    if (Funion.Count() > 0 || Frefuse.Count() > 0)
-                    {
-                        FRMpatienthistory.Default.ShowDialog();
-                    }
+                  
 
                     this.Cursor = Cursors.Default;
                     // return;
