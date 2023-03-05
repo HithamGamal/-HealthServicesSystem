@@ -354,7 +354,7 @@
             this.Sex.DropDownHeight = 95;
             this.Sex.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             radListDataItem2.Text = "ذكر";
-            radListDataItem3.Text = "انثي      ";
+            radListDataItem3.Text = "انثي";
             this.Sex.Items.Add(radListDataItem2);
             this.Sex.Items.Add(radListDataItem3);
             this.Sex.Location = new System.Drawing.Point(875, 50);

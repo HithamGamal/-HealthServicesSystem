@@ -67,18 +67,6 @@
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
     <Compile Include="MedicinePriceGroup.cs" />
-    <Compile Include="Migrations\202302160611035_d.cs" />
-    <Compile Include="Migrations\202302160611035_d.designer.cs">
-      <DependentUpon>202302160611035_d.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302160631036_a.cs" />
-    <Compile Include="Migrations\202302160631036_a.designer.cs">
-      <DependentUpon>202302160631036_a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302271300181_cl.cs" />
-    <Compile Include="Migrations\202302271300181_cl.designer.cs">
-      <DependentUpon>202302271300181_cl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
     <Compile Include="RefuseMedicineDetails.cs" />
@@ -159,17 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ModelDB.sln" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202302160611035_d.resx">
-      <DependentUpon>202302160611035_d.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302160631036_a.resx">
-      <DependentUpon>202302160631036_a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302271300181_cl.resx">
-      <DependentUpon>202302271300181_cl.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
