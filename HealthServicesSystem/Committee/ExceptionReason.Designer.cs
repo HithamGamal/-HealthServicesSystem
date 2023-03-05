@@ -40,6 +40,7 @@
             this.approveBTN = new Telerik.WinControls.UI.RadButton();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.ExecptionCost = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExecptionReason)).BeginInit();
@@ -147,6 +148,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "الاستثناء";
+            this.ThemeName = "Office2010Blue";
             this.Load += new System.EventHandler(this.ExceptionReason_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
@@ -170,5 +172,6 @@
         private Telerik.WinControls.UI.RadButton approveBTN;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         public Telerik.WinControls.UI.RadMaskedEditBox ExecptionCost;
+        private Telerik.WinControls.Themes.Office2010BlueTheme office2010BlueTheme1;
     }
 }

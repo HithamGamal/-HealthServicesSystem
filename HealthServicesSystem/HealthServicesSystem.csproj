@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>96</ApplicationRevision>
+    <ApplicationRevision>97</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -631,12 +631,6 @@
     <Compile Include="Reports\FRMreportChronics.designer.cs">
       <DependentUpon>FRMreportChronics.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\FRMRequests.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\FRMRequests.Designer.cs">
-      <DependentUpon>FRMRequests.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\FRMRPTMedicalEStrdad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -660,24 +654,6 @@
     </Compile>
     <Compile Include="Reports\RPTChronicBooksDetails.Designer.cs">
       <DependentUpon>RPTChronicBooksDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\RPTRequestByCost.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RPTRequestByCost.Designer.cs">
-      <DependentUpon>RPTRequestByCost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\RPTRequestsByCount.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RPTRequestsByCount.Designer.cs">
-      <DependentUpon>RPTRequestsByCount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\RPTRequestsByServices.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RPTRequestsByServices.Designer.cs">
-      <DependentUpon>RPTRequestsByServices.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RPTِApproveDWACount.cs">
       <SubType>Component</SubType>
@@ -1053,9 +1029,6 @@
     <EmbeddedResource Include="Reports\FRMreportChronics.resx">
       <DependentUpon>FRMreportChronics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\FRMRequests.resx">
-      <DependentUpon>FRMRequests.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FRMRPTMedicalEStrdad.resx">
       <DependentUpon>FRMRPTMedicalEStrdad.cs</DependentUpon>
     </EmbeddedResource>
@@ -1067,15 +1040,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPTChronicBooksDetails.resx">
       <DependentUpon>RPTChronicBooksDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RPTRequestByCost.resx">
-      <DependentUpon>RPTRequestByCost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RPTRequestsByCount.resx">
-      <DependentUpon>RPTRequestsByCount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RPTRequestsByServices.resx">
-      <DependentUpon>RPTRequestsByServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPTِApproveDWACount.resx">
       <DependentUpon>RPTِApproveDWACount.cs</DependentUpon>

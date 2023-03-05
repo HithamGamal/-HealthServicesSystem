@@ -29,6 +29,7 @@ namespace HealthServicesSystem.Refunds
         string usercode ;
         string reason = "";
         string coInsuranceType = "";
+        string cost = "";
 
 
 
@@ -712,7 +713,7 @@ namespace HealthServicesSystem.Refunds
                 if (coRadio.IsChecked)
                 {
                     rpt.ServiceCost.Visible = true;
-                    rpt.textBox13.Visible = true;
+                   // rpt.textBox13.Visible = true;
                     rpt.textBox21.Visible = true;
                 }
                 if (radPageView2.SelectedPage.Name == "CooperationCommittee")
@@ -723,19 +724,15 @@ namespace HealthServicesSystem.Refunds
                 else
                 {
                     rpt.centername.Value = ExcutingCenter.Text;
-                    rpt.textBox13.Value = "0";
+                  //  rpt.textBox13.Value = "0";
                     if (coInsuranceType == "")
                     {
                         rpt.CoInsuranceType.Value = "حسب أسعار التعاقد";
-                        rpt.amount.Visible = false;
-                        rpt.textBox6.Visible = false;
+                       
                     }
                     else
                     {
-                        rpt.CoInsuranceType.Value = reason;
-                        rpt.amount.Value = coInsuranceType;
-                        rpt.amount.Visible = true;
-                        rpt.textBox6.Visible = true;
+                        rpt.CoInsuranceType.Value = cost;
                     }
                     
                 }
@@ -976,6 +973,7 @@ namespace HealthServicesSystem.Refunds
                 form.ShowDialog();
                 reason = form.x;
                 coInsuranceType = form.c;
+                cost = form.cost;
             }
            
 
