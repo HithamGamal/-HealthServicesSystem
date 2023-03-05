@@ -441,15 +441,24 @@ namespace HealthServicesSystem.Reclaims
                             {
                                 Gender = FamHistory1[0].apv.Gender;
                             }
+                           
+                            if (FamHistory1[0].apv.Gender == "ذكر")
+                            {
+                                Sex.SelectedIndex = 0;
+                            }
+                            else if (FamHistory1[0].apv.Gender == "انثي")
+                            {
+                                Sex.SelectedIndex = 1;
+                            }
                             else
                             {
-
+                                Sex.SelectedIndex = -1;
                             }
-                            Sex.Text = FamHistory1[0].apv.Gender;
                             BirthDate = FamHistory1[0].apv.BirthDate;
                             Age.Text = DateAndTime.DateDiff(DateInterval.Year, BirthDate, PLC.getdate()).ToString();
                             Rec_No = FamHistory1[0].apv.ClientId;
                             ServerName.Text = FamHistory1[0].apv.Server;
+                            ChkSearch = true;
                             int LocalId = FamHistory1[0].apv.LocalityId;
                             this.Cursor = Cursors.Default;
                             return;
@@ -588,7 +597,19 @@ namespace HealthServicesSystem.Reclaims
                                 }
                                 CustName.Text = Convert.ToString(dtsearch.Rows[0]["name_1"]).Trim() + " " + Convert.ToString(dtsearch.Rows[0]["name_2"]).Trim() + " " + stri1 + " " + str2;
                                 Gender = Convert.ToString(dtsearch.Rows[0]["sex"]).Trim();
-                                Sex.Text = Gender;
+                                if (Convert.ToString(dtsearch.Rows[0]["sex"]).Trim() == "ذكر")
+                                {
+                                    Sex.SelectedIndex = 0;
+                                }
+                                else if (Convert.ToString(dtsearch.Rows[0]["sex"]).Trim() == "انثي")
+                                {
+                                    Sex.SelectedIndex = 1;
+                                }
+                                else
+                                {
+                                    Sex.SelectedIndex = -1;
+                                }
+
                                 if (Convert.IsDBNull(dtsearch.Rows[0]["phone"]) == false)
                                 {
                                     Phone = dtsearch.Rows[0]["phone"].ToString();
@@ -777,7 +798,19 @@ namespace HealthServicesSystem.Reclaims
 
 
                                 Gender = (dtNat.Rows[0]["Gender"]).ToString();
-                                Sex.Text = Gender;
+                                if ((dtNat.Rows[0]["Gender"]).ToString() == "ذكر")
+                                {
+                                    Sex.SelectedIndex = 0;
+                                }
+                                else if ((dtNat.Rows[0]["Gender"]).ToString() == "انثي")
+                                {
+                                    Sex.SelectedIndex = 1;
+                                }
+                                else
+                                {
+                                    Sex.SelectedIndex = -1;
+                                }
+
                                 Rec_No = (dtNat.Rows[0]["Stateid"]).ToString();
 
 
