@@ -29,6 +29,7 @@ namespace HealthServicesSystem.Refunds
         string usercode ;
         string reason = "";
         string coInsuranceType = "";
+        string cost = "";
 
 
 
@@ -691,9 +692,9 @@ namespace HealthServicesSystem.Refunds
                 //////RequestFrmRPT pr = new RequestFrmRPT();
                 //////PrintDialog pg = new PrintDialog();
                 //////pr.PrintReport(rpt, pg.PrinterSettings);
-                //ReportProcessor pr = new ReportProcessor();
-                //PrintDialog pg = new PrintDialog();
-                //pr.PrintReport(rpt, pg.PrinterSettings);
+                //////////ReportProcessor pr = new ReportProcessor();
+                //////////PrintDialog pg = new PrintDialog();
+                //////////pr.PrintReport(rpt, pg.PrinterSettings);
             }
             else
             {
@@ -712,7 +713,7 @@ namespace HealthServicesSystem.Refunds
                 if (coRadio.IsChecked)
                 {
                     rpt.ServiceCost.Visible = true;
-                    rpt.textBox13.Visible = true;
+                   // rpt.textBox13.Visible = true;
                     rpt.textBox21.Visible = true;
                 }
                 if (radPageView2.SelectedPage.Name == "CooperationCommittee")
@@ -723,11 +724,17 @@ namespace HealthServicesSystem.Refunds
                 else
                 {
                     rpt.centername.Value = ExcutingCenter.Text;
-                    rpt.textBox13.Value = "0";
-                    rpt.CoInsuranceType.Value =  reason;
-                    rpt.amount.Value = coInsuranceType;
-                    rpt.amount.Visible = true;
-                    rpt.textBox6.Visible = true;
+                  //  rpt.textBox13.Value = "0";
+                    if (coInsuranceType == "")
+                    {
+                        rpt.CoInsuranceType.Value = "حسب أسعار التعاقد";
+                       
+                    }
+                    else
+                    {
+                        rpt.CoInsuranceType.Value = cost;
+                    }
+                    
                 }
 
 
@@ -737,14 +744,14 @@ namespace HealthServicesSystem.Refunds
                 frm.reportViewer1.ReportSource = rpt;
                 frm.reportViewer1.RefreshReport();
                 frm.Show();
-                //if (transferRadio.IsChecked || coRadio.IsChecked)
-                //{
+                if (transferRadio.IsChecked || coRadio.IsChecked)
+                {
 
-                
-                //ReportProcessor pr = new ReportProcessor();
-                //PrintDialog pg = new PrintDialog();
-                //pr.PrintReport(rpt, pg.PrinterSettings);
-                //}
+
+                    ReportProcessor pr = new ReportProcessor();
+                    PrintDialog pg = new PrintDialog();
+                    pr.PrintReport(rpt, pg.PrinterSettings);
+                }
             }
         }
         private void PrintBTN_Click(object sender, EventArgs e)
@@ -966,6 +973,7 @@ namespace HealthServicesSystem.Refunds
                 form.ShowDialog();
                 reason = form.x;
                 coInsuranceType = form.c;
+                cost = form.cost;
             }
            
 

@@ -13,6 +13,7 @@ namespace HealthServicesSystem.Committee
     {
         public string x = "";
         public string c = "";
+        public string cost = "";
         public ExceptionReason()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace HealthServicesSystem.Committee
             }
             x = ExecptionReason.Text;
             c = CoInsuranceType.Text;
+            cost = ExecptionCost.Text;
             this.Hide();
         }
 

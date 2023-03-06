@@ -14,7 +14,6 @@
             this.detail = new Telerik.Reporting.DetailSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox7 = new Telerik.Reporting.TextBox();
-            this.textBox13 = new Telerik.Reporting.TextBox();
             this.textBox12 = new Telerik.Reporting.TextBox();
             this.centername = new Telerik.Reporting.TextBox();
             this.textBox16 = new Telerik.Reporting.TextBox();
@@ -38,10 +37,10 @@
             this.textBox11 = new Telerik.Reporting.TextBox();
             this.rqst_date = new Telerik.Reporting.TextBox();
             this.textBox26 = new Telerik.Reporting.TextBox();
-            this.textBox24 = new Telerik.Reporting.TextBox();
             this.textBox28 = new Telerik.Reporting.TextBox();
             this.ServiceCost = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
+            this.CoInsuranceType = new Telerik.Reporting.TextBox();
             this.pictureBox2 = new Telerik.Reporting.PictureBox();
             this.ComanyName = new Telerik.Reporting.TextBox();
             this.FormName = new Telerik.Reporting.TextBox();
@@ -52,11 +51,7 @@
             this.textBox4 = new Telerik.Reporting.TextBox();
             this.textBox8 = new Telerik.Reporting.TextBox();
             this.textBox9 = new Telerik.Reporting.TextBox();
-            this.textBox10 = new Telerik.Reporting.TextBox();
-            this.CoInsuranceType = new Telerik.Reporting.TextBox();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
-            this.amount = new Telerik.Reporting.TextBox();
-            this.textBox6 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // detail
@@ -65,15 +60,14 @@
             this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(0.348D);
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox1,
-            this.textBox7,
-            this.textBox13});
+            this.textBox7});
             this.detail.Name = "detail";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6D), Telerik.Reporting.Drawing.Unit.Inch(0D));
+            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.434D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.566D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
             this.textBox1.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox1.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox1.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -88,9 +82,9 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.867D), Telerik.Reporting.Drawing.Unit.Inch(0D));
+            this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.5D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.133D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
+            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.934D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
             this.textBox7.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox7.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox7.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -102,24 +96,6 @@
             this.textBox7.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox7.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox7.Value = "=service_Name";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.734D), Telerik.Reporting.Drawing.Unit.Inch(0D));
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.133D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
-            this.textBox13.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox13.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox13.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox13.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox13.Style.Font.Name = "Calibri";
-            this.textBox13.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-            this.textBox13.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
-            this.textBox13.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
-            this.textBox13.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.textBox13.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox13.Style.Visible = true;
-            this.textBox13.Value = "=pat_cost";
             // 
             // textBox12
             // 
@@ -295,14 +271,14 @@
             // 
             // textBox29
             // 
-            this.textBox29.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.003D), Telerik.Reporting.Drawing.Unit.Inch(3.307D));
+            this.textBox29.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.271D), Telerik.Reporting.Drawing.Unit.Inch(3D));
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.697D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.997D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
             this.textBox29.Style.Font.Name = "Calibri";
             this.textBox29.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(14D);
             this.textBox29.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox29.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox29.Style.Visible = false;
+            this.textBox29.Style.Visible = true;
             this.textBox29.Value = "تتحمل الهيئة قيمة الخدمة";
             // 
             // pageFooterSection1
@@ -378,10 +354,10 @@
             this.insur_no,
             this.textBox29,
             this.textBox26,
-            this.textBox24,
             this.textBox28,
             this.ServiceCost,
-            this.textBox3});
+            this.textBox3,
+            this.CoInsuranceType});
             this.reportHeaderSection1.Name = "reportHeaderSection1";
             // 
             // textBox11
@@ -410,9 +386,9 @@
             // 
             // textBox26
             // 
-            this.textBox26.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.867D), Telerik.Reporting.Drawing.Unit.Inch(4D));
+            this.textBox26.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.5D), Telerik.Reporting.Drawing.Unit.Inch(4D));
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.133D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
+            this.textBox26.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.934D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
             this.textBox26.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox26.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox26.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -425,28 +401,11 @@
             this.textBox26.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox26.Value = "نوع الخدمة";
             // 
-            // textBox24
-            // 
-            this.textBox24.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.734D), Telerik.Reporting.Drawing.Unit.Inch(4D));
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.133D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
-            this.textBox24.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox24.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox24.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox24.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox24.Style.Font.Name = "Calibri";
-            this.textBox24.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-            this.textBox24.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
-            this.textBox24.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
-            this.textBox24.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.textBox24.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox24.Value = "تحمل المريض";
-            // 
             // textBox28
             // 
-            this.textBox28.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6D), Telerik.Reporting.Drawing.Unit.Inch(4D));
+            this.textBox28.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.434D), Telerik.Reporting.Drawing.Unit.Inch(4D));
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.566D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
+            this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3D), Telerik.Reporting.Drawing.Unit.Inch(0.348D));
             this.textBox28.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox28.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox28.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -461,7 +420,7 @@
             // 
             // ServiceCost
             // 
-            this.ServiceCost.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.003D), Telerik.Reporting.Drawing.Unit.Inch(3.307D));
+            this.ServiceCost.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.2D), Telerik.Reporting.Drawing.Unit.Inch(3.307D));
             this.ServiceCost.Name = "ServiceCost";
             this.ServiceCost.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
             this.ServiceCost.Style.Font.Bold = true;
@@ -484,6 +443,20 @@
             this.textBox3.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox3.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox3.Value = "خطاب رقم  ";
+            // 
+            // CoInsuranceType
+            // 
+            this.CoInsuranceType.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.4D), Telerik.Reporting.Drawing.Unit.Inch(3D));
+            this.CoInsuranceType.Name = "CoInsuranceType";
+            this.CoInsuranceType.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.871D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.CoInsuranceType.Style.Font.Bold = true;
+            this.CoInsuranceType.Style.Font.Name = "Calibri";
+            this.CoInsuranceType.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.CoInsuranceType.Style.Font.Underline = true;
+            this.CoInsuranceType.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.CoInsuranceType.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.CoInsuranceType.Style.Visible = true;
+            this.CoInsuranceType.Value = "coInsurance";
             // 
             // pictureBox2
             // 
@@ -510,9 +483,9 @@
             // 
             // FormName
             // 
-            this.FormName.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(7.366D), Telerik.Reporting.Drawing.Unit.Cm(1.778D));
+            this.FormName.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(7.366D), Telerik.Reporting.Drawing.Unit.Cm(1.537D));
             this.FormName.Name = "FormName";
-            this.FormName.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.775D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.FormName.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.775D), Telerik.Reporting.Drawing.Unit.Cm(0.762D));
             this.FormName.Style.BackgroundColor = System.Drawing.Color.White;
             this.FormName.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.FormName.Style.Font.Bold = true;
@@ -552,11 +525,7 @@
             this.textBox2,
             this.textBox4,
             this.textBox8,
-            this.textBox9,
-            this.textBox10,
-            this.CoInsuranceType,
-            this.textBox6,
-            this.amount});
+            this.textBox9});
             this.reportFooterSection1.Name = "reportFooterSection1";
             // 
             // textBox2
@@ -605,31 +574,6 @@
             this.textBox9.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox9.Value = "          مدير/ الإدارة العامة للخدمات الصحية";
             // 
-            // textBox10
-            // 
-            this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.6D), Telerik.Reporting.Drawing.Unit.Inch(0.152D));
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.textBox10.Style.Font.Name = "Calibri";
-            this.textBox10.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(14D);
-            this.textBox10.Style.Font.Underline = true;
-            this.textBox10.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox10.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox10.Value = "يتم تقديم الخدمة أعلاه";
-            // 
-            // CoInsuranceType
-            // 
-            this.CoInsuranceType.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.8D), Telerik.Reporting.Drawing.Unit.Inch(0.152D));
-            this.CoInsuranceType.Name = "CoInsuranceType";
-            this.CoInsuranceType.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.8D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.CoInsuranceType.Style.Font.Bold = true;
-            this.CoInsuranceType.Style.Font.Name = "Calibri";
-            this.CoInsuranceType.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(14D);
-            this.CoInsuranceType.Style.Font.Underline = true;
-            this.CoInsuranceType.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.CoInsuranceType.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.CoInsuranceType.Value = "";
-            // 
             // pageHeaderSection1
             // 
             this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.1D);
@@ -640,33 +584,6 @@
             this.pictureBox1,
             this.ComanyName});
             this.pageHeaderSection1.Name = "pageHeaderSection1";
-            // 
-            // amount
-            // 
-            this.amount.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.3D), Telerik.Reporting.Drawing.Unit.Inch(0.152D));
-            this.amount.Name = "amount";
-            this.amount.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.amount.Style.Font.Bold = true;
-            this.amount.Style.Font.Name = "Calibri";
-            this.amount.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(14D);
-            this.amount.Style.Font.Underline = true;
-            this.amount.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.amount.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.amount.Style.Visible = false;
-            this.amount.Value = "";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.3D), Telerik.Reporting.Drawing.Unit.Inch(0.152D));
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.textBox6.Style.Font.Name = "Calibri";
-            this.textBox6.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(14D);
-            this.textBox6.Style.Font.Underline = true;
-            this.textBox6.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox6.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox6.Style.Visible = false;
-            this.textBox6.Value = "قدره";
             // 
             // TransferRPT
             // 
@@ -726,18 +643,13 @@
         public Telerik.Reporting.TextBox rqst_date;
         public Telerik.Reporting.TextBox textBox1;
         public Telerik.Reporting.TextBox textBox7;
-        public Telerik.Reporting.TextBox textBox13;
         public Telerik.Reporting.TextBox textBox26;
-        public Telerik.Reporting.TextBox textBox24;
         public Telerik.Reporting.TextBox textBox28;
-        public Telerik.Reporting.TextBox CoInsuranceType;
         public Telerik.Reporting.TextBox rqstId;
         public Telerik.Reporting.TextBox ServiceCost;
         public Telerik.Reporting.TextBox textBox21;
         private Telerik.Reporting.PageHeaderSection pageHeaderSection1;
         private Telerik.Reporting.TextBox textBox3;
-        public Telerik.Reporting.TextBox textBox10;
-        public Telerik.Reporting.TextBox textBox6;
-        public Telerik.Reporting.TextBox amount;
+        public Telerik.Reporting.TextBox CoInsuranceType;
     }
 }

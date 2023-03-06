@@ -56,6 +56,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Z.EntityFramework.Extensions, Version=7.18.5.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Extensions.7.18.5\lib\net45\Z.EntityFramework.Extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClmNonConfirmGroup.cs" />
@@ -64,6 +67,18 @@
     <Compile Include="MedicalCommitteeRequestDetails.cs" />
     <Compile Include="ChronicMedicine.cs" />
     <Compile Include="MedicinePriceGroup.cs" />
+    <Compile Include="Migrations\202302160611035_d.cs" />
+    <Compile Include="Migrations\202302160611035_d.designer.cs">
+      <DependentUpon>202302160611035_d.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302160631036_a.cs" />
+    <Compile Include="Migrations\202302160631036_a.designer.cs">
+      <DependentUpon>202302160631036_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302190946088_saif_23023_02_19.cs" />
+    <Compile Include="Migrations\202302190946088_saif_23023_02_19.designer.cs">
+      <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202302160752254_22222223.cs" />
     <Compile Include="Migrations\202302160752254_22222223.designer.cs">
       <DependentUpon>202302160752254_22222223.cs</DependentUpon>
@@ -150,6 +165,15 @@
     <Content Include="ModelDB.sln" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\202302160611035_d.resx">
+      <DependentUpon>202302160611035_d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302160631036_a.resx">
+      <DependentUpon>202302160631036_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302190946088_saif_23023_02_19.resx">
+      <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302160752254_22222223.resx">
       <DependentUpon>202302160752254_22222223.cs</DependentUpon>
     </EmbeddedResource>

@@ -120,8 +120,14 @@ namespace HealthServicesSystem.Reclaims
         {
             if (card_no.Text.Length == 0)
             {
-                MessageBox.Show("لا توجد بيانات لهذه المماملة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("لا توجد بيانات للمشترك", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 card_no.Focus();
+                return;
+            }
+            if (Sex.Text.Length == 0)
+            {
+                MessageBox.Show("يجب ادخال نوع المشترك", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Sex.Focus();
                 return;
             }
             if (GrdDwa.RowCount == 0)
@@ -159,7 +165,7 @@ namespace HealthServicesSystem.Reclaims
                     apv.Server = ServerName.Text;
                     apv.ClientId = Rec_No;
                     apv.BirthDate = BirthDate;
-                    
+
                     db.ApproveMedicines.Add(apv);
                     db.SaveChanges();
                     ApproveNo = db.ApproveMedicines.Where(p => p.InsurNo == card_no.Text && p.UserId == UserId).Max(p => p.Id);
@@ -423,14 +429,45 @@ namespace HealthServicesSystem.Reclaims
                             FRMpatienthistory.Default.Grid_service.Rows.Add("Show", i + 1, Funion[i].ReclaimNo, Funion[i].ApproveCode, Funion[i].ServiceName, Funion[i].Quantity, Funion[i].ApprovedQuantity, Funion[i].Cost, Funion[i].ReclaimDate.ToShortDateString(), Funion[i].UserName, Funion[i].System, ReqCenter, ExcCenter, Funion[i].Note, Funion[i].Id);
                         }
                         FRMpatienthistory.Default.Totals.Text = SumCost.ToString();
-
+                        if (Funion.Count() > 0 || Frefuse.Count() > 0)
+                        {
+                            FRMpatienthistory.Default.ShowDialog();
+                        }
+                        if (card_no.Text.Length == 11)
+                        {
+                            var FamHistory1 = db.ApproveMedicineDetails.Where(p => p.ApproveMedicine.InsurNo == card_no.Text).Select(p => new { apv = p.ApproveMedicine }).Take(1).ToList();
+                            CustName.Text = FamHistory1[0].apv.InsurName;
+                            if (FamHistory1[0].apv.Gender.Length > 0)
+                            {
+                                Gender = FamHistory1[0].apv.Gender;
+                            }
+                           
+                            if (FamHistory1[0].apv.Gender == "ذكر")
+                            {
+                                Sex.SelectedIndex = 0;
+                            }
+                            else if (FamHistory1[0].apv.Gender == "انثي")
+                            {
+                                Sex.SelectedIndex = 1;
+                            }
+                            else
+                            {
+                                Sex.SelectedIndex = -1;
+                            }
+                            BirthDate = FamHistory1[0].apv.BirthDate;
+                            Age.Text = DateAndTime.DateDiff(DateInterval.Year, BirthDate, PLC.getdate()).ToString();
+                            Rec_No = FamHistory1[0].apv.ClientId;
+                            ServerName.Text = FamHistory1[0].apv.Server;
+                            ChkSearch = true;
+                            int LocalId = FamHistory1[0].apv.LocalityId;
+                            this.Cursor = Cursors.Default;
+                            return;
+                            // this.AcceptButton = null;
+                        }
 
 
                     }
-                    if (Funion.Count() > 0 || Frefuse.Count() > 0)
-                    {
-                        FRMpatienthistory.Default.ShowDialog();
-                    }
+                  
 
                     this.Cursor = Cursors.Default;
                     // return;
@@ -560,7 +597,19 @@ namespace HealthServicesSystem.Reclaims
                                 }
                                 CustName.Text = Convert.ToString(dtsearch.Rows[0]["name_1"]).Trim() + " " + Convert.ToString(dtsearch.Rows[0]["name_2"]).Trim() + " " + stri1 + " " + str2;
                                 Gender = Convert.ToString(dtsearch.Rows[0]["sex"]).Trim();
-                                Sex.Text = Gender;
+                                if (Convert.ToString(dtsearch.Rows[0]["sex"]).Trim() == "ذكر")
+                                {
+                                    Sex.SelectedIndex = 0;
+                                }
+                                else if (Convert.ToString(dtsearch.Rows[0]["sex"]).Trim() == "انثي")
+                                {
+                                    Sex.SelectedIndex = 1;
+                                }
+                                else
+                                {
+                                    Sex.SelectedIndex = -1;
+                                }
+
                                 if (Convert.IsDBNull(dtsearch.Rows[0]["phone"]) == false)
                                 {
                                     Phone = dtsearch.Rows[0]["phone"].ToString();
@@ -749,7 +798,19 @@ namespace HealthServicesSystem.Reclaims
 
 
                                 Gender = (dtNat.Rows[0]["Gender"]).ToString();
-                                Sex.Text = Gender;
+                                if ((dtNat.Rows[0]["Gender"]).ToString() == "ذكر")
+                                {
+                                    Sex.SelectedIndex = 0;
+                                }
+                                else if ((dtNat.Rows[0]["Gender"]).ToString() == "انثي")
+                                {
+                                    Sex.SelectedIndex = 1;
+                                }
+                                else
+                                {
+                                    Sex.SelectedIndex = -1;
+                                }
+
                                 Rec_No = (dtNat.Rows[0]["Stateid"]).ToString();
 
 
@@ -983,7 +1044,7 @@ namespace HealthServicesSystem.Reclaims
                         var Fdwa = db.Medicines.Where(p => p.Id == ServiceId).ToList();
                         if (Fdwa.Count > 0)
                         {
-                            if( Convert.IsDBNull(Fdwa[0].NOTE.ToString()) == false)
+                            if (Convert.IsDBNull(Fdwa[0].NOTE.ToString()) == false)
                             {
                                 if (Fdwa[0].NOTE.ToString() != "")
                                 {
@@ -993,7 +1054,7 @@ namespace HealthServicesSystem.Reclaims
                         }
                     }
 
-                    }
+                }
             }
             catch (Exception)
             {
