@@ -12,9 +12,9 @@ namespace HealthServicesSystem.Claims
     /// <summary>
     /// Summary description for CenterListNonConfirmReport.
     /// </summary>
-    public partial class CenterListNonConfirmReport : Telerik.Reporting.Report
+    public partial class CenterListClaims : Telerik.Reporting.Report
     {
-        public CenterListNonConfirmReport()
+        public CenterListClaims()
         {
             //
             // Required for telerik Reporting designer support

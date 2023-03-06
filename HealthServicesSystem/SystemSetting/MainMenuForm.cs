@@ -792,5 +792,13 @@ namespace HealthServicesSystem
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
+
+        private void CenterListClaimsM_Click(object sender, EventArgs e)
+        {
+            CenterListClaimsRepFrm frm = new CenterListClaimsRepFrm();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }

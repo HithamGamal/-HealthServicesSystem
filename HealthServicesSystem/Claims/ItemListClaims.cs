@@ -31,5 +31,22 @@ namespace HealthServicesSystem.Claims
             // TODO: Add any constructor code after InitializeComponent call
             //
         }
+
+        private void ItemListClaims_ItemDataBinding(object sender, EventArgs e)
+        {
+           
+
+            
+        }
+
+        private void detail_ItemDataBinding(object sender, EventArgs e)
+        {
+            Telerik.Reporting.Processing.DetailSection section = (sender as Telerik.Reporting.Processing.DetailSection);
+            //  Telerik.Reporting.Processing.TextBox txt = (Telerik.Reporting.Processing.TextBox)Telerik.Reporting.Processing.ElementTreeHelper.GetChildByName(section, "Relate");
+            //float Per = Convert.ToSingle(section.DataObject["ClaimPrice"])/ Convert.ToSingle (section.DataObject["Total"])*100;
+            decimal Per = Convert.ToDecimal(Total.Value);
+            decimal Per1 = Convert.ToDecimal(section.DataObject["ClaimPrice"]);
+            Percent.Value =Math .Round ( (Per1 / Per * 100) ,2).ToString();
+        }
     }
 }

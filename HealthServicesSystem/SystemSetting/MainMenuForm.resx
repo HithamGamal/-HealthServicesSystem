@@ -118,30 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="FRMmedicine.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAABEhJREFUaEPt
-        mTGojlEYx+9gMEgGiUiKRBkMBoNBigwGg2QwGBSDwUCURRkMBgMyKJTBYEAGxWAwKAaJkgwGg4EySJKB
-        /0+e+jvO+73P+e53v++m+69f97vve57znnPe5zznOeedmtN/pE3ijLghHom34ov4Id6J1+KmOCI2iFmh
-        zeK8eC9+NvJMHBbzxdi1Q1wXjG6tcS08FUfFEjHjWiyuiFrDPwju7RdbxRqxQDDCqwRv66S4L76J0h4X
-        2yhmTFReugoduSy2iBYxEMcE88Tro2O4VZe8bJMOCX/Yd3FVbBPT0UpxSrwR3rhLYq0o5WXSwj/dEFfZ
-        KUapFeKJ8Oe8FOuEy++ntE+4EX6KP2e0VDAXgN99micuCH8eg8VcCvm9XuHzxPEweCyYlFkdEGHL76wI
-        Av5cBo05g+IaDBQGPmGppKXxaNgOIBa6zyLsGTyiWfwPA0U4jIK8xqzbIPz5oHCfZtEihLo79AnX83B9
-        y35Dp5g4bpidsPgwobEW4wPqvSayb5OBqNUDnbonotBtLiTFeuAPeC7IfRi5j3+uBeESGZ0VbhtUxWoZ
-        BRit7Ct3O3yX11+KxQ53jHIkfq64nqUqErMowIhm5XZEkS7RUSIMHWFOuMI+S1UeeVrSg4cCG95an3+T
-        dtfcJ56b5R+RYcbNF2KhyIq5gt1XsZoLkxA+GR0gjLbonAhbIsdExE4qGjHIj2vCtyP08ncinWAbGB2o
-        RZE+leGOUDlMPUPL0+WWFdNF5hpvImAV3i1mXJ5AteY9LvKYmNQOC9tYOjIqkc0yr8o3gqtm0utSDGrU
-        wWCPTbgj+Y93hPWm3Kz0iXrCHncfu/aIWPDgrog8P6PtImwfcGESWiQ45IqGtIRbQnvY4ZoT0y4RDWEL
-        mZXvUQjZIxN5DdGFxrAn6BNvIRpC6p5Vb54WN7OEPAXJbB2ZvFE+m7LQ4LBhb1EdqCiQJcSIRp7P377o
-        4qk3C19GflrR6f9RIIsLF4owyQjRsDJlJvZ7Q9j4sH/uE/tx36Yyh6qKAk5LVsqRoMd6GkjYZMTY4Jd7
-        ZcJqRqwhYUNa0imv3Mm+ZlRbtEo4cSN7zYi0xOsamBz6Q3xjTwWtR4l0xLNbMlO2kDQgE6kQi5wnmL0H
-        DFEQyDv8XIfco/WrymkR9q1pNZ30AeD5vRlyFAbEpONEzivhrDSrYTtA4/0QK+0BYQAhQqIfhQBhMOMG
-        ZKOsC5DNPnEbH3lIz0E3cuE65YcIfHqYlHiQas9hsNJyw1LrRXny9kqcEMvEdMQqe1F8ElE3awl1Zyf8
-        b3njusQn0jJEMk+4zorcIhrOwlauD8y1UX9A+UscTJWvGmgI4ZcDXuI8KyirMRGNCMJEJiVmcSy/tQWE
-        yt5oMwotF8cF+9xaQ1q5I/aKsQu3wX1Y4msNGwR+TprRmduMW4Rc8iEaxbxg58V8wadxOcIj99iM4P9N
-        E3ROs1NTU78A3UVSDWeP0kEAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="FRMMedicineSetting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAANZJREFUaEPt
@@ -381,6 +357,30 @@
         B1zAZOyAVD8xh3s4rc98NtDO/Dq8YIek2oaEv0G55wq9EmHhBTsoVY8Z1PCqLbGFzc/FzuEFOyxVjzE8
         Qnuvltg1rqk/he+DthJ359rgwitS4gRt4KaDDa9IiTMsMrwiT1RbopjwipSQ14MiwytSQl4PigxPCCGE
         /DtV9QIMrz6nooWoNAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="FRMmedicine.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAABEhJREFUaEPt
+        mTGojlEYx+9gMEgGiUiKRBkMBoNBigwGg2QwGBSDwUCURRkMBgMyKJTBYEAGxWAwKAaJkgwGg4EySJKB
+        /0+e+jvO+73P+e53v++m+69f97vve57znnPe5zznOeedmtN/pE3ijLghHom34ov4Id6J1+KmOCI2iFmh
+        zeK8eC9+NvJMHBbzxdi1Q1wXjG6tcS08FUfFEjHjWiyuiFrDPwju7RdbxRqxQDDCqwRv66S4L76J0h4X
+        2yhmTFReugoduSy2iBYxEMcE88Tro2O4VZe8bJMOCX/Yd3FVbBPT0UpxSrwR3rhLYq0o5WXSwj/dEFfZ
+        KUapFeKJ8Oe8FOuEy++ntE+4EX6KP2e0VDAXgN99micuCH8eg8VcCvm9XuHzxPEweCyYlFkdEGHL76wI
+        Av5cBo05g+IaDBQGPmGppKXxaNgOIBa6zyLsGTyiWfwPA0U4jIK8xqzbIPz5oHCfZtEihLo79AnX83B9
+        y35Dp5g4bpidsPgwobEW4wPqvSayb5OBqNUDnbonotBtLiTFeuAPeC7IfRi5j3+uBeESGZ0VbhtUxWoZ
+        BRit7Ct3O3yX11+KxQ53jHIkfq64nqUqErMowIhm5XZEkS7RUSIMHWFOuMI+S1UeeVrSg4cCG95an3+T
+        dtfcJ56b5R+RYcbNF2KhyIq5gt1XsZoLkxA+GR0gjLbonAhbIsdExE4qGjHIj2vCtyP08ncinWAbGB2o
+        RZE+leGOUDlMPUPL0+WWFdNF5hpvImAV3i1mXJ5AteY9LvKYmNQOC9tYOjIqkc0yr8o3gqtm0utSDGrU
+        wWCPTbgj+Y93hPWm3Kz0iXrCHncfu/aIWPDgrog8P6PtImwfcGESWiQ45IqGtIRbQnvY4ZoT0y4RDWEL
+        mZXvUQjZIxN5DdGFxrAn6BNvIRpC6p5Vb54WN7OEPAXJbB2ZvFE+m7LQ4LBhb1EdqCiQJcSIRp7P377o
+        4qk3C19GflrR6f9RIIsLF4owyQjRsDJlJvZ7Q9j4sH/uE/tx36Yyh6qKAk5LVsqRoMd6GkjYZMTY4Jd7
+        ZcJqRqwhYUNa0imv3Mm+ZlRbtEo4cSN7zYi0xOsamBz6Q3xjTwWtR4l0xLNbMlO2kDQgE6kQi5wnmL0H
+        DFEQyDv8XIfco/WrymkR9q1pNZ30AeD5vRlyFAbEpONEzivhrDSrYTtA4/0QK+0BYQAhQqIfhQBhMOMG
+        ZKOsC5DNPnEbH3lIz0E3cuE65YcIfHqYlHiQas9hsNJyw1LrRXny9kqcEMvEdMQqe1F8ElE3awl1Zyf8
+        b3njusQn0jJEMk+4zorcIhrOwlauD8y1UX9A+UscTJWvGmgI4ZcDXuI8KyirMRGNCMJEJiVmcSy/tQWE
+        yt5oMwotF8cF+9xaQ1q5I/aKsQu3wX1Y4msNGwR+TprRmduMW4Rc8iEaxbxg58V8wadxOcIj99iM4P9N
+        E3ROs1NTU78A3UVSDWeP0kEAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="FRMmedical.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
