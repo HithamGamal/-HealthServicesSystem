@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>105</ApplicationRevision>
+    <ApplicationRevision>106</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -146,6 +146,24 @@
     </Compile>
     <Compile Include="Claims\AllocationFrm.Designer.cs">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ItemListClaims.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\ItemListClaims.Designer.cs">
+      <DependentUpon>ItemListClaims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\CenterListClaims.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\CenterListClaims.Designer.cs">
+      <DependentUpon>CenterListClaims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\CenterListClaimsRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\CenterListClaimsRepFrm.Designer.cs">
+      <DependentUpon>CenterListClaimsRepFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\CenterListNonConfirmReport.cs">
       <SubType>Component</SubType>
@@ -780,6 +798,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\AllocationFrm.resx">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\ItemListClaims.resx">
+      <DependentUpon>ItemListClaims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\CenterListClaims.resx">
+      <DependentUpon>CenterListClaims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\CenterListClaimsRepFrm.resx">
+      <DependentUpon>CenterListClaimsRepFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CenterListNonConfirmReport.resx">
       <DependentUpon>CenterListNonConfirmReport.cs</DependentUpon>

@@ -170,6 +170,8 @@
             this.usernamelbl = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement6 = new Telerik.WinControls.UI.RadLabelElement();
             this.date = new Telerik.WinControls.UI.RadLabelElement();
+            this.radRibbonBarGroup56 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.CenterListClaimsM = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -548,7 +550,7 @@
             // 
             // ribbonTab8
             // 
-            this.ribbonTab8.IsSelected = false;
+            this.ribbonTab8.IsSelected = true;
             this.ribbonTab8.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup36,
             this.radRibbonBarGroup50,
@@ -556,7 +558,8 @@
             this.radRibbonBarGroup55,
             this.radRibbonBarGroup38,
             this.radRibbonBarGroup39,
-            this.radRibbonBarGroup40});
+            this.radRibbonBarGroup40,
+            this.radRibbonBarGroup56});
             this.ribbonTab8.Name = "ribbonTab8";
             this.ribbonTab8.Text = "الاستلام";
             this.ribbonTab8.UseMnemonic = false;
@@ -962,7 +965,7 @@
             // 
             // ribbonTab3
             // 
-            this.ribbonTab3.IsSelected = true;
+            this.ribbonTab3.IsSelected = false;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup22,
             this.radRibbonBarGroup23,
@@ -1536,6 +1539,24 @@
             this.date.Text = "date";
             this.date.TextWrap = true;
             // 
+            // radRibbonBarGroup56
+            // 
+            this.radRibbonBarGroup56.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.CenterListClaimsM});
+            this.radRibbonBarGroup56.Name = "radRibbonBarGroup56";
+            this.radRibbonBarGroup56.Text = "تقرير قيمة  المطالبة";
+            // 
+            // CenterListClaimsM
+            // 
+            this.CenterListClaimsM.AutoSize = false;
+            this.CenterListClaimsM.Bounds = new System.Drawing.Rectangle(0, 0, 90, 66);
+            this.CenterListClaimsM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.CenterListClaimsM.Image = global::HealthServicesSystem.Properties.Resources.assignment_FILL0_wght400_GRAD0_opsz48;
+            this.CenterListClaimsM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CenterListClaimsM.Name = "CenterListClaimsM";
+            this.CenterListClaimsM.Text = "تقرير قيمة المطالبة";
+            this.CenterListClaimsM.Click += new System.EventHandler(this.CenterListClaimsM_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1707,5 +1728,7 @@
         private Telerik.WinControls.UI.RadLabelElement date;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup55;
         private Telerik.WinControls.UI.RadButtonElement CheckClaimsM;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup56;
+        private Telerik.WinControls.UI.RadButtonElement CenterListClaimsM;
     }
 }

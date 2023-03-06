@@ -239,6 +239,7 @@ namespace HealthServicesSystem.Reclaims
                         {
                             MedSum = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimTotal);
                         }
+                        medicalsum.Text = MedSum.ToString();
                         var Mec = db.ReclaimMedicines.Where(p => p.ReclaimId == ReclaimId && p.MedicineForReclaim.InContract == true).ToList();
                         decimal MecSum = 0;
                         if (Mec.Count > 0)

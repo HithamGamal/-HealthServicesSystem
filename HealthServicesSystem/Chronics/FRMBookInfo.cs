@@ -197,7 +197,7 @@ namespace HealthServicesSystem.Reclaims
                 {
                     int bkNo = Convert.ToInt32(BookNo.Text);
                     //int DcNo = Convert.ToInt32(DocumentNo.Text);
-                    var Fhis1 = db.ChronicsBooks.Where(p => p.BookNo == bkNo && p.RowStatus != RowStatus.Deleted).ToList();
+                    var Fhis1 = db.ChronicsBooks.Where(p => p.BookNo == bkNo && p.RowStatus != RowStatus.Deleted && p.Activated==true).ToList();
                     if (Fhis1.Count > 0)
                     {
 
