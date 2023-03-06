@@ -75,13 +75,9 @@
     <Compile Include="Migrations\202302160631036_a.designer.cs">
       <DependentUpon>202302160631036_a.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202302190946088_saif_23023_02_19.cs" />
-    <Compile Include="Migrations\202302190946088_saif_23023_02_19.designer.cs">
-      <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302160752254_22222223.cs" />
-    <Compile Include="Migrations\202302160752254_22222223.designer.cs">
-      <DependentUpon>202302160752254_22222223.cs</DependentUpon>
+    <Compile Include="Migrations\202303061253373_ee.cs" />
+    <Compile Include="Migrations\202303061253373_ee.designer.cs">
+      <DependentUpon>202303061253373_ee.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StopSubsriber.cs" />
@@ -171,11 +167,8 @@
     <EmbeddedResource Include="Migrations\202302160631036_a.resx">
       <DependentUpon>202302160631036_a.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302190946088_saif_23023_02_19.resx">
-      <DependentUpon>202302190946088_saif_23023_02_19.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302160752254_22222223.resx">
-      <DependentUpon>202302160752254_22222223.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303061253373_ee.resx">
+      <DependentUpon>202303061253373_ee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
