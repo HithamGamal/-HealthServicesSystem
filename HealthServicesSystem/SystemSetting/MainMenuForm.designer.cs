@@ -80,6 +80,8 @@
             this.EnableClms = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup40 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.SendClm = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup56 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.CenterListClaimsM = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab2 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup41 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.RequestClm = new Telerik.WinControls.UI.RadButtonElement();
@@ -170,8 +172,6 @@
             this.usernamelbl = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement6 = new Telerik.WinControls.UI.RadLabelElement();
             this.date = new Telerik.WinControls.UI.RadLabelElement();
-            this.radRibbonBarGroup56 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.CenterListClaimsM = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -696,6 +696,25 @@
             this.SendClm.Name = "SendClm";
             this.SendClm.Text = "ارسال المطالبة";
             this.SendClm.Click += new System.EventHandler(this.SendClm_Click);
+            // 
+            // radRibbonBarGroup56
+            // 
+            this.radRibbonBarGroup56.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.CenterListClaimsM});
+            this.radRibbonBarGroup56.Name = "radRibbonBarGroup56";
+            this.radRibbonBarGroup56.Text = "تقرير قيمة  المطالبة";
+            // 
+            // CenterListClaimsM
+            // 
+            this.CenterListClaimsM.AutoSize = false;
+            this.CenterListClaimsM.Bounds = new System.Drawing.Rectangle(0, 0, 90, 66);
+            this.CenterListClaimsM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.CenterListClaimsM.Enabled = false;
+            this.CenterListClaimsM.Image = global::HealthServicesSystem.Properties.Resources.assignment_FILL0_wght400_GRAD0_opsz48;
+            this.CenterListClaimsM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CenterListClaimsM.Name = "CenterListClaimsM";
+            this.CenterListClaimsM.Text = "تقرير قيمة المطالبة";
+            this.CenterListClaimsM.Click += new System.EventHandler(this.CenterListClaimsM_Click);
             // 
             // ribbonTab2
             // 
@@ -1538,24 +1557,6 @@
             this.radStatusStrip1.SetSpring(this.date, false);
             this.date.Text = "date";
             this.date.TextWrap = true;
-            // 
-            // radRibbonBarGroup56
-            // 
-            this.radRibbonBarGroup56.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.CenterListClaimsM});
-            this.radRibbonBarGroup56.Name = "radRibbonBarGroup56";
-            this.radRibbonBarGroup56.Text = "تقرير قيمة  المطالبة";
-            // 
-            // CenterListClaimsM
-            // 
-            this.CenterListClaimsM.AutoSize = false;
-            this.CenterListClaimsM.Bounds = new System.Drawing.Rectangle(0, 0, 90, 66);
-            this.CenterListClaimsM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
-            this.CenterListClaimsM.Image = global::HealthServicesSystem.Properties.Resources.assignment_FILL0_wght400_GRAD0_opsz48;
-            this.CenterListClaimsM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.CenterListClaimsM.Name = "CenterListClaimsM";
-            this.CenterListClaimsM.Text = "تقرير قيمة المطالبة";
-            this.CenterListClaimsM.Click += new System.EventHandler(this.CenterListClaimsM_Click);
             // 
             // MainMenuForm
             // 
