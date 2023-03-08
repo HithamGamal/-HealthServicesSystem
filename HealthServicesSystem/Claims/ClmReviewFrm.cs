@@ -212,7 +212,7 @@ namespace HealthServicesSystem.Claims
             int _VistId = int.Parse(VisitIdTxt.Text);
             ClaimsCostTxt.Text = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Status == Status.Active && p.ClmMasterData.ImpId == _impId).Sum(p => p.TotalPrice).ToString();
             //====================
-            var qu = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id == _VistId).ToList();
+            var qu = db.ClmMasterData.Where(p =>  p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id == _VistId).Take(1).ToList();
             if (qu.Count >0)
             {
                 qu[0].IsReviewed = 1;
@@ -232,21 +232,7 @@ namespace HealthServicesSystem.Claims
             
         }
 
-        private void ItemId_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ItemName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radLabel15_Click(object sender, EventArgs e)
-        {
-
-        }
-
+  
         private void ImpDrp_SelectedValueChanged_1(object sender, EventArgs e)
         {
             try
