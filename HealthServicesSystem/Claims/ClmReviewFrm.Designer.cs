@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn46 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn47 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn48 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn49 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn50 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn51 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition8 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn52 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn53 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn54 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn55 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn56 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn57 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn3 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition9 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn39 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn40 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn41 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn42 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn43 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn44 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn45 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition7 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
@@ -69,12 +69,16 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.NonConfrmGrd = new Telerik.WinControls.UI.RadGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.DaignosisNameTxt = new Telerik.WinControls.UI.RadLabel();
+            this.ContractTypesTxt = new Telerik.WinControls.UI.RadLabel();
             this.IdClmLb = new Telerik.WinControls.UI.RadLabel();
             this.SearchBtn = new Telerik.WinControls.UI.RadButton();
             this.IdClmsTxt = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel17 = new Telerik.WinControls.UI.RadLabel();
             this.ItemGrd = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
+            this.CountOfClaimsTxt = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel32 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel31 = new Telerik.WinControls.UI.RadLabel();
             this.InMonthLb = new Telerik.WinControls.UI.RadLabel();
@@ -99,6 +103,11 @@
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ShowFileBtn = new Telerik.WinControls.UI.RadButton();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
+            this.MonthDrp = new Telerik.WinControls.UI.RadDropDownList();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.YearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.ImpDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
             this.Discounttxt = new Telerik.WinControls.UI.RadTextBox();
@@ -130,15 +139,6 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.customShape1 = new Telerik.WinControls.OldShapeEditor.CustomShape();
             this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
-            this.ContractTypesTxt = new Telerik.WinControls.UI.RadLabel();
-            this.DaignosisNameTxt = new Telerik.WinControls.UI.RadLabel();
-            this.CountOfClaimsTxt = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.MonthDrp = new Telerik.WinControls.UI.RadDropDownList();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.YearTxt = new Telerik.WinControls.UI.RadTextBox();
-            this.ShowFileBtn = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd)).BeginInit();
@@ -147,6 +147,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NonConfrmGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NonConfrmGrd.MasterTemplate)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DaignosisNameTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractTypesTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClmLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClmsTxt)).BeginInit();
@@ -155,6 +157,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemGrd.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
             this.radGroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CountOfClaimsTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InMonthLb)).BeginInit();
@@ -181,6 +185,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowFileBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
@@ -212,15 +221,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractTypesTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DaignosisNameTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CountOfClaimsTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowFileBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,49 +250,49 @@
             // HistoryGrd
             // 
             this.HistoryGrd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HistoryGrd.Location = new System.Drawing.Point(0, 266);
+            this.HistoryGrd.Location = new System.Drawing.Point(0, 194);
             // 
             // 
             // 
             this.HistoryGrd.MasterTemplate.AllowAddNewRow = false;
             this.HistoryGrd.MasterTemplate.AllowDeleteRow = false;
             this.HistoryGrd.MasterTemplate.AllowEditRow = false;
-            gridViewTextBoxColumn46.FieldName = "CenterName";
-            gridViewTextBoxColumn46.HeaderText = "اسم المركز";
-            gridViewTextBoxColumn46.Name = "CenterName";
-            gridViewTextBoxColumn46.Width = 250;
-            gridViewTextBoxColumn47.FieldName = "Month";
-            gridViewTextBoxColumn47.HeaderText = "الشهر";
-            gridViewTextBoxColumn47.Name = "Month";
-            gridViewTextBoxColumn47.Width = 80;
-            gridViewTextBoxColumn48.FieldName = "Year";
-            gridViewTextBoxColumn48.HeaderText = "السنة";
-            gridViewTextBoxColumn48.Name = "Year";
-            gridViewTextBoxColumn48.Width = 80;
-            gridViewTextBoxColumn49.FieldName = "VisitNo";
-            gridViewTextBoxColumn49.HeaderText = "تاريخ الزيارة";
-            gridViewTextBoxColumn49.Name = "VisitNo";
-            gridViewTextBoxColumn49.Width = 100;
-            gridViewTextBoxColumn50.FieldName = "GenName";
-            gridViewTextBoxColumn50.HeaderText = "الاسم العلمي";
-            gridViewTextBoxColumn50.Name = "GenName";
-            gridViewTextBoxColumn50.Width = 250;
-            gridViewTextBoxColumn51.FieldName = "ProcessName";
-            gridViewTextBoxColumn51.HeaderText = "العملية";
-            gridViewTextBoxColumn51.Name = "ProcessName";
-            gridViewTextBoxColumn51.Width = 200;
+            gridViewTextBoxColumn1.FieldName = "CenterName";
+            gridViewTextBoxColumn1.HeaderText = "اسم المركز";
+            gridViewTextBoxColumn1.Name = "CenterName";
+            gridViewTextBoxColumn1.Width = 250;
+            gridViewTextBoxColumn2.FieldName = "Month";
+            gridViewTextBoxColumn2.HeaderText = "الشهر";
+            gridViewTextBoxColumn2.Name = "Month";
+            gridViewTextBoxColumn2.Width = 80;
+            gridViewTextBoxColumn3.FieldName = "Year";
+            gridViewTextBoxColumn3.HeaderText = "السنة";
+            gridViewTextBoxColumn3.Name = "Year";
+            gridViewTextBoxColumn3.Width = 80;
+            gridViewTextBoxColumn4.FieldName = "VisitNo";
+            gridViewTextBoxColumn4.HeaderText = "تاريخ الزيارة";
+            gridViewTextBoxColumn4.Name = "VisitNo";
+            gridViewTextBoxColumn4.Width = 100;
+            gridViewTextBoxColumn5.FieldName = "GenName";
+            gridViewTextBoxColumn5.HeaderText = "الاسم العلمي";
+            gridViewTextBoxColumn5.Name = "GenName";
+            gridViewTextBoxColumn5.Width = 250;
+            gridViewTextBoxColumn6.FieldName = "ProcessName";
+            gridViewTextBoxColumn6.HeaderText = "العملية";
+            gridViewTextBoxColumn6.Name = "ProcessName";
+            gridViewTextBoxColumn6.Width = 200;
             this.HistoryGrd.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn46,
-            gridViewTextBoxColumn47,
-            gridViewTextBoxColumn48,
-            gridViewTextBoxColumn49,
-            gridViewTextBoxColumn50,
-            gridViewTextBoxColumn51});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
             this.HistoryGrd.MasterTemplate.EnableGrouping = false;
-            this.HistoryGrd.MasterTemplate.ViewDefinition = tableViewDefinition8;
+            this.HistoryGrd.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.HistoryGrd.Name = "HistoryGrd";
             this.HistoryGrd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.HistoryGrd.Size = new System.Drawing.Size(939, 168);
+            this.HistoryGrd.Size = new System.Drawing.Size(939, 240);
             this.HistoryGrd.TabIndex = 1;
             this.HistoryGrd.TitleText = "التاريخ المرضي";
             // 
@@ -303,7 +303,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(939, 266);
+            this.panel6.Size = new System.Drawing.Size(939, 194);
             this.panel6.TabIndex = 0;
             // 
             // NonConfrmGrd
@@ -316,48 +316,48 @@
             this.NonConfrmGrd.MasterTemplate.AllowAddNewRow = false;
             this.NonConfrmGrd.MasterTemplate.AllowDeleteRow = false;
             this.NonConfrmGrd.MasterTemplate.AllowEditRow = false;
-            gridViewTextBoxColumn52.FieldName = "Id";
-            gridViewTextBoxColumn52.HeaderText = "م";
-            gridViewTextBoxColumn52.Name = "Id";
-            gridViewTextBoxColumn52.Width = 60;
-            gridViewTextBoxColumn53.FieldName = "NonConfName";
-            gridViewTextBoxColumn53.HeaderText = "اسم المخالفة";
-            gridViewTextBoxColumn53.Name = "NonConfName";
-            gridViewTextBoxColumn53.Width = 350;
-            gridViewTextBoxColumn54.FieldName = "DiscountType";
-            gridViewTextBoxColumn54.HeaderText = "نوع الخصم";
-            gridViewTextBoxColumn54.Name = "DiscountType";
-            gridViewTextBoxColumn54.Width = 120;
-            gridViewTextBoxColumn55.FieldName = "Percent";
-            gridViewTextBoxColumn55.HeaderText = "النسبة";
-            gridViewTextBoxColumn55.Name = "Percent";
-            gridViewTextBoxColumn55.Width = 80;
-            gridViewTextBoxColumn56.FieldName = "DiscountValue";
-            gridViewTextBoxColumn56.HeaderText = "قيمة المخالفة";
-            gridViewTextBoxColumn56.Name = "DiscountValue";
-            gridViewTextBoxColumn56.Width = 100;
-            gridViewTextBoxColumn57.FieldName = "DiscountPer";
-            gridViewTextBoxColumn57.HeaderText = "الخصم علي";
-            gridViewTextBoxColumn57.Name = "DiscountPer";
-            gridViewTextBoxColumn57.Width = 100;
-            gridViewCommandColumn3.FieldName = "Del";
-            gridViewCommandColumn3.HeaderText = "حذف";
-            gridViewCommandColumn3.Image = global::HealthServicesSystem.Properties.Resources.delete2;
-            gridViewCommandColumn3.Name = "Del";
-            gridViewCommandColumn3.Width = 100;
+            gridViewTextBoxColumn7.FieldName = "Id";
+            gridViewTextBoxColumn7.HeaderText = "م";
+            gridViewTextBoxColumn7.Name = "Id";
+            gridViewTextBoxColumn7.Width = 60;
+            gridViewTextBoxColumn8.FieldName = "NonConfName";
+            gridViewTextBoxColumn8.HeaderText = "اسم المخالفة";
+            gridViewTextBoxColumn8.Name = "NonConfName";
+            gridViewTextBoxColumn8.Width = 350;
+            gridViewTextBoxColumn9.FieldName = "DiscountType";
+            gridViewTextBoxColumn9.HeaderText = "نوع الخصم";
+            gridViewTextBoxColumn9.Name = "DiscountType";
+            gridViewTextBoxColumn9.Width = 120;
+            gridViewTextBoxColumn10.FieldName = "Percent";
+            gridViewTextBoxColumn10.HeaderText = "النسبة";
+            gridViewTextBoxColumn10.Name = "Percent";
+            gridViewTextBoxColumn10.Width = 80;
+            gridViewTextBoxColumn11.FieldName = "DiscountValue";
+            gridViewTextBoxColumn11.HeaderText = "قيمة المخالفة";
+            gridViewTextBoxColumn11.Name = "DiscountValue";
+            gridViewTextBoxColumn11.Width = 100;
+            gridViewTextBoxColumn12.FieldName = "DiscountPer";
+            gridViewTextBoxColumn12.HeaderText = "الخصم علي";
+            gridViewTextBoxColumn12.Name = "DiscountPer";
+            gridViewTextBoxColumn12.Width = 100;
+            gridViewCommandColumn1.FieldName = "Del";
+            gridViewCommandColumn1.HeaderText = "حذف";
+            gridViewCommandColumn1.Image = global::HealthServicesSystem.Properties.Resources.delete2;
+            gridViewCommandColumn1.Name = "Del";
+            gridViewCommandColumn1.Width = 100;
             this.NonConfrmGrd.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn52,
-            gridViewTextBoxColumn53,
-            gridViewTextBoxColumn54,
-            gridViewTextBoxColumn55,
-            gridViewTextBoxColumn56,
-            gridViewTextBoxColumn57,
-            gridViewCommandColumn3});
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12,
+            gridViewCommandColumn1});
             this.NonConfrmGrd.MasterTemplate.EnableGrouping = false;
-            this.NonConfrmGrd.MasterTemplate.ViewDefinition = tableViewDefinition9;
+            this.NonConfrmGrd.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.NonConfrmGrd.Name = "NonConfrmGrd";
             this.NonConfrmGrd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.NonConfrmGrd.Size = new System.Drawing.Size(939, 266);
+            this.NonConfrmGrd.Size = new System.Drawing.Size(939, 194);
             this.NonConfrmGrd.TabIndex = 1;
             this.NonConfrmGrd.TitleText = "المخالفات";
             this.NonConfrmGrd.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.NonConfrmGrd_CommandCellClick);
@@ -386,6 +386,30 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(939, 315);
             this.panel3.TabIndex = 1;
+            // 
+            // DaignosisNameTxt
+            // 
+            this.DaignosisNameTxt.AutoSize = false;
+            this.DaignosisNameTxt.Font = new System.Drawing.Font("Sakkal Majalla", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DaignosisNameTxt.ForeColor = System.Drawing.Color.Red;
+            this.DaignosisNameTxt.Location = new System.Drawing.Point(677, 115);
+            this.DaignosisNameTxt.Name = "DaignosisNameTxt";
+            this.DaignosisNameTxt.Size = new System.Drawing.Size(244, 32);
+            this.DaignosisNameTxt.TabIndex = 26;
+            this.DaignosisNameTxt.Text = "0";
+            this.DaignosisNameTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ContractTypesTxt
+            // 
+            this.ContractTypesTxt.AutoSize = false;
+            this.ContractTypesTxt.Font = new System.Drawing.Font("Sakkal Majalla", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContractTypesTxt.ForeColor = System.Drawing.Color.Red;
+            this.ContractTypesTxt.Location = new System.Drawing.Point(677, 66);
+            this.ContractTypesTxt.Name = "ContractTypesTxt";
+            this.ContractTypesTxt.Size = new System.Drawing.Size(167, 32);
+            this.ContractTypesTxt.TabIndex = 25;
+            this.ContractTypesTxt.Text = "0";
+            this.ContractTypesTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // IdClmLb
             // 
@@ -433,45 +457,45 @@
             this.ItemGrd.MasterTemplate.AllowAddNewRow = false;
             this.ItemGrd.MasterTemplate.AllowDeleteRow = false;
             this.ItemGrd.MasterTemplate.AllowEditRow = false;
-            gridViewTextBoxColumn39.FieldName = "Id";
-            gridViewTextBoxColumn39.HeaderText = "م";
-            gridViewTextBoxColumn39.Name = "Id";
-            gridViewTextBoxColumn39.Width = 100;
-            gridViewTextBoxColumn40.FieldName = "GenId";
-            gridViewTextBoxColumn40.HeaderText = "الرقم";
-            gridViewTextBoxColumn40.Name = "GenId";
-            gridViewTextBoxColumn40.Width = 80;
-            gridViewTextBoxColumn41.FieldName = "GenName";
-            gridViewTextBoxColumn41.HeaderText = "الاسم العلمي";
-            gridViewTextBoxColumn41.Name = "GenName";
-            gridViewTextBoxColumn41.Width = 300;
-            gridViewTextBoxColumn42.FieldName = "TradeName";
-            gridViewTextBoxColumn42.HeaderText = "الاسم التجاري";
-            gridViewTextBoxColumn42.Name = "TradeName";
-            gridViewTextBoxColumn42.StretchVertically = false;
-            gridViewTextBoxColumn42.Width = 350;
-            gridViewTextBoxColumn43.FieldName = "UnitPrice";
-            gridViewTextBoxColumn43.HeaderText = "سعر الوحدة";
-            gridViewTextBoxColumn43.Name = "UnitPrice";
-            gridViewTextBoxColumn43.Width = 80;
-            gridViewTextBoxColumn44.FieldName = "UnitQty";
-            gridViewTextBoxColumn44.HeaderText = "العدد";
-            gridViewTextBoxColumn44.Name = "UnitQty";
-            gridViewTextBoxColumn44.Width = 80;
-            gridViewTextBoxColumn45.FieldName = "TotalPrice";
-            gridViewTextBoxColumn45.HeaderText = "الاجمالي";
-            gridViewTextBoxColumn45.Name = "TotalPrice";
-            gridViewTextBoxColumn45.Width = 100;
+            gridViewTextBoxColumn13.FieldName = "Id";
+            gridViewTextBoxColumn13.HeaderText = "م";
+            gridViewTextBoxColumn13.Name = "Id";
+            gridViewTextBoxColumn13.Width = 100;
+            gridViewTextBoxColumn14.FieldName = "GenId";
+            gridViewTextBoxColumn14.HeaderText = "الرقم";
+            gridViewTextBoxColumn14.Name = "GenId";
+            gridViewTextBoxColumn14.Width = 80;
+            gridViewTextBoxColumn15.FieldName = "GenName";
+            gridViewTextBoxColumn15.HeaderText = "الاسم العلمي";
+            gridViewTextBoxColumn15.Name = "GenName";
+            gridViewTextBoxColumn15.Width = 300;
+            gridViewTextBoxColumn16.FieldName = "TradeName";
+            gridViewTextBoxColumn16.HeaderText = "الاسم التجاري";
+            gridViewTextBoxColumn16.Name = "TradeName";
+            gridViewTextBoxColumn16.StretchVertically = false;
+            gridViewTextBoxColumn16.Width = 350;
+            gridViewTextBoxColumn17.FieldName = "UnitPrice";
+            gridViewTextBoxColumn17.HeaderText = "سعر الوحدة";
+            gridViewTextBoxColumn17.Name = "UnitPrice";
+            gridViewTextBoxColumn17.Width = 80;
+            gridViewTextBoxColumn18.FieldName = "UnitQty";
+            gridViewTextBoxColumn18.HeaderText = "العدد";
+            gridViewTextBoxColumn18.Name = "UnitQty";
+            gridViewTextBoxColumn18.Width = 80;
+            gridViewTextBoxColumn19.FieldName = "TotalPrice";
+            gridViewTextBoxColumn19.HeaderText = "الاجمالي";
+            gridViewTextBoxColumn19.Name = "TotalPrice";
+            gridViewTextBoxColumn19.Width = 100;
             this.ItemGrd.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn39,
-            gridViewTextBoxColumn40,
-            gridViewTextBoxColumn41,
-            gridViewTextBoxColumn42,
-            gridViewTextBoxColumn43,
-            gridViewTextBoxColumn44,
-            gridViewTextBoxColumn45});
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14,
+            gridViewTextBoxColumn15,
+            gridViewTextBoxColumn16,
+            gridViewTextBoxColumn17,
+            gridViewTextBoxColumn18,
+            gridViewTextBoxColumn19});
             this.ItemGrd.MasterTemplate.EnableGrouping = false;
-            this.ItemGrd.MasterTemplate.ViewDefinition = tableViewDefinition7;
+            this.ItemGrd.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.ItemGrd.Name = "ItemGrd";
             this.ItemGrd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ItemGrd.Size = new System.Drawing.Size(933, 166);
@@ -497,6 +521,27 @@
             this.radGroupBox4.TabIndex = 8;
             this.radGroupBox4.Text = "احصائية ";
             this.radGroupBox4.Click += new System.EventHandler(this.radGroupBox4_Click);
+            // 
+            // CountOfClaimsTxt
+            // 
+            this.CountOfClaimsTxt.AutoSize = false;
+            this.CountOfClaimsTxt.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountOfClaimsTxt.ForeColor = System.Drawing.Color.Red;
+            this.CountOfClaimsTxt.Location = new System.Drawing.Point(7, 23);
+            this.CountOfClaimsTxt.Name = "CountOfClaimsTxt";
+            this.CountOfClaimsTxt.Size = new System.Drawing.Size(104, 22);
+            this.CountOfClaimsTxt.TabIndex = 34;
+            this.CountOfClaimsTxt.Text = "0";
+            this.CountOfClaimsTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // radLabel26
+            // 
+            this.radLabel26.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel26.Location = new System.Drawing.Point(117, 23);
+            this.radLabel26.Name = "radLabel26";
+            this.radLabel26.Size = new System.Drawing.Size(125, 19);
+            this.radLabel26.TabIndex = 33;
+            this.radLabel26.Text = "عدد الروشتات في المطالبة";
             // 
             // radLabel32
             // 
@@ -754,6 +799,75 @@
             this.panel2.Size = new System.Drawing.Size(339, 755);
             this.panel2.TabIndex = 0;
             // 
+            // ShowFileBtn
+            // 
+            this.ShowFileBtn.Location = new System.Drawing.Point(17, 4);
+            this.ShowFileBtn.Name = "ShowFileBtn";
+            this.ShowFileBtn.Size = new System.Drawing.Size(72, 61);
+            this.ShowFileBtn.TabIndex = 19;
+            this.ShowFileBtn.Text = "عرض";
+            this.ShowFileBtn.Click += new System.EventHandler(this.ShowFileBtn_Click);
+            // 
+            // radLabel4
+            // 
+            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel4.Location = new System.Drawing.Point(248, 0);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(51, 31);
+            this.radLabel4.TabIndex = 16;
+            this.radLabel4.Text = ": الشهر";
+            // 
+            // MonthDrp
+            // 
+            this.MonthDrp.Font = new System.Drawing.Font("Segoe UI", 11F);
+            radListDataItem1.Text = "يناير";
+            radListDataItem2.Text = "فبراير";
+            radListDataItem3.Text = "مارس";
+            radListDataItem4.Text = "ابريل";
+            radListDataItem5.Text = "مايو";
+            radListDataItem6.Text = "يونيو";
+            radListDataItem7.Text = "يوليو";
+            radListDataItem8.Text = "اغسطس";
+            radListDataItem9.Text = "سبتمبر";
+            radListDataItem10.Text = "اكتوبر";
+            radListDataItem11.Text = "نوفمبر";
+            radListDataItem12.Text = "ديسمبر";
+            this.MonthDrp.Items.Add(radListDataItem1);
+            this.MonthDrp.Items.Add(radListDataItem2);
+            this.MonthDrp.Items.Add(radListDataItem3);
+            this.MonthDrp.Items.Add(radListDataItem4);
+            this.MonthDrp.Items.Add(radListDataItem5);
+            this.MonthDrp.Items.Add(radListDataItem6);
+            this.MonthDrp.Items.Add(radListDataItem7);
+            this.MonthDrp.Items.Add(radListDataItem8);
+            this.MonthDrp.Items.Add(radListDataItem9);
+            this.MonthDrp.Items.Add(radListDataItem10);
+            this.MonthDrp.Items.Add(radListDataItem11);
+            this.MonthDrp.Items.Add(radListDataItem12);
+            this.MonthDrp.Location = new System.Drawing.Point(95, 4);
+            this.MonthDrp.Name = "MonthDrp";
+            this.MonthDrp.NullText = "Select Month";
+            this.MonthDrp.Size = new System.Drawing.Size(142, 25);
+            this.MonthDrp.TabIndex = 18;
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Location = new System.Drawing.Point(252, 34);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(47, 31);
+            this.radLabel5.TabIndex = 17;
+            this.radLabel5.Text = ":السنة";
+            // 
+            // YearTxt
+            // 
+            this.YearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.YearTxt.Location = new System.Drawing.Point(95, 34);
+            this.YearTxt.Name = "YearTxt";
+            this.YearTxt.NullText = "Enter Year";
+            this.YearTxt.Size = new System.Drawing.Size(142, 25);
+            this.YearTxt.TabIndex = 15;
+            // 
             // ImpDrp
             // 
             this.ImpDrp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -935,7 +1049,7 @@
             this.ItemNameTxt.TabIndex = 14;
             this.ItemNameTxt.Text = "0";
             this.ItemNameTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ItemNameTxt.Click += new System.EventHandler(this.ItemName_Click);
+           
             // 
             // radLabel15
             // 
@@ -945,7 +1059,7 @@
             this.radLabel15.Size = new System.Drawing.Size(77, 22);
             this.radLabel15.TabIndex = 13;
             this.radLabel15.Text = ":اسم الصنف";
-            this.radLabel15.Click += new System.EventHandler(this.radLabel15_Click);
+       
             // 
             // ItemIdTxt
             // 
@@ -958,7 +1072,7 @@
             this.ItemIdTxt.TabIndex = 12;
             this.ItemIdTxt.Text = "0";
             this.ItemIdTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ItemIdTxt.Click += new System.EventHandler(this.ItemId_Click);
+         
             // 
             // radLabel16
             // 
@@ -1083,120 +1197,6 @@
             this.customShape1.Dimension = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.customShape1.IsRightToLeft = false;
             // 
-            // ContractTypesTxt
-            // 
-            this.ContractTypesTxt.AutoSize = false;
-            this.ContractTypesTxt.Font = new System.Drawing.Font("Sakkal Majalla", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContractTypesTxt.ForeColor = System.Drawing.Color.Red;
-            this.ContractTypesTxt.Location = new System.Drawing.Point(677, 66);
-            this.ContractTypesTxt.Name = "ContractTypesTxt";
-            this.ContractTypesTxt.Size = new System.Drawing.Size(167, 32);
-            this.ContractTypesTxt.TabIndex = 25;
-            this.ContractTypesTxt.Text = "0";
-            this.ContractTypesTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // DaignosisNameTxt
-            // 
-            this.DaignosisNameTxt.AutoSize = false;
-            this.DaignosisNameTxt.Font = new System.Drawing.Font("Sakkal Majalla", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DaignosisNameTxt.ForeColor = System.Drawing.Color.Red;
-            this.DaignosisNameTxt.Location = new System.Drawing.Point(677, 115);
-            this.DaignosisNameTxt.Name = "DaignosisNameTxt";
-            this.DaignosisNameTxt.Size = new System.Drawing.Size(244, 32);
-            this.DaignosisNameTxt.TabIndex = 26;
-            this.DaignosisNameTxt.Text = "0";
-            this.DaignosisNameTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CountOfClaimsTxt
-            // 
-            this.CountOfClaimsTxt.AutoSize = false;
-            this.CountOfClaimsTxt.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountOfClaimsTxt.ForeColor = System.Drawing.Color.Red;
-            this.CountOfClaimsTxt.Location = new System.Drawing.Point(7, 23);
-            this.CountOfClaimsTxt.Name = "CountOfClaimsTxt";
-            this.CountOfClaimsTxt.Size = new System.Drawing.Size(104, 22);
-            this.CountOfClaimsTxt.TabIndex = 34;
-            this.CountOfClaimsTxt.Text = "0";
-            this.CountOfClaimsTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // radLabel26
-            // 
-            this.radLabel26.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel26.Location = new System.Drawing.Point(117, 23);
-            this.radLabel26.Name = "radLabel26";
-            this.radLabel26.Size = new System.Drawing.Size(125, 19);
-            this.radLabel26.TabIndex = 33;
-            this.radLabel26.Text = "عدد الروشتات في المطالبة";
-            // 
-            // radLabel4
-            // 
-            this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(248, 0);
-            this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(51, 31);
-            this.radLabel4.TabIndex = 16;
-            this.radLabel4.Text = ": الشهر";
-            // 
-            // MonthDrp
-            // 
-            this.MonthDrp.Font = new System.Drawing.Font("Segoe UI", 11F);
-            radListDataItem1.Text = "يناير";
-            radListDataItem2.Text = "فبراير";
-            radListDataItem3.Text = "مارس";
-            radListDataItem4.Text = "ابريل";
-            radListDataItem5.Text = "مايو";
-            radListDataItem6.Text = "يونيو";
-            radListDataItem7.Text = "يوليو";
-            radListDataItem8.Text = "اغسطس";
-            radListDataItem9.Text = "سبتمبر";
-            radListDataItem10.Text = "اكتوبر";
-            radListDataItem11.Text = "نوفمبر";
-            radListDataItem12.Text = "ديسمبر";
-            this.MonthDrp.Items.Add(radListDataItem1);
-            this.MonthDrp.Items.Add(radListDataItem2);
-            this.MonthDrp.Items.Add(radListDataItem3);
-            this.MonthDrp.Items.Add(radListDataItem4);
-            this.MonthDrp.Items.Add(radListDataItem5);
-            this.MonthDrp.Items.Add(radListDataItem6);
-            this.MonthDrp.Items.Add(radListDataItem7);
-            this.MonthDrp.Items.Add(radListDataItem8);
-            this.MonthDrp.Items.Add(radListDataItem9);
-            this.MonthDrp.Items.Add(radListDataItem10);
-            this.MonthDrp.Items.Add(radListDataItem11);
-            this.MonthDrp.Items.Add(radListDataItem12);
-            this.MonthDrp.Location = new System.Drawing.Point(95, 4);
-            this.MonthDrp.Name = "MonthDrp";
-            this.MonthDrp.NullText = "Select Month";
-            this.MonthDrp.Size = new System.Drawing.Size(142, 25);
-            this.MonthDrp.TabIndex = 18;
-            // 
-            // radLabel5
-            // 
-            this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(252, 34);
-            this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(47, 31);
-            this.radLabel5.TabIndex = 17;
-            this.radLabel5.Text = ":السنة";
-            // 
-            // YearTxt
-            // 
-            this.YearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.YearTxt.Location = new System.Drawing.Point(95, 34);
-            this.YearTxt.Name = "YearTxt";
-            this.YearTxt.NullText = "Enter Year";
-            this.YearTxt.Size = new System.Drawing.Size(142, 25);
-            this.YearTxt.TabIndex = 15;
-            // 
-            // ShowFileBtn
-            // 
-            this.ShowFileBtn.Location = new System.Drawing.Point(17, 4);
-            this.ShowFileBtn.Name = "ShowFileBtn";
-            this.ShowFileBtn.Size = new System.Drawing.Size(72, 61);
-            this.ShowFileBtn.TabIndex = 19;
-            this.ShowFileBtn.Text = "عرض";
-            this.ShowFileBtn.Click += new System.EventHandler(this.ShowFileBtn_Click);
-            // 
             // ClmReviewFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1220,6 +1220,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NonConfrmGrd)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DaignosisNameTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractTypesTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClmLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClmsTxt)).EndInit();
@@ -1229,6 +1231,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).EndInit();
             this.radGroupBox4.ResumeLayout(false);
             this.radGroupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CountOfClaimsTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InMonthLb)).EndInit();
@@ -1258,6 +1262,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowFileBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpDrp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
@@ -1291,15 +1300,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractTypesTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DaignosisNameTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CountOfClaimsTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowFileBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

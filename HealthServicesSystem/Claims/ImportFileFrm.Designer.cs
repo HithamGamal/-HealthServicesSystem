@@ -489,7 +489,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "ImportFileFrm";
+            this.Text = "تصدير المطالبة";
             this.ThemeName = "Office2010Blue";
             this.Load += new System.EventHandler(this.ImportFileFrm_Load);
             this.panel1.ResumeLayout(false);
