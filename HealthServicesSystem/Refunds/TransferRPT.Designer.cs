@@ -149,7 +149,7 @@
             // 
             this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.8D), Telerik.Reporting.Drawing.Unit.Inch(2D));
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.8D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.2D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
             this.textBox17.Style.Font.Bold = true;
             this.textBox17.Style.Font.Name = "Calibri";
             this.textBox17.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Pixel(14D);
@@ -446,9 +446,9 @@
             // 
             // CoInsuranceType
             // 
-            this.CoInsuranceType.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.4D), Telerik.Reporting.Drawing.Unit.Inch(3D));
+            this.CoInsuranceType.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.5D), Telerik.Reporting.Drawing.Unit.Inch(3D));
             this.CoInsuranceType.Name = "CoInsuranceType";
-            this.CoInsuranceType.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.871D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
+            this.CoInsuranceType.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.771D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
             this.CoInsuranceType.Style.Font.Bold = true;
             this.CoInsuranceType.Style.Font.Name = "Calibri";
             this.CoInsuranceType.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
