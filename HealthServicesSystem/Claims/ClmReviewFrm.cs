@@ -23,6 +23,7 @@ namespace HealthServicesSystem.Claims
         public int _NonType = 0;
         public int _DicountType = 0;
         public int _UserId = LoginForm.Default.UserId;
+        public int _impId = 0;
 
         public void GetNonConfirm()
         {
@@ -250,6 +251,7 @@ namespace HealthServicesSystem.Claims
                         FileNoTxt.Text = q[0].FileNo.ToString();
                      
                         ImpNoTxt.Text = q[0].Id.ToString();
+                        _impId = q[0].Id;
                         CountOfClaimsTxt.Text = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted).Count().ToString ();
                     }
                 }
@@ -577,7 +579,7 @@ namespace HealthServicesSystem.Claims
                 int _ID = int.Parse(IdClmsTxt.Text);
                 dbContext db = new dbContext();
 
-                var qm = db.ClmMasterData.Where(p => p.NoOfFile == _ID && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0).OrderBy(p => p.NoOfFile).Take(1).ToList();
+                var qm = db.ClmMasterData.Where(p => p.NoOfFile == _ID && p.RowStatus != RowStatus.Deleted && p.ImpId ==_impId ).OrderBy(p => p.NoOfFile).Take(1).ToList();
                 if (qm.Count > 0)
                 {
                     VisitIdTxt.Text = qm[0].Id.ToString();
