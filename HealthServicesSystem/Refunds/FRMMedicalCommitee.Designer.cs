@@ -566,7 +566,7 @@
             this.GroupBox3.HeaderText = "";
             this.GroupBox3.Location = new System.Drawing.Point(3, 3);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(1359, 410);
+            this.GroupBox3.Size = new System.Drawing.Size(1356, 410);
             this.GroupBox3.TabIndex = 408;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.ThemeName = "Office2010Blue";
@@ -1185,10 +1185,10 @@
             this.ApproveRequest.Controls.Add(this.GroupBox3);
             this.ApproveRequest.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.ApproveRequest.ForeColor = System.Drawing.Color.DarkRed;
-            this.ApproveRequest.ItemSize = new System.Drawing.SizeF(707F, 29F);
-            this.ApproveRequest.Location = new System.Drawing.Point(10, 38);
+            this.ApproveRequest.ItemSize = new System.Drawing.SizeF(705F, 30F);
+            this.ApproveRequest.Location = new System.Drawing.Point(12, 40);
             this.ApproveRequest.Name = "ApproveRequest";
-            this.ApproveRequest.Size = new System.Drawing.Size(1374, 420);
+            this.ApproveRequest.Size = new System.Drawing.Size(1371, 417);
             this.ApproveRequest.Text = "خطابات الموافقة الطبية";
             this.ApproveRequest.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1197,7 +1197,7 @@
             this.CooperationCommittee.Controls.Add(this.radGroupBox2);
             this.CooperationCommittee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CooperationCommittee.ForeColor = System.Drawing.Color.Maroon;
-            this.CooperationCommittee.ItemSize = new System.Drawing.SizeF(674F, 29F);
+            this.CooperationCommittee.ItemSize = new System.Drawing.SizeF(671F, 30F);
             this.CooperationCommittee.Location = new System.Drawing.Point(10, 38);
             this.CooperationCommittee.Name = "CooperationCommittee";
             this.CooperationCommittee.Size = new System.Drawing.Size(1374, 420);

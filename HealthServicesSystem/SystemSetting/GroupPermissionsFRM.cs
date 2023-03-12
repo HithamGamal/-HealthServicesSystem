@@ -83,6 +83,7 @@ namespace HealthServicesSystem.SystemSetting
                 GroupName.DataSource = cut;
                 GroupName.DisplayMember = "GroupName";
                 GroupName.ValueMember = "Id";
+                GroupName.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 GroupName.SelectedIndex = -1;
                 GroupName.Text = "";
                 GroupId.Text = "";
