@@ -129,6 +129,12 @@
     <Compile Include="Chronics\FRMChronicWaitList.Designer.cs">
       <DependentUpon>FRMChronicWaitList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Claims\AddNonConfirmFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\AddNonConfirmFrm.Designer.cs">
+      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Claims\AddNonConfirmToClaims.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -798,6 +804,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chronics\FRMChronicWaitList.resx">
       <DependentUpon>FRMChronicWaitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\AddNonConfirmFrm.resx">
+      <DependentUpon>AddNonConfirmFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\AdvanceFillterFrm.resx">
       <DependentUpon>AdvanceFillterFrm.cs</DependentUpon>
