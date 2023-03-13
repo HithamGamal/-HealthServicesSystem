@@ -583,7 +583,14 @@ namespace HealthServicesSystem.Refunds
             InvoiceCostTB.Text = "";
             ExcutingCenter.Text = ""; 
             fromCenterDropdown .Text = ""; 
-            allow_cost_txt .Text = ""; 
+            allow_cost_txt .Text = "";
+            ExecptionCost.Visible = false;
+            radLabel17.Visible = false;
+            ExecptionCost.Text = "0";
+            ExecptionReason.SelectedIndex = -1;
+            CoInsuranceTypee.SelectedIndex = -1;
+
+
         }
         private void NewBTN_Click(object sender, EventArgs e)
         {
@@ -728,11 +735,11 @@ namespace HealthServicesSystem.Refunds
                     if (coInsuranceType == "")
                     {
                         rpt.CoInsuranceType.Value = "حسب أسعار التعاقد";
-                       
+                        rpt.CoInsuranceType.Value = coInsuranceType;
                     }
                     else
                     {
-                        rpt.CoInsuranceType.Value = cost;
+                        rpt.CoInsuranceType.Value = coInsuranceType;
                     }
                     
                 }
@@ -958,25 +965,47 @@ namespace HealthServicesSystem.Refunds
                PatientPrice += Convert.ToInt32( item.Cells["PatientPrice"].Value);
             }
 
-            if (allowCost > 0)
+            ////if (allowCost > 0)
+            ////{
+            ////    ExceptionReason form = new ExceptionReason();
+            ////    if (allowCost == PatientPrice)
+            ////    {
+            ////        form.CoInsuranceType.SelectedIndex = 0;
+            ////    }
+            ////    else
+            ////    {
+            ////        form.CoInsuranceType.SelectedIndex =1;
+            ////    }
+            ////    form.ExecptionCost.Text= allowCost.ToString();
+            ////    form.ShowDialog();
+            ////    reason = form.x;
+            ////    coInsuranceType = form.c;
+            ////    cost = form.cost;
+            ////}
+
+            if (CoInsuranceTypee .Text=="")
             {
-                ExceptionReason form = new ExceptionReason();
-                if (allowCost == PatientPrice)
+                reason ="";
+                coInsuranceType = "حسب اسعار التعاقد";
+                cost = "";
+            }
+            else
+            {
+                if (CoInsuranceTypee.SelectedIndex == 0)
                 {
-                    form.CoInsuranceType.SelectedIndex = 0;
+                    reason = ExecptionReason.Text;
+                    coInsuranceType = CoInsuranceTypee.Text;
+                    cost = ExecptionCost.Text;
                 }
                 else
                 {
-                    form.CoInsuranceType.SelectedIndex =1;
+                    reason = ExecptionReason.Text;
+                    coInsuranceType = CoInsuranceTypee.Text + ExecptionCost.Text;
+                    cost = ExecptionCost.Text;
                 }
-                form.ExecptionCost.Text= allowCost.ToString();
-                form.ShowDialog();
-                reason = form.x;
-                coInsuranceType = form.c;
-                cost = form.cost;
+                
             }
-           
-
+         
             MedicalCommitteeRequest rqst = new MedicalCommitteeRequest();
             MedicalCommitteeRequestDetails rqstDetails = new MedicalCommitteeRequestDetails();
 
@@ -1692,6 +1721,22 @@ namespace HealthServicesSystem.Refunds
             else
             {
                 InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[0];
+            }
+        }
+
+        private void CoInsuranceTypee_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if (CoInsuranceTypee.SelectedIndex == 1)
+            {
+                radLabel17.Visible = true;
+                ExecptionCost.Visible = true;
+                allow_cost_txt.Text = pat_cost_txt.Text;
+            }
+            else
+            {
+                radLabel17.Visible = false;
+                ExecptionCost.Visible = false;
+                allow_cost_txt.Text= pat_cost_txt.Text ;
             }
         }
     }

@@ -100,6 +100,7 @@
             // GroupName
             // 
             this.GroupName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GroupName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.GroupName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.GroupName.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupName.Location = new System.Drawing.Point(554, 11);
@@ -320,6 +321,7 @@
             this.radLabel1.Size = new System.Drawing.Size(191, 36);
             this.radLabel1.TabIndex = 4;
             this.radLabel1.Text = "قائمة الصلاحيات :";
+            this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel1.ThemeName = "Office2010Black";
             // 
             // radLabel2
@@ -334,6 +336,7 @@
             this.radLabel2.Size = new System.Drawing.Size(286, 38);
             this.radLabel2.TabIndex = 5;
             this.radLabel2.Text = "الصلاحيات الممنوحة :";
+            this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel2.ThemeName = "Office2010Black";
             // 
             // GroupPermissionsFRM

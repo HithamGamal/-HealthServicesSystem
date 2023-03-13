@@ -156,6 +156,8 @@ namespace HealthServicesSystem.SystemSetting
                 UserName.DataSource = cut;
                 UserName.DisplayMember = "FullName";
                 UserName.ValueMember = "Id";
+                UserName.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
                 UserName.SelectedIndex = -1;
                 UserName.Text = "";
                 UserId.Text = "";
