@@ -389,7 +389,7 @@ namespace HealthServicesSystem.Reclaims
             //{
             //    MessageBox.Show("لم يتم حفظ بيانات لهذه المماملة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             //    return;
-            //}
+            ////}
             using (dbContext db = new dbContext())
             {
                 DialogResult a = 0;
