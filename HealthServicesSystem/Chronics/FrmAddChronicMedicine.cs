@@ -236,7 +236,7 @@ namespace HealthServicesSystem.Reclaims
                                     StrUnit = Dbunit[0].Unit.Unit_Name;
                                 }
                                 //UnitInfo.Text = "تكتب بأصغر وحدة " + " " + "وأصغر وحدة هي " + StrUnit;
-                                quantity.Text = 1.ToString();
+                                quantity.Text = 30.ToString();
                             }
                         }
                     }
