@@ -110,6 +110,7 @@
             // UserName
             // 
             this.UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UserName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.UserName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.UserName.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserName.Location = new System.Drawing.Point(586, 5);
