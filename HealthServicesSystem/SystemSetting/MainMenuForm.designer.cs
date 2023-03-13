@@ -80,6 +80,8 @@
             this.EnableClms = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup40 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.SendClm = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup56 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.CenterListClaimsM = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab2 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup41 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.RequestClm = new Telerik.WinControls.UI.RadButtonElement();
@@ -548,7 +550,7 @@
             // 
             // ribbonTab8
             // 
-            this.ribbonTab8.IsSelected = false;
+            this.ribbonTab8.IsSelected = true;
             this.ribbonTab8.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup36,
             this.radRibbonBarGroup50,
@@ -556,7 +558,8 @@
             this.radRibbonBarGroup55,
             this.radRibbonBarGroup38,
             this.radRibbonBarGroup39,
-            this.radRibbonBarGroup40});
+            this.radRibbonBarGroup40,
+            this.radRibbonBarGroup56});
             this.ribbonTab8.Name = "ribbonTab8";
             this.ribbonTab8.Text = "الاستلام";
             this.ribbonTab8.UseMnemonic = false;
@@ -693,6 +696,25 @@
             this.SendClm.Name = "SendClm";
             this.SendClm.Text = "ارسال المطالبة";
             this.SendClm.Click += new System.EventHandler(this.SendClm_Click);
+            // 
+            // radRibbonBarGroup56
+            // 
+            this.radRibbonBarGroup56.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.CenterListClaimsM});
+            this.radRibbonBarGroup56.Name = "radRibbonBarGroup56";
+            this.radRibbonBarGroup56.Text = "تقرير قيمة  المطالبة";
+            // 
+            // CenterListClaimsM
+            // 
+            this.CenterListClaimsM.AutoSize = false;
+            this.CenterListClaimsM.Bounds = new System.Drawing.Rectangle(0, 0, 90, 66);
+            this.CenterListClaimsM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.CenterListClaimsM.Enabled = false;
+            this.CenterListClaimsM.Image = global::HealthServicesSystem.Properties.Resources.assignment_FILL0_wght400_GRAD0_opsz48;
+            this.CenterListClaimsM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CenterListClaimsM.Name = "CenterListClaimsM";
+            this.CenterListClaimsM.Text = "تقرير قيمة المطالبة";
+            this.CenterListClaimsM.Click += new System.EventHandler(this.CenterListClaimsM_Click);
             // 
             // ribbonTab2
             // 
@@ -962,7 +984,7 @@
             // 
             // ribbonTab3
             // 
-            this.ribbonTab3.IsSelected = true;
+            this.ribbonTab3.IsSelected = false;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup22,
             this.radRibbonBarGroup23,
@@ -1707,5 +1729,7 @@
         private Telerik.WinControls.UI.RadLabelElement date;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup55;
         private Telerik.WinControls.UI.RadButtonElement CheckClaimsM;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup56;
+        private Telerik.WinControls.UI.RadButtonElement CenterListClaimsM;
     }
 }

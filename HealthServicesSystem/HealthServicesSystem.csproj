@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>107</ApplicationRevision>
+    <ApplicationRevision>113</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -152,6 +152,24 @@
     </Compile>
     <Compile Include="Claims\AllocationFrm.Designer.cs">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ItemListClaims.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\ItemListClaims.Designer.cs">
+      <DependentUpon>ItemListClaims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\CenterListClaims.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\CenterListClaims.Designer.cs">
+      <DependentUpon>CenterListClaims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\CenterListClaimsRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\CenterListClaimsRepFrm.Designer.cs">
+      <DependentUpon>CenterListClaimsRepFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\CenterListNonConfirmReport.cs">
       <SubType>Component</SubType>
@@ -637,12 +655,6 @@
     <Compile Include="Reports\FRMreportChronics.designer.cs">
       <DependentUpon>FRMreportChronics.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\FRMRequests.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\FRMRequests.Designer.cs">
-      <DependentUpon>FRMRequests.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\FRMRPTMedicalEStrdad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -666,24 +678,6 @@
     </Compile>
     <Compile Include="Reports\RPTChronicBooksDetails.Designer.cs">
       <DependentUpon>RPTChronicBooksDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\RPTRequestByCost.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RPTRequestByCost.Designer.cs">
-      <DependentUpon>RPTRequestByCost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\RPTRequestsByCount.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RPTRequestsByCount.Designer.cs">
-      <DependentUpon>RPTRequestsByCount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\RPTRequestsByServices.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RPTRequestsByServices.Designer.cs">
-      <DependentUpon>RPTRequestsByServices.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RPTِApproveDWACount.cs">
       <SubType>Component</SubType>
@@ -813,6 +807,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\AllocationFrm.resx">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\ItemListClaims.resx">
+      <DependentUpon>ItemListClaims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\CenterListClaims.resx">
+      <DependentUpon>CenterListClaims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\CenterListClaimsRepFrm.resx">
+      <DependentUpon>CenterListClaimsRepFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CenterListNonConfirmReport.resx">
       <DependentUpon>CenterListNonConfirmReport.cs</DependentUpon>
@@ -1062,9 +1065,6 @@
     <EmbeddedResource Include="Reports\FRMreportChronics.resx">
       <DependentUpon>FRMreportChronics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\FRMRequests.resx">
-      <DependentUpon>FRMRequests.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FRMRPTMedicalEStrdad.resx">
       <DependentUpon>FRMRPTMedicalEStrdad.cs</DependentUpon>
     </EmbeddedResource>
@@ -1076,15 +1076,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPTChronicBooksDetails.resx">
       <DependentUpon>RPTChronicBooksDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RPTRequestByCost.resx">
-      <DependentUpon>RPTRequestByCost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RPTRequestsByCount.resx">
-      <DependentUpon>RPTRequestsByCount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RPTRequestsByServices.resx">
-      <DependentUpon>RPTRequestsByServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPTِApproveDWACount.resx">
       <DependentUpon>RPTِApproveDWACount.cs</DependentUpon>
@@ -1562,7 +1553,6 @@
       <Name>ModelDB</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

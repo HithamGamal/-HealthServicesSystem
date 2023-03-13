@@ -101,9 +101,9 @@ namespace HealthServicesSystem.Claims
                 {
                     q[0].Name = NameTxt.Text;
                     q[0].GroupId = int.Parse(GroupName.SelectedValue.ToString());
-                    q[0].DicountType = (DicountType)(ModelDB.DicountType)Enum.Parse(typeof(ModelDB.DicountType), DiscountFrm.Text  );
+                    q[0].DicountType = (DicountType)(ModelDB.DicountType)Enum.Parse(typeof(ModelDB.DicountType), DiscountFrm.Text);
                     q[0].ValueType = (ModelDB.ValueType)(ModelDB.ValueType)Enum.Parse(typeof(ModelDB.ValueType), DiscountType.Text);
-                    q[0].Value = Convert.ToDecimal( DiscoutValue.Text);
+                    q[0].Value = Convert.ToDecimal(DiscoutValue.Text);
                     q[0].UpdateUser = _UserId;
                     q[0].UpdateDate = PLC.getdatetime();
                     if (db.SaveChanges() > 0)

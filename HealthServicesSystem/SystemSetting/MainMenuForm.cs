@@ -713,10 +713,10 @@ namespace HealthServicesSystem
 
         private void AddNonConfirm_Click(object sender, EventArgs e)
         {
-            //AddNonConfirmFrm form = new AddNonConfirmFrm();
-            //form.MdiParent = this;
-            //form.WindowState = FormWindowState.Maximized;
-            //form.Show();
+            AddNonConfirmFrm form = new AddNonConfirmFrm();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
         }
 
         private void FrmAddChronicMedicine_Click(object sender, EventArgs e)
@@ -788,6 +788,14 @@ namespace HealthServicesSystem
         private void FRMmedicineOutPrice_Click_3(object sender, EventArgs e)
         {
             FRMmedicineOutPrice frm = new FRMmedicineOutPrice();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void CenterListClaimsM_Click(object sender, EventArgs e)
+        {
+            CenterListClaimsRepFrm frm = new CenterListClaimsRepFrm();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
