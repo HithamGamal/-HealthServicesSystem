@@ -112,7 +112,7 @@
             this.UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.UserName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.UserName.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserName.Location = new System.Drawing.Point(577, 3);
+            this.UserName.Location = new System.Drawing.Point(586, 5);
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(544, 32);
             this.UserName.TabIndex = 1;
@@ -348,6 +348,7 @@
             this.radLabel1.Size = new System.Drawing.Size(176, 34);
             this.radLabel1.TabIndex = 4;
             this.radLabel1.Text = "قائمة الصلاحيات :";
+            this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel1.ThemeName = "Office2010Black";
             // 
             // radLabel2
@@ -362,6 +363,7 @@
             this.radLabel2.Size = new System.Drawing.Size(191, 34);
             this.radLabel2.TabIndex = 5;
             this.radLabel2.Text = "الصلاحيات الممنوحة :";
+            this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel2.ThemeName = "Office2010Black";
             // 
             // UserPermissionsFRM
