@@ -272,7 +272,7 @@ namespace HealthServicesSystem.Reclaims
         private void NewMedical()
         {
             dwalist.SelectedIndex = -1;
-            quantity.Clear();
+            quantity.Text = 30.ToString();
             dwalist.Focus();
 
 
@@ -281,6 +281,7 @@ namespace HealthServicesSystem.Reclaims
         {
             UserId = LoginForm.Default.UserId;
             LocalityId = PLC.LocalityId;
+            quantity.Text = 30.ToString();
             using (dbContext db = new dbContext())
             {
 
