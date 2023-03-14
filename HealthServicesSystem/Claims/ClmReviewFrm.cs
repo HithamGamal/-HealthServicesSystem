@@ -24,6 +24,8 @@ namespace HealthServicesSystem.Claims
         public int _DicountType = 0;
         public int _UserId = LoginForm.Default.UserId;
         public int _impId = 0;
+        public int _m = 0;
+        public int _y = 0;
 
         public void GetNonConfirm()
         {
@@ -52,7 +54,7 @@ namespace HealthServicesSystem.Claims
             {
                 string  _insNo = InsuranceNoTxt.Text;
                 dbContext db = new dbContext();
-                var q = db.ReclaimMedicines.Where(p => p.Reclaim.InsurNo == _insNo && p.RowStatus != RowStatus.Deleted).Select(p => new
+                var q = db.ReclaimMedicines.Where(p => p.Reclaim.InsurNo == _insNo && p.RowStatus != RowStatus.Deleted && p.DateIn .Month>=_m && p.DateIn.Year == _y).Select(p => new
                 {
                     CenterName = db.ReclaimMedicineReasonsLists.Where(c => c.Id == p.Reclaim.ReclaimMedicalResonId).Select(c => c.MedicineReason).FirstOrDefault(),
                     Month = p.Reclaim.ReclaimDate.Month,
@@ -64,8 +66,8 @@ namespace HealthServicesSystem.Claims
                 }).ToList();
 
                 //ReClaims
-                string  InsNo1 = InsuranceNoTxt.Text;
-                var q1 = db.ClmDetailsData.Where(p => p.ClmMasterData.InsuranceNo ==InsNo1 && p.RowStatus != RowStatus.Deleted).Select(p => new
+                
+                var q1 = db.ClmDetailsData.Where(p => p.ClmMasterData.InsuranceNo == _insNo && p.RowStatus != RowStatus.Deleted && p.ClmMasterData .ImpId != _impId).Select(p => new
                 {
                     CenterName = p.ClmMasterData.CenterInfo.CenterName,
                     Month = p.ClmMasterData.Months,
@@ -75,8 +77,22 @@ namespace HealthServicesSystem.Claims
                     ProcessName = "مطالبة"
 
                 }).ToList();
-                q.Union(q1);
-                HistoryGrd.DataSource = q;
+
+                //Approve
+            
+                var q2 = db.ApproveMedicineDetails.Where(p => p.ApproveMedicine.InsurNo == _insNo && p.ApproveMedicine.RowStatus  != RowStatus.Deleted && p.ApproveMedicine .ApproveDate.Month ==_m && p.ApproveMedicine.ApproveDate .Year==_y).Select(p => new
+                {
+                    CenterName = db.CenterInfos .Where (s=> s.Id == p.ApproveMedicine.ExcCenterId).Select (s=> s.CenterName ).FirstOrDefault(),
+                    Month = p.ApproveMedicine.ApproveDate.Month,
+                    Year = p.ApproveMedicine.ApproveDate.Year ,
+                    VisitDate = p.ApproveMedicine.ApproveDate,
+                    GenericName = db.Medicines.Where (s=> s.Id == p.ServiceId ).Select(s=> s.Generic_name).FirstOrDefault(),
+                    ProcessName = "تصديق "
+
+                }).ToList();
+               var qq= q.Union(q1);
+               var qqq= qq.Union(q2);
+                HistoryGrd.DataSource = qqq;
             }
             catch
             {
@@ -183,9 +199,10 @@ namespace HealthServicesSystem.Claims
                     TradeName = p.TradeName,
                     UnitPrice = p.UnitPrice,
                     UnitQty = p.Qty,
-                    TotalPrice = p.TotalPrice
+                    TotalPrice = p.TotalPrice,
+                    DateIn= p.DateIn
                     
-                }).ToList();
+                }).OrderBy (p=> p.DateIn ).ToList();
                 if (q.Count > 0)
                 {
                     VisitCostTxt.Text = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Status == Status.Active && p.MasterId == MstrId).Sum(p => p.TotalPrice).ToString();
@@ -194,7 +211,7 @@ namespace HealthServicesSystem.Claims
 
                     // ===================== view Nonconfirm
                     GetNonConfirm();
-                    GetHistory();
+                    
                     GetStatistic();
 
 
@@ -251,6 +268,8 @@ namespace HealthServicesSystem.Claims
                         FileNoTxt.Text = q[0].FileNo.ToString();
                      
                         ImpNoTxt.Text = q[0].Id.ToString();
+                        _m = q[0].Month;
+                        _y = q[0].year;
                         
                         CountOfClaimsTxt.Text = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted).Count().ToString ();
                     }
@@ -631,6 +650,11 @@ namespace HealthServicesSystem.Claims
                 NonConfirmDrp.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
                 NonConfirmDrp.SelectedIndex = -1;
             }
+        }
+
+        private void IdClmsTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
