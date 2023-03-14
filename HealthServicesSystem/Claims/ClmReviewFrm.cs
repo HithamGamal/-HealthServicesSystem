@@ -91,7 +91,7 @@ namespace HealthServicesSystem.Claims
                 int _impId = int.Parse(ImpNoTxt.Text);
                 dbContext db = new dbContext();
 
-                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impId).ToList();
+                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impId).Take (1).ToList();
 
                 int _m = GetImpDet[0].Month;
                 int _y = GetImpDet[0].year;

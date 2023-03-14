@@ -63,7 +63,7 @@ namespace HealthServicesSystem.Claims
         private void AllocationFrm_Load(object sender, EventArgs e)
         {
             dbContext db = new dbContext();
-            var q = db.Users.Where(p => p.UserStatus == 1 && p.GroupId ==9).Select(p => new { Id = p.Id, UserName = p.FullName }).ToList();
+            var q = db.Users.Where(p => p.UserStatus == 1 && (p.GroupId ==9|| p.GroupId ==3)).Select(p => new { Id = p.Id, UserName = p.FullName }).ToList();
             if(q.Count>0)
             {
                 UserName.DataSource = q;
