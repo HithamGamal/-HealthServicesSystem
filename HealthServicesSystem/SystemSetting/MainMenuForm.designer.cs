@@ -69,7 +69,7 @@
             this.radRibbonBarGroup36 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.ExportClms = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup50 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.CompireClaims = new Telerik.WinControls.UI.RadButtonElement();
+            this.CompireClaimsM = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup37 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.AppoveClaims = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup55 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -586,21 +586,21 @@
             // radRibbonBarGroup50
             // 
             this.radRibbonBarGroup50.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.CompireClaims});
+            this.CompireClaimsM});
             this.radRibbonBarGroup50.Name = "radRibbonBarGroup50";
             this.radRibbonBarGroup50.Text = "مطابقة البيانات";
             // 
-            // CompireClaims
+            // CompireClaimsM
             // 
-            this.CompireClaims.AutoSize = false;
-            this.CompireClaims.Bounds = new System.Drawing.Rectangle(0, 0, 80, 66);
-            this.CompireClaims.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
-            this.CompireClaims.Enabled = false;
-            this.CompireClaims.Image = global::HealthServicesSystem.Properties.Resources.compare_FILL0_wght400_GRAD0_opsz48;
-            this.CompireClaims.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.CompireClaims.Name = "CompireClaims";
-            this.CompireClaims.Text = "CompireClaims";
-            this.CompireClaims.Click += new System.EventHandler(this.CompireClaims_Click);
+            this.CompireClaimsM.AutoSize = false;
+            this.CompireClaimsM.Bounds = new System.Drawing.Rectangle(0, 0, 80, 66);
+            this.CompireClaimsM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.CompireClaimsM.Enabled = false;
+            this.CompireClaimsM.Image = global::HealthServicesSystem.Properties.Resources.compare_FILL0_wght400_GRAD0_opsz48;
+            this.CompireClaimsM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CompireClaimsM.Name = "CompireClaimsM";
+            this.CompireClaimsM.Text = "CompireClaims";
+            this.CompireClaimsM.Click += new System.EventHandler(this.CompireClaims_Click);
             // 
             // radRibbonBarGroup37
             // 
@@ -1709,7 +1709,7 @@
         private Telerik.WinControls.UI.RadButtonElement EnableClms;
         private Telerik.WinControls.UI.RadButtonElement SendClm;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup50;
-        private Telerik.WinControls.UI.RadButtonElement CompireClaims;
+        private Telerik.WinControls.UI.RadButtonElement CompireClaimsM;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup51;
         private Telerik.WinControls.UI.RadButtonElement AddNonConfirm;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup52;

@@ -23,11 +23,11 @@ namespace HealthServicesSystem.Claims
         {
             try
             {
-                int _m = MonthDrp.SelectedIndex + 1;
-                int _y = int.Parse(YearTxt.Text);
+                //int _m = MonthDrp.SelectedIndex + 1;
+                //int _y = int.Parse(YearTxt.Text);
                 dbContext db = new dbContext();
                 UnAllocatGrd .DataSource = null;
-                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Allocation  && p.Month == _m && p.year == _y).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
+                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Allocation  ).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
                 if (q.Count > 0)
                 {
                     UnAllocatGrd.DataSource = q;
@@ -43,11 +43,11 @@ namespace HealthServicesSystem.Claims
         {
             try
             {
-                int _m = MonthDrp.SelectedIndex + 1;
-                int _y = int.Parse(YearTxt.Text);
+                //int _m = MonthDrp.SelectedIndex + 1;
+                //int _y = int.Parse(YearTxt.Text);
                 dbContext db = new dbContext();
                 AllocatGrd.DataSource = null;
-                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Review && p.Month == _m && p.year == _y).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
+                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Review ).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
                 if (q.Count > 0)
                 {
                     AllocatGrd.DataSource = q;
@@ -63,7 +63,7 @@ namespace HealthServicesSystem.Claims
         private void AllocationFrm_Load(object sender, EventArgs e)
         {
             dbContext db = new dbContext();
-            var q = db.Users.Where(p => p.UserStatus == 1 && p.GroupId ==9).Select(p => new { Id = p.Id, UserName = p.FullName }).ToList();
+            var q = db.Users.Where(p => p.UserStatus == 1 && (p.GroupId ==9|| p.GroupId ==3)).Select(p => new { Id = p.Id, UserName = p.FullName }).ToList();
             if(q.Count>0)
             {
                 UserName.DataSource = q;
@@ -76,16 +76,7 @@ namespace HealthServicesSystem.Claims
 
         private void ViewBtn_Click(object sender, EventArgs e)
         {
-            if (MonthDrp.SelectedIndex == -1)
-            {
-                MessageBox.Show("اختر الشهر ");
-                return;
-            }
-            if (YearTxt.Text.Length != 4)
-            {
-                MessageBox.Show("اختر السنة ");
-                return;
-            }
+          
             FillNotAllocat();
             FillAllocat ();
         }

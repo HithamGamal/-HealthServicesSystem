@@ -153,12 +153,6 @@
     <Compile Include="Claims\AllocationFrm.Designer.cs">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Claims\ItemListClaims.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Claims\ItemListClaims.Designer.cs">
-      <DependentUpon>ItemListClaims.cs</DependentUpon>
-    </Compile>
     <Compile Include="Claims\CenterListClaims.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -272,6 +266,12 @@
     </Compile>
     <Compile Include="Claims\ImportFileFrm.Designer.cs">
       <DependentUpon>ImportFileFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\ItemListClaims.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\ItemListClaims.Designer.cs">
+      <DependentUpon>ItemListClaims.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\ItemsReport.cs">
       <SubType>Component</SubType>
@@ -808,9 +808,6 @@
     <EmbeddedResource Include="Claims\AllocationFrm.resx">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Claims\ItemListClaims.resx">
-      <DependentUpon>ItemListClaims.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Claims\CenterListClaims.resx">
       <DependentUpon>CenterListClaims.cs</DependentUpon>
     </EmbeddedResource>
@@ -867,6 +864,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ImportFileFrm.resx">
       <DependentUpon>ImportFileFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\ItemListClaims.resx">
+      <DependentUpon>ItemListClaims.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ItemsReport.resx">
       <DependentUpon>ItemsReport.cs</DependentUpon>

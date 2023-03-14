@@ -91,7 +91,7 @@ namespace HealthServicesSystem.Claims
                 int _impId = int.Parse(ImpNoTxt.Text);
                 dbContext db = new dbContext();
 
-                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impId).ToList();
+                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impId).Take (1).ToList();
 
                 int _m = GetImpDet[0].Month;
                 int _y = GetImpDet[0].year;
@@ -241,7 +241,7 @@ namespace HealthServicesSystem.Claims
                 dbContext db = new dbContext();
                 if (ImpDrp.SelectedValue != null)
                 {
-                    int _impId = int.Parse(ImpDrp.SelectedValue.ToString());
+                    _impId = int.Parse(ImpDrp.SelectedValue.ToString());
 
                     var q = db.ClmImpFile.Where(p => p.Id == _impId && p.RowStatus != RowStatus.Deleted).ToList();
                     if (q.Count > 0)
@@ -251,7 +251,7 @@ namespace HealthServicesSystem.Claims
                         FileNoTxt.Text = q[0].FileNo.ToString();
                      
                         ImpNoTxt.Text = q[0].Id.ToString();
-                        _impId = q[0].Id;
+                        
                         CountOfClaimsTxt.Text = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted).Count().ToString ();
                     }
                 }
