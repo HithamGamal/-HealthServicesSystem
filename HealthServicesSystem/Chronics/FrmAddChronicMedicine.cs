@@ -236,7 +236,7 @@ namespace HealthServicesSystem.Reclaims
                                     StrUnit = Dbunit[0].Unit.Unit_Name;
                                 }
                                 //UnitInfo.Text = "تكتب بأصغر وحدة " + " " + "وأصغر وحدة هي " + StrUnit;
-                                quantity.Text = 1.ToString();
+                                quantity.Text = 30.ToString();
                             }
                         }
                     }
@@ -272,7 +272,7 @@ namespace HealthServicesSystem.Reclaims
         private void NewMedical()
         {
             dwalist.SelectedIndex = -1;
-            quantity.Clear();
+            quantity.Text = 30.ToString();
             dwalist.Focus();
 
 
@@ -281,6 +281,7 @@ namespace HealthServicesSystem.Reclaims
         {
             UserId = LoginForm.Default.UserId;
             LocalityId = PLC.LocalityId;
+            quantity.Text = 30.ToString();
             using (dbContext db = new dbContext())
             {
 
@@ -388,7 +389,7 @@ namespace HealthServicesSystem.Reclaims
             //{
             //    MessageBox.Show("لم يتم حفظ بيانات لهذه المماملة", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             //    return;
-            //}
+            ////}
             using (dbContext db = new dbContext())
             {
                 DialogResult a = 0;

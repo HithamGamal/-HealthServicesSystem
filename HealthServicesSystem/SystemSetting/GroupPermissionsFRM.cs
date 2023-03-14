@@ -129,7 +129,8 @@ namespace HealthServicesSystem.SystemSetting
                         if (x > 1)
                         {
                             var u = (from usr in db.GroupPermissions.Where(p => p.GroupId == x)
-                                     join r in db.SysForms.Where(p => p.SystemsId == SysId)
+                                     join r in db.SysForms
+                                     //.Where(p => p.SystemsId == SysId)
                                          on usr.FormId equals r.Id
                                      select new
                                      {
@@ -157,7 +158,9 @@ namespace HealthServicesSystem.SystemSetting
                             {
                                 var v1 = db.GroupPermissions.Select(x1 => x1.FormId).ToArray();
                                 var otherObjects =
-                                    db.SysForms.Where(x1 => x1.SystemsId == SysId && v1.Contains(x1.Id))
+                                    db.SysForms.Where(x1 =>
+                                    //x1.SystemsId == SysId && 
+                                    v1.Contains(x1.Id))
                                         .Select(x1 => new { FormId = x1.Id, FormName = x1.ArabicFormName })
                                         .ToList();
 
@@ -176,7 +179,9 @@ namespace HealthServicesSystem.SystemSetting
                             {
                                 var v1 = db.GroupPermissions.Where(p => p.GroupId == x).Select(x1 => x1.FormId).ToArray();
                                 var otherObjects =
-                                    db.SysForms.Where(x1 => x1.SystemsId == SysId && !v1.Contains(x1.Id))
+                                    db.SysForms.Where(x1 => 
+                                    //x1.SystemsId == SysId && 
+                                    v1.Contains(x1.Id))
                                         .Select(x1 => new { FormId = x1.Id, FormName = x1.ArabicFormName })
                                         .ToList();
 
@@ -224,7 +229,9 @@ namespace HealthServicesSystem.SystemSetting
                             {
                                 var v1 = db.GroupPermissions.Select(x1 => x1.FormId).ToArray();
                                 var otherObjects =
-                                    db.SysForms.Where(x1 => x1.SystemsId == SysId && v1.Contains(x1.Id))
+                                    db.SysForms.Where(x1 => 
+                                    //x1.SystemsId == SysId && 
+                                    v1.Contains(x1.Id))
                                         .Select(x1 => new { FormId = x1.Id, FormName = x1.ArabicFormName })
                                         .ToList();
 
@@ -243,7 +250,9 @@ namespace HealthServicesSystem.SystemSetting
                             {
                                 var v1 = db.GroupPermissions.Where(p => p.GroupId == x).Select(x1 => x1.FormId).ToArray();
                                 var otherObjects =
-                                    db.SysForms.Where(x1 => x1.SystemsId == SysId && !v1.Contains(x1.Id))
+                                    db.SysForms.Where(x1 => 
+                                    //x1.SystemsId == SysId && 
+                                    v1.Contains(x1.Id))
                                         .Select(x1 => new { FormId = x1.Id, FormName = x1.ArabicFormName })
                                         .ToList();
 
@@ -310,7 +319,8 @@ namespace HealthServicesSystem.SystemSetting
                     var SysId = db.UserGroups.Where(p => p.Id == x).ToList()[0].SystemId;
 
                     var u = (from usr in db.GroupPermissions.Where(p => p.GroupId == x)
-                             join r in db.SysForms.Where(p => p.SystemsId == SysId)
+                             join r in db.SysForms
+                             //.Where(p => p.SystemsId == SysId)
                                  on usr.FormId equals r.Id
                              select new
                              {
@@ -335,7 +345,9 @@ namespace HealthServicesSystem.SystemSetting
                     }
                     var v1 = db.GroupPermissions.Where(p => p.GroupId == x).Select(x1 => x1.FormId).ToArray();
                     var otherObjects =
-                        db.SysForms.Where(x1 => x1.SystemsId == SysId && !v1.Contains(x1.Id))
+                        db.SysForms.Where(x1 =>
+                        //x1.SystemsId == SysId && 
+                        v1.Contains(x1.Id))
                             .Select(x1 => new { FormId = x1.Id, FormName = x1.ArabicFormName })
                             .ToList();
 
@@ -379,7 +391,8 @@ namespace HealthServicesSystem.SystemSetting
                         var SysId = db.UserGroups.Where(p => p.Id == x).ToList()[0].SystemId;
 
                         var u = (from usr in db.GroupPermissions.Where(p => p.GroupId == x)
-                                 join r in db.SysForms.Where(p => p.SystemsId == SysId)
+                                 join r in db.SysForms
+                                 //.Where(p => p.SystemsId == SysId)
                                      on usr.FormId equals r.Id
                                  select new
                                  {
@@ -404,7 +417,9 @@ namespace HealthServicesSystem.SystemSetting
                         }
                         var v1 = db.GroupPermissions.Where(p => p.GroupId == x).Select(x1 => x1.FormId).ToArray();
                         var otherObjects =
-                            db.SysForms.Where(x1 => x1.SystemsId == SysId && !v1.Contains(x1.Id))
+                            db.SysForms.Where(x1 => 
+                            //x1.SystemsId == SysId && 
+                            v1.Contains(x1.Id))
                                 .Select(x1 => new { FormId = x1.Id, FormName = x1.ArabicFormName })
                                 .ToList();
 
