@@ -352,9 +352,8 @@ namespace HealthServicesSystem.SystemSetting
 
                                     var v1 = db.UserPermissions.Select(x1 => x1.FormId).ToArray();
                                     var otherObjects =
-                                        db.SysForms.Where(x1 =>
-                                            // x1.SystemsId ==  SysId && 
-                                            v1.Contains(x1.Id))
+                                        db.SysForms
+                                        //.Where(x1 => x1.SystemsId ==  SysId && !v1.Contains(x1.Id))
                                             .Select(x1 => new { FormId = x1.Id, FormEnglishName = x1.ArabicFormName })
                                             .ToList();
 
@@ -368,7 +367,7 @@ namespace HealthServicesSystem.SystemSetting
                                     var otherObjects =
                                         db.SysForms.Where(x1 =>
                                             // x1.SystemsId ==  SysId && 
-                                            v1.Contains(x1.Id))
+                                            !v1.Contains(x1.Id))
                                             .Select(x1 => new { FormId = x1.Id, FormEnglishName = x1.ArabicFormName })
                                             .ToList();
 
@@ -434,7 +433,7 @@ namespace HealthServicesSystem.SystemSetting
                                         var otherObjects =
                                             db.SysForms.Where(x1 => 
                                             //x1.SystemsId == SysId && 
-                                            v1.Contains(x1.Id))
+                                           ! v1.Contains(x1.Id))
                                                 .Select(x1 => new { FormId = x1.Id, FormEnglishName = x1.ArabicFormName })
                                                 .ToList();
                                         GRDForm.DataSource = otherObjects;
