@@ -624,10 +624,8 @@ namespace HealthServicesSystem.Reclaims
                         Estr.DataSource = FrHistory;
                         double TotalOfMoney = Convert.ToDouble(FrHistory[0].BillsTotal);
                         double TotalOfEstrdad = Convert.ToDouble(FrHistory.Sum(p => p.ReclaimCost));
-                        //MessageBox.Show(TotalOfEstrdad.ToString());
                         Estr.MoneyWritten.Value = PLC.NumToStr(TotalOfMoney).ToString();
                         Estr.MoneyPaiedWritten.Value = PLC.NumToStr(TotalOfEstrdad).ToString();
-                        // MessageBox.Show(Estr.MoneyPaiedWritten.Value.ToString());
                         Estr.FormName.Value = "استمارة أ";
                         var GetInfo = db.CompanySettings.FirstOrDefault();
                         Estr.ComanyName.Value = GetInfo.CompanyName;
@@ -647,7 +645,7 @@ namespace HealthServicesSystem.Reclaims
                         ReportProcessor pr = new ReportProcessor();
                         PrintDialog pg = new PrintDialog();
                         pr.PrintReport(Estr, pg.PrinterSettings);
-                        // FRMEstrdadWaiting.Default.ShowDialog();
+                        //  FRMEstrdadWaiting.Default.ShowDialog();
                     }
                 }
             }
