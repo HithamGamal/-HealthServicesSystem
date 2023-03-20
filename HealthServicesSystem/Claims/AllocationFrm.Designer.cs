@@ -28,18 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem7 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem8 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem9 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -76,17 +64,13 @@
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.UserName = new Telerik.WinControls.UI.RadDropDownList();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.MonthDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.ViewBtn = new Telerik.WinControls.UI.RadButton();
-            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.YearTxt = new Telerik.WinControls.UI.RadTextBox();
             this.AllocatGrd = new Telerik.WinControls.UI.RadGridView();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.UnAllocatGrd = new Telerik.WinControls.UI.RadGridView();
             this.ExpBtn = new Telerik.WinControls.UI.RadButton();
             this.PrintBtn = new Telerik.WinControls.UI.RadButton();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
-            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
@@ -102,21 +86,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.UserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllocatGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllocatGrd.MasterTemplate)).BeginInit();
             this.AllocatGrd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAllocatGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAllocatGrd.MasterTemplate)).BeginInit();
             this.UnAllocatGrd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,9 +135,9 @@
             this.radGroupBox2.Controls.Add(this.radLabel1);
             this.radGroupBox2.Controls.Add(this.UserName);
             this.radGroupBox2.HeaderText = "توزيع المطالبة";
-            this.radGroupBox2.Location = new System.Drawing.Point(3, 260);
+            this.radGroupBox2.Location = new System.Drawing.Point(0, 118);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(232, 344);
+            this.radGroupBox2.Size = new System.Drawing.Size(232, 415);
             this.radGroupBox2.TabIndex = 16;
             this.radGroupBox2.Text = "توزيع المطالبة";
             // 
@@ -250,86 +230,22 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.radLabel2);
-            this.radGroupBox1.Controls.Add(this.MonthDrp);
             this.radGroupBox1.Controls.Add(this.ViewBtn);
-            this.radGroupBox1.Controls.Add(this.radLabel3);
-            this.radGroupBox1.Controls.Add(this.YearTxt);
             this.radGroupBox1.HeaderText = "عرض البيانات";
             this.radGroupBox1.Location = new System.Drawing.Point(3, 3);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(232, 251);
+            this.radGroupBox1.Size = new System.Drawing.Size(232, 109);
             this.radGroupBox1.TabIndex = 15;
             this.radGroupBox1.Text = "عرض البيانات";
             // 
-            // radLabel2
-            // 
-            this.radLabel2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel2.Location = new System.Drawing.Point(158, 22);
-            this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(51, 31);
-            this.radLabel2.TabIndex = 12;
-            this.radLabel2.Text = ": الشهر";
-            // 
-            // MonthDrp
-            // 
-            this.MonthDrp.Font = new System.Drawing.Font("Segoe UI", 11F);
-            radListDataItem1.Text = "يناير";
-            radListDataItem2.Text = "فبراير";
-            radListDataItem3.Text = "مارس";
-            radListDataItem4.Text = "ابريل";
-            radListDataItem5.Text = "مايو";
-            radListDataItem6.Text = "يونيو";
-            radListDataItem7.Text = "يوليو";
-            radListDataItem8.Text = "اغسطس";
-            radListDataItem9.Text = "سبتمبر";
-            radListDataItem10.Text = "اكتوبر";
-            radListDataItem11.Text = "نوفمبر";
-            radListDataItem12.Text = "ديسمبر";
-            this.MonthDrp.Items.Add(radListDataItem1);
-            this.MonthDrp.Items.Add(radListDataItem2);
-            this.MonthDrp.Items.Add(radListDataItem3);
-            this.MonthDrp.Items.Add(radListDataItem4);
-            this.MonthDrp.Items.Add(radListDataItem5);
-            this.MonthDrp.Items.Add(radListDataItem6);
-            this.MonthDrp.Items.Add(radListDataItem7);
-            this.MonthDrp.Items.Add(radListDataItem8);
-            this.MonthDrp.Items.Add(radListDataItem9);
-            this.MonthDrp.Items.Add(radListDataItem10);
-            this.MonthDrp.Items.Add(radListDataItem11);
-            this.MonthDrp.Items.Add(radListDataItem12);
-            this.MonthDrp.Location = new System.Drawing.Point(5, 62);
-            this.MonthDrp.Name = "MonthDrp";
-            this.MonthDrp.NullText = "Select Month";
-            this.MonthDrp.Size = new System.Drawing.Size(204, 25);
-            this.MonthDrp.TabIndex = 14;
-            // 
             // ViewBtn
             // 
-            this.ViewBtn.Location = new System.Drawing.Point(5, 176);
+            this.ViewBtn.Location = new System.Drawing.Point(5, 35);
             this.ViewBtn.Name = "ViewBtn";
             this.ViewBtn.Size = new System.Drawing.Size(204, 36);
             this.ViewBtn.TabIndex = 10;
             this.ViewBtn.Text = "عرض";
             this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);
-            // 
-            // radLabel3
-            // 
-            this.radLabel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(162, 93);
-            this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(47, 31);
-            this.radLabel3.TabIndex = 13;
-            this.radLabel3.Text = ":السنة";
-            // 
-            // YearTxt
-            // 
-            this.YearTxt.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.YearTxt.Location = new System.Drawing.Point(5, 130);
-            this.YearTxt.Name = "YearTxt";
-            this.YearTxt.NullText = "Enter Year";
-            this.YearTxt.Size = new System.Drawing.Size(204, 25);
-            this.YearTxt.TabIndex = 11;
             // 
             // AllocatGrd
             // 
@@ -416,6 +332,24 @@
             this.AllocatGrd.TabIndex = 3;
             this.AllocatGrd.TitleText = "قائمة الملفات الموزعة";
             this.AllocatGrd.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.AllocatGrd_CommandCellClick);
+            // 
+            // radButton1
+            // 
+            this.radButton1.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
+            this.radButton1.Location = new System.Drawing.Point(832, 5);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(95, 33);
+            this.radButton1.TabIndex = 33;
+            this.radButton1.Text = "تصدير ";
+            // 
+            // radButton2
+            // 
+            this.radButton2.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
+            this.radButton2.Location = new System.Drawing.Point(930, 5);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(95, 33);
+            this.radButton2.TabIndex = 32;
+            this.radButton2.Text = "طباعة";
             // 
             // UnAllocatGrd
             // 
@@ -518,24 +452,6 @@
             this.PrintBtn.TabIndex = 30;
             this.PrintBtn.Text = "طباعة";
             // 
-            // radButton1
-            // 
-            this.radButton1.Image = global::HealthServicesSystem.Properties.Resources.system_update_alt_FILL0_wght100_GRAD0_opsz24;
-            this.radButton1.Location = new System.Drawing.Point(832, 5);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(95, 33);
-            this.radButton1.TabIndex = 33;
-            this.radButton1.Text = "تصدير ";
-            // 
-            // radButton2
-            // 
-            this.radButton2.Image = global::HealthServicesSystem.Properties.Resources.print_FILL0_wght100_GRAD0_opsz24;
-            this.radButton2.Location = new System.Drawing.Point(930, 5);
-            this.radButton2.Name = "radButton2";
-            this.radButton2.Size = new System.Drawing.Size(95, 33);
-            this.radButton2.TabIndex = 32;
-            this.radButton2.Text = "طباعة";
-            // 
             // AllocationFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -566,24 +482,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.UserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YearTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllocatGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllocatGrd)).EndInit();
             this.AllocatGrd.ResumeLayout(false);
             this.AllocatGrd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAllocatGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnAllocatGrd)).EndInit();
             this.UnAllocatGrd.ResumeLayout(false);
             this.UnAllocatGrd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -592,10 +503,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Telerik.WinControls.UI.RadDropDownList MonthDrp;
-        private Telerik.WinControls.UI.RadLabel radLabel2;
-        private Telerik.WinControls.UI.RadLabel radLabel3;
-        private Telerik.WinControls.UI.RadTextBox YearTxt;
         private Telerik.WinControls.UI.RadButton ViewBtn;
         private Telerik.WinControls.UI.RadGridView UnAllocatGrd;
         private System.Windows.Forms.Panel panel2;

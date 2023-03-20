@@ -23,11 +23,10 @@ namespace HealthServicesSystem.Claims
         {
             try
             {
-                int _m = MonthDrp.SelectedIndex + 1;
-                int _y = int.Parse(YearTxt.Text);
+               
                 dbContext db = new dbContext();
                 NotEnabledGrd.DataSource = null;
-                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Receipt && p.Month ==_m && p.year==_y).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
+                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Receipt ).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
                 if (q.Count > 0)
                 {
                     NotEnabledGrd.DataSource = q;
@@ -43,11 +42,10 @@ namespace HealthServicesSystem.Claims
         {
             try
             {
-                int _m = MonthDrp.SelectedIndex + 1;
-                int _y = int.Parse(YearTxt.Text);
+              
                 dbContext db = new dbContext();
                 EnabledGrd.DataSource = null;
-                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Enabled  && p.Month == _m && p.year == _y).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
+                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Enabled  ).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
                 if (q.Count > 0)
                 {
                     EnabledGrd.DataSource = q;
@@ -65,16 +63,7 @@ namespace HealthServicesSystem.Claims
 
         private void ViewBtn_Click(object sender, EventArgs e)
         {
-          if(MonthDrp.SelectedIndex ==-1)
-            {
-                MessageBox.Show("اختر الشهر ");
-                return;
-            }
-            if (YearTxt.Text.Length != 4)
-            {
-                MessageBox.Show("اختر السنة ");
-                return;
-            }
+       
             FillEnabled();
             FillNotEnabled();
         }

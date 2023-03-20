@@ -35,6 +35,7 @@
             Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem7 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -566,7 +567,7 @@
             this.GroupBox3.HeaderText = "";
             this.GroupBox3.Location = new System.Drawing.Point(3, 3);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(1356, 410);
+            this.GroupBox3.Size = new System.Drawing.Size(1353, 410);
             this.GroupBox3.TabIndex = 408;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.ThemeName = "Office2010Blue";
@@ -631,10 +632,14 @@
             radListDataItem4.Text = "استثناء مدير الادارة العامة للخدمات الصحية";
             radListDataItem5.Text = "استثناء مدير الخدمات الطبية";
             radListDataItem6.Text = "العاملين بالهيئة";
+            radListDataItem7.Text = "لغير العاملين بالهيئة";
+            radListDataItem7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            radListDataItem7.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.ExecptionReason.Items.Add(radListDataItem3);
             this.ExecptionReason.Items.Add(radListDataItem4);
             this.ExecptionReason.Items.Add(radListDataItem5);
             this.ExecptionReason.Items.Add(radListDataItem6);
+            this.ExecptionReason.Items.Add(radListDataItem7);
             this.ExecptionReason.Location = new System.Drawing.Point(791, 193);
             this.ExecptionReason.Name = "ExecptionReason";
             this.ExecptionReason.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
