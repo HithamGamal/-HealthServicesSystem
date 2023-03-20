@@ -43,6 +43,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
@@ -167,46 +168,51 @@
             gridViewTextBoxColumn7.HeaderText = "المخدم";
             gridViewTextBoxColumn7.Name = "ClientId";
             gridViewTextBoxColumn7.Width = 100;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "VisitDate";
-            gridViewTextBoxColumn8.HeaderText = "تاريخ الزيارة";
-            gridViewTextBoxColumn8.Name = "VisitDate";
-            gridViewTextBoxColumn8.Width = 80;
+            gridViewTextBoxColumn8.FieldName = "VisitNo";
+            gridViewTextBoxColumn8.HeaderText = "رقم الزيارة";
+            gridViewTextBoxColumn8.Name = "VisitNo";
+            gridViewTextBoxColumn8.ReadOnly = true;
+            gridViewTextBoxColumn8.Width = 70;
             gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "VisitType";
-            gridViewTextBoxColumn9.HeaderText = "نوع الروشتة";
-            gridViewTextBoxColumn9.Name = "VisitType";
-            gridViewTextBoxColumn9.Width = 120;
+            gridViewTextBoxColumn9.FieldName = "VisitDate";
+            gridViewTextBoxColumn9.HeaderText = "تاريخ الزيارة";
+            gridViewTextBoxColumn9.Name = "VisitDate";
+            gridViewTextBoxColumn9.Width = 80;
             gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "Daignosis";
-            gridViewTextBoxColumn10.HeaderText = "التشخيص";
-            gridViewTextBoxColumn10.Name = "Daignosis";
-            gridViewTextBoxColumn10.Width = 180;
+            gridViewTextBoxColumn10.FieldName = "VisitType";
+            gridViewTextBoxColumn10.HeaderText = "نوع الروشتة";
+            gridViewTextBoxColumn10.Name = "VisitType";
+            gridViewTextBoxColumn10.Width = 120;
             gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "GenericName";
-            gridViewTextBoxColumn11.HeaderText = "الاسم العلمي";
-            gridViewTextBoxColumn11.Name = "GenericName";
-            gridViewTextBoxColumn11.Width = 250;
+            gridViewTextBoxColumn11.FieldName = "Daignosis";
+            gridViewTextBoxColumn11.HeaderText = "التشخيص";
+            gridViewTextBoxColumn11.Name = "Daignosis";
+            gridViewTextBoxColumn11.Width = 180;
             gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "TradeName";
-            gridViewTextBoxColumn12.HeaderText = "الاسم التجاري";
-            gridViewTextBoxColumn12.Name = "TradeName";
+            gridViewTextBoxColumn12.FieldName = "GenericName";
+            gridViewTextBoxColumn12.HeaderText = "الاسم العلمي";
+            gridViewTextBoxColumn12.Name = "GenericName";
             gridViewTextBoxColumn12.Width = 250;
             gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.FieldName = "Qty";
-            gridViewTextBoxColumn13.HeaderText = "الكمية";
-            gridViewTextBoxColumn13.Name = "Qty";
-            gridViewTextBoxColumn13.Width = 80;
+            gridViewTextBoxColumn13.FieldName = "TradeName";
+            gridViewTextBoxColumn13.HeaderText = "الاسم التجاري";
+            gridViewTextBoxColumn13.Name = "TradeName";
+            gridViewTextBoxColumn13.Width = 250;
             gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.FieldName = "UnitPrice";
-            gridViewTextBoxColumn14.HeaderText = "سعر الوحدة";
-            gridViewTextBoxColumn14.Name = "UnitPrice";
+            gridViewTextBoxColumn14.FieldName = "Qty";
+            gridViewTextBoxColumn14.HeaderText = "الكمية";
+            gridViewTextBoxColumn14.Name = "Qty";
             gridViewTextBoxColumn14.Width = 80;
             gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.FieldName = "TotalPrice";
-            gridViewTextBoxColumn15.HeaderText = "الجملة";
-            gridViewTextBoxColumn15.Name = "TotalPrice";
-            gridViewTextBoxColumn15.Width = 100;
+            gridViewTextBoxColumn15.FieldName = "UnitPrice";
+            gridViewTextBoxColumn15.HeaderText = "سعر الوحدة";
+            gridViewTextBoxColumn15.Name = "UnitPrice";
+            gridViewTextBoxColumn15.Width = 80;
+            gridViewTextBoxColumn16.EnableExpressionEditor = false;
+            gridViewTextBoxColumn16.FieldName = "TotalPrice";
+            gridViewTextBoxColumn16.HeaderText = "الجملة";
+            gridViewTextBoxColumn16.Name = "TotalPrice";
+            gridViewTextBoxColumn16.Width = 100;
             this.radGridView2.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -222,7 +228,8 @@
             gridViewTextBoxColumn12,
             gridViewTextBoxColumn13,
             gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15});
+            gridViewTextBoxColumn15,
+            gridViewTextBoxColumn16});
             this.radGridView2.MasterTemplate.EnableFiltering = true;
             this.radGridView2.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView2.Name = "radGridView2";

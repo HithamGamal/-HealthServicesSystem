@@ -89,7 +89,8 @@ namespace HealthServicesSystem.Claims
                TotalPrice = p.TotalPrice ,
                CenterId = p.ClmMasterData.CenterId ,
                Month = p.ClmMasterData.Months,
-               Year= p.ClmMasterData.Years
+               Year= p.ClmMasterData.Years,
+                VisitNo= p.ClmMasterData .NoOfFile 
 
 
             }).ToList();
