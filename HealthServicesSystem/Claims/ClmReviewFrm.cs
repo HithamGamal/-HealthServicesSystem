@@ -61,7 +61,10 @@ namespace HealthServicesSystem.Claims
                     Year = p.Reclaim.ReclaimDate.Year,
                     VisitDate = p.Reclaim.ReclaimDate,
                     GenericName = p.MedicineForReclaim.Generic_name,
-                    ProcessName = "استرداد"
+                    ProcessName = "استرداد",
+                    Qty= p.Quantity ,
+                    Notes =""
+
 
                 }).ToList();
 
@@ -74,7 +77,10 @@ namespace HealthServicesSystem.Claims
                     Year = p.ClmMasterData.Years,
                     VisitDate = p.ClmMasterData.VisitDate,
                     GenericName = p.Medicine.Generic_name,
-                    ProcessName = "مطالبة"
+                    ProcessName = "مطالبة",
+                    Qty = p.Qty ,
+                    Notes =""
+
 
                 }).ToList();
 
@@ -87,7 +93,10 @@ namespace HealthServicesSystem.Claims
                     Year = p.ApproveMedicine.ApproveDate.Year ,
                     VisitDate = p.ApproveMedicine.ApproveDate,
                     GenericName = db.Medicines.Where (s=> s.Id == p.ServiceId ).Select(s=> s.Generic_name).FirstOrDefault(),
-                    ProcessName = "تصديق "
+                    ProcessName = "تصديق ",
+                    Qty= p.Quantity,
+                    Notes = p.ApproveMedicine .ApproveCode
+
 
                 }).ToList();
                var qq= q.Union(q1);
@@ -200,7 +209,8 @@ namespace HealthServicesSystem.Claims
                     UnitPrice = p.UnitPrice,
                     UnitQty = p.Qty,
                     TotalPrice = p.TotalPrice,
-                    DateIn= p.DateIn
+                    DateIn= p.DateIn,
+                    AtcCode= p.Medicine .ATCclassifications.ATC_classification
                     
                 }).OrderBy (p=> p.DateIn ).ToList();
                 if (q.Count > 0)
