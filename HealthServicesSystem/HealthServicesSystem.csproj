@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>116</ApplicationRevision>
+    <ApplicationRevision>117</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -332,6 +332,12 @@
     </Compile>
     <Compile Include="Claims\ViewReceiptRepFrm.Designer.cs">
       <DependentUpon>ViewReceiptRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Committee\committeeWeeklyReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Committee\committeeWeeklyReport.Designer.cs">
+      <DependentUpon>committeeWeeklyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Committee\ExceptionReason.cs">
       <SubType>Form</SubType>
@@ -897,6 +903,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ViewReceiptRepFrm.resx">
       <DependentUpon>ViewReceiptRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Committee\committeeWeeklyReport.resx">
+      <DependentUpon>committeeWeeklyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Committee\ExceptionReason.resx">
       <DependentUpon>ExceptionReason.cs</DependentUpon>
