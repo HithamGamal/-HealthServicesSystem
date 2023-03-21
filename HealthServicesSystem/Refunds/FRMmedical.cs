@@ -144,8 +144,10 @@ namespace HealthServicesSystem.Reclaims
                 using (dbContext db = new dbContext())
                 {
                     var FRef = db.Reclaims.Where(p => p.ReclaimNo == OperationNo.Text.Trim() && p.RowStatus != RowStatus.Deleted).Take(1).ToList();
+                   // MessageBox.Show(FRef.Count.ToString());
                     if (FRef.Count > 0)
                     {
+                        
                         if (FRef[0].RefuseMedical == true)
                         {
                             MessageBox.Show("لقد تم رفض هذه العملية من قبل ", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
