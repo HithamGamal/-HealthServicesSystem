@@ -153,6 +153,18 @@
     <Compile Include="Claims\AllocationFrm.Designer.cs">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Claims\UserReviewRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\UserReviewRepFrm.Designer.cs">
+      <DependentUpon>UserReviewRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\UserReviewReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\UserReviewReport.Designer.cs">
+      <DependentUpon>UserReviewReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Claims\CenterListClaims.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -807,6 +819,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\AllocationFrm.resx">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\UserReviewRepFrm.resx">
+      <DependentUpon>UserReviewRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\UserReviewReport.resx">
+      <DependentUpon>UserReviewReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CenterListClaims.resx">
       <DependentUpon>CenterListClaims.cs</DependentUpon>
