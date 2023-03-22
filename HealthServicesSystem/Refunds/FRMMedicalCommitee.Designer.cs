@@ -567,7 +567,7 @@
             this.GroupBox3.HeaderText = "";
             this.GroupBox3.Location = new System.Drawing.Point(3, 3);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(1356, 410);
+            this.GroupBox3.Size = new System.Drawing.Size(1353, 410);
             this.GroupBox3.TabIndex = 408;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.ThemeName = "Office2010Blue";
