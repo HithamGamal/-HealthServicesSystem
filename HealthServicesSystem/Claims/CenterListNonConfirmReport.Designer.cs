@@ -33,6 +33,7 @@ namespace HealthServicesSystem.Claims
             this.textBox4 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
             this.textBox6 = new Telerik.Reporting.TextBox();
+            this.Det = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeaderSection1
@@ -45,7 +46,8 @@ namespace HealthServicesSystem.Claims
             this.textBox1,
             this.ComanyName,
             this.ManagementName,
-            this.pictureBox1});
+            this.pictureBox1,
+            this.Det});
             this.pageHeaderSection1.Name = "pageHeaderSection1";
             // 
             // textBox9
@@ -246,7 +248,7 @@ namespace HealthServicesSystem.Claims
             this.textBox5.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
             this.textBox5.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox5.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox5.Value = "=TotalClaims";
+            this.textBox5.Value = "=Sum(TotalClaims)";
             // 
             // textBox4
             // 
@@ -260,7 +262,7 @@ namespace HealthServicesSystem.Claims
             this.textBox4.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
             this.textBox4.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox4.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox4.Value = "=TotalNon";
+            this.textBox4.Value = "=Sum(TotalNon)";
             // 
             // textBox3
             // 
@@ -274,7 +276,7 @@ namespace HealthServicesSystem.Claims
             this.textBox3.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
             this.textBox3.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox3.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox3.Value = "=NetClaims";
+            this.textBox3.Value = "=Sum(NetClaims)";
             // 
             // textBox6
             // 
@@ -288,6 +290,20 @@ namespace HealthServicesSystem.Claims
             this.textBox6.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox6.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox6.Value = "«·«Ã„«·Ì";
+            // 
+            // Det
+            // 
+            this.Det.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.794D), Telerik.Reporting.Drawing.Unit.Cm(1.778D));
+            this.Det.Name = "Det";
+            this.Det.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(17.272D), Telerik.Reporting.Drawing.Unit.Cm(0.762D));
+            this.Det.Style.BackgroundColor = System.Drawing.Color.White;
+            this.Det.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
+            this.Det.Style.Font.Bold = false;
+            this.Det.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(10D);
+            this.Det.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.Det.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.Det.StyleName = "Normal.TableHeader";
+            this.Det.Value = "";
             // 
             // CenterListNonConfirmReport
             // 
@@ -335,5 +351,6 @@ namespace HealthServicesSystem.Claims
         public Telerik.Reporting.PictureBox pictureBox1;
         private Telerik.Reporting.TextBox textBox13;
         private Telerik.Reporting.TextBox textBox14;
+        public Telerik.Reporting.TextBox Det;
     }
 }

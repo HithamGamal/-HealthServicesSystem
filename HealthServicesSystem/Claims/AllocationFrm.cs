@@ -47,7 +47,7 @@ namespace HealthServicesSystem.Claims
                 //int _y = int.Parse(YearTxt.Text);
                 dbContext db = new dbContext();
                 AllocatGrd.DataSource = null;
-                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Review ).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year }).ToList();
+                var q = db.ClmImpFile.Where(p => p.RowStatus == RowStatus.NewRow && p.ClmStatus == ClmStatus.Review ).Select(p => new { Id = p.Id, FileNo = p.FileNo, CenterName = p.CenterInfo.CenterName, CenterId = p.CenterId, DrogCount = p.DrogCount, VistCount = p.Counts, m = p.Month, y = p.year  , DocName = db.Users .Where (s=> s.Id == p.AllocatedDocId ).Select (s=> s.FullName ).FirstOrDefault ()}).ToList();
                 if (q.Count > 0)
                 {
                     AllocatGrd.DataSource = q;
@@ -103,9 +103,9 @@ namespace HealthServicesSystem.Claims
             if (AllocatGrd.RowCount > 0)
             {
                 dbContext db = new dbContext();
-                if (AllocatGrd.CurrentColumn.Name == "UnSelect")
+                if (AllocatGrd.CurrentColumn.Name == "Del")
                 {
-                    DialogResult d = MessageBox.Show("هل تريد الغاء طلب الملف رقم  ؟", "تأكيد" + "" + AllocatGrd.CurrentRow.Cells["FileNo"].Value.ToString() + " للمركز " + AllocatGrd.CurrentRow.Cells["CenterName"].Value.ToString(), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult d = MessageBox.Show("هل تريد الغاء توزيع الملف رقم  ؟", "تأكيد" + "" + AllocatGrd.CurrentRow.Cells["FileNo"].Value.ToString() + " للمركز " + AllocatGrd.CurrentRow.Cells["CenterName"].Value.ToString(), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (d == DialogResult.No)
                     {
                         return;
@@ -115,8 +115,8 @@ namespace HealthServicesSystem.Claims
                     if (q.Count > 0)
                     {
                         q[0].ClmStatus = ClmStatus.Allocation;
-                        q[0].EnabledUserId = _UserId;
-                        q[0].EnabledDate = PLC.getdatetime();
+                       
+                        q[0].AllocatedDocId = 0;
                         db.SaveChanges();
                         FillNotAllocat ();
                         FillAllocat ();

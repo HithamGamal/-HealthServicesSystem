@@ -117,6 +117,7 @@
             this.View2Btn.Size = new System.Drawing.Size(141, 36);
             this.View2Btn.TabIndex = 17;
             this.View2Btn.Text = "عرض المخالفات الصفرية";
+            this.View2Btn.Click += new System.EventHandler(this.View2Btn_Click);
             // 
             // CenterNameDrp
             // 

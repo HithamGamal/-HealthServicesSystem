@@ -119,5 +119,10 @@ namespace HealthServicesSystem.Claims
                 }
             }
         }
+
+        private void PrintBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
