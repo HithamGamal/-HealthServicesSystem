@@ -108,7 +108,7 @@ namespace HealthServicesSystem.Claims
                 Qty=p.Sum (s=> s.Qty)
                
 
-            }).ToList();
+            }).OrderByDescending (p=> p.TotalPrice ).ToList();
 
             if (CenterNameDrp.SelectedIndex != -1)
             {

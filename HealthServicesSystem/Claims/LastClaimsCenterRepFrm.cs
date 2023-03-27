@@ -59,7 +59,7 @@ namespace HealthServicesSystem.Claims
             int _y = int.Parse(YearTxt.Text);
 
 
-            var q = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y).GroupBy(s => new { s.ClmMasterData.CenterInfo.CenterName, s.ClmMasterData.CenterId }).Select(p => new
+            var q = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData .CenterId ==_CenterId ).GroupBy(s => new { s.ClmMasterData.CenterInfo.CenterName, s.ClmMasterData.CenterId }).Select(p => new
             {
                 CenterName = p.Key.CenterName,
                 CenterId = p.Key.CenterId,
