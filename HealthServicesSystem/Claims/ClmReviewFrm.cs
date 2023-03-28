@@ -191,7 +191,7 @@ namespace HealthServicesSystem.Claims
                 if (qm.Count > 0)
                 {
                     VisitIdTxt.Text = qm[0].Id.ToString();
-                    PatNameTxt.Text = qm[0].PatName;
+                    PatNameTxt.Text = qm[0].PatName.Trim ();
                     InsuranceNoTxt.Text = qm[0].InsuranceNo.ToString();
                     AgeTxt.Text = qm[0].Age.ToString();
                     VisitDateTxt.Text = qm[0].VisitDate.ToString();
