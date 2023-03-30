@@ -187,7 +187,6 @@
             this.MasterGrd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.MasterGrd.Size = new System.Drawing.Size(989, 393);
             this.MasterGrd.TabIndex = 35;
-            this.MasterGrd.TitleText = "البيانات الغير متطابقة";
             this.MasterGrd.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.MasterGrd_CommandCellClick);
             // 
             // radGroupBox1

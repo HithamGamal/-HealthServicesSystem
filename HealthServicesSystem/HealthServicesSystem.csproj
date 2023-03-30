@@ -29,7 +29,7 @@
     <ProductName>Medicine System</ProductName>
     <PublisherName>IT Management</PublisherName>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>121</ApplicationRevision>
+    <ApplicationRevision>117</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -151,6 +151,18 @@
     </Compile>
     <Compile Include="Claims\AllocationFrm.Designer.cs">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\UserReviewRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\UserReviewRepFrm.Designer.cs">
+      <DependentUpon>UserReviewRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\UserReviewReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\UserReviewReport.Designer.cs">
+      <DependentUpon>UserReviewReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\CenterListClaims.cs">
       <SubType>Component</SubType>
@@ -812,6 +824,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\AllocationFrm.resx">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\UserReviewRepFrm.resx">
+      <DependentUpon>UserReviewRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\UserReviewReport.resx">
+      <DependentUpon>UserReviewReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CenterListClaims.resx">
       <DependentUpon>CenterListClaims.cs</DependentUpon>

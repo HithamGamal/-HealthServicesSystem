@@ -42,6 +42,10 @@
             Telerik.WinControls.UI.RadListDataItem radListDataItem24 = new Telerik.WinControls.UI.RadListDataItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ClamsStatusTxt = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
+            this.AcceptBtn = new Telerik.WinControls.UI.RadButton();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.NotReviewTxt = new Telerik.WinControls.UI.RadLabel();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
@@ -65,12 +69,12 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.MonthDrp = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.AcceptBtn = new Telerik.WinControls.UI.RadButton();
-            this.PrintBtn = new Telerik.WinControls.UI.RadButton();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.ClamsStatusTxt = new Telerik.WinControls.UI.RadLabel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClamsStatusTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcceptBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NotReviewTxt)).BeginInit();
@@ -95,10 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AcceptBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClamsStatusTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,6 +127,46 @@
             this.panel3.Size = new System.Drawing.Size(1378, 402);
             this.panel3.TabIndex = 18;
             // 
+            // ClamsStatusTxt
+            // 
+            this.ClamsStatusTxt.AutoSize = false;
+            this.ClamsStatusTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClamsStatusTxt.ForeColor = System.Drawing.Color.Red;
+            this.ClamsStatusTxt.Location = new System.Drawing.Point(563, 48);
+            this.ClamsStatusTxt.Name = "ClamsStatusTxt";
+            this.ClamsStatusTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ClamsStatusTxt.Size = new System.Drawing.Size(230, 31);
+            this.ClamsStatusTxt.TabIndex = 27;
+            this.ClamsStatusTxt.Text = "0";
+            this.ClamsStatusTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // radLabel10
+            // 
+            this.radLabel10.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel10.Location = new System.Drawing.Point(716, 16);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(90, 31);
+            this.radLabel10.TabIndex = 13;
+            this.radLabel10.Text = ":حالة المطالبة ";
+            // 
+            // PrintBtn
+            // 
+            this.PrintBtn.Location = new System.Drawing.Point(563, 158);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(230, 50);
+            this.PrintBtn.TabIndex = 12;
+            this.PrintBtn.Text = "طباعة تقرير";
+            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
+            // 
+            // AcceptBtn
+            // 
+            this.AcceptBtn.Location = new System.Drawing.Point(563, 85);
+            this.AcceptBtn.Name = "AcceptBtn";
+            this.AcceptBtn.Size = new System.Drawing.Size(230, 51);
+            this.AcceptBtn.TabIndex = 11;
+            this.AcceptBtn.Text = "اعتماد المراجعة";
+            this.AcceptBtn.Click += new System.EventHandler(this.AcceptBtn_Click);
+            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -145,10 +185,10 @@
             this.radGroupBox1.Controls.Add(this.radLabel5);
             this.radGroupBox1.Controls.Add(this.radLabel4);
             this.radGroupBox1.HeaderText = "بيانات المطالبة";
-            this.radGroupBox1.Location = new System.Drawing.Point(822, 6);
+            this.radGroupBox1.Location = new System.Drawing.Point(930, 6);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGroupBox1.Size = new System.Drawing.Size(520, 366);
+            this.radGroupBox1.Size = new System.Drawing.Size(412, 366);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "بيانات المطالبة";
             // 
@@ -156,7 +196,7 @@
             // 
             this.NotReviewTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotReviewTxt.ForeColor = System.Drawing.Color.Red;
-            this.NotReviewTxt.Location = new System.Drawing.Point(231, 39);
+            this.NotReviewTxt.Location = new System.Drawing.Point(92, 30);
             this.NotReviewTxt.Name = "NotReviewTxt";
             this.NotReviewTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.NotReviewTxt.Size = new System.Drawing.Size(17, 31);
@@ -167,7 +207,7 @@
             // radLabel11
             // 
             this.radLabel11.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel11.Location = new System.Drawing.Point(339, 39);
+            this.radLabel11.Location = new System.Drawing.Point(233, 30);
             this.radLabel11.Name = "radLabel11";
             this.radLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radLabel11.Size = new System.Drawing.Size(174, 31);
@@ -179,7 +219,7 @@
             // 
             this.ErrorCostTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorCostTxt.ForeColor = System.Drawing.Color.Red;
-            this.ErrorCostTxt.Location = new System.Drawing.Point(231, 277);
+            this.ErrorCostTxt.Location = new System.Drawing.Point(92, 268);
             this.ErrorCostTxt.Name = "ErrorCostTxt";
             this.ErrorCostTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ErrorCostTxt.Size = new System.Drawing.Size(17, 31);
@@ -191,7 +231,7 @@
             // 
             this.NetClaimsTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NetClaimsTxt.ForeColor = System.Drawing.Color.Red;
-            this.NetClaimsTxt.Location = new System.Drawing.Point(231, 320);
+            this.NetClaimsTxt.Location = new System.Drawing.Point(92, 311);
             this.NetClaimsTxt.Name = "NetClaimsTxt";
             this.NetClaimsTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.NetClaimsTxt.Size = new System.Drawing.Size(17, 31);
@@ -203,7 +243,7 @@
             // 
             this.TotalClaimsTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalClaimsTxt.ForeColor = System.Drawing.Color.Red;
-            this.TotalClaimsTxt.Location = new System.Drawing.Point(231, 230);
+            this.TotalClaimsTxt.Location = new System.Drawing.Point(92, 221);
             this.TotalClaimsTxt.Name = "TotalClaimsTxt";
             this.TotalClaimsTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TotalClaimsTxt.Size = new System.Drawing.Size(17, 31);
@@ -215,7 +255,7 @@
             // 
             this.ItemNoTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemNoTxt.ForeColor = System.Drawing.Color.Red;
-            this.ItemNoTxt.Location = new System.Drawing.Point(231, 183);
+            this.ItemNoTxt.Location = new System.Drawing.Point(92, 174);
             this.ItemNoTxt.Name = "ItemNoTxt";
             this.ItemNoTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ItemNoTxt.Size = new System.Drawing.Size(17, 31);
@@ -227,7 +267,7 @@
             // 
             this.VisitNoTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VisitNoTxt.ForeColor = System.Drawing.Color.Red;
-            this.VisitNoTxt.Location = new System.Drawing.Point(231, 133);
+            this.VisitNoTxt.Location = new System.Drawing.Point(92, 124);
             this.VisitNoTxt.Name = "VisitNoTxt";
             this.VisitNoTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.VisitNoTxt.Size = new System.Drawing.Size(17, 31);
@@ -239,7 +279,7 @@
             // 
             this.FilesNotxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FilesNotxt.ForeColor = System.Drawing.Color.Red;
-            this.FilesNotxt.Location = new System.Drawing.Point(231, 86);
+            this.FilesNotxt.Location = new System.Drawing.Point(92, 77);
             this.FilesNotxt.Name = "FilesNotxt";
             this.FilesNotxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.FilesNotxt.Size = new System.Drawing.Size(17, 31);
@@ -250,7 +290,7 @@
             // radLabel9
             // 
             this.radLabel9.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel9.Location = new System.Drawing.Point(339, 277);
+            this.radLabel9.Location = new System.Drawing.Point(233, 268);
             this.radLabel9.Name = "radLabel9";
             this.radLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radLabel9.Size = new System.Drawing.Size(112, 31);
@@ -261,7 +301,7 @@
             // radLabel8
             // 
             this.radLabel8.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel8.Location = new System.Drawing.Point(339, 320);
+            this.radLabel8.Location = new System.Drawing.Point(233, 311);
             this.radLabel8.Name = "radLabel8";
             this.radLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radLabel8.Size = new System.Drawing.Size(162, 31);
@@ -272,7 +312,7 @@
             // radLabel7
             // 
             this.radLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel7.Location = new System.Drawing.Point(339, 230);
+            this.radLabel7.Location = new System.Drawing.Point(233, 221);
             this.radLabel7.Name = "radLabel7";
             this.radLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radLabel7.Size = new System.Drawing.Size(164, 31);
@@ -283,7 +323,7 @@
             // radLabel6
             // 
             this.radLabel6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel6.Location = new System.Drawing.Point(339, 183);
+            this.radLabel6.Location = new System.Drawing.Point(233, 174);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radLabel6.Size = new System.Drawing.Size(79, 31);
@@ -294,7 +334,7 @@
             // radLabel5
             // 
             this.radLabel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(339, 133);
+            this.radLabel5.Location = new System.Drawing.Point(233, 124);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radLabel5.Size = new System.Drawing.Size(99, 31);
@@ -305,7 +345,7 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(339, 86);
+            this.radLabel4.Location = new System.Drawing.Point(233, 77);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radLabel4.Size = new System.Drawing.Size(84, 31);
@@ -418,45 +458,6 @@
             this.radLabel2.TabIndex = 12;
             this.radLabel2.Text = ": الشهر";
             // 
-            // AcceptBtn
-            // 
-            this.AcceptBtn.Location = new System.Drawing.Point(563, 85);
-            this.AcceptBtn.Name = "AcceptBtn";
-            this.AcceptBtn.Size = new System.Drawing.Size(230, 51);
-            this.AcceptBtn.TabIndex = 11;
-            this.AcceptBtn.Text = "اعتماد المراجعة";
-            this.AcceptBtn.Click += new System.EventHandler(this.AcceptBtn_Click);
-            // 
-            // PrintBtn
-            // 
-            this.PrintBtn.Location = new System.Drawing.Point(563, 158);
-            this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(230, 50);
-            this.PrintBtn.TabIndex = 12;
-            this.PrintBtn.Text = "طباعة تقرير";
-            // 
-            // radLabel10
-            // 
-            this.radLabel10.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel10.Location = new System.Drawing.Point(716, 16);
-            this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(90, 31);
-            this.radLabel10.TabIndex = 13;
-            this.radLabel10.Text = ":حالة المطالبة ";
-            // 
-            // ClamsStatusTxt
-            // 
-            this.ClamsStatusTxt.AutoSize = false;
-            this.ClamsStatusTxt.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClamsStatusTxt.ForeColor = System.Drawing.Color.Red;
-            this.ClamsStatusTxt.Location = new System.Drawing.Point(563, 48);
-            this.ClamsStatusTxt.Name = "ClamsStatusTxt";
-            this.ClamsStatusTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ClamsStatusTxt.Size = new System.Drawing.Size(230, 31);
-            this.ClamsStatusTxt.TabIndex = 27;
-            this.ClamsStatusTxt.Text = "0";
-            this.ClamsStatusTxt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ClmConfirmReviewFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +475,10 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClamsStatusTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcceptBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
@@ -500,10 +505,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MonthDrp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AcceptBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrintBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClamsStatusTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

@@ -1,6 +1,6 @@
 ﻿namespace HealthServicesSystem.Claims
 {
-    partial class ViewCenterListNonConfirmRepFrm
+    partial class UserReviewRepFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,9 +40,9 @@
             Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
+            this.reportViewer1 = new Telerik.ReportViewer.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Telerik.ReportViewer.WinForms.ReportViewer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.View2Btn = new Telerik.WinControls.UI.RadButton();
             this.CenterNameDrp = new Telerik.WinControls.UI.RadDropDownList();
@@ -66,6 +66,15 @@
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.AccessibilityKeyMap = null;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(1192, 567);
+            this.reportViewer1.TabIndex = 1;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -73,8 +82,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1180, 628);
-            this.panel1.TabIndex = 3;
+            this.panel1.Size = new System.Drawing.Size(1192, 650);
+            this.panel1.TabIndex = 4;
             // 
             // panel3
             // 
@@ -82,17 +91,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 83);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1180, 545);
+            this.panel3.Size = new System.Drawing.Size(1192, 567);
             this.panel3.TabIndex = 1;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.AccessibilityKeyMap = null;
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1180, 545);
-            this.reportViewer1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -107,7 +107,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1180, 83);
+            this.panel2.Size = new System.Drawing.Size(1192, 83);
             this.panel2.TabIndex = 0;
             // 
             // View2Btn
@@ -117,7 +117,6 @@
             this.View2Btn.Size = new System.Drawing.Size(141, 36);
             this.View2Btn.TabIndex = 17;
             this.View2Btn.Text = "عرض المخالفات الصفرية";
-            this.View2Btn.Click += new System.EventHandler(this.View2Btn_Click);
             // 
             // CenterNameDrp
             // 
@@ -205,22 +204,19 @@
             this.ViewBtn.Size = new System.Drawing.Size(110, 36);
             this.ViewBtn.TabIndex = 10;
             this.ViewBtn.Text = "عرض المراكز المخالفة";
-            this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);
             // 
-            // ViewCenterListNonConfirmRepFrm
+            // UserReviewRepFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 628);
+            this.ClientSize = new System.Drawing.Size(1192, 650);
             this.Controls.Add(this.panel1);
-            this.Name = "ViewCenterListNonConfirmRepFrm";
+            this.Name = "UserReviewRepFrm";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "عرض قائمة المخالفات للمراكز";
-            this.ThemeName = "Office2010Blue";
-            this.Load += new System.EventHandler(this.ViewCenterListNonConfirmRepFrm_Load);
+            this.Text = "تقرير  المراجعين";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -240,10 +236,11 @@
 
         #endregion
 
+        private Telerik.ReportViewer.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private Telerik.ReportViewer.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Panel panel2;
+        private Telerik.WinControls.UI.RadButton View2Btn;
         private Telerik.WinControls.UI.RadDropDownList CenterNameDrp;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadDropDownList MonthDrp;
@@ -251,6 +248,5 @@
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadTextBox YearTxt;
         private Telerik.WinControls.UI.RadButton ViewBtn;
-        private Telerik.WinControls.UI.RadButton View2Btn;
     }
 }
