@@ -94,7 +94,10 @@ namespace HealthServicesSystem
                     }
                 }
                 int GetMaxSirk = 1;
-                var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0).Take(1).ToList();
+                int Year1 = PLC.getdate().Year;
+                DateTime dat1 = new DateTime(Year1, 1, 1);
+                DateTime dat2 = new DateTime(Year1, 12, 31);
+                var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0 && (p.ReclaimDate>=dat1 && p.ReclaimDate<=dat2)).Take(1).ToList();
                 if (GetSirk.Count > 0)
                 {
                     GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
