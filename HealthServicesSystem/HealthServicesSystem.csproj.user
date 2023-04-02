@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
-    <PublishUrlHistory>F:\Shawamikh\|\\192.168.100.10\d%24\HealthInsuranceSystem\</PublishUrlHistory>
+    <PublishUrlHistory>\\192.168.100.10\d%24\HealthInsuranceSystem\|F:\Shawamikh\</PublishUrlHistory>
     <InstallUrlHistory />
     <SupportUrlHistory />
     <UpdateUrlHistory />

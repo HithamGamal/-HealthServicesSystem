@@ -100,7 +100,7 @@ namespace HealthServicesSystem
                 var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0 && (p.ReclaimDate>=dat1 && p.ReclaimDate<=dat2)).Take(1).ToList();
                 if (GetSirk.Count > 0)
                 {
-                    GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
+                    GetMaxSirk = Convert.ToInt32(GetSirk.Max(p => p.SirkNo)) + 1;
                 }
                 SirkNo.Text = GetMaxSirk.ToString();
                 var ReclaimRes = db.ReclaimMedicineReasonsLists.Where(p => p.Activated == true).ToList();
