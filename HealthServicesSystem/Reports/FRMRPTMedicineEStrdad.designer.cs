@@ -25,10 +25,10 @@ namespace HealthServicesSystem
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
             this.rd_books = new System.Windows.Forms.RadioButton();
             this.GroupControl1 = new System.Windows.Forms.Panel();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -182,10 +182,10 @@ namespace HealthServicesSystem
             // DrGrouping
             // 
             this.DrGrouping.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem1.Text = "بدون";
-            radListDataItem2.Text = "المحليات";
-            this.DrGrouping.Items.Add(radListDataItem1);
-            this.DrGrouping.Items.Add(radListDataItem2);
+            radListDataItem5.Text = "بدون";
+            radListDataItem6.Text = "المحليات";
+            this.DrGrouping.Items.Add(radListDataItem5);
+            this.DrGrouping.Items.Add(radListDataItem6);
             this.DrGrouping.Location = new System.Drawing.Point(81, 271);
             this.DrGrouping.Margin = new System.Windows.Forms.Padding(2);
             this.DrGrouping.Name = "DrGrouping";
@@ -204,10 +204,10 @@ namespace HealthServicesSystem
             // GroupingBy
             // 
             this.GroupingBy.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem3.Text = "التردد";
-            radListDataItem4.Text = "التكلفة";
-            this.GroupingBy.Items.Add(radListDataItem3);
-            this.GroupingBy.Items.Add(radListDataItem4);
+            radListDataItem1.Text = "التردد";
+            radListDataItem2.Text = "التكلفة";
+            this.GroupingBy.Items.Add(radListDataItem1);
+            this.GroupingBy.Items.Add(radListDataItem2);
             this.GroupingBy.Location = new System.Drawing.Point(230, 272);
             this.GroupingBy.Margin = new System.Windows.Forms.Padding(2);
             this.GroupingBy.Name = "GroupingBy";
@@ -563,6 +563,7 @@ namespace HealthServicesSystem
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(48, 30);
             this.textBox1.TabIndex = 77;
+            this.textBox1.Visible = false;
             // 
             // label3
             // 

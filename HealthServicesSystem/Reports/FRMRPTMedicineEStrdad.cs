@@ -1221,10 +1221,13 @@ namespace HealthServicesSystem
 
                             db.Database.CommandTimeout = 0;
                             int GetMaxSirk = 1;
+                            int Year1 = PLC.getdate().Year;
+                            DateTime dat1 = new DateTime(Year1, 1, 1);
+                            DateTime dat2 = new DateTime(Year1, 12, 31);
                             var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0).Take(1).ToList();
                             if (GetSirk.Count > 0)
                             {
-                                GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
+                                GetMaxSirk = Convert.ToInt32(db.Reclaims.Where(p => p.ReclaimDate >= dat1 && p.ReclaimDate <= dat2).Max(p => p.SirkNo)) + 1;
                             }
                             SirkNo.Text = GetMaxSirk.ToString();
                             var GetDet = db.Database.SqlQuery<ReportForAll>(StrRPT1).Where(p => p.Row21 > 0).OrderBy(p => p.Row13).ToList();
