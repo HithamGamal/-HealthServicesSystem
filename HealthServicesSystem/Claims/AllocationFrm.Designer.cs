@@ -261,7 +261,7 @@
             gridViewTextBoxColumn1.HeaderText = "رقم التصدير";
             gridViewTextBoxColumn1.Name = "Id";
             gridViewTextBoxColumn1.ReadOnly = true;
-            gridViewTextBoxColumn1.Width = 100;
+            gridViewTextBoxColumn1.Width = 80;
             gridViewTextBoxColumn2.FieldName = "FileNo";
             gridViewTextBoxColumn2.HeaderText = "رقم الملف";
             gridViewTextBoxColumn2.Name = "FileNo";
@@ -290,21 +290,22 @@
             gridViewTextBoxColumn7.HeaderText = "عدد الروشتات";
             gridViewTextBoxColumn7.Name = "VistCount";
             gridViewTextBoxColumn7.ReadOnly = true;
-            gridViewTextBoxColumn7.Width = 100;
+            gridViewTextBoxColumn7.Width = 80;
             gridViewTextBoxColumn8.FieldName = "drogCount";
             gridViewTextBoxColumn8.HeaderText = "عدد الادوية";
             gridViewTextBoxColumn8.Name = "drogCount";
             gridViewTextBoxColumn8.ReadOnly = true;
-            gridViewTextBoxColumn8.Width = 100;
+            gridViewTextBoxColumn8.Width = 80;
             gridViewTextBoxColumn9.FieldName = "DocName";
             gridViewTextBoxColumn9.HeaderText = "اسم الصيدلي";
             gridViewTextBoxColumn9.Name = "DocName";
+            gridViewTextBoxColumn9.Width = 100;
             gridViewCommandColumn1.DefaultText = "حذف";
             gridViewCommandColumn1.FieldName = "Del";
             gridViewCommandColumn1.HeaderText = "حذف";
             gridViewCommandColumn1.Name = "Del";
             gridViewCommandColumn1.UseDefaultText = true;
-            gridViewCommandColumn1.Width = 100;
+            gridViewCommandColumn1.Width = 60;
             gridViewCommandColumn1.WrapText = true;
             this.AllocatGrd.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,

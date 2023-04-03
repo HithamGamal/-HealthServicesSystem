@@ -49,7 +49,7 @@ namespace HealthServicesSystem.Claims
                 YearTxt.Focus();
                 return;
             }
-           
+            string CenName = "";
             int _m = MonthDrp.SelectedIndex + 1;
             int _y = int.Parse(YearTxt.Text);
 
@@ -66,12 +66,60 @@ namespace HealthServicesSystem.Claims
             {
                 int _CenterId = int.Parse(CenterNameDrp.SelectedValue.ToString());
                 q = q.Where(p => p.CenterId == _CenterId).ToList();
+                CenName = CenterNameDrp.Text;
             }
             if (q.Count > 0)
             {
                 CenterListNonConfirmReport rep = new CenterListNonConfirmReport();
                 rep.DataSource = q;
-             
+                rep.Det.Value = "تقرير المخالفات  لشهر " + MonthDrp.Text + "لسنة " + YearTxt.Text + " " + CenName;
+                reportViewer1.ReportSource = rep;
+                reportViewer1.RefreshReport();
+
+            }
+        }
+
+        private void View2Btn_Click(object sender, EventArgs e)
+        {
+            dbContext db = new dbContext();
+
+
+            if (MonthDrp.SelectedIndex == -1)
+            {
+                MessageBox.Show("اختر الشهر");
+                MonthDrp.Focus();
+                return;
+            }
+            if (YearTxt.Text.Length != 4)
+            {
+                MessageBox.Show("ادخل السنة");
+                YearTxt.Focus();
+                return;
+            }
+
+            int _m = MonthDrp.SelectedIndex + 1;
+            int _y = int.Parse(YearTxt.Text);
+
+            var q = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y).GroupBy(s => new { s.ClmMasterData.CenterInfo.CenterName, s.ClmMasterData.CenterId }).Select(p => new
+            {
+                CenterName = p.Key.CenterName,
+                CenterId = p.Key.CenterId,
+                TotalClaims = p.Sum(s => s.TotalPrice),
+                TotalNon = p.Sum(s => s.NonConfClaims) + p.Sum(s => s.NonConfItem) + p.Sum(s => s.NonConfVisit),
+                NetClaims = p.Sum(s => s.TotalPrice) - (p.Sum(s => s.NonConfClaims) + p.Sum(s => s.NonConfItem) + p.Sum(s => s.NonConfVisit))
+            }).Where(p => p.TotalNon == 0).ToList();
+            string CenName = "";
+            if (CenterNameDrp.SelectedIndex != -1)
+            {
+                int _CenterId = int.Parse(CenterNameDrp.SelectedValue.ToString());
+                q = q.Where(p => p.CenterId == _CenterId).ToList();
+                CenName = CenterNameDrp.Text;
+            }
+            if (q.Count > 0)
+            {
+                CenterListNonConfirmReport rep = new CenterListNonConfirmReport();
+                rep.DataSource = q;
+                rep.Det.Value = "تقرير المخالفات الصفرية لشهر " + MonthDrp.Text + "لسنة " + YearTxt.Text + " " + CenName;
                 reportViewer1.ReportSource = rep;
                 reportViewer1.RefreshReport();
 

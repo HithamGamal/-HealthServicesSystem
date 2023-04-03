@@ -144,8 +144,10 @@ namespace HealthServicesSystem.Reclaims
                 using (dbContext db = new dbContext())
                 {
                     var FRef = db.Reclaims.Where(p => p.ReclaimNo == OperationNo.Text.Trim() && p.RowStatus != RowStatus.Deleted).Take(1).ToList();
+                   // MessageBox.Show(FRef.Count.ToString());
                     if (FRef.Count > 0)
                     {
+                        
                         if (FRef[0].RefuseMedical == true)
                         {
                             MessageBox.Show("لقد تم رفض هذه العملية من قبل ", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -582,8 +584,10 @@ namespace HealthServicesSystem.Reclaims
                         {
                             MedicalTotal = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
                         }
+                        GetReclaim[0].MedicalTotal = MedicalTotal;
                         GetReclaim[0].MedicineTotal = MedicneTotal;
                         GetReclaim[0].ReclaimTotal = MedicneTotal + MedicalTotal;
+                        db.SaveChanges();
                         db.SaveChanges();
                         Saved = true;
                         MessageBox.Show("لقد تم حفظ بيانات الخدمات الطبية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Information);

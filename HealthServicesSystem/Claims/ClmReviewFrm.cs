@@ -187,11 +187,11 @@ namespace HealthServicesSystem.Claims
                 int MstrId = int.Parse(VisitIdTxt.Text);
                 dbContext db = new dbContext();
 
-                var qm = db.ClmMasterData.Where(p => p.Id  == MstrId  && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0).OrderBy(p => p.NoOfFile).Take(1).ToList();
+                var qm = db.ClmMasterData.Where(p => p.Id  == MstrId  && p.RowStatus != RowStatus.Deleted ).OrderBy(p => p.NoOfFile).Take(1).ToList();
                 if (qm.Count > 0)
                 {
                     VisitIdTxt.Text = qm[0].Id.ToString();
-                    PatNameTxt.Text = qm[0].PatName;
+                    PatNameTxt.Text = qm[0].PatName.Trim ();
                     InsuranceNoTxt.Text = qm[0].InsuranceNo.ToString();
                     AgeTxt.Text = qm[0].Age.ToString();
                     VisitDateTxt.Text = qm[0].VisitDate.ToString();
@@ -431,7 +431,7 @@ namespace HealthServicesSystem.Claims
                             item.NonConfVisit = item.NonConfVisit + _NonVlaue;
 
                         }
-                       c.Value  = (db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice)*_NonPercent )*100;
+                       c.Value  = (db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice)*_NonPercent )/100;
                     }
                     c.DetailsId = 0;
                 }

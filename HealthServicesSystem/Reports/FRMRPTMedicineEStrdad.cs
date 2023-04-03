@@ -94,10 +94,13 @@ namespace HealthServicesSystem
                     }
                 }
                 int GetMaxSirk = 1;
-                var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0).Take(1).ToList();
+                int Year1 = PLC.getdate().Year;
+                DateTime dat1 = new DateTime(Year1, 1, 1);
+                DateTime dat2 = new DateTime(Year1, 12, 31);
+                var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0 && (p.ReclaimDate>=dat1 && p.ReclaimDate<=dat2)).Take(1).ToList();
                 if (GetSirk.Count > 0)
                 {
-                    GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
+                    GetMaxSirk = Convert.ToInt32(db.Reclaims.Where(p =>p.ReclaimDate >= dat1 && p.ReclaimDate <= dat2).Max(p => p.SirkNo)) + 1;
                 }
                 SirkNo.Text = GetMaxSirk.ToString();
                 var ReclaimRes = db.ReclaimMedicineReasonsLists.Where(p => p.Activated == true).ToList();
@@ -1218,10 +1221,13 @@ namespace HealthServicesSystem
 
                             db.Database.CommandTimeout = 0;
                             int GetMaxSirk = 1;
+                            int Year1 = PLC.getdate().Year;
+                            DateTime dat1 = new DateTime(Year1, 1, 1);
+                            DateTime dat2 = new DateTime(Year1, 12, 31);
                             var GetSirk = db.Reclaims.Where(p => p.SirkNo != 0).Take(1).ToList();
                             if (GetSirk.Count > 0)
                             {
-                                GetMaxSirk = Convert.ToInt32(db.Reclaims.Max(p => p.SirkNo)) + 1;
+                                GetMaxSirk = Convert.ToInt32(db.Reclaims.Where(p => p.ReclaimDate >= dat1 && p.ReclaimDate <= dat2).Max(p => p.SirkNo)) + 1;
                             }
                             SirkNo.Text = GetMaxSirk.ToString();
                             var GetDet = db.Database.SqlQuery<ReportForAll>(StrRPT1).Where(p => p.Row21 > 0).OrderBy(p => p.Row13).ToList();
@@ -1264,7 +1270,7 @@ namespace HealthServicesSystem
 
         private void RadioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            if (UserId == 44 || UserId==50)
+            if (UserId==0 || UserId == 44 || UserId==50)
             {
                 if (SirkNo.Text.Length > 0)
                 {
@@ -1275,11 +1281,13 @@ namespace HealthServicesSystem
                     ExcutingParty.SelectedIndex = -1;
                     using (dbContext db = new dbContext())
                     {
-
+                        int Year1 = PLC.getdate().Year;
+                        DateTime dat1 = new DateTime(Year1, 1, 1);
+                        DateTime dat2 = new DateTime(Year1, 12, 31);
                         db.Database.CommandTimeout = 0;
                         //int SrkNo = Convert.ToInt32(SirkNo.Text);
-                        //textBox1.Text = StrRPT2;
-                        var GetDet = db.Database.SqlQuery<ReportForAll>("SELECT BillType AS Row23, InsurNo AS Row6, InsurName AS Row7, BillType, ReclaimDate AS Row13, MedicalTotal AS Row11, MedicineTotal AS Row12, ReclaimTotal AS Row21, CONVERT(decimal, ReclaimStatus) AS Row2 FROM dbo.Reclaims WHERE dbo.Reclaims.LocalityId=" + LocalityId.ToString() + " and (dbo.Reclaims.RowStatus <> 2) and dbo.Reclaims.SirkNo =" + SirkNo.Text + "").OrderBy(p => p.Row13).ToList();
+                       textBox1.Text = "SELECT BillType AS Row23, InsurNo AS Row6, InsurName AS Row7, BillType, ReclaimDate AS Row13, MedicalTotal AS Row11, MedicineTotal AS Row12, ReclaimTotal AS Row21, CONVERT(decimal, ReclaimStatus) AS Row2 FROM dbo.Reclaims WHERE dbo.Reclaims.LocalityId=" + LocalityId.ToString() + " and (dbo.Reclaims.RowStatus <> 2) and dbo.Reclaims.SirkNo =" + SirkNo.Text + " and ReclaimDate between '" + dat1 + "' and '" + dat2 + "'";
+                        var GetDet = db.Database.SqlQuery<ReportForAll>("SELECT BillType AS Row23, InsurNo AS Row6, InsurName AS Row7, BillType, ReclaimDate AS Row13, MedicalTotal AS Row11, MedicineTotal AS Row12, ReclaimTotal AS Row21, CONVERT(decimal, ReclaimStatus) AS Row2 FROM dbo.Reclaims WHERE dbo.Reclaims.LocalityId=" + LocalityId.ToString() + " and (dbo.Reclaims.RowStatus <> 2) and dbo.Reclaims.SirkNo =" + SirkNo.Text + " and ReclaimDate between '"+dat1+"' and '"+dat2+"'").OrderBy(p => p.Row13).ToList();
                         //MessageBox.Show(GetDet.Count.ToString());
                         if (GetDet.Count > 0)
                         {
