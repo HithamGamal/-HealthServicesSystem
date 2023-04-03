@@ -13,6 +13,7 @@ using HealthServicesSystem.Reclaims;
 using ModelDB;
 using HealthServicesSystem.Claims;
 using HealthServicesSystem.Refunds;
+using HealthServicesSystem.Committee;
 
 namespace HealthServicesSystem
 {
@@ -796,6 +797,14 @@ namespace HealthServicesSystem
         private void CenterListClaimsM_Click(object sender, EventArgs e)
         {
             CenterListClaimsRepFrm frm = new CenterListClaimsRepFrm();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void RadButtonElement4_Click(object sender, EventArgs e)
+        {
+            CommitteeReportForm frm = new CommitteeReportForm();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
