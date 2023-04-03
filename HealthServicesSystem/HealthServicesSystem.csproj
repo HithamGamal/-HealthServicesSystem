@@ -345,6 +345,12 @@
     <Compile Include="Claims\ViewReceiptRepFrm.Designer.cs">
       <DependentUpon>ViewReceiptRepFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Committee\CommitteeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Committee\CommitteeReportForm.Designer.cs">
+      <DependentUpon>CommitteeReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Committee\committeeWeeklyReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -921,6 +927,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ViewReceiptRepFrm.resx">
       <DependentUpon>ViewReceiptRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Committee\CommitteeReportForm.resx">
+      <DependentUpon>CommitteeReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Committee\committeeWeeklyReport.resx">
       <DependentUpon>committeeWeeklyReport.cs</DependentUpon>

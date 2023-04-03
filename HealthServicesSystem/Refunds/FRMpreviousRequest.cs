@@ -18,10 +18,11 @@ namespace HealthServicesSystem.Refunds
         {
             var rqsts = (from m in db.medicalCommitteeRequests
                         where m.RowStatus != RowStatus.Deleted
-                         select new { Id = m.Id, InsurNo = m.InsurNo, InsurName = m.InsurName,
+                         select new { Id = m.Id, InsurNo = m.InsurNo,
+                             InsurName = m.InsurName,
                              TotalCost = m.MedicalTotal,
                              CenterName = m.CenterName , RequsetType = m.RequestType })
-                         .Take(10).ToList();
+                         .ToList();
 
             rqstGRID.DataSource = rqsts;
         }
