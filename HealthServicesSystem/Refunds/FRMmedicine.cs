@@ -177,9 +177,9 @@ namespace HealthServicesSystem.Reclaims
                         {
                             MedicalTotal = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
                         }
+                        GetReclaim[0].MedicalTotal = MedicalTotal;
                         GetReclaim[0].MedicineTotal = MedicneTotal;
                         GetReclaim[0].ReclaimTotal = MedicneTotal + MedicalTotal;
-                        db.SaveChanges();
                         db.SaveChanges();
                         Saved = true;
                         MessageBox.Show("لقد تم حفظ بيانات الأدوية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Information);
