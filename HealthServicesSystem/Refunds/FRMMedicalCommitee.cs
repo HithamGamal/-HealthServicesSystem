@@ -590,6 +590,10 @@ namespace HealthServicesSystem.Refunds
             ExecptionReason.SelectedIndex = -1;
             CoInsuranceTypee.SelectedIndex = -1;
              requestId = 0;
+            radLabel16.Visible = true;
+            radLabel15.Visible = true;
+            CoInsuranceTypee.Visible = true;
+            ExecptionReason.Visible = true;
 
         }
         private void NewBTN_Click(object sender, EventArgs e)
@@ -1217,6 +1221,10 @@ namespace HealthServicesSystem.Refunds
         {
             if (transferRadio.IsChecked )
             {
+                radLabel16.Visible = true;
+                radLabel15.Visible = true;
+                CoInsuranceTypee.Visible = true;
+                ExecptionReason.Visible = true;
                 //if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
                 //{
                 //    PLC.DbCailm.Close();
@@ -1274,6 +1282,12 @@ namespace HealthServicesSystem.Refunds
                 MedicalServiceAr.ValueMember = "Id";
                 MedicalServiceAr.SelectedIndex = -1;
                 MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+
+                radLabel16.Visible = false;
+                radLabel15.Visible = false;
+                CoInsuranceTypee.Visible = false;
+                ExecptionReason.Visible = false;
 
             }
             pat_cost_txt.Text = "0";
