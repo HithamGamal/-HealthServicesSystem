@@ -808,7 +808,9 @@ namespace HealthServicesSystem
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
-        private void RadButtonElement4_Click(object sender, EventArgs e)
+        
+
+        private void CommitteeReport_Click(object sender, EventArgs e)
         {
             CommitteeReportForm frm = new CommitteeReportForm();
             frm.MdiParent = this;

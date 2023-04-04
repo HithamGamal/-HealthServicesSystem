@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CommitteeReport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAXJJREFUaEPt
+        mSFOBEEUREdwCASCU3A2JA7BfbgHigSDQCI4AvzvvpgH3fWnmmwyLylTu9XVlU1G7GwnF8RV6D70Efo+
+        QK+h69Ay8vJ7F+lo6YiX0N4lunoO3YXs1NIOt6F6VmrJL1ELO+wNSNlH1LIONCBlHVGLOvw2IGUbUUs6
+        /DUgZRlRCzqMDEgdPqIe3mF0QEoaUQ+okD/LzIDU9IgarpA/y+yAVI4YpgYr5M9yE3oflNRJIfKdSJ0U
+        It+J1Ekh8p1InRQi34nUSSHynUidFCLfidRJIfKdSJ0UIt+J1Ekh8p1InRQi34nUSSHynUidFCLfidRJ
+        IfKdSJ0UIt+J1Ekh8p1InRQi34nUSSHynUidFCLfidRJIfKdSJ0UIt+J1Ekh8p1InRQi34nUSSHXC44R
+        vYWGqcHKQ6h+tlJPoWFqsJIv+R5Dn6H6HaeyKy+f3cPUAy6Sc8B/s/Jp8xU6nJVPm/wH+nBWPm0sA07W
+        sW0/FA9Gxj2E0dEAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="FRMMedicineSetting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAANZJREFUaEPt
@@ -482,18 +494,6 @@
         xF6r8IKAzsvrl/T63HZaigiGXpH+whqClZlAzC4vsdLXIV0gl9JOvlITJvYrSc3KkCvkBolP1WKl+IxR
         gmX7sM38Hmfr/XMTfbRL3BXexH2xR4xGO8RtMWoT28UtkZoIn4H+B20VN8WoTaA0sSkQo5OZoIotpTOv
         QryCWfg0OmlSVbPZbwwMD5FIO05iAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="radButtonElement4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAXJJREFUaEPt
-        mSFOBEEUREdwCASCU3A2JA7BfbgHigSDQCI4AvzvvpgH3fWnmmwyLylTu9XVlU1G7GwnF8RV6D70Efo+
-        QK+h69Ay8vJ7F+lo6YiX0N4lunoO3YXs1NIOt6F6VmrJL1ELO+wNSNlH1LIONCBlHVGLOvw2IGUbUUs6
-        /DUgZRlRCzqMDEgdPqIe3mF0QEoaUQ+okD/LzIDU9IgarpA/y+yAVI4YpgYr5M9yE3oflNRJIfKdSJ0U
-        It+J1Ekh8p1InRQi34nUSSHynUidFCLfidRJIfKdSJ0UIt+J1Ekh8p1InRQi34nUSSHynUidFCLfidRJ
-        IfKdSJ0UIt+J1Ekh8p1InRQi34nUSSHynUidFCLfidRJIfKdSJ0UIt+J1Ekh8p1InRQi34nUSSHXC44R
-        vYWGqcHKQ6h+tlJPoWFqsJIv+R5Dn6H6HaeyKy+f3cPUAy6Sc8B/s/Jp8xU6nJVPm/wH+nBWPm0sA07W
-        sW0/FA9Gxj2E0dEAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="FRMApproveMedicine.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

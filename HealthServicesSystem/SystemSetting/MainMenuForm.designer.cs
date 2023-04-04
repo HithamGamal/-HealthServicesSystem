@@ -133,7 +133,7 @@
             this.FRMApproveWindowAll = new Telerik.WinControls.UI.RadButtonElement();
             this.FRMApproveWindow = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup28 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
+            this.CommitteeReport = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup53 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.committeeBTN = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab6 = new Telerik.WinControls.UI.RibbonTab();
@@ -720,7 +720,7 @@
             // 
             // ribbonTab2
             // 
-            this.ribbonTab2.IsSelected = true;
+            this.ribbonTab2.IsSelected = false;
             this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup41,
             this.radRibbonBarGroup42,
@@ -1159,7 +1159,7 @@
             // 
             // ribbonTab4
             // 
-            this.ribbonTab4.IsSelected = false;
+            this.ribbonTab4.IsSelected = true;
             this.ribbonTab4.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup27,
             this.radRibbonBarGroup28,
@@ -1197,21 +1197,21 @@
             // radRibbonBarGroup28
             // 
             this.radRibbonBarGroup28.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radButtonElement4});
+            this.CommitteeReport});
             this.radRibbonBarGroup28.Name = "radRibbonBarGroup28";
             this.radRibbonBarGroup28.Text = "تقارير موافقات الخدمة الطبية";
             // 
-            // radButtonElement4
+            // CommitteeReport
             // 
-            this.radButtonElement4.AutoSize = false;
-            this.radButtonElement4.Bounds = new System.Drawing.Rectangle(0, 0, 152, 59);
-            this.radButtonElement4.Enabled = false;
-            this.radButtonElement4.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement4.Image")));
-            this.radButtonElement4.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radButtonElement4.Name = "radButtonElement4";
-            this.radButtonElement4.Text = "التقارير";
-            this.radButtonElement4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radButtonElement4.Click += new System.EventHandler(this.RadButtonElement4_Click);
+            this.CommitteeReport.AutoSize = false;
+            this.CommitteeReport.Bounds = new System.Drawing.Rectangle(0, 0, 152, 59);
+            this.CommitteeReport.Enabled = false;
+            this.CommitteeReport.Image = ((System.Drawing.Image)(resources.GetObject("CommitteeReport.Image")));
+            this.CommitteeReport.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CommitteeReport.Name = "CommitteeReport";
+            this.CommitteeReport.Text = "التقارير";
+            this.CommitteeReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CommitteeReport.Click += new System.EventHandler(this.CommitteeReport_Click);
             // 
             // radRibbonBarGroup53
             // 
@@ -1677,7 +1677,7 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup28;
         private Telerik.WinControls.UI.RadButtonElement FRMApproveWindowAll;
         private Telerik.WinControls.UI.RadButtonElement FRMApproveWindow;
-        private Telerik.WinControls.UI.RadButtonElement radButtonElement4;
+        private Telerik.WinControls.UI.RadButtonElement CommitteeReport;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup29;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement5;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement6;
