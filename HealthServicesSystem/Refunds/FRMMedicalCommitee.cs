@@ -1227,7 +1227,7 @@ namespace HealthServicesSystem.Refunds
 
 
 
-                    GRDApprove.DataSource = "";
+                GRDApprove.Rows.Clear();
                     var dataDetails = (from m in db.medicalCommitteeRequestDetails
                                              where m.MedicalCommitteeRequest.Id == ID
                                              && m.RowStatus != RowStatus.Deleted
@@ -1245,9 +1245,10 @@ namespace HealthServicesSystem.Refunds
 
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                //   RadMessageBox.Show(IdLabel.Text);
+
+                RadMessageBox.Show(ex.Message);
             }
         }
 

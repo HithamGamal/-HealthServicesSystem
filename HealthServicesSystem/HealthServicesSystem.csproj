@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>130</ApplicationRevision>
+    <ApplicationRevision>131</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -156,7 +156,9 @@
     <Compile Include="Claims\ClmReviewFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Claims\ClmReviewFrm.Designer.cs" />
+    <Compile Include="Claims\ClmReviewFrm.Designer.cs">
+      <DependentUpon>ClmReviewFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Claims\UserReviewRepFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -875,7 +877,9 @@
     <EmbeddedResource Include="Claims\ClmRequestFrm.resx">
       <DependentUpon>ClmRequestFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Claims\ClmReviewFrm.resx" />
+    <EmbeddedResource Include="Claims\ClmReviewFrm.resx">
+      <DependentUpon>ClmReviewFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Claims\ClmSendFrm.resx">
       <DependentUpon>ClmSendFrm.cs</DependentUpon>
     </EmbeddedResource>
