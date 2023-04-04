@@ -1248,13 +1248,14 @@ namespace HealthServicesSystem
                                 RptiewChronics.Show();
                                 Cursor = Cursors.Default;
                                 radioButton3.Checked = false;
-                                for (int i = 0; i < GetDet.Count; i++)
-                                {
-                                    int SirkId = Convert.ToInt32(GetDet[i].Row5);
-                                    var UpdateSirk = db.Reclaims.Where(p => p.Id == SirkId).ToList();
-                                    UpdateSirk[0].SirkNo = Convert.ToInt32(SirkNo.Text);
-                                    db.SaveChanges();
-                                }
+                                db.Database.ExecuteSqlCommand("Update Reclaims set SirkNo = " + Convert.ToInt32(SirkNo.Text)+ " where SirkNo=0 and (ReclaimDate between '"+dat1+" and '"+dat2+"') and ReclaimTotal>0 ");
+                                //for (int i = 0; i < GetDet.Count; i++)
+                                //{
+                                //    int SirkId = Convert.ToInt32(GetDet[i].Row5);
+                                //    var UpdateSirk = db.Reclaims.Where(p => p.Id == SirkId).ToList();
+                                //    UpdateSirk[0].SirkNo = Convert.ToInt32(SirkNo.Text);
+                                //    db.SaveChanges();
+                                //}
                             }
                             else
                             {
