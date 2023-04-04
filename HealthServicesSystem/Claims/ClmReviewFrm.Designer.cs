@@ -68,6 +68,7 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HistoryGrd = new Telerik.WinControls.UI.RadGridView();
+            this.ReveiewStatusLb = new Telerik.WinControls.UI.RadLabel();
             this.NonConfrmGrd = new Telerik.WinControls.UI.RadGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.DaignosisNameTxt = new Telerik.WinControls.UI.RadLabel();
@@ -138,13 +139,13 @@
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.ItemGrd = new Telerik.WinControls.UI.RadGridView();
+            this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
             this.customShape1 = new Telerik.WinControls.OldShapeEditor.CustomShape();
             this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
-            this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
-            this.ReveiewStatusLb = new Telerik.WinControls.UI.RadLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReveiewStatusLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NonConfrmGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NonConfrmGrd.MasterTemplate)).BeginInit();
             this.panel3.SuspendLayout();
@@ -224,7 +225,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemGrd.MasterTemplate)).BeginInit();
             this.ItemGrd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReveiewStatusLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -299,6 +299,17 @@
             this.HistoryGrd.Size = new System.Drawing.Size(976, 149);
             this.HistoryGrd.TabIndex = 1;
             this.HistoryGrd.TitleText = "التاريخ المرضي";
+            // 
+            // ReveiewStatusLb
+            // 
+            this.ReveiewStatusLb.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReveiewStatusLb.ForeColor = System.Drawing.Color.Red;
+            this.ReveiewStatusLb.Location = new System.Drawing.Point(278, 146);
+            this.ReveiewStatusLb.Name = "ReveiewStatusLb";
+            this.ReveiewStatusLb.Size = new System.Drawing.Size(18, 19);
+            this.ReveiewStatusLb.TabIndex = 34;
+            this.ReveiewStatusLb.Text = " 0";
+            this.ReveiewStatusLb.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // NonConfrmGrd
             // 
@@ -1190,32 +1201,21 @@
             this.ItemGrd.TitleText = "بيانات الروشتة";
             this.ItemGrd.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.ItemGrd_CellDoubleClick);
             // 
-            // customShape1
-            // 
-            this.customShape1.Dimension = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.customShape1.IsRightToLeft = false;
-            // 
             // radLabel23
             // 
             this.radLabel23.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel23.ForeColor = System.Drawing.Color.Red;
-            this.radLabel23.Location = new System.Drawing.Point(406, 0);
+            this.radLabel23.Location = new System.Drawing.Point(407, 0);
             this.radLabel23.Name = "radLabel23";
             this.radLabel23.Size = new System.Drawing.Size(32, 19);
             this.radLabel23.TabIndex = 34;
             this.radLabel23.Text = "الحالة";
             this.radLabel23.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
-            // ReveiewStatusLb
+            // customShape1
             // 
-            this.ReveiewStatusLb.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReveiewStatusLb.ForeColor = System.Drawing.Color.Red;
-            this.ReveiewStatusLb.Location = new System.Drawing.Point(280, 146);
-            this.ReveiewStatusLb.Name = "ReveiewStatusLb";
-            this.ReveiewStatusLb.Size = new System.Drawing.Size(18, 19);
-            this.ReveiewStatusLb.TabIndex = 34;
-            this.ReveiewStatusLb.Text = " 0";
-            this.ReveiewStatusLb.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.customShape1.Dimension = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.customShape1.IsRightToLeft = false;
             // 
             // ClmReviewFrm
             // 
@@ -1235,6 +1235,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReveiewStatusLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NonConfrmGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NonConfrmGrd)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -1322,7 +1323,6 @@
             this.ItemGrd.ResumeLayout(false);
             this.ItemGrd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReveiewStatusLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
