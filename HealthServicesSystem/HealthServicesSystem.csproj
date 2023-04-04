@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>122</ApplicationRevision>
+    <ApplicationRevision>130</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -153,7 +153,7 @@
     <Compile Include="Claims\AllocationFrm.Designer.cs">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Claims\ClmReviewFrm.cs">
+    <Compile Include="Claims\UserReviewRepFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Claims\ClmReviewFrm.Designer.cs">
