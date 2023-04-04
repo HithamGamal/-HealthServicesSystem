@@ -140,6 +140,8 @@
             this.ItemGrd = new Telerik.WinControls.UI.RadGridView();
             this.customShape1 = new Telerik.WinControls.OldShapeEditor.CustomShape();
             this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
+            this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
+            this.ReveiewStatusLb = new Telerik.WinControls.UI.RadLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd.MasterTemplate)).BeginInit();
@@ -220,6 +222,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemGrd.MasterTemplate)).BeginInit();
+            this.ItemGrd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReveiewStatusLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,6 +232,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.HistoryGrd);
+            this.panel1.Controls.Add(this.ReveiewStatusLb);
             this.panel1.Controls.Add(this.NonConfrmGrd);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -1123,6 +1129,7 @@
             // 
             // ItemGrd
             // 
+            this.ItemGrd.Controls.Add(this.radLabel23);
             this.ItemGrd.Location = new System.Drawing.Point(3, 146);
             // 
             // 
@@ -1188,6 +1195,28 @@
             this.customShape1.Dimension = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.customShape1.IsRightToLeft = false;
             // 
+            // radLabel23
+            // 
+            this.radLabel23.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel23.ForeColor = System.Drawing.Color.Red;
+            this.radLabel23.Location = new System.Drawing.Point(406, 0);
+            this.radLabel23.Name = "radLabel23";
+            this.radLabel23.Size = new System.Drawing.Size(32, 19);
+            this.radLabel23.TabIndex = 34;
+            this.radLabel23.Text = "الحالة";
+            this.radLabel23.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // ReveiewStatusLb
+            // 
+            this.ReveiewStatusLb.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReveiewStatusLb.ForeColor = System.Drawing.Color.Red;
+            this.ReveiewStatusLb.Location = new System.Drawing.Point(280, 146);
+            this.ReveiewStatusLb.Name = "ReveiewStatusLb";
+            this.ReveiewStatusLb.Size = new System.Drawing.Size(18, 19);
+            this.ReveiewStatusLb.TabIndex = 34;
+            this.ReveiewStatusLb.Text = " 0";
+            this.ReveiewStatusLb.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
             // ClmReviewFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1203,6 +1232,7 @@
             this.ThemeName = "Office2010Blue";
             this.Load += new System.EventHandler(this.ClmReviewFrm_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryGrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NonConfrmGrd.MasterTemplate)).EndInit();
@@ -1289,6 +1319,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemGrd.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemGrd)).EndInit();
+            this.ItemGrd.ResumeLayout(false);
+            this.ItemGrd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReveiewStatusLb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1370,5 +1404,7 @@
         private Telerik.WinControls.UI.RadDropDownList MonthDrp;
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadTextBox YearTxt;
+        private Telerik.WinControls.UI.RadLabel ReveiewStatusLb;
+        private Telerik.WinControls.UI.RadLabel radLabel23;
     }
 }

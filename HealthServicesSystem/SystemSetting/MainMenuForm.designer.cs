@@ -172,6 +172,8 @@
             this.usernamelbl = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement6 = new Telerik.WinControls.UI.RadLabelElement();
             this.date = new Telerik.WinControls.UI.RadLabelElement();
+            this.radRibbonBarGroup57 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.UserReviewRepM = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -550,7 +552,7 @@
             // 
             // ribbonTab8
             // 
-            this.ribbonTab8.IsSelected = true;
+            this.ribbonTab8.IsSelected = false;
             this.ribbonTab8.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup36,
             this.radRibbonBarGroup50,
@@ -718,7 +720,7 @@
             // 
             // ribbonTab2
             // 
-            this.ribbonTab2.IsSelected = false;
+            this.ribbonTab2.IsSelected = true;
             this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup41,
             this.radRibbonBarGroup42,
@@ -728,7 +730,8 @@
             this.radRibbonBarGroup49,
             this.radRibbonBarGroup46,
             this.radRibbonBarGroup47,
-            this.radRibbonBarGroup48});
+            this.radRibbonBarGroup48,
+            this.radRibbonBarGroup57});
             this.ribbonTab2.Name = "ribbonTab2";
             this.ribbonTab2.Text = "المطالبات";
             this.ribbonTab2.UseMnemonic = false;
@@ -1558,6 +1561,24 @@
             this.date.Text = "date";
             this.date.TextWrap = true;
             // 
+            // radRibbonBarGroup57
+            // 
+            this.radRibbonBarGroup57.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.UserReviewRepM});
+            this.radRibbonBarGroup57.Name = "radRibbonBarGroup57";
+            this.radRibbonBarGroup57.Text = "تقرير مراجعة الاطباء";
+            // 
+            // UserReviewRepM
+            // 
+            this.UserReviewRepM.AutoSize = false;
+            this.UserReviewRepM.Bounds = new System.Drawing.Rectangle(0, 0, 100, 66);
+            this.UserReviewRepM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.UserReviewRepM.Image = global::HealthServicesSystem.Properties.Resources.offline_pin_FILL0_wght400_GRAD0_opsz48;
+            this.UserReviewRepM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserReviewRepM.Name = "UserReviewRepM";
+            this.UserReviewRepM.Text = "تقرير مراجعة الاطباء";
+            this.UserReviewRepM.Click += new System.EventHandler(this.UserReviewRepM_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1731,5 +1752,7 @@
         private Telerik.WinControls.UI.RadButtonElement CheckClaimsM;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup56;
         private Telerik.WinControls.UI.RadButtonElement CenterListClaimsM;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup57;
+        private Telerik.WinControls.UI.RadButtonElement UserReviewRepM;
     }
 }

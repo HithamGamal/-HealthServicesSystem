@@ -198,6 +198,14 @@ namespace HealthServicesSystem.Claims
                     DaignosisNameTxt.Text = qm[0].Diagnosis.DiagnosisName;
                     ContractTypesTxt.Text = qm[0].ClmContractType.ContractName;
                     IdClmLb.Text  = qm[0].NoOfFile .ToString();
+                    if (qm[0].IsReviewed ==0)
+                    {
+                        ReveiewStatusLb.Text = "غير مراجعة";
+                    }
+                    else
+                    {
+                        ReveiewStatusLb.Text = "تمت مراجعة";
+                    }
 
                 }
                 var q = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.MasterId == MstrId).Select(p => new
@@ -362,129 +370,136 @@ namespace HealthServicesSystem.Claims
 
         private void AddNonConfirmBtn_Click(object sender, EventArgs e)
         {
-            if (Convert .ToDecimal( ValueTxt .Text) >0)
+            try
             {
-                dbContext db = new dbContext();
-                int _impid = int.Parse(ImpDrp.SelectedValue.ToString());
-                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impid).ToList();
-                int _visitId = int.Parse(VisitIdTxt.Text);
-                int _idDet = int.Parse(IdDetTxt.Text);
-                int _m = GetImpDet[0].Month ;
-                int _y = GetImpDet[0].year;
-                int _CenterId = GetImpDet[0].CenterId;
-                decimal _NonVlaue = 0;
-                
-                decimal ItemTotalPrice = db.ClmDetailsData.Where( p=> p.Id == _idDet ).Select (p=> p.TotalPrice ).FirstOrDefault();
-                
-              int NonConfirmId = int.Parse(NonConfirmDrp.SelectedValue.ToString());
-                var GetValuetype = db.ClmNonConfirmType.Where(p => p.Id == NonConfirmId).ToList();
-              
-                var q = db.ClmNonConfirmDet.Where(p => p.DetailsId == _idDet && p.RowStatus != RowStatus.Deleted).ToList();
-                if (q.Count > 0)
+                if (Convert.ToDecimal(ValueTxt.Text) > 0)
                 {
-                    DialogResult d = MessageBox.Show("هل تريد ادراج مخالفة مرة اخرى ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (d == DialogResult.No)
+                    dbContext db = new dbContext();
+                    int _impid = int.Parse(ImpDrp.SelectedValue.ToString());
+                    var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impid).ToList();
+                    int _visitId = int.Parse(VisitIdTxt.Text);
+                    int _idDet = int.Parse(IdDetTxt.Text);
+                    int _m = GetImpDet[0].Month;
+                    int _y = GetImpDet[0].year;
+                    int _CenterId = GetImpDet[0].CenterId;
+                    decimal _NonVlaue = 0;
+
+                    decimal ItemTotalPrice = db.ClmDetailsData.Where(p => p.Id == _idDet).Select(p => p.TotalPrice).FirstOrDefault();
+
+                    int NonConfirmId = int.Parse(NonConfirmDrp.SelectedValue.ToString());
+                    var GetValuetype = db.ClmNonConfirmType.Where(p => p.Id == NonConfirmId).ToList();
+
+                    var q = db.ClmNonConfirmDet.Where(p => p.DetailsId == _idDet && p.RowStatus != RowStatus.Deleted).ToList();
+                    if (q.Count > 0)
                     {
-                        return;
+                        DialogResult d = MessageBox.Show("هل تريد ادراج مخالفة مرة اخرى ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (d == DialogResult.No)
+                        {
+                            return;
+                        }
                     }
-                }
                     ClmNonConfirmDet c = new ClmNonConfirmDet();
                     c.MasterId = int.Parse(VisitIdTxt.Text);
                     c.DateIn = PLC.getdatetime();
-                if( _DicountType ==0)
-                {
-                    c.DetailsId = _idDet;
-                    if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
+                    if (_DicountType == 0)
                     {
-                        _NonVlaue = (ItemTotalPrice * _NonPercent) / 100;
-                    }
-                    else
-                    {
-                        _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
-                    }
-                    var UpNon = db.ClmDetailsData.Where(p => p.Id == _idDet).ToList();
-                    if (UpNon.Count >0)
-                    {
-                        UpNon [0].NonConfItem = UpNon[0].NonConfItem+ _NonVlaue ;
-                    }
-                    c.Value = _NonVlaue;
-
-                }
-                else if (_DicountType ==1)
-                {
-                    
-                    var UpNon = db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).ToList();
-                    if (UpNon.Count>0)
-                    {
-                        foreach (var item in UpNon )
+                        c.DetailsId = _idDet;
+                        if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
                         {
-                            
-
-                            if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
-                            {
-                                _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
-                            }
-                            else
-                            {
-                                _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
-                            }
-                            item.NonConfVisit = item.NonConfVisit + _NonVlaue;
-
+                            _NonVlaue = (ItemTotalPrice * _NonPercent) / 100;
                         }
-                       c.Value  = (db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice)*_NonPercent )/100;
-                    }
-                    c.DetailsId = 0;
-                }
-                else if (_DicountType ==2)
-                {
-                    
-                    var UpNon = db.ClmDetailsData.Where(p => p.ClmMasterData .Months ==_m && p.ClmMasterData.Years==_y && p.ClmMasterData.CenterId== _CenterId && p.RowStatus != RowStatus.Deleted).ToList();
-                    if (UpNon.Count > 0)
-                    {
-                        foreach (var item in UpNon)
+                        else
                         {
-                            
-                            if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
-                            {
-                                _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
-                            }
-                            else
-                            {
-                                _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
-                            }
-
-                            item.NonConfClaims  = item.NonConfClaims + _NonVlaue;
-
+                            _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
                         }
-                        c.Value  = (db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice)* _NonPercent)/100 ;
+                        var UpNon = db.ClmDetailsData.Where(p => p.Id == _idDet).ToList();
+                        if (UpNon.Count > 0)
+                        {
+                            UpNon[0].NonConfItem = UpNon[0].NonConfItem + _NonVlaue;
+                        }
+                        c.Value = _NonVlaue;
+
                     }
-                    c.DetailsId = 0;
+                    else if (_DicountType == 1)
+                    {
+
+                        var UpNon = db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).ToList();
+                        if (UpNon.Count > 0)
+                        {
+                            foreach (var item in UpNon)
+                            {
+
+
+                                if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
+                                {
+                                    _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
+                                }
+                                else
+                                {
+                                    _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
+                                }
+                                item.NonConfVisit = item.NonConfVisit + _NonVlaue;
+
+                            }
+                            c.Value = (db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice) * _NonPercent) / 100;
+                        }
+                        c.DetailsId = 0;
+                    }
+                    else if (_DicountType == 2)
+                    {
+
+                        var UpNon = db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).ToList();
+                        if (UpNon.Count > 0)
+                        {
+                            foreach (var item in UpNon)
+                            {
+
+                                if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
+                                {
+                                    _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
+                                }
+                                else
+                                {
+                                    _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
+                                }
+
+                                item.NonConfClaims = item.NonConfClaims + _NonVlaue;
+
+                            }
+                            c.Value = (db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice) * _NonPercent) / 100;
+                        }
+                        c.DetailsId = 0;
+
+                    }
+
+
+                    c.Percent = _NonPercent;
+                    c.NonConfirmId = NonConfirmId;
+                    c.RowStatus = RowStatus.NewRow;
+                    c.Status = Status.Active;
+                    c.UserId = _UserId;
+                    db.ClmNonConfirmDet.Add(c);
+                    if (db.SaveChanges() > 0)
+                    {
+                        IdDetTxt.Text = "";
+                        Discounttxt.Text = "0";
+                        ItemIdTxt.Text = "";
+                        ItemNameTxt.Text = "";
+                        ValueTxt.Text = "0";
+                        NetValue.Text = "0";
+                        VisitCostTxt.Text = "0";
+                        ClaimsCostTxt.Text = "0";
+
+                        MessageBox.Show("تمت اضافة مخالفة");
+                        GetNonConfirm();
+                    }
+
 
                 }
-
-             
-                c.Percent =_NonPercent  ;
-                c.NonConfirmId = NonConfirmId;
-                c.RowStatus = RowStatus.NewRow;
-                c.Status = Status.Active;
-                c.UserId = _UserId;
-                db.ClmNonConfirmDet.Add(c);
-                if(db.SaveChanges ()>0)
-                {
-                    IdDetTxt.Text = "";
-                    Discounttxt.Text = "0";
-                    ItemIdTxt.Text = "";
-                    ItemNameTxt.Text = "";
-                    ValueTxt.Text = "0";
-                    NetValue.Text = "0";
-                    VisitCostTxt.Text = "0";
-                    ClaimsCostTxt.Text = "0";
-
-                    MessageBox.Show("تمت اضافة مخالفة");
-                    GetNonConfirm();
-                }
-                
-
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

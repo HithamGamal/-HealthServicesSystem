@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>122</ApplicationRevision>
+    <ApplicationRevision>123</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -153,17 +153,11 @@
     <Compile Include="Claims\AllocationFrm.Designer.cs">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Claims\UserReviewRepFrm.cs">
+    <Compile Include="Claims\ClmReviewFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Claims\UserReviewRepFrm.Designer.cs">
-      <DependentUpon>UserReviewRepFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Claims\UserReviewReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Claims\UserReviewReport.Designer.cs">
-      <DependentUpon>UserReviewReport.cs</DependentUpon>
+    <Compile Include="Claims\ClmReviewFrm.Designer.cs">
+      <DependentUpon>ClmReviewFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\CenterListClaims.cs">
       <SubType>Component</SubType>
@@ -243,12 +237,6 @@
     <Compile Include="Claims\ClmRequestFrm.Designer.cs">
       <DependentUpon>ClmRequestFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Claims\ClmReviewFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Claims\ClmReviewFrm.Designer.cs">
-      <DependentUpon>ClmReviewFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Claims\ClmSendFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +314,18 @@
     </Compile>
     <Compile Include="Claims\SubReportError.Designer.cs">
       <DependentUpon>SubReportError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\UserReviewRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Claims\UserReviewRepFrm.Designer.cs">
+      <DependentUpon>UserReviewRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Claims\UserReviewReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Claims\UserReviewReport.Designer.cs">
+      <DependentUpon>UserReviewReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Claims\ViewCenterListNonConfirmRepFrm.cs">
       <SubType>Form</SubType>
@@ -826,11 +826,8 @@
     <EmbeddedResource Include="Claims\AllocationFrm.resx">
       <DependentUpon>AllocationFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Claims\UserReviewRepFrm.resx">
-      <DependentUpon>UserReviewRepFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Claims\UserReviewReport.resx">
-      <DependentUpon>UserReviewReport.cs</DependentUpon>
+    <EmbeddedResource Include="Claims\ClmReviewFrm.resx">
+      <DependentUpon>ClmReviewFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\CenterListClaims.resx">
       <DependentUpon>CenterListClaims.cs</DependentUpon>
@@ -871,9 +868,6 @@
     <EmbeddedResource Include="Claims\ClmRequestFrm.resx">
       <DependentUpon>ClmRequestFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Claims\ClmReviewFrm.resx">
-      <DependentUpon>ClmReviewFrm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Claims\ClmSendFrm.resx">
       <DependentUpon>ClmSendFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -912,6 +906,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\SubReportError.resx">
       <DependentUpon>SubReportError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\UserReviewRepFrm.resx">
+      <DependentUpon>UserReviewRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Claims\UserReviewReport.resx">
+      <DependentUpon>UserReviewReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ViewCenterListNonConfirmRepFrm.resx">
       <DependentUpon>ViewCenterListNonConfirmRepFrm.cs</DependentUpon>

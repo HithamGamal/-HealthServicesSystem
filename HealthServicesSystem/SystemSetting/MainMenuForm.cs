@@ -800,5 +800,13 @@ namespace HealthServicesSystem
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
+
+        private void UserReviewRepM_Click(object sender, EventArgs e)
+        {
+            UserReviewRepFrm frm = new UserReviewRepFrm();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }
