@@ -101,6 +101,8 @@
             this.CenterListNonConfirm = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup48 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.LastClaimsCenter = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup57 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.UserReviewRepM = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab7 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup32 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.FRMBookInfo = new Telerik.WinControls.UI.RadButtonElement();
@@ -172,8 +174,6 @@
             this.usernamelbl = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement6 = new Telerik.WinControls.UI.RadLabelElement();
             this.date = new Telerik.WinControls.UI.RadLabelElement();
-            this.radRibbonBarGroup57 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.UserReviewRepM = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem1.ComboBoxElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
@@ -907,6 +907,25 @@
             this.LastClaimsCenter.Text = "التقرير النهائي";
             this.LastClaimsCenter.Click += new System.EventHandler(this.LastClaimsCenter_Click);
             // 
+            // radRibbonBarGroup57
+            // 
+            this.radRibbonBarGroup57.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.UserReviewRepM});
+            this.radRibbonBarGroup57.Name = "radRibbonBarGroup57";
+            this.radRibbonBarGroup57.Text = "تقرير مراجعة الاطباء";
+            // 
+            // UserReviewRepM
+            // 
+            this.UserReviewRepM.AutoSize = false;
+            this.UserReviewRepM.Bounds = new System.Drawing.Rectangle(0, 0, 100, 66);
+            this.UserReviewRepM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.UserReviewRepM.Enabled = false;
+            this.UserReviewRepM.Image = global::HealthServicesSystem.Properties.Resources.offline_pin_FILL0_wght400_GRAD0_opsz48;
+            this.UserReviewRepM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserReviewRepM.Name = "UserReviewRepM";
+            this.UserReviewRepM.Text = "تقرير مراجعة الاطباء";
+            this.UserReviewRepM.Click += new System.EventHandler(this.UserReviewRepM_Click);
+            // 
             // ribbonTab7
             // 
             this.ribbonTab7.IsSelected = false;
@@ -1140,7 +1159,7 @@
             // 
             // ribbonTab4
             // 
-            this.ribbonTab4.IsSelected = true;
+            this.ribbonTab4.IsSelected = false;
             this.ribbonTab4.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup27,
             this.radRibbonBarGroup28,
@@ -1561,24 +1580,6 @@
             this.radStatusStrip1.SetSpring(this.date, false);
             this.date.Text = "date";
             this.date.TextWrap = true;
-            // 
-            // radRibbonBarGroup57
-            // 
-            this.radRibbonBarGroup57.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.UserReviewRepM});
-            this.radRibbonBarGroup57.Name = "radRibbonBarGroup57";
-            this.radRibbonBarGroup57.Text = "تقرير مراجعة الاطباء";
-            // 
-            // UserReviewRepM
-            // 
-            this.UserReviewRepM.AutoSize = false;
-            this.UserReviewRepM.Bounds = new System.Drawing.Rectangle(0, 0, 100, 66);
-            this.UserReviewRepM.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
-            this.UserReviewRepM.Image = global::HealthServicesSystem.Properties.Resources.offline_pin_FILL0_wght400_GRAD0_opsz48;
-            this.UserReviewRepM.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.UserReviewRepM.Name = "UserReviewRepM";
-            this.UserReviewRepM.Text = "تقرير مراجعة الاطباء";
-            this.UserReviewRepM.Click += new System.EventHandler(this.UserReviewRepM_Click);
             // 
             // MainMenuForm
             // 
