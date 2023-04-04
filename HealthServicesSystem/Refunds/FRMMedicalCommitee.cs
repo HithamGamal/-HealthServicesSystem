@@ -30,7 +30,7 @@ namespace HealthServicesSystem.Refunds
         string reason = "";
         string coInsuranceType = "";
         string cost = "";
-
+        int requestId =0;
 
 
         public FRMMedicalCommitee()
@@ -112,11 +112,27 @@ namespace HealthServicesSystem.Refunds
         {
             find_insurance_no(TXTSearch.Text);
             transaction_history(TXTSearch.Text);
+            services_history(TXTSearch.Text);
         }
 
         private void GRDApprove_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        public void services_history(string insurance_no)
+        {
+            PLC.SubId = insurance_no;
+            var serviceHistory = db.medicalCommitteeRequestDetails
+                                   .Where(p => p.InsurId == PLC.SubId && p.RowStatus!=RowStatus.Deleted).ToList();
+            if (serviceHistory.Count > 0)
+            {
+                CommitteeListHistory frm = new CommitteeListHistory();
+                frm.ShowDialog();
+
+
+            }
         }
 
         public void find_insurance_no(string insurance_no)
@@ -589,7 +605,11 @@ namespace HealthServicesSystem.Refunds
             ExecptionCost.Text = "0";
             ExecptionReason.SelectedIndex = -1;
             CoInsuranceTypee.SelectedIndex = -1;
-
+             requestId = 0;
+            radLabel16.Visible = true;
+            radLabel15.Visible = true;
+            CoInsuranceTypee.Visible = true;
+            ExecptionReason.Visible = true;
 
         }
         private void NewBTN_Click(object sender, EventArgs e)
@@ -679,16 +699,17 @@ namespace HealthServicesSystem.Refunds
             ExceptionReason form = new ExceptionReason();
             if (physiotherapyrb.IsChecked)
             {
-                int id = Convert.ToInt32(rqstId.Text);
+                int id = requestId;
                 physiotherapy_session_rpt   rpt = new physiotherapy_session_rpt();
                 
-                rpt.rqstId.Value = rqstId.Text;
+                rpt.rqstId.Value =id.ToString();
                 rpt.centerName .Value = ExcutingCenter.Text;
                 rpt.patientname.Value = FulName.Text;
                 rpt.insur_no.Value = TXTSearch.Text;
                 rpt.cor_no.Value = clientIdLBL.Text;
                 rpt.rqst_date.Value = DateTime.Today.Date.ToShortDateString();
                 rpt.phone_no.Value = phoneNoLBL.Text;
+                
 
                 RequestFrmRPT frm = new RequestFrmRPT();
 
@@ -705,11 +726,14 @@ namespace HealthServicesSystem.Refunds
             }
             else
             {
-                int id = Convert.ToInt32(rqstId.Text);
+               // int id = Convert.ToInt32(rqstId.Text);
+                int id = requestId;
                 TransferRPT rpt = new TransferRPT();
                 var data = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id)
-                    .Select(x => new { service_id = x.ServiceId, pat_cost = x.Pat_cost,
-                        service_Name = x.Service_Name, ServiceCost = x.Insur_cost }).ToList();
+                             .Select(x => new { service_id = x.ServiceId,
+                                                  pat_cost = x.Pat_cost,
+                                              service_Name = x.Service_Name,
+                                               ServiceCost = x.Insur_cost }).ToList();
                 rpt.DataSource = data;
                 rpt.rqstId.Value = codelbl.Text;
                 rpt.patientname.Value = FulName.Text;
@@ -717,9 +741,11 @@ namespace HealthServicesSystem.Refunds
                 rpt.cor_no.Value = clientIdLBL.Text;
                 rpt.rqst_date.Value = DateTime.Today.Date.ToShortDateString();
                 rpt.phone_no.Value = phoneNoLBL.Text;
+                rpt.Qrr.Value = codelbl.Text;
+
                 if (coRadio.IsChecked)
                 {
-                    rpt.ServiceCost.Visible = true;
+                  //  rpt.ServiceCost.Visible = true;
                    // rpt.textBox13.Visible = true;
                     rpt.textBox21.Visible = true;
                 }
@@ -951,6 +977,7 @@ namespace HealthServicesSystem.Refunds
         {
             int allowCost = 0;
             int PatientPrice = 0;
+           
           
 
             if (string.IsNullOrEmpty(TXTSearch.Text ))
@@ -985,9 +1012,19 @@ namespace HealthServicesSystem.Refunds
 
             if (CoInsuranceTypee .Text=="")
             {
-                reason ="";
-                coInsuranceType = "حسب اسعار التعاقد";
-                cost = "";
+                if (coRadio.CheckState ==CheckState.Checked)
+                {
+                    reason = "";
+                    coInsuranceType = " مساهمة بمبلغ" + TotalCostTB.Text;
+                  //  cost = TotalCostTB.Text;
+                }
+                else
+                {
+                    reason = "";
+                    coInsuranceType = "حسب اسعار التعاقد";
+                    cost = "";
+                }
+                
             }
             else
             {
@@ -1005,7 +1042,25 @@ namespace HealthServicesSystem.Refunds
                 }
                 
             }
-         
+            if (rqstId.Text != "0")
+            {
+                int id_forEdit = Convert.ToInt32(rqstId.Text);
+               
+                    var data = db.medicalCommitteeRequests.Where(x => x.Id == id_forEdit).First();
+                data.RowStatus = RowStatus.Edited;
+                data.UpdateUser = _UserId;
+                data.UpdateDate = PLC.getdate();
+
+                var dataDetails = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id_forEdit).First();
+                dataDetails.RowStatus = RowStatus.Edited;
+                dataDetails.UpdateUser = _UserId;
+                dataDetails.UpdateDate = PLC.getdate();
+
+
+                db.SaveChanges();
+
+                
+            }
             MedicalCommitteeRequest rqst = new MedicalCommitteeRequest();
             MedicalCommitteeRequestDetails rqstDetails = new MedicalCommitteeRequestDetails();
 
@@ -1088,10 +1143,10 @@ namespace HealthServicesSystem.Refunds
             db.medicalCommitteeRequests.Add(rqst);
             db.SaveChanges();
 
-            rqstId.Text  =  rqst.Id.ToString();
+            requestId  =  rqst.Id;
             codelbl.Text = rqst.Code.ToString();
 
-            if (GRDApprove.Rows.Count >0)
+            if (GRDApprove.Rows.Count > 0)
             {
                 foreach (var row in GRDApprove.Rows)
                 {
@@ -1111,7 +1166,7 @@ namespace HealthServicesSystem.Refunds
                     db.medicalCommitteeRequestDetails.Add(rqstDetails);
                     db.SaveChanges();
                 }
-            }
+        }
             else
             {
                 
@@ -1122,8 +1177,8 @@ namespace HealthServicesSystem.Refunds
                 rqstDetails.Co_cost = Convert.ToDecimal(Co_CostTB.Text);
                 rqstDetails.Pat_cost = 0;
                 rqstDetails.Insur_cost = 0;
-                rqstDetails.ServiceCost = Convert.ToDecimal(ServiceCostTB .Text);
-                rqstDetails.InvoiceCost =Convert.ToDecimal( InvoiceCostTB.Text);
+                rqstDetails.ServiceCost = Convert.ToDecimal(ServiceCostTB.Text);
+                rqstDetails.InvoiceCost =Convert.ToDecimal(InvoiceCostTB.Text);
                 rqstDetails.UserId =_UserId;
                 rqstDetails.DateIn = PLC.getdate();
                 rqstDetails.RowStatus = RowStatus.NewRow;
@@ -1133,8 +1188,8 @@ namespace HealthServicesSystem.Refunds
             }
 
 
-            //MessageBox.Show("تم الحفظ بنجاح!");
-            print();
+    //MessageBox.Show("تم الحفظ بنجاح!");
+    print();
             clear();
         }
 
@@ -1168,10 +1223,11 @@ namespace HealthServicesSystem.Refunds
                     noteTXT .Text = data.Note;
                     ExcutingCenter.SelectedValue = data.CenterId;
                     ExcutingCenter.Text = data.CenterName ;
+                    fromCenterDropdown.Text = data.CenterFrom ;
 
 
 
-
+                    GRDApprove.DataSource = "";
                     var dataDetails = (from m in db.medicalCommitteeRequestDetails
                                              where m.MedicalCommitteeRequest.Id == ID
                                              && m.RowStatus != RowStatus.Deleted
@@ -1180,7 +1236,8 @@ namespace HealthServicesSystem.Refunds
                     foreach (var item in dataDetails )
                     {
                         GRDApprove .Rows.Add(i,i, data.InsurNo, 0,item.ServiceId, item.Service_Name ,
-                            item.Service_Name, item.Insur_cost , item.Pat_cost , item.ServiceCost, item.Co_cost );
+                            item.Service_Name, item.Insur_cost , item.Pat_cost , item.ServiceCost, item.Co_cost ,item.AllowCost);
+
 
                         i++;
                     }
@@ -1198,6 +1255,10 @@ namespace HealthServicesSystem.Refunds
         {
             if (transferRadio.IsChecked )
             {
+                radLabel16.Visible = true;
+                radLabel15.Visible = true;
+                CoInsuranceTypee.Visible = true;
+                ExecptionReason.Visible = true;
                 //if (PLC.DbCailm.State == (System.Data.ConnectionState)1)
                 //{
                 //    PLC.DbCailm.Close();
@@ -1255,6 +1316,12 @@ namespace HealthServicesSystem.Refunds
                 MedicalServiceAr.ValueMember = "Id";
                 MedicalServiceAr.SelectedIndex = -1;
                 MedicalServiceAr.DropDownListElement.AutoCompleteSuggest.SuggestMode = Telerik.WinControls.UI.SuggestMode.Contains;
+
+
+                radLabel16.Visible = false;
+                radLabel15.Visible = false;
+                CoInsuranceTypee.Visible = false;
+                ExecptionReason.Visible = false;
 
             }
             pat_cost_txt.Text = "0";

@@ -1140,7 +1140,7 @@
             // 
             // ribbonTab4
             // 
-            this.ribbonTab4.IsSelected = false;
+            this.ribbonTab4.IsSelected = true;
             this.ribbonTab4.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup27,
             this.radRibbonBarGroup28,
@@ -1192,6 +1192,7 @@
             this.radButtonElement4.Name = "radButtonElement4";
             this.radButtonElement4.Text = "التقارير";
             this.radButtonElement4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement4.Click += new System.EventHandler(this.RadButtonElement4_Click);
             // 
             // radRibbonBarGroup53
             // 

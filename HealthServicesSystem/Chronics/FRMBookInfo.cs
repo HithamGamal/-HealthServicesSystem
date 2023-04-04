@@ -83,6 +83,7 @@ namespace HealthServicesSystem.Reclaims
             PhoneNo.Clear();
             Notes.Clear();
             DocumentNo.Clear();
+            card_no.Enabled = true;
             BookType.SelectedIndex = -1;
             RequistingParty.SelectedIndex = -1;
             BookNo.Clear();
@@ -640,7 +641,7 @@ namespace HealthServicesSystem.Reclaims
                             dasearch.Fill(dtsearch);
                             if (dtsearch.Rows.Count > 0)
                             {
-
+                                    card_no.Enabled = false;
                                 //DateTime date1 = Convert.ToDateTime(dtsearch.Rows[0]["STOP_CARD"]);
                                 // MsgBox(date1.Date)
                                 string stri1 = null;
@@ -701,7 +702,8 @@ namespace HealthServicesSystem.Reclaims
                             else
                             {
                                 this.Cursor = Cursors.Default;
-                                MessageBox.Show("لا توجد بيانات", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    card_no.Enabled =true;
+                                    MessageBox.Show("لا توجد بيانات", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }

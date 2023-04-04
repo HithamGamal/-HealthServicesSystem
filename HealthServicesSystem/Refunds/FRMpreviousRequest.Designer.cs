@@ -71,7 +71,7 @@
             gridViewTextBoxColumn3.Width = 216;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.FieldName = "TotalCost";
-            gridViewTextBoxColumn4.HeaderText = "تكلفة الفاتورة";
+            gridViewTextBoxColumn4.HeaderText = "تحمل التأمين";
             gridViewTextBoxColumn4.Name = "TotalCost";
             gridViewTextBoxColumn4.Width = 144;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;

@@ -144,8 +144,10 @@ namespace HealthServicesSystem.Reclaims
                 using (dbContext db = new dbContext())
                 {
                     var FRef = db.Reclaims.Where(p => p.ReclaimNo == OperationNo.Text.Trim() && p.RowStatus != RowStatus.Deleted).Take(1).ToList();
+                   // MessageBox.Show(FRef.Count.ToString());
                     if (FRef.Count > 0)
                     {
+                        
                         if (FRef[0].RefuseMedical == true)
                         {
                             MessageBox.Show("لقد تم رفض هذه العملية من قبل ", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -582,9 +584,11 @@ namespace HealthServicesSystem.Reclaims
                         {
                             MedicalTotal = db.ReclaimMedicals.Where(p => p.ReclaimId == ReclaimId).Sum(p => p.ReclaimCost);
                         }
+                        GetReclaim[0].MedicalTotal = MedicalTotal;
                         GetReclaim[0].MedicineTotal = MedicneTotal;
                         GetReclaim[0].ReclaimTotal = MedicneTotal + MedicalTotal;
                         db.SaveChanges();
+                       
                         Saved = true;
                         MessageBox.Show("لقد تم حفظ بيانات الخدمات الطبية", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         // FillGrid();
@@ -650,12 +654,12 @@ namespace HealthServicesSystem.Reclaims
                     var FrHistory = FrHistoryMc.Union(FrHistoryMd).ToList();
                     if (FrHistory.Count > 0)
                     {
-                        var Frec = db.Reclaims.Where(p => p.ReclaimNo == OperationNo.Text).ToList();
-                        if (Frec.Count > 0)
-                        {
-                            Frec[0].ReclaimTotal = Frec[0].MedicalTotal + Frec[0].MedicineTotal;
-                            db.SaveChanges();
-                        }
+                        //var Frec = db.Reclaims.Where(p => p.ReclaimNo == OperationNo.Text).ToList();
+                        //if (Frec.Count > 0)
+                        //{
+                        //    Frec[0].ReclaimTotal = Frec[0].MedicalTotal + Frec[0].MedicineTotal;
+                        //    db.SaveChanges();
+                        //}
                         Estrdad Estr = new Estrdad();
                         Estr.DataSource = FrHistory;
                         double TotalOfMoney = Convert.ToDouble(FrHistory[0].BillsTotal);
