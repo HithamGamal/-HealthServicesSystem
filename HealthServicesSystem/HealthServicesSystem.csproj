@@ -30,7 +30,7 @@
     <PublisherName>IT Management</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>128</ApplicationRevision>
+    <ApplicationRevision>129</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -344,6 +344,12 @@
     </Compile>
     <Compile Include="Claims\ViewReceiptRepFrm.Designer.cs">
       <DependentUpon>ViewReceiptRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Committee\CommitteeListHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Committee\CommitteeListHistory.Designer.cs">
+      <DependentUpon>CommitteeListHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Committee\CommitteeReportForm.cs">
       <SubType>Form</SubType>
@@ -927,6 +933,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Claims\ViewReceiptRepFrm.resx">
       <DependentUpon>ViewReceiptRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Committee\CommitteeListHistory.resx">
+      <DependentUpon>CommitteeListHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Committee\CommitteeReportForm.resx">
       <DependentUpon>CommitteeReportForm.cs</DependentUpon>
