@@ -36,7 +36,7 @@ namespace HealthServicesSystem.Claims
             {
                 Id = p.Id,
                 NonConfName = p.ClmNonConfirmType.Name,
-                DiscountType = p.ClmNonConfirmType.ValueType ,
+                DiscountType = p.ClmNonConfirmType.ValueType,
                 DiscountValue = p.Value,
                 Percent = p.Percent,
                 DiscountPer = p.ClmNonConfirmType.DicountType,
@@ -52,9 +52,9 @@ namespace HealthServicesSystem.Claims
         {
             try
             {
-                string  _insNo = InsuranceNoTxt.Text;
+                string _insNo = InsuranceNoTxt.Text;
                 dbContext db = new dbContext();
-                var q = db.ReclaimMedicines.Where(p => p.Reclaim.InsurNo == _insNo && p.RowStatus != RowStatus.Deleted && p.DateIn .Month>=_m && p.DateIn.Year == _y).Select(p => new
+                var q = db.ReclaimMedicines.Where(p => p.Reclaim.InsurNo == _insNo && p.RowStatus != RowStatus.Deleted && p.DateIn.Month >= _m && p.DateIn.Year == _y).Select(p => new
                 {
                     CenterName = db.ReclaimMedicineReasonsLists.Where(c => c.Id == p.Reclaim.ReclaimMedicalResonId).Select(c => c.MedicineReason).FirstOrDefault(),
                     Month = p.Reclaim.ReclaimDate.Month,
@@ -62,15 +62,15 @@ namespace HealthServicesSystem.Claims
                     VisitDate = p.Reclaim.ReclaimDate,
                     GenericName = p.MedicineForReclaim.Generic_name,
                     ProcessName = "استرداد",
-                    Qty= p.Quantity ,
-                    Notes =""
+                    Qty = p.Quantity,
+                    Notes = ""
 
 
                 }).ToList();
 
                 //ReClaims
-                
-                var q1 = db.ClmDetailsData.Where(p => p.ClmMasterData.InsuranceNo == _insNo && p.RowStatus != RowStatus.Deleted && p.ClmMasterData .ImpId != _impId).Select(p => new
+
+                var q1 = db.ClmDetailsData.Where(p => p.ClmMasterData.InsuranceNo == _insNo && p.RowStatus != RowStatus.Deleted && p.ClmMasterData.ImpId != _impId).Select(p => new
                 {
                     CenterName = p.ClmMasterData.CenterInfo.CenterName,
                     Month = p.ClmMasterData.Months,
@@ -78,29 +78,29 @@ namespace HealthServicesSystem.Claims
                     VisitDate = p.ClmMasterData.VisitDate,
                     GenericName = p.Medicine.Generic_name,
                     ProcessName = "مطالبة",
-                    Qty = p.Qty ,
-                    Notes =""
+                    Qty = p.Qty,
+                    Notes = ""
 
 
                 }).ToList();
 
                 //Approve
-            
-                var q2 = db.ApproveMedicineDetails.Where(p => p.ApproveMedicine.InsurNo == _insNo && p.ApproveMedicine.RowStatus  != RowStatus.Deleted && p.ApproveMedicine .ApproveDate.Month ==_m && p.ApproveMedicine.ApproveDate .Year==_y).Select(p => new
+
+                var q2 = db.ApproveMedicineDetails.Where(p => p.ApproveMedicine.InsurNo == _insNo && p.ApproveMedicine.RowStatus != RowStatus.Deleted && p.ApproveMedicine.ApproveDate.Month == _m && p.ApproveMedicine.ApproveDate.Year == _y).Select(p => new
                 {
-                    CenterName = db.CenterInfos .Where (s=> s.Id == p.ApproveMedicine.ExcCenterId).Select (s=> s.CenterName ).FirstOrDefault(),
+                    CenterName = db.CenterInfos.Where(s => s.Id == p.ApproveMedicine.ExcCenterId).Select(s => s.CenterName).FirstOrDefault(),
                     Month = p.ApproveMedicine.ApproveDate.Month,
-                    Year = p.ApproveMedicine.ApproveDate.Year ,
+                    Year = p.ApproveMedicine.ApproveDate.Year,
                     VisitDate = p.ApproveMedicine.ApproveDate,
-                    GenericName = db.Medicines.Where (s=> s.Id == p.ServiceId ).Select(s=> s.Generic_name).FirstOrDefault(),
+                    GenericName = db.Medicines.Where(s => s.Id == p.ServiceId).Select(s => s.Generic_name).FirstOrDefault(),
                     ProcessName = "تصديق ",
-                    Qty= p.Quantity,
-                    Notes = p.ApproveMedicine .ApproveCode
+                    Qty = p.Quantity,
+                    Notes = p.ApproveMedicine.ApproveCode
 
 
                 }).ToList();
-               var qq= q.Union(q1);
-               var qqq= qq.Union(q2);
+                var qq = q.Union(q1);
+                var qqq = qq.Union(q2);
                 HistoryGrd.DataSource = qqq;
             }
             catch
@@ -116,7 +116,7 @@ namespace HealthServicesSystem.Claims
                 int _impId = int.Parse(ImpNoTxt.Text);
                 dbContext db = new dbContext();
 
-                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impId).Take (1).ToList();
+                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impId).Take(1).ToList();
 
                 int _m = GetImpDet[0].Month;
                 int _y = GetImpDet[0].year;
@@ -141,15 +141,15 @@ namespace HealthServicesSystem.Claims
             InsuranceNoTxt.Text = "";
             AgeTxt.Text = "";
             VisitDateTxt.Text = "";
-            IdClmLb.Text ="";
-    
+            IdClmLb.Text = "";
+
 
 
         }
 
         private void ImpDrp_SelectedValueChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void ImpNoTxt_TextChanged(object sender, EventArgs e)
@@ -187,17 +187,25 @@ namespace HealthServicesSystem.Claims
                 int MstrId = int.Parse(VisitIdTxt.Text);
                 dbContext db = new dbContext();
 
-                var qm = db.ClmMasterData.Where(p => p.Id  == MstrId  && p.RowStatus != RowStatus.Deleted ).OrderBy(p => p.NoOfFile).Take(1).ToList();
+                var qm = db.ClmMasterData.Where(p => p.Id == MstrId && p.RowStatus != RowStatus.Deleted).OrderBy(p => p.NoOfFile).Take(1).ToList();
                 if (qm.Count > 0)
                 {
                     VisitIdTxt.Text = qm[0].Id.ToString();
-                    PatNameTxt.Text = qm[0].PatName.Trim ();
+                    PatNameTxt.Text = qm[0].PatName.Trim();
                     InsuranceNoTxt.Text = qm[0].InsuranceNo.ToString();
                     AgeTxt.Text = qm[0].Age.ToString();
                     VisitDateTxt.Text = qm[0].VisitDate.ToString();
                     DaignosisNameTxt.Text = qm[0].Diagnosis.DiagnosisName;
                     ContractTypesTxt.Text = qm[0].ClmContractType.ContractName;
-                    IdClmLb.Text  = qm[0].NoOfFile .ToString();
+                    IdClmLb.Text = qm[0].NoOfFile.ToString();
+                    if (qm[0].IsReviewed == 0)
+                    {
+                        ReveiewStatusLb.Text = "غير مراجعة";
+                    }
+                    else
+                    {
+                        ReveiewStatusLb.Text = "تمت مراجعة";
+                    }
 
                 }
                 var q = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.MasterId == MstrId).Select(p => new
@@ -209,10 +217,10 @@ namespace HealthServicesSystem.Claims
                     UnitPrice = p.UnitPrice,
                     UnitQty = p.Qty,
                     TotalPrice = p.TotalPrice,
-                    DateIn= p.DateIn,
-                    AtcCode= p.Medicine .ATCclassifications.ATC_classification
-                    
-                }).OrderBy (p=> p.DateIn ).ToList();
+                    DateIn = p.DateIn,
+                    AtcCode = p.Medicine.ATCclassifications.ATC_classification
+
+                }).OrderBy(p => p.DateIn).ToList();
                 if (q.Count > 0)
                 {
                     VisitCostTxt.Text = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Status == Status.Active && p.MasterId == MstrId).Sum(p => p.TotalPrice).ToString();
@@ -221,7 +229,7 @@ namespace HealthServicesSystem.Claims
 
                     // ===================== view Nonconfirm
                     GetNonConfirm();
-                    
+
                     GetStatistic();
 
 
@@ -240,13 +248,13 @@ namespace HealthServicesSystem.Claims
             int _VistId = int.Parse(VisitIdTxt.Text);
             ClaimsCostTxt.Text = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Status == Status.Active && p.ClmMasterData.ImpId == _impId).Sum(p => p.TotalPrice).ToString();
             //====================
-            var qu = db.ClmMasterData.Where(p =>  p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id == _VistId).Take(1).ToList();
-            if (qu.Count >0)
+            var qu = db.ClmMasterData.Where(p => p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id == _VistId).Take(1).ToList();
+            if (qu.Count > 0)
             {
                 qu[0].IsReviewed = 1;
                 qu[0].ReviewDocId = _UserId;
                 qu[0].ReviewDate = PLC.getdatetime();
-                if(db.SaveChanges ()>0)
+                if (db.SaveChanges() > 0)
                 {
                     var qm = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.IsReviewed == 0 && p.Id > _VistId).OrderBy(p => p.NoOfFile).Select(p => p.Id).FirstOrDefault();
 
@@ -257,10 +265,10 @@ namespace HealthServicesSystem.Claims
             //==================
 
             GetStatistic();
-            
+
         }
 
-  
+
         private void ImpDrp_SelectedValueChanged_1(object sender, EventArgs e)
         {
             try
@@ -273,15 +281,15 @@ namespace HealthServicesSystem.Claims
                     var q = db.ClmImpFile.Where(p => p.Id == _impId && p.RowStatus != RowStatus.Deleted).ToList();
                     if (q.Count > 0)
                     {
-                        
+
                         CenterNameTxt.Text = q[0].CenterInfo.CenterName;
                         FileNoTxt.Text = q[0].FileNo.ToString();
-                     
+
                         ImpNoTxt.Text = q[0].Id.ToString();
                         _m = q[0].Month;
                         _y = q[0].year;
-                        
-                        CountOfClaimsTxt.Text = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted).Count().ToString ();
+
+                        CountOfClaimsTxt.Text = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted).Count().ToString();
                     }
                 }
             }
@@ -295,19 +303,19 @@ namespace HealthServicesSystem.Claims
         {
             try
             {
-                if (ItemGrd .RowCount >0)
+                if (ItemGrd.RowCount > 0)
                 {
                     dbContext db = new dbContext();
                     int _id = int.Parse(ItemGrd.CurrentRow.Cells["Id"].Value.ToString());
                     var q = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Id == _id).ToList();
-                    if (q.Count >0)
+                    if (q.Count > 0)
                     {
                         IdDetTxt.Text = q[0].Id.ToString();
                         ItemIdTxt.Text = q[0].GenericId.ToString();
                         ItemNameTxt.Text = q[0].Medicine.Generic_name;
                         ValueTxt.Text = q[0].TotalPrice.ToString();
-                        
-                        
+
+
                     }
                 }
             }
@@ -329,22 +337,22 @@ namespace HealthServicesSystem.Claims
                     var q = db.ClmNonConfirmType.Where(p => p.Id == _Id && p.RowStatus != RowStatus.Deleted).ToList();
                     if (q.Count > 0)
                     {
-                        if(q[0].ValueType== ModelDB.ValueType.Percent)
+                        if (q[0].ValueType == ModelDB.ValueType.Percent)
                         {
                             Discounttxt.Enabled = false;
                         }
                         else
                         {
-                            Discounttxt.Enabled = true ;
+                            Discounttxt.Enabled = true;
                             Discounttxt.Text = "0";
                         }
                         _NonConId = q[0].Id;
                         _NonPercent = q[0].Value;
                         _NonType = ((int)q[0].ValueType);
                         _DicountType = ((int)q[0].DicountType);
-                       if (q[0].ValueType== ModelDB.ValueType.Percent)
+                        if (q[0].ValueType == ModelDB.ValueType.Percent)
                         {
-                            Discounttxt .Text = (Convert.ToDecimal(ValueTxt.Text) * q[0].Value / 100).ToString();
+                            Discounttxt.Text = (Convert.ToDecimal(ValueTxt.Text) * q[0].Value / 100).ToString();
                         }
                         else
                         {
@@ -362,129 +370,136 @@ namespace HealthServicesSystem.Claims
 
         private void AddNonConfirmBtn_Click(object sender, EventArgs e)
         {
-            if (Convert .ToDecimal( ValueTxt .Text) >0)
+            try
             {
-                dbContext db = new dbContext();
-                int _impid = int.Parse(ImpDrp.SelectedValue.ToString());
-                var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impid).ToList();
-                int _visitId = int.Parse(VisitIdTxt.Text);
-                int _idDet = int.Parse(IdDetTxt.Text);
-                int _m = GetImpDet[0].Month ;
-                int _y = GetImpDet[0].year;
-                int _CenterId = GetImpDet[0].CenterId;
-                decimal _NonVlaue = 0;
-                
-                decimal ItemTotalPrice = db.ClmDetailsData.Where( p=> p.Id == _idDet ).Select (p=> p.TotalPrice ).FirstOrDefault();
-                
-              int NonConfirmId = int.Parse(NonConfirmDrp.SelectedValue.ToString());
-                var GetValuetype = db.ClmNonConfirmType.Where(p => p.Id == NonConfirmId).ToList();
-              
-                var q = db.ClmNonConfirmDet.Where(p => p.DetailsId == _idDet && p.RowStatus != RowStatus.Deleted).ToList();
-                if (q.Count > 0)
+                if (Convert.ToDecimal(ValueTxt.Text) > 0)
                 {
-                    DialogResult d = MessageBox.Show("هل تريد ادراج مخالفة مرة اخرى ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (d == DialogResult.No)
+                    dbContext db = new dbContext();
+                    int _impid = int.Parse(ImpDrp.SelectedValue.ToString());
+                    var GetImpDet = db.ClmImpFile.Where(p => p.Id == _impid).ToList();
+                    int _visitId = int.Parse(VisitIdTxt.Text);
+                    int _idDet = int.Parse(IdDetTxt.Text);
+                    int _m = GetImpDet[0].Month;
+                    int _y = GetImpDet[0].year;
+                    int _CenterId = GetImpDet[0].CenterId;
+                    decimal _NonVlaue = 0;
+
+                    decimal ItemTotalPrice = db.ClmDetailsData.Where(p => p.Id == _idDet).Select(p => p.TotalPrice).FirstOrDefault();
+
+                    int NonConfirmId = int.Parse(NonConfirmDrp.SelectedValue.ToString());
+                    var GetValuetype = db.ClmNonConfirmType.Where(p => p.Id == NonConfirmId).ToList();
+
+                    var q = db.ClmNonConfirmDet.Where(p => p.DetailsId == _idDet && p.RowStatus != RowStatus.Deleted).ToList();
+                    if (q.Count > 0)
                     {
-                        return;
+                        DialogResult d = MessageBox.Show("هل تريد ادراج مخالفة مرة اخرى ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (d == DialogResult.No)
+                        {
+                            return;
+                        }
                     }
-                }
                     ClmNonConfirmDet c = new ClmNonConfirmDet();
                     c.MasterId = int.Parse(VisitIdTxt.Text);
                     c.DateIn = PLC.getdatetime();
-                if( _DicountType ==0)
-                {
-                    c.DetailsId = _idDet;
-                    if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
+                    if (_DicountType == 0)
                     {
-                        _NonVlaue = (ItemTotalPrice * _NonPercent) / 100;
-                    }
-                    else
-                    {
-                        _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
-                    }
-                    var UpNon = db.ClmDetailsData.Where(p => p.Id == _idDet).ToList();
-                    if (UpNon.Count >0)
-                    {
-                        UpNon [0].NonConfItem = UpNon[0].NonConfItem+ _NonVlaue ;
-                    }
-                    c.Value = _NonVlaue;
-
-                }
-                else if (_DicountType ==1)
-                {
-                    
-                    var UpNon = db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).ToList();
-                    if (UpNon.Count>0)
-                    {
-                        foreach (var item in UpNon )
+                        c.DetailsId = _idDet;
+                        if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
                         {
-                            
-
-                            if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
-                            {
-                                _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
-                            }
-                            else
-                            {
-                                _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
-                            }
-                            item.NonConfVisit = item.NonConfVisit + _NonVlaue;
-
+                            _NonVlaue = (ItemTotalPrice * _NonPercent) / 100;
                         }
-                       c.Value  = (db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice)*_NonPercent )/100;
-                    }
-                    c.DetailsId = 0;
-                }
-                else if (_DicountType ==2)
-                {
-                    
-                    var UpNon = db.ClmDetailsData.Where(p => p.ClmMasterData .Months ==_m && p.ClmMasterData.Years==_y && p.ClmMasterData.CenterId== _CenterId && p.RowStatus != RowStatus.Deleted).ToList();
-                    if (UpNon.Count > 0)
-                    {
-                        foreach (var item in UpNon)
+                        else
                         {
-                            
-                            if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
-                            {
-                                _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
-                            }
-                            else
-                            {
-                                _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
-                            }
-
-                            item.NonConfClaims  = item.NonConfClaims + _NonVlaue;
-
+                            _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
                         }
-                        c.Value  = (db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice)* _NonPercent)/100 ;
+                        var UpNon = db.ClmDetailsData.Where(p => p.Id == _idDet).ToList();
+                        if (UpNon.Count > 0)
+                        {
+                            UpNon[0].NonConfItem = UpNon[0].NonConfItem + _NonVlaue;
+                        }
+                        c.Value = _NonVlaue;
+
                     }
-                    c.DetailsId = 0;
+                    else if (_DicountType == 1)
+                    {
+
+                        var UpNon = db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).ToList();
+                        if (UpNon.Count > 0)
+                        {
+                            foreach (var item in UpNon)
+                            {
+
+
+                                if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
+                                {
+                                    _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
+                                }
+                                else
+                                {
+                                    _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
+                                }
+                                item.NonConfVisit = item.NonConfVisit + _NonVlaue;
+
+                            }
+                            c.Value = (db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice) * _NonPercent) / 100;
+                        }
+                        c.DetailsId = 0;
+                    }
+                    else if (_DicountType == 2)
+                    {
+
+                        var UpNon = db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).ToList();
+                        if (UpNon.Count > 0)
+                        {
+                            foreach (var item in UpNon)
+                            {
+
+                                if (GetValuetype[0].ValueType == ModelDB.ValueType.Percent)
+                                {
+                                    _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
+                                }
+                                else
+                                {
+                                    _NonVlaue = Convert.ToDecimal(Discounttxt.Text);
+                                }
+
+                                item.NonConfClaims = item.NonConfClaims + _NonVlaue;
+
+                            }
+                            c.Value = (db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).Sum(p => p.TotalPrice) * _NonPercent) / 100;
+                        }
+                        c.DetailsId = 0;
+
+                    }
+
+
+                    c.Percent = _NonPercent;
+                    c.NonConfirmId = NonConfirmId;
+                    c.RowStatus = RowStatus.NewRow;
+                    c.Status = Status.Active;
+                    c.UserId = _UserId;
+                    db.ClmNonConfirmDet.Add(c);
+                    if (db.SaveChanges() > 0)
+                    {
+                        IdDetTxt.Text = "";
+                        Discounttxt.Text = "0";
+                        ItemIdTxt.Text = "";
+                        ItemNameTxt.Text = "";
+                        ValueTxt.Text = "0";
+                        NetValue.Text = "0";
+                        VisitCostTxt.Text = "0";
+                        ClaimsCostTxt.Text = "0";
+
+                        MessageBox.Show("تمت اضافة مخالفة");
+                        GetNonConfirm();
+                    }
+
 
                 }
-
-             
-                c.Percent =_NonPercent  ;
-                c.NonConfirmId = NonConfirmId;
-                c.RowStatus = RowStatus.NewRow;
-                c.Status = Status.Active;
-                c.UserId = _UserId;
-                db.ClmNonConfirmDet.Add(c);
-                if(db.SaveChanges ()>0)
-                {
-                    IdDetTxt.Text = "";
-                    Discounttxt.Text = "0";
-                    ItemIdTxt.Text = "";
-                    ItemNameTxt.Text = "";
-                    ValueTxt.Text = "0";
-                    NetValue.Text = "0";
-                    VisitCostTxt.Text = "0";
-                    ClaimsCostTxt.Text = "0";
-
-                    MessageBox.Show("تمت اضافة مخالفة");
-                    GetNonConfirm();
-                }
-                
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -494,10 +509,10 @@ namespace HealthServicesSystem.Claims
             int _impId = int.Parse(ImpNoTxt.Text);
             int _VistId = int.Parse(VisitIdTxt.Text);
             ClaimsCostTxt.Text = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Status == Status.Active && p.ClmMasterData.ImpId == _impId).Sum(p => p.TotalPrice).ToString();
-            var qm = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted  && p.Id > _VistId).OrderBy(p => p.NoOfFile).Take (1).ToList ();
+            var qm = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.Id > _VistId).OrderBy(p => p.NoOfFile).Take(1).ToList();
 
-            VisitIdTxt.Text = qm[0].Id .ToString();
-            IdClmLb .Text = qm[0].NoOfFile.ToString();
+            VisitIdTxt.Text = qm[0].Id.ToString();
+            IdClmLb.Text = qm[0].NoOfFile.ToString();
         }
 
         private void PervBtn_Click(object sender, EventArgs e)
@@ -506,9 +521,9 @@ namespace HealthServicesSystem.Claims
             int _impId = int.Parse(ImpNoTxt.Text);
             int _VistId = int.Parse(VisitIdTxt.Text);
             ClaimsCostTxt.Text = db.ClmDetailsData.Where(p => p.RowStatus != RowStatus.Deleted && p.Status == Status.Active && p.ClmMasterData.ImpId == _impId).Sum(p => p.TotalPrice).ToString();
-            var qm = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.Id < _VistId ).OrderByDescending (p => p.NoOfFile).Take (1).ToList ();
-            
-                VisitIdTxt.Text = qm[0].Id .ToString ();
+            var qm = db.ClmMasterData.Where(p => p.ImpId == _impId && p.RowStatus != RowStatus.Deleted && p.Id < _VistId).OrderByDescending(p => p.NoOfFile).Take(1).ToList();
+
+            VisitIdTxt.Text = qm[0].Id.ToString();
             IdClmLb.Text = qm[0].NoOfFile.ToString();
         }
 
@@ -523,15 +538,15 @@ namespace HealthServicesSystem.Claims
             int _y = GetImpDet[0].year;
             int _CenterId = GetImpDet[0].CenterId;
             decimal _NonVlaue = 0;
-            if (NonConfrmGrd .RowCount > 0)
+            if (NonConfrmGrd.RowCount > 0)
             {
-                if (NonConfrmGrd .CurrentColumn .Name =="Del")
+                if (NonConfrmGrd.CurrentColumn.Name == "Del")
                 {
-                    int _NonId = int.Parse(NonConfrmGrd.CurrentRow.Cells["Id"].Value .ToString());
-                    var q = db.ClmNonConfirmDet .Where(p => p.Id == _NonId && p.RowStatus != RowStatus.Deleted).ToList();
-                    if (q.Count>0)
+                    int _NonId = int.Parse(NonConfrmGrd.CurrentRow.Cells["Id"].Value.ToString());
+                    var q = db.ClmNonConfirmDet.Where(p => p.Id == _NonId && p.RowStatus != RowStatus.Deleted).ToList();
+                    if (q.Count > 0)
                     {
-                        int _idDet = int.Parse(q[0].DetailsId.ToString ());
+                        int _idDet = int.Parse(q[0].DetailsId.ToString());
                         DialogResult d = MessageBox.Show("هل تريد  الحذف ؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (d == DialogResult.No)
                         {
@@ -541,52 +556,52 @@ namespace HealthServicesSystem.Claims
                         q[0].UserId = _UserId;
                         q[0].DateIn = PLC.getdatetime();
 
-                        if ( q[0].ClmNonConfirmType.DicountType == DicountType.PerItems)
+                        if (q[0].ClmNonConfirmType.DicountType == DicountType.PerItems)
                         {
-                                                           
-                                var UpNon = db.ClmDetailsData.Where(p => p.Id == _idDet).ToList();
-                                if (UpNon.Count > 0)
-                                {
-                              
-                                UpNon[0].NonConfItem = UpNon[0].NonConfItem - q [0].Value ;
-                                }
 
-
-                            }
-                            else if (q[0].ClmNonConfirmType.DicountType == DicountType.PerVisit)
+                            var UpNon = db.ClmDetailsData.Where(p => p.Id == _idDet).ToList();
+                            if (UpNon.Count > 0)
                             {
 
-                                var UpNon = db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).ToList();
-                                if (UpNon.Count > 0)
-                                {
-                                    foreach (var item in UpNon)
-                                    {
-                                        _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
-                                        item.NonConfVisit = item.NonConfVisit - _NonVlaue;
-
-                                    }
-                                 
-                                }
-                     
+                                UpNon[0].NonConfItem = UpNon[0].NonConfItem - q[0].Value;
                             }
-                            else if (q[0].ClmNonConfirmType.DicountType == DicountType.PerClaims)
+
+
+                        }
+                        else if (q[0].ClmNonConfirmType.DicountType == DicountType.PerVisit)
+                        {
+
+                            var UpNon = db.ClmDetailsData.Where(p => p.MasterId == _visitId && p.RowStatus != RowStatus.Deleted).ToList();
+                            if (UpNon.Count > 0)
                             {
-
-                                var UpNon = db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).ToList();
-                                if (UpNon.Count > 0)
+                                foreach (var item in UpNon)
                                 {
-                                    foreach (var item in UpNon)
-                                    {
-                                        _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
-                                        item.NonConfClaims = item.NonConfClaims - _NonVlaue;
+                                    _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
+                                    item.NonConfVisit = item.NonConfVisit - _NonVlaue;
 
-                                    }
-                                   
                                 }
-                              
 
                             }
-                            if (db.SaveChanges()> 0)
+
+                        }
+                        else if (q[0].ClmNonConfirmType.DicountType == DicountType.PerClaims)
+                        {
+
+                            var UpNon = db.ClmDetailsData.Where(p => p.ClmMasterData.Months == _m && p.ClmMasterData.Years == _y && p.ClmMasterData.CenterId == _CenterId && p.RowStatus != RowStatus.Deleted).ToList();
+                            if (UpNon.Count > 0)
+                            {
+                                foreach (var item in UpNon)
+                                {
+                                    _NonVlaue = (item.TotalPrice * _NonPercent) / 100;
+                                    item.NonConfClaims = item.NonConfClaims - _NonVlaue;
+
+                                }
+
+                            }
+
+
+                        }
+                        if (db.SaveChanges() > 0)
                         {
                             MessageBox.Show("تم الحذف");
                             GetNonConfirm();
@@ -608,7 +623,7 @@ namespace HealthServicesSystem.Claims
                 int _ID = int.Parse(IdClmsTxt.Text);
                 dbContext db = new dbContext();
 
-                var qm = db.ClmMasterData.Where(p => p.NoOfFile == _ID && p.RowStatus != RowStatus.Deleted && p.ImpId ==_impId ).OrderBy(p => p.NoOfFile).Take(1).ToList();
+                var qm = db.ClmMasterData.Where(p => p.NoOfFile == _ID && p.RowStatus != RowStatus.Deleted && p.ImpId == _impId).OrderBy(p => p.NoOfFile).Take(1).ToList();
                 if (qm.Count > 0)
                 {
                     VisitIdTxt.Text = qm[0].Id.ToString();
@@ -629,20 +644,20 @@ namespace HealthServicesSystem.Claims
         {
             int _m = 0;
             int _y = 0;
-            if (MonthDrp .SelectedIndex ==-1)
+            if (MonthDrp.SelectedIndex == -1)
             {
                 MessageBox.Show("يجب اختيار الشهر");
                 return;
             }
-            if (YearTxt .Text .ToString ().Length != 4)
+            if (YearTxt.Text.ToString().Length != 4)
             {
                 MessageBox.Show("يجب ادخال السنة ");
                 return;
             }
             _m = MonthDrp.SelectedIndex + 1;
-            _y = int.Parse(YearTxt.Text); 
+            _y = int.Parse(YearTxt.Text);
             dbContext db = new dbContext();
-            var q = db.ClmImpFile.Where(p => p.RowStatus != RowStatus.Deleted && p.AllocatedDocId == _UserId && p.Month ==_m && p.year==_y ).Select(p => new { ImpId = p.Id, CenterName = p.Id + " " + p.CenterInfo.CenterName }).ToList();
+            var q = db.ClmImpFile.Where(p => p.RowStatus != RowStatus.Deleted && p.AllocatedDocId == _UserId && p.Month == _m && p.year == _y).Select(p => new { ImpId = p.Id, CenterName = p.Id + " " + p.CenterInfo.CenterName }).ToList();
             if (q.Count > 0)
             {
                 ImpDrp.DataSource = q;

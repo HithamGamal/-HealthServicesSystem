@@ -21,7 +21,12 @@ namespace HealthServicesSystem.Refunds
                          select new { Id = m.Id, InsurNo = m.InsurNo,
                              InsurName = m.InsurName,
                              TotalCost = m.MedicalTotal,
-                             CenterName = m.CenterName , RequsetType = m.RequestType })
+                             CenterName = m.CenterName ,
+                             RequsetType = m.RequestType == RequestType.Transfer ?"تحويل" : 
+                                           m.RequestType== RequestType.Cooperation ? "مساهمة" :
+                                           m.RequestType == RequestType.Physiotheraby ? "علاج طبيعي":
+                                             m.RequestType == RequestType.Committee ? "لجنة " : ""
+                         })
                          .ToList();
 
             rqstGRID.DataSource = rqsts;

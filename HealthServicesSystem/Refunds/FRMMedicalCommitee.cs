@@ -112,11 +112,27 @@ namespace HealthServicesSystem.Refunds
         {
             find_insurance_no(TXTSearch.Text);
             transaction_history(TXTSearch.Text);
+            services_history(TXTSearch.Text);
         }
 
         private void GRDApprove_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        public void services_history(string insurance_no)
+        {
+            PLC.SubId = insurance_no;
+            var serviceHistory = db.medicalCommitteeRequestDetails
+                                   .Where(p => p.InsurId == PLC.SubId && p.RowStatus!=RowStatus.Deleted).ToList();
+            if (serviceHistory.Count > 0)
+            {
+                CommitteeListHistory frm = new CommitteeListHistory();
+                frm.ShowDialog();
+
+
+            }
         }
 
         public void find_insurance_no(string insurance_no)
@@ -1026,7 +1042,25 @@ namespace HealthServicesSystem.Refunds
                 }
                 
             }
-         
+            if (rqstId.Text != "0")
+            {
+                int id_forEdit = Convert.ToInt32(rqstId.Text);
+               
+                    var data = db.medicalCommitteeRequests.Where(x => x.Id == id_forEdit).First();
+                data.RowStatus = RowStatus.Edited;
+                data.UpdateUser = _UserId;
+                data.UpdateDate = PLC.getdate();
+
+                var dataDetails = db.medicalCommitteeRequestDetails.Where(x => x.RequestId == id_forEdit).First();
+                dataDetails.RowStatus = RowStatus.Edited;
+                dataDetails.UpdateUser = _UserId;
+                dataDetails.UpdateDate = PLC.getdate();
+
+
+                db.SaveChanges();
+
+                
+            }
             MedicalCommitteeRequest rqst = new MedicalCommitteeRequest();
             MedicalCommitteeRequestDetails rqstDetails = new MedicalCommitteeRequestDetails();
 
@@ -1193,7 +1227,7 @@ namespace HealthServicesSystem.Refunds
 
 
 
-                    GRDApprove.DataSource = "";
+                GRDApprove.Rows.Clear();
                     var dataDetails = (from m in db.medicalCommitteeRequestDetails
                                              where m.MedicalCommitteeRequest.Id == ID
                                              && m.RowStatus != RowStatus.Deleted
@@ -1211,9 +1245,10 @@ namespace HealthServicesSystem.Refunds
 
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                //   RadMessageBox.Show(IdLabel.Text);
+
+                RadMessageBox.Show(ex.Message);
             }
         }
 
