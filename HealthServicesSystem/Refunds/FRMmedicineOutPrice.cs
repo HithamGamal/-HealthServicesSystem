@@ -426,11 +426,14 @@ namespace HealthServicesSystem.Reclaims
                 MedicineGroup.Focus();
                 return;
             }
-            if (Generic.SelectedIndex == -1)
+            if (dwalist.Text.Length == 0)
             {
-                MessageBox.Show("يجب اختيار الدواء", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                Trade.Focus();
-                return;
+                if (Generic.SelectedIndex == -1)
+                {
+                    MessageBox.Show("يجب اختيار الدواء", "النظام", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Trade.Focus();
+                    return;
+                }
             }
             if (quantity.Text.Length == 0)
             {
