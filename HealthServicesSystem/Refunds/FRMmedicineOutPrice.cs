@@ -472,8 +472,9 @@ namespace HealthServicesSystem.Reclaims
                     Mpg.IsVisible = true;
                     Mpg.FromTheList = false;
                     Mpg.Percentag = 0;
-                    db.MedicineForReclaims.Add(Mpg);
                     Mpg.GroupId = Convert.ToInt32(MedicineGroup.SelectedValue);
+                    db.MedicineForReclaims.Add(Mpg);
+                 
                     db.SaveChanges();
 
                 }
