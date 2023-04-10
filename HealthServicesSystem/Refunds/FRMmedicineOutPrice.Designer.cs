@@ -105,6 +105,7 @@
             this.OperationNo = new Telerik.WinControls.UI.RadTextBox();
             this.Label9 = new Telerik.WinControls.UI.RadLabel();
             this.ServerName = new Telerik.WinControls.UI.RadTextBox();
+            this.dwalist = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.Button8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button4)).BeginInit();
@@ -172,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.OperationNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dwalist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -658,6 +660,7 @@
             // 
             this.GroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox1.Controls.Add(this.dwalist);
             this.GroupBox1.Controls.Add(this.ServiceListType);
             this.GroupBox1.Controls.Add(this.MoneyPaied);
             this.GroupBox1.Controls.Add(this.radLabel5);
@@ -893,7 +896,7 @@
             // 
             this.Generic.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.Generic.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Generic.Location = new System.Drawing.Point(135, 49);
+            this.Generic.Location = new System.Drawing.Point(135, 37);
             this.Generic.Margin = new System.Windows.Forms.Padding(2);
             this.Generic.Name = "Generic";
             this.Generic.NullText = "Generic Name";
@@ -1087,7 +1090,7 @@
             // 
             this.Trade.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.Trade.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Trade.Location = new System.Drawing.Point(135, 93);
+            this.Trade.Location = new System.Drawing.Point(135, 69);
             this.Trade.Margin = new System.Windows.Forms.Padding(2);
             this.Trade.Name = "Trade";
             this.Trade.NullText = "Trade Name";
@@ -1181,6 +1184,19 @@
             this.ServerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ServerName.ThemeName = "Office2010Blue";
             // 
+            // dwalist
+            // 
+            this.dwalist.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.dwalist.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dwalist.Location = new System.Drawing.Point(135, 101);
+            this.dwalist.Margin = new System.Windows.Forms.Padding(2);
+            this.dwalist.Name = "dwalist";
+            this.dwalist.NullText = "Saved Medicine";
+            this.dwalist.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dwalist.Size = new System.Drawing.Size(883, 28);
+            this.dwalist.TabIndex = 456;
+            this.dwalist.ThemeName = "Office2010Blue";
+            // 
             // FRMmedicineOutPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1272,6 +1288,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.OperationNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dwalist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1352,6 +1369,7 @@
         internal Telerik.WinControls.UI.RadTextBox ServiceListType;
         internal Telerik.WinControls.UI.RadTextBox ReDwaSum;
         internal Telerik.WinControls.UI.RadLabel radLabel6;
+        internal Telerik.WinControls.UI.RadDropDownList dwalist;
         //private static FRMmedicineOutPrice _DefaultInstance;
         //public static FRMmedicineOutPrice Default
         //{
