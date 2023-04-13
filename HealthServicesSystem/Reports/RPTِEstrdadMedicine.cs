@@ -48,7 +48,13 @@ namespace HealthServicesSystem.Reports
                 DataTable dtsearch1 = new DataTable();
                 dtsearch1.Clear();
                 dasearch1.Fill(dtsearch1);
+                if (dtsearch1.Rows.Count > 0) { 
                 InsurName.Value = dtsearch1.Rows[0]["Firstname"].ToString() + " " + dtsearch1.Rows[0]["Secondname"].ToString() + " " + dtsearch1.Rows[0]["Thirdname"].ToString() + " " + dtsearch1.Rows[0]["Fourthname"].ToString();
+                }
+                else
+                {
+                    InsurName.Value = "";
+                }
             }
         }
 
