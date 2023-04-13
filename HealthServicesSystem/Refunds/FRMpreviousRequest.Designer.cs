@@ -34,6 +34,9 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.rqstGRID = new Telerik.WinControls.UI.RadGridView();
             ((System.ComponentModel.ISupportInitialize)(this.rqstGRID)).BeginInit();
@@ -53,58 +56,77 @@
             // 
             // 
             this.rqstGRID.MasterTemplate.AllowAddNewRow = false;
-            this.rqstGRID.MasterTemplate.AllowColumnReorder = false;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "Id";
             gridViewTextBoxColumn1.HeaderText = "#";
             gridViewTextBoxColumn1.Name = "Id";
             gridViewTextBoxColumn1.Width = 117;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "InsurNo";
-            gridViewTextBoxColumn2.HeaderText = "رقم التأمين ";
-            gridViewTextBoxColumn2.Name = "InsurNo";
-            gridViewTextBoxColumn2.Width = 165;
+            gridViewTextBoxColumn2.FieldName = "DateIn";
+            gridViewTextBoxColumn2.HeaderText = "تاريخ الطلب";
+            gridViewTextBoxColumn2.Name = "DateIn";
+            gridViewTextBoxColumn2.Width = 100;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "InsurName";
-            gridViewTextBoxColumn3.HeaderText = "اسم المريض";
-            gridViewTextBoxColumn3.Name = "InsurName";
-            gridViewTextBoxColumn3.Width = 216;
+            gridViewTextBoxColumn3.FieldName = "InsurNo";
+            gridViewTextBoxColumn3.HeaderText = "رقم التأمين ";
+            gridViewTextBoxColumn3.Name = "InsurNo";
+            gridViewTextBoxColumn3.Width = 165;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "TotalCost";
-            gridViewTextBoxColumn4.HeaderText = "تحمل التأمين";
-            gridViewTextBoxColumn4.Name = "TotalCost";
-            gridViewTextBoxColumn4.Width = 144;
+            gridViewTextBoxColumn4.FieldName = "InsurName";
+            gridViewTextBoxColumn4.HeaderText = "اسم المريض";
+            gridViewTextBoxColumn4.Name = "InsurName";
+            gridViewTextBoxColumn4.Width = 216;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "CenterName";
-            gridViewTextBoxColumn5.HeaderText = "المركز";
-            gridViewTextBoxColumn5.Name = "CenterName";
-            gridViewTextBoxColumn5.Width = 171;
+            gridViewTextBoxColumn5.FieldName = "TotalCost";
+            gridViewTextBoxColumn5.HeaderText = "تحمل التأمين";
+            gridViewTextBoxColumn5.Name = "TotalCost";
+            gridViewTextBoxColumn5.Width = 144;
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "RequsetType";
-            gridViewTextBoxColumn6.HeaderText = "نوع الطلب";
-            gridViewTextBoxColumn6.Name = "RequsetType";
-            gridViewTextBoxColumn6.Width = 98;
+            gridViewTextBoxColumn6.FieldName = "CenterName";
+            gridViewTextBoxColumn6.HeaderText = "المركز";
+            gridViewTextBoxColumn6.Name = "CenterName";
+            gridViewTextBoxColumn6.Width = 171;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "RequsetType";
+            gridViewTextBoxColumn7.HeaderText = "نوع الطلب";
+            gridViewTextBoxColumn7.Name = "RequsetType";
+            gridViewTextBoxColumn7.Width = 98;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "username";
+            gridViewTextBoxColumn8.HeaderText = "مستخرج الطلب";
+            gridViewTextBoxColumn8.Name = "username";
+            gridViewTextBoxColumn8.Width = 86;
+            gridViewCommandColumn1.DefaultText = "حذف";
+            gridViewCommandColumn1.EnableExpressionEditor = false;
+            gridViewCommandColumn1.FieldName = "delete";
+            gridViewCommandColumn1.Name = "delete";
+            gridViewCommandColumn1.UseDefaultText = true;
+            gridViewCommandColumn1.Width = 67;
             this.rqstGRID.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4,
             gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewCommandColumn1});
             this.rqstGRID.MasterTemplate.EnableFiltering = true;
             this.rqstGRID.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.rqstGRID.Name = "rqstGRID";
             this.rqstGRID.ReadOnly = true;
             this.rqstGRID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rqstGRID.Size = new System.Drawing.Size(1070, 458);
+            this.rqstGRID.Size = new System.Drawing.Size(1180, 458);
             this.rqstGRID.TabIndex = 0;
             this.rqstGRID.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RqstGRID_CellDoubleClick);
+            this.rqstGRID.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.MasterTemplate_CommandCellClick);
             // 
             // FRMpreviousRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 543);
+            this.ClientSize = new System.Drawing.Size(1204, 543);
             this.Controls.Add(this.rqstGRID);
             this.Name = "FRMpreviousRequest";
             // 

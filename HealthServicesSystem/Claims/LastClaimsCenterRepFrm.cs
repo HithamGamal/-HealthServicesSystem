@@ -65,7 +65,7 @@ namespace HealthServicesSystem.Claims
                 CenterId = p.Key.CenterId,
                 TotalClaims = p.Sum(s => s.TotalPrice),
                 TotalNon = p.Sum(s => s.NonConfClaims) + p.Sum(s => s.NonConfItem) + p.Sum(s => s.NonConfVisit),
-                NetClaims = p.Sum(s => s.TotalPrice) + (p.Sum(s => s.NonConfClaims) + p.Sum(s => s.NonConfItem) + p.Sum(s => s.NonConfVisit))
+                NetClaims = p.Sum(s => s.TotalPrice) - (p.Sum(s => s.NonConfClaims) + p.Sum(s => s.NonConfItem) + p.Sum(s => s.NonConfVisit))
             }).ToList();
             LastCenterClaimsReport rep = new LastCenterClaimsReport();
                 //rep.DataSource = q;
