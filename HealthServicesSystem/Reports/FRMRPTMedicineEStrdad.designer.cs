@@ -563,7 +563,6 @@ namespace HealthServicesSystem
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(48, 30);
             this.textBox1.TabIndex = 77;
-            this.textBox1.Visible = false;
             // 
             // label3
             // 
